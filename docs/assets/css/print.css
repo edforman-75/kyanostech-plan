@@ -12,3 +12,28 @@
     color: #6b7280;
   }
 }
+
+/* Footer line with Last updated date (uses html[data-build-date]) */
+footer::after {
+  content: "Confidential — KyanosTech | Last updated: " attr(data-build-date);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  font-size: 10pt;
+  color: #6b7280;
+}
+
+/* Footer line with Last updated date (uses html[data-build-date]) */
+footer::after {
+  content: "Confidential — KyanosTech | Last updated: " attr(data-build-date);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  font-size: 10pt;
+  color: #6b7280;
+}
+
+/* Also render the date via CSS var (primary) or data attribute (fallback) */
+footer::after {
+  content: "Confidential — KyanosTech | Last updated: " var(--build-date, attr(data-build-date));
+}

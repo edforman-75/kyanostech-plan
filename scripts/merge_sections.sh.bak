@@ -1,0 +1,55 @@
+#!/bin/bash
+set -euo pipefail
+
+SOURCE="${1:-}"
+
+# Auto-detect if not provided
+if [[ -z "$SOURCE" ]]; then
+  if [[ -d "$HOME/Desktop/final plan sections" ]]; then
+    SOURCE="$HOME/Desktop/final plan sections"
+  elif [[ -d "$HOME/Downloads/final plan sections" ]]; then
+    SOURCE="$HOME/Downloads/final plan sections"
+  else
+    echo "❌ Could not find 'final plan sections' in Desktop or Downloads."
+    exit 1
+  fi
+fi
+
+DL_DIR="docs"
+mkdir -p "$DL_DIR"
+
+updated=0 skipped=0
+
+# Copy Markdown + PDF
+for p in "$SOURCE"/*.{md,pdf}; do
+  [[ -e "$p" ]] || continue
+  base="$(basename "$p")"
+  if [[ -f "$DL_DIR/$base" && "$p" -ot "$DL_DIR/$base" ]]; then
+    echo "⏩ Skipped (no change): $base"
+    ((skipped++))
+  else
+    cp -f "$p" "$DL_DIR/$base"
+    echo "✅ Updated: $base"
+    ((updated++))
+  fi
+done
+
+echo "---"
+echo "Updated: $updated  Skipped: $skipped"
+
+# Auto-commit
+git add docs
+if ! git diff --cached --quiet; then
+  ts="$(date '+%Y-%m-%d %H:%M')"
+  git commit -m "chore: merge section files from $SOURCE ($ts)"
+  echo "💾 Commit created."
+else
+  echo "ℹ️ No changes to commit."
+fi
+
+echo "Done."
+
+# --- merge log (auto-appended) ---
+# Records timestamp, counts, and source folder into merge.log
+ts="$(date '+%Y-%m-%d %H:%M')"
+echo "$ts | Updated: ${updated:-0} | Skipped: ${skipped:-0} | Source: ${SOURCE:-$HOME/Downloads/final plan sections}" >> merge.log

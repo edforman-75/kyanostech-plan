@@ -1,0 +1,57 @@
+site_name: KyanosTech — Impact Business Plan
+site_description: >
+  Confidential draft business plan for KyanosTech. Market confidential.
+site_author: Ed Forman (forman.ed@gmail.com)
+
+theme:
+  name: material
+  features:
+    - navigation.top
+    - navigation.sections
+    - toc.integrate
+    - content.code.copy
+  palette:
+    scheme: default
+
+plugins:
+  - search
+  - git-revision-date-localized:
+      enable_creation_date: false
+      type: date
+      fallback_to_build_date: true
+      locale: en
+
+markdown_extensions:
+  - footnotes
+  - admonition
+  - toc:
+      permalink: true
+  - attr_list
+  - pymdownx.details
+  - pymdownx.superfences
+
+extra:
+  meta:
+    - name: robots
+      content: noindex,nofollow,noarchive
+
+  - assets/css/tooltips.css
+  - assets/css/print.css
+
+  - assets/js/footnote-tooltips.js
+  - assets/js/build-date.js
+  - assets/js/footnote-tooltips.js
+  - assets/js/build-date.js
+extra:
+  meta:
+    - name: robots
+      content: noindex,nofollow,noarchive
+    - name: build-date
+      content: "{{ git_revision_date_localized }}"
+extra_javascript:
+  - assets/js/footnote-tooltips.js
+  - assets/js/build-date.js
+extra_css:
+  - assets/css/tooltips.css
+  - assets/css/print.css
+  - assets/css/footer.css

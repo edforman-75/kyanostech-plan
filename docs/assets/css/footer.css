@@ -1,0 +1,14 @@
+.md-footer::after {
+  content: "Confidential — KyanosTech | Last updated: " var(--build-date, attr(data-build-date));
+  display: block;
+  padding: 6px 12px;
+  font-size: 12px;
+  color: #6b7280;
+}
+@media print {
+  .md-footer::after {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: transparent;
+  }
+}
