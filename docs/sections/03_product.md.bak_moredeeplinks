@@ -1,3 +1,5 @@
+<p class="fn-silent" markdown="1">[^15]</p>
+
 # Product Strategy & Technology
 
 KyanosTech's product strategy is anchored in **three core products** — **AGON, POLIS, and SCOPE** — and in the development of an **open schema specification** for political information.[^1] Together, these products form a closed-loop system: campaigns and committees publish structured, authoritative data; outputs are continuously monitored; and insights feed back into content creation and optimization. This cycle ensures Democratic visibility in AI-mediated information discovery.
@@ -123,10 +125,10 @@ Current schema.org standards inadequately cover political actors and contexts.[^
 <p style="font-size: 0.9em; color: #d32f2f; margin-bottom: 0; font-weight: bold;">⚠️ Limited Information Available</p>
 </div>
 
-<div style="background: #e8f5e8; border: 2px solid #4caf50; padding: 20px; border-radius: 8px;">
+<div style="background: #e8f5e8; border: 2px solid #4caf50; padding: 20px; border-radius: 8px;" markdown="1">
 <h4 style="color: #2e7d32; margin-top: 0; font-size: 1.1em;">✅ With Schema Optimization</h4>
 <div style="background: #ffffff; border-left: 4px solid #66bb6a; padding: 15px; margin: 10px 0; border-radius: 4px;">
-<p style="margin-bottom: 0; font-style: italic; color: #424242;">
+<p style="margin-bottom: 0; font-style: italic; color: #424242;" markdown="1">
 "John Smith opposes the diversion of public funds to charter schools. He has proposed a bill increasing oversight of state charter programs and voted against expanding voucher eligibility in 2023. His education platform emphasizes strengthening public schools with new funding tied to teacher retention."[^15]
 </p>
 </div>

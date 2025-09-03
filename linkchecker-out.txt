@@ -1,0 +1,520 @@
+LinkChecker 10.6.0
+Copyright (C) 2000-2016 Bastian Kleineidam, 2010-2025 LinkChecker Authors
+LinkChecker comes with ABSOLUTELY NO WARRANTY!
+This is free software, and you are welcome to redistribute it under
+certain conditions. Look at the file `COPYING' within this distribution.
+Read the documentation at https://linkchecker.github.io/linkchecker/
+Write comments and bugs to https://github.com/linkchecker/linkchecker/issues
+
+Start checking at 2025-09-03 10:22:08-006
+
+URL        `/kyanostech-plan/assets/images/favicon.png'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/404.html, line 16, col 7
+Real URL   file:///kyanostech-plan/assets/images/favicon.png
+Check time 0.000 seconds
+Result     Error: URLError: <urlopen error [Errno 2] No such file or directory: '/kyanostech-plan/assets/images/favicon.png'>
+
+URL        `/kyanostech-plan/assets/stylesheets/main.7e37652d.min.css'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/404.html, line 25, col 7
+Real URL   file:///kyanostech-plan/assets/stylesheets/main.7e37652d.min.css
+Check time 0.000 seconds
+Result     Error: URLError: <urlopen error [Errno 2] No such file or directory: '/kyanostech-plan/assets/stylesheets/main.7e37652d.min.css'>
+
+URL        `/kyanostech-plan/assets/footnotes.css'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/404.html, line 44, col 7
+Real URL   file:///kyanostech-plan/assets/footnotes.css
+Check time 0.000 seconds
+Result     Error: URLError: <urlopen error [Errno 2] No such file or directory: '/kyanostech-plan/assets/footnotes.css'>
+
+URL        `/kyanostech-plan/.'
+Name       `KyanosTech Plan'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/404.html, line 76, col 5
+Real URL   file:///kyanostech-plan/
+Check time 0.000 seconds
+Result     Error: URLError: <urlopen error [Errno 2] No such file or directory: '/kyanostech-plan/'>
+
+URL        `/kyanostech-plan/sections/01_executive_summary/'
+Name       `Executive Summary'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/404.html, line 218, col 7
+Real URL   file:///kyanostech-plan/sections/01_executive_summary/
+Check time 0.000 seconds
+Result     Error: URLError: <urlopen error [Errno 2] No such file or directory: '/kyanostech-plan/sections/01_executive_summary/'>
+
+URL        `/kyanostech-plan/sections/02_market_opportunity/'
+Name       `Market & Financial Opportunity'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/404.html, line 240, col 7
+Real URL   file:///kyanostech-plan/sections/02_market_opportunity/
+Check time 0.000 seconds
+Result     Error: URLError: <urlopen error [Errno 2] No such file or directory: '/kyanostech-plan/sections/02_market_opportunity/'>
+
+URL        `/kyanostech-plan/sections/03_product/'
+Name       `Product Strategy & Technology'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/404.html, line 262, col 7
+Real URL   file:///kyanostech-plan/sections/03_product/
+Check time 0.000 seconds
+Result     Error: URLError: <urlopen error [Errno 2] No such file or directory: '/kyanostech-plan/sections/03_product/'>
+
+URL        `/kyanostech-plan/sections/04_go_to_market/'
+Name       `Go-to-Market Strategy'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/404.html, line 284, col 7
+Real URL   file:///kyanostech-plan/sections/04_go_to_market/
+Check time 0.000 seconds
+Result     Error: URLError: <urlopen error [Errno 2] No such file or directory: '/kyanostech-plan/sections/04_go_to_market/'>
+
+URL        `/kyanostech-plan/sections/06_business_model/'
+Name       `Business Model & Unit Economics'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/404.html, line 306, col 7
+Real URL   file:///kyanostech-plan/sections/06_business_model/
+Check time 0.000 seconds
+Result     Error: URLError: <urlopen error [Errno 2] No such file or directory: '/kyanostech-plan/sections/06_business_model/'>
+
+URL        `/kyanostech-plan/sections/10_team_governance/'
+Name       `Team & Governance'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/404.html, line 394, col 7
+Real URL   file:///kyanostech-plan/sections/10_team_governance/
+Check time 0.000 seconds
+Result     Error: URLError: <urlopen error [Errno 2] No such file or directory: '/kyanostech-plan/sections/10_team_governance/'>
+
+URL        `/kyanostech-plan/sections/08_financial_plan/'
+Name       `Financial Plan'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/404.html, line 350, col 7
+Real URL   file:///kyanostech-plan/sections/08_financial_plan/
+Check time 0.000 seconds
+Result     Error: URLError: <urlopen error [Errno 2] No such file or directory: '/kyanostech-plan/sections/08_financial_plan/'>
+
+URL        `/kyanostech-plan/sections/09_impact_measurement/'
+Name       `Impact Measurement & Reporting'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/404.html, line 372, col 7
+Real URL   file:///kyanostech-plan/sections/09_impact_measurement/
+Check time 0.000 seconds
+Result     Error: URLError: <urlopen error [Errno 2] No such file or directory: '/kyanostech-plan/sections/09_impact_measurement/'>
+
+URL        `/kyanostech-plan/sections/07_strategic_moat/'
+Name       `Strategic Moat & Partnerships'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/404.html, line 328, col 7
+Real URL   file:///kyanostech-plan/sections/07_strategic_moat/
+Check time 0.000 seconds
+Result     Error: URLError: <urlopen error [Errno 2] No such file or directory: '/kyanostech-plan/sections/07_strategic_moat/'>
+
+URL        `/kyanostech-plan/appendices/appendix_a_market_analysis_layman/'
+Name       `Appendix A — Market Analysis'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/404.html, line 525, col 7
+Real URL   file:///kyanostech-plan/appendices/appendix_a_market_analysis_layman/
+Check time 0.000 seconds
+Result     Error: URLError: <urlopen error [Errno 2] No such file or directory: '/kyanostech-plan/appendices/appendix_a_market_analysis_layman/'>
+
+URL        `/kyanostech-plan/appendices/appendix_b_financial_model_layman/'
+Name       `Appendix B — Financial Model & Unit Economics'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/404.html, line 548, col 7
+Real URL   file:///kyanostech-plan/appendices/appendix_b_financial_model_layman/
+Check time 0.000 seconds
+Result     Error: URLError: <urlopen error [Errno 2] No such file or directory: '/kyanostech-plan/appendices/appendix_b_financial_model_layman/'>
+
+URL        `/kyanostech-plan/appendices/appendix_c_impact_metrics_layman/'
+Name       `Appendix C — Impact Metrics'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/404.html, line 571, col 7
+Real URL   file:///kyanostech-plan/appendices/appendix_c_impact_metrics_layman/
+Check time 0.000 seconds
+Result     Error: URLError: <urlopen error [Errno 2] No such file or directory: '/kyanostech-plan/appendices/appendix_c_impact_metrics_layman/'>
+
+URL        `/kyanostech-plan/sections/11_investment_ask/'
+Name       `Investment Ask & Use of Funds'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/404.html, line 416, col 7
+Real URL   file:///kyanostech-plan/sections/11_investment_ask/
+Check time 0.000 seconds
+Result     Error: URLError: <urlopen error [Errno 2] No such file or directory: '/kyanostech-plan/sections/11_investment_ask/'>
+
+URL        `/kyanostech-plan/sections/12_risk_mitigation/'
+Name       `Risk & Mitigation'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/404.html, line 438, col 7
+Real URL   file:///kyanostech-plan/sections/12_risk_mitigation/
+Check time 0.000 seconds
+Result     Error: URLError: <urlopen error [Errno 2] No such file or directory: '/kyanostech-plan/sections/12_risk_mitigation/'>
+
+URL        `/kyanostech-plan/sections/13_exit_legacy/'
+Name       `Exit & Legacy'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/404.html, line 460, col 7
+Real URL   file:///kyanostech-plan/sections/13_exit_legacy/
+Check time 0.000 seconds
+Result     Error: URLError: <urlopen error [Errno 2] No such file or directory: '/kyanostech-plan/sections/13_exit_legacy/'>
+
+URL        `/kyanostech-plan/appendices/appendix_g_biased_chatbots_political_influence_layman/'
+Name       `Appendix G — Biased Chatbots & Political Influence'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/404.html, line 663, col 7
+Real URL   file:///kyanostech-plan/appendices/appendix_g_biased_chatbots_political_influence_layman/
+Check time 0.000 seconds
+Result     Error: URLError: <urlopen error [Errno 2] No such file or directory: '/kyanostech-plan/appendices/appendix_g_biased_chatbots_political_influence_layman/'>
+
+URL        `/kyanostech-plan/appendices/appendix_e_brand_identity_layman/'
+Name       `Appendix E — Brand Identity System'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/404.html, line 617, col 7
+Real URL   file:///kyanostech-plan/appendices/appendix_e_brand_identity_layman/
+Check time 0.000 seconds
+Result     Error: URLError: <urlopen error [Errno 2] No such file or directory: '/kyanostech-plan/appendices/appendix_e_brand_identity_layman/'>
+
+URL        `/kyanostech-plan/appendices/appendix_i_campaign_finance_compliance/'
+Name       `Appendix I — Compliance Framework'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/404.html, line 709, col 7
+Real URL   file:///kyanostech-plan/appendices/appendix_i_campaign_finance_compliance/
+Check time 0.000 seconds
+Result     Error: URLError: <urlopen error [Errno 2] No such file or directory: '/kyanostech-plan/appendices/appendix_i_campaign_finance_compliance/'>
+
+URL        `/kyanostech-plan/appendices/appendix_d_markdown/'
+Name       `Appendix D — Organizational Forms & Funding'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/404.html, line 594, col 7
+Real URL   file:///kyanostech-plan/appendices/appendix_d_markdown/
+Check time 0.000 seconds
+Result     Error: URLError: <urlopen error [Errno 2] No such file or directory: '/kyanostech-plan/appendices/appendix_d_markdown/'>
+
+URL        `/kyanostech-plan/assets/javascripts/bundle.92b07e13.min.js'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/404.html, line 790, col 7
+Real URL   file:///kyanostech-plan/assets/javascripts/bundle.92b07e13.min.js
+Check time 0.000 seconds
+Result     Error: URLError: <urlopen error [Errno 2] No such file or directory: '/kyanostech-plan/assets/javascripts/bundle.92b07e13.min.js'>
+
+URL        `/kyanostech-plan/appendices/appendix_f_media_evolution_layman/'
+Name       `Appendix F — Media Evolution'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/404.html, line 640, col 7
+Real URL   file:///kyanostech-plan/appendices/appendix_f_media_evolution_layman/
+Check time 0.000 seconds
+Result     Error: URLError: <urlopen error [Errno 2] No such file or directory: '/kyanostech-plan/appendices/appendix_f_media_evolution_layman/'>
+
+URL        `/kyanostech-plan/appendices/appendix_h_invisible_hand/'
+Name       `Appendix H — The Invisible Hand (Audio)'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/404.html, line 686, col 7
+Real URL   file:///kyanostech-plan/appendices/appendix_h_invisible_hand/
+Check time 0.000 seconds
+Result     Error: URLError: <urlopen error [Errno 2] No such file or directory: '/kyanostech-plan/appendices/appendix_h_invisible_hand/'>
+
+URL        `https://edforman-75.github.io/kyanostech-plan/appendices/appendix_b_financial_model_layman/'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/sitemap.xml, line 8, col 105
+Real URL   https://edforman-75.github.io/kyanostech-plan/appendices/appendix_b_financial_model_layman/
+Check time 0.422 seconds
+Size       5KB
+Result     Error: 404 Not Found
+
+URL        `https://edforman-75.github.io/kyanostech-plan/appendices/appendix_a_market_analysis_layman/'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/sitemap.xml, line 4, col 105
+Real URL   https://edforman-75.github.io/kyanostech-plan/appendices/appendix_a_market_analysis_layman/
+Check time 1.019 seconds
+Size       5KB
+Result     Error: 404 Not Found
+
+URL        `https://edforman-75.github.io/kyanostech-plan/appendices/appendix_c_impact_metrics_layman/'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/sitemap.xml, line 12, col 104
+Real URL   https://edforman-75.github.io/kyanostech-plan/appendices/appendix_c_impact_metrics_layman/
+Check time 1.358 seconds
+Size       5KB
+Result     Error: 404 Not Found
+
+URL        `https://edforman-75.github.io/kyanostech-plan/appendices/appendix_d_markdown/'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/sitemap.xml, line 16, col 91
+Real URL   https://edforman-75.github.io/kyanostech-plan/appendices/appendix_d_markdown/
+Check time 1.623 seconds
+Size       5KB
+Result     Error: 404 Not Found
+
+URL        `https://edforman-75.github.io/kyanostech-plan/appendices/appendix_e_brand_identity_layman/'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/sitemap.xml, line 20, col 104
+Real URL   https://edforman-75.github.io/kyanostech-plan/appendices/appendix_e_brand_identity_layman/
+Check time 1.816 seconds
+Size       5KB
+Result     Error: 404 Not Found
+
+URL        `https://edforman-75.github.io/kyanostech-plan/appendices/appendix_f_media_evolution_layman/'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/sitemap.xml, line 24, col 105
+Real URL   https://edforman-75.github.io/kyanostech-plan/appendices/appendix_f_media_evolution_layman/
+Check time 2.196 seconds
+Size       5KB
+Result     Error: 404 Not Found
+
+URL        `https://edforman-75.github.io/kyanostech-plan/appendices/appendix_g_biased_chatbots_political_influence_layman/'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/sitemap.xml, line 28, col 125
+Real URL   https://edforman-75.github.io/kyanostech-plan/appendices/appendix_g_biased_chatbots_political_influence_layman/
+Check time 2.272 seconds
+Size       5KB
+Result     Error: 404 Not Found
+
+URL        `https://edforman-75.github.io/kyanostech-plan/appendices/appendix_h_invisible_hand/'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/sitemap.xml, line 32, col 97
+Real URL   https://edforman-75.github.io/kyanostech-plan/appendices/appendix_h_invisible_hand/
+Check time 2.673 seconds
+Size       5KB
+Result     Error: 404 Not Found
+
+URL        `https://github.com/edforman-75/kyanostech-plan'
+Name       `GitHub'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/404.html, line 150, col 9
+Real URL   https://github.com/edforman-75/kyanostech-plan
+Check time 3.092 seconds
+Result     Error: 404 Not Found
+
+URL        `https://edforman-75.github.io/kyanostech-plan/appendices/appendix_i_campaign_finance_compliance/'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/sitemap.xml, line 36, col 110
+Real URL   https://edforman-75.github.io/kyanostech-plan/appendices/appendix_i_campaign_finance_compliance/
+Check time 2.970 seconds
+Size       5KB
+Result     Error: 404 Not Found
+
+URL        `https://edforman-75.github.io/kyanostech-plan/sections/01_executive_summary/'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/sitemap.xml, line 40, col 90
+Real URL   https://edforman-75.github.io/kyanostech-plan/sections/01_executive_summary/
+Check time 2.751 seconds
+Size       5KB
+Result     Error: 404 Not Found
+
+URL        `https://edforman-75.github.io/kyanostech-plan/sections/02_market_opportunity/'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/sitemap.xml, line 44, col 91
+Real URL   https://edforman-75.github.io/kyanostech-plan/sections/02_market_opportunity/
+Check time 2.627 seconds
+Size       5KB
+Result     Error: 404 Not Found
+
+URL        `https://edforman-75.github.io/kyanostech-plan/sections/03_product/'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/sitemap.xml, line 48, col 80
+Real URL   https://edforman-75.github.io/kyanostech-plan/sections/03_product/
+Check time 2.726 seconds
+Size       5KB
+Result     Error: 404 Not Found
+
+URL        `https://edforman-75.github.io/kyanostech-plan/sections/04_go_to_market/'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/sitemap.xml, line 52, col 85
+Real URL   https://edforman-75.github.io/kyanostech-plan/sections/04_go_to_market/
+Check time 2.962 seconds
+Size       5KB
+Result     Error: 404 Not Found
+
+URL        `https://edforman-75.github.io/kyanostech-plan/sections/06_business_model/'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/sitemap.xml, line 56, col 87
+Real URL   https://edforman-75.github.io/kyanostech-plan/sections/06_business_model/
+Check time 3.068 seconds
+Size       5KB
+Result     Error: 404 Not Found
+
+URL        `https://edforman-75.github.io/kyanostech-plan/sections/07_strategic_moat/'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/sitemap.xml, line 60, col 87
+Real URL   https://edforman-75.github.io/kyanostech-plan/sections/07_strategic_moat/
+Check time 3.185 seconds
+Size       5KB
+Result     Error: 404 Not Found
+
+URL        `https://edforman-75.github.io/kyanostech-plan/sections/08_financial_plan/'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/sitemap.xml, line 64, col 87
+Real URL   https://edforman-75.github.io/kyanostech-plan/sections/08_financial_plan/
+Check time 3.203 seconds
+Size       5KB
+Result     Error: 404 Not Found
+
+URL        `https://edforman-75.github.io/kyanostech-plan/sections/09_impact_measurement/'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/sitemap.xml, line 68, col 91
+Real URL   https://edforman-75.github.io/kyanostech-plan/sections/09_impact_measurement/
+Check time 3.387 seconds
+Size       5KB
+Result     Error: 404 Not Found
+
+URL        `https://edforman-75.github.io/kyanostech-plan/sections/10_team_governance/'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/sitemap.xml, line 72, col 88
+Real URL   https://edforman-75.github.io/kyanostech-plan/sections/10_team_governance/
+Check time 3.301 seconds
+Size       5KB
+Result     Error: 404 Not Found
+
+URL        `https://edforman-75.github.io/kyanostech-plan/sections/11_investment_ask/'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/sitemap.xml, line 76, col 87
+Real URL   https://edforman-75.github.io/kyanostech-plan/sections/11_investment_ask/
+Check time 3.285 seconds
+Size       5KB
+Result     Error: 404 Not Found
+
+URL        `https://edforman-75.github.io/kyanostech-plan/sections/12_risk_mitigation/'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/sitemap.xml, line 80, col 88
+Real URL   https://edforman-75.github.io/kyanostech-plan/sections/12_risk_mitigation/
+Check time 3.331 seconds
+Size       5KB
+Result     Error: 404 Not Found
+
+URL        `https://edforman-75.github.io/kyanostech-plan/sections/13_exit_legacy/'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/sitemap.xml, line 84, col 84
+Real URL   https://edforman-75.github.io/kyanostech-plan/sections/13_exit_legacy/
+Check time 3.212 seconds
+Size       5KB
+Result     Error: 404 Not Found
+
+URL        `https://www.researchgate.net/publication/380069150_GENDER_DIFFERENCES_IN_PERCEPTIONS_AND_USAGE_OF_CHATGPT'
+Name       `Academic analysis of usage pattern variations'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/appendices/appendix_d_markdown/index.html, line 1358, col 125
+Real URL   https://www.researchgate.net/publication/380069150_GENDER_DIFFERENCES_IN_PERCEPTIONS_AND_USAGE_OF_CHATGPT
+Check time 0.550 seconds
+Result     Error: 403 Forbidden
+
+URL        `https://www.strategyzer.com/canvas/business-model-canvas'
+Name       `https://www.strategyzer.com/canvas/business-model-canvas'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/sections/06_business_model/index.html, line 1029, col 88
+Real URL   https://www.strategyzer.com/library/the-business-model-canvas
+Check time 3.147 seconds
+Warning    [http-redirected] Redirected to
+           `https://www.strategyzer.com/library/business-model-canvas'
+           status: 301 Moved Permanently.
+           [http-redirected] Redirected to
+           `https://www.strategyzer.com/library/the-business-model-canvas'
+           status: 301 Moved Permanently.
+Result     Valid: 200 OK
+
+URL        `https://www.bloomberg.com/graphics/2025-youtube-podcast-men-for-trump/'
+Name       `Bloomberg: YouTube Podcast Analysis'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/appendices/appendix_d_markdown/index.html, line 1397, col 4
+Real URL   https://www.bloomberg.com/graphics/2025-youtube-podcast-men-for-trump/
+Check time 0.622 seconds
+Size       13.53KB
+Result     Error: 403 Forbidden
+
+URL        `https://www.washingtonpost.com/technology/2024/11/10/trump-voters-gen-z-memes-podcasts-joe-rogan/'
+Name       `Washington Post: Trump Young Male Voter Strategy'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/appendices/appendix_d_markdown/index.html, line 1385, col 4
+Real URL   https://www.washingtonpost.com/technology/2024/11/10/trump-voters-gen-z-memes-podcasts-joe-rogan/
+Check time 0.661 seconds
+Size       490B
+Result     Error: 403 Forbidden
+
+URL        `https://academic.oup.com/pnasnexus/article/3/2/pgae035/7591134'
+Name       `PNAS Nexus: Persuasive Effects of Political Microtargeting'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/appendices/appendix_d_markdown/index.html, line 1430, col 4
+Real URL   https://academic.oup.com/pnasnexus/article/3/2/pgae035/7591134
+Check time 0.481 seconds
+Result     Error: 403 Forbidden
+
+URL        `https://www.pnas.org/doi/10.1073/pnas.2412815122'
+Name       `PNAS: Testing Theories of Political Persuasion Using AI'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/appendices/appendix_d_markdown/index.html, line 1433, col 4
+Real URL   https://www.pnas.org/doi/10.1073/pnas.2412815122
+Check time 0.555 seconds
+Result     Error: 403 Forbidden
+
+URL        `https://iapc.org/'
+Name       `International Association of Political Consultants'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/sections/12_risk_mitigation/index.html, line 1013, col 27
+Real URL   https://www.iapc.org/
+Check time 0.689 seconds
+Warning    [http-redirected] Redirected to
+           `https://www.iapc.org/' status: 301 Moved Permanently.
+Result     Valid: 200 OK
+
+URL        `https://www.codeforamerica.org/'
+Name       `Code for America'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/sections/12_risk_mitigation/index.html, line 968, col 30
+Real URL   https://codeforamerica.org/
+Check time 1.348 seconds
+Warning    [http-redirected] Redirected to
+           `https://codeforamerica.org/' status: 301 Moved
+           Permanently.
+Result     Valid: 200 OK
+
+URL        `https://gmmb.com/'
+Name       `GMMB'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/sections/12_risk_mitigation/index.html, line 1025, col 72
+Real URL   https://www.gmmb.com/
+Check time 0.906 seconds
+Warning    [http-redirected] Redirected to
+           `https://www.gmmb.com/' status: 301 Moved Permanently.
+Result     Valid: 200 OK
+
+URL        `https://www.highergroundlabs.com/'
+Name       `Higher Ground Labs'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/sections/12_risk_mitigation/index.html, line 968, col 162
+Real URL   https://highergroundlabs.com/
+Check time 1.336 seconds
+Warning    [http-redirected] Redirected to
+           `https://highergroundlabs.com/' status: 301 Moved
+           Permanently.
+Result     Valid: 200 OK
+
+URL        `https://www.perkinscoie.com/en/practices/political-law.html'
+Name       `Perkins Coie'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/sections/12_risk_mitigation/index.html, line 1001, col 31
+Real URL   https://perkinscoie.com/en/practices/political-law.html
+Check time 2.155 seconds
+Size       9KB
+Warning    [http-redirected] Redirected to
+           `https://perkinscoie.com/en/practices/political-law.html'
+           status: 301 Moved Permanently.
+Result     Error: 404 Not Found
+
+URL        `https://bluestate.co/'
+Name       `Blue State'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/sections/12_risk_mitigation/index.html, line 1025, col 112
+Real URL   https://www.bluestate.co/
+Check time 1.895 seconds
+Warning    [http-redirected] Redirected to
+           `https://www.bluestate.co/' status: 301 Moved
+           Permanently.
+Result     Valid: 200 OK
+
+URL        `https://runforsomething.net/tools/'
+Name       `Run for Something Technical Resources'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/sections/03_product/index.html, line 1073, col 318
+Real URL   https://runforsomething.net/tools/
+Check time 0.935 seconds
+Result     Error: 404 Not Found
+
+URL        `https://www.fec.gov/help-candidates-and-committees/making-disbursements/coordinated-communications/'
+Name       `FEC Coordination Rules'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/sections/03_product/index.html, line 1106, col 66
+Real URL   https://www.fec.gov/help-candidates-and-committees/candidate-taking-receipts/coordinated-communications/
+Check time 0.314 seconds
+Warning    [http-redirected] Redirected to
+           `https://www.fec.gov/help-candidates-and-committees/candidate-taking-receipts/coordinated-communications/'
+           status: 301 Moved Permanently.
+Result     Valid: 200 OK
+
+URL        `https://democracyfund.org/idea/technology-and-democracy/'
+Name       `Democracy Fund Technology Research'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/sections/03_product/index.html, line 1085, col 274
+Real URL   https://democracyfund.org/idea/technology-and-democracy/
+Check time 0.828 seconds
+Result     Error: 404 Not Found
+
+URL        `https://www.nist.gov/itl/applied-cybersecurity/nice/resources/digital-signatures'
+Name       `NIST Digital Signatures'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/sections/03_product/index.html, line 1118, col 56
+Real URL   https://www.nist.gov/itl/applied-cybersecurity/nice/resources/digital-signatures
+Check time 1.185 seconds
+Result     Error: 404 Not Found
+
+URL        `https://partner.microsoft.com/'
+Name       `Microsoft Partner Network'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/sections/08_financial_plan/index.html, line 1602, col 174
+Real URL   https://partner.microsoft.com/en-US/
+Check time 1.197 seconds
+Size       23.92KB
+Warning    [http-redirected] Redirected to
+           `https://partner.microsoft.com/en-US/' status: 302
+           Moved Temporarily.
+Result     Valid: 200 OK
+
+URL        `https://www.nationbuilder.com/api_documentation'
+Name       `NationBuilder API Documentation'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/sections/03_product/index.html, line 1073, col 220
+Real URL   https://support.nationbuilder.com/en/collections/10408291-api
+Check time 2.487 seconds
+Warning    [http-redirected] Redirected to
+           `https://nationbuilder.com/api_documentation' status:
+           301 Moved Permanently.
+           [http-redirected] Redirected to
+           `https://support.nationbuilder.com/en/collections/10408291-api'
+           status: 301 Moved Permanently.
+Result     Valid: 200 OK
+
+URL        `https://www.gsa.gov/travel/plan-book/federal-travel-regulation-ftr'
+Name       `Federal Travel Regulation'
+Parent URL file:///Users/edf/Projects/kyanostech-plan/site/sections/08_financial_plan/index.html, line 1620, col 71
+Real URL   https://www.gsa.gov/travel/plan-book/federal-travel-regulation-ftr
+Check time 1.415 seconds
+Result     Error: 404 Not Found
+
+Statistics:
+Downloaded: 915.55KB.
+Content types: 1 image, 152 text, 0 video, 0 audio, 42 application, 0 mail and 62 other.
+URL lengths: min=17, max=896, avg=116.
+
+That's it. 257 links in 269 URLs checked. 12 warnings found. 58 errors found.
+Stopped checking at 2025-09-03 10:22:41-006 (32 seconds)

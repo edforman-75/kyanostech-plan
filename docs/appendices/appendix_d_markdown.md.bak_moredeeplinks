@@ -169,11 +169,11 @@ Young men demonstrate **complementary usage patterns** across both mediums:
 
 Current trends suggest AI chatbots will play an escalating role in political information discovery:
 
-<div style="background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%); padding: 20px; margin: 20px 0; border-radius: 8px; border: 2px solid #ffa726;">
+<div style="background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%); padding: 20px; margin: 20px 0; border-radius: 8px; border: 2px solid #ffa726;" markdown="1">
 
 <h4 style="color: #e65100; margin-top: 0;">📊 Key Projections</h4>
 
-<ul style="margin-bottom: 0; color: #bf360c;">
+<ul style="margin-bottom: 0; color: #bf360c;" markdown="1">
 <li markdown="1"><strong>18% of Google searches</strong> now produce AI summaries, with 88% of users finding them sufficient[^36]</li>
 <li markdown="1"><strong>Gartner predicts 25% reduction</strong> in traditional search engine volume by 2026 due to AI chatbots[^37]</li>
 <li markdown="1"><strong>45-60% of voter information queries</strong> projected to be answered within AI experiences by 2028[^38]</li>

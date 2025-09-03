@@ -2,9 +2,9 @@
 
 ## Objectives
 
-Impact is our north star. Unlike traditional tech startups, our measure of success is not growth-at-all-costs but whether we improve the **quality, discoverability, and effectiveness of Democratic digital infrastructure**.  
+Impact is our north star. [^fn-reporting] Unlike traditional tech startups, our measure of success is not growth-at-all-costs but whether we improve the **quality, discoverability, and effectiveness of Democratic digital infrastructure**. [^fn-quality] [^fn-media]  
 
-We commit to three core impact metrics, each designed to be **measurable, auditable, and reportable** to investors and stakeholders. These metrics also align directly with our financing strategy: they are the milestones against which staged capital deployment will be judged.
+We commit to three core impact metrics, each designed to be **measurable, auditable, and reportable** to investors and stakeholders. [^fn-metrics] These metrics also align directly with our financing strategy: they are the milestones against which staged capital deployment will be judged.
 
 ---
 
@@ -73,6 +73,10 @@ Together, these metrics form a **balanced scorecard**: breadth, depth, and effic
 ---
 
 ## Footnotes
+
+
+
+
 
 [^fn-metrics]: These three metrics were selected in consultation with campaign advisors, SaaS benchmarking literature, and investor expectations for measurable impact. They balance **simplicity (campaigns served)**, **technical rigor (quality index)**, and **economic value (media spend offset)**.
 [^fn-quality]: The Quality Improvement Index methodology is adapted from schema compliance testing standards (see [Schema.org testing tools](https://validator.schema.org/)) and UX clarity frameworks in academic HCI literature.

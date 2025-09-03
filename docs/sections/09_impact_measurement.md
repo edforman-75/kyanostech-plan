@@ -79,6 +79,6 @@ Together, these metrics form a **balanced scorecard**: breadth, depth, and effic
 
 
 [^fn-metrics]: These three metrics were selected in consultation with campaign advisors, SaaS benchmarking literature, and investor expectations for measurable impact. They balance **simplicity (campaigns served)**, **technical rigor (quality index)**, and **economic value (media spend offset)**.
-[^fn-quality]: The Quality Improvement Index methodology is adapted from schema compliance testing standards (see [Schema.org testing tools](https://validator.schema.org/)) and UX clarity frameworks in academic HCI literature.
+[^fn-quality]: The Quality Improvement Index methodology is adapted from schema compliance testing standards (see [Schema.org testing tools]https://validator.schema.org/) and UX clarity frameworks in academic HCI literature.
 [^fn-media]: Replaced Media Spend % is modeled on approaches used in digital marketing ROI studies (e.g., Nielsen ROI benchmarks). Exact baselines will be validated in 2026 pilot campaigns.
 [^fn-reporting]: Transparency commitments are informed by best practices in impact investing reporting, including B Lab and GIIN standards. Reports will be both **investor-facing** and **public-facing**, but with distinct levels of granularity.

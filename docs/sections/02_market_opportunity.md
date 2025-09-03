@@ -67,22 +67,22 @@ Taken together, these dynamics highlight a market that is **both growing and def
 
 
 
-[^fn-mo-method-1]: **Ad Spend as Context — not Inclusion.** Digital ad figures are used only to demonstrate the migration of campaign effort toward online voter reach and discovery; they are **not included in TAM**.
+[^fn-mo-method-1]:  /appendices/appendix_a_market_analysis_layman/
 &nbsp;&nbsp;• Brennan Center for Justice, *Online Ad Spending in the 2024 Election* (Aug. 2024) — reports **$619M by Aug. 2024** and **$1.35B full cycle**.
 &nbsp;&nbsp;• Insider Intelligence / eMarketer, *2024 Outlook on Total Ad Spend & Digital Share*.
 
-[^fn-mo-method-2]: **Digital-Tech Share Benchmark (TAM).** Industry reporting estimates total 2024 political ad spend at ≈ $12.32B with digital ≈ 28.1%. Source: Insider Intelligence / eMarketer, press release. Our **3–5% non-media digital-tech share** is a conservative planning assumption for SaaS/CMS/structured-content tooling.
+[^fn-mo-method-2]:  /appendices/appendix_a_market_analysis_layman/
 
-[^fn-mo-method-3]: **Proportional Allocation (SAM).** Derived from TAM by limiting to structured data / AI-discovery tools; constrained by adoption readiness.
+[^fn-mo-method-3]:  /appendices/appendix_a_market_analysis_layman/
 
-[^fn-mo-method-4]: **SOM Penetration.** Our internal estimate, based on early SaaS adoption timelines and limited CMS integration, yielding ~$30–50M attainable market; subject to further verification.
+[^fn-mo-method-4]:  /appendices/appendix_a_market_analysis_layman/
 
-[^fn-mo-digital-tv-parity]: **Digital vs. TV Parity.** Wesleyan Media Project, Release 10/31/24 — digital ≈ $23M vs. TV ≈ $24.5M in cited period.
+[^fn-mo-digital-tv-parity]:  /appendices/appendix_a_market_analysis_layman/
 
-[^fn-mo-total-political-12b-2024]: **Total Political Advertising ≈ $12B (2024 cycle).** Insider Intelligence / eMarketer, *2024 political ad spending will jump nearly 30% vs. 2020*.
+[^fn-mo-total-political-12b-2024]:  /appendices/appendix_a_market_analysis_layman/
 
-[^fn-mo-digital-share-28pct]: **Digital Share ≈ 28%.** Insider Intelligence / eMarketer, 2024 forecast materials (press release).
+[^fn-mo-digital-share-28pct]:  /appendices/appendix_a_market_analysis_layman/
 
 
 
-[^fn-discovery-gap]: **Evidence base and monitoring need.** Tech for Campaigns’ *2024 Political Digital Advertising Report* documents Republican continuity in year-round infrastructure building versus Democrats’ sprint-style campaigns (2024). A multinational study of algorithmic amplification found the political right benefiting more often than the left in discoverability outcomes (2021, arXiv preprint 2110.11010). While neither source directly measures schema adoption or CMS modernization, together they suggest a systematic infrastructure advantage. Further research is required to quantify structured-data readiness and AI-discovery alignment across party lines, and this is an area we will continue to monitor.
+[^fn-discovery-gap]:  /appendices/appendix_a_market_analysis_layman/

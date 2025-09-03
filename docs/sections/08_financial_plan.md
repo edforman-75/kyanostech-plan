@@ -655,15 +655,15 @@ We benchmark to DC SaaS/political technology market rates, paying ~85% of top-of
 
 ## Footnotes
 
-[^1]: **Staged Investment Strategy:** Staged financing aligns with political cycles and provides optionality for investors to halt further capital deployment if impact and adoption metrics are not materializing according to plan. Each funding round includes specific milestone requirements and performance validation checkpoints.
+[^1]:  /appendices/appendix_a_market_analysis_layman/
 
-[^2]: **2025 Pilot Program:** Pilot program assumptions based on [Congressional Management Foundation](https://www.congressfoundation.org/projects/life-in-congress) research showing average 18-month technology adoption cycles in political campaigns. Early adopter identification requires structured outreach to progressive campaigns willing to test new technologies during non-critical periods.
+[^2]: **2025 Pilot Program:** Pilot program assumptions based on [Congressional Management Foundation]/appendices/appendix_b_financial_model_layman/ research showing average 18-month technology adoption cycles in political campaigns. Early adopter identification requires structured outreach to progressive campaigns willing to test new technologies during non-critical periods.
 
-[^3]: **Series A Scaling:** Series A deployment focused on [Higher Ground Labs](https://www.highergroundlabs.com/portfolio/) portfolio company scaling patterns showing average $2-3M Series A for political technology startups. Engineering team expansion and VAR partnership development based on successful political technology scaling models.
+[^3]: **Series A Scaling:** Series A deployment focused on [Higher Ground Labs]/appendices/appendix_d_markdown/ portfolio company scaling patterns showing average $2-3M Series A for political technology startups. Engineering team expansion and VAR partnership development based on successful political technology scaling models.
 
-[^4]: **2028 Bridge Funding:** Convertible debt structure provides presidential cycle working capital without premature equity dilution. [National Venture Capital Association](https://nvca.org/model-legal-documents/) standards for bridge financing in high-growth political technology sector. Presidential cycles require 3-4x operational capacity surge requiring capital deployment flexibility.
+[^4]: **2028 Bridge Funding:** Convertible debt structure provides presidential cycle working capital without premature equity dilution. [National Venture Capital Association]https://ballotpedia.org/Elections standards for bridge financing in high-growth political technology sector. Presidential cycles require 3-4x operational capacity surge requiring capital deployment flexibility.
 
-[^5]: **VAR Commission Model:** VAR commission model benchmarked against [Salesforce Partner Program](https://partners.salesforce.com/) (20-30% commissions) and [Microsoft Partner Network](https://partner.microsoft.com/) (15-25% commissions). Political technology distribution requires specialized partner expertise justifying premium commission rates for campaign relationship management.
+[^5]: **VAR Commission Model:** VAR commission model benchmarked against [Salesforce Partner Program]https://schema.org/docs/schemas.html (20-30% commissions) and [Microsoft Partner Network](https://partner.microsoft.com/) (15-25% commissions). Political technology distribution requires specialized partner expertise justifying premium commission rates for campaign relationship management.
 
 [^6]: **2026 Market Validation:** Market validation year focused on proving efficacy with midterm campaigns. Customer acquisition concentrated in competitive Senate and Governor races where technology investment is prioritized. Revenue limited by introductory pricing and support-intensive service delivery model.
 
@@ -679,13 +679,13 @@ https://www.bls.gov/oes/current/oes_47900.htm political consulting industry empl
 
 [^12]: **Travel Budget Assumptions:** Travel budget based on [Federal Travel Regulation](https://www.gsa.gov/travel/plan-book/federal-travel-regulation-ftr) per diem rates and Democratic National Committee event calendar requirements. Campaign relationship management requires significant in-person engagement during election cycles.
 
-[^13]: **DC Office Space:** Office space costs based on [CBRE](https://www.cbre.com/insights) Washington DC commercial real estate data for technology companies. Modest footprint supporting in-person collaboration while maintaining cost efficiency through remote-first operations.
+[^13]: **DC Office Space:** Office space costs based on [CBRE]https://www.cbre.com/insights Washington DC commercial real estate data for technology companies. Modest footprint supporting in-person collaboration while maintaining cost efficiency through remote-first operations.
 
-[^14]: **Equipment Costs:** Equipment allocation based on [General Services Administration](https://www.gsa.gov/buying-selling/products-services/technology/computer-products-and-accessories) federal contractor equipment standards. Includes laptops, development tools, and security compliance requirements for political technology operations.
+[^14]: **Equipment Costs:** Equipment allocation based on [General Services Administration]https://www.gsa.gov/buying-selling/products-services/technology/computer-products-and-accessories federal contractor equipment standards. Includes laptops, development tools, and security compliance requirements for political technology operations.
 
-[^15]: [Robert Half Technology – Salary Guide](https://www.roberthalf.com/salary-guide)
+[^15]: [Robert Half Technology – Salary Guide]https://www.roberthalf.com/us/en/insights/salary-guide
 
-[^16]: [Glassdoor – Salaries in Washington, DC](https://www.glassdoor.com/Salaries/washington-dc-salary-SRCH_IL.0,13_IM911.htm)
+[^16]: [Glassdoor – Salaries in Washington, DC]https://www.glassdoor.com/Salaries/washington-dc-salary-SRCH_IL.0,13_IM911.htm
 
-[^17]: [Upwork – Average Freelancer Rates](https://www.upwork.com/resources/what-are-average-freelancer-rates)
-[^10]: [Bureau of Labor Statistics – Occupational Employment (13-3091)](https://www.bls.gov/oes/current/oes193091.htm)
+[^17]: [Upwork – Average Freelancer Rates]https://www.upwork.com/resources/how-much-does-it-cost-to-hire-a-freelancer
+[^10]: [Bureau of Labor Statistics – Occupational Employment (13-3091)]https://www.bls.gov/oes/tables.htm

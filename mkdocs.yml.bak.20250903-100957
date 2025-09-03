@@ -1,7 +1,7 @@
 site_name: KyanosTech Plan
 site_description: Web-first business plan for KyanosTech
-site_url: https://edforman-75.github.io/kyanostech-plan/
-repo_url: https://github.com/edforman-75/kyanostech-plan
+site_url: https://<your-gh-user>.github.io/kyanostech-plan
+repo_url: https://github.com/<your-gh-user>/kyanostech-plan
 theme:
   name: material
   features:
@@ -39,13 +39,4 @@ nav:
   - "Appendix I \u2014 Compliance Framework": appendices/appendix_i_campaign_finance_compliance.md
 exclude_docs: '_archive/**
 
-  _archive/**
-
-  **/*.bak
-
-  **/*.md.bak
-
-  **/*.bak_*
-
-  **/*.bak.*'
-use_directory_urls: true
+  '

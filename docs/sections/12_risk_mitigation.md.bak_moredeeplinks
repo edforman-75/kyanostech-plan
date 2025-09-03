@@ -262,12 +262,12 @@ The stakes extend beyond traditional startup metrics—KyanosTech's risk managem
 
 ## Footnotes
 
-[^1]: **Election Deadline Constraints**: Unlike consumer or enterprise software with flexible launch timelines, political technology must align with fixed electoral cycles. The 2026 midterms occur on November 5, 2026, regardless of product development progress. Source: [Federal Election Commission]/appendices/appendix_a_market_analysis_layman/
+[^1]: **Election Deadline Constraints**: Unlike consumer or enterprise software with flexible launch timelines, political technology must align with fixed electoral cycles. The 2026 midterms occur on November 5, 2026, regardless of product development progress. Source: [Federal Election Commission](https://www.fec.gov/introduction-campaign-finance/election-dates/)
 
-[^2]: **Progressive Talent Market Analysis**: Based on [Built In Washington DC]/appendices/appendix_b_financial_model_layman/ salary data and [Higher Ground Labs](https://www.highergroundlabs.com/) portfolio company hiring patterns. Progressive technology talent represents subset of overall DC tech market with additional mission alignment requirements.
+[^2]: **Progressive Talent Market Analysis**: Based on [Built In Washington DC](https://builtin.com/salaries/dev-engineer/washington-dc) salary data and [Higher Ground Labs](https://www.highergroundlabs.com/) portfolio company hiring patterns. Progressive technology talent represents subset of overall DC tech market with additional mission alignment requirements.
 
-[^3]: **Political Technology Regulatory Environment**: Regulatory complexity analysis based on [Campaign Legal Center]/appendices/appendix_d_markdown/ guidance and [Federal Election Commission](https://www.fec.gov/) advisory opinions regarding technology services and in-kind contribution calculations.
+[^3]: **Political Technology Regulatory Environment**: Regulatory complexity analysis based on [Campaign Legal Center](https://campaignlegal.org/) guidance and [Federal Election Commission](https://www.fec.gov/) advisory opinions regarding technology services and in-kind contribution calculations.
 
-[^4]: **Competitive Timeline Analysis**: Market window analysis based on [Ballotpedia]https://ballotpedia.org/Elections election cycle data and technology adoption patterns from 2020 and 2022 Democratic campaigns. Source: [Democratic National Committee](https://democrats.org/) technology vendor timing recommendations.
+[^4]: **Competitive Timeline Analysis**: Market window analysis based on [Ballotpedia](https://ballotpedia.org/) election cycle data and technology adoption patterns from 2020 and 2022 Democratic campaigns. Source: [Democratic National Committee](https://democrats.org/) technology vendor timing recommendations.
 
-[^5]: **Technical Obsolescence Risk Assessment**: Platform evolution risk analysis based on [Schema.org]https://schema.org/docs/schemas.html historical change patterns, major AI platform policy update frequencies, and political technology standards development timelines from industry sources.
+[^5]: **Technical Obsolescence Risk Assessment**: Platform evolution risk analysis based on [Schema.org](https://schema.org/) historical change patterns, major AI platform policy update frequencies, and political technology standards development timelines from industry sources.
