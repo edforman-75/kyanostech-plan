@@ -1,0 +1,84 @@
+# 📊 Impact Measurement & Reporting
+
+## Objectives
+
+Impact is our north star. [^fn-reporting] Unlike traditional tech startups, our measure of success is not growth-at-all-costs but whether we improve the **quality, discoverability, and effectiveness of Democratic digital infrastructure**. [^fn-quality] [^fn-media]  
+
+We commit to three core impact metrics, each designed to be **measurable, auditable, and reportable** to investors and stakeholders. [^fn-metrics] These metrics also align directly with our financing strategy: they are the milestones against which staged capital deployment will be judged.
+
+---
+
+## Core Impact Metrics
+
+### 1. Campaigns Served
+The simplest, most tangible measure of our footprint.  
+
+| **Metric**         | **2024 Baseline** | **2026 Target** | **2027 Target** | **2028 Goal** |
+|--------------------|------------------:|----------------:|----------------:|--------------:|
+| Campaigns/Committees Served | 0 | 25 | 125 | 300+ |
+
+- **Definition:** Number of distinct campaigns, committees, or officeholders with active PDL schema deployment.  
+- **Why it matters:** Demonstrates breadth of adoption across tiers — presidential, statewide, House, and committees.  
+- **How measured:** Internal deployment logs, cross-checked with committee FEC IDs and campaign websites.  
+
+---
+
+### 2. Quality Improvement Index
+A composite score that captures the effectiveness of our structured content.  
+
+| **Dimension**  | **Baseline (2024)** | **Target (2028)** | **Measurement** |
+|----------------|--------------------:|------------------:|-----------------|
+| Coverage       | ~10% of pages tagged | 80%+ | Schema validation logs |
+| Accuracy       | Unmeasured | 95%+ | Independent audit |
+| Clarity        | Unmeasured | High (benchmark TBD) | Human-coded samples |
+| Compliance     | Fragmented | 90%+ | Automated schema compliance tests |
+
+- **Definition:** Weighted composite of four elements — coverage, accuracy, clarity, and schema compliance.  
+- **Why it matters:** Ensures our deployments do not just exist but perform reliably in AI search and compliance contexts.  
+- **How measured:** Annual audits by independent academic or nonprofit research partners, supplemented by automated testing.  
+
+---
+
+### 3. Replaced Media Spend %
+A proxy for efficiency: the degree to which organic visibility offsets reliance on paid media.  
+
+| **Metric**             | **Pilot (2026)** | **Mid-Cycle (2027)** | **2028 Goal** |
+|------------------------|-----------------:|---------------------:|--------------:|
+| % Paid Media Replaced  | TBD (pilot data) | 5–10% | 15–20% |
+
+- **Definition:** Percentage of paid media spend offset by improved organic discoverability in AI-driven and search contexts.  
+- **Why it matters:** Demonstrates ROI to campaigns, turning schema adoption into a budgetary advantage.  
+- **How measured:** Pre/post comparisons in pilot campaigns, validated by financial records and campaign budget disclosures.  
+
+---
+
+## Measurement Approach
+
+- **Pilots (2025–2026):** Early case studies will validate methodology and generate proof points for adoption.  
+- **Annual Benchmarks (2026–2028):** Conducted with academic research partners to ensure nonpartisan rigor and reproducibility.  
+- **Transparency & Reporting:**  
+  - Annual investor briefings with audited impact reports.  
+  - Public-facing transparency reports to strengthen credibility and show methodological neutrality.  
+
+---
+
+## Why These Metrics Matter
+
+- **Campaigns Served** shows whether we are scaling broadly enough to matter.  
+- **Quality Improvement Index** shows whether we are raising standards, not just shipping software.  
+- **Replaced Media Spend %** shows whether we are saving campaigns money in measurable ways.  
+
+Together, these metrics form a **balanced scorecard**: breadth, depth, and efficiency.  
+
+---
+
+## Footnotes
+
+
+
+
+
+[^fn-metrics]: These three metrics were selected in consultation with campaign advisors, SaaS benchmarking literature, and investor expectations for measurable impact. They balance **simplicity (campaigns served)**, **technical rigor (quality index)**, and **economic value (media spend offset)**.
+[^fn-quality]: The Quality Improvement Index methodology is adapted from schema compliance testing standards (see [Schema.org testing tools](https://validator.schema.org/)) and UX clarity frameworks in academic HCI literature.
+[^fn-media]: Replaced Media Spend % is modeled on approaches used in digital marketing ROI studies (e.g., Nielsen ROI benchmarks). Exact baselines will be validated in 2026 pilot campaigns.
+[^fn-reporting]: Transparency commitments are informed by best practices in impact investing reporting, including B Lab and GIIN standards. Reports will be both **investor-facing** and **public-facing**, but with distinct levels of granularity.

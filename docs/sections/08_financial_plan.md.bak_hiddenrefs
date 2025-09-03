@@ -1,0 +1,689 @@
+# 📊 Financial Plan
+
+## Objectives
+
+Our financial plan is designed to achieve three strategic objectives that ensure both mission success and sustainable operations:
+
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin: 2rem 0;">
+
+<div style="background: linear-gradient(135deg, #f8f9ff 0%, #e8f0ff 100%); border-left: 5px solid #667eea; padding: 1.5rem; border-radius: 0 12px 12px 0; box-shadow: 0 6px 20px rgba(102, 126, 234, 0.1);">
+<h4 style="color: #1e3c72; margin-top: 0; font-size: 1.1rem;">🎯 Maximum Impact</h4>
+<p style="font-size: 0.95rem; line-height: 1.5;">Ensure Democratic facts and values are discoverable in digital and AI environments, creating measurable improvements in candidate representation across AI platforms.</p>
+</div>
+
+<div style="background: linear-gradient(135deg, #f8f9ff 0%, #e8f0ff 100%); border-left: 5px solid #667eea; padding: 1.5rem; border-radius: 0 12px 12px 0; box-shadow: 0 6px 20px rgba(102, 126, 234, 0.1);">
+<h4 style="color: #1e3c72; margin-top: 0; font-size: 1.1rem;">💰 Sustainable Economics</h4>
+<p style="font-size: 0.95rem; line-height: 1.5;">Operate as a stable organization that can carry through off-cycle years without perpetual fundraising, maintaining core capabilities between election cycles.</p>
+</div>
+
+<div style="background: linear-gradient(135deg, #f8f9ff 0%, #e8f0ff 100%); border-left: 5px solid #667eea; padding: 1.5rem; border-radius: 0 12px 12px 0; box-shadow: 0 6px 20px rgba(102, 126, 234, 0.1);">
+<h4 style="color: #1e3c72; margin-top: 0; font-size: 1.1rem;">🏆 Talent Attraction</h4>
+<p style="font-size: 0.95rem; line-height: 1.5;">Offer competitive compensation and a mission-driven culture strong enough to recruit and retain top-tier political technology talent in Washington DC market.</p>
+</div>
+
+</div>
+
+All financial assumptions below serve these objectives and are **subject to validation** through market research and operational experience.
+
+---
+
+## Financing Roadmap
+
+<div style="background: linear-gradient(135deg, #fff8e1 0%, #fff3c4 100%); border-left: 5px solid #f39c12; padding: 2rem; margin: 2rem 0; border-radius: 0 15px 15px 0; box-shadow: 0 8px 25px rgba(243, 156, 18, 0.15);" markdown="1">
+
+<h3 style="color: #e67e22; margin-top: 0;">Staged Investment Strategy</h3>
+
+<p markdown="1">We stage our financing to match political cycles and give investors clear checkpoints for performance validation and risk management.[^1]</p>
+
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin: 1.5rem 0;">
+
+<div style="background: white; border: 2px solid #ffedc7; border-radius: 10px; padding: 1.5rem; transition: all 0.3s ease;">
+<div style="font-weight: 600; color: #e67e22; font-size: 1.1rem; margin-bottom: 0.5rem;">Seed (2025)</div>
+<div style="font-size: 1.6rem; font-weight: 700; color: #d35400; margin: 0.5rem 0;">$500K</div>
+<p style="font-size: 0.9rem; line-height: 1.4; margin-bottom: 0;" markdown="1"><strong>Purpose:</strong> Complete core product development and run pilot projects with 5-10 early adopter campaigns.[^2]</p>
+</div>
+
+<div style="background: white; border: 2px solid #ffedc7; border-radius: 10px; padding: 1.5rem; transition: all 0.3s ease;">
+<div style="font-weight: 600; color: #e67e22; font-size: 1.1rem; margin-bottom: 0.5rem;">Series A (2026)</div>
+<div style="font-size: 1.6rem; font-weight: 700; color: #d35400; margin: 0.5rem 0;">$2.5M</div>
+<p style="font-size: 0.9rem; line-height: 1.4; margin-bottom: 0;" markdown="1"><strong>Purpose:</strong> Expand engineering team, establish VAR (value-added reseller) partnerships, and scale customer success operations.[^3]</p>
+</div>
+
+<div style="background: white; border: 2px solid #ffedc7; border-radius: 10px; padding: 1.5rem; transition: all 0.3s ease;">
+<div style="font-weight: 600; color: #e67e22; font-size: 1.1rem; margin-bottom: 0.5rem;">Convertible Debt (2028)</div>
+<div style="font-size: 1.6rem; font-weight: 700; color: #d35400; margin: 0.5rem 0;">$2.2M</div>
+<p style="font-size: 0.9rem; line-height: 1.4; margin-bottom: 0;" markdown="1"><strong>Purpose:</strong> Liquidity during the presidential cycle – the costliest year – without premature dilution.[^4]</p>
+</div>
+
+</div>
+
+<p>This approach provides <strong>optionality</strong>: if the model does not prove out, investors can cut losses after 2026 or 2027. If it succeeds, the additional capital is ready to scale.</p>
+
+</div>
+
+---
+
+## Gross vs. Net Revenue Model
+
+We distinguish between **gross revenue** (fees campaigns pay) and **net revenue** (what we keep after VAR commissions):
+
+<div style="background: linear-gradient(135deg, #e8f4ff 0%, #d6eaff 100%); border-radius: 15px; padding: 2rem; margin: 2rem 0;" markdown="1">
+
+<h3 style="color: #1e3c72; margin-top: 0;">Revenue Structure</h3>
+
+<ul style="margin: 1rem 0; padding-left: 1.5rem;" markdown="1">
+<li style="margin: 0.8rem 0; line-height: 1.6;"><strong>Gross revenue</strong> is the full subscription and services fee billed to campaigns, committees, and officeholders</li>
+<li style="margin: 0.8rem 0; line-height: 1.6;" markdown="1"><strong>VAR commissions</strong> (≈25% by 2028) are paid to distribution partners who bring in customers, onboard them, and provide first-line support[^5]</li>
+<li style="margin: 0.8rem 0; line-height: 1.6;"><strong>Net revenue</strong> is what we keep to fund product development, compliance, and higher-level support</li>
+</ul>
+
+<div style="background: rgba(255, 255, 255, 0.7); padding: 1.5rem; border-radius: 8px; margin-top: 1.5rem; border-left: 4px solid #1e3c72;">
+<p style="margin: 0; font-weight: 600; color: #1e3c72;"><strong>Strategic Advantage:</strong> VARs extend reach into hundreds of campaigns we could never serve directly, while our retained net revenue funds the moat – schema development, platform integrations, and bias monitoring capabilities.</p>
+</div>
+
+</div>
+
+---
+
+## Revenue Growth Story
+
+<div style="background: linear-gradient(135deg, #e8f5e8 0%, #f0fff0 100%); border-radius: 15px; padding: 2rem; margin: 2rem 0;">
+
+<h3 style="color: #27ae60; margin-top: 0;">Three-Year Revenue Trajectory</h3>
+
+<p>Revenue grows with credibility and market validation:</p>
+
+<div style="display: flex; justify-content: space-between; align-items: center; margin: 2rem 0; padding: 1rem; background: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(39, 174, 96, 0.1); flex-wrap: wrap; gap: 1rem;">
+
+<div style="text-align: center; flex: 1; min-width: 120px;">
+<div style="font-weight: 600; color: #27ae60; margin-bottom: 0.5rem;">2026</div>
+<div style="font-size: 1.5rem; font-weight: 700; color: #229954;">≈$659K</div>
+<div style="font-size: 0.9rem; color: #7f8c8d;">Market validation</div>
+</div>
+
+<div style="color: #27ae60; font-size: 1.5rem; font-weight: bold;">→</div>
+
+<div style="text-align: center; flex: 1; min-width: 120px;">
+<div style="font-weight: 600; color: #27ae60; margin-bottom: 0.5rem;">2027</div>
+<div style="font-size: 1.5rem; font-weight: 700; color: #229954;">≈$2.8M</div>
+<div style="font-size: 0.9rem; color: #7f8c8d;">Broader adoption</div>
+</div>
+
+<div style="color: #27ae60; font-size: 1.5rem; font-weight: bold;">→</div>
+
+<div style="text-align: center; flex: 1; min-width: 120px;">
+<div style="font-weight: 600; color: #27ae60; margin-bottom: 0.5rem;">2028</div>
+<div style="font-size: 1.5rem; font-weight: 700; color: #229954;">≈$6.4M</div>
+<div style="font-size: 0.9rem; color: #7f8c8d;">Presidential cycle</div>
+</div>
+
+</div>
+
+<ul style="padding-left: 1.5rem;" markdown="1">
+<li style="margin: 0.8rem 0; line-height: 1.6;" markdown="1"><strong>2026:</strong> Support-heavy year with limited penetration and pilot programs[^6]</li>
+<li style="margin: 0.8rem 0; line-height: 1.6;" markdown="1"><strong>2027:</strong> Broader adoption in statewide races and committee/officeholder accounts, but no federal presidential or congressional cycle[^7]</li>
+<li style="margin: 0.8rem 0; line-height: 1.6;"><strong>2028:</strong> Presidential cycle revenues, expanded House penetration, and recurring ARR from committees and officeholders</li>
+</ul>
+
+</div>
+
+---
+
+## 2028 Revenue Build-Up Analysis
+
+The following table shows how we construct our 2028 gross revenue forecast from the ground up, starting with contest universe and applying conservative penetration rates:[^8]
+
+<div style="overflow-x: auto; margin: 2rem 0; border-radius: 10px; box-shadow: 0 8px 25px rgba(0,0,0,0.1);">
+
+<table style="width: 100%; border-collapse: collapse; background: white;">
+<thead>
+<tr style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+<th style="padding: 1rem; text-align: left; font-weight: 600; border: none;">Tier / Segment</th>
+<th style="padding: 1rem; text-align: center; font-weight: 600; border: none;">Total Universe</th>
+<th style="padding: 1rem; text-align: center; font-weight: 600; border: none;">Penetration</th>
+<th style="padding: 1rem; text-align: center; font-weight: 600; border: none;">Accounts Served</th>
+<th style="padding: 1rem; text-align: right; font-weight: 600; border: none;">Avg Fee ($000)</th>
+<th style="padding: 1rem; text-align: right; font-weight: 600; border: none;">Revenue ($000)</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom: 1px solid #ecf0f1;">
+<td style="padding: 1rem; vertical-align: top; font-weight: 600;">Presidential – General</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">1</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">100%</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">1</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">300</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">300</td>
+</tr>
+<tr style="border-bottom: 1px solid #ecf0f1;">
+<td style="padding: 1rem; vertical-align: top; font-weight: 600;">Presidential – Primaries</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">~8 viable candidates</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">38%</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">3</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">150</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">450</td>
+</tr>
+<tr style="border-bottom: 1px solid #ecf0f1;">
+<td style="padding: 1rem; vertical-align: top; font-weight: 600;">Statewide (Gov, Senate, AG, SoS)</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">90 races</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">39%</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">35</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">75</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">2,625</td>
+</tr>
+<tr style="border-bottom: 1px solid #ecf0f1;">
+<td style="padding: 1rem; vertical-align: top; font-weight: 600;">House of Representatives</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">435</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">28%</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">120</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">22.5</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">2,700</td>
+</tr>
+<tr style="border-bottom: 1px solid #ecf0f1;">
+<td style="padding: 1rem; vertical-align: top; font-weight: 600;">Committees & Officeholders</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">~350</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">29%</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">100</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">10</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">1,000</td>
+</tr>
+<tr style="background: #f8f9ff; font-weight: 700;">
+<td style="padding: 1rem; vertical-align: top;">Total</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">—</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">—</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">259</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">24.7 (avg)</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">7,075</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div style="background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%); border-radius: 15px; padding: 2rem; margin: 2rem 0; box-shadow: 0 8px 25px rgba(253, 203, 110, 0.2);" markdown="1">
+<h3 style="color: #d63031; margin-top: 0;">Revenue Model Validation Requirements</h3>
+<p><strong>Key Assumptions to Validate:</strong></p>
+<ul style="padding-left: 1.5rem;" markdown="1">
+<li style="margin: 0.5rem 0; line-height: 1.5;"><strong>Penetration Rates:</strong> 28-39% market penetration requires validation through customer discovery and pilot program results</li>
+<li style="margin: 0.5rem 0; line-height: 1.5;" markdown="1"><strong>Pricing Acceptance:</strong> Tier-specific fees must be validated against campaign budget allocation patterns and competitive benchmarking[^9]</li>
+<li style="margin: 0.5rem 0; line-height: 1.5;"><strong>Universe Sizing:</strong> Contest counts based on historical patterns but subject to redistricting and competitive landscape changes</li>
+<li style="margin: 0.5rem 0; line-height: 1.5;"><strong>VAR Partnership Success:</strong> 25% commission model assumes successful partner recruitment and relationship management</li>
+</ul>
+</div>
+
+---
+
+## Operating Model & Team Structure
+
+We staff permanent employees for **off-year demand** and use contractors to absorb election-year surges, avoiding layoffs while maintaining cost efficiency:[^10]
+
+<div style="overflow-x: auto; margin: 2rem 0; border-radius: 10px; box-shadow: 0 8px 25px rgba(0,0,0,0.1);">
+
+<table style="width: 100%; border-collapse: collapse; background: white;">
+<thead>
+<tr style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+<th style="padding: 1rem; text-align: left; font-weight: 600; border: none;">Function</th>
+<th style="padding: 1rem; text-align: center; font-weight: 600; border: none;">2026</th>
+<th style="padding: 1rem; text-align: center; font-weight: 600; border: none;">2027</th>
+<th style="padding: 1rem; text-align: center; font-weight: 600; border: none;">2028</th>
+<th style="padding: 1rem; text-align: left; font-weight: 600; border: none;">Strategic Focus</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom: 1px solid #ecf0f1;">
+<td style="padding: 1rem; vertical-align: top; font-weight: 600;">Execs (CEO, CTO, CCO)</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">3</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">3</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">3</td>
+<td style="padding: 1rem; vertical-align: top;">Strategic leadership, investor relations, partner development</td>
+</tr>
+<tr style="border-bottom: 1px solid #ecf0f1;">
+<td style="padding: 1rem; vertical-align: top; font-weight: 600;">Engineering</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">6–7</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">9</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">11</td>
+<td style="padding: 1rem; vertical-align: top;">Core product development – the heart of our defensibility</td>
+</tr>
+<tr style="border-bottom: 1px solid #ecf0f1;">
+<td style="padding: 1rem; vertical-align: top; font-weight: 600;">Sales & Marketing</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">2</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">3</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">4</td>
+<td style="padding: 1rem; vertical-align: top;">VAR enablement, thought leadership, conference participation</td>
+</tr>
+<tr style="border-bottom: 1px solid #ecf0f1;">
+<td style="padding: 1rem; vertical-align: top; font-weight: 600;">Customer Success</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">2</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">3</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">5</td>
+<td style="padding: 1rem; vertical-align: top;">Permanent staff + $50/hr contractors during surge periods</td>
+</tr>
+<tr style="border-bottom: 1px solid #ecf0f1;">
+<td style="padding: 1rem; vertical-align: top; font-weight: 600;">G&A / Compliance</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">1</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">1</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">2</td>
+<td style="padding: 1rem; vertical-align: top;">Legal counsel, compliance, laptops, DC office space</td>
+</tr>
+<tr style="background: #f8f9ff; font-weight: 600;">
+<td style="padding: 1rem; vertical-align: top;">Total FTEs</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">14–15</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">19</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">25</td>
+<td style="padding: 1rem; vertical-align: top;">Plus contractor surge capacity</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div style="background: linear-gradient(135deg, #f0f9ff 0%, #dbeafe 100%); border-left: 5px solid #3b82f6; padding: 1.5rem; margin: 2rem 0; border-radius: 0 10px 10px 0;" markdown="1">
+<h4 style="color: #1e40af; margin-top: 0;">Key Operating Assumptions:</h4>
+<ul style="margin: 0.5rem 0; padding-left: 1.5rem;" markdown="1">
+<li style="margin: 0.5rem 0; line-height: 1.5;" markdown="1"><strong>Engineering Focus:</strong> By 2028, a third of OPEX goes to engineers – the core of our competitive moat[^11]</li>
+<li style="margin: 0.5rem 0; line-height: 1.5;" markdown="1"><strong>Travel Budget:</strong> $12K/year per executive and S&M FTE, reflecting campaign travel requirements[^12]</li>
+<li style="margin: 0.5rem 0; line-height: 1.5;" markdown="1"><strong>DC Office:</strong> $60K/year for modest office space supporting in-person collaboration[^13]</li>
+<li style="margin: 0.5rem 0; line-height: 1.5;" markdown="1"><strong>Equipment:</strong> $2.5K per new hire for laptops and equipment[^14]</li>
+</ul>
+</div>
+
+---
+
+## Pro Forma P&L Summary
+
+<div style="overflow-x: auto; margin: 2rem 0; border-radius: 10px; box-shadow: 0 8px 25px rgba(0,0,0,0.1);">
+
+<table style="width: 100%; border-collapse: collapse; background: white;">
+<thead>
+<tr style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+<th style="padding: 1rem; text-align: left; font-weight: 600; border: none;">Line Item</th>
+<th style="padding: 1rem; text-align: right; font-weight: 600; border: none;">2026</th>
+<th style="padding: 1rem; text-align: right; font-weight: 600; border: none;">2027</th>
+<th style="padding: 1rem; text-align: right; font-weight: 600; border: none;">2028</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom: 1px solid #ecf0f1;">
+<td style="padding: 1rem; vertical-align: top; font-weight: 600;">Gross Revenue</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">659 (100%)</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">2,800 (100%)</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">6,400 (100%)</td>
+</tr>
+<tr style="border-bottom: 1px solid #ecf0f1;">
+<td style="padding: 1rem; vertical-align: top; font-weight: 600;">Net Revenue</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">659 (100%)</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">2,450 (88%)</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">4,800 (75%)</td>
+</tr>
+<tr style="border-bottom: 1px solid #ecf0f1;">
+<td style="padding: 1rem; vertical-align: top; font-weight: 600;">Gross Profit</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">559 (85%)</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">2,030 (73%)</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">3,840 (60%)</td>
+</tr>
+<tr style="border-bottom: 1px solid #ecf0f1;">
+<td style="padding: 1rem; vertical-align: top; font-weight: 600;">Total OPEX</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top; color: #e53e3e;">(1,450) (−220%)</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top; color: #e53e3e;">(3,030) (−108%)</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top; color: #e53e3e;">(6,720) (−105%)</td>
+</tr>
+<tr style="background: #f8f9ff; font-weight: 700;">
+<td style="padding: 1rem; vertical-align: top;">Net Loss</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top; color: #e53e3e;">−891 (−135%)</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top; color: #e53e3e;">−1,000 (−36%)</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top; color: #e53e3e;">−2,880 (−45%)</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+---
+
+## Detailed Expense Forecast
+
+<div style="overflow-x: auto; margin: 2rem 0; border-radius: 10px; box-shadow: 0 8px 25px rgba(0,0,0,0.1);">
+
+<table style="width: 100%; border-collapse: collapse; background: white;">
+<thead>
+<tr style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+<th style="padding: 1rem; text-align: left; font-weight: 600; border: none;">Category</th>
+<th style="padding: 1rem; text-align: right; font-weight: 600; border: none;">2026</th>
+<th style="padding: 1rem; text-align: center; font-weight: 600; border: none;">%</th>
+<th style="padding: 1rem; text-align: right; font-weight: 600; border: none;">2027</th>
+<th style="padding: 1rem; text-align: center; font-weight: 600; border: none;">%</th>
+<th style="padding: 1rem; text-align: right; font-weight: 600; border: none;">2028</th>
+<th style="padding: 1rem; text-align: center; font-weight: 600; border: none;">%</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom: 1px solid #ecf0f1;">
+<td style="padding: 1rem; vertical-align: top; font-weight: 600;">Exec Comp (CEO, CTO, CCO)</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">600</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">41%</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">650</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">21%</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">700</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">10%</td>
+</tr>
+<tr style="border-bottom: 1px solid #ecf0f1;">
+<td style="padding: 1rem; vertical-align: top; font-weight: 600;">Engineering / R&D</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">320</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">22%</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">1,000</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">33%</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">2,300</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">34%</td>
+</tr>
+<tr style="border-bottom: 1px solid #ecf0f1;">
+<td style="padding: 1rem; vertical-align: top; font-weight: 600;">Sales & Marketing</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">210</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">14%</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">550</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">18%</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">600</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">9%</td>
+</tr>
+<tr style="border-bottom: 1px solid #ecf0f1;">
+<td style="padding: 1rem; vertical-align: top; font-weight: 600;">Customer Success (perm+temps)</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">110</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">8%</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">320</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">11%</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">1,590</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">24%</td>
+</tr>
+<tr style="border-bottom: 1px solid #ecf0f1;">
+<td style="padding: 1rem; vertical-align: top; font-weight: 600;">G&A (rent, laptops, admin)</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">140</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">10%</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">410</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">14%</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">1,330</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">20%</td>
+</tr>
+<tr style="border-bottom: 1px solid #ecf0f1;">
+<td style="padding: 1rem; vertical-align: top; font-weight: 600;">Travel</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">70</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">5%</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">100</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">3%</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">200</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">3%</td>
+</tr>
+<tr style="background: #f8f9ff; font-weight: 700;">
+<td style="padding: 1rem; vertical-align: top;">Total OPEX</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">1,450</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">100%</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">3,030</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">100%</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">6,720</td>
+<td style="padding: 1rem; text-align: center; vertical-align: top;">100%</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+---
+
+## Compensation Benchmarking
+
+We benchmark to DC SaaS/political technology market rates, paying ~85% of top-of-market with benefits at 25% for senior staff and 20% for entry-level:[^15]
+
+<div style="overflow-x: auto; margin: 2rem 0; border-radius: 10px; box-shadow: 0 8px 25px rgba(0,0,0,0.1);" markdown="1">
+
+<table style="width: 100%; border-collapse: collapse; background: white;" markdown="1">
+<thead markdown="1">
+<tr style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;" markdown="1">
+<th style="padding: 1rem; text-align: left; font-weight: 600; border: none;">Role</th>
+<th style="padding: 1rem; text-align: right; font-weight: 600; border: none;" markdown="1">DC Market Base (2026)[^16]</th>
+<th style="padding: 1rem; text-align: right; font-weight: 600; border: none;">We Pay (85%)</th>
+<th style="padding: 1rem; text-align: right; font-weight: 600; border: none;">Fully Loaded</th>
+</tr>
+</thead>
+<tbody markdown="1">
+<tr style="border-bottom: 1px solid #ecf0f1;">
+<td style="padding: 1rem; vertical-align: top; font-weight: 600;">CEO</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">$240K</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">$204K</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">~$255K</td>
+</tr>
+<tr style="border-bottom: 1px solid #ecf0f1;">
+<td style="padding: 1rem; vertical-align: top; font-weight: 600;">CTO</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">$220K</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">$187K</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">~$235K</td>
+</tr>
+<tr style="border-bottom: 1px solid #ecf0f1;">
+<td style="padding: 1rem; vertical-align: top; font-weight: 600;">CCO</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">$200K</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">$170K</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">~$213K</td>
+</tr>
+<tr style="border-bottom: 1px solid #ecf0f1;">
+<td style="padding: 1rem; vertical-align: top; font-weight: 600;">Engineer</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">$170K</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">$145K</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">~$210K</td>
+</tr>
+<tr style="border-bottom: 1px solid #ecf0f1;">
+<td style="padding: 1rem; vertical-align: top; font-weight: 600;">S&M FTE</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">$120K</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">$102K</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">~$128K</td>
+</tr>
+<tr style="border-bottom: 1px solid #ecf0f1;">
+<td style="padding: 1rem; vertical-align: top; font-weight: 600;">CS (perm)</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">$85K</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">entry-level</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">~$102K</td>
+</tr>
+<tr style="background: #f8f9ff;" markdown="1">
+<td style="padding: 1rem; vertical-align: top; font-weight: 600;">Temps</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">—</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;" markdown="1">$50/hr[^17]</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">$50/hr</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+---
+
+## Cash Flow Projection
+
+<div style="background: linear-gradient(135deg, #fff5f5 0%, #fed7d7 100%); border-left: 5px solid #e53e3e; padding: 1.5rem; margin: 2rem 0; border-radius: 0 10px 10px 0; box-shadow: 0 5px 15px rgba(229, 62, 62, 0.1);">
+<h4 style="color: #c53030; margin-top: 0;">⚠️ Disciplined Capital Deployment</h4>
+<p>We spend nearly all $5.2M by 2028, finishing with ≈$180K – requiring precise execution and milestone achievement for continued funding rounds.</p>
+</div>
+
+<div style="overflow-x: auto; margin: 2rem 0; border-radius: 10px; box-shadow: 0 8px 25px rgba(0,0,0,0.1);">
+
+<table style="width: 100%; border-collapse: collapse; background: white;">
+<thead>
+<tr style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+<th style="padding: 1rem; text-align: left; font-weight: 600; border: none;">Line Item</th>
+<th style="padding: 1rem; text-align: right; font-weight: 600; border: none;">2025</th>
+<th style="padding: 1rem; text-align: right; font-weight: 600; border: none;">2026</th>
+<th style="padding: 1rem; text-align: right; font-weight: 600; border: none;">2027</th>
+<th style="padding: 1rem; text-align: right; font-weight: 600; border: none;">2028</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom: 1px solid #ecf0f1;">
+<td style="padding: 1rem; vertical-align: top; font-weight: 600;">Start Cash</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">0</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">500</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">2,109</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">1,109</td>
+</tr>
+<tr style="border-bottom: 1px solid #ecf0f1;">
+<td style="padding: 1rem; vertical-align: top; font-weight: 600;">Funding Raised</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top; color: #059669;">+500</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top; color: #059669;">+2,500</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">0</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top; color: #059669;">+2,200</td>
+</tr>
+<tr style="border-bottom: 1px solid #ecf0f1;">
+<td style="padding: 1rem; vertical-align: top; font-weight: 600;">Net Loss</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">~0</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top; color: #e53e3e;">(891)</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top; color: #e53e3e;">(1,000)</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top; color: #e53e3e;">(2,880)</td>
+</tr>
+<tr style="background: #f8f9ff; font-weight: 700;">
+<td style="padding: 1rem; vertical-align: top;">End Cash</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">500</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">2,109</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top;">1,109</td>
+<td style="padding: 1rem; text-align: right; vertical-align: top; color: #d97706;">429</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+---
+
+## Financial Plan Validation & Monitoring
+
+<div style="background: linear-gradient(135deg, #fff8e1 0%, #fff3c4 100%); border-left: 5px solid #f39c12; padding: 2rem; margin: 2rem 0; border-radius: 0 15px 15px 0; box-shadow: 0 8px 25px rgba(243, 156, 18, 0.15);">
+
+<h3 style="color: #e67e22; margin-top: 0;">Validation Requirements</h3>
+
+<p>Like any financial forecast, this plan represents <strong>assumptions layered upon assumptions</strong> that require systematic validation through research and operational experience. Our validation roadmap includes:</p>
+
+<p><strong>Customer Discovery & Market Validation:</strong></p>
+<ul style="padding-left: 1.5rem;">
+<li style="margin: 0.5rem 0; line-height: 1.5;"><strong>Structured interviews</strong> with 50+ Democratic campaign managers across all tiers to validate pricing acceptance, value proposition, and penetration rate assumptions</li>
+<li style="margin: 0.5rem 0; line-height: 1.5;"><strong>Pilot program</strong> with 5-10 early adopter campaigns to test actual usage patterns, customer success requirements, and retention metrics</li>
+<li style="margin: 0.5rem 0; line-height: 1.5;"><strong>Competitive benchmarking</strong> against existing political technology companies to validate revenue models, growth patterns, and market positioning</li>
+</ul>
+
+<p><strong>Partnership & Distribution Research:</strong></p>
+<ul style="padding-left: 1.5rem;">
+<li style="margin: 0.5rem 0; line-height: 1.5;"><strong>VAR partnership investigation</strong> with established political consulting firms to validate commission structures, relationship management capabilities, and market reach assumptions</li>
+<li style="margin: 0.5rem 0; line-height: 1.5;"><strong>Platform integration validation</strong> with WordPress, NationBuilder, and NGP VAN to confirm technical feasibility and implementation costs</li>
+<li style="margin: 0.5rem 0; line-height: 1.5;"><strong>Channel partner interviews</strong> to understand political technology distribution patterns and relationship management requirements</li>
+</ul>
+
+<p><strong>Financial Model Stress Testing:</strong></p>
+<ul style="padding-left: 1.5rem;">
+<li style="margin: 0.5rem 0; line-height: 1.5;"><strong>Sensitivity analysis</strong> on key assumptions including penetration rates (±10%), pricing acceptance (±20%), and operational costs (±15%)</li>
+<li style="margin: 0.5rem 0; line-height: 1.5;"><strong>Scenario planning</strong> for delayed market adoption, increased competition, or regulatory changes affecting business model viability</li>
+<li style="margin: 0.5rem 0; line-height: 1.5;"><strong>Cash flow modeling</strong> under various funding timing scenarios to ensure operational continuity during validation periods</li>
+</ul>
+
+</div>
+
+<div style="background: linear-gradient(135deg, #fff5f5 0%, #fed7d7 100%); border-left: 5px solid #e53e3e; padding: 1.5rem; margin: 2rem 0; border-radius: 0 10px 10px 0; box-shadow: 0 5px 15px rgba(229, 62, 62, 0.1);">
+
+<h4 style="color: #c53030; margin-top: 0;">🔍 Continuous Monitoring & Plan Adjustment</h4>
+
+<p>We will <strong>carefully monitor our progress</strong> against these financial projections and <strong>adjust our plan accordingly</strong> as we gather market intelligence:</p>
+
+<ul style="padding-left: 1.5rem;">
+<li style="margin: 0.5rem 0; line-height: 1.5;"><strong>Monthly financial reviews</strong> comparing actual performance to projections with variance analysis and corrective action planning</li>
+<li style="margin: 0.5rem 0; line-height: 1.5;"><strong>Quarterly assumption validation</strong> reassessing market penetration rates, pricing acceptance, and competitive positioning based on customer feedback and market research</li>
+<li style="margin: 0.5rem 0; line-height: 1.5;"><strong>Annual model updates</strong> incorporating lessons learned, market changes, and strategic pivots into revised financial projections and funding requirements</li>
+<li style="margin: 0.5rem 0; line-height: 1.5;"><strong>Investor reporting</strong> with transparent variance analysis, assumption validation progress, and plan adjustments to maintain stakeholder confidence and support</li>
+</ul>
+
+<p><strong>Adaptation Triggers:</strong> We will revise financial assumptions when actual performance varies >20% from projections for two consecutive quarters, or when market research indicates fundamental assumption changes are required.</p>
+
+</div>
+
+---
+
+## Key Financial Takeaways
+
+<div style="background: linear-gradient(135deg, #e8f4ff 0%, #d6eaff 100%); border-radius: 15px; padding: 2rem; margin: 3rem 0;">
+
+<h3 style="color: #1e3c72; margin-top: 0;">Strategic Financial Principles</h3>
+
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin: 2rem 0;">
+
+<div style="background: white; border: 2px solid #e8f4ff; border-radius: 10px; padding: 1.5rem; box-shadow: 0 4px 12px rgba(30, 60, 114, 0.1);">
+<div style="margin: 0.8rem 0; font-size: 0.95rem; line-height: 1.5;">
+<div style="color: #667eea; font-weight: bold; font-size: 1rem;">✓</div>
+<strong>Disciplined Burn:</strong> We spend nearly all $5.2M by 2028, requiring precise milestone execution
+</div>
+<div style="margin: 0.8rem 0; font-size: 0.95rem; line-height: 1.5;">
+<div style="color: #667eea; font-weight: bold; font-size: 1rem;">✓</div>
+<strong>No Layoffs:</strong> Permanent staff sized for off-year demand; contractors absorb surges
+</div>
+</div>
+
+<div style="background: white; border: 2px solid #e8f4ff; border-radius: 10px; padding: 1.5rem; box-shadow: 0 4px 12px rgba(30, 60, 114, 0.1);">
+<div style="margin: 0.8rem 0; font-size: 0.95rem; line-height: 1.5;">
+<div style="color: #667eea; font-weight: bold; font-size: 1rem;">✓</div>
+<strong>VAR Advantage:</strong> Commissions reduce gross-to-net but buy distribution we could never build alone
+</div>
+<div style="margin: 0.8rem 0; font-size: 0.95rem; line-height: 1.5;">
+<div style="color: #667eea; font-weight: bold; font-size: 1rem;">✓</div>
+<strong>Engineering Moat:</strong> By 2028, 34% of OPEX funds engineers – our competitive core
+</div>
+</div>
+
+<div style="background: white; border: 2px solid #e8f4ff; border-radius: 10px; padding: 1.5rem; box-shadow: 0 4px 12px rgba(30, 60, 114, 0.1);">
+<div style="margin: 0.8rem 0; font-size: 0.95rem; line-height: 1.5;">
+<div style="color: #667eea; font-weight: bold; font-size: 1rem;">✓</div>
+<strong>ARR Ballast:</strong> Committees and officeholders provide recurring revenue stability
+</div>
+<div style="margin: 0.8rem 0; font-size: 0.95rem; line-height: 1.5;">
+<div style="color: #667eea; font-weight: bold; font-size: 1rem;">✓</div>
+<strong>Investor Optionality:</strong> Staged financing ensures discipline and impact checkpoints
+</div>
+</div>
+
+</div>
+
+<div style="text-align: center; margin-top: 1.5rem; padding: 1rem; background: white; border-radius: 8px; border: 1px solid #e8f4ff;">
+<div style="margin: 0.8rem 0; font-size: 1rem; line-height: 1.5;">
+<div style="color: #667eea; font-weight: bold; font-size: 1.1rem;">✓</div>
+<strong>Mission Alignment:</strong> Financial model supports sustainable economics, maximum Democratic impact, and top-tier talent attraction
+</div>
+</div>
+
+</div>
+
+---
+
+## Footnotes
+
+[^1]: **Staged Investment Strategy:** Staged financing aligns with political cycles and provides optionality for investors to halt further capital deployment if impact and adoption metrics are not materializing according to plan. Each funding round includes specific milestone requirements and performance validation checkpoints.
+
+[^2]: **2025 Pilot Program:** Pilot program assumptions based on [Congressional Management Foundation](https://www.congressfoundation.org/projects/life-in-congress) research showing average 18-month technology adoption cycles in political campaigns. Early adopter identification requires structured outreach to progressive campaigns willing to test new technologies during non-critical periods.
+
+[^3]: **Series A Scaling:** Series A deployment focused on [Higher Ground Labs](https://www.highergroundlabs.com/portfolio/) portfolio company scaling patterns showing average $2-3M Series A for political technology startups. Engineering team expansion and VAR partnership development based on successful political technology scaling models.
+
+[^4]: **2028 Bridge Funding:** Convertible debt structure provides presidential cycle working capital without premature equity dilution. [National Venture Capital Association](https://nvca.org/model-legal-documents/) standards for bridge financing in high-growth political technology sector. Presidential cycles require 3-4x operational capacity surge requiring capital deployment flexibility.
+
+[^5]: **VAR Commission Model:** VAR commission model benchmarked against [Salesforce Partner Program](https://partners.salesforce.com/) (20-30% commissions) and [Microsoft Partner Network](https://partner.microsoft.com/) (15-25% commissions). Political technology distribution requires specialized partner expertise justifying premium commission rates for campaign relationship management.
+
+[^6]: **2026 Market Validation:** Market validation year focused on proving efficacy with midterm campaigns. Customer acquisition concentrated in competitive Senate and Governor races where technology investment is prioritized. Revenue limited by introductory pricing and support-intensive service delivery model.
+
+[^7]: **2027 Relationship Building:** Off-year revenue primarily from incumbent services and committee accounts. Revenue growth from expanded service offerings and geographic expansion, but constrained by absence of major federal election cycle. Foundation year for 2028 scaling.
+
+[^8]: **2028 Revenue Build-Up:** Bottom-up revenue construction based on [Ballotpedia](https://ballotpedia.org/) election data, [OpenSecrets.org](https://www.opensecrets.org/) campaign spending analysis, and penetration rates derived from Higher Ground Labs portfolio company performance benchmarks. Customer counts align with locked Financial Summary projections.
+
+[^9]: **Pricing Validation Requirements:** Tier-specific pricing validated through [Democratic Congressional Campaign Committee](https://dccc.org/) technology budget analysis, [Democratic Governors Association](https://democraticgovernors.org/) spending patterns, and structured interviews with campaign managers across all tiers. Pricing acceptance critical assumption requiring continuous market validation.
+
+https://www.bls.gov/oes/current/oes_47900.htm political consulting industry employment patterns. Contractor surge capacity prevents layoffs during election cycle downturns while managing cash flow efficiently.
+
+[^11]: **Engineering Investment Focus:** Engineering expense allocation based on successful political technology companies requiring continuous product innovation. Competitive moat dependent on sustained R&D investment in AI optimization, platform integrations, and bias detection capabilities.
+
+[^12]: **Travel Budget Assumptions:** Travel budget based on [Federal Travel Regulation](https://www.gsa.gov/travel/plan-book/federal-travel-regulation-ftr) per diem rates and Democratic National Committee event calendar requirements. Campaign relationship management requires significant in-person engagement during election cycles.
+
+[^13]: **DC Office Space:** Office space costs based on [CBRE](https://www.cbre.com/insights) Washington DC commercial real estate data for technology companies. Modest footprint supporting in-person collaboration while maintaining cost efficiency through remote-first operations.
+
+[^14]: **Equipment Costs:** Equipment allocation based on [General Services Administration](https://www.gsa.gov/buying-selling/products-services/technology/computer-products-and-accessories) federal contractor equipment standards. Includes laptops, development tools, and security compliance requirements for political technology operations.
+
+[^15]: [Robert Half Technology – Salary Guide](https://www.roberthalf.com/salary-guide)
+
+[^16]: [Glassdoor – Salaries in Washington, DC](https://www.glassdoor.com/Salaries/washington-dc-salary-SRCH_IL.0,13_IM911.htm)
+
+[^17]: [Upwork – Average Freelancer Rates](https://www.upwork.com/resources/what-are-average-freelancer-rates)
+[^10]: [Bureau of Labor Statistics – Occupational Employment (13-3091)](https://www.bls.gov/oes/current/oes193091.htm)

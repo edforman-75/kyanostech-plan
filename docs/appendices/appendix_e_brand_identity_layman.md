@@ -1,0 +1,8 @@
+# Appendix E
+
+<div style="border:1px solid #d1d5db; background-color:#f9fafb; padding:12px 16px; border-radius:8px; margin:16px 0;">
+  This appendix sets the brand system—names, colors, typography—so everything looks and feels consistent across products.
+</div>
+<div style="border-left:6px solid #1f2937; background-color:#f3f4f6; padding:12px 16px; border-radius:4px; margin:16px 0;">
+  <strong>Big picture:</strong> A disciplined visual and naming system increases trust and recognizability across campaigns and partners.
+</div>
