@@ -1,15 +1,23 @@
-/* layout */
+/* footer layout */
+.md-footer {
+  background-color: #2d5be3;   /* same blue as header */
+  padding: 0.75rem 1rem;
+}
 .md-footer__inner { align-items: center; gap: 1rem; }
 .md-footer__link { display: flex; align-items: center; gap: .5rem; white-space: nowrap; }
 .md-footer__center { flex: 1; text-align: center; font-size: .9rem; }
 .md-footer .sep { margin: 0 .5rem; opacity: .7; }
 
-/* palette to match header */
-.md-footer, .md-footer a { color: #2d5be3; }   /* same blue as header */
-.md-footer a:hover { text-decoration: underline; }
+/* make all text/links white */
+.md-footer, .md-footer a, .md-footer__direction, .md-footer__title, .confidential {
+  color: #ffffff !important;
+}
+.md-footer a:hover {
+  text-decoration: underline;
+}
 
 /* subtle labels, bolder titles */
-.md-footer__direction { opacity: .85; margin-right: .25rem; }
+.md-footer__direction { opacity: .9; margin-right: .25rem; }
 .md-footer__title .md-ellipsis { font-weight: 600; }
 
 /* mobile */
