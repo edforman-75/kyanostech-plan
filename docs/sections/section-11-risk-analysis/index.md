@@ -227,7 +227,7 @@ Based on November 2025 funding timeline and election constraints:
 
 **Funding Breakdown**:
 - **Seed**: $500K (November 2025)
-- **Series A**: $2.5M (Q2 2026, post-pilot validation)
+- **Series A**: $4.5M (Q2 2026, post-pilot validation)
 - **Series B**: $2.2M (Q1 2028, presidential cycle working capital)
 
 ### Risk Mitigation Budget Allocation

@@ -7,7 +7,7 @@ To execute our mission and achieve sustainable scale, **KyanosTech requires $5 m
 | **Stage**   | **Timing** | **Amount** | **Purpose** |
 |------------|-----------:|-----------:|-------------|
 | Seed       | 2025       | $500K      | Validate pilots, secure first campaign customers, refine schema + AI benchmarking system. |
-| Series A   | 2026       | $2.5M      | Expand engineering, compliance, and sales; establish VAR partnerships; invest in customer success. |
+| Series A   | 2026       | $4.5M      | Expand engineering, compliance, and sales; establish VAR partnerships; invest in customer success. |
 | Convertible Debt | 2028 | $2M        | Sustain operations through the 2028 federal election cycle, provide runway into 2029, preserve optionality for future capital or exit. |
 
 ---

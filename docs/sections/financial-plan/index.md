@@ -47,7 +47,7 @@ All financial assumptions below serve these objectives and are **subject to vali
 
 <div style="background: white; border: 2px solid #ffedc7; border-radius: 10px; padding: 1.5rem; transition: all 0.3s ease;">
 <div style="font-weight: 600; color: #e67e22; font-size: 1.1rem; margin-bottom: 0.5rem;">Series A (2026)</div>
-<div style="font-size: 1.6rem; font-weight: 700; color: #d35400; margin: 0.5rem 0;">$2.5M</div>
+<div style="font-size: 1.6rem; font-weight: 700; color: #d35400; margin: 0.5rem 0;">$4.5M</div>
 <p style="font-size: 1rem; line-height: 1.4; margin-bottom: 0;" markdown="1"><strong>Purpose:</strong> Expand engineering team, establish VAR (value-added reseller) partnerships, and scale customer success operations.[^3]</p>
 </div>
 
