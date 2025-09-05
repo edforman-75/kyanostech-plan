@@ -1,0 +1,67 @@
+site_name: KyanosTech Plan
+site_description: Web-first business plan for KyanosTech
+site_url: https://kyanostech-plan-edf.netlify.app/
+repo_url: https://github.com/edforman-75/kyanostech-plan
+theme:
+  name: material
+  features:
+  - navigation.sections
+  - navigation.top
+  - toc.integrate
+  - content.code.copy
+  - navigation.footer
+  custom_dir: overrides
+markdown_extensions:
+  - footnotes
+  - md_in_html
+extra_css:
+  - assets/footnotes.css
+  - assets/extra.css
+nav:
+  - Home: index.md
+  - About This Plan: about-this-plan.md
+  - Executive Summary: sections/executive-summary/index.md
+  - Problem & Urgency: sections/market-financial-opportunity/index.md
+  - Solution & Theory of Change: sections/product-strategy-technology/index.md
+  - Market & Financial Opportunity: sections/market-financial-opportunity/index.md
+  - Product Strategy & Technology: sections/product-strategy-technology/index.md
+  - Go-to-Market Strategy: sections/go-to-market-strategy/index.md
+  - Business Model & Unit Economics: sections/business-model-unit-economics/index.md
+  - Strategic Moat & Partnerships: sections/strategic-moat-partnerships/index.md
+  - Financial Plan: sections/financial-plan/index.md
+  - Impact Measurement & Reporting: sections/impact-measurement-reporting/index.md
+  - Team & Governance: sections/team-governance/index.md
+  - Investment Ask & Use of Funds: sections/investment-ask-use-of-funds/index.md
+  - Risk & Mitigation: sections/section-11-risk-analysis/index.md
+  - Exit & Legacy: sections/section-16-long-term-vision-exit-strategy/index.md
+  - Appendices:
+  - "Appendix A \u2014 Market Analysis": appendices/appendix-d/index.md
+  - "Appendix B \u2014 Financial Model & Unit Economics": appendices/appendix-b/index.md
+  - "Appendix C \u2014 Impact Metrics": appendices/appendix-c/index.md
+  - "Appendix D \u2014 Organizational Forms & Funding": appendices/appendix-d-ai-and-podcast-demographic-convergence-analysis/index.md
+  - "Appendix E \u2014 Brand Identity System": appendices/appendix-e/index.md
+  - "Appendix F \u2014 Media Evolution": appendices/appendix-f-the-evolution-of-online-media-political-influence/index.md
+  - "Appendix G \u2014 Biased Chatbots & Political Influence": appendices/appendix-g-biased-chatbots-and-political-influence/index.md
+  - "Appendix H \u2014 The Invisible Hand (Audio)": appendices/appendix-h-the-invisible-hand-audio-investigation/index.md
+  - "Appendix I \u2014 Compliance Framework": appendices/appendix-i-campaign-finance-compliance-framework/index.md
+  - White Papers:
+  - The Progressive AI Imperative: white-papers/progressive-ai-imperative/index.md
+  - From Search to Conversation: white-papers/from-search-to-conversation/index.md
+  - Change Log: changelog/index.md
+exclude_docs: '_archive/**
+
+  _archive/**
+
+  **/*.bak
+
+  **/*.md.bak
+
+  **/*.bak_*
+
+  **/*.bak.*'
+use_directory_urls: true
+extra:
+  announcement: <strong>Confidential Draft:</strong> This plan is proprietary and
+    for discussion only. Contact <a href="mailto:forman.ed@gmail.com">forman.ed@gmail.com</a>
+    with questions or corrections.
+copyright: <strong>Confidential &amp; Proprietary</strong>

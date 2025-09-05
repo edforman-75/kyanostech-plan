@@ -1,0 +1,32 @@
+{% if page %}
+<footer class="md-footer custom-footer" data-md-component="footer">
+  <nav class="md-footer__inner md-grid">
+    <!-- Prev -->
+    <div class="md-footer__previous">
+      {% if page.previous_page %}
+        <a class="md-footer__link md-footer__link--prev" rel="prev" href="{{ page.previous_page.url | url }}">
+          <span class="md-footer__direction">Previous:</span>
+          <div class="md-footer__title">{{ page.previous_page.title }}</div>
+        </a>
+      {% endif %}
+    </div>
+
+    <!-- Center -->
+    <div class="custom-footer__center">
+      <span>Confidential &amp; Proprietary</span>
+      <span class="sep"> · </span>
+      <a class="toc-link" href="{{ nav.homepage.url | url }}">Guide to This Plan</a>
+    </div>
+
+    <!-- Next -->
+    <div class="md-footer__next">
+      {% if page.next_page %}
+        <a class="md-footer__link md-footer__link--next" rel="next" href="{{ page.next_page.url | url }}">
+          <span class="md-footer__direction">Next:</span>
+          <div class="md-footer__title">{{ page.next_page.title }}</div>
+        </a>
+      {% endif %}
+    </div>
+  </nav>
+</footer>
+{% endif %}

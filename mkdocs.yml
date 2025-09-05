@@ -1,6 +1,6 @@
 site_name: KyanosTech Plan
 site_description: Web-first business plan for KyanosTech
-site_url: https://edforman-75.github.io/kyanostech-plan/
+site_url: https://kyanostech-plan-edf.netlify.app/
 repo_url: https://github.com/edforman-75/kyanostech-plan
 theme:
   name: material
@@ -9,43 +9,45 @@ theme:
   - navigation.top
   - toc.integrate
   - content.code.copy
+  - navigation.footer
+  custom_dir: overrides
 markdown_extensions:
 - footnotes
 - md_in_html
 extra_css:
 - assets/footnotes.css
+- assets/extra.css
+- assets/stylesheets/extra.css
+- assets/stylesheets/footer.css
 nav:
-- Executive Summary: sections/01_executive_summary.md
-- Market & Financial Opportunity: sections/02_market_opportunity.md
-- Product Strategy & Technology: sections/03_product.md
-- Go-to-Market Strategy: sections/04_go_to_market.md
-- Business Model & Unit Economics: sections/06_business_model.md
-- Strategic Moat & Partnerships: sections/07_strategic_moat.md
-- Financial Plan: sections/08_financial_plan.md
-- Impact Measurement & Reporting: sections/09_impact_measurement.md
-- Team & Governance: sections/10_team_governance.md
-- Investment Ask & Use of Funds: sections/11_investment_ask.md
-- Risk & Mitigation: sections/12_risk_mitigation.md
-- Exit & Legacy: sections/13_exit_legacy.md
+- Guide to This Plan: index.md
+- About This Plan: about-this-plan.md
+- Executive Summary: sections/executive-summary/index.md
+- Problem & Urgency: sections/market-financial-opportunity/index.md
+- Solution & Theory of Change: sections/product-strategy-technology/index.md
+- Go-to-Market Strategy: sections/go-to-market-strategy/index.md
+- Business Model & Unit Economics: sections/business-model-unit-economics/index.md
+- Impact Measurement & Reporting: sections/impact-measurement-reporting/index.md
+- Investment Ask & Use of Funds: sections/investment-ask-use-of-funds/index.md
+- Risk Analysis: sections/section-11-risk-analysis/index.md
+- Strategic Moat & Partnerships: sections/strategic-moat-partnerships/index.md
+- Team & Governance: sections/team-governance/index.md
 - Appendices:
-  - "Appendix A \u2014 Market Analysis": appendices/appendix_a_market_analysis_layman.md
-  - "Appendix B \u2014 Financial Model & Unit Economics": appendices/appendix_b_financial_model_layman.md
-  - "Appendix C \u2014 Impact Metrics": appendices/appendix_c_impact_metrics_layman.md
-  - "Appendix D \u2014 Organizational Forms & Funding": appendices/appendix_d_markdown.md
-  - "Appendix E \u2014 Brand Identity System": appendices/appendix_e_brand_identity_layman.md
-  - "Appendix F \u2014 Media Evolution": appendices/appendix_f_media_evolution_layman.md
-  - "Appendix G \u2014 Biased Chatbots & Political Influence": appendices/appendix_g_biased_chatbots_political_influence_layman.md
-  - "Appendix H \u2014 The Invisible Hand (Audio)": appendices/appendix_h_invisible_hand.md
-  - "Appendix I \u2014 Compliance Framework": appendices/appendix_i_campaign_finance_compliance.md
-exclude_docs: '_archive/**
-
-  _archive/**
-
-  **/*.bak
-
-  **/*.md.bak
-
-  **/*.bak_*
-
-  **/*.bak.*'
-use_directory_urls: true
+  - "Appendix A \u2014 Market Analysis": appendices/appendix-a-market-analysis/index.md
+  - "Appendix B \u2014 Financial Model & Unit Economics": appendices/appendix-b-financial-model/index.md
+  - "Appendix C \u2014 Impact Metrics": appendices/appendix-c-impact-metrics/index.md
+  - Appendix D (AI + Podcast Demographics): appendices/appendix-d-ai-and-podcast-demographic-convergence-analysis/index.md
+  - "Appendix E \u2014 Brand Identity System": appendices/appendix-e-brand-identity-system/index.md
+  - "Appendix F \u2014 The Evolution of Online Media": appendices/appendix-f-the-evolution-of-online-media-political-influence/index.md
+  - "Appendix G \u2014 Biased Chatbots & Political Influence": appendices/appendix-g-biased-chatbots-and-political-influence/index.md
+  - "Appendix H \u2014 The Invisible Hand (Audio)": appendices/appendix-h-the-invisible-hand-audio-investigation/index.md
+  - "Appendix I \u2014 Campaign Finance (Compliance Framework)": appendices/appendix-i-campaign-finance-compliance-framework/index.md
+- White Papers:
+  - From Search to Conversation: white-papers/from-search-to-conversation/index.md
+  - Progressive AI Imperative: white-papers/progressive-ai-imperative/index.md
+- Change Log: changelog/index.md
+extra:
+  announcement: <strong>Confidential Draft:</strong> This plan is proprietary and
+    for discussion only. Contact <a href="mailto:forman.ed@gmail.com">forman.ed@gmail.com</a>
+    with questions or corrections.
+copyright: <strong>Confidential &amp; Proprietary</strong>

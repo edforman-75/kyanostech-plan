@@ -1,0 +1,54 @@
+.md-footer-slim { padding:.25rem 0; }
+.md-footer__center {
+  display:flex; align-items:center; justify-content:center; gap:.5rem;
+  font-size:.82rem; opacity:.9; text-align:center;
+}
+.md-footer__link .md-footer__title { font-size:.82rem; }
+.toc-link { text-decoration:none; }
+
+/* GUIDE STYLES START */
+.md-typeset .guide h1 {
+  margin-bottom: 1.2rem;
+}
+
+/* More breathing room between items */
+.md-typeset .guide h2 {
+  margin-top: 1.8rem;       /* space above each link-title */
+  margin-bottom: .3rem;
+  font-weight: 700;
+}
+
+/* Make the H2s read as links */
+.md-typeset .guide h2 a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.md-typeset .guide h2 a:hover {
+  text-decoration-thickness: 3px;
+}
+.md-typeset .guide h2 a::after {
+  content: " →";
+  font-weight: 700;
+  opacity: .6;
+}
+
+/* Larger summaries, up to 2 lines */
+.md-typeset .guide h2 + p {
+  font-size: 1.05rem;       /* bump size */
+  line-height: 1.55;
+  color: var(--md-default-fg-color--light);
+  margin-top: .15rem;
+  margin-bottom: .8rem;
+
+  /* clamp to two lines (Safari/Chromium/WebKit) */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@media (min-width: 960px) {
+  .md-typeset .guide h2 { margin-top: 2.0rem; }
+  .md-typeset .guide h2 + p { font-size: 1.1rem; }
+}
+/* GUIDE STYLES END */

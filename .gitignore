@@ -1,0 +1,35 @@
+# Local Netlify folder
+.netlify
+# Backup & temp files
+*.bak*
+*.footfix*
+*.bakfix*
+*.swp
+
+# Temp directories
+tmp/
+
+# Generated audit reports (keep only the .md file)
+reports/*.csv
+
+# OS/editor
+.DS_Store
+*.swp
+__pycache__/
+*.pyc
+
+# Build output
+site/
+
+# Backups & scratch
+backups/
+*.bak*
+*.bakfix*
+*.footfix*
+
+# Temp dirs
+/tmp/
+tmp/
+
+# Generated reports
+reports/*.csv
