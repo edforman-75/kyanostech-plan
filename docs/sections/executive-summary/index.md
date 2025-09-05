@@ -4,7 +4,7 @@ KyanosTech exists to solve a clear and urgent problem: **AI systems are rapidly 
 
 **Our answer is infrastructure, not advertising.** KyanosTech provides AI-optimized visibility for Democratic campaigns, PACs, and allied organizations.
 
-The founding executive team will combine campaign, technology, and organizational expertise.[^team]
+The founding executive team will combine campaign, technology, and organizational expertise.[^team][^team]
 
 <div style="border:1px solid #2563eb; background-color:#eff6ff; padding:12px; border-radius:6px; margin:12px 0;">
 <strong>Key takeaway:</strong> AI will reshape democratic discourse as profoundly as television and social media did before. Democrats have an estimated 18–24 months to secure their footing before the 2028 cycle reaches critical intensity. See the evidence and timing discussion in Appendix F.
@@ -24,4 +24,4 @@ The founding executive team will combine campaign, technology, and organizationa
 - **2027 – Expansion:** Entry into Senate and committee/officeholder markets; standardized partner certification.  
 - **2028 – Scale:** Presidential adoption; coverage across competitive Senate/Governor races and targeted House districts; 250–300+ entities served through partner-led implementations.  
 
-[^team]: Core leadership brings experience from Democratic campaigns, AI/tech startups, and nonprofit governance — positioning the team to execute both product and political strategy effectively.
+[^team]: This plan was authored by Ed Forman, who has no interest or bandwidth for day-to-day leadership of KyanosTech. Having completed the operational phase of his career, he does not seek an executive role. For this plan to succeed, it will be essential to recruit a dedicated executive team. Ed is glad to contribute as an advisor or board member, but not as a day-to-day operator.
