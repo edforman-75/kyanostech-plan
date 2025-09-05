@@ -1,54 +1,53 @@
 site_name: KyanosTech Plan
 site_description: Web-first business plan for KyanosTech
-site_url: https://kyanostech-plan-edf.netlify.app/
+site_url: https://edforman-75.github.io/kyanostech-plan/
 repo_url: https://github.com/edforman-75/kyanostech-plan
+
 theme:
   name: material
   features:
-  - navigation.sections
-  - navigation.top
-  - toc.integrate
-  - content.code.copy
-  - navigation.footer
+    - navigation.sections
+    - navigation.top
+      - navigation.footer
+    - toc.integrate
+    - content.code.copy
   custom_dir: overrides
 markdown_extensions:
-- footnotes
-- md_in_html
+  - footnotes
+  - md_in_html
 extra_css:
-- assets/footnotes.css
-- assets/extra.css
-- assets/stylesheets/extra.css
-- assets/stylesheets/footer.css
+  - assets/stylesheets/extra.css
+  - assets/stylesheets/footer.css
+  - assets/extra.css
+copyright: "© 2025 KyanosTech — All rights reserved."
 nav:
-- Home: index.md
-- About This Plan: about-this-plan.md
-- Home: index.md
-- Executive Summary: sections/executive-summary/index.md
-- Problem & Urgency: sections/market-financial-opportunity/index.md
-- Solution & Theory of Change: sections/product-strategy-technology/index.md
-- Go-to-Market Strategy: sections/go-to-market-strategy/index.md
-- Business Model & Unit Economics: sections/business-model-unit-economics/index.md
-- Impact Measurement & Reporting: sections/impact-measurement-reporting/index.md
-- Investment Ask & Use of Funds: sections/investment-ask-use-of-funds/index.md
-- Risk Analysis: sections/section-11-risk-analysis/index.md
-- Strategic Moat & Partnerships: sections/strategic-moat-partnerships/index.md
-- Team & Governance: sections/team-governance/index.md
-- Appendices:
-  - "Appendix A – Market Analysis": appendices/appendix-a-market-analysis/index.md
-  - "Appendix B – Financial Model & Unit Economics": appendices/appendix-b-financial-model/index.md
-  - "Appendix C – Impact Metrics": appendices/appendix-c-impact-metrics/index.md
-  - "Appendix D – AI and Podcast Demographic Convergence Analysis": appendices/appendix-d-ai-and-podcast-demographic-convergence-analysis/index.md
-  - "Appendix E – Brand Identity System": appendices/appendix-e-brand-identity-system/index.md
-  - "Appendix F – Media Evolution": appendices/appendix-f-the-evolution-of-online-media-political-influence/index.md
-  - "Appendix G – Biased Chatbots & Political Influence": appendices/appendix-g-biased-chatbots-and-political-influence/index.md
-  - "Appendix H – The Invisible Hand (Audio)": appendices/player/invisible-hand.html
-  - "Appendix I – Compliance": appendices/appendix-i-campaign-finance-compliance-framework/index.md
-- White Papers:
-  - From Search to Conversation: white-papers/from-search-to-conversation/index.md
-  - Progressive AI Imperative: white-papers/progressive-ai-imperative/index.md
-- Change Log: changelog/index.md
-extra:
-  announcement: <strong>Confidential Draft:</strong> This plan is proprietary and
-    for discussion only. Contact <a href="mailto:forman.ed@gmail.com">forman.ed@gmail.com</a>
-    with questions or corrections.
-copyright: <strong>Confidential &amp; Proprietary</strong>
+  - Home: index.md
+  - Sections:
+    - Executive Summary: sections/executive-summary/index.md
+    - Market & Financial Opportunity: sections/market-financial-opportunity/index.md
+    - Product Strategy & Technology: sections/product-strategy-technology/index.md
+    - Go-to-Market Strategy: sections/go-to-market-strategy/index.md
+    - Business Model & Unit Economics: sections/business-model-unit-economics/index.md
+    - Strategic Moat & Partnerships: sections/strategic-moat-partnerships/index.md
+    - Financial Plan: sections/financial-plan/index.md
+    - Impact Measurement & Reporting: sections/impact-measurement-reporting/index.md
+    - Team & Governance: sections/team-governance/index.md
+    - Investment Ask & Use of Funds: sections/investment-ask-use-of-funds/index.md
+    - Risk Analysis: sections/section-11-risk-analysis/index.md
+    - Long-Term Vision & Exit Strategy: sections/section-16-long-term-vision-exit-strategy/index.md
+
+  - Appendices:
+    - Appendix B — Financial Model & Unit Economics: appendices/appendix-b-financial-model/index.md
+    - Appendix C — Impact Metrics: appendices/appendix-c-impact-metrics/index.md
+    - Appendix D — Organizational Forms & Funding: appendices/appendix-d/index.md
+    - Appendix E — Brand Identity System: appendices/appendix-e-brand-identity-system/index.md
+    - Appendix F — Media Evolution: appendices/appendix-f-the-evolution-of-online-media-political-influence/index.md
+    - Appendix G — Biased Chatbots & Political Influence: appendices/appendix-g-biased-chatbots-and-political-influence/index.md
+    - Appendix H — The Invisible Hand (Audio): appendices/appendix-h-the-invisible-hand-audio-investigation/index.md
+    - Appendix I — Compliance Framework: appendices/appendix-i-campaign-finance-compliance-framework/index.md
+
+  - White Papers:
+    - The Progressive AI Imperative: white-papers/progressive-ai-imperative/index.md
+    - From Search to Conversation: white-papers/from-search-to-conversation/index.md
+
+  - Change Log: changelog/index.md
