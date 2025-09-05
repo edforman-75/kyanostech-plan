@@ -11,9 +11,13 @@
 /* make all text/links white */
 .md-footer, .md-footer a, .md-footer__direction, .md-footer__title, .confidential {
   color: #ffffff !important;
+  transition: color 0.2s ease;
 }
-.md-footer a:hover {
-  text-decoration: underline;
+
+/* hover state = lighter blue */
+.md-footer a:hover, .md-footer__link:hover, .confidential:hover {
+  color: #cfe0ff !important;   /* lighter blue hover */
+  text-decoration: none;
 }
 
 /* subtle labels, bolder titles */
