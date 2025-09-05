@@ -1,0 +1,106 @@
+:root {
+  font-size: 1.25rem; /* Increase base font size */
+}
+
+/* Limit line length for long-form reading */
+.md-content {
+  max-width: 70ch; /* ~70 characters per line */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Footnotes slightly smaller */
+.footnote, .footnote-ref {
+  font-size: 0.75rem; /* ~15px at 20px base */
+}
+
+/* -------- Navigation sidebar -------- */
+.md-sidebar--primary .md-nav__link {
+  font-size: 1rem; /* ~20px */
+  line-height: 1.35;
+  padding-top: 0.35rem;
+  padding-bottom: 0.35rem;
+}
+
+.md-sidebar--primary .md-nav__title {
+  font-size: 1.05rem; /* ~21px */
+  font-weight: 700;
+}
+
+.md-sidebar--primary .md-nav__item .md-nav__link {
+  font-size: 1rem; /* ~19px */
+}
+
+/* -------- TOC sidebar -------- */
+.md-sidebar--secondary .md-nav__link {
+  font-size: 0.925rem; /* ~18.5px */
+  line-height: 1.35;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+/* -------- Scroll fades for sidebars -------- */
+.md-sidebar__scrollwrap {
+  position: relative;
+  overflow: auto;
+  scroll-behavior: smooth;
+}
+
+.md-sidebar__scrollwrap::before,
+.md-sidebar__scrollwrap::after {
+  content: "";
+  position: sticky;
+  left: 0;
+  right: 0;
+  height: 16px;
+  display: block;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.md-sidebar__scrollwrap::before {
+  top: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.12), rgba(0,0,0,0));
+}
+
+.md-sidebar__scrollwrap::after {
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.12), rgba(0,0,0,0));
+}
+
+@media (min-width: 1100px) {
+  .md-sidebar--primary {
+    width: 22rem; /* Slightly wider on big screens */
+  }
+}
+/* ==== Sidebar navigation sizing (left) ==== */
+:root{
+  /* tweak these if you want slightly bigger/smaller later */
+  --kt-nav-size: 1.10rem;   /* primary sidebar items */
+  --kt-nav-sub:  1.06rem;   /* nested items under a section */
+}
+
+/* All links in the primary (left) sidebar */
+.md-sidebar--primary .md-nav__link {
+  font-size: var(--kt-nav-size);
+  line-height: 1.55;
+}
+
+/* Nested lists in the left sidebar (sections’ children) */
+.md-sidebar--primary .md-nav .md-nav .md-nav__link {
+  font-size: var(--kt-nav-sub);
+}
+
+/* Section headers (“Appendices”, “White Papers”, etc.) */
+.md-sidebar--primary .md-nav__title {
+  font-size: var(--kt-nav-size);
+  line-height: 1.5;
+}
+
+/* Keep active item the same size (just bolder) */
+.md-sidebar--primary .md-nav__link--active {
+  font-size: inherit;
+}
+
+/* Slightly larger ellipsis text wrapper so long titles scale too */
+.md-sidebar--primary .md-ellipsis { font-size: inherit; }

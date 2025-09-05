@@ -131,7 +131,7 @@ This award-winning investigative piece reveals the hidden story behind the 2028 
             border-radius: 50%;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            font-size: 24px;
+            font-size: 1.200rem;
             cursor: pointer;
             display: flex;
             align-items: center;
@@ -152,7 +152,7 @@ This award-winning investigative piece reveals the hidden story behind the 2028 
             border-radius: 50%;
             background: rgba(255,255,255,0.1);
             color: white;
-            font-size: 14px;
+            font-size: 0.700rem;
             cursor: pointer;
             display: flex;
             align-items: center;
@@ -191,7 +191,7 @@ This award-winning investigative piece reveals the hidden story behind the 2028 
         .time-display {
             display: flex;
             justify-content: space-between;
-            font-size: 12px;
+            font-size: 0.600rem;
             opacity: 0.8;
         }
 
@@ -238,11 +238,11 @@ This award-winning investigative piece reveals the hidden story behind the 2028 
         .speaker-name {
             font-weight: bold;
             color: #ffd700;
-            font-size: 0.9rem;
+            font-size: 1rem;
         }
 
         .speaker-title {
-            font-size: 0.8rem;
+            font-size: 1rem;
             opacity: 0.7;
             margin-bottom: 4px;
         }
@@ -255,7 +255,7 @@ This award-winning investigative piece reveals the hidden story behind the 2028 
             align-items: center;
             justify-content: center;
             margin-right: 10px;
-            font-size: 16px;
+            font-size: 0.800rem;
             flex-shrink: 0;
             vertical-align: top;
         }
@@ -285,7 +285,7 @@ This award-winning investigative piece reveals the hidden story behind the 2028 
             display: flex;
             justify-content: space-between;
             margin: 8px 0;
-            font-size: 0.9rem;
+            font-size: 1rem;
         }
 
         .shortcut-key {
@@ -309,7 +309,7 @@ This award-winning investigative piece reveals the hidden story behind the 2028 
 
         .info-item {
             margin: 8px 0;
-            font-size: 0.9rem;
+            font-size: 1rem;
         }
 
         .info-label {

@@ -1,0 +1,16 @@
+.custom-footer {
+  background-color: var(--md-primary-fg-color);
+  padding: .5rem 0;
+  text-align: center;
+}
+.custom-footer__center {
+  font-size: .82rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .75rem;
+  color: white;
+}
+.custom-footer__center a { color: white; text-decoration: none; }
+.custom-footer__center a:hover { text-decoration: underline; }
+.custom-footer__center .sep { opacity: .6; }

@@ -34,7 +34,7 @@ This analysis examines the evolution of online political influence across three 
 ---
 
 <div style="height:1px; background:#e5e7eb; margin:24px 0;"></div>
-<div style="display:inline-block; background:#f3f4f6; color:#111827; padding:4px 10px; border:1px solid #e5e7eb; border-radius:9999px; font-size:12px; margin:0 0 10px 0;">Era 1: Social Media Political Dominance (2016/2020)</div>
+<div style="display:inline-block; background:#f3f4f6; color:#111827; padding:4px 10px; border:1px solid #e5e7eb; border-radius:9999px; font-size:0.600rem; margin:0 0 10px 0;">Era 1: Social Media Political Dominance (2016/2020)</div>
 ## Era 1: Social Media Political Dominance (2016/2020)
 
 ### The Foundation of Digital Political Influence
@@ -105,7 +105,7 @@ Despite personalization, social media remained fundamentally a broadcast medium:
 ---
 
 <div style="height:1px; background:#e5e7eb; margin:24px 0;"></div>
-<div style="display:inline-block; background:#f3f4f6; color:#111827; padding:4px 10px; border:1px solid #e5e7eb; border-radius:9999px; font-size:12px; margin:0 0 10px 0;">Era 2: Podcast Political Influence (2024)</div>
+<div style="display:inline-block; background:#f3f4f6; color:#111827; padding:4px 10px; border:1px solid #e5e7eb; border-radius:9999px; font-size:0.600rem; margin:0 0 10px 0;">Era 2: Podcast Political Influence (2024)</div>
 ## Era 2: Podcast Political Influence (2024)
 
 ### The Shift to Audio-Based Persuasion
@@ -176,7 +176,7 @@ Despite political impact, podcasts reached fewer total users than social media:
 ---
 
 <div style="height:1px; background:#e5e7eb; margin:24px 0;"></div>
-<div style="display:inline-block; background:#f3f4f6; color:#111827; padding:4px 10px; border:1px solid #e5e7eb; border-radius:9999px; font-size:12px; margin:0 0 10px 0;">Era 3: AI Chatbot Personalization (Emerging 2025-2028)</div>
+<div style="display:inline-block; background:#f3f4f6; color:#111827; padding:4px 10px; border:1px solid #e5e7eb; border-radius:9999px; font-size:0.600rem; margin:0 0 10px 0;">Era 3: AI Chatbot Personalization (Emerging 2025-2028)</div>
 ## Era 3: AI Chatbot Personalization (Emerging 2025-2028)
 
 ### The Revolution in Individual-Level Persuasion
