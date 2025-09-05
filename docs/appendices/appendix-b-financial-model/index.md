@@ -79,7 +79,7 @@ Modeled to account for upside and downside scenarios:[^10]
 - **Breakeven:** Approaching by year-end 2028; modest net loss possible depending on cost scaling.  
 - **Funding Needs:**  
   - Seed (2025): $500K  
-  - Series A (2026): $2.5M  
+  - Series A (2026): $4.5M  
   - Convertible Debt (2028): $2.0M  
 
 This staged approach ensures capital availability at election-cycle peaks while minimizing dilution.
