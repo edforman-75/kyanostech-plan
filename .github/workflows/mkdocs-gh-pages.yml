@@ -1,23 +1,23 @@
-name: Build & deploy MkDocs to GitHub Pages
+Name: Build & deploy MkDocs to GitHub Pages
 
-on:
-  push:
+On:
+  Push:
     branches: [ main ]
   workflow_dispatch:
 
-permissions:
+Permissions:
   contents: read
   pages: write
   id-token: write
 
-concurrency:
+Concurrency:
   group: "pages"
   cancel-in-progress: true
 
-jobs:
-  build:
+Jobs:
+  Build:
     runs-on: ubuntu-latest
-    steps:
+    Steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-python@v5
@@ -40,12 +40,12 @@ jobs:
         with:
           path: ./site
 
-  deploy:
-    environment:
+  Deploy:
+    Environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
-    steps:
+    Steps:
       - id: deployment
         uses: actions/deploy-pages@v4
