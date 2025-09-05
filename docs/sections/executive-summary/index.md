@@ -13,7 +13,7 @@ KyanosTech exists to solve a clear and urgent problem: **AI systems are rapidly 
 - **Market Size:** ~$6.4M revenue opportunity in 2028 built from ~259 Democratic campaigns, committees, and officeholders. [^1]  
 - **Business Model:** High-margin SaaS with a blended ~90% net revenue retention after partner commissions. [^2]  
 - **Strategic Moat:** Proprietary schema libraries, verification/monitoring (SCOPE), and distribution via certified developers, consultants, and PAC partnerships that make replication difficult.  
-- **Funding Ask:** **$5M** now to complete product, GTM, and compliance scaling on the runway to 2028. A fully funded B-Corp is the most expeditious path, with an option to add a nonprofit sibling for SCOPE if grant opportunities warrant. [^3]  
+- **Funding Ask:** **$500k seed now** to validate assumptions and kick off execution; then **+$4.5M follow-on** (total **$5M**) to test & learn in **2026** and deliver full impact in **2028**. [^3]
 
 ## Roadmap to 2028
 

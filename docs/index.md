@@ -35,7 +35,7 @@ Defines metrics to track accuracy, coverage, and campaign effectiveness. Outline
 [**Team & Governance**](sections/team-governance/index.md): Experienced leadership committed to both mission and discipline.  
 Profiles the core team, advisors, and governance structures. Shows how the organization balances political mission with startup execution.  
 
-[**Investment Ask & Use of Funds**](sections/investment-ask-use-of-funds/index.md): Why $5M matters now and how it is allocated.  
+[**Investment Ask & Use of Funds**](sections/investment-ask-use-of-funds/index.md): Why a **$500k seed now** matters (to validate assumptions and get moving), and how we phase to a **total of $5M** (**+$4.5M follow-on**) for 2026 test & learn and 2028 impact.
 Explains how funds are used for product completion, scaling, and compliance. Shows why timing is critical for maximum leverage.  
 
 [**Risk & Mitigation**](sections/section-11-risk-analysis/index.md): What could go wrong and how we manage it.  

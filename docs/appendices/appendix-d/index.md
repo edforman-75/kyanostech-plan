@@ -3,7 +3,7 @@
 
 ## Funding Pathways
 
-To achieve the projected impact in the 2028 cycle, KyanosTech must raise **$5M in external funding** beyond product revenue. Potential sources include:
+To achieve the projected impact in the 2028 cycle, KyanosTech will raise a phased package: **$500k seed now** (validate + start), followed by **$4.5M** additional financing — total **$5M** to reach 2028 goals. Potential sources include:
 
 - **Equity Investment:** Progressive family offices, impact venture capital, and high-net-worth individuals who align with the mission.  
 - **Debt Financing:** Mission-aligned lenders or revenue-based financing to supplement equity.  
@@ -32,7 +32,7 @@ To achieve the projected impact in the 2028 cycle, KyanosTech must raise **$5M i
 
 KyanosTech will maintain **flexibility** while signaling clarity to investors:
 
-- **Most expeditious path:** Raise the full $5M into the B-Corp. This provides sufficient runway and minimizes governance and compliance overhead.  
+- **Recommended phased path:** Raise **$500k seed** into the B-Corp now; plan **$4.5M** follow-on to scale for 2026–2028.
 - **Contingent option:** If substantial foundation or PAC-aligned funding emerges, establish a **sibling nonprofit** dedicated to infrastructure (e.g., SCOPE) while keeping AGON and POLIS in the B-Corp.  
 - **Guiding principle:** Complexity is a cost. Every additional entity adds legal, compliance, and management overhead. Overburdening the structure could impede execution of the 2028 strategy.  
 
