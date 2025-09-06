@@ -1,0 +1,24 @@
+site_name: KyanosTech Plan
+site_description: Web-first business plan for KyanosTech
+site_url: https://edforman-75.github.io/kyanostech-plan/
+repo_url: https://github.com/edforman-75/kyanostech-plan
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.top
+    - toc.integrate
+    - content.code.copy
+  custom_dir: overrides
+
+markdown_extensions:
+  - footnotes
+  - md_in_html
+
+extra_css:
+  - assets/stylesheets/extra.css
+  - assets/stylesheets/footer.css
+  - assets/extra.css
+
+copyright: "© 2025 KyanosTech — All rights reserved."

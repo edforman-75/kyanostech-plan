@@ -1,0 +1,35 @@
+docs/sections/section-11-risk-analysis/index.md.footfix.20250904-235732.bak:230:- **Series A**: $2.5M (Q2 2026, post-pilot validation)
+docs/sections/section-11-risk-analysis/index.md.footfix.20250905-000416.bak:230:- **Series A**: $2.5M (Q2 2026, post-pilot validation)
+docs/sections/section-11-risk-analysis/index.md:230:- **Series A**: $2.5M (Q2 2026, post-pilot validation)
+docs/sections/section-11-risk-analysis/index.md.bakfix:230:- **Series A**: $2.5M (Q2 2026, post-pilot validation)
+docs/sections/executive-summary/index.md.bak.20250904-145300:16:- **Funding Ask:** **$5M** now to complete product, GTM, and compliance scaling on the runway to 2028. A fully funded B-Corp is the most expeditious path, with an option to add a nonprofit sibling for SCOPE if grant opportunities warrant. [^3]  
+docs/sections/executive-summary/index.md.bak.20250904-145300:35:- [**Investment Ask & Use of Funds**](../investment-ask-use-of-funds/index.md): Why $5M matters now.  
+docs/sections/executive-summary/index.md:16:- **Funding Ask:** **$5M** now to complete product, GTM, and compliance scaling on the runway to 2028. A fully funded B-Corp is the most expeditious path, with an option to add a nonprofit sibling for SCOPE if grant opportunities warrant. [^3]  
+docs/sections/executive-summary/index.md.bak.20250904-145622:16:- **Funding Ask:** **$5M** now to complete product, GTM, and compliance scaling on the runway to 2028. A fully funded B-Corp is the most expeditious path, with an option to add a nonprofit sibling for SCOPE if grant opportunities warrant. [^3]  
+docs/sections/executive-summary/index.md.bak.20250904-150032:16:- **Funding Ask:** **$5M** now to complete product, GTM, and compliance scaling on the runway to 2028. A fully funded B-Corp is the most expeditious path, with an option to add a nonprofit sibling for SCOPE if grant opportunities warrant. [^3]  
+docs/sections/business-model-unit-economics/index.md:142:[^fn-bm-margins-2028]: **Gross margin benchmarks.** Mature B2B SaaS commonly sustains >75%. KeyBanc/OpenView survey ~73% average (ex-sub-$5M GAAP revenue). Chargebee overview: <https://www.chargebee.com/resources/glossaries/saas-gross-margin/>. Bessemer benchmarks show top performers ($1–10M ARR) reaching ~85%: <https://www.bvp.com/atlas/scaling-to-100-million>.
+docs/sections/market-financial-opportunity/index.md:39:1. **Digital Dominance.** The Wesleyan Media Project reported that in late-cycle 2024, digital ad spend ($23M) achieved near parity with TV ($24.5M) [^fn-mo-method-1] [^fn-mo-digital-tv-parity]. While these numbers reflect ads, they serve as context: the competitive battlefield is shifting online, and campaigns without robust digital infrastructure risk irrelevance.
+docs/sections/financial-plan/index.md.bak:50:<div style="font-size: 1.6rem; font-weight: 700; color: #d35400; margin: 0.5rem 0;">$2.5M</div>
+docs/sections/financial-plan/index.md.footfix.20250905-001518.bak:50:<div style="font-size: 1.6rem; font-weight: 700; color: #d35400; margin: 0.5rem 0;">$2.5M</div>
+docs/sections/financial-plan/index.md.footfix.20250905-000416.bak:50:<div style="font-size: 1.6rem; font-weight: 700; color: #d35400; margin: 0.5rem 0;">$2.5M</div>
+docs/sections/financial-plan/index.md:50:<div style="font-size: 1.6rem; font-weight: 700; color: #d35400; margin: 0.5rem 0;">$2.5M</div>
+docs/sections/financial-plan/index.md.bakfix:50:<div style="font-size: 1.6rem; font-weight: 700; color: #d35400; margin: 0.5rem 0;">$2.5M</div>
+docs/sections/financial-plan/index.md.footfix.20250905-001013.bak:50:<div style="font-size: 1.6rem; font-weight: 700; color: #d35400; margin: 0.5rem 0;">$2.5M</div>
+docs/sections/financial-plan/index.md.20250904-231934.bak:50:<div style="font-size: 1.6rem; font-weight: 700; color: #d35400; margin: 0.5rem 0;">$2.5M</div>
+docs/sections/investment-ask-use-of-funds/index.md:10:| Series A   | 2026       | $2.5M      | Expand engineering, compliance, and sales; establish VAR partnerships; invest in customer success. |
+docs/index.md.bak.20250904-152405:30:Why $5M matters now and how it is allocated.
+docs/white-papers/progressive-ai-imperative/index.md:51:- **Phase 2A (Partnership Enhancement):** $2-5M if assessment reveals strong existing capabilities with specific funding gaps
+docs/white-papers/progressive-ai-imperative/index.md:220:### Option A: Partnership Enhancement and Gap Funding ($2-5M)
+docs/white-papers/files/progressive-ai-imperative.md:51:- **Phase 2A (Partnership Enhancement):** $2-5M if assessment reveals strong existing capabilities with specific funding gaps
+docs/white-papers/files/progressive-ai-imperative.md:220:### Option A: Partnership Enhancement and Gap Funding ($2-5M)
+docs/appendices/appendix-d/index.md:6:To achieve the projected impact in the 2028 cycle, KyanosTech must raise **$5M in external funding** beyond product revenue. Potential sources include:
+docs/appendices/appendix-d/index.md:35:- **Most expeditious path:** Raise the full $5M into the B-Corp. This provides sufficient runway and minimizes governance and compliance overhead.  
+docs/appendices/appendix-b-financial-model/index.md.footfix.20250905-001518.bak:82:  - Series A (2026): $2.5M  
+docs/appendices/appendix-b-financial-model/index.md:82:  - Series A (2026): $2.5M  
+docs/index.md.bak.20250904-150841:28:Why $5M matters now and how it is allocated.
+docs/index.md:38:[**Investment Ask & Use of Funds**](sections/investment-ask-use-of-funds/index.md): Why $5M matters now and how it is allocated.  
+docs/index.md.bak.20250904-151646:30:Why $5M matters now and how it is allocated.
+docs/index.md.bak.20250904-145622:11:- [**Investment Ask & Use of Funds**](../investment-ask-use-of-funds/index.md): Why $5M matters now.  
+docs/index.md.bak.20250904-152205:30:Why $5M matters now and how it is allocated.
+docs/_archive/appendices/appendix_b_financial_model_grounded.md:82:  - Series A (2026): $2.5M  
+docs/_archive/appendices/appendix_b_financial_model_grounded_v2_htmlcallout.md:82:  - Series A (2026): $2.5M  

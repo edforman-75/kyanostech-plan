@@ -196,7 +196,7 @@ Our Value-Added Reseller (VAR) model enables market reach impossible through dir
 8. [Ballotpedia Senate 2028](https://ballotpedia.org/Presidential_election_campaign_finance%2C_2024).  
 9. [National Governors Association](https://www.nga.org/).  
 10. [National Association of Secretaries of State](https://www.nass.org/).  
-11. [Cook Political Report](https://www.cookpolitical.com/) and [FiveThirtyEight](https://fivethirtyeight.com/).  
+11. [Cook Political Report](https://www.cookpolitical.com/) and [FiveThirtyEight](https://abcnews.go.com/politics).  
 
 ---
 

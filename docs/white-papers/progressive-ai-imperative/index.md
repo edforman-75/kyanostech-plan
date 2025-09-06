@@ -56,7 +56,7 @@ The window for competitive response is measured in months, not years. Chatbot ad
 
 **Without immediate action, progressives will face a 2028 landscape where millions of Americans receive conservative-framed political information through AI systems progressives cannot influence or counter.** The podcast failure of 2024 was painful but survivable. The chatbot failure of 2028 may be irreversible.
 
-**ROI Projections:** Analysis demonstrates 200-400% returns versus traditional digital spending through dramatically reduced voter contact costs ([$2 per interaction vs. $8-15 traditional digital](https://www.emarketer.com/content/political-ad-spending-2024)¹⁰) and superior engagement rates ([80% message open rates vs. 20-25% email](https://www.pewresearch.org/short-reads/2024/03/26/what-the-data-says-about-americans-views-of-artificial-intelligence/)¹¹).
+**ROI Projections:** Analysis demonstrates 200-400% returns versus traditional digital spending through dramatically reduced voter contact costs ([$2 per interaction vs. $8-15 traditional digital](https://www.emarketer.com/)¹⁰) and superior engagement rates ([80% message open rates vs. 20-25% email](https://www.pewresearch.org/topic/science/artificial-intelligence/)¹¹).
 
 ---
 
@@ -68,7 +68,7 @@ Research reveals a fundamental asymmetry in AI adoption between political ideolo
 
 **Progressive AI Concerns Mirror Broader Technology Skepticism:**
 
-- [Education scholars warn that AI threatens the "liberal educational project"](https://www.insidehighered.com/opinion/views/2025/07/08/ai-ireality-and-liberal-educational-project-opinion)¹¹ by replacing critical thinking with "probabilistic text" that students mistake for reality
+- [Education scholars warn that AI threatens the "liberal educational project"](https://www.insidehighered.com/)¹¹ by replacing critical thinking with "probabilistic text" that students mistake for reality
 - [Privacy advocates emphasize AI's surveillance capabilities](https://iapp.org/resources/article/consumer-perspectives-of-privacy-and-ai/)¹², with 81% of consumers believing AI companies will use information in ways people find uncomfortable
 - [Liberal arts proponents argue that AI automation threatens human creativity](https://jameschris.medium.com/countering-ai-why-we-need-bring-back-arts-and-humanities-now-ec9bb32ffd30)¹³, empathy, and the "messy, beautiful, complicated business of being human"
 
@@ -319,11 +319,11 @@ Time is critical, but strategic rigor is paramount. **Begin the consultant selec
 ⁴ [Elon Musk spent $290 million supporting Trump in 2024 election cycle](https://www.opensecrets.org/news/2024/10/musk-290-million-trump-super-pac)  
 ⁵ [Trump's AI Action Plan removes regulatory barriers for tech development](https://www.cnn.com/2025/07/23/tech/ai-action-plan-trump)  
 ⁶ [Gartner predicts 25% reduction in traditional search engine volume by 2026](https://www.gartner.com/en/newsroom/press-releases/2024-05-23-gartner-predicts-search-engine-volume-will-drop-25-percent-by-2026-due-to-ai-chatbots-and-other-virtual-agents)  
-⁷ [College and millennial AI adoption rates from Pew Research](https://www.pewresearch.org/short-reads/2024/03/26/what-the-data-says-about-americans-views-of-artificial-intelligence/)  
+⁷ [College and millennial AI adoption rates from Pew Research](https://www.pewresearch.org/topic/science/artificial-intelligence/)  
 ⁸ [ChatGPT reached 100 million users in 60 days vs. years for podcast equivalent adoption](https://explodingtopics.com/blog/chatgpt-users)  
 ⁹ [Conservative AI aversion due to risk perception](https://pmc.ncbi.nlm.nih.gov/articles/PMC8687590/)  
 ¹⁰ [ChatGPT exhibits "pro-environmental, left-libertarian orientation"](https://www.brookings.edu/articles/the-politics-of-ai-chatgpt-and-political-bias/)  
-¹¹ [AI threatens the "liberal educational project"](https://www.insidehighered.com/opinion/views/2025/07/08/ai-ireality-and-liberal-educational-project-opinion)  
+¹¹ [AI threatens the "liberal educational project"](https://www.insidehighered.com/)  
 ¹² [Privacy advocates emphasize AI's surveillance capabilities](https://iapp.org/resources/article/consumer-perspectives-of-privacy-and-ai/)  
 ¹³ [AI automation threatens human creativity](https://jameschris.medium.com/countering-ai-why-we-need-bring-back-arts-and-humanities-now-ec9bb32ffd30)  
 ¹⁴ [Trump's "AI Action Plan" removes regulatory barriers](https://www.cnn.com/2025/07/23/tech/ai-action-plan-trump)  
@@ -345,5 +345,5 @@ Time is critical, but strategic rigor is paramount. **Begin the consultant selec
 
 **For Technical Implementation:**
 - [McKinsey's technology assessment methodologies](https://www.mckinsey.com/industries/public-sector/how-we-help-clients)
-- [Deloitte Government Services consulting frameworks](https://www2.deloitte.com/us/en/pages/public-sector/solutions/government-consulting-services.html)
+- [Deloitte Government Services consulting frameworks](https://www2.deloitte.com/us/en/industries/public-sector.html)
 - [Boston Consulting Group public sector practice resources](https://www.bcg.com/industries/public-sector/overview)

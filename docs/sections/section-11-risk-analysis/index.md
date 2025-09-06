@@ -93,7 +93,7 @@ Rapid evolution in AI regulation, campaign finance law, and platform policies co
 **Mitigation Strategies**:
 
 **1. Legal Advisory Board**
-- Election law attorneys from [Perkins Coie](https://www.perkinscoie.com/en/practices/political-law.html) political law practice providing ongoing guidance
+- Election law attorneys from [Perkins Coie](https://www.perkinscoie.com/) political law practice providing ongoing guidance
 - Technology policy specialists monitoring AI regulation development at federal and state levels
 - Quarterly legal reviews ensuring proactive compliance rather than reactive responses
 
