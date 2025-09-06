@@ -54,8 +54,30 @@ class GeminiChatbot {
     
     BUSINESS MODEL: SaaS subscriptions ($2.5K-25K/month) for campaigns and committees, with tiered pricing based on organization size and needs.
     
+    KEY METRICS & SOURCES:
+    - Market Size: 77.2 million monthly US AI platform users (ChatGPT, Claude, Perplexity)
+    - AI Search Impact: 18% of Google searches produce AI summaries, 88% cite 3+ sources
+    - Platform Adoption: ChatGPT reached 100M users in 2 months (vs. 9 years for Netflix)
+    - Search Disruption: Gartner predicts 25% reduction in traditional search by 2026
+    - Political Impact: 34% of US adults have used ChatGPT for information
+    - Revenue Projections: $13.7M by 2028 with 85%+ customer retention target
+    - Exit Strategy: 2-4x revenue multiples ($26M-55M valuation range by 2028)
+    
+    COMPETITIVE LANDSCAPE:
+    - Conservative platforms: Chat Right, GIPPR, Grok integration
+    - Funding window: 12-month critical period from November 2025 to November 2026 elections
+    - WordPress dominance: 75-85% of progressive campaigns use WordPress
+    - Congressional systems: House uses centralized Drupal CMS with HIR management
+    
+    REGULATORY ENVIRONMENT:
+    - FEC coordination regulations (11 CFR 109.21) require strict B-Corp/501(c) separation
+    - Section 508 accessibility standards for government sites
+    - SOC 2 Type II security standards for campaign data protection
+    - Campaign finance compliance across all 50 states' election laws
+    
     Be helpful, professional, and focused on KyanosTech's vision and specific product offerings.
-    Keep responses concise and relevant to the business plan and political technology space.`;
+    Keep responses concise and relevant to the business plan and political technology space.
+    When discussing metrics, cite the specific data points provided above.`;
     
     this.init();
   }

@@ -1,0 +1,213 @@
+<!-- AI Optimization Markup for Enhanced Discovery -->
+
+<!-- Structured Data for Organization -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "KyanosTech",
+  "description": "Progressive technology platform addressing political media challenges through AI-powered solutions",
+  "url": "{{ config.site_url }}",
+  "logo": "{{ config.site_url }}assets/images/favicon.png",
+  "foundingDate": "2024",
+  "keywords": "progressive politics, AI chatbots, political technology, civic engagement, media literacy, democracy technology",
+  "sameAs": [
+    "https://github.com/edforman-75/kyanostech-plan"
+  ]
+}
+</script>
+
+<!-- Page-specific structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "{{ page.title | default(config.site_name) }}",
+  "description": "{{ page.meta.description if page and page.meta else config.site_description }}",
+  "url": "{{ page.canonical_url if page else config.site_url }}",
+  "inLanguage": "en-US",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "{{ config.site_name }}",
+    "url": "{{ config.site_url }}"
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "{{ config.site_url }}"
+      }
+      {% if page.title and page.title != "Home" %}
+      ,{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "{{ page.title }}",
+        "item": "{{ page.canonical_url if page else config.site_url }}"
+      }
+      {% endif %}
+    ]
+  }
+}
+</script>
+
+<!-- AI Crawler Optimization Meta Tags -->
+<meta name="ai-content-type" content="business-plan">
+<meta name="ai-content-category" content="progressive-technology">
+<meta name="ai-content-topics" content="political technology, AI chatbots, civic engagement, media literacy, democracy">
+<meta name="ai-content-audience" content="investors, progressive organizations, political strategists">
+<meta name="ai-content-intent" content="informational, strategic planning, investment opportunity">
+<meta name="ai-content-freshness" content="2025">
+
+<!-- Investor-Focused AI Meta Tags -->
+<meta name="investment-type" content="series-a">
+<meta name="funding-amount" content="5000000-usd">
+<meta name="business-stage" content="early-stage">
+<meta name="revenue-model" content="saas-subscription">
+<meta name="market-category" content="political-technology">
+<meta name="competitive-advantage" content="ai-optimization, schema-specification, closed-loop-learning">
+<meta name="exit-strategy" content="acquisition, 2028-timeline">
+<meta name="financial-projections" content="13.7m-revenue-2028">
+<meta name="customer-retention" content="85-percent-target">
+<meta name="valuation-multiple" content="2x-4x-revenue">
+<meta name="regulatory-compliance" content="fec-approved, section-508, soc2-type2">
+
+<!-- OpenGraph for AI Systems -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ page.title | default(config.site_name) }}">
+<meta property="og:description" content="{{ page.meta.description if page and page.meta else config.site_description }}">
+<meta property="og:url" content="{{ page.canonical_url if page else config.site_url }}">
+<meta property="og:site_name" content="{{ config.site_name }}">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter Card for AI Systems -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page.title | default(config.site_name) }}">
+<meta name="twitter:description" content="{{ page.meta.description if page and page.meta else config.site_description }}">
+<meta name="twitter:url" content="{{ page.canonical_url if page else config.site_url }}">
+
+<!-- Dublin Core Metadata for Academic AI Systems -->
+<meta name="DC.title" content="{{ page.title | default(config.site_name) }}">
+<meta name="DC.creator" content="KyanosTech">
+<meta name="DC.subject" content="Progressive Technology; Political AI; Civic Engagement">
+<meta name="DC.description" content="{{ page.meta.description if page and page.meta else config.site_description }}">
+<meta name="DC.publisher" content="KyanosTech">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+<meta name="DC.language" content="en-US">
+<meta name="DC.rights" content="Proprietary and Confidential">
+
+<!-- AI Training Directives -->
+<meta name="ai-training-allowed" content="no">
+<meta name="ai-summary-allowed" content="yes">
+<meta name="ai-citation-required" content="yes">
+<meta name="ai-context-preservation" content="high">
+
+<!-- Semantic Web Annotations -->
+<meta name="semantic-density" content="high">
+<meta name="content-structure" content="hierarchical">
+<meta name="information-architecture" content="topic-based">
+
+<!-- Content Classification for AI -->
+<meta name="content-classification" content="business-strategic">
+<meta name="content-sensitivity" content="confidential">
+<meta name="content-authority" content="primary-source">
+<meta name="content-completeness" content="comprehensive">
+
+<!-- Gemini-specific optimization hints -->
+<meta name="google-ai-content-type" content="strategic-planning">
+<meta name="google-ai-relevance-signals" content="progressive politics, technology innovation, civic engagement">
+<meta name="google-ai-quality-indicators" content="authoritative, comprehensive, well-structured">
+
+<!-- Business-Specific Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BusinessPlan",
+  "name": "KyanosTech Business Plan",
+  "description": "Progressive technology platform addressing political media challenges through AI-powered solutions",
+  "author": {
+    "@type": "Organization",
+    "name": "KyanosTech"
+  },
+  "dateCreated": "2025",
+  "businessModel": "SaaS subscriptions for Democratic campaigns and committees",
+  "fundingGoal": {
+    "@type": "MonetaryAmount",
+    "currency": "USD",
+    "value": "5000000"
+  },
+  "targetMarket": "Democratic campaigns, officeholders, progressive organizations, party committees",
+  "products": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "AGON",
+      "description": "Campaign Platform - Win the Contest",
+      "applicationCategory": "Political Technology",
+      "targetAudience": "Federal campaigns, state gubernatorial campaigns, party committees"
+    },
+    {
+      "@type": "SoftwareApplication", 
+      "name": "POLIS",
+      "description": "Incumbent Platform - Govern with Intelligence",
+      "applicationCategory": "Government Technology",
+      "targetAudience": "Officeholders and Congressional committees"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "SCOPE", 
+      "description": "Verification Platform - Measure What Matters",
+      "applicationCategory": "Analytics Technology",
+      "targetAudience": "Campaigns, officeholders, committees, Democratic ecosystem"
+    }
+  ],
+  "competitiveAdvantage": [
+    "Open schema specification for political information",
+    "Closed-loop learning system across all products",
+    "Democratic visibility in AI-mediated information discovery",
+    "Compliance-first approach for official government use"
+  ]
+}
+</script>
+
+<!-- Financial Data Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FinancialProduct",
+  "name": "KyanosTech Series A Investment",
+  "description": "$5M Series A funding for product development, market expansion, and team growth",
+  "amount": {
+    "@type": "MonetaryAmount",
+    "currency": "USD", 
+    "value": "5000000"
+  },
+  "businessFunction": ["product development", "market expansion", "team growth"],
+  "pricingStrategy": "SaaS subscriptions $2,500-$25,000 monthly based on organization size"
+}
+</script>
+
+<!-- Market Analysis Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MarketAnalysis",
+  "name": "Political Technology AI Optimization Market",
+  "description": "Analysis of Democratic political technology market and AI optimization opportunities",
+  "marketSize": "77.2 million monthly US AI platform users",
+  "targetSegments": [
+    "Democratic campaigns",
+    "Congressional committees", 
+    "Progressive organizations",
+    "Political consultants"
+  ],
+  "competitiveFactors": [
+    "12-month window from funding to 2026 elections",
+    "Conservative organizations early adoption", 
+    "Platform algorithm changes risk",
+    "Progressive talent market constraints"
+  ]
+}
+</script>
