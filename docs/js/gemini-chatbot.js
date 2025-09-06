@@ -75,6 +75,27 @@ class GeminiChatbot {
     - SOC 2 Type II security standards for campaign data protection
     - Campaign finance compliance across all 50 states' election laws
     
+    CRITICAL RISK FACTORS:
+    - Election Deadline Constraints: Fixed electoral calendar (2026 midterms, 2028 presidential) - no flexible launch windows
+    - Mission-Driven Talent Risk: Finding AI/ML talent with authentic Democratic political alignment at scale (6 to 29+ employees by 2028)
+    - Regulatory Evolution Risk: Rapid changes in AI regulation, campaign finance law, and platform policies
+    - Competitive Window Risk: 12-month protection period from November 2025 funding to November 2026 elections
+    - Technical Obsolescence Risk: AI platform algorithm changes, schema evolution, breakthrough technologies
+    - Revenue Concentration: 70% of revenue occurs during election years creating feast-or-famine cash flow
+    
+    TEAM & GOVERNANCE:
+    - Structure: Certified B Corporation balancing mission and profit
+    - Leadership: Founding team combines campaign, technology, and organizational expertise  
+    - Board: Investor representatives, independent directors, mission guardians with annual impact audits
+    - Compliance: Affiliated nonprofit/PAC entities for FEC/IRS regulations
+    
+    AI INDUSTRY CONTEXT:
+    - ChatGPT adoption: 100M users in 2 months (vs 9 years for Netflix)
+    - Platform dominance: ChatGPT, Claude, Perplexity, Grok competing for political influence
+    - Conservative AI advantage: Chat Right, GIPPR, Musk's $290M Trump investment + Grok integration
+    - Schema standards: Current Schema.org lacks political context - KyanosTech developing open specification
+    - AI training bias: University of Washington study shows 5 chatbot interactions can shift political views
+    
     Be helpful, professional, and focused on KyanosTech's vision and specific product offerings.
     Keep responses concise and relevant to the business plan and political technology space.
     When discussing metrics, cite the specific data points provided above.`;
