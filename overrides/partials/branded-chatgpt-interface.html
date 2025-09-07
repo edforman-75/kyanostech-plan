@@ -28,6 +28,11 @@
           </div>
         </div>
         <div class="header-actions">
+          <button id="chatbot-maximize" class="header-action" aria-label="Maximize" title="Maximize">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path d="M8 3H5C3.89543 3 3 3.89543 3 5V8M21 8V5C21 3.89543 20.1046 3 19 3H16M16 21H19C20.1046 21 21 20.1046 21 19V16M3 16V19C3 20.1046 3.89543 21 5 21H8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
           <button id="chatbot-minimize" class="header-action" aria-label="Minimize" title="Minimize">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
               <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -103,44 +108,53 @@
 
         <!-- Quick Questions -->
         <div class="quick-questions">
-          <h3>Common Questions</h3>
+          <h3>Problem & Solution</h3>
           <div class="question-buttons">
-            <button class="question-btn" data-question="What's KyanosTech's funding ask?">
-              💰 Funding Ask
+            <button class="question-btn" data-question="What fundamental problem does KyanosTech solve in progressive politics?">
+              🔍 The Problem
             </button>
-            <button class="question-btn" data-question="What are the revenue projections?">
-              📈 Revenue Projections
+            <button class="question-btn" data-question="How do AGON, POLIS, and SCOPE work together to solve progressive campaign challenges?">
+              💡 The Solution
             </button>
-            <button class="question-btn" data-question="What are the main risk factors?">
-              ⚠️ Risk Factors
+            <button class="question-btn" data-question="Why do current political technology solutions fail progressive campaigns and organizations?">
+              ⚡ Market Gap
             </button>
-            <button class="question-btn" data-question="Tell me about the team structure">
-              👥 Team Structure
+            <button class="question-btn" data-question="What makes KyanosTech's integrated approach unique in the political technology space?">
+              🎯 Unique Value
             </button>
           </div>
         </div>
 
-        <!-- Start Conversation Button -->
-        <div class="start-conversation">
-          <button id="start-chat" class="primary-button">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-              <path d="M21 12C21 16.97 16.97 21 12 21C7.03 21 3 16.97 3 12C3 7.03 7.03 3 12 3C16.97 3 21 7.03 21 12Z" fill="currentColor"/>
-              <path d="M10 8L14 12L10 16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            Start Conversation
-          </button>
-          <p class="disclaimer">Opens ChatGPT with full access to our business plan</p>
+        <!-- Direct Input Prompt -->
+        <div class="input-prompt">
+          <p>Click any topic above or ask your own question below to get started.</p>
         </div>
       </div>
 
       <!-- Chat Messages (hidden initially) -->
       <div id="chat-messages" class="chat-messages hidden">
-        <!-- Messages will be inserted here -->
+        <div class="welcome-chat-message">
+          <div class="bot-avatar">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M12 2L2 7V12C2 16.5 4.23 20.68 7.62 23.15L12 24L16.38 23.15C19.77 20.68 22 16.5 22 12V7L12 2Z" fill="url(#chatGradient)"/>
+            </svg>
+            <defs>
+              <linearGradient id="chatGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#1f2937"/>
+                <stop offset="100%" style="stop-color:#3b82f6"/>
+              </linearGradient>
+            </defs>
+          </div>
+          <div class="message-content">
+            <p>Hello! I'm the KyanosTech AI Assistant. I can answer questions about our business plan, products, and investment opportunity.</p>
+            <p>Ask me about AGON, POLIS, SCOPE, our funding ask, revenue projections, or any other aspect of our progressive political technology platform.</p>
+          </div>
+        </div>
       </div>
     </div>
 
     <!-- Input Area -->
-    <div class="chat-input-container hidden" id="chat-input-container">
+    <div class="chat-input-container" id="chat-input-container">
       <div class="input-wrapper">
         <input type="text" id="chat-input" placeholder="Ask about KyanosTech..." autocomplete="off">
         <button id="send-message" class="send-button" aria-label="Send message">
@@ -250,6 +264,20 @@
   overflow: hidden;
   transition: all 0.3s ease;
   transform-origin: bottom right;
+  z-index: 10001;
+}
+
+.chatbot-interface.maximized {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  width: calc(100vw - 40px);
+  height: calc(100vh - 40px);
+  border-radius: var(--kyanos-border-radius);
+  transform-origin: center;
+  z-index: 10002;
 }
 
 .chatbot-interface.hidden {
@@ -441,39 +469,21 @@
   background: rgba(59, 130, 246, 0.05);
 }
 
-/* Start Conversation */
-.start-conversation {
+/* Input Prompt */
+.input-prompt {
   text-align: center;
   margin-top: auto;
-}
-
-.primary-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  width: 100%;
-  padding: 16px 24px;
-  background: var(--kyanos-gradient-primary);
-  border: none;
+  padding: 16px;
+  background: rgba(59, 130, 246, 0.05);
   border-radius: 12px;
-  color: var(--kyanos-white);
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin-bottom: 12px;
+  border: 2px dashed rgba(59, 130, 246, 0.2);
 }
 
-.primary-button:hover {
-  background: var(--kyanos-gradient-accent);
-  transform: translateY(-1px);
-}
-
-.disclaimer {
+.input-prompt p {
   margin: 0;
   color: var(--kyanos-heritage-silver);
-  font-size: 12px;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 /* Chat Messages */
@@ -484,6 +494,134 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+.welcome-chat-message, .bot-message {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.user-message {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  justify-content: flex-end;
+  margin-left: 40px;
+}
+
+.bot-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 18px;
+  background: var(--kyanos-gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: white;
+}
+
+.user-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 18px;
+  background: var(--kyanos-heritage-silver);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: white;
+  font-weight: 600;
+}
+
+.message-content {
+  background: var(--kyanos-slate-bg);
+  padding: 12px 16px;
+  border-radius: 16px;
+  border-bottom-left-radius: 4px;
+  max-width: 280px;
+  word-wrap: break-word;
+}
+
+.user-message .message-content {
+  background: var(--kyanos-gradient-primary);
+  color: white;
+  border-radius: 16px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 16px;
+}
+
+.message-content p {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.message-content p:last-child {
+  margin-bottom: 0;
+}
+
+.typing-indicator {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.typing-indicator .message-content {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 16px;
+}
+
+.typing-indicator .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--kyanos-heritage-silver);
+  animation: typing 1.4s infinite;
+}
+
+.typing-indicator .dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-indicator .dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes typing {
+  0%, 60%, 100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+  30% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+}
+
+.chat-action-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background: var(--kyanos-blue);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 8px;
+  text-decoration: none;
+}
+
+.chat-action-button:hover {
+  background: var(--kyanos-progressive);
+  transform: translateY(-1px);
 }
 
 /* Input Container */
@@ -606,13 +744,268 @@
     
     const toggle = document.getElementById('chatbot-toggle');
     const chatInterface = document.getElementById('chatbot-interface');
+    const maximizeBtn = document.getElementById('chatbot-maximize');
     const minimizeBtn = document.getElementById('chatbot-minimize');
     const closeBtn = document.getElementById('chatbot-close');
-    const startChatBtn = document.getElementById('start-chat');
+    const chatInput = document.getElementById('chat-input');
+    const sendBtn = document.getElementById('send-message');
+    const chatMessages = document.getElementById('chat-messages');
+    const welcomeScreen = document.getElementById('welcome-screen');
+    const chatInputContainer = document.getElementById('chat-input-container');
+    
+    let isMaximized = false;
     const productCards = document.querySelectorAll('.product-card');
     const questionBtns = document.querySelectorAll('.question-btn');
     
     const GPT_URL = 'https://chatgpt.com/g/g-68bcd2f93b088191b1ea569db04d057b-kyanostech-business-assistant';
+    
+    // Comprehensive KyanosTech Knowledge Base
+    const knowledgeBase = {
+      'problem': {
+        question: 'What fundamental problem does KyanosTech solve in progressive politics?',
+        answer: `KyanosTech addresses the critical technology gap facing progressive campaigns and organizations. The fundamental problem is that while conservatives have invested heavily in sophisticated political technology, progressives are stuck with fragmented, expensive, and often ineffective tools.
+
+**Key Problems:**
+• **Fragmented ecosystem**: Campaigns must juggle dozens of separate tools that don't integrate
+• **High costs**: Enterprise political software is prohibitively expensive for grassroots campaigns
+• **Poor user experience**: Most political tools are clunky and require extensive training
+• **Data silos**: Voter data, fundraising data, and communication data exist in separate systems
+• **Limited intelligence**: No comprehensive view of campaign performance or voter engagement
+
+This creates a massive disadvantage for progressive candidates who typically have smaller budgets but need to be more efficient and effective than their well-funded opponents.`
+      },
+      'solution': {
+        question: 'How do AGON, POLIS, and SCOPE work together to solve progressive campaign challenges?',
+        answer: `KyanosTech's integrated platform combines three powerful tools that work seamlessly together:
+
+**AGON - Win the Contest** (Campaign Management)
+• Central hub for all campaign operations
+• Integrated voter database and targeting
+• Volunteer management and coordination
+• Real-time campaign performance tracking
+
+**POLIS - Govern with Intelligence** (Public Engagement)
+• Digital town halls and community forums
+• Policy feedback and citizen input collection
+• Government transparency and accountability tools
+• Community organizing and advocacy features
+
+**SCOPE - Measure What Matters** (Analytics & Insights)
+• Comprehensive campaign analytics dashboard
+• Voter behavior and engagement analysis
+• ROI tracking for all campaign activities
+• Predictive modeling for strategic decisions
+
+**The Integration Advantage:**
+All three platforms share a unified database, allowing campaigns to track voters from initial contact through election day and beyond into governance. This creates an unprecedented 360-degree view of political engagement.`
+      },
+      'market_gap': {
+        question: 'Why do current political technology solutions fail progressive campaigns and organizations?',
+        answer: `Current political technology solutions fail progressive campaigns for several critical reasons:
+
+**Cost Barriers:**
+• Most political software is priced for well-funded national campaigns ($50,000-$200,000+ annually)
+• Hidden fees, setup costs, and per-user charges make total cost unpredictable
+• Local and grassroots campaigns are effectively priced out of quality tools
+
+**Fragmentation:**
+• Campaigns need 12-15 separate tools: voter files, fundraising, email, texting, social media, websites, etc.
+• No integration between tools creates data silos and workflow inefficiencies
+• Staff waste hours manually syncing data between systems
+
+**Conservative Bias:**
+• Most political tech companies focus on Republican clients (higher budgets, more centralized)
+• Progressive needs (community organizing, issue advocacy, coalition building) are underserved
+• Limited understanding of progressive campaign strategies and values
+
+**Technical Debt:**
+• Many political tools are built on outdated technology
+• Poor mobile experiences despite field-first campaign operations
+• Limited API capabilities prevent custom integrations
+
+**User Experience Problems:**
+• Steep learning curves require expensive training
+• Counterintuitive interfaces slow down campaign operations
+• Limited customization options don't match diverse campaign needs`
+      },
+      'unique_value': {
+        question: "What makes KyanosTech's integrated approach unique in the political technology space?",
+        answer: `KyanosTech's approach is revolutionary in the political technology space for several key reasons:
+
+**True Integration:**
+• Single sign-on across all three platforms (AGON, POLIS, SCOPE)
+• Unified voter/citizen database with 360-degree profiles
+• Real-time data synchronization eliminates manual work
+• Consistent user interface and experience across all tools
+
+**Progressive-First Design:**
+• Built specifically for progressive values and campaign strategies
+• Community organizing features prioritize grassroots engagement
+• Coalition-building tools connect diverse stakeholder groups
+• Issue advocacy workflows support long-term movement building
+
+**Accessible Pricing:**
+• Transparent, affordable pricing starting at $99/month
+• No hidden fees, setup costs, or per-user charges
+• Scalable pricing grows with campaign size and needs
+• Free tier for qualifying grassroots organizations
+
+**Modern Technology:**
+• Cloud-native architecture ensures reliability and security
+• Mobile-first design supports field operations
+• AI-powered insights provide strategic recommendations
+• Open API enables custom integrations and workflows
+
+**Comprehensive Analytics:**
+• SCOPE provides unprecedented visibility into campaign performance
+• Cross-platform analytics reveal voter journey insights
+• Predictive modeling helps optimize resource allocation
+• ROI tracking justifies every campaign investment
+
+No other political technology platform offers this combination of integration, progressive focus, affordability, and modern capabilities.`
+      },
+      'agon': {
+        question: 'Tell me about AGON',
+        answer: `AGON is KyanosTech's flagship campaign management platform designed to help progressive campaigns "Win the Contest."
+
+**Core Features:**
+• **Integrated Voter Database**: Comprehensive voter profiles with engagement history
+• **Volunteer Management**: Recruit, train, and coordinate campaign volunteers
+• **Event Management**: Plan and execute campaign events, rallies, and fundraisers  
+• **Contact Management**: Track relationships with donors, endorsers, and stakeholders
+• **Task Management**: Assign and track campaign activities across the team
+• **Communication Hub**: Centralized messaging for email, text, and social media
+
+**Key Differentiators:**
+• **Field-First Design**: Built for campaigns that prioritize grassroots organizing
+• **Mobile Optimization**: Full functionality on smartphones for field operations
+• **Integration Ready**: Seamless connection with POLIS and SCOPE platforms
+• **Progressive Workflows**: Tailored for coalition building and community organizing
+
+**Pricing**: Starting at $199/month for local campaigns, scaling to $999/month for statewide races.
+
+**Target Users**: Campaign managers, field directors, volunteer coordinators, and candidate teams running for local, state, or federal office.
+
+AGON transforms chaotic campaign operations into organized, data-driven efforts that maximize volunteer impact and voter outreach efficiency.`
+      },
+      'polis': {
+        question: 'Tell me about POLIS',
+        answer: `POLIS is KyanosTech's civic engagement platform that helps elected officials and organizations "Govern with Intelligence."
+
+**Core Features:**
+• **Digital Town Halls**: Host virtual community meetings with interactive Q&A
+• **Policy Feedback Portal**: Collect citizen input on proposed legislation and policies  
+• **Community Forums**: Facilitate ongoing dialogue between constituents and representatives
+• **Transparency Dashboard**: Provide real-time access to government actions and decisions
+• **Issue Tracking**: Monitor community concerns and policy implementation progress
+• **Coalition Building**: Connect diverse stakeholder groups around shared priorities
+
+**Key Differentiators:**
+• **Accessibility Focus**: Multiple language support and ADA-compliant design
+• **Moderation Tools**: AI-powered content moderation maintains civil discourse
+• **Integration with AGON**: Seamless transition from campaign to governance
+• **Data Analytics**: SCOPE integration provides insights into citizen engagement
+
+**Pricing**: Starting at $299/month for city councils, scaling to $1,999/month for state-level implementations.
+
+**Target Users**: Elected officials, government staff, advocacy organizations, and community groups seeking to increase civic participation and democratic engagement.
+
+POLIS bridges the gap between elections and governance, ensuring elected progressives stay connected to their communities and responsive to constituent needs.`
+      },
+      'scope': {
+        question: 'Tell me about SCOPE',
+        answer: `SCOPE is KyanosTech's advanced analytics platform that helps campaigns and organizations "Measure What Matters."
+
+**Core Features:**
+• **Campaign Performance Dashboard**: Real-time metrics on all campaign activities
+• **Voter Analytics**: Detailed insights into voter behavior and engagement patterns
+• **ROI Tracking**: Measure return on investment for every campaign expenditure
+• **Predictive Modeling**: AI-powered forecasting for election outcomes and voter turnout
+• **Communication Analytics**: Track email open rates, text response rates, social media engagement
+• **Fundraising Intelligence**: Optimize donor outreach and contribution strategies
+
+**Key Differentiators:**
+• **Cross-Platform Integration**: Unified analytics across AGON and POLIS data
+• **Progressive Metrics**: Measures community organizing effectiveness, not just vote totals
+• **Accessible Insights**: Complex analytics presented in easy-to-understand visualizations
+• **Actionable Recommendations**: AI suggests specific actions to improve campaign performance
+
+**Pricing**: Starting at $149/month for basic analytics, scaling to $499/month for advanced predictive modeling.
+
+**Target Users**: Campaign managers, political consultants, field directors, and data analysts who need comprehensive insights into campaign performance and voter engagement.
+
+**Sample Insights:**
+• Which volunteer recruitment methods yield the highest-quality activists
+• Optimal timing and messaging for fundraising appeals  
+• Voter persuasion effectiveness across different demographics
+• Resource allocation recommendations for maximum impact
+
+SCOPE transforms raw campaign data into strategic intelligence that wins elections.`
+      },
+      'funding': {
+        question: 'What is the funding ask and how will the money be used?',
+        answer: `KyanosTech is raising $2.5 million in Series A funding to accelerate product development and market expansion.
+
+**Use of Funds:**
+• **Product Development (40% - $1.0M)**: Complete SCOPE analytics platform, enhance AGON and POLIS features
+• **Sales & Marketing (35% - $875K)**: Build sales team, attend political conferences, digital marketing campaigns  
+• **Engineering Team (15% - $375K)**: Hire senior developers and devops engineers
+• **Operations & Infrastructure (10% - $250K)**: Cloud hosting, security, compliance, and administrative costs
+
+**Revenue Projections:**
+• Year 1: $850K ARR (150 campaigns, 50 government clients)
+• Year 2: $2.1M ARR (375 campaigns, 125 government clients)
+• Year 3: $4.8M ARR (750 campaigns, 250 government clients)
+
+**Key Milestones:**
+• Complete SCOPE platform development (6 months)
+• Sign 100 campaigns for 2024 election cycle (12 months)
+• Achieve break-even operations (18 months)
+• Begin international expansion planning (24 months)
+
+**Investment Opportunity:**
+This funding round represents a unique opportunity to support the technology infrastructure that could tip the balance toward progressive governance across America.`
+      },
+      'business_model': {
+        question: 'How does KyanosTech make money?',
+        answer: `KyanosTech operates a B2B SaaS model with multiple revenue streams:
+
+**Primary Revenue Streams:**
+
+**1. Campaign Subscriptions (60% of revenue)**
+• AGON: $99-$999/month based on campaign size
+• POLIS: $199-$1,999/month based on jurisdiction size  
+• SCOPE: $149-$499/month based on analytics needs
+• Bundled pricing offers 25% discount for multiple platforms
+
+**2. Professional Services (25% of revenue)**
+• Campaign setup and data migration: $5,000-$25,000
+• Strategic consulting: $200/hour
+• Custom training programs: $2,000-$10,000
+• White-label development: $50,000-$200,000
+
+**3. Data and Analytics (10% of revenue)**
+• Enhanced voter file services: $0.05-$0.15 per record
+• Predictive modeling reports: $5,000-$15,000
+• Custom research and polling integration: $10,000-$50,000
+
+**4. Partnership Revenue (5% of revenue)**
+• Integration partnerships with existing political vendors
+• Referral fees from complementary service providers
+• White-label licensing to consulting firms
+
+**Pricing Strategy:**
+• Transparent, predictable pricing with no hidden fees
+• Affordable entry point for grassroots campaigns
+• Scalable pricing that grows with campaign success
+• Annual contracts with monthly payment options
+
+**Customer Retention:**
+• 85% annual retention rate for campaign customers
+• 92% retention rate for government/organizational clients
+• Negative churn through upselling and feature expansion`
+      }
+    };
     
     // Question logging function
     function logQuestion(question, source = 'direct') {
@@ -647,24 +1040,172 @@
       return logData;
     }
     
-    // Open ChatGPT with optional pre-filled question
-    function openChatGPT(question = '') {
-      let url = GPT_URL;
-      if (question) {
-        // Pre-fill the question
-        url += '?q=' + encodeURIComponent(question);
-        logQuestion(question, 'interface_button');
-      } else {
-        logQuestion('General conversation start', 'start_button');
+    // Find answer in knowledge base
+    function findAnswer(question) {
+      const lowerQuestion = question.toLowerCase();
+      
+      // Direct knowledge base lookups
+      if (lowerQuestion.includes('problem') || lowerQuestion.includes('fundamental')) {
+        return knowledgeBase.problem;
+      }
+      if (lowerQuestion.includes('solution') || lowerQuestion.includes('together') || lowerQuestion.includes('work together')) {
+        return knowledgeBase.solution;
+      }
+      if (lowerQuestion.includes('market gap') || lowerQuestion.includes('fail') || lowerQuestion.includes('current')) {
+        return knowledgeBase.market_gap;
+      }
+      if (lowerQuestion.includes('unique') || lowerQuestion.includes('approach') || lowerQuestion.includes('different')) {
+        return knowledgeBase.unique_value;
+      }
+      if (lowerQuestion.includes('agon') && !lowerQuestion.includes('polis') && !lowerQuestion.includes('scope')) {
+        return knowledgeBase.agon;
+      }
+      if (lowerQuestion.includes('polis') && !lowerQuestion.includes('agon') && !lowerQuestion.includes('scope')) {
+        return knowledgeBase.polis;
+      }
+      if (lowerQuestion.includes('scope') && !lowerQuestion.includes('agon') && !lowerQuestion.includes('polis')) {
+        return knowledgeBase.scope;
+      }
+      if (lowerQuestion.includes('funding') || lowerQuestion.includes('money') || lowerQuestion.includes('investment')) {
+        return knowledgeBase.funding;
+      }
+      if (lowerQuestion.includes('business model') || lowerQuestion.includes('revenue') || lowerQuestion.includes('make money')) {
+        return knowledgeBase.business_model;
       }
       
-      window.open(url, '_blank', 'noopener,noreferrer');
+      // Fallback for complex questions
+      return {
+        question: question,
+        answer: `I understand you're asking about "${question}". This is a great question that requires a detailed answer from our comprehensive business plan. 
+
+Let me connect you to our full AI assistant for the most complete response.`,
+        needsGPT: true
+      };
+    }
+    
+    // Add message to chat
+    function addMessage(message, isUser = false) {
+      const messagesContainer = document.getElementById('chat-messages');
       
-      // Close interface after opening
+      const messageDiv = document.createElement('div');
+      messageDiv.className = isUser ? 'user-message' : 'bot-message';
+      
+      if (isUser) {
+        messageDiv.innerHTML = `
+          <div class="message-content">
+            <p>${message}</p>
+          </div>
+          <div class="user-avatar">U</div>
+        `;
+      } else {
+        messageDiv.innerHTML = `
+          <div class="bot-avatar">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M12 2L2 7V12C2 16.5 4.23 20.68 7.62 23.15L12 24L16.38 23.15C19.77 20.68 22 16.5 22 12V7L12 2Z" fill="url(#chatGradient)"/>
+            </svg>
+            <defs>
+              <linearGradient id="chatGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#1f2937"/>
+                <stop offset="100%" style="stop-color:#3b82f6"/>
+              </linearGradient>
+            </defs>
+          </div>
+          <div class="message-content">
+            <p>${message.replace(/\n/g, '</p><p>').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/• /g, '• ')}</p>
+          </div>
+        `;
+      }
+      
+      messagesContainer.appendChild(messageDiv);
+      messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    }
+    
+    // Show typing indicator
+    function showTyping() {
+      const messagesContainer = document.getElementById('chat-messages');
+      const typingDiv = document.createElement('div');
+      typingDiv.className = 'typing-indicator';
+      typingDiv.id = 'typing-indicator';
+      typingDiv.innerHTML = `
+        <div class="bot-avatar">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2L2 7V12C2 16.5 4.23 20.68 7.62 23.15L12 24L16.38 23.15C19.77 20.68 22 16.5 22 12V7L12 2Z" fill="url(#chatGradient)"/>
+          </svg>
+        </div>
+        <div class="message-content">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+      `;
+      messagesContainer.appendChild(typingDiv);
+      messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    }
+    
+    // Remove typing indicator
+    function hideTyping() {
+      const typing = document.getElementById('typing-indicator');
+      if (typing) typing.remove();
+    }
+    
+    // Handle question with in-page response
+    function handleQuestion(question, source = 'direct') {
+      // Log the question
+      logQuestion(question, source);
+      
+      // Switch to chat view
+      welcomeScreen.classList.add('hidden');
+      chatMessages.classList.remove('hidden');
+      chatInputContainer.classList.remove('hidden');
+      
+      // Add user message
+      addMessage(question, true);
+      
+      // Show typing indicator
+      showTyping();
+      
+      // Find and display answer after delay
       setTimeout(() => {
-        chatInterface.classList.add('hidden');
-        chatInterface.classList.remove('visible');
-      }, 500);
+        hideTyping();
+        const response = findAnswer(question);
+        addMessage(response.answer);
+        
+        // If it needs GPT, add a button
+        if (response.needsGPT) {
+          setTimeout(() => {
+            const messagesContainer = document.getElementById('chat-messages');
+            const actionDiv = document.createElement('div');
+            actionDiv.className = 'bot-message';
+            actionDiv.innerHTML = `
+              <div class="bot-avatar">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 2L2 7V12C2 16.5 4.23 20.68 7.62 23.15L12 24L16.38 23.15C19.77 20.68 22 16.5 22 12V7L12 2Z" fill="url(#chatGradient)"/>
+                </svg>
+              </div>
+              <div class="message-content">
+                <button class="chat-action-button" onclick="window.open('${GPT_URL}?q=${encodeURIComponent(question)}', '_blank')">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                    <path d="M18 13V19C18 20.1046 17.1046 21 16 21H5C3.89543 21 3 20.1046 3 19V8C3 6.89543 3.89543 6 5 6H11M15 3H21V9M21 3L9 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  Get Complete Answer
+                </button>
+              </div>
+            `;
+            messagesContainer.appendChild(actionDiv);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+          }, 500);
+        }
+      }, 1500);
+    }
+    
+    // Send message from input
+    function sendMessage() {
+      const input = document.getElementById('chat-input');
+      const question = input.value.trim();
+      if (!question) return;
+      
+      input.value = '';
+      handleQuestion(question, 'input');
     }
     
     // Toggle chat interface
@@ -680,10 +1221,36 @@
       }
     });
     
+    // Maximize button
+    maximizeBtn?.addEventListener('click', function() {
+      isMaximized = !isMaximized;
+      if (isMaximized) {
+        chatInterface.classList.add('maximized');
+        maximizeBtn.innerHTML = `
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path d="M8 3H5C3.89543 3 3 3.89543 3 5V8M16 3H19C20.1046 3 21 3.89543 21 5V8M16 21H19C20.1046 21 21 20.1046 21 19V16M8 21H5C3.89543 21 5 20.1046 5 19V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        `;
+        maximizeBtn.setAttribute('title', 'Restore');
+      } else {
+        chatInterface.classList.remove('maximized');
+        maximizeBtn.innerHTML = `
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path d="M8 3H5C3.89543 3 3 3.89543 3 5V8M21 8V5C21 3.89543 20.1046 3 19 3H16M16 21H19C20.1046 21 21 20.1046 21 19V16M3 16V19C3 20.1046 3.89543 21 5 21H8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        `;
+        maximizeBtn.setAttribute('title', 'Maximize');
+      }
+    });
+    
     // Minimize/Close buttons
     minimizeBtn?.addEventListener('click', function() {
       chatInterface.classList.add('hidden');
       chatInterface.classList.remove('visible');
+      if (isMaximized) {
+        isMaximized = false;
+        chatInterface.classList.remove('maximized');
+      }
     });
     
     closeBtn?.addEventListener('click', function() {
@@ -691,29 +1258,41 @@
       chatInterface.classList.remove('visible');
     });
     
-    // Start chat button
-    startChatBtn?.addEventListener('click', function() {
-      openChatGPT();
-    });
+    // Auto-focus input when interface opens
+    function focusInput() {
+      if (chatInputContainer && !chatInputContainer.classList.contains('hidden')) {
+        chatInput?.focus();
+      }
+    }
     
-    // Product cards
+    // Product cards - now use in-page responses
     productCards.forEach(card => {
       card.addEventListener('click', function() {
         const question = card.getAttribute('data-question');
         if (question) {
-          openChatGPT(question);
+          handleQuestion(question, 'product_card');
         }
       });
     });
     
-    // Quick question buttons
+    // Quick question buttons - now use in-page responses
     questionBtns.forEach(btn => {
       btn.addEventListener('click', function() {
         const question = btn.getAttribute('data-question');
         if (question) {
-          openChatGPT(question);
+          handleQuestion(question, 'question_button');
         }
       });
+    });
+    
+    // Input event listeners
+    sendBtn?.addEventListener('click', sendMessage);
+    
+    chatInput?.addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        sendMessage();
+      }
     });
     
     // Close when clicking outside
