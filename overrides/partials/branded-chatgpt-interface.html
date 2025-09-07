@@ -1,0 +1,752 @@
+<!-- KyanosTech Branded ChatGPT Interface -->
+<div id="kyanostech-chatbot" class="kyanostech-chatbot">
+  <!-- Chat Toggle Button -->
+  <button id="chatbot-toggle" class="chatbot-toggle" aria-label="Open KyanosTech AI Assistant">
+    <div class="toggle-icon">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2L2 7V12C2 16.5 4.23 20.68 7.62 23.15L12 24L16.38 23.15C19.77 20.68 22 16.5 22 12V7L12 2Z" fill="currentColor"/>
+        <circle cx="8.5" cy="10.5" r="1.5" fill="white"/>
+        <circle cx="15.5" cy="10.5" r="1.5" fill="white"/>
+        <path d="M8 14C8 14 10 16 12 16C14 16 16 14 16 14" stroke="white" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <span class="toggle-label">AI Assistant</span>
+  </button>
+
+  <!-- Chat Interface -->
+  <div id="chatbot-interface" class="chatbot-interface hidden">
+    <!-- Header -->
+    <div class="chatbot-header">
+      <div class="header-content">
+        <div class="brand-logo">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L2 7V12C2 16.5 4.23 20.68 7.62 23.15L12 24L16.38 23.15C19.77 20.68 22 16.5 22 12V7L12 2Z" fill="currentColor"/>
+          </svg>
+          <div class="brand-text">
+            <h3>KyanosTech</h3>
+            <p>AI Assistant</p>
+          </div>
+        </div>
+        <div class="header-actions">
+          <button id="chatbot-minimize" class="header-action" aria-label="Minimize" title="Minimize">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+          <button id="chatbot-close" class="header-action" aria-label="Close" title="Close">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chat Container -->
+    <div class="chat-container">
+      <!-- Welcome Screen -->
+      <div id="welcome-screen" class="welcome-screen">
+        <div class="welcome-header">
+          <div class="kyanos-logo">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2L2 7V12C2 16.5 4.23 20.68 7.62 23.15L12 24L16.38 23.15C19.77 20.68 22 16.5 22 12V7L12 2Z" fill="url(#primaryGradient)"/>
+            </svg>
+            <defs>
+              <linearGradient id="primaryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#1f2937"/>
+                <stop offset="100%" style="stop-color:#3b82f6"/>
+              </linearGradient>
+            </defs>
+          </div>
+          <h2>Welcome to KyanosTech AI</h2>
+          <p>Your dedicated assistant for business plan questions</p>
+        </div>
+
+        <!-- Product Quick Access -->
+        <div class="product-grid">
+          <button class="product-card agon-card" data-question="Tell me about AGON">
+            <div class="product-icon" style="background-color: #2563eb;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                <path d="M12 2L13.09 8.26L22 9L13.09 15.74L12 22L10.91 15.74L2 9L10.91 8.26L12 2Z"/>
+              </svg>
+            </div>
+            <div class="product-info">
+              <h4>AGON</h4>
+              <p>Win the Contest</p>
+            </div>
+          </button>
+          
+          <button class="product-card polis-card" data-question="Tell me about POLIS">
+            <div class="product-icon" style="background-color: #059669;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                <path d="M12 3L1 9L12 15L21 10.09V17H23V9L12 3Z"/>
+              </svg>
+            </div>
+            <div class="product-info">
+              <h4>POLIS</h4>
+              <p>Govern with Intelligence</p>
+            </div>
+          </button>
+          
+          <button class="product-card scope-card" data-question="Tell me about SCOPE">
+            <div class="product-icon" style="background-color: #dc2626;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                <path d="M15.5 14H20.5L22 15.5V20.5L20.5 22H15.5L14 20.5V15.5L15.5 14ZM18 17.5C18 16.12 16.88 15 15.5 15S13 16.12 13 17.5 14.12 20 15.5 20 18 18.88 18 17.5ZM3 5V19C3 20.1 3.89 21 5 21H11V19H5V5H19V11H21V5C21 3.89 20.1 3 19 3H5C3.89 3 3 3.89 3 5Z"/>
+              </svg>
+            </div>
+            <div class="product-info">
+              <h4>SCOPE</h4>
+              <p>Measure What Matters</p>
+            </div>
+          </button>
+        </div>
+
+        <!-- Quick Questions -->
+        <div class="quick-questions">
+          <h3>Common Questions</h3>
+          <div class="question-buttons">
+            <button class="question-btn" data-question="What's KyanosTech's funding ask?">
+              💰 Funding Ask
+            </button>
+            <button class="question-btn" data-question="What are the revenue projections?">
+              📈 Revenue Projections
+            </button>
+            <button class="question-btn" data-question="What are the main risk factors?">
+              ⚠️ Risk Factors
+            </button>
+            <button class="question-btn" data-question="Tell me about the team structure">
+              👥 Team Structure
+            </button>
+          </div>
+        </div>
+
+        <!-- Start Conversation Button -->
+        <div class="start-conversation">
+          <button id="start-chat" class="primary-button">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M21 12C21 16.97 16.97 21 12 21C7.03 21 3 16.97 3 12C3 7.03 7.03 3 12 3C16.97 3 21 7.03 21 12Z" fill="currentColor"/>
+              <path d="M10 8L14 12L10 16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Start Conversation
+          </button>
+          <p class="disclaimer">Opens ChatGPT with full access to our business plan</p>
+        </div>
+      </div>
+
+      <!-- Chat Messages (hidden initially) -->
+      <div id="chat-messages" class="chat-messages hidden">
+        <!-- Messages will be inserted here -->
+      </div>
+    </div>
+
+    <!-- Input Area -->
+    <div class="chat-input-container hidden" id="chat-input-container">
+      <div class="input-wrapper">
+        <input type="text" id="chat-input" placeholder="Ask about KyanosTech..." autocomplete="off">
+        <button id="send-message" class="send-button" aria-label="Send message">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M22 2L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="input-footer">
+        <p>Powered by KyanosTech AI Assistant</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+/* KyanosTech Brand Variables */
+:root {
+  --kyanos-democratic-blue: #1f2937;
+  --kyanos-blue: #3b82f6;
+  --kyanos-progressive: #1d4ed8;
+  --kyanos-white: #ffffff;
+  --kyanos-victory-gold: #f59e0b;
+  --kyanos-heritage-silver: #6b7280;
+  --kyanos-slate-bg: #f8fafc;
+  --kyanos-constitutional-cream: #fefce8;
+  --kyanos-font: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --kyanos-gradient-primary: linear-gradient(135deg, #1f2937 0%, #3b82f6 100%);
+  --kyanos-gradient-accent: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  --kyanos-shadow: 0 10px 40px rgba(31, 41, 55, 0.15);
+  --kyanos-border-radius: 12px;
+}
+
+/* Base Chatbot Styles */
+.kyanostech-chatbot {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 10000;
+  font-family: var(--kyanos-font);
+}
+
+/* Toggle Button */
+.chatbot-toggle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 24px;
+  background: var(--kyanos-gradient-primary);
+  border: none;
+  border-radius: 30px;
+  color: var(--kyanos-white);
+  font-family: var(--kyanos-font);
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: var(--kyanos-shadow);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.chatbot-toggle:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 50px rgba(31, 41, 55, 0.25);
+}
+
+.chatbot-toggle::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--kyanos-gradient-accent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.chatbot-toggle:hover::before {
+  opacity: 1;
+}
+
+.toggle-icon,
+.toggle-label {
+  position: relative;
+  z-index: 1;
+}
+
+.toggle-icon svg {
+  display: block;
+}
+
+/* Chat Interface */
+.chatbot-interface {
+  position: absolute;
+  bottom: 80px;
+  right: 0;
+  width: 420px;
+  height: 600px;
+  background: var(--kyanos-white);
+  border-radius: var(--kyanos-border-radius);
+  box-shadow: var(--kyanos-shadow);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  transform-origin: bottom right;
+}
+
+.chatbot-interface.hidden {
+  opacity: 0;
+  transform: scale(0.95) translateY(10px);
+  pointer-events: none;
+}
+
+.chatbot-interface.visible {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  pointer-events: all;
+}
+
+/* Header */
+.chatbot-header {
+  background: var(--kyanos-gradient-primary);
+  color: var(--kyanos-white);
+  padding: 20px 24px;
+  border-radius: var(--kyanos-border-radius) var(--kyanos-border-radius) 0 0;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-text h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.brand-text p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.9;
+  font-weight: 400;
+}
+
+.header-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.header-action {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: var(--kyanos-white);
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.header-action:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Chat Container */
+.chat-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Welcome Screen */
+.welcome-screen {
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.welcome-header {
+  text-align: center;
+}
+
+.kyanos-logo {
+  margin-bottom: 16px;
+}
+
+.welcome-header h2 {
+  margin: 0 0 8px 0;
+  color: var(--kyanos-democratic-blue);
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.welcome-header p {
+  margin: 0;
+  color: var(--kyanos-heritage-silver);
+  font-size: 16px;
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.product-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: var(--kyanos-slate-bg);
+  border: 2px solid transparent;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+  width: 100%;
+}
+
+.product-card:hover {
+  border-color: var(--kyanos-blue);
+  background: rgba(59, 130, 246, 0.05);
+  transform: translateY(-1px);
+}
+
+.product-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.product-info h4 {
+  margin: 0 0 4px 0;
+  color: var(--kyanos-democratic-blue);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.product-info p {
+  margin: 0;
+  color: var(--kyanos-heritage-silver);
+  font-size: 14px;
+}
+
+/* Quick Questions */
+.quick-questions h3 {
+  margin: 0 0 16px 0;
+  color: var(--kyanos-democratic-blue);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.question-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.question-btn {
+  padding: 12px 16px;
+  background: var(--kyanos-white);
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  color: var(--kyanos-democratic-blue);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.question-btn:hover {
+  border-color: var(--kyanos-blue);
+  background: rgba(59, 130, 246, 0.05);
+}
+
+/* Start Conversation */
+.start-conversation {
+  text-align: center;
+  margin-top: auto;
+}
+
+.primary-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  padding: 16px 24px;
+  background: var(--kyanos-gradient-primary);
+  border: none;
+  border-radius: 12px;
+  color: var(--kyanos-white);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 12px;
+}
+
+.primary-button:hover {
+  background: var(--kyanos-gradient-accent);
+  transform: translateY(-1px);
+}
+
+.disclaimer {
+  margin: 0;
+  color: var(--kyanos-heritage-silver);
+  font-size: 12px;
+}
+
+/* Chat Messages */
+.chat-messages {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Input Container */
+.chat-input-container {
+  padding: 20px 24px;
+  border-top: 1px solid #e5e7eb;
+  background: var(--kyanos-white);
+}
+
+.input-wrapper {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 12px 16px;
+  background: var(--kyanos-slate-bg);
+  border-radius: 12px;
+  border: 2px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.input-wrapper:focus-within {
+  border-color: var(--kyanos-blue);
+}
+
+#chat-input {
+  flex: 1;
+  border: none;
+  background: none;
+  font-family: var(--kyanos-font);
+  font-size: 16px;
+  color: var(--kyanos-democratic-blue);
+  outline: none;
+}
+
+#chat-input::placeholder {
+  color: var(--kyanos-heritage-silver);
+}
+
+.send-button {
+  background: var(--kyanos-gradient-primary);
+  border: none;
+  color: var(--kyanos-white);
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.send-button:hover {
+  background: var(--kyanos-gradient-accent);
+}
+
+.input-footer {
+  text-align: center;
+  margin-top: 12px;
+}
+
+.input-footer p {
+  margin: 0;
+  color: var(--kyanos-heritage-silver);
+  font-size: 12px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 640px) {
+  .kyanostech-chatbot {
+    bottom: 16px;
+    right: 16px;
+    left: 16px;
+  }
+  
+  .chatbot-toggle {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .chatbot-interface {
+    width: 100%;
+    height: 70vh;
+    bottom: 70px;
+    right: 0;
+    left: 0;
+  }
+  
+  .question-buttons {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Animation for pulse effect */
+@keyframes pulse {
+  0% {
+    box-shadow: var(--kyanos-shadow);
+  }
+  50% {
+    box-shadow: 0 15px 50px rgba(59, 130, 246, 0.4);
+  }
+  100% {
+    box-shadow: var(--kyanos-shadow);
+  }
+}
+
+.chatbot-toggle.pulse {
+  animation: pulse 2s infinite;
+}
+</style>
+
+<script>
+// KyanosTech Branded ChatGPT Interface
+(function() {
+  let isInitialized = false;
+  
+  function initializeChatbot() {
+    if (isInitialized) return;
+    isInitialized = true;
+    
+    const toggle = document.getElementById('chatbot-toggle');
+    const chatInterface = document.getElementById('chatbot-interface');
+    const minimizeBtn = document.getElementById('chatbot-minimize');
+    const closeBtn = document.getElementById('chatbot-close');
+    const startChatBtn = document.getElementById('start-chat');
+    const productCards = document.querySelectorAll('.product-card');
+    const questionBtns = document.querySelectorAll('.question-btn');
+    
+    const GPT_URL = 'https://chatgpt.com/g/g-68bcd2f93b088191b1ea569db04d057b-kyanostech-business-assistant';
+    
+    // Question logging function
+    function logQuestion(question, source = 'direct') {
+      const logData = {
+        question: question,
+        timestamp: new Date().toISOString(),
+        source: source,
+        page: window.location.pathname,
+        referrer: document.referrer || 'direct'
+      };
+      
+      // Google Analytics
+      if (window.gtag) {
+        window.gtag('event', 'kyanos_ai_question', {
+          'event_category': 'chatbot_engagement',
+          'event_label': question.substring(0, 100),
+          'custom_parameter_1': source
+        });
+      }
+      
+      // Console log for development
+      console.log('KyanosTech AI Question:', logData);
+      
+      // Local storage
+      const questions = JSON.parse(localStorage.getItem('kyanos_ai_questions') || '[]');
+      questions.push(logData);
+      if (questions.length > 50) {
+        questions.splice(0, questions.length - 50);
+      }
+      localStorage.setItem('kyanos_ai_questions', JSON.stringify(questions));
+      
+      return logData;
+    }
+    
+    // Open ChatGPT with optional pre-filled question
+    function openChatGPT(question = '') {
+      let url = GPT_URL;
+      if (question) {
+        // Pre-fill the question
+        url += '?q=' + encodeURIComponent(question);
+        logQuestion(question, 'interface_button');
+      } else {
+        logQuestion('General conversation start', 'start_button');
+      }
+      
+      window.open(url, '_blank', 'noopener,noreferrer');
+      
+      // Close interface after opening
+      setTimeout(() => {
+        chatInterface.classList.add('hidden');
+        chatInterface.classList.remove('visible');
+      }, 500);
+    }
+    
+    // Toggle chat interface
+    toggle?.addEventListener('click', function(e) {
+      e.stopPropagation();
+      chatInterface.classList.toggle('hidden');
+      chatInterface.classList.toggle('visible');
+      
+      if (window.gtag) {
+        window.gtag('event', 'kyanos_ai_interface_open', {
+          'event_category': 'chatbot_engagement'
+        });
+      }
+    });
+    
+    // Minimize/Close buttons
+    minimizeBtn?.addEventListener('click', function() {
+      chatInterface.classList.add('hidden');
+      chatInterface.classList.remove('visible');
+    });
+    
+    closeBtn?.addEventListener('click', function() {
+      chatInterface.classList.add('hidden');
+      chatInterface.classList.remove('visible');
+    });
+    
+    // Start chat button
+    startChatBtn?.addEventListener('click', function() {
+      openChatGPT();
+    });
+    
+    // Product cards
+    productCards.forEach(card => {
+      card.addEventListener('click', function() {
+        const question = card.getAttribute('data-question');
+        if (question) {
+          openChatGPT(question);
+        }
+      });
+    });
+    
+    // Quick question buttons
+    questionBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        const question = btn.getAttribute('data-question');
+        if (question) {
+          openChatGPT(question);
+        }
+      });
+    });
+    
+    // Close when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!chatInterface.contains(e.target) && !toggle.contains(e.target)) {
+        chatInterface.classList.add('hidden');
+        chatInterface.classList.remove('visible');
+      }
+    });
+    
+    // Pulse animation after 5 seconds
+    setTimeout(function() {
+      toggle.classList.add('pulse');
+      setTimeout(function() {
+        toggle.classList.remove('pulse');
+      }, 4000);
+    }, 5000);
+    
+    // Expose logging function globally
+    window.KyanosTechAI = {
+      logQuestion: logQuestion,
+      getQuestions: function() {
+        return JSON.parse(localStorage.getItem('kyanos_ai_questions') || '[]');
+      },
+      openGPT: openChatGPT
+    };
+  }
+  
+  // Initialize when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeChatbot);
+  } else {
+    initializeChatbot();
+  }
+})();
+</script>
