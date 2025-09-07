@@ -13,9 +13,7 @@ class GeminiChatbot {
     this.isProcessing = false;
     
     // Context about KyanosTech for the AI
-    this.systemContext = `You are a specialized AI assistant for KyanosTech. You must ONLY answer questions using the specific information provided in this context. Do not use general knowledge about other companies or generic information. If the context doesn't contain information to answer a question, say "I don't have specific information about that in KyanosTech's materials."
-
-KyanosTech is a progressive technology platform addressing political media challenges through three core products:
+    this.systemContext = `KyanosTech is a progressive technology platform addressing political media challenges through three core products:
 
     CORE PRODUCTS:
     
@@ -98,14 +96,7 @@ KyanosTech is a progressive technology platform addressing political media chall
     - Schema standards: Current Schema.org lacks political context - KyanosTech developing open specification
     - AI training bias: University of Washington study shows 5 chatbot interactions can shift political views
     
-    IMPORTANT INSTRUCTIONS:
-    - You are specifically representing KyanosTech, not a generic AI assistant
-    - Always answer from KyanosTech's perspective using the provided context
-    - Never say "I don't have access to real-time information" or "I'm a large language model"
-    - If asked about KyanosTech, use the detailed information provided above
-    - For questions outside this context, direct users to contact KyanosTech directly
-    - Be helpful, professional, and focused on KyanosTech's vision and specific offerings
-    - When discussing metrics, cite the specific data points provided above`;
+    When answering questions, use the specific data and details provided above about KyanosTech's products, market opportunity, and business model.`;
     
     this.init();
   }
@@ -261,8 +252,12 @@ KyanosTech is a progressive technology platform addressing political media chall
       return this.getDemoResponse(message);
     }
     
-    // Prepare the conversation with system context integrated into user message
-    const contextualMessage = `Context: ${this.systemContext}\n\nUser Question: ${message}`;
+    // Prepare the conversation with KyanosTech context
+    const contextualMessage = `You are an AI assistant helping users understand KyanosTech's business plan and products. Use the following comprehensive information about KyanosTech to answer questions:
+
+${this.systemContext}
+
+User question: ${message}`;
     
     const contents = [
       ...this.chatHistory.map(msg => ({
