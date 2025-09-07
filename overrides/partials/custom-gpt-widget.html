@@ -1,0 +1,580 @@
+<!-- KyanosTech Custom GPT Widget -->
+<div id="kyanostech-gpt-widget">
+  <!-- Floating Chat Button -->
+  <button id="gpt-chat-button" class="gpt-chat-button" aria-label="Chat with KyanosTech AI Assistant">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 2C6.48 2 2 6.48 2 12C2 13.85 2.58 15.55 3.56 16.96L2.05 21.37C1.91 21.78 2.27 22.14 2.68 22L7.09 20.49C8.5 21.42 10.15 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2Z" fill="currentColor"/>
+      <circle cx="8" cy="12" r="1.5" fill="white"/>
+      <circle cx="12" cy="12" r="1.5" fill="white"/>
+      <circle cx="16" cy="12" r="1.5" fill="white"/>
+    </svg>
+    <span class="gpt-chat-label">Ask AI</span>
+  </button>
+
+  <!-- Floating Chat Window -->
+  <div id="gpt-chat-window" class="gpt-chat-window hidden">
+    <!-- Header -->
+    <div class="gpt-chat-header">
+      <div class="gpt-chat-title">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2L2 7V12C2 16.5 4.23 20.68 7.62 23.15L12 24L16.38 23.15C19.77 20.68 22 16.5 22 12V7L12 2Z" fill="currentColor"/>
+        </svg>
+        <span>KyanosTech AI Assistant</span>
+      </div>
+      <button id="gpt-minimize" class="gpt-minimize" aria-label="Minimize">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M3 8H13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <button id="gpt-close-window" class="gpt-close-window" aria-label="Close">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M12 4L4 12M4 4L12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+    
+    <!-- Chat Content -->
+    <div class="gpt-chat-content">
+      <!-- Welcome Message -->
+      <div class="gpt-welcome-message">
+        <h3>Welcome to KyanosTech AI Assistant</h3>
+        <p>I can answer questions about:</p>
+        <ul>
+          <li>Our products: AGON, POLIS, and SCOPE</li>
+          <li>Business model and revenue projections</li>
+          <li>Investment opportunity ($5M Series A)</li>
+          <li>Market analysis and competitive landscape</li>
+          <li>Team, governance, and risk factors</li>
+        </ul>
+        
+        <!-- Quick Questions -->
+        <div class="gpt-quick-questions">
+          <button class="gpt-quick-btn" data-question="What is AGON?">What is AGON?</button>
+          <button class="gpt-quick-btn" data-question="What's your funding ask?">Funding Ask</button>
+          <button class="gpt-quick-btn" data-question="Revenue projections?">Revenue Projections</button>
+          <button class="gpt-quick-btn" data-question="Main risk factors?">Risk Factors</button>
+        </div>
+      </div>
+      
+      <!-- Launch Button -->
+      <div class="gpt-launch-container">
+        <a href="https://chatgpt.com/g/g-68bcd2f93b088191b1ea569db04d057b-kyanostech-business-assistant" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="gpt-main-launch-button">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 3H5C3.89 3 3 3.9 3 5V19C3 20.1 3.89 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM19 19H5V7H19V19Z" fill="currentColor"/>
+            <path d="M12 10L8 14H11V17H13V14H16L12 10Z" fill="currentColor"/>
+          </svg>
+          Start Conversation with AI Assistant
+        </a>
+        <p class="gpt-note">Opens in ChatGPT with full access to our business plan</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+/* KyanosTech GPT Widget Styles */
+#kyanostech-gpt-widget {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1000;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Chat Button */
+.gpt-chat-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #1f2937 0%, #3b82f6 100%);
+  color: white;
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.gpt-chat-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+  background: linear-gradient(135deg, #1f2937 0%, #1d4ed8 100%);
+}
+
+.gpt-chat-button svg {
+  width: 24px;
+  height: 24px;
+}
+
+.gpt-chat-label {
+  display: inline-block;
+}
+
+/* Info Banner */
+.gpt-info-banner {
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  width: 320px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  transition: all 0.3s ease;
+  transform-origin: bottom right;
+}
+
+.gpt-info-banner.hidden {
+  opacity: 0;
+  transform: scale(0.95);
+  pointer-events: none;
+}
+
+.gpt-info-banner.visible {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: all;
+}
+
+/* Floating Chat Window */
+.gpt-chat-window {
+  position: fixed;
+  bottom: 90px;
+  right: 24px;
+  width: 400px;
+  height: 500px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  transform-origin: bottom right;
+  display: flex;
+  flex-direction: column;
+  z-index: 1001;
+}
+
+.gpt-chat-window.hidden {
+  opacity: 0;
+  transform: scale(0.9) translateY(20px);
+  pointer-events: none;
+}
+
+.gpt-chat-window.visible {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  pointer-events: all;
+}
+
+/* Chat Window Header */
+.gpt-chat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: linear-gradient(135deg, #1f2937 0%, #3b82f6 100%);
+  color: white;
+  border-radius: 16px 16px 0 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gpt-chat-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.gpt-minimize, .gpt-close-window {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  margin-left: 4px;
+}
+
+.gpt-minimize:hover, .gpt-close-window:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Chat Content */
+.gpt-chat-content {
+  flex: 1;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: auto;
+}
+
+.gpt-welcome-message h3 {
+  margin: 0 0 12px 0;
+  color: #1f2937;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.gpt-welcome-message p {
+  margin: 0 0 12px 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.gpt-welcome-message ul {
+  margin: 0 0 20px 0;
+  padding-left: 20px;
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.gpt-welcome-message li {
+  margin-bottom: 4px;
+}
+
+/* Quick Questions */
+.gpt-quick-questions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.gpt-quick-btn {
+  padding: 8px 12px;
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  color: #374151;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.gpt-quick-btn:hover {
+  background: #e5e7eb;
+  border-color: #3b82f6;
+}
+
+/* Launch Button */
+.gpt-launch-container {
+  margin-top: auto;
+}
+
+.gpt-main-launch-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.gpt-main-launch-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.3);
+}
+
+.gpt-note {
+  text-align: center;
+  margin: 8px 0 0 0;
+  color: #9ca3af;
+  font-size: 12px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 640px) {
+  .gpt-chat-window {
+    width: calc(100vw - 24px);
+    right: 12px;
+    left: 12px;
+    bottom: 80px;
+    height: 450px;
+  }
+  
+  .gpt-quick-questions {
+    grid-template-columns: 1fr;
+  }
+}
+
+.gpt-info-content h4 {
+  margin: 0 0 8px 0;
+  color: #1f2937;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.gpt-info-content p {
+  margin: 0 0 16px 0;
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.gpt-launch-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: #3b82f6;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.gpt-launch-button:hover {
+  background: #1d4ed8;
+  transform: translateX(2px);
+}
+
+.gpt-close-banner {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #9ca3af;
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.gpt-close-banner:hover {
+  background: #f3f4f6;
+  color: #1f2937;
+}
+
+/* Mobile Responsive */
+@media (max-width: 640px) {
+  #kyanostech-gpt-widget {
+    bottom: 16px;
+    right: 16px;
+  }
+  
+  .gpt-chat-button {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+  
+  .gpt-chat-label {
+    display: none;
+  }
+  
+  .gpt-info-banner {
+    width: calc(100vw - 32px);
+    right: -8px;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .gpt-info-banner {
+    background: #1f2937;
+    border: 1px solid #374151;
+  }
+  
+  .gpt-info-content h4 {
+    color: #f9fafb;
+  }
+  
+  .gpt-info-content p {
+    color: #d1d5db;
+  }
+  
+  .gpt-close-banner:hover {
+    background: #374151;
+    color: #f9fafb;
+  }
+}
+
+/* Animation */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  }
+  50% {
+    box-shadow: 0 4px 20px rgba(59, 130, 246, 0.5);
+  }
+  100% {
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  }
+}
+
+.gpt-chat-button.pulse {
+  animation: pulse 2s infinite;
+}
+</style>
+
+<script>
+// KyanosTech GPT Widget JavaScript
+(function() {
+  document.addEventListener('DOMContentLoaded', function() {
+    const chatButton = document.getElementById('gpt-chat-button');
+    const chatWindow = document.getElementById('gpt-chat-window');
+    const minimizeBtn = document.getElementById('gpt-minimize');
+    const closeBtn = document.getElementById('gpt-close-window');
+    const quickBtns = document.querySelectorAll('.gpt-quick-btn');
+    const launchButton = document.querySelector('.gpt-main-launch-button');
+    
+    if (!chatButton || !chatWindow) return;
+    
+    // Question logging function
+    function logQuestion(question, source = 'direct') {
+      const logData = {
+        question: question,
+        timestamp: new Date().toISOString(),
+        source: source,
+        page: window.location.pathname,
+        referrer: document.referrer || 'direct'
+      };
+      
+      // Log to Google Analytics if available
+      if (window.gtag) {
+        window.gtag('event', 'gpt_question', {
+          'event_category': 'engagement',
+          'event_label': question.substring(0, 100),
+          'custom_parameter_1': source
+        });
+      }
+      
+      // Log to console for development
+      console.log('GPT Question Logged:', logData);
+      
+      // Send to your analytics endpoint (you can add this)
+      // fetch('/api/log-gpt-question', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify(logData)
+      // });
+      
+      // Store in localStorage for local tracking
+      const questions = JSON.parse(localStorage.getItem('kyanostech_gpt_questions') || '[]');
+      questions.push(logData);
+      // Keep only last 50 questions
+      if (questions.length > 50) {
+        questions.splice(0, questions.length - 50);
+      }
+      localStorage.setItem('kyanostech_gpt_questions', JSON.stringify(questions));
+    }
+    
+    // Show chat window on button click
+    chatButton.addEventListener('click', function(e) {
+      e.stopPropagation();
+      chatWindow.classList.remove('hidden');
+      chatWindow.classList.add('visible');
+      
+      // Track event
+      if (window.gtag) {
+        window.gtag('event', 'gpt_widget_open', {
+          'event_category': 'engagement',
+          'event_label': 'chat_window'
+        });
+      }
+    });
+    
+    // Minimize window
+    if (minimizeBtn) {
+      minimizeBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        chatWindow.classList.add('hidden');
+        chatWindow.classList.remove('visible');
+      });
+    }
+    
+    // Close window
+    if (closeBtn) {
+      closeBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        chatWindow.classList.add('hidden');
+        chatWindow.classList.remove('visible');
+      });
+    }
+    
+    // Handle quick question buttons
+    quickBtns.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        const question = btn.getAttribute('data-question');
+        
+        // Log the question
+        logQuestion(question, 'quick_button');
+        
+        // Add question to URL for GPT
+        const gptUrl = launchButton.href + '?q=' + encodeURIComponent(question);
+        window.open(gptUrl, '_blank', 'noopener,noreferrer');
+        
+        // Close window
+        chatWindow.classList.add('hidden');
+        chatWindow.classList.remove('visible');
+      });
+    });
+    
+    // Track main launch button clicks
+    if (launchButton) {
+      launchButton.addEventListener('click', function() {
+        logQuestion('General conversation start', 'main_launch');
+        
+        if (window.gtag) {
+          window.gtag('event', 'gpt_launch', {
+            'event_category': 'engagement',
+            'event_label': 'open_assistant'
+          });
+        }
+      });
+    }
+    
+    // Close window when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!chatWindow.contains(e.target) && !chatButton.contains(e.target)) {
+        chatWindow.classList.add('hidden');
+        chatWindow.classList.remove('visible');
+      }
+    });
+    
+    // Add pulse animation after 5 seconds
+    setTimeout(function() {
+      chatButton.classList.add('pulse');
+      setTimeout(function() {
+        chatButton.classList.remove('pulse');
+      }, 6000);
+    }, 5000);
+    
+    // Expose function to log custom questions
+    window.KyanosTechGPT = {
+      logQuestion: logQuestion,
+      getQuestions: function() {
+        return JSON.parse(localStorage.getItem('kyanostech_gpt_questions') || '[]');
+      }
+    };
+  });
+})();
+</script>
