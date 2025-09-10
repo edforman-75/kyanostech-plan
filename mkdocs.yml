@@ -1,60 +1,51 @@
 site_name: KyanosTech — Impact Business Plan
-
 theme:
   name: material
   features:
-    - navigation.top
-    - navigation.sections
-    - toc.integrate
-    - content.code.copy
-  palette:
-    scheme: default
-
+  - navigation.instant
+  - navigation.sections
+  - toc.integrate
 plugins:
-  - search
-  - git-revision-date-localized:
-      enable_creation_date: false
-      type: date
-      fallback_to_build_date: true
-      locale: en
+- search
+extra_css:
+- assets/css/brand.css
+- assets/css/z-overrides.css?v=1756089447
+- assets/css/z-overrides.css
+extra_javascript:
+- assets/js/footnote-tooltips.js
+- assets/js/build-date.js?v=1756089447
+- assets/js/chatbot-markdown-fix.js
+markdown_extensions:
+- admonition
+- pymdownx.details
+- pymdownx.superfences
+- footnotes
+extra:
+  meta:
+  - name: robots
+    content: noindex,nofollow,noarchive
+  - name: build-date
+    content: '{{ git_revision_date_localized }}'
+nav:
+- Welcome: index.md
+- Executive Summary: ky-executive-summary.md
+- Problem & Urgency: ky-problem-urgency.md
+- Solution & Theory of Change: ky-solution-theory.md
+- Product Strategy & Technology: ky-products-tech.md
+- Market & Financial Opportunity: ky-market-opportunity.md
+- Business Model: ky-business-model.md
+- Go-To-Market: ky-go-to-market.md
+- Impact Measurement & Reporting: ky-impact-measurement.md
+- Risk & Mitigation: ky-risk-mitigation.md
+- Team & Governance: ky-team-governance.md
+- Potential Exit Pathways: ky-exit-pathways.md
+- 'Appendix — Appendix C: Strategic Branding Architecture - KyanosTech': ky-appendix-c-branding.md
+- 'Appendix — Appendix D: Evidence & Methods (Consolidated Footnotes)': ky-appendix-d-evidence.md
+- 'Appendix — The Progressive AI Paradox: Why Distrust Won''t Stop Political Adoption': ky-appendix-compass.md
+- Appendix — Biased chatbots reshape political views: ky-appendix-compass-legacy.md
+- 'Appendix — Appendix A: Calculation Workbook & Methodology Tables': ky-appendix-a.md
+- 'Appendix — How Chatbot Biases Are Detected: Methods and Frameworks': ky-appendix-bias-detection.md
+- 'Appendix — Conservative Chatbot Bias: The Grok Case Study': ky-appendix-grok-bias.md
 
 markdown_extensions:
   - footnotes
-  - admonition
-  - toc:
-      permalink: true
-  - attr_list
-  - pymdownx.details
-  - pymdownx.superfences
-
-extra:
-  meta:
-    - name: robots
-      content: noindex,nofollow,noarchive
-    - name: build-date
-      content: "{{ git_revision_date_localized }}"
-
-extra_css:
-  - assets/css/tooltips.css
-  - assets/css/print.css
-  - assets/css/footer.css
-
-extra_javascript:
-  - assets/js/footnote-tooltips.js
-  - assets/js/build-date.js
-
-nav:
-  - Welcome: index.md
-  - Executive Summary: ky-executive-summary.md
-  - Problem & Urgency: ky-problem-urgency.md
-  - Product Strategy & Technology: ky-products-tech.md
-  - Market & Financial Opportunity: ky-market-opportunity.md
-  - Business Model: ky-business-model.md
-  - Go-To-Market Strategy: ky-go-to-market.md
-  - Impact Measurement & Reporting: ky-impact-measurement.md
-  - Risk & Mitigation: ky-risk-mitigation.md
-  - Exit & Legacy: ky-exit-pathways.md
-  - Team & Governance: ky-team-governance.md
-  - Appendix:
-      - Appendix C — Strategic Branding: ky-appendix-c-branding.md
-      - Appendix D — Evidence & Methods: ky-appendix-d-evidence.md
