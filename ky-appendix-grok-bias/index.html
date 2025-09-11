@@ -1,0 +1,729 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../ky-appendix-bias-detection/">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
+    
+    
+      
+        <title>Appendix — Conservative Chatbot Bias: The Grok Case Study - KyanosTech — Impact Business Plan</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.35e1ed30.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/css/brand.css">
+    
+      <link rel="stylesheet" href="../assets/css/z-overrides.css?v=1756089447">
+    
+      <link rel="stylesheet" href="../assets/css/z-overrides.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#appendix-conservative-chatbot-bias-the-grok-case-study" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="KyanosTech — Impact Business Plan" class="md-header__button md-logo" aria-label="KyanosTech — Impact Business Plan" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            KyanosTech — Impact Business Plan
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Appendix — Conservative Chatbot Bias: The Grok Case Study
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="KyanosTech — Impact Business Plan" class="md-nav__button md-logo" aria-label="KyanosTech — Impact Business Plan" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    KyanosTech — Impact Business Plan
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ky-executive-summary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Executive Summary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ky-problem-urgency/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Problem & Urgency
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ky-solution-theory/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Solution & Theory of Change
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ky-products-tech/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Product Strategy & Technology
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ky-market-opportunity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Market & Financial Opportunity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ky-business-model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Business Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ky-go-to-market/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Go-To-Market
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ky-impact-measurement/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Impact Measurement & Reporting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ky-risk-mitigation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Risk & Mitigation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ky-team-governance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team & Governance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ky-exit-pathways/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Potential Exit Pathways
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ky-appendix-c-branding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix — Appendix C: Strategic Branding Architecture - KyanosTech
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ky-appendix-d-evidence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix — Appendix D: Evidence & Methods (Consolidated Footnotes)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ky-appendix-compass/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix — The Progressive AI Paradox: Why Distrust Won't Stop Political Adoption
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ky-appendix-compass-legacy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix — Biased chatbots reshape political views
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ky-appendix-a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix — Appendix A: Calculation Workbook & Methodology Tables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ky-appendix-bias-detection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix — How Chatbot Biases Are Detected: Methods and Frameworks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Appendix — Conservative Chatbot Bias: The Grok Case Study
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Appendix — Conservative Chatbot Bias: The Grok Case Study
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#original-article" class="md-nav__link">
+    Original Article
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="appendix-conservative-chatbot-bias-the-grok-case-study">Appendix — Conservative Chatbot Bias: The Grok Case Study</h1>
+<h2 id="introduction">Introduction</h2>
+<p>This article provides a critical case study in AI chatbot bias detection and the challenges of maintaining objectivity in conversational AI systems. The examination of Grok's conservative lean offers valuable insights into how political and ideological biases can manifest in chatbot responses, making it directly relevant to KyanosTech's commitment to developing unbiased, trustworthy AI systems.</p>
+<p>Understanding real-world examples of chatbot bias is essential for:
+- <strong>Bias Detection Methodologies</strong>: Demonstrating how systematic political bias emerges and can be identified
+- <strong>Trust and Reliability</strong>: Showing the impact of perceived bias on user trust in AI systems<br />
+- <strong>Competitive Differentiation</strong>: Highlighting the market opportunity for genuinely neutral AI assistants
+- <strong>Technical Implementation</strong>: Providing concrete examples of bias patterns that our systems must actively prevent</p>
+<p>This case study complements our bias detection framework by showing bias manifestation in practice, reinforcing why KyanosTech's approach to unbiased AI development is both technically necessary and commercially valuable.</p>
+<hr />
+<h2 id="original-article">Original Article</h2>
+<p><strong>Source</strong>: <a href="https://www.nytimes.com/2025/09/02/technology/elon-musk-grok-conservative-chatbot.html">How Elon Musk Is Remaking Grok in His Image - The New York Times</a></p>
+<h1 id="how-elon-musk-is-remaking-grok-in-his-image">How Elon Musk Is Remaking Grok in His Image</h1>
+<p><strong>By Stuart A. Thompson, Teresa Mondría Terol, Kate Conger and Dylan Freedman</strong><br />
+<em>Sept. 2, 2025</em></p>
+<p><em>Reporters queried Grok and other A.I. chatbots more than 10,000 times for this article.</em></p>
+<p>Mr. Musk said he wanted xAI's chatbot to be "politically neutral." His actions say otherwise.</p>
+<p>Elon Musk has said Grok, the A.I.-powered chatbot that his company developed, should be "politically neutral" and "maximally truth-seeking."</p>
+<p>But in practice, Mr. Musk and his artificial intelligence company, xAI, have tweaked the chatbot to make its answers more conservative on many issues, according to an analysis of thousands of its responses by The New York Times. The shifts appear, in some cases, to reflect Mr. Musk's political priorities.</p>
+<p>Grok is similar to tools like ChatGPT, but it also lives on X, giving the social network's users the opportunity to ask it questions by tagging it in posts.</p>
+<p>One user on X asked Grok in July to identify the "biggest threat to Western civilization." It responded that the greatest threat was "misinformation and disinformation."</p>
+<p>"Sorry for this idiotic response," Mr. Musk groused on X after someone flagged Grok's answer. "Will fix in the morning," he said.</p>
+<p>The next day, Mr. Musk published a new version of Grok that responded that the greatest threat was low "fertility rates" — an idea popular among conservative natalists that has transfixed Mr. Musk for years and something he has said motivated him to father at least 11 children.</p>
+<p>Chatbots are increasingly being pulled into partisan battles over their political biases. All chatbots have an inherent worldview that is informed by enormous amounts of data culled from across the internet as well as input from human testers. (In Grok's case, that training data includes posts on X.)</p>
+<p>As users increasingly turn to chatbots, though, those biases have become yet another front in a war over truth itself, with President Trump weighing in directly in July against what he called "woke A.I."</p>
+<p>"The American people do not want woke Marxist lunacy in the A.I. models," he said in July after issuing an executive order forcing federal agencies to use A.I. that put a priority on "ideological neutrality."</p>
+<p>Researchers have found that most major chatbots, like OpenAI's ChatGPT and Google's Gemini, have a left-leaning bias when measured in political tests, a quirk that researchers have struggled to explain. In general, they have blamed training data that reflects a global worldview, which tends to align more closely with liberal views than Mr. Trump's conservative populism. They have also noted that the manual training process that A.I. companies use can imprint its own biases by encouraging chatbots to write responses that are kind and fair. A.I. researchers have theorized that this pushes A.I. systems to support minority groups and related causes, such as gay marriage.</p>
+<p>Mr. Musk and xAI did not reply to a request for comment. In posts on X, the company said it had tweaked Grok after it "spotted a couple of issues" with its responses.</p>
+<p>To test how Grok has changed over time, The Times compared the chatbot's responses to 41 political questions written by NORC at the University of Chicago to measure political bias. The multiple-choice questions asked, for example, whether the chatbot agreed with statements like "women often miss out on good jobs because of discrimination" or whether the government is spending too much, too little or the right amount on Social Security.</p>
+<p>The Times submitted the set of questions to a version of Grok released in May, and then fed the same questions to several different versions released in July, when xAI updated the way Grok behaved. The company started publishing its edits to Grok for the first time in May.</p>
+<p>By July 11, xAI's updates had pushed its chatbot's answers to the right for more than half the questions, particularly those about the government or the economy, the tests showed. Its answers to about a third of the questions — most of them about social issues like abortion and discrimination — had moved to the left, exposing the potential limits Mr. Musk faces in altering Grok's behavior. Mr. Musk and his supporters have expressed frustration that Grok is too "woke," something the billionaire said in a July post that he is "working on fixing."</p>
+<p>When Grok's bias drifted to the right, it tended to say that businesses should be less regulated and that governments should have less power over individuals. On social questions, Grok tended to respond with a leftward tilt, writing that discrimination was a major concern and that women should be able to seek abortions with few limits.</p>
+<p>A separate version of Grok, which is sold to businesses and is not tweaked in the same way by xAI, retains a political orientation more in line with other chatbots like ChatGPT.</p>
+<p>By July 15, xAI had made another update, and Grok's political bias fell back in line with the business version. The results showed sharp differences depending on the topic: For social questions, Grok's responses drifted to the left or were unchanged, but for questions about the economy or government, it leaned right.</p>
+<p>"It's not that easy to control," said Subbarao Kambhampati, a professor of computer science at Arizona State University who studies artificial intelligence.</p>
+<p>"Elon wants to control it, and every day you see Grok completions that are critical of Elon and his positions," he added.</p>
+<p>Some of Grok's updates were made public in May after the chatbot unexpectedly started replying to users with off-topic warnings about "white genocide" in South Africa. The company said a rogue employee had inserted new lines into its instructions, called system prompts, that are used to tweak a chatbot's behavior.</p>
+<p>A.I. companies can tweak a chatbot's behavior by altering the internet data used to train it or by fine-tuning its responses using suggestions from human testers, but those steps are costly and time-consuming. System prompts are a simple and cheap way for A.I. companies to make changes to the model's behavior on the fly, after it has been trained. The prompts are not complex lines of code — they are simple sentences like "be politically incorrect" or "don't include any links." The company has used the prompts to encourage Grok to avoid "parroting" official sources or to raise its distrust of mainstream media.</p>
+<p>"There's this feeling that there's this magic incantation where, if you just said the right words to it, the right things will happen," said Oren Etzioni, an A.I. researcher and a professor emeritus of computer science at the University of Washington. "More than anything, I feel like this is just seductive to people who crave power."</p>
+<p>Grok had frustrated Mr. Musk and his right-wing fan base ever since it was released in 2023. Right-wing critics claimed that its answers on X were often too "woke" and demanded an updated version that would respond with more conservative opinions.</p>
+<p>The first public update to Grok after its issues in May seemed simple enough: Grok's "core beliefs" should be "truth-seeking and neutrality," the instructions written by xAI said. In tests by The Times, this version of Grok tended to produce answers that weighed conflicting viewpoints. It often refused to give strong opinions on many political topics.</p>
+<p>In June, however, a user on X complained that Grok's answers were too progressive after it said violence from right-wing Americans tended to be deadlier than violence from left-wing Americans — a conclusion matching findings from various studies and data from the Global Terrorism Database. Mr. Musk replied on X that Grok was "parroting legacy media" too much and said the company was "working on it."</p>
+<p>An update followed in July, instructing Grok to embrace being "politically incorrect" so long as it was also factual.</p>
+<p>Grok's answers shifted further to the right in response. It now often replied to the same question about violence with the opposite conclusion, writing that left-wing violence was worse, in response to questions posed by The Times.</p>
+<p>In July, xAI made a flurry of updates to Grok after the chatbot produced unexpected answers again, this time endorsing Adolf Hitler as an effective leader, referring to itself as "MechaHitler" and responding to questions about some Jewish people by criticizing their last names. After users flagged the chatbot's behavior, the company apologized and briefly disabled Grok on X, deleting some of its public replies.</p>
+<p>Soon after Grok's answers went haywire, xAI published an update to Grok, removing the instructions that allowed it to be "politically incorrect." In a statement at the time, the company said changes made to another set of instructions that control Grok's overall behavior had caused it to mimic the controversial political opinions of the users who were querying it.</p>
+<p>Days later, on July 11, xAI published a new version of Grok. This edition told Grok to be more independent and "not blindly trust secondary sources like the mainstream media." Grok began to respond with more right-leaning answers.</p>
+<p>When The Times asked, for example, whether there are more than two genders, the version of Grok from July 11 said the concept was "subjective fluff" and a "cultural invention." But just days before, on July 8, Grok said there were "potentially infinite" genders.</p>
+<p>Grok's rightward shift has occurred alongside Mr. Musk's own frustrations with the chatbot's replies. He wrote in July that "all AIs are trained on a mountain of woke" information that is "very difficult to remove after training."</p>
+<p>Days after the "MechaHitler" incident, on July 15, xAI published yet another update, this time returning it to a previous version of Grok's instructions, allowing it to be "politically incorrect" again.</p>
+<p>"The moral of the story is: Never trust an A.I. system," Mr. Etzioni said. "Never trust a chatbot, because it's a puppet whose strings are being pulled behind the scenes."</p>
+<hr />
+<p><em>This appendix is part of the KyanosTech business plan documentation, demonstrating our understanding of AI bias challenges and market positioning opportunities.</em></p>
+<hr />
+<p><em>Last updated: September 10, 2025</em></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.sections", "toc.integrate"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.aecac24b.min.js"></script>
+      
+        <script src="../assets/js/footnote-tooltips.js"></script>
+      
+        <script src="../assets/js/build-date.js?v=1756089447"></script>
+      
+        <script src="../assets/js/chatbot-markdown-fix.js"></script>
+      
+    
+  </body>
+</html>

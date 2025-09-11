@@ -1,0 +1,21 @@
+/* Simple tooltip styling for footnotes */
+.footnote-ref {
+  position: relative;
+  cursor: help;
+  color: #2563eb; /* Campaign energy blue */
+  text-decoration: underline dotted;
+}
+.footnote-ref:hover::after {
+  content: attr(data-footnote);
+  position: absolute;
+  left: 0;
+  bottom: 120%;
+  background: #f8fafc; /* Slate background */
+  color: #1f2937; /* Official Democratic Blue */
+  border: 1px solid #6b7280; /* Heritage Silver */
+  padding: 0.5em;
+  font-size: 0.85em;
+  max-width: 300px;
+  white-space: normal;
+  z-index: 100;
+}
