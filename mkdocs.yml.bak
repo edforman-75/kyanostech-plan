@@ -1,32 +1,23 @@
 site_name: KyanosTech — Impact Business Plan
-site_description: >
-  Confidential draft business plan for KyanosTech. Market confidential.
-site_author: Ed Forman (forman.ed@gmail.com)
-
 theme:
   name: material
   features:
-    - navigation.top
+    - navigation.instant
     - navigation.sections
     - toc.integrate
-    - content.code.copy
-  palette:
-    scheme: default
-
 plugins:
   - search
-  - git-revision-date-localized:
-      enable_creation_date: false
-      type: date
-      fallback_to_build_date: true
-      locale: en
+  - git-revision-date-localized
 
+#__NAV_REPLACED__
+extra_css:
+  - assets/css/print.css
+  - assets/css/footer.css
+extra_javascript:
+  - assets/js/footnote-tooltips.js
+  - assets/js/build-date.js
 markdown_extensions:
-  - footnotes
   - admonition
-  - toc:
-      permalink: true
-  - attr_list
   - pymdownx.details
   - pymdownx.superfences
 
@@ -34,17 +25,34 @@ extra:
   meta:
     - name: robots
       content: noindex,nofollow,noarchive
-
+    - name: build-date
+      content: "{{ git_revision_date_localized }}"
+nav:
+  - Welcome: index.md
+  - Executive Summary: ky-executive-summary.md
+  - Problem & Urgency: ky-problem-urgency.md
+  - Solution & Theory of Change: ky-solution-theory.md
+  - Product Strategy & Technology: ky-products-tech.md
+  - Market & Financial Opportunity: ky-market-opportunity.md
+  - Business Model: ky-business-model.md
+  - Go-To-Market: ky-go-to-market.md
+  - Impact Measurement & Reporting: ky-impact-measurement.md
+  - Risk & Mitigation: ky-risk-mitigation.md
+  - Team & Governance: ky-team-governance.md
+  - Potential Exit Pathways: ky-exit-pathways.md
+  - Appendix C: ky-appendix-c-branding.md
+  - Appendix D: ky-appendix-d-evidence.md
 extra_css:
-  - assets/css/tooltips.css
   - assets/css/print.css
+  - assets/css/footer.css
+extra_javascript:
+  - assets/js/footnote-tooltips.js
+  - assets/js/build-date.js
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
 
-extra_javascript:
-  - assets/js/footnote-tooltips.js
-  - assets/js/build-date.js
-extra_javascript:
-  - assets/js/footnote-tooltips.js
-  - assets/js/build-date.js
 extra:
   meta:
     - name: robots

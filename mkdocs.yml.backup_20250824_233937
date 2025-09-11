@@ -1,0 +1,45 @@
+site_name: KyanosTech — Impact Business Plan
+theme:
+  name: material
+  features:
+  - navigation.instant
+  - navigation.sections
+  - toc.integrate
+plugins:
+- search
+- git-revision-date-localized
+extra_css:
+- assets/css/brand.css
+- assets/css/z-overrides.css?v=1756089447
+- assets/css/z-overrides.css
+extra_javascript:
+- assets/js/footnote-tooltips.js
+- assets/js/build-date.js?v=1756089447
+markdown_extensions:
+- admonition
+- pymdownx.details
+- pymdownx.superfences
+- footnotes
+extra:
+  meta:
+  - name: robots
+    content: noindex,nofollow,noarchive
+  - name: build-date
+    content: '{{ git_revision_date_localized }}'
+nav:
+- Welcome: index.md
+- Executive Summary: ky-executive-summary.md
+- Problem & Urgency: ky-problem-urgency.md
+- Solution & Theory of Change: ky-solution-theory.md
+- Product Strategy & Technology: ky-products-tech.md
+- Market & Financial Opportunity: ky-market-opportunity.md
+- Business Model: ky-business-model.md
+- Go-To-Market: ky-go-to-market.md
+- Impact Measurement & Reporting: ky-impact-measurement.md
+- Risk & Mitigation: ky-risk-mitigation.md
+- Team & Governance: ky-team-governance.md
+- Potential Exit Pathways: ky-exit-pathways.md
+- Appendix C: ky-appendix-c-branding.md
+- Appendix D: ky-appendix-d-evidence.md
+- Appendix — The Progressive AI Paradox: ky-appendix-compass.md
+- Appendix — Biased chatbots reshape political views: ky-appendix-compass-legacy.md

@@ -1,0 +1,168 @@
+:root{
+  --ky-primary:#1f2937;
+  --ky-blue:#3b82f6;
+  --ky-accent:#1d4ed8;
+  --ky-agon:#2563eb;
+  --ky-polis:#059669;
+  --ky-scope:#dc2626;
+  --ky-gold:#f59e0b;
+  --ky-silver:#6b7280;
+  --ky-bg:#f8fafc;
+  --ky-cream:#fefce8;
+}
+.md-typeset a{color:var(--ky-blue)}
+.md-typeset h1,.md-typeset h2{color:var(--ky-primary)}
+.callout-critical{
+  --pad: 20px;
+  margin: 24px 0;
+  padding: var(--pad);
+  border-radius: 16px;
+  background: linear-gradient(135deg,#3b82f6 0%,#1d4ed8 50%,#1f2937 100%);
+  color: #fefce8;
+  box-shadow: 0 6px 18px rgba(0,0,0,.15);
+}
+.callout-critical h2{
+  margin-top: 0;
+  font-size: 1.3rem;
+  letter-spacing: .3px;
+}
+.callout-critical p{ margin:.2em 0 }
+.md-source-file__fact{ display:none } /* hide floating date chip */
+/* --- critical callout (brand) --- */
+.callout-critical{
+  margin: 32px 0;
+  padding: 24px 28px;
+  border-radius: 18px;
+  background: linear-gradient(135deg,#3b82f6 0%,#1d4ed8 50%,#1f2937 100%);
+  color: #fff;
+  box-shadow: 0 10px 24px rgba(0,0,0,.18);
+}
+.callout-critical h2{
+  margin: 0 0 10px 0;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  color: #fff;
+}
+.callout-critical p{
+  margin: .45rem 0;
+  font-size: 1.05rem; /* larger than body */
+}
+.callout-critical strong{ color:#fff; }
+@media (min-width: 800px){
+  /* visually wider inside content */
+  .md-content .callout-critical{ margin-left: -24px; margin-right: -24px; }
+}
+.callout-critical{
+  margin:32px 0; padding:24px 28px; border-radius:18px;
+  background:linear-gradient(135deg,#3b82f6 0%,#1d4ed8 50%,#1f2937 100%);
+  color:#fff; box-shadow:0 10px 24px rgba(0,0,0,.18)
+}
+.callout-critical h2{margin:0 0 10px 0; font-size:1.5rem; line-height:1.2; color:#fff}
+.callout-critical p{margin:.45rem 0; font-size:1.05rem}
+.callout-critical strong{color:#fff}
+@media (min-width:800px){
+  .md-content .callout-critical{margin-left:-24px; margin-right:-24px}
+}
+.admonition.callout-critical{
+  margin:28px 0; padding:0; border:none; border-radius:18px;
+  background:linear-gradient(135deg,#3b82f6 0%,#1d4ed8 50%,#1f2937 100%);
+  color:#fff; box-shadow:0 10px 24px rgba(0,0,0,.18)
+}
+.admonition.callout-critical > .admonition-title{
+  background:transparent; color:#fff; font-weight:700; font-size:1.05rem;
+  border-bottom:1px solid rgba(255,255,255,.25); padding:14px 18px; margin:0
+}
+.admonition.callout-critical > .admonition-content{
+  padding:16px 18px; font-size:1.05rem
+}
+.admonition.callout-critical strong{color:#fff}
+.admonition.danger{
+  margin:28px 0; padding:0; border:none; border-radius:18px;
+  background:linear-gradient(135deg,#3b82f6 0%,#1d4ed8 50%,#1f2937 100%);
+  color:#fff; box-shadow:0 10px 24px rgba(0,0,0,.18);
+}
+.admonition.danger > .admonition-title{
+  background:transparent; color:#fff; font-weight:800; font-size:1.1rem;
+  border-bottom:1px solid rgba(255,255,255,.25); padding:14px 18px; margin:0;
+}
+.admonition.danger > .admonition-content{
+  padding:16px 18px; font-size:1.06rem; line-height:1.5;
+}
+.admonition.danger strong{ color:#fff; }
+.admonition.danger{
+  margin:24px 32px;
+  padding:0;
+  border:none;
+  border-left:10px solid #dc2626;
+  border-radius:16px;
+  background:#fff1f2;
+  box-shadow:0 10px 22px rgba(0,0,0,.08);
+}
+.admonition.danger > .admonition-title{
+  background:transparent;
+  color:#b91c1c;
+  font-weight:800;
+  font-size:1.20rem;
+  padding:14px 18px;
+  margin:0;
+  border-bottom:1px solid rgba(0,0,0,.05);
+}
+.admonition.danger > .admonition-content{
+  padding:18px 22px;
+  font-size:1.10rem;
+  line-height:1.55;
+}
+.admonition.danger strong{ color:#b91c1c; }
+.md-footer-meta{ display:none !important; }
+aside.md-source-file{ display:none !important; }
+body{ padding-bottom:64px; }
+.md-footer::after{
+  content:"Confidential — KyanosTech | Last updated: " attr(data-build-date);
+  position:fixed; left:0; right:0; bottom:0;
+  padding:12px 16px; text-align:center; color:#fff;
+  font-weight:600; font-size:0.98rem;
+  background:linear-gradient(135deg,#3b82f6 0%, #1d4ed8 55%, #1f2937 100%);
+  border-top:3px solid #1f2937; z-index:9999;
+}
+/* === Two Scares, One Choice — Bold Red Alert === */
+.admonition.danger{
+  margin: 32px auto;
+  margin-left: 3%;
+  margin-right: 3%;
+  max-width: 1000px;
+  padding: 28px 36px;
+  border-radius: 14px;
+  background: linear-gradient(135deg,#dc2626 0%,#ef4444 100%);
+  color:#fff;
+  font-size:1.2rem;
+  font-weight:700;
+  line-height:1.6;
+  box-shadow:0 8px 24px rgba(0,0,0,.25);
+  border:0;
+}
+.admonition.danger .admonition-title{
+  color:#fff;
+  background:transparent;
+  font-size:1.45rem;
+  font-weight:800;
+  margin:0 0 12px 0;
+  padding:0 0 8px 0;
+  border-bottom:2px solid rgba(255,255,255,.45);
+}
+.admonition.danger .admonition-icon{
+  color:#fff;
+}
+.admonition.danger .admonition-content{
+  font-size:1.125rem;
+  font-weight:700;
+}
+.admonition.danger strong{
+  color:#fff;
+}
+/* === Two Scares Box: hide the icon === */
+.admonition.danger .admonition-icon {
+  display: none !important;
+}
+.admonition.danger > .admonition-title::before {
+  content: none !important;
+}

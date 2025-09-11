@@ -1,27 +1,27 @@
 # Product Strategy & Technology
 <!-- cross-ref: Product_Strategy_Tech -->
 
-KyanosTech’ product strategy is anchored in **three core products** — **AGON, POLIS, and SCOPE** — and in the development of an **open schema specification**<sup class="fn-ref"><a href="#fn-prod-open-schema">[1]</a></sup> for political information. Together, these products form a closed-loop system: campaigns and committees publish structured, authoritative data; outputs are continuously monitored; and insights feed back into content creation and optimization. This cycle ensures Democratic visibility in AI-mediated information discovery.
+KyanosTech’ product strategy is anchored in **three core products** — **AGON, POLIS, and SCOPE** — and in the development of an **open schema specification**[^] for political information. Together, these products form a closed-loop system: campaigns and committees publish structured, authoritative data; outputs are continuously monitored; and insights feed back into content creation and optimization. This cycle ensures Democratic visibility in AI-mediated information discovery.
 
 ---
 
 ## Guiding Principles
 
 - **Validation First:** Before full-scale development, KyanosTech will validate assumptions through extensive campaign and partner interviews, technology deep dives, and lean pilots. To the extent our understanding of customer and channel needs shifts — or the opportunities the technology supports expand — our **roadmap and business plan will evolve**.  
-- **Continuous Learning:** SCOPE data closes the loop by monitoring what works across campaigns, documenting best practices, and feeding them back into AGON and POLIS. Over time, this establishes a durable **learning system** that compounds competitive advantage<sup class="fn-ref"><a href="#fn-prod-learning-system">[2]</a></sup>.  
-- **Compliance & Trust:** POLIS meets the requirements of official .gov sites and Congressional CMS platforms.<sup class="fn-ref"><a href="#fn-prod-gov-cms">[3]</a></sup> Strict separation between B-Corp and 501(c) arms will be validated by outside counsel to protect against election law violations.<sup class="fn-ref"><a href="#fn-prod-legal-separation">[4]</a></sup>
+- **Continuous Learning:** SCOPE data closes the loop by monitoring what works across campaigns, documenting best practices, and feeding them back into AGON and POLIS. Over time, this establishes a durable **learning system** that compounds competitive advantage[^].  
+- **Compliance & Trust:** POLIS meets the requirements of official .gov sites and Congressional CMS platforms.[^] Strict separation between B-Corp and 501(c) arms will be validated by outside counsel to protect against election law violations.[^]
 
 ---
 
 ## Product Overviews
 
-### AGON — Authoring for Campaigns<sup class="fn-ref"><a href="#fn-prod-agon-demand">[5]</a></sup>
+### AGON — Authoring for Campaigns[^]
 **For:** Federal campaigns, state gubernatorial campaigns, and party committees.  
 **Users:** Digital directors, comms staff, consultants.  
 **What It Does:**  
 - Conversational AI authoring with embedded schema.  
 - Alignment of visible narrative text with machine-readable structured data.  
-- Integration with WordPress, NGP VAN, NationBuilder, Run!, and other Democratic-aligned CMS platforms.  
+- Integration with WordPress NationBuilder and other Democratic-aligned CMS platforms.  
 - Grammar and spell checking, plus style alignment to reflect the candidate’s voice.  
 **Why It Matters:** Ensures campaign websites train AI assistants with fact-based Democratic content, streamlines production of new content, and highlights inconsistencies for comms staff productivity.
 

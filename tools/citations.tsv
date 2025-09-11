@@ -1,0 +1,18 @@
+# id<TAB>final citation text
+sol-2028-competition-outcome	AI assistants and Overviews are projected to overtake traditional link-based search as the main discovery path by 2028–2030. (Source: TTMS forecast / industry analyst consensus)
+sol-prob-2028	AI Overviews appear in ≈13% of U.S. desktop searches and ≈18% globally as of 2025—indicating rapid adoption. (Sources: Semrush 2025, DemandSage 2025)
+
+# Add your page-specific entries below (one per line):
+# pu-brookings-podcasts-2023	Brookings Institution (2023), [report title/URL] — summary of finding.
+# pu-harvard-berkman-2020	Harvard Berkman Center (2020), [report title/URL] — summary of finding.
+# pu-politico-podcasts-2022	Politico (2022), [piece title/URL] — summary of finding.
+# pu-search-engine-land-reported-that-272-272	Search Engine Land (Mar 2025) — U.S. zero-click ≈27.2% (↑ from 24.4% YoY).
+# pu-pew-ai-overviews-2025	Pew Research (July 2025) — ≈18% of queries produced an AI Overview; ≈60% of adults saw ≥1 in March 2025.
+# pu-semrushs-july-2025-study-reported-a-2025-	Semrush (July 2025) — AI Overview coverage ≈13.14% of queries.
+# pu-us-ai-search-60	Usage breadth vs distrust: weekly ChatGPT use and ~61% distrust; summarize your exact source here.
+# pu-mc-ai-use-2025	Morning Consult 2025 — ≈34% of Americans use AI for research.
+# fn-prod-open-schema	Open schema spec for political information; authoritative publishing loop — cite your source/design doc.
+# fn-prod-learning-system	SCOPE closes loop for learning system — internal doc or case studies.
+# fn-prod-gov-cms	.gov and Congressional CMS compliance claims — cite platform requirements or counsel memo.
+# fn-prod-legal-separation	B-Corp vs 501(c) arm separation validated by outside counsel — add counsel/source.
+# fn-prod-agon-demand	Market demand for AGON authoring — add sourcing.

@@ -1,0 +1,41 @@
+# Executive Summary
+
+[Locked content previously written]
+
+## The Four-Year Ramp (2025–2028)
+- **2025**: Quiet relationship-building and assumption validation.
+- **2026**: Early concessions, credibility pilots, and case studies with gubernatorial and House races.
+- **2027**: Expansion into Senate campaigns and officeholders/committees; recurring base revenue begins.
+- **2028**: Scaled dominance — 300+ campaigns served via PAC/consultant partnerships, visibility dashboards, and platform maturity.
+
+
+# Go-to-Market Strategy
+
+KyanosTech’ go-to-market approach is designed to maximize adoption in a cyclical campaign market, balancing early credibility with scalable growth. The model prioritizes partnerships, high-impact races, and time-bound concessions to secure beachheads in 2026 and set up rapid expansion for 2028.
+
+## Channel Strategy
+- **Direct Engagement (25%)**: Reserved for top-tier campaigns where credibility is most valuable (early Senate, House, and gubernatorial campaigns).
+- **Partnership Distribution (75%)**: Core strategy. Website developers, digital consultants, and PACs provide reach across hundreds of campaigns with far lower CAC.
+- **Limited CMS Support**: Integration with **WordPress, NGP VAN, NationBuilder, and Run!** — the dominant CMS platforms used in Democratic campaigns. This ensures efficient adoption without custom connectors for every vendor.
+
+**Responsibility:** GTM execution is led by the **Chief Commercial & Impact Officer**, responsible for PAC and union partnerships, CMS relationships (WordPress, NGP VAN, NationBuilder, Run!), and ensuring adoption translates directly into measurable Democratic impact.
+
+## Foundational Relationship-Building (2025–2026)
+- **2025 (Seed Phase)**:
+  - No deployments in this year.
+  - The Chief Commercial & Impact Officer takes direct responsibility for cultivating discreet relationships with PACs, unions, digital consultants, CMS vendors, and campaign managers.
+  - Conduct assumption-testing interviews with 30–50 stakeholders to validate demand, adoption barriers, and pricing expectations.
+  - Activities are kept deliberately below the radar — focused on listening, mapping networks, and preparing targeted entry in 2026, not public visibility.
+
+- **2026 (First Pilots)**:
+  - Leverage these early contacts to secure initial gubernatorial and competitive House campaigns.
+  - Begin PAC co-funding discussions with organizations that supported interviews in 2025.
+  - Offer deep discounts and manual services as a one-time credibility investment to secure flagship pilot accounts.
+
+## 2026 — Early Validation & Concessions
+- **Targets**: Competitive gubernatorial races (36 on the ballot; priority in battleground states), and a focused set of highly competitive or well-funded House races.
+- **Tactics**:
+  - Deep discounts and manual service support to secure credibility even where automation is incomplete.
+  - PAC and Association Partnerships: Work with labor PACs (e.g., SEIU COPE) and membership PACs (e.g., EMILY’s List) to subsidize early campaigns.
+- **Goal**: 10–15 marquee adoptions by cycle end; establish credibility, case studies, and reference customers.
+

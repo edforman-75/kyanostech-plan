@@ -1,0 +1,13 @@
+# Appendix — Footnotes & Methodology
+
+## 1. Technical note (RLHF / RLAIF / Constitutional AI)
+<a id="fn-1"></a>
+These are different methods for aligning large language models. They influence how systems rank, filter, and present answers — which directly shapes what voters see.
+
+## 2. Large Language Models (LLMs)
+<a id="fn-2"></a>
+LLMs are AI systems trained on massive text datasets to predict and generate language. They underpin most advanced chatbots (e.g., ChatGPT, Gemini, Claude).
+
+## 3. Union probability estimate used here
+<a id="fn-3"></a>
+Assumptions: AI Overview coverage grows from ~50–55% (2025) to 55–60% (2028); satisfaction rate ~60–70%; chatbot share of search events grows from ~5.6% desktop share (2025) to ~15–20% (2028). Computation: A = 0.58 × 0.65 ≈ 0.38; B = 0.18; assume 30% overlap → union ≈ 0.50 (50%). Range: 45–60%. These estimates will be refined with SCOPE pilot data in 2026–27.

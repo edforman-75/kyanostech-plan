@@ -52,7 +52,7 @@ Let A = AIO_coverage × AIO_satisfaction; B = chatbot share.
 
 We will lock this estimate down with pilot data in 2026–27 using repeated, stratified prompts and human-rated “satisfaction to click” audits.
 
-![Projected Share of Voter Queries Answered Inside AI (2023–2028)](assets/ai_query_curve.png)
+![Projected Share of Voter Queries Answered Inside AI (2023–2028)]
 
 ---
 
