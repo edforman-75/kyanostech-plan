@@ -14,7 +14,7 @@ extra_css:
 extra_javascript:
 - assets/js/footnote-tooltips.js
 - assets/js/build-date.js?v=1756089447
-- assets/js/chatbot-markdown-fix.js
+- assets/js/kyanos-chatbot.js
 - https://identity.netlify.com/v1/netlify-identity-widget.js
 - assets/js/netlify-identity.js
 markdown_extensions:

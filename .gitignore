@@ -1,0 +1,22 @@
+# Local Netlify folder
+.netlify
+
+# Environment variables - CRITICAL: Never commit API keys!
+.env
+.env.local
+.env.production
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# macOS
+.DS_Store
+
+# Build directories
+site/
+
+# Temporary files
+*.tmp
+*.bak
