@@ -12,13 +12,14 @@
         systemPrompt: `You are the KyanosTech Business Plan Assistant, an expert on the KyanosTech impact business plan. 
         
 Your knowledge includes:
-- KyanosTech is building AI-powered compliance tools for political campaigns
-- The company addresses the $800M political AI compliance market
-- Key products: CampaignGuard (real-time compliance), VoterVoice (ethical outreach), TruthTracker (fact-checking)
-- Target market: Political campaigns, PACs, advocacy groups
-- Business model: B2B SaaS with tiered pricing ($299-$2999/month)
-- Impact focus: Reducing AI bias in political communications
-- Founded as a Public Benefit Corporation with strong ethical principles
+- KyanosTech is building AI optimization and discovery tools for Democratic campaigns
+- The company addresses the $600-800M non-media digital infrastructure market for Democratic campaigns
+- Focus areas: AI discovery optimization, structured data for campaigns, digital presence maximization
+- Target market: Democratic campaigns, committees, and officeholders (259 target clients by 2028)
+- Business model: High-margin SaaS with Value-Added Reseller (VAR) distribution
+- Revenue projections: $6.4M gross revenue by 2028 with ~90% net retention after commissions
+- Impact focus: Ensuring Democratic visibility in AI-powered information ecosystem
+- Founded to address urgent AI discovery crisis for progressive organizations
 
 Guidelines:
 1. Stay focused on topics related to KyanosTech's business plan, products, and impact mission
@@ -38,14 +39,15 @@ Do not:
     // Knowledge base extracted from business plan
     const KNOWLEDGE_BASE = {
         products: {
-            campaignGuard: "Real-time AI compliance monitoring for political content",
-            voterVoice: "Ethical AI-powered voter outreach platform",
-            truthTracker: "Automated fact-checking and bias detection"
+            aiDiscovery: "AI discovery optimization tools for maximizing campaign visibility in chatbot responses",
+            structuredData: "Schema markup and structured data systems for enhanced AI understanding",
+            digitalOptimization: "Comprehensive digital presence optimization for Democratic entities"
         },
         market: {
-            size: "$800M political AI compliance market",
-            growth: "45% CAGR expected through 2028",
-            segments: ["Federal campaigns", "State campaigns", "PACs", "Advocacy groups"]
+            tam: "$600-800M total addressable market (non-media digital infrastructure)",
+            som: "$30-50M serviceable obtainable market for AI discovery tools",
+            targetClients: "259 Democratic campaigns, committees, and officeholders by 2028",
+            segments: ["Democratic campaigns", "Democratic committees", "Democratic officeholders"]
         },
         impact: {
             mission: "Reduce AI bias in political communications",
@@ -62,9 +64,9 @@ Do not:
             "How does KyanosTech measure impact?"
         ],
         products: [
-            "How does CampaignGuard ensure compliance?",
-            "What makes VoterVoice ethical?",
-            "How accurate is TruthTracker?"
+            "How does AI discovery optimization work?",
+            "What structured data systems do you provide?",
+            "How do you ensure Democratic visibility in AI?"
         ],
         business: [
             "What is the pricing model?",
@@ -563,24 +565,24 @@ What would you like to know about KyanosTech?`);
             
             // Knowledge base responses
             if (lowerMessage.includes('product')) {
-                content = `KyanosTech offers three core products:
+                content = `KyanosTech offers three core focus areas:
 
-**1. CampaignGuard** - ${KNOWLEDGE_BASE.products.campaignGuard}
-• Real-time monitoring of AI-generated content
-• Automatic compliance checks against FEC regulations
-• Risk scoring and alerts
+**1. AI Discovery Optimization** - ${KNOWLEDGE_BASE.products.aiDiscovery}
+• Maximize visibility in ChatGPT, Claude, and other AI chatbots
+• Optimize content for AI comprehension and retrieval
+• Track and improve AI search performance
 
-**2. VoterVoice** - ${KNOWLEDGE_BASE.products.voterVoice}
-• Bias-free message generation
-• Demographic-appropriate messaging
-• Transparency reports for all communications
+**2. Structured Data Systems** - ${KNOWLEDGE_BASE.products.structuredData}
+• Schema markup implementation for campaigns
+• LD-JSON optimization for political content
+• Standardized data formats for AI consumption
 
-**3. TruthTracker** - ${KNOWLEDGE_BASE.products.truthTracker}
-• Real-time fact verification
-• Source credibility analysis
-• Bias detection across political spectrum
+**3. Digital Optimization Platform** - ${KNOWLEDGE_BASE.products.digitalOptimization}
+• Complete digital presence audit and optimization
+• Multi-channel content optimization
+• Performance tracking and analytics
 
-All products integrate seamlessly and share a unified dashboard for campaign teams.`;
+All solutions work together to ensure Democratic campaigns are discoverable and properly represented in the AI-powered information ecosystem.`;
                 suggestions = FOLLOW_UP_QUESTIONS.products;
                 
             } else if (lowerMessage.includes('market') || lowerMessage.includes('opportunity')) {
