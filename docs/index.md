@@ -44,8 +44,9 @@ KyanosTech addresses the urgent need for AI discovery optimization in Democratic
 - **[Appendix A — Calculation Workbook & Methodology Tables](ky-appendix-a/)** - Financial models, market sizing, and analytical frameworks
 - **[Appendix B — How Chatbot Biases Are Detected: Methods and Frameworks](ky-appendix-bias-detection/)** - Technical methods for identifying AI bias in political content
 
-### **Strategic Context & Branding**  
+### **Strategic Context & Documentation**  
 - **[Appendix C — Strategic Branding Architecture - KyanosTech](ky-appendix-c-branding/)** - Brand positioning, messaging framework, and market differentiation
+- **[Appendix D — Evidence & Methods (Consolidated Footnotes)](ky-appendix-d-evidence/)** - Complete sources, citations, and methodology documentation
 
 ### **AI Bias Research & Case Studies**
 - **[Appendix E — Conservative Chatbot Bias: The Grok Case Study](ky-appendix-grok-bias/)** - Detailed analysis of political bias in AI systems
