@@ -20,8 +20,6 @@ theme:
 
 plugins:
   - search
-  - git-revision-date-localized:
-      type: date
 
 extra_css:
   - assets/css/brand.css
