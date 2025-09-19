@@ -588,9 +588,18 @@ Do not make up financial projections, team members, or features not in the actua
             const input = document.getElementById('kyanos-chat-input');
             const widget = document.getElementById('kyanos-chat-widget');
             
+            // Ensure initial state is correct
+            widget.style.display = 'none';
+            toggle.style.display = 'block';
+            
             toggle.addEventListener('click', () => {
-                widget.style.display = widget.style.display === 'none' ? 'flex' : 'none';
-                toggle.style.display = widget.style.display === 'none' ? 'block' : 'none';
+                if (widget.style.display === 'none' || widget.style.display === '') {
+                    widget.style.display = 'flex';
+                    toggle.style.display = 'none';
+                } else {
+                    widget.style.display = 'none';
+                    toggle.style.display = 'block';
+                }
             });
             
             close.addEventListener('click', () => {
