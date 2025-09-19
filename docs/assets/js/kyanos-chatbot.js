@@ -588,19 +588,30 @@ Do not make up financial projections, team members, or features not in the actua
             const input = document.getElementById('kyanos-chat-input');
             const widget = document.getElementById('kyanos-chat-widget');
             
+            // Remove any existing duplicate buttons
+            const existingButtons = document.querySelectorAll('#kyanos-chat-toggle');
+            if (existingButtons.length > 1) {
+                for (let i = 1; i < existingButtons.length; i++) {
+                    existingButtons[i].remove();
+                }
+            }
+            
             // Ensure initial state is correct
             widget.style.display = 'none';
             toggle.style.display = 'block';
+            toggle.style.visibility = 'visible';
             
             toggle.addEventListener('click', () => {
                 if (widget.style.display === 'none' || widget.style.display === '') {
                     widget.style.display = 'flex';
-                    toggle.style.display = 'none';
+                    toggle.style.display = 'none !important';
                     toggle.style.visibility = 'hidden';
+                    toggle.style.opacity = '0';
                 } else {
                     widget.style.display = 'none';
                     toggle.style.display = 'block';
                     toggle.style.visibility = 'visible';
+                    toggle.style.opacity = '1';
                 }
             });
             
@@ -608,6 +619,7 @@ Do not make up financial projections, team members, or features not in the actua
                 widget.style.display = 'none';
                 toggle.style.display = 'block';
                 toggle.style.visibility = 'visible';
+                toggle.style.opacity = '1';
             });
             
             send.addEventListener('click', () => this.sendMessage());
@@ -728,15 +740,25 @@ Do not make up financial projections, team members, or features not in the actua
         }
     }
 
-    // Initialize when DOM is ready
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', () => {
-            const chatUI = new EnhancedChatUI();
-            chatUI.init();
-        });
-    } else {
-        const chatUI = new EnhancedChatUI();
-        chatUI.init();
+    // Initialize when DOM is ready (only once)
+    if (!window.kyanosCharBotInitialized) {
+        window.kyanosCharBotInitialized = true;
+        
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => {
+                // Check if chatbot already exists
+                if (!document.getElementById('kyanos-chatbot-container')) {
+                    const chatUI = new EnhancedChatUI();
+                    chatUI.init();
+                }
+            });
+        } else {
+            // Check if chatbot already exists
+            if (!document.getElementById('kyanos-chatbot-container')) {
+                const chatUI = new EnhancedChatUI();
+                chatUI.init();
+            }
+        }
     }
 
 })();
