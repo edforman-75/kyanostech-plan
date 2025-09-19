@@ -1,0 +1,54 @@
+site_name: KyanosTech — Impact Business Plan
+theme:
+  name: material
+  features:
+  - navigation.instant
+  - navigation.sections
+  - toc.integrate
+plugins:
+- search
+extra_css:
+- assets/css/brand.css
+- assets/css/z-overrides.css?v=1756089447
+- assets/css/z-overrides.css
+extra_javascript:
+- assets/js/footnote-tooltips.js
+- assets/js/build-date.js?v=1756089447
+- assets/js/kyanos-chatbot.js
+- https://identity.netlify.com/v1/netlify-identity-widget.js
+- assets/js/netlify-identity.js
+markdown_extensions:
+- admonition
+- pymdownx.details
+- pymdownx.superfences
+- footnotes
+extra:
+  meta:
+  - name: robots
+    content: noindex,nofollow,noarchive
+  - name: build-date
+    content: '{{ git_revision_date_localized }}'
+nav:
+- Welcome: index.md
+- Executive Summary: ky-executive-summary.md
+- Problem & Urgency: ky-problem-urgency.md
+- Solution & Theory of Change: ky-solution-theory.md
+- Product Strategy & Technology: ky-products-tech.md
+- Market & Financial Opportunity: ky-market-opportunity.md
+- Business Model: ky-business-model.md
+- Go-To-Market: ky-go-to-market.md
+- Impact Measurement & Reporting: ky-impact-measurement.md
+- Risk & Mitigation: ky-risk-mitigation.md
+- Team & Governance: ky-team-governance.md
+- Potential Exit Pathways: ky-exit-pathways.md
+- 'White Papers':
+  - 'The Progressive AI Paradox: Why Distrust Won''t Stop Political Adoption': ky-appendix-compass.md
+  - 'Conservative Chatbot Bias: The Grok Case Study': ky-appendix-grok-bias.md
+- Changelog: ky-changelog.md
+- 'Appendix A — Calculation Workbook & Methodology Tables': ky-appendix-a.md
+- 'Appendix B — How Chatbot Biases Are Detected: Methods and Frameworks': ky-appendix-bias-detection.md
+- 'Appendix C — Strategic Branding Architecture - KyanosTech': ky-appendix-c-branding.md
+- 'Appendix D — Evidence & Methods (Consolidated Footnotes)': ky-appendix-d-evidence.md
+- 'Appendix E — Conservative Chatbot Bias: The Grok Case Study': ky-appendix-grok-bias.md
+- 'Appendix F — The Progressive AI Paradox: Why Distrust Won''t Stop Political Adoption': ky-appendix-compass.md
+- 'Appendix G — Biased chatbots reshape political views': ky-appendix-compass-legacy.md

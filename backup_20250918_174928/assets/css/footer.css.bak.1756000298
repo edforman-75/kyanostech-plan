@@ -1,0 +1,16 @@
+/* Footer line with Last updated (reads data-build-date set by build-date.js) */
+.md-footer::after{
+  content: "Confidential — KyanosTech | Last updated: " attr(data-build-date);
+  display: block;
+  padding: 6px 12px;
+  font-size: 12px;
+  color: #6b7280;
+}
+@media print{
+  .md-footer{ display:block; }
+  .md-footer::after{
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    background: transparent;
+  }
+}

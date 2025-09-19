@@ -341,7 +341,7 @@ Do not make up financial projections, team members, or features not in the actua
         createChatInterface() {
             // Enhanced chat interface with version indicator
             const chatHTML = `
-                <div id="kyanos-chatbot-container" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999;">
+                <div id="kyanos-chatbot-container" style="position: fixed; top: 100px; right: 20px; z-index: 999999;">
                     <div id="kyanos-chat-widget" style="display: none;">
                         <div class="kyanos-chat-header">
                             <div class="kyanos-chat-title">
@@ -362,7 +362,7 @@ Do not make up financial projections, team members, or features not in the actua
                             <button id="kyanos-chat-send">Send</button>
                         </div>
                     </div>
-                    <button id="kyanos-chat-toggle">💬</button>
+                    <button id="kyanos-chat-toggle">Kyanos AI Assistant</button>
                 </div>
             `;
             
@@ -551,13 +551,13 @@ Do not make up financial projections, team members, or features not in the actua
                 }
                 
                 #kyanos-chat-toggle {
-                    width: 60px;
-                    height: 60px;
-                    border-radius: 50%;
+                    padding: 10px 15px;
+                    border-radius: 20px;
                     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
                     border: none;
                     color: white;
-                    font-size: 24px;
+                    font-size: 14px;
+                    font-weight: 600;
                     cursor: pointer;
                     box-shadow: 0 4px 16px rgba(102, 126, 234, 0.3);
                     transition: transform 0.2s;
@@ -590,10 +590,12 @@ Do not make up financial projections, team members, or features not in the actua
             
             toggle.addEventListener('click', () => {
                 widget.style.display = widget.style.display === 'none' ? 'flex' : 'none';
+                toggle.style.display = widget.style.display === 'none' ? 'block' : 'none';
             });
             
             close.addEventListener('click', () => {
                 widget.style.display = 'none';
+                toggle.style.display = 'block';
             });
             
             send.addEventListener('click', () => this.sendMessage());

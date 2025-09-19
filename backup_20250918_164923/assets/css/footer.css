@@ -1,0 +1,51 @@
+/* Custom branded footer bar */
+footer.md-footer {
+  position: relative;
+  padding-bottom: 36px; /* reserve space so bar isn't clipped */
+}
+
+footer.md-footer::after {
+  content: "Confidential — KyanosTech | Last updated: " attr(data-build-date);
+  display: block;
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: white;
+  text-align: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-top: 3px solid #1f2937;
+  z-index: 1;
+}
+
+/* Hide the built‑in “Last update” block that floats on the left */
+.md-source-file { display: none !important; }
+
+/* Remove the “Made with Material for MkDocs” credit line */
+.md-footer-meta .md-copyright { display: none !important; }
+/* Hide any stray debug date nodes */
+.debug-date,
+.git-revision-date-localized-plugin-date.debug-date { display: none !important; }
+
+/* Remove "Made with Material for MkDocs" footer */
+.md-footer-meta { display: none !important; }
+
+/* Ensure our bottom bar is fully visible and not clipped */
+:root { --ky-footer-h: 44px; }
+.md-main { padding-bottom: var(--ky-footer-h); }
+footer.md-footer::after{
+  content: "Confidential — KyanosTech | Last updated: " attr(data-build-date);
+  display: block;
+  min-height: var(--ky-footer-h);
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-top: 3px solid #1f2937;
+  position: sticky;
+  bottom: 0;
+  z-index: 3;
+}
