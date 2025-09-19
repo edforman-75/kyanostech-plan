@@ -363,7 +363,7 @@ Do not make up financial projections, team members, or features not in the actua
                         </div>
                     </div>
                 </div>
-                <button id="kyanos-chat-toggle" style="position: fixed; top: 100px; right: 20px; z-index: 999999;">Kyanos AI Assistant</button>
+                <button id="kyanos-chat-toggle" style="position: fixed; top: 100px; right: 20px; z-index: 999999; display: block;">Kyanos AI Assistant</button>
             `;
             
             document.body.insertAdjacentHTML('beforeend', chatHTML);
@@ -596,15 +596,18 @@ Do not make up financial projections, team members, or features not in the actua
                 if (widget.style.display === 'none' || widget.style.display === '') {
                     widget.style.display = 'flex';
                     toggle.style.display = 'none';
+                    toggle.style.visibility = 'hidden';
                 } else {
                     widget.style.display = 'none';
                     toggle.style.display = 'block';
+                    toggle.style.visibility = 'visible';
                 }
             });
             
             close.addEventListener('click', () => {
                 widget.style.display = 'none';
                 toggle.style.display = 'block';
+                toggle.style.visibility = 'visible';
             });
             
             send.addEventListener('click', () => this.sendMessage());
