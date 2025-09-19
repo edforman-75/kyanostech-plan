@@ -362,8 +362,8 @@ Do not make up financial projections, team members, or features not in the actua
                             <button id="kyanos-chat-send">Send</button>
                         </div>
                     </div>
-                    <button id="kyanos-chat-toggle">Kyanos AI Assistant</button>
                 </div>
+                <button id="kyanos-chat-toggle" style="position: fixed; top: 100px; right: 20px; z-index: 999999;">Kyanos AI Assistant</button>
             `;
             
             document.body.insertAdjacentHTML('beforeend', chatHTML);
