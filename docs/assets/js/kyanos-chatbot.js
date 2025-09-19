@@ -346,7 +346,7 @@ Do not make up financial projections, team members, or features not in the actua
                         <div class="kyanos-chat-header">
                             <div class="kyanos-chat-title">
                                 <strong>KyanosTech AI Assistant</strong>
-                                <span class="kyanos-version">v${CHATBOT_VERSION}</span>
+                                <span class="kyanos-version">v2.0.0</span>
                             </div>
                             <button id="kyanos-chat-close">×</button>
                         </div>
