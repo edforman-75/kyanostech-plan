@@ -20,3 +20,14 @@ site/
 # Temporary files
 *.tmp
 *.bak
+
+# Test and backup directories
+ai-bias-test/
+backup_*/
+wordpress-plugin/
+*.backup-*
+check-embeddings.js
+test-*.js
+investor-qa-*.json
+investor-qa-*.md
+scripts/
