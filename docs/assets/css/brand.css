@@ -213,28 +213,139 @@ body{ padding-bottom:64px; }
   color: #374151;             /* neutral dark gray for readability */
   margin: 0.4em 0;
 }
-/* === Quieter Two Scares Box Styling === */
-.callout-critical {
-  background: #fef2f2;        /* faint pink background */
-  border-left: 3px solid #fca5a5; /* soft red border */
-  margin: 1em auto;
-  padding: 0.75em 1em;
-  border-radius: 4px;
-  max-width: 700px;
+/* === Clean HTML Callout Box Styles === */
+.callout-danger {
+  background: #fee2e2;
+  border: 1px solid #fecaca;
+  border-left: 4px solid #dc2626;
+  margin: 1.5em 0;
+  padding: 1.25em 1.5em;
+  border-radius: 8px;
 }
 
-.callout-critical h2 {
-  font-size: 0.95rem;         /* only slightly larger than body */
-  font-weight: 500;
-  color: #b91c1c;             /* muted red headline */
-  margin: 0 0 0.5em 0;
+.callout-danger .callout-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #b91c1c;
+  margin: 0 0 0.75em 0;
 }
 
-.callout-critical p,
-.callout-critical strong {
-  font-size: 0.9rem;          /* basically body size */
-  font-weight: 400;           /* normal weight */
-  line-height: 1.4;
-  color: #374151;             /* neutral dark gray */
-  margin: 0.3em 0;
+.callout-danger p {
+  color: #374151;
+  margin: 0.5em 0;
+  line-height: 1.6;
+}
+
+.callout-danger strong {
+  color: #991b1b;
+  font-weight: 600;
+}
+
+.callout-warning {
+  background: #fef3c7;
+  border: 1px solid #fde68a;
+  border-left: 4px solid #f59e0b;
+  margin: 1.5em 0;
+  padding: 1.25em 1.5em;
+  border-radius: 8px;
+}
+
+.callout-warning .callout-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #92400e;
+  margin: 0 0 0.75em 0;
+}
+
+.callout-warning p {
+  color: #374151;
+  margin: 0.5em 0;
+  line-height: 1.6;
+}
+
+.callout-warning strong {
+  color: #92400e;
+  font-weight: 600;
+}
+
+.callout-info {
+  background: #dbeafe;
+  border: 1px solid #bfdbfe;
+  border-left: 4px solid #3b82f6;
+  margin: 1.5em 0;
+  padding: 1.25em 1.5em;
+  border-radius: 8px;
+}
+
+.callout-info .callout-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1d4ed8;
+  margin: 0 0 0.75em 0;
+}
+
+.callout-info p {
+  color: #374151;
+  margin: 0.5em 0;
+  line-height: 1.6;
+}
+
+.callout-info strong {
+  color: #1d4ed8;
+  font-weight: 600;
+}
+
+.callout-success {
+  background: #d1fae5;
+  border: 1px solid #a7f3d0;
+  border-left: 4px solid #059669;
+  margin: 1.5em 0;
+  padding: 1.25em 1.5em;
+  border-radius: 8px;
+}
+
+.callout-success .callout-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #047857;
+  margin: 0 0 0.75em 0;
+}
+
+.callout-success p {
+  color: #374151;
+  margin: 0.5em 0;
+  line-height: 1.6;
+}
+
+.callout-success strong {
+  color: #047857;
+  font-weight: 600;
+}
+
+.callout-bottomline {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 50%, #1f2937 100%);
+  color: #fff;
+  margin: 2em 0;
+  padding: 1.5em 2em;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.callout-bottomline .callout-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 0.75em 0;
+}
+
+.callout-bottomline p {
+  color: #fff;
+  margin: 0.5em 0;
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+
+.callout-bottomline strong {
+  color: #fff;
+  font-weight: 700;
 }

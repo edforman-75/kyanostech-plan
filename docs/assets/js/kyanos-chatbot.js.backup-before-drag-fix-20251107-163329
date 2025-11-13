@@ -1,0 +1,524 @@
+// KyanosTech Intelligent Chatbot System v2.1.1
+// Fixed: Draggable and Resizable chatbot
+// Real AI integration with OpenAI API via Netlify Functions
+
+(function() {
+    'use strict';
+    
+    const CHATBOT_VERSION = '2.1.1';
+    const CONFIG = {
+        aiProvider: 'openai',
+        apiEndpoint: '/.netlify/functions/chat-ai',
+        maxTokens: 800,
+        temperature: 0.7,
+        model: 'gpt-4-turbo-preview',
+        
+        defaultWidth: 400,
+        defaultHeight: 550,
+        minWidth: 350,
+        minHeight: 400,
+        maxWidth: 800,
+        maxHeight: 900,
+        
+        maxHistoryLength: 10,
+        contextWindow: 5
+    };
+
+    // Conversation Manager
+    class ConversationManager {
+        constructor() {
+            this.storageKey = 'kyanos_conversation_data';
+            this.loadFromStorage();
+            
+            if (!this.sessionId) {
+                this.sessionId = this.generateSessionId();
+                this.conversationHistory = [];
+                this.saveToStorage();
+            }
+        }
+
+        generateSessionId() {
+            return 'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+        }
+
+        loadFromStorage() {
+            try {
+                const stored = localStorage.getItem(this.storageKey);
+                if (stored) {
+                    const data = JSON.parse(stored);
+                    this.sessionId = data.sessionId;
+                    this.conversationHistory = data.conversationHistory || [];
+                }
+            } catch (e) {
+                console.warn('Could not load conversation history:', e);
+            }
+        }
+
+        saveToStorage() {
+            try {
+                localStorage.setItem(this.storageKey, JSON.stringify({
+                    sessionId: this.sessionId,
+                    conversationHistory: this.conversationHistory
+                }));
+            } catch (e) {
+                console.warn('Could not save conversation history:', e);
+            }
+        }
+
+        addMessage(role, content) {
+            this.conversationHistory.push({ role, content, timestamp: Date.now() });
+            
+            if (this.conversationHistory.length > CONFIG.maxHistoryLength) {
+                this.conversationHistory = this.conversationHistory.slice(-CONFIG.maxHistoryLength);
+            }
+            
+            this.saveToStorage();
+        }
+
+        getRecentContext() {
+            return this.conversationHistory.slice(-CONFIG.contextWindow);
+        }
+
+        clearHistory() {
+            this.conversationHistory = [];
+            this.saveToStorage();
+        }
+    }
+
+    const conversationManager = new ConversationManager();
+
+    // Create UI
+    function createChatbotUI() {
+        const chatbotHTML = `
+            <style>
+                @keyframes blink {
+                    0%, 60%, 100% { opacity: 0.3; }
+                    30% { opacity: 1; }
+                }
+                
+                #chat-toggle-btn:hover {
+                    transform: scale(1.1);
+                }
+                
+                #chat-send-btn:hover {
+                    opacity: 0.9;
+                }
+                
+                #chat-send-btn:disabled {
+                    opacity: 0.5;
+                    cursor: not-allowed;
+                }
+                
+                #chat-messages::-webkit-scrollbar {
+                    width: 8px;
+                }
+                
+                #chat-messages::-webkit-scrollbar-track {
+                    background: #f1f1f1;
+                }
+                
+                #chat-messages::-webkit-scrollbar-thumb {
+                    background: #888;
+                    border-radius: 4px;
+                }
+                
+                #chat-messages::-webkit-scrollbar-thumb:hover {
+                    background: #555;
+                }
+                
+                .chat-window-resizable {
+                    overflow: hidden;
+                }
+            </style>
+            
+            <div id="kyanos-chatbot-container" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999;">
+                <button id="chat-toggle-btn" style="
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                    border: none;
+                    color: white;
+                    font-size: 28px;
+                    cursor: pointer;
+                    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: transform 0.2s;
+                ">💬</button>
+                
+                <div id="chat-window" style="display: none;">
+                    <!-- Content will be added by JavaScript -->
+                </div>
+            </div>
+        `;
+        
+        document.body.insertAdjacentHTML('beforeend', chatbotHTML);
+    }
+
+    // Initialize chat window with proper resize support
+    function initializeChatWindow() {
+        const chatWindow = document.getElementById('chat-window');
+        
+        chatWindow.style.cssText = `
+            display: none;
+            position: fixed;
+            width: ${CONFIG.defaultWidth}px;
+            height: ${CONFIG.defaultHeight}px;
+            min-width: ${CONFIG.minWidth}px;
+            min-height: ${CONFIG.minHeight}px;
+            max-width: ${CONFIG.maxWidth}px;
+            max-height: ${CONFIG.maxHeight}px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+            overflow: hidden;
+        `;
+        
+        chatWindow.innerHTML = `
+            <div id="chat-header" style="
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white;
+                padding: 16px;
+                font-weight: 600;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                cursor: move;
+                user-select: none;
+            ">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <span>🤖</span>
+                    <span>KyanosTech AI v${CHATBOT_VERSION}</span>
+                </div>
+                <div style="display: flex; gap: 8px;">
+                    <button id="chat-clear-btn" style="
+                        background: rgba(255,255,255,0.2);
+                        border: none;
+                        color: white;
+                        padding: 4px 8px;
+                        border-radius: 4px;
+                        cursor: pointer;
+                        font-size: 12px;
+                    " title="Clear conversation">🗑️</button>
+                    <button id="chat-close-btn" style="
+                        background: none;
+                        border: none;
+                        color: white;
+                        font-size: 24px;
+                        cursor: pointer;
+                        padding: 0;
+                        line-height: 1;
+                    ">×</button>
+                </div>
+            </div>
+            
+            <div style="display: flex; flex-direction: column; height: calc(100% - 56px);">
+                <div id="chat-messages" style="
+                    flex: 1;
+                    overflow-y: auto;
+                    padding: 16px;
+                    background: #f8f9fa;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 12px;
+                "></div>
+                
+                <div id="typing-indicator" style="
+                    display: none;
+                    padding: 8px 16px;
+                    background: #f8f9fa;
+                ">
+                    <div style="
+                        display: inline-block;
+                        padding: 8px 12px;
+                        background: white;
+                        border-radius: 12px;
+                        box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+                    ">
+                        <span style="animation: blink 1.4s infinite;">●</span>
+                        <span style="animation: blink 1.4s infinite 0.2s;">●</span>
+                        <span style="animation: blink 1.4s infinite 0.4s;">●</span>
+                    </div>
+                </div>
+                
+                <div style="
+                    padding: 16px;
+                    border-top: 1px solid #e0e0e0;
+                    background: white;
+                ">
+                    <div style="display: flex; gap: 8px;">
+                        <input 
+                            id="chat-input" 
+                            type="text" 
+                            placeholder="Ask about KyanosTech..."
+                            style="
+                                flex: 1;
+                                padding: 10px 12px;
+                                border: 1px solid #ddd;
+                                border-radius: 6px;
+                                font-size: 14px;
+                                outline: none;
+                            "
+                        />
+                        <button id="chat-send-btn" style="
+                            padding: 10px 20px;
+                            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                            color: white;
+                            border: none;
+                            border-radius: 6px;
+                            cursor: pointer;
+                            font-weight: 600;
+                            transition: opacity 0.2s;
+                        ">Send</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="resize-handle" style="
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 20px;
+                height: 20px;
+                cursor: nwse-resize;
+                background: linear-gradient(135deg, transparent 0%, transparent 50%, rgba(102, 126, 234, 0.5) 50%);
+            "></div>
+        `;
+    }
+
+    // Drag functionality
+    function enableDragging() {
+        const chatWindow = document.getElementById('chat-window');
+        const header = document.getElementById('chat-header');
+        let isDragging = false;
+        let currentX, currentY, initialX, initialY;
+
+        header.addEventListener('mousedown', function(e) {
+            if (e.target.tagName === 'BUTTON' || e.target.closest('button')) {
+                return;
+            }
+            
+            isDragging = true;
+            initialX = e.clientX - chatWindow.offsetLeft;
+            initialY = e.clientY - chatWindow.offsetTop;
+            header.style.cursor = 'grabbing';
+        });
+
+        document.addEventListener('mousemove', function(e) {
+            if (!isDragging) return;
+            
+            e.preventDefault();
+            currentX = e.clientX - initialX;
+            currentY = e.clientY - initialY;
+            
+            chatWindow.style.left = currentX + 'px';
+            chatWindow.style.top = currentY + 'px';
+            chatWindow.style.bottom = 'auto';
+            chatWindow.style.right = 'auto';
+        });
+
+        document.addEventListener('mouseup', function() {
+            if (isDragging) {
+                isDragging = false;
+                header.style.cursor = 'move';
+            }
+        });
+    }
+
+    // Resize functionality
+    function enableResizing() {
+        const chatWindow = document.getElementById('chat-window');
+        const resizeHandle = document.getElementById('resize-handle');
+        let isResizing = false;
+        let startX, startY, startWidth, startHeight;
+
+        resizeHandle.addEventListener('mousedown', function(e) {
+            isResizing = true;
+            startX = e.clientX;
+            startY = e.clientY;
+            startWidth = parseInt(window.getComputedStyle(chatWindow).width, 10);
+            startHeight = parseInt(window.getComputedStyle(chatWindow).height, 10);
+            e.preventDefault();
+        });
+
+        document.addEventListener('mousemove', function(e) {
+            if (!isResizing) return;
+            
+            const width = startWidth + (e.clientX - startX);
+            const height = startHeight + (e.clientY - startY);
+            
+            if (width >= CONFIG.minWidth && width <= CONFIG.maxWidth) {
+                chatWindow.style.width = width + 'px';
+            }
+            
+            if (height >= CONFIG.minHeight && height <= CONFIG.maxHeight) {
+                chatWindow.style.height = height + 'px';
+            }
+        });
+
+        document.addEventListener('mouseup', function() {
+            isResizing = false;
+        });
+    }
+
+    // Add message
+    function addMessage(content, isUser = false) {
+        const messagesContainer = document.getElementById('chat-messages');
+        
+        const messageDiv = document.createElement('div');
+        messageDiv.style.cssText = `
+            display: flex;
+            ${isUser ? 'justify-content: flex-end;' : 'justify-content: flex-start;'}
+        `;
+        
+        const bubble = document.createElement('div');
+        bubble.style.cssText = `
+            max-width: 75%;
+            padding: 10px 14px;
+            border-radius: 12px;
+            font-size: 14px;
+            line-height: 1.5;
+            word-wrap: break-word;
+            ${isUser 
+                ? 'background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;' 
+                : 'background: white; color: #333; box-shadow: 0 1px 2px rgba(0,0,0,0.1);'
+            }
+        `;
+        
+        const formattedContent = content
+            .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+            .replace(/\*(.+?)\*/g, '<em>$1</em>')
+            .replace(/\n/g, '<br>');
+        
+        bubble.innerHTML = formattedContent;
+        messageDiv.appendChild(bubble);
+        messagesContainer.appendChild(messageDiv);
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    }
+
+    // Typing indicator
+    function setTyping(isTyping) {
+        const indicator = document.getElementById('typing-indicator');
+        const sendBtn = document.getElementById('chat-send-btn');
+        const input = document.getElementById('chat-input');
+        
+        indicator.style.display = isTyping ? 'block' : 'none';
+        sendBtn.disabled = isTyping;
+        input.disabled = isTyping;
+        
+        if (isTyping) {
+            const messagesContainer = document.getElementById('chat-messages');
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+    }
+
+    // Send message
+    async function sendMessage(message) {
+        try {
+            setTyping(true);
+            conversationManager.addMessage('user', message);
+            
+            const response = await fetch(CONFIG.apiEndpoint, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    message: message,
+                    conversationHistory: conversationManager.getRecentContext()
+                })
+            });
+
+            if (!response.ok) {
+                throw new Error(`API error: ${response.status}`);
+            }
+
+            const data = await response.json();
+            const aiResponse = data.response || data.fallback || 'Sorry, I received an empty response.';
+            
+            conversationManager.addMessage('assistant', aiResponse);
+            addMessage(aiResponse, false);
+
+        } catch (error) {
+            console.error('Chat error:', error);
+            addMessage('I apologize, but I\'m having trouble connecting right now. Please try again in a moment.', false);
+        } finally {
+            setTyping(false);
+        }
+    }
+
+    // Handle send
+    function handleSend() {
+        const input = document.getElementById('chat-input');
+        const message = input.value.trim();
+        
+        if (message && !input.disabled) {
+            addMessage(message, true);
+            input.value = '';
+            sendMessage(message);
+        }
+    }
+
+    // Initialize
+    function init() {
+        createChatbotUI();
+        initializeChatWindow();
+        enableDragging();
+        enableResizing();
+        
+        const toggleBtn = document.getElementById('chat-toggle-btn');
+        const chatWindow = document.getElementById('chat-window');
+        const closeBtn = document.getElementById('chat-close-btn');
+        const clearBtn = document.getElementById('chat-clear-btn');
+        const sendBtn = document.getElementById('chat-send-btn');
+        const input = document.getElementById('chat-input');
+        
+        let isOpen = false;
+
+        toggleBtn.addEventListener('click', () => {
+            isOpen = !isOpen;
+            chatWindow.style.display = isOpen ? 'block' : 'none';
+            
+            if (isOpen) {
+                const rect = toggleBtn.getBoundingClientRect();
+                chatWindow.style.bottom = (window.innerHeight - rect.top + 10) + 'px';
+                chatWindow.style.right = (window.innerWidth - rect.right) + 'px';
+                
+                const messages = document.getElementById('chat-messages');
+                if (messages.children.length === 0) {
+                    addMessage("Hello! I'm the KyanosTech AI Assistant. I can help you understand our business plan, technology strategy, and mission. What would you like to know?", false);
+                }
+                
+                input.focus();
+            }
+        });
+
+        closeBtn.addEventListener('click', () => {
+            isOpen = false;
+            chatWindow.style.display = 'none';
+        });
+
+        clearBtn.addEventListener('click', () => {
+            if (confirm('Clear conversation history?')) {
+                conversationManager.clearHistory();
+                document.getElementById('chat-messages').innerHTML = '';
+                addMessage("Conversation cleared. How can I help you?", false);
+            }
+        });
+
+        sendBtn.addEventListener('click', handleSend);
+
+        input.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                handleSend();
+            }
+        });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+})();

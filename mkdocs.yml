@@ -1,36 +1,28 @@
-site_name: KyanosTech Impact Business Plan
-site_description: AI discovery optimization for Democratic campaigns
-site_url: https://kyanostech-plan-edf.netlify.app/
+site_name: KyanosTech Business Plan
+site_description: AI Discovery Optimization for Democratic Campaigns
+site_author: KyanosTech Team
+copyright: Copyright &copy; 2025 KyanosTech
 
 theme:
   name: material
   palette:
-    - scheme: default
-      primary: indigo
-      accent: indigo
+    scheme: default
+    primary: indigo
+    accent: amber
   features:
     - navigation.tabs
     - navigation.sections
     - navigation.expand
     - navigation.top
+    - search.suggest
     - search.highlight
-    - search.share
-  logo: assets/images/favicon.png
-  favicon: assets/images/favicon.png
-
-plugins:
-  - search
+    - content.code.copy
 
 extra_css:
-  - assets/css/brand.css
-  - assets/css/tooltips.css
-  - assets/css/footer.css
-  - assets/css/print.css
-  - assets/css/z-overrides.css
+  - assets/css/extra.css
 
 extra_javascript:
   - assets/js/kyanos-chatbot.js
-  - assets/js/footnote-tooltips.js
 
 nav:
 - Welcome: index.md
@@ -45,7 +37,9 @@ nav:
 - Risk & Mitigation: ky-risk-mitigation.md
 - Team & Governance: ky-team-governance.md
 - Potential Exit Pathways: ky-exit-pathways.md
+- Investment Requirements: ky-investment-requirements.md
 - 'White Papers':
+  - 'The AI Information War: Why Progressive Infrastructure Must Come First': ky-white-paper-ai-information-war.md
   - 'The Progressive AI Paradox: Why Distrust Won''t Stop Political Adoption': ky-appendix-compass.md
   - 'Conservative Chatbot Bias: The Grok Case Study': ky-appendix-grok-bias.md
 - Changelog: ky-changelog.md
@@ -59,3 +53,6 @@ nav:
 
 markdown_extensions:
   - footnotes
+
+plugins:
+  - search

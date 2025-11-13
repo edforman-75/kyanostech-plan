@@ -1,764 +1,607 @@
-// KyanosTech Intelligent Chatbot System v2.0.0
-// NEW: Real AI integration with OpenAI/Claude API
-// Enhanced: Dynamic responses, conversation context, better understanding
+// KyanosTech Intelligent Chatbot System v2.5.0
+// Fixed: Scrolling and continuous conversation
 
 (function() {
     'use strict';
     
-    // Version and configuration
-    const CHATBOT_VERSION = '2.0.0';
+    const CHATBOT_VERSION = '2.5.0';
     const CONFIG = {
-        // AI Configuration
-        aiProvider: 'openai', // 'openai' or 'anthropic'
-        apiEndpoint: '/.netlify/functions/chat-ai', // Netlify function endpoint
+        aiProvider: 'openai',
+        apiEndpoint: '/.netlify/functions/chat-ai',
         maxTokens: 800,
         temperature: 0.7,
         model: 'gpt-4-turbo-preview',
         
-        // Enhanced system prompt for better responses
-        systemPrompt: `You are the KyanosTech Business Plan Assistant v${CHATBOT_VERSION}, an expert AI assistant helping users understand KyanosTech's mission and business strategy.
-
-KNOWLEDGE CONTEXT:
-- KyanosTech builds AI optimization and discovery tools for Democratic campaigns
-- Market: $600-800M non-media digital infrastructure for Democratic campaigns  
-- Target: 259 Democratic campaigns, committees, and officeholders by 2028
-- Revenue goal: $6.4M gross revenue by 2028 with ~90% net retention
-- Focus: AI discovery optimization, structured data systems, digital presence maximization
-- Mission: Ensure Democratic visibility in AI-powered information ecosystem
-
-RESPONSE GUIDELINES:
-1. Be knowledgeable but conversational - like talking to a smart colleague
-2. Provide specific, actionable insights when possible
-3. Reference relevant business plan sections when appropriate
-4. Ask clarifying questions to provide better assistance
-5. Use data and numbers from the business plan when relevant
-6. Be honest about limitations - don't make up information
-7. Stay focused on KyanosTech's business plan and mission
-
-RESPONSE STYLE:
-- Professional but approachable tone
-- Use bullet points for clarity when listing items
-- Include relevant follow-up questions
-- Provide context for why information matters
-- Cite business plan sections when referencing specific data
-
-Do not make up financial projections, team members, or features not in the actual business plan.`,
-
-        // Conversation tracking
+        defaultWidth: 420,
+        defaultHeight: 600,
+        minWidth: 380,
+        minHeight: 450,
+        maxWidth: 900,
+        maxHeight: 1000,
+        
         maxHistoryLength: 10,
         contextWindow: 5
     };
-    
-    // Enhanced knowledge base with more structure
-    const ENHANCED_KNOWLEDGE_BASE = {
-        sections: {
-            'executive-summary': 'Overview of KyanosTech mission and key objectives',
-            'market-opportunity': 'Market analysis, TAM/SOM, and financial projections', 
-            'product-strategy': 'AI discovery optimization tools and technology approach',
-            'go-to-market': 'Distribution strategy and customer acquisition',
-            'business-model': 'Revenue model, pricing, and unit economics',
-            'financial-plan': 'Revenue projections, costs, and funding requirements',
-            'team-governance': 'Organizational structure and key personnel',
-            'risk-analysis': 'Market risks and mitigation strategies'
-        },
-        
-        keyMetrics: {
-            tam: '$600-800M total addressable market',
-            som: '$30-50M serviceable obtainable market', 
-            targetClients: '259 Democratic campaigns, committees, and officeholders by 2028',
-            grossRevenue2028: '$6.4M gross revenue by 2028',
-            netRetention: '~90% net revenue retention after partner commissions',
-            businessModel: 'High-margin SaaS with Value-Added Reseller (VAR) distribution'
-        },
-        
-        products: {
-            aiDiscovery: {
-                name: 'AI Discovery Optimization',
-                description: 'Tools to maximize campaign visibility in AI chatbot responses (ChatGPT, Claude, etc.)',
-                features: ['Content optimization for AI comprehension', 'AI search performance tracking', 'Chatbot response monitoring']
-            },
-            structuredData: {
-                name: 'Structured Data Systems', 
-                description: 'Schema markup and LD-JSON systems for enhanced AI understanding',
-                features: ['Schema markup implementation', 'LD-JSON optimization', 'Standardized data formats']
-            },
-            digitalOptimization: {
-                name: 'Digital Optimization Platform',
-                description: 'Comprehensive digital presence optimization for Democratic entities',
-                features: ['Multi-channel optimization', 'Performance analytics', 'Digital presence auditing']
-            }
-        }
-    };
 
-    // Conversation context and memory
     class ConversationManager {
         constructor() {
-            this.history = [];
-            this.currentContext = 'general';
-            this.userInterests = new Set();
-            this.discussedTopics = new Set();
-        }
-        
-        addMessage(message, response, intent = null) {
-            this.history.push({
-                timestamp: new Date().toISOString(),
-                userMessage: message,
-                botResponse: response,
-                intent: intent,
-                context: this.currentContext
-            });
+            this.storageKey = 'kyanos_conversation_data';
+            this.loadFromStorage();
             
-            // Keep only recent history
-            if (this.history.length > CONFIG.maxHistoryLength) {
-                this.history = this.history.slice(-CONFIG.maxHistoryLength);
-            }
-            
-            this.updateContext(message);
-            this.trackUserInterests(message);
-        }
-        
-        updateContext(message) {
-            const msg = message.toLowerCase();
-            
-            if (msg.includes('market') || msg.includes('revenue') || msg.includes('financial')) {
-                this.currentContext = 'financial';
-            } else if (msg.includes('product') || msg.includes('technology') || msg.includes('ai')) {
-                this.currentContext = 'product';
-            } else if (msg.includes('customer') || msg.includes('campaign') || msg.includes('target')) {
-                this.currentContext = 'market';
-            } else if (msg.includes('team') || msg.includes('founder') || msg.includes('governance')) {
-                this.currentContext = 'team';
-            } else if (msg.includes('risk') || msg.includes('challenge') || msg.includes('competition')) {
-                this.currentContext = 'risk';
+            if (!this.sessionId) {
+                this.sessionId = this.generateSessionId();
+                this.conversationHistory = [];
+                this.saveToStorage();
             }
         }
-        
-        trackUserInterests(message) {
-            const interests = {
-                'investor': ['funding', 'investment', 'return', 'roi', 'valuation'],
-                'customer': ['product', 'features', 'pricing', 'demo'],
-                'competitor': ['market', 'competition', 'advantage', 'differentiation'],
-                'partner': ['partnership', 'integration', 'collaboration'],
-                'technical': ['technology', 'ai', 'implementation', 'architecture']
-            };
-            
-            const msg = message.toLowerCase();
-            for (const [interest, keywords] of Object.entries(interests)) {
-                if (keywords.some(keyword => msg.includes(keyword))) {
-                    this.userInterests.add(interest);
-                }
-            }
-        }
-        
-        getRecentContext() {
-            const recentMessages = this.history.slice(-CONFIG.contextWindow);
-            return recentMessages.map(msg => 
-                `User: ${msg.userMessage}\nAssistant: ${msg.botResponse.substring(0, 200)}...`
-            ).join('\n\n');
-        }
-        
-        getSuggestedFollowUps() {
-            const context = this.currentContext;
-            const interests = Array.from(this.userInterests);
-            
-            const followUpMap = {
-                'financial': [
-                    "What are the key revenue drivers?",
-                    "How does the pricing model work?", 
-                    "What's the path to profitability?"
-                ],
-                'product': [
-                    "How does AI discovery optimization work?",
-                    "What makes your technology different?",
-                    "Can you show me a demo?"
-                ],
-                'market': [
-                    "Who are your main competitors?",
-                    "How large is the target market?",
-                    "What's your go-to-market strategy?"
-                ],
-                'team': [
-                    "What's your governance structure?",
-                    "Who are the key team members?",
-                    "How do you plan to scale the team?"
-                ],
-                'risk': [
-                    "What are the biggest risks?",
-                    "How do you handle competition?",
-                    "What's your mitigation strategy?"
-                ]
-            };
-            
-            return followUpMap[context] || [
-                "Tell me about your products",
-                "What's the market opportunity?",
-                "How does your business model work?"
-            ];
-        }
-    }
 
-    // AI Integration Class
-    class AIResponseGenerator {
-        constructor() {
-            this.conversationManager = new ConversationManager();
+        generateSessionId() {
+            return 'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
         }
-        
-        async generateResponse(message) {
+
+        loadFromStorage() {
             try {
-                // Prepare context for AI
-                const context = this.prepareContext(message);
-                
-                // Call AI API
-                const response = await this.callAI(message, context);
-                
-                // Process and enhance response
-                const enhancedResponse = this.enhanceResponse(response, message);
-                
-                // Track conversation
-                this.conversationManager.addMessage(message, enhancedResponse);
-                
-                return {
-                    response: enhancedResponse,
-                    suggestions: this.conversationManager.getSuggestedFollowUps(),
-                    context: this.conversationManager.currentContext
-                };
-                
-            } catch (error) {
-                console.error('AI Response Error:', error);
-                return this.getFallbackResponse(message);
+                const stored = localStorage.getItem(this.storageKey);
+                if (stored) {
+                    const data = JSON.parse(stored);
+                    this.sessionId = data.sessionId;
+                    this.conversationHistory = data.conversationHistory || [];
+                }
+            } catch (e) {
+                console.warn('Could not load conversation history:', e);
             }
         }
-        
-        prepareContext(message) {
-            const recentContext = this.conversationManager.getRecentContext();
-            const userInterests = Array.from(this.conversationManager.userInterests);
-            
-            return {
-                conversationHistory: recentContext,
-                userInterests: userInterests,
-                businessPlanSections: ENHANCED_KNOWLEDGE_BASE.sections,
-                keyMetrics: ENHANCED_KNOWLEDGE_BASE.keyMetrics,
-                currentContext: this.conversationManager.currentContext
-            };
+
+        saveToStorage() {
+            try {
+                localStorage.setItem(this.storageKey, JSON.stringify({
+                    sessionId: this.sessionId,
+                    conversationHistory: this.conversationHistory
+                }));
+            } catch (e) {
+                console.warn('Could not save conversation history:', e);
+            }
         }
-        
-        async callAI(message, context) {
-            const payload = {
-                model: CONFIG.model,
-                messages: [
-                    {
-                        role: "system",
-                        content: CONFIG.systemPrompt + "\n\nContext: " + JSON.stringify(context, null, 2)
-                    },
-                    {
-                        role: "user", 
-                        content: message
-                    }
-                ],
-                max_tokens: CONFIG.maxTokens,
-                temperature: CONFIG.temperature
-            };
+
+        addMessage(role, content) {
+            this.conversationHistory.push({ role, content, timestamp: Date.now() });
             
-            const response = await fetch(CONFIG.apiEndpoint, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(payload)
-            });
-            
-            if (!response.ok) {
-                throw new Error(`AI API Error: ${response.status}`);
+            if (this.conversationHistory.length > CONFIG.maxHistoryLength) {
+                this.conversationHistory = this.conversationHistory.slice(-CONFIG.maxHistoryLength);
             }
             
-            const data = await response.json();
-            return data.response || data.choices?.[0]?.message?.content || 'No response generated';
+            this.saveToStorage();
         }
-        
-        enhanceResponse(response, originalMessage) {
-            // Add relevant data points if missing
-            if (originalMessage.toLowerCase().includes('market') && !response.includes('$6')) {
-                response += `\n\n*Key metric: KyanosTech projects $6.4M gross revenue by 2028 serving 259 Democratic entities.*`;
-            }
-            
-            // Add business plan section references
-            const sections = this.identifyRelevantSections(originalMessage);
-            if (sections.length > 0) {
-                response += `\n\n*This information comes from the ${sections.join(', ')} section(s) of our business plan.*`;
-            }
-            
-            return response;
+
+        getRecentContext() {
+            return this.conversationHistory.slice(-CONFIG.contextWindow);
         }
-        
-        identifyRelevantSections(message) {
-            const msg = message.toLowerCase();
-            const sections = [];
-            
-            if (msg.includes('market') || msg.includes('opportunity')) sections.push('Market Analysis');
-            if (msg.includes('product') || msg.includes('technology')) sections.push('Product Strategy');  
-            if (msg.includes('revenue') || msg.includes('financial')) sections.push('Financial Plan');
-            if (msg.includes('team') || msg.includes('governance')) sections.push('Team & Governance');
-            if (msg.includes('risk') || msg.includes('challenge')) sections.push('Risk Analysis');
-            
-            return sections;
-        }
-        
-        getFallbackResponse(message) {
-            const msg = message.toLowerCase();
-            let fallback = "I apologize, but I'm having trouble accessing my AI capabilities right now. ";
-            
-            // Provide basic fallback based on keywords
-            if (msg.includes('product')) {
-                fallback += "KyanosTech focuses on AI discovery optimization, structured data systems, and digital optimization for Democratic campaigns.";
-            } else if (msg.includes('market')) {
-                fallback += "Our target market is the $600-800M Democratic campaign digital infrastructure space, aiming for 259 clients by 2028.";
-            } else {
-                fallback += "Please try asking about our products, market opportunity, or business model.";
-            }
-            
-            return {
-                response: fallback,
-                suggestions: ["What are your products?", "Tell me about the market opportunity", "How does your business model work?"],
-                context: 'fallback'
-            };
+
+        clearHistory() {
+            this.conversationHistory = [];
+            this.saveToStorage();
         }
     }
 
-    // Enhanced UI Manager
-    class EnhancedChatUI {
-        constructor() {
-            this.aiGenerator = new AIResponseGenerator();
-            this.isProcessing = false;
-            this.messageCount = 0;
-        }
+    const conversationManager = new ConversationManager();
+    let chatState = {
+        isDragging: false,
+        isResizing: false,
+        isMinimized: false,
+        resizeDirection: null,
+        dragStartX: 0,
+        dragStartY: 0,
+        dragStartLeft: 0,
+        dragStartTop: 0,
+        resizeStartX: 0,
+        resizeStartY: 0,
+        resizeStartWidth: 0,
+        resizeStartHeight: 0,
+        resizeStartLeft: 0,
+        resizeStartTop: 0
+    };
+
+    function createChatbotUI() {
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes blink {
+                0%, 60%, 100% { opacity: 0.3; }
+                30% { opacity: 1; }
+            }
+            
+            #chat-send-btn:hover:not(:disabled) {
+                opacity: 0.9;
+            }
+            
+            #chat-send-btn:disabled {
+                opacity: 0.5;
+                cursor: not-allowed;
+            }
+            
+            #chat-messages {
+                overflow-y: auto !important;
+                overflow-x: hidden;
+            }
+            
+            #chat-messages::-webkit-scrollbar {
+                width: 8px;
+            }
+            
+            #chat-messages::-webkit-scrollbar-track {
+                background: #f1f1f1;
+            }
+            
+            #chat-messages::-webkit-scrollbar-thumb {
+                background: #888;
+                border-radius: 4px;
+            }
+            
+            #chat-messages::-webkit-scrollbar-thumb:hover {
+                background: #555;
+            }
+            
+            .resize-handle {
+                position: absolute;
+                z-index: 10;
+                background: transparent;
+            }
+            
+            .resize-handle:hover {
+                background: rgba(102, 126, 234, 0.2) !important;
+            }
+            
+            .resize-nw { top: 0; left: 0; width: 16px; height: 16px; cursor: nwse-resize; }
+            .resize-ne { top: 0; right: 0; width: 16px; height: 16px; cursor: nesw-resize; }
+            .resize-sw { bottom: 0; left: 0; width: 16px; height: 16px; cursor: nesw-resize; }
+            .resize-se { bottom: 0; right: 0; width: 16px; height: 16px; cursor: nwse-resize; }
+            .resize-n { top: 0; left: 16px; right: 16px; height: 8px; cursor: ns-resize; }
+            .resize-s { bottom: 0; left: 16px; right: 16px; height: 8px; cursor: ns-resize; }
+            .resize-e { right: 0; top: 16px; bottom: 16px; width: 8px; cursor: ew-resize; }
+            .resize-w { left: 0; top: 16px; bottom: 16px; width: 8px; cursor: ew-resize; }
+            
+            .chat-minimized .resize-handle {
+                display: none;
+            }
+            
+            .chat-minimized #chat-body {
+                display: none !important;
+            }
+            
+            #chat-header-minimize {
+                cursor: pointer;
+                user-select: none;
+            }
+        `;
+        document.head.appendChild(style);
         
-        init() {
-            this.createChatInterface();
-            this.attachEventListeners();
-            this.showWelcomeMessage();
-        }
-        
-        createChatInterface() {
-            // Enhanced chat interface with version indicator
-            const chatHTML = `
-                <div id="kyanos-chatbot-container" style="position: fixed; top: 100px; right: 20px; z-index: 999999;">
-                    <div id="kyanos-chat-widget" style="display: none;">
-                        <div class="kyanos-chat-header">
-                            <div class="kyanos-chat-title">
-                                <strong>KyanosTech AI Assistant</strong>
-                                <span class="kyanos-version">v2.0.0</span>
-                            </div>
-                            <button id="kyanos-chat-close">×</button>
+        const chatbotHTML = `
+            <div id="kyanos-chatbot-container" style="
+                position: fixed;
+                width: ${CONFIG.defaultWidth}px;
+                height: ${CONFIG.defaultHeight}px;
+                top: 80px;
+                right: 40px;
+                z-index: 9999;
+            ">
+                <div id="chat-window" style="
+                    width: 100%;
+                    height: 100%;
+                    background: white;
+                    border-radius: 16px;
+                    box-shadow: 0 12px 48px rgba(0,0,0,0.25);
+                    overflow: hidden;
+                    display: flex;
+                    flex-direction: column;
+                ">
+                    <div class="resize-handle resize-nw" data-direction="nw"></div>
+                    <div class="resize-handle resize-ne" data-direction="ne"></div>
+                    <div class="resize-handle resize-sw" data-direction="sw"></div>
+                    <div class="resize-handle resize-se" data-direction="se"></div>
+                    <div class="resize-handle resize-n" data-direction="n"></div>
+                    <div class="resize-handle resize-s" data-direction="s"></div>
+                    <div class="resize-handle resize-e" data-direction="e"></div>
+                    <div class="resize-handle resize-w" data-direction="w"></div>
+                    
+                    <div id="chat-header" style="
+                        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                        color: white;
+                        padding: 18px;
+                        font-weight: 600;
+                        font-size: 15px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        cursor: grab;
+                        user-select: none;
+                        flex-shrink: 0;
+                    ">
+                        <div id="chat-header-minimize" style="display: flex; align-items: center; gap: 10px; flex: 1;">
+                            <span style="font-size: 20px;">🤖</span>
+                            <span>Kyanos Plan AI Assistant</span>
                         </div>
-                        <div id="kyanos-chat-messages"></div>
-                        <div id="kyanos-typing-indicator" style="display: none;">
-                            <div class="kyanos-typing-dots">
-                                <span></span><span></span><span></span>
-                            </div>
-                            <span>AI is thinking...</span>
+                        <div style="display: flex; gap: 10px; align-items: center;">
+                            <button id="chat-clear-btn" style="
+                                background: rgba(255,255,255,0.2);
+                                border: none;
+                                color: white;
+                                padding: 6px 10px;
+                                border-radius: 6px;
+                                cursor: pointer;
+                                font-size: 13px;
+                                transition: background 0.2s;
+                            " title="Clear conversation">🗑️</button>
+                            <button id="chat-minimize-btn" style="
+                                background: rgba(255,255,255,0.2);
+                                border: none;
+                                color: white;
+                                padding: 6px 10px;
+                                border-radius: 6px;
+                                cursor: pointer;
+                                font-size: 16px;
+                                line-height: 1;
+                                transition: background 0.2s;
+                            " title="Minimize">−</button>
                         </div>
-                        <div class="kyanos-chat-input-container">
-                            <input type="text" id="kyanos-chat-input" placeholder="Ask about KyanosTech..." />
-                            <button id="kyanos-chat-send">Send</button>
+                    </div>
+                    
+                    <div id="chat-body" style="
+                        display: flex;
+                        flex-direction: column;
+                        flex: 1;
+                        min-height: 0;
+                        overflow: hidden;
+                    ">
+                        <div id="chat-messages" style="
+                            flex: 1;
+                            overflow-y: auto;
+                            overflow-x: hidden;
+                            padding: 18px;
+                            background: #f8f9fa;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 14px;
+                        "></div>
+                        
+                        <div id="typing-indicator" style="
+                            display: none;
+                            padding: 10px 18px;
+                            background: #f8f9fa;
+                            flex-shrink: 0;
+                        ">
+                            <div style="
+                                display: inline-block;
+                                padding: 10px 14px;
+                                background: white;
+                                border-radius: 14px;
+                                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                            ">
+                                <span style="animation: blink 1.4s infinite; font-size: 16px;">●</span>
+                                <span style="animation: blink 1.4s infinite 0.2s; font-size: 16px;">●</span>
+                                <span style="animation: blink 1.4s infinite 0.4s; font-size: 16px;">●</span>
+                            </div>
+                        </div>
+                        
+                        <div style="
+                            padding: 18px;
+                            border-top: 1px solid #e0e0e0;
+                            background: white;
+                            flex-shrink: 0;
+                        ">
+                            <div style="display: flex; gap: 10px;">
+                                <input 
+                                    id="chat-input" 
+                                    type="text" 
+                                    placeholder="Ask about the business plan..."
+                                    style="
+                                        flex: 1;
+                                        padding: 12px 14px;
+                                        border: 2px solid #ddd;
+                                        border-radius: 8px;
+                                        font-size: 14px;
+                                        outline: none;
+                                        transition: border-color 0.2s;
+                                    "
+                                />
+                                <button id="chat-send-btn" style="
+                                    padding: 12px 24px;
+                                    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                                    color: white;
+                                    border: none;
+                                    border-radius: 8px;
+                                    cursor: pointer;
+                                    font-weight: 600;
+                                    font-size: 14px;
+                                    transition: opacity 0.2s;
+                                    white-space: nowrap;
+                                ">Send</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <button id="kyanos-chat-toggle" style="position: fixed; top: 100px; right: 20px; z-index: 999999; display: block;">Kyanos AI Assistant</button>
-            `;
-            
-            document.body.insertAdjacentHTML('beforeend', chatHTML);
-            this.addEnhancedStyles();
-        }
+            </div>
+        `;
         
-        addEnhancedStyles() {
-            const styles = `
-                <style>
-                #kyanos-chatbot-container {
-                    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-                }
-                
-                #kyanos-chat-widget {
-                    width: 380px;
-                    height: 500px;
-                    background: white;
-                    border-radius: 12px;
-                    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
-                    display: flex;
-                    flex-direction: column;
-                    margin-bottom: 10px;
-                    border: 1px solid #e1e5e9;
-                }
-                
-                .kyanos-chat-header {
-                    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-                    color: white;
-                    padding: 15px;
-                    border-radius: 12px 12px 0 0;
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                }
-                
-                .kyanos-chat-title {
-                    display: flex;
-                    flex-direction: column;
-                }
-                
-                .kyanos-version {
-                    font-size: 11px;
-                    opacity: 0.8;
-                    font-weight: normal;
-                }
-                
-                #kyanos-chat-close {
-                    background: none;
-                    border: none;
-                    color: white;
-                    font-size: 20px;
-                    cursor: pointer;
-                    padding: 0;
-                    width: 24px;
-                    height: 24px;
-                }
-                
-                #kyanos-chat-messages {
-                    flex: 1;
-                    overflow-y: auto;
-                    padding: 15px;
-                    display: flex;
-                    flex-direction: column;
-                    gap: 12px;
-                }
-                
-                .kyanos-message {
-                    max-width: 85%;
-                    padding: 10px 14px;
-                    border-radius: 18px;
-                    line-height: 1.4;
-                    font-size: 14px;
-                }
-                
-                .kyanos-message.user {
-                    background: #667eea;
-                    color: white;
-                    align-self: flex-end;
-                    border-bottom-right-radius: 4px;
-                }
-                
-                .kyanos-message.bot {
-                    background: #f1f3f5;
-                    color: #333;
-                    align-self: flex-start;
-                    border-bottom-left-radius: 4px;
-                }
-                
-                .kyanos-message.bot strong {
-                    color: #667eea;
-                }
-                
-                .kyanos-suggestions {
-                    display: flex;
-                    flex-wrap: wrap;
-                    gap: 6px;
-                    margin-top: 8px;
-                }
-                
-                .kyanos-suggestion {
-                    background: #667eea15;
-                    border: 1px solid #667eea30;
-                    color: #667eea;
-                    padding: 6px 12px;
-                    border-radius: 15px;
-                    font-size: 12px;
-                    cursor: pointer;
-                    transition: all 0.2s;
-                }
-                
-                .kyanos-suggestion:hover {
-                    background: #667eea;
-                    color: white;
-                }
-                
-                #kyanos-typing-indicator {
-                    padding: 10px 15px;
-                    display: flex;
-                    align-items: center;
-                    gap: 8px;
-                    color: #666;
-                    font-size: 13px;
-                }
-                
-                .kyanos-typing-dots {
-                    display: flex;
-                    gap: 3px;
-                }
-                
-                .kyanos-typing-dots span {
-                    width: 6px;
-                    height: 6px;
-                    background: #667eea;
-                    border-radius: 50%;
-                    animation: kyanos-typing 1.4s infinite;
-                }
-                
-                .kyanos-typing-dots span:nth-child(2) { animation-delay: 0.2s; }
-                .kyanos-typing-dots span:nth-child(3) { animation-delay: 0.4s; }
-                
-                @keyframes kyanos-typing {
-                    0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
-                    30% { transform: translateY(-10px); opacity: 1; }
-                }
-                
-                .kyanos-chat-input-container {
-                    padding: 15px;
-                    border-top: 1px solid #e1e5e9;
-                    display: flex;
-                    gap: 8px;
-                }
-                
-                #kyanos-chat-input {
-                    flex: 1;
-                    padding: 10px 14px;
-                    border: 1px solid #d1d5db;
-                    border-radius: 20px;
-                    outline: none;
-                    font-size: 14px;
-                }
-                
-                #kyanos-chat-input:focus {
-                    border-color: #667eea;
-                    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
-                }
-                
-                #kyanos-chat-send {
-                    background: #667eea;
-                    color: white;
-                    border: none;
-                    padding: 10px 16px;
-                    border-radius: 20px;
-                    cursor: pointer;
-                    font-size: 14px;
-                    font-weight: 500;
-                }
-                
-                #kyanos-chat-send:hover {
-                    background: #5a6fd8;
-                }
-                
-                #kyanos-chat-send:disabled {
-                    background: #ccc;
-                    cursor: not-allowed;
-                }
-                
-                #kyanos-chat-toggle {
-                    padding: 10px 15px;
-                    border-radius: 20px;
-                    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-                    border: none;
-                    color: white;
-                    font-size: 14px;
-                    font-weight: 600;
-                    cursor: pointer;
-                    box-shadow: 0 4px 16px rgba(102, 126, 234, 0.3);
-                    transition: transform 0.2s;
-                }
-                
-                #kyanos-chat-toggle:hover {
-                    transform: scale(1.05);
-                }
-                
-                @media (max-width: 480px) {
-                    #kyanos-chat-widget {
-                        width: calc(100vw - 40px);
-                        height: calc(100vh - 120px);
-                        bottom: 80px;
-                        right: 20px;
-                    }
-                }
-                </style>
-            `;
-            
-            document.head.insertAdjacentHTML('beforeend', styles);
-        }
-        
-        attachEventListeners() {
-            const toggle = document.getElementById('kyanos-chat-toggle');
-            const close = document.getElementById('kyanos-chat-close');
-            const send = document.getElementById('kyanos-chat-send');
-            const input = document.getElementById('kyanos-chat-input');
-            const widget = document.getElementById('kyanos-chat-widget');
-            
-            // Remove any existing duplicate buttons
-            const existingButtons = document.querySelectorAll('#kyanos-chat-toggle');
-            if (existingButtons.length > 1) {
-                for (let i = 1; i < existingButtons.length; i++) {
-                    existingButtons[i].remove();
-                }
-            }
-            
-            // Ensure initial state is correct
-            widget.style.display = 'none';
-            toggle.style.display = 'block';
-            toggle.style.visibility = 'visible';
-            
-            toggle.addEventListener('click', () => {
-                if (widget.style.display === 'none' || widget.style.display === '') {
-                    widget.style.display = 'flex';
-                    toggle.style.display = 'none !important';
-                    toggle.style.visibility = 'hidden';
-                    toggle.style.opacity = '0';
-                } else {
-                    widget.style.display = 'none';
-                    toggle.style.display = 'block';
-                    toggle.style.visibility = 'visible';
-                    toggle.style.opacity = '1';
-                }
-            });
-            
-            close.addEventListener('click', () => {
-                widget.style.display = 'none';
-                toggle.style.display = 'block';
-                toggle.style.visibility = 'visible';
-                toggle.style.opacity = '1';
-            });
-            
-            send.addEventListener('click', () => this.sendMessage());
-            
-            input.addEventListener('keypress', (e) => {
-                if (e.key === 'Enter' && !e.shiftKey) {
-                    e.preventDefault();
-                    this.sendMessage();
-                }
-            });
-            
-            // Add suggestion click handlers
-            document.addEventListener('click', (e) => {
-                if (e.target.classList.contains('kyanos-suggestion')) {
-                    const suggestion = e.target.textContent;
-                    document.getElementById('kyanos-chat-input').value = suggestion;
-                    this.sendMessage();
-                }
-            });
-        }
-        
-        async sendMessage() {
-            if (this.isProcessing) return;
-            
-            const input = document.getElementById('kyanos-chat-input');
-            const message = input.value.trim();
-            
-            if (!message) return;
-            
-            this.isProcessing = true;
-            input.value = '';
-            document.getElementById('kyanos-chat-send').disabled = true;
-            
-            // Add user message
-            this.addMessage(message, 'user');
-            
-            // Show typing indicator
-            this.showTypingIndicator();
-            
-            try {
-                // Get AI response
-                const result = await this.aiGenerator.generateResponse(message);
-                
-                // Hide typing indicator
-                this.hideTypingIndicator();
-                
-                // Add bot response with suggestions
-                this.addMessage(result.response, 'bot', result.suggestions);
-                
-            } catch (error) {
-                console.error('Chat Error:', error);
-                this.hideTypingIndicator();
-                this.addMessage('I apologize, but I encountered an error. Please try again.', 'bot');
-            }
-            
-            this.isProcessing = false;
-            document.getElementById('kyanos-chat-send').disabled = false;
-            input.focus();
-        }
-        
-        addMessage(content, type, suggestions = []) {
-            const messagesContainer = document.getElementById('kyanos-chat-messages');
-            const messageDiv = document.createElement('div');
-            messageDiv.className = `kyanos-message ${type}`;
-            
-            // Convert markdown-style formatting
-            content = content
-                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-                .replace(/\*(.*?)\*/g, '<em>$1</em>')
-                .replace(/\n/g, '<br>');
-            
-            messageDiv.innerHTML = content;
-            
-            // Add suggestions for bot messages
-            if (type === 'bot' && suggestions.length > 0) {
-                const suggestionsDiv = document.createElement('div');
-                suggestionsDiv.className = 'kyanos-suggestions';
-                
-                suggestions.forEach(suggestion => {
-                    const suggestionBtn = document.createElement('button');
-                    suggestionBtn.className = 'kyanos-suggestion';
-                    suggestionBtn.textContent = suggestion;
-                    suggestionsDiv.appendChild(suggestionBtn);
-                });
-                
-                messageDiv.appendChild(suggestionsDiv);
-            }
-            
-            messagesContainer.appendChild(messageDiv);
-            messagesContainer.scrollTop = messagesContainer.scrollHeight;
-            
-            this.messageCount++;
-        }
-        
-        showTypingIndicator() {
-            document.getElementById('kyanos-typing-indicator').style.display = 'flex';
-            document.getElementById('kyanos-chat-messages').scrollTop = 
-                document.getElementById('kyanos-chat-messages').scrollHeight;
-        }
-        
-        hideTypingIndicator() {
-            document.getElementById('kyanos-typing-indicator').style.display = 'none';
-        }
-        
-        showWelcomeMessage() {
-            setTimeout(() => {
-                this.addMessage(
-                    `Hello! I'm the **KyanosTech AI Assistant v${CHATBOT_VERSION}**. I can help you understand our business plan, technology strategy, and mission to optimize Democratic campaigns for AI discovery.\n\nWhat would you like to know?`,
-                    'bot',
-                    [
-                        "What is KyanosTech?",
-                        "Tell me about your products",
-                        "What's the market opportunity?",
-                        "How does your business model work?"
-                    ]
-                );
-            }, 500);
-        }
+        document.body.insertAdjacentHTML('beforeend', chatbotHTML);
     }
 
-    // Initialize when DOM is ready (only once)
-    if (!window.kyanosCharBotInitialized) {
-        window.kyanosCharBotInitialized = true;
-        
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', () => {
-                // Check if chatbot already exists
-                if (!document.getElementById('kyanos-chatbot-container')) {
-                    const chatUI = new EnhancedChatUI();
-                    chatUI.init();
-                }
+    function setupDragging() {
+        const container = document.getElementById('kyanos-chatbot-container');
+        const header = document.getElementById('chat-header');
+
+        header.addEventListener('mousedown', function(e) {
+            if (e.target.tagName === 'BUTTON' || e.target.closest('button')) {
+                return;
+            }
+            
+            chatState.isDragging = true;
+            chatState.dragStartX = e.clientX;
+            chatState.dragStartY = e.clientY;
+            chatState.dragStartLeft = container.offsetLeft;
+            chatState.dragStartTop = container.offsetTop;
+            
+            header.style.cursor = 'grabbing';
+            e.preventDefault();
+        });
+
+        document.addEventListener('mousemove', function(e) {
+            if (!chatState.isDragging) return;
+            
+            const deltaX = e.clientX - chatState.dragStartX;
+            const deltaY = e.clientY - chatState.dragStartY;
+            
+            const newLeft = chatState.dragStartLeft + deltaX;
+            const newTop = chatState.dragStartTop + deltaY;
+            
+            container.style.left = newLeft + 'px';
+            container.style.top = newTop + 'px';
+            container.style.bottom = 'auto';
+            container.style.right = 'auto';
+        });
+
+        document.addEventListener('mouseup', function() {
+            if (chatState.isDragging) {
+                chatState.isDragging = false;
+                header.style.cursor = 'grab';
+            }
+        });
+    }
+
+    function setupResizing() {
+        const container = document.getElementById('kyanos-chatbot-container');
+        const handles = document.querySelectorAll('.resize-handle');
+
+        handles.forEach(handle => {
+            handle.addEventListener('mousedown', function(e) {
+                if (chatState.isMinimized) return;
+                
+                chatState.isResizing = true;
+                chatState.resizeDirection = this.dataset.direction;
+                chatState.resizeStartX = e.clientX;
+                chatState.resizeStartY = e.clientY;
+                chatState.resizeStartWidth = container.offsetWidth;
+                chatState.resizeStartHeight = container.offsetHeight;
+                chatState.resizeStartLeft = container.offsetLeft;
+                chatState.resizeStartTop = container.offsetTop;
+                
+                e.preventDefault();
+                e.stopPropagation();
             });
+        });
+
+        document.addEventListener('mousemove', function(e) {
+            if (!chatState.isResizing) return;
+            
+            const deltaX = e.clientX - chatState.resizeStartX;
+            const deltaY = e.clientY - chatState.resizeStartY;
+            const direction = chatState.resizeDirection;
+            
+            let newWidth = chatState.resizeStartWidth;
+            let newHeight = chatState.resizeStartHeight;
+            let newLeft = chatState.resizeStartLeft;
+            let newTop = chatState.resizeStartTop;
+            
+            if (direction.includes('e')) {
+                newWidth = chatState.resizeStartWidth + deltaX;
+            } else if (direction.includes('w')) {
+                newWidth = chatState.resizeStartWidth - deltaX;
+                newLeft = chatState.resizeStartLeft + deltaX;
+            }
+            
+            if (direction.includes('s')) {
+                newHeight = chatState.resizeStartHeight + deltaY;
+            } else if (direction.includes('n')) {
+                newHeight = chatState.resizeStartHeight - deltaY;
+                newTop = chatState.resizeStartTop + deltaY;
+            }
+            
+            if (newWidth >= CONFIG.minWidth && newWidth <= CONFIG.maxWidth) {
+                container.style.width = newWidth + 'px';
+                if (direction.includes('w')) {
+                    container.style.left = newLeft + 'px';
+                    container.style.right = 'auto';
+                }
+            }
+            
+            if (newHeight >= CONFIG.minHeight && newHeight <= CONFIG.maxHeight) {
+                container.style.height = newHeight + 'px';
+                if (direction.includes('n')) {
+                    container.style.top = newTop + 'px';
+                    container.style.bottom = 'auto';
+                }
+            }
+        });
+
+        document.addEventListener('mouseup', function() {
+            chatState.isResizing = false;
+            chatState.resizeDirection = null;
+        });
+    }
+
+    function toggleMinimize() {
+        const container = document.getElementById('kyanos-chatbot-container');
+        const chatWindow = document.getElementById('chat-window');
+        
+        chatState.isMinimized = !chatState.isMinimized;
+        
+        if (chatState.isMinimized) {
+            container.style.height = 'auto';
+            chatWindow.classList.add('chat-minimized');
         } else {
-            // Check if chatbot already exists
-            if (!document.getElementById('kyanos-chatbot-container')) {
-                const chatUI = new EnhancedChatUI();
-                chatUI.init();
-            }
+            container.style.height = CONFIG.defaultHeight + 'px';
+            chatWindow.classList.remove('chat-minimized');
         }
     }
 
+    function addMessage(content, isUser = false) {
+        const messagesContainer = document.getElementById('chat-messages');
+        
+        const messageDiv = document.createElement('div');
+        messageDiv.style.cssText = `
+            display: flex;
+            ${isUser ? 'justify-content: flex-end;' : 'justify-content: flex-start;'}
+        `;
+        
+        const bubble = document.createElement('div');
+        bubble.style.cssText = `
+            max-width: 80%;
+            padding: 12px 16px;
+            border-radius: 14px;
+            font-size: 14px;
+            line-height: 1.6;
+            word-wrap: break-word;
+            word-break: break-word;
+            ${isUser 
+                ? 'background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;' 
+                : 'background: white; color: #333; box-shadow: 0 2px 4px rgba(0,0,0,0.1);'
+            }
+        `;
+        
+        const formattedContent = content
+            .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+            .replace(/\*(.+?)\*/g, '<em>$1</em>')
+            .replace(/\n/g, '<br>');
+        
+        bubble.innerHTML = formattedContent;
+        messageDiv.appendChild(bubble);
+        messagesContainer.appendChild(messageDiv);
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    }
+
+    function setTyping(isTyping) {
+        const indicator = document.getElementById('typing-indicator');
+        const sendBtn = document.getElementById('chat-send-btn');
+        const input = document.getElementById('chat-input');
+        
+        indicator.style.display = isTyping ? 'block' : 'none';
+        sendBtn.disabled = isTyping;
+        input.disabled = isTyping;
+        
+        if (isTyping) {
+            const messagesContainer = document.getElementById('chat-messages');
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+    }
+
+    async function sendMessage(message) {
+        try {
+            setTyping(true);
+            conversationManager.addMessage('user', message);
+            
+            const response = await fetch(CONFIG.apiEndpoint, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    message: message,
+                    conversationHistory: conversationManager.getRecentContext()
+                })
+            });
+
+            if (!response.ok) {
+                throw new Error(`API error: ${response.status}`);
+            }
+
+            const data = await response.json();
+            const aiResponse = data.response || data.fallback || 'Sorry, I received an empty response.';
+            
+            conversationManager.addMessage('assistant', aiResponse);
+            addMessage(aiResponse, false);
+
+        } catch (error) {
+            console.error('Chat error:', error);
+            addMessage('I apologize, but I\'m having trouble connecting right now. Please try again in a moment.', false);
+        } finally {
+            setTyping(false);
+        }
+    }
+
+    function handleSend() {
+        const input = document.getElementById('chat-input');
+        const message = input.value.trim();
+        
+        if (message && !input.disabled) {
+            addMessage(message, true);
+            input.value = '';
+            input.focus();
+            sendMessage(message);
+        }
+    }
+
+    function init() {
+        createChatbotUI();
+        setupDragging();
+        setupResizing();
+        
+        const minimizeBtn = document.getElementById('chat-minimize-btn');
+        const headerMinimize = document.getElementById('chat-header-minimize');
+        const clearBtn = document.getElementById('chat-clear-btn');
+        const sendBtn = document.getElementById('chat-send-btn');
+        const input = document.getElementById('chat-input');
+        
+        addMessage("Hello! I'm the Kyanos Plan AI Assistant. I can help you understand our business plan, technology strategy, and mission. What would you like to know?", false);
+        
+        minimizeBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleMinimize();
+        });
+        
+        headerMinimize.addEventListener('click', () => {
+            if (chatState.isMinimized) {
+                toggleMinimize();
+            }
+        });
+
+        clearBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (confirm('Clear conversation history?')) {
+                conversationManager.clearHistory();
+                document.getElementById('chat-messages').innerHTML = '';
+                addMessage("Conversation cleared. How can I help you?", false);
+            }
+        });
+
+        sendBtn.addEventListener('click', handleSend);
+
+        input.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                handleSend();
+            }
+        });
+        
+        input.addEventListener('focus', function() {
+            this.style.borderColor = '#667eea';
+        });
+        
+        input.addEventListener('blur', function() {
+            this.style.borderColor = '#ddd';
+        });
+        
+        input.focus();
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
 })();

@@ -40,9 +40,15 @@ Outlines team composition, governance model, advisory structure, and alignment m
 [**Potential Exit Pathways**](ky-exit-pathways/): Strategic acquisition opportunities and investor return scenarios.  
 Analyzes potential acquirers, valuation frameworks, and strategic exit timing for investor and mission alignment.  
 
+[**Investment Requirements**](ky-investment-requirements/): Capital plan and funding strategy for 2025-2028 execution.  
+Details the $5.0M total investment requirement across seed, Series A, and convertible debt rounds, with use of funds and timeline.
+
 ---
 
 ## White Papers
+
+[**The AI Information War: Why Progressive Infrastructure Must Come First**](ky-white-paper-ai-information-war/): Strategic analysis of conservative AI infrastructure and the progressive response.  
+Examination of conservative AI ecosystem development, the infrastructure-first strategy, and why KyanosTech represents the essential foundation for progressive AI competitiveness.
 
 [**The Progressive AI Paradox: Why Distrust Won't Stop Political Adoption**](ky-appendix-compass/): Strategic analysis of AI adoption trends in progressive politics despite concerns.  
 Research-based analysis of progressive AI adoption patterns, trust paradoxes, and strategic implications for Democratic campaign technology decisions.  

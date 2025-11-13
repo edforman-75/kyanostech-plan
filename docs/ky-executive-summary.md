@@ -5,12 +5,15 @@ Democrats face a structural, AI‑accelerated persuasion gap. The right is alrea
 Our strategy focuses the next four years on one goal: measurable Democratic wins and better governance through targeted AI leverage. That requires a disciplined build‑out of three product lines — **AGON** (“Win the Contest”), **POLIS** (“Govern with Intelligence”), and **SCOPE** (“Measure What Matters”) — paired with a pragmatic go‑to‑market that meets campaigns where they already are.
 
 This is not hypothetical: the right already enjoys early mover advantage. AI‑generated content is flooding local news ecosystems, TikTok feeds, and micro‑targeted ad channels. **Democrats cannot afford to wait — the contest is already underway.**
-!!! danger "Two Scares, One Choice"
-    **Scare #1:** A rapid surge of AI persuasion (hyper‑local synthetics, creator networks, automated micro‑targeting) is already shaping voter attention streams.
 
-    **Scare #2:** A narrow 2026–2028 window in which persuasion tech and distribution outpace traditional organizing and media controls.
+<div class="callout-danger">
+<div class="callout-title">Two Scares, One Choice</div>
+<p><b>Scare #1:</b> A rapid surge of AI persuasion (hyper‑local synthetics, creator networks, automated micro‑targeting) is already shaping voter attention streams.</p>
 
-    **What must happen:** Democrats must urgently **fund this plan — or an equally robust alternative** — to stand up a defense and counter‑offense now. Hoping the threat subsides is not a strategy.
+<p><b>Scare #2:</b> A narrow 2026–2028 window in which persuasion tech and distribution outpace traditional organizing and media controls.</p>
+
+<p><b>What must happen:</b> Democrats must urgently <b>fund this plan — or an equally robust alternative</b> — to stand up a defense and counter‑offense now. Hoping the threat subsides is not a strategy.</p>
+</div>
 
 ## The Four‑Year Ramp (2025–2028)
 
@@ -39,8 +42,10 @@ We will demonstrate value through: (1) controlled pilots with documented lift, (
 
 Time‑bound funding to execute the 2025–2026 credibility phase and lock in distribution for 2027–2028. The alternative is to concede the initiative while the other side compounds first‑mover advantage.
 
-!!! bottomline "Bottom Line"
-    Fund the plan now.<br>
-    Build the defense and the counter-offense.<br>
-    Win the contest — and govern with intelligence and integrity.
+<div class="callout-bottomline">
+<div class="callout-title">Bottom Line</div>
+<p>Fund the plan now.<br>
+Build the defense and the counter-offense.<br>
+Win the contest — and govern with intelligence and integrity.</p>
+</div>
 

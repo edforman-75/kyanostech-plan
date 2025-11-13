@@ -11,16 +11,17 @@ Google’s **AI Overviews further compress clicks** by answer-boxing results. **
 The trend is unmistakable: voters are increasingly satisfied  with what the AI system says, never clicking through to official or campaign websites. The traditional model of persuasion through web links is eroding, while AI answer surfaces are becoming the new battleground.
 
 
-!!! note "The AI Abstention Trap"
+<div class="callout-info">
+<div class="callout-title">The AI Abstention Trap</div>
+<p><b>The Risk:</b> Data show progressives report higher concern about AI's societal harms than conservatives; this heightened suspicion may leave progressives hesitant to implement AI-optimizing features.</p>
 
-    **The Risk:** Data show progressives  report higher concern about AI’s societal harms than conservatives; this heightened suspicion may leave progressives hesitant to implement AI-optimizing features.
+<p><b>The Reality:</b> <b>800 million users</b> rely on ChatGPT weekly while <b>61% distrust AI</b>—yet usage accelerates across demographics (see Appendix).</p>
 
-    **The Reality:** **800 million users [^]   ** rely on ChatGPT weekly while **61% distrust AI**—yet usage accelerates across demographics (see Appendix).
+<p><b>The Consequence:</b> <b>34% of Americans</b> use AI for research; abstaining cedes control over how candidates are represented in AI answers.</p>
 
-    **The Consequence:** **34% of Americans [^]   ** use AI for research; abstaining cedes control over how candidates are represented in AI answers.
+<p><b>The Urgency:</b> Chatbot interactions can shift political views within a handful of exchanges; failing to engage concedes the terrain.</p>
 
-    **The Urgency:** Chatbot interactions can shift political views within a handful of exchanges; failing to engage concedes the terrain.
-
-    **Bottom line:** Ideological purity becomes tactical blindness when others shape AI-mediated reality unchallenged.
+<p><b>Bottom line:</b> Ideological purity becomes tactical blindness when others shape AI-mediated reality unchallenged.</p>
+</div>
 
 We estimate that by the November 2028 general election, **~45–60%   of voter information queries will be answered inside AI experiences (AI Overviews or chat) rather than via clicks to official or campaign sites**. Most users will never click a link , if one is even offered, and will be satisfied with what the chatbot says. The **mission of the candidate and officeholder website will be transformed**. It will be less and less a place that voters visit — and more and more the mechanism by which the chatbots are trained.
