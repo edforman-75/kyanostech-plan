@@ -28,9 +28,23 @@ exports.handler = async (event, context) => {
         body: JSON.stringify({ error: 'Request body is required' })
       };
     }
-    
-    const { message, conversationHistory } = JSON.parse(event.body);
-    
+
+    const body = JSON.parse(event.body);
+
+    // Support both v2.0.0 format (messages array) and v2.5.0 format (message + conversationHistory)
+    let message, conversationHistory;
+
+    if (body.messages && Array.isArray(body.messages)) {
+      // v2.0.0 format: { model, messages: [{ role, content }], max_tokens, temperature }
+      const userMessage = body.messages.find(m => m.role === 'user');
+      message = userMessage ? userMessage.content : null;
+      conversationHistory = [];
+    } else {
+      // v2.5.0 format: { message, conversationHistory }
+      message = body.message;
+      conversationHistory = body.conversationHistory || [];
+    }
+
     if (!message) {
       return {
         statusCode: 400,
