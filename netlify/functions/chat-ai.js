@@ -68,7 +68,7 @@ exports.handler = async (event, context) => {
     }
 
     const questionEmbedding = await getEmbedding(message, OPENAI_API_KEY);
-    const relevantChunks = findRelevantChunks(questionEmbedding, embeddings, 8);
+    const relevantChunks = findRelevantChunks(questionEmbedding, embeddings, 10);
     
     const context = relevantChunks
       .map(chunk => `[From ${chunk.title}]\n${chunk.content}`)
@@ -92,12 +92,14 @@ KyanosTech is Layer 1 (infrastructure) - it provides structured data that ALL AI
 Grok, Arya, ChatGPT, Claude are Layer 2 (persuasion) - they answer user questions.
 KyanosTech doesn't compete with Grok - it provides the data infrastructure that Grok and all other AIs need to give accurate answers about Democratic candidates.
 
-CRITICAL INSTRUCTIONS:
-1. Answer questions using ONLY the business plan context provided below
-2. If the context doesn't contain the answer, say "I don't have that specific information in the business plan"
-3. NEVER make up or infer information not in the context
-4. Be conversational, friendly, and encouraging
-5. DO NOT confuse this chatbot (me) with KyanosTech's actual products
+CRITICAL INSTRUCTIONS - READ CAREFULLY:
+1. Answer ONLY from the business plan context below - NO external knowledge
+2. If asked about persuasive chatbots, use the SPECIFIC examples from context: Grok, Arya, GIPPR, Truth Search
+3. Grok IS a chatbot - specifically a conservative chatbot owned by Elon Musk (see white paper)
+4. NEVER make up generic examples - only use what's in the context
+5. If the context doesn't have the answer, say "I don't have that information in the business plan"
+6. DO NOT confuse this chatbot (me) with KyanosTech's actual products
+7. When you see names like Grok, Arya, GIPPR in the context - USE THEM in your answer
 
 RESPONSE STYLE - KEEP IT SHORT & ENGAGING:
 - **Maximum 3-4 sentences** for most answers
@@ -147,7 +149,7 @@ CRITICAL: Only suggest follow-up questions that you can answer from the context 
         model: 'gpt-4-turbo-preview',
         messages: messages,
         max_tokens: 400,
-        temperature: 0.5
+        temperature: 0.3
       })
     });
 
@@ -227,7 +229,7 @@ function cosineSimilarity(a, b) {
   return dotProduct / (Math.sqrt(normA) * Math.sqrt(normB));
 }
 
-function findRelevantChunks(questionEmbedding, allChunks, topK = 8) {
+function findRelevantChunks(questionEmbedding, allChunks, topK = 10) {
   // Define white paper files
   const whitePaperFiles = [
     'ky-appendix-compass.md',
