@@ -47,13 +47,16 @@ Details the $5.0M total investment requirement across seed, Series A, and conver
 
 ## White Papers
 
-[**The AI Information War: Why Progressive Infrastructure Must Come First**](ky-white-paper-ai-information-war/): Strategic analysis of conservative AI infrastructure and the progressive response.  
+[**The AI Information War: Why Progressive Infrastructure Must Come First**](ky-white-paper-ai-information-war/): Strategic analysis of conservative AI infrastructure and the progressive response.
 Examination of conservative AI ecosystem development, the infrastructure-first strategy, and why KyanosTech represents the essential foundation for progressive AI competitiveness.
 
-[**The Progressive AI Paradox: Why Distrust Won't Stop Political Adoption**](ky-appendix-compass/): Strategic analysis of AI adoption trends in progressive politics despite concerns.  
-Research-based analysis of progressive AI adoption patterns, trust paradoxes, and strategic implications for Democratic campaign technology decisions.  
+[**Claude Interviews Our Founder**](ky-white-paper-founder-interview/): In-depth conversation with Ed Forman about KyanosTech's vision and strategy.
+A comprehensive Q&A exploring the origin story, market strategy, business model, team structure, and why building AI discovery infrastructure for Democratic campaigns can't wait until 2028.
 
-[**Conservative Chatbot Bias: The Grok Case Study**](ky-appendix-grok-bias/): Detailed analysis of political bias in AI systems.  
+[**The Progressive AI Paradox: Why Distrust Won't Stop Political Adoption**](ky-appendix-compass/): Strategic analysis of AI adoption trends in progressive politics despite concerns.
+Research-based analysis of progressive AI adoption patterns, trust paradoxes, and strategic implications for Democratic campaign technology decisions.
+
+[**Conservative Chatbot Bias: The Grok Case Study**](ky-appendix-grok-bias/): Detailed analysis of political bias in AI systems.
 Comprehensive examination of bias patterns in AI responses, methodology for detection, and implications for political information accuracy.  
 
 ---
