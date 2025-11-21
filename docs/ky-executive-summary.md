@@ -25,7 +25,7 @@ This is not hypothetical: the right already enjoys early mover advantage. AI‑g
 ## Go‑to‑Market (Built for Campaign Reality)
 
 - **Channel Mix:** Direct (top‑tier races) + Partnerships (majority of volume via website developers, digital consultants, PACs).  
-- **Where campaigns already live:** Targeted support for WordPress, NGP VAN, NationBuilder, and Run! to remove integration friction.  
+- **Where campaigns already live:** CMS integrations for WordPress, NationBuilder, Squarespace, and Run!, plus backend data sync from NGP VAN, Mobilize, and ActBlue to remove integration friction.  
 - **Ownership:** The Chief Commercial & Impact Officer leads PAC/union relationships, consultant distribution, CMS alliances, and conversion from pilots to repeatable wins.
 
 ## What We’re Building (and Why It Wins)

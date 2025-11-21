@@ -46,7 +46,7 @@ This is not hypothetical: the right already enjoys early mover advantage. AI‑g
 ## Go‑to‑Market (Built for Campaign Reality)
 
 - **Channel Mix:** Direct (top‑tier races) + Partnerships (majority of volume via website developers, digital consultants, PACs).  
-- **Where campaigns already live:** Targeted support for WordPress, NGP VAN, NationBuilder, and Run! to remove integration friction.  
+- **Where campaigns already live:** CMS integrations for WordPress, NationBuilder, Squarespace, and Run!, plus backend data sync from NGP VAN, Mobilize, and ActBlue to remove integration friction.  
 - **Ownership:** The Chief Commercial & Impact Officer leads PAC/union relationships, consultant distribution, CMS alliances, and conversion from pilots to repeatable wins.
 
 ## What We’re Building (and Why It Wins)
@@ -654,7 +654,7 @@ KyanosTech acknowledges that launching an impact-driven SaaS business in the mid
 | **Risk** | **Mitigation** |
 |----------|----------------|
 | **Execution Risk**<br>Scaling three products (AGON, POLIS, SCOPE) simultaneously may overextend a lean team. | Phased roadmap: prioritize MVP and pilots in 2026; add features incrementally. Contractors for campaign surges. Explicit SEED-phase validation of assumptions before scale. |
-| **Market Adoption Risk**<br>Campaigns may be slow to adopt structured data tools. | Deep discounts + hands-on services for 2026 pilots; leverage CMS partnerships (WordPress, NGP, NationBuilder to reduce friction. Case studies to prove ROI before 2028. |
+| **Market Adoption Risk**<br>Campaigns may be slow to adopt structured data tools. | Deep discounts + hands-on services for 2026 pilots; leverage CMS partnerships (WordPress, NationBuilder, Squarespace) and backend integrations (NGP VAN, Mobilize to reduce friction. Case studies to prove ROI before 2028. |
 | **Political / Regulatory Risk**<br>Scrutiny of political tech vendors is increasing. Risk of accusations of bias or unlawful coordination. | Maintain B-Corp structure with part-time General Counsel and outside counsel validating compliance【web†source】. Strict firewall between B-Corp and 501(c) arms. All schemas traceable to public source material. |
 | **Credit Risk**<br>Campaigns are notorious for late or partial payments, especially after losing elections【web†source】. | Up-front payment policies, milestone billing, and PAC/union partnerships as intermediaries. Officeholder/committee accounts provide steadier recurring revenue. |
 | **Competitive Risk**<br>Republican campaigns or large commercial vendors may replicate similar tools. | Defensive moats: schema standards, CMS integrations, SCOPE’s audit dataset. First-mover advantage in Democratic ecosystem. |
