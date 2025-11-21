@@ -1,13 +1,13 @@
 # Product Strategy & Technology
 <!-- cross-ref: Product_Strategy_Tech -->
 
-KyanosTech’ product strategy is anchored in **three core products** — **AGON, POLIS, and SCOPE** — and in the development of an **open schema specification**[^] for political information. Together, these products form a closed-loop system: campaigns and committees publish structured, authoritative data; outputs are continuously monitored; and insights feed back into content creation and optimization. This cycle ensures Democratic visibility in AI-mediated information discovery.
+KyanosTech’ product strategy is anchored in **three core products**: **AGON, POLIS, and SCOPE**, and in the development of an **open schema specification**[^] for political information. Together, these products form a closed-loop system: campaigns and committees publish structured, authoritative data; outputs are continuously monitored; and insights feed back into content creation and optimization. This cycle ensures Democratic visibility in AI-mediated information discovery.
 
 ---
 
 ## Guiding Principles
 
-- **Validation First:** Before full-scale development, KyanosTech will validate assumptions through extensive campaign and partner interviews, technology deep dives, and lean pilots. To the extent our understanding of customer and channel needs shifts — or the opportunities the technology supports expand — our **roadmap and business plan will evolve**.  
+- **Validation First:** Before full-scale development, KyanosTech will validate assumptions through extensive campaign and partner interviews, technology deep dives, and lean pilots. To the extent our understanding of customer and channel needs shifts (or the opportunities the technology supports expand, our **roadmap and business plan will evolve**.  
 - **Continuous Learning:** SCOPE data closes the loop by monitoring what works across campaigns, documenting best practices, and feeding them back into AGON and POLIS. Over time, this establishes a durable **learning system** that compounds competitive advantage[^].  
 - **Compliance & Trust:** POLIS meets the requirements of official .gov sites and Congressional CMS platforms.[^] Strict separation between B-Corp and 501(c) arms will be validated by outside counsel to protect against election law violations.[^]
 
@@ -15,7 +15,7 @@ KyanosTech’ product strategy is anchored in **three core products** — **AGON
 
 ## Product Overviews
 
-### AGON — Authoring for Campaigns[^]
+### AGON: Authoring for Campaigns[^]
 **For:** Federal campaigns, state gubernatorial campaigns, and party committees.  
 **Users:** Digital directors, comms staff, consultants.  
 **What It Does:**  
@@ -27,7 +27,7 @@ KyanosTech’ product strategy is anchored in **three core products** — **AGON
 
 ---
 
-### POLIS — Optimization for Officeholders & Committees
+### POLIS: Optimization for Officeholders & Committees
 **For:** Officeholders and Congressional committees.  
 **Users:** Congressional staff, communications directors, committee staff.  
 **What It Does:**  
@@ -39,14 +39,14 @@ KyanosTech’ product strategy is anchored in **three core products** — **AGON
 
 ---
 
-### SCOPE — Monitoring & Accountability
-**For:** Campaigns, officeholders, committees, and the Democratic ecosystem.  
+### SCOPE: Monitoring & Accountability
+**For:** Campaigns, officeholders, committees, and the Democratic community.  
 **Users:** Campaign managers, analytics staff, academic partners, litigation support.  
 **What It Does:**  
 - Continuous monitoring of AI chatbot responses and search AI overviews.  
 - Weekly (and optionally real-time) benchmark reporting.  
 - Clear audit trails for litigation or regulatory use.  
-- Provides cornerstone datasets for academic research and partnerships.  
+- Provides foundational datasets for academic research and partnerships.  
 **Why It Matters:** Documents bias, validates Democratic visibility, and demonstrates accountability. Creates the evidence base for both campaign ROI and platform oversight.
 
 ---
@@ -60,7 +60,7 @@ Current schema.org standards inadequately cover political actors and contexts. K
 - The underlying **logic and evidence** behind policy positions.  
 - A wide set of communication deliverables typically found on political websites.
 
-Why this matters: AI training engines compare schema markup (in web source code) with narrative site content. If the two are not aligned, the site will not be treated as a credible source. By defining and applying schemas across campaigns and officeholders, KyanosTech has the opportunity to set the standard — creating a long-term Democratic competitive advantage.
+Why this matters: AI training engines compare schema markup (in web source code) with narrative site content. If the two are not aligned, the site will not be treated as a credible source. By defining and applying schemas across campaigns and officeholders, KyanosTech has the opportunity to set the standard, creating a long-term Democratic competitive advantage.
 
 ---
 
@@ -111,7 +111,7 @@ AGON  <──>  SCOPE  <──>  POLIS
 
 <h2 id="product-strategy-footnotes">Product Strategy & Technology Footnotes</h2>
 <ol>
-  <li id="fn-prod-open-schema"><strong>Open schema precedent</strong> — Schema adoption pathways and civic data exemplars:
+  <li id="fn-prod-open-schema"><strong>Open schema precedent</strong>: Schema adoption pathways and civic data exemplars:
     <a href="https://schema.org/GovernmentOrganization">schema.org: GovernmentOrganization</a>;
     <a href="https://schema.org/docs/howwework.html">schema.org governance & extension process</a>;
     <a href="https://www.w3.org/Consortium/Process/">W3C Process for standardization</a>;
@@ -119,26 +119,26 @@ AGON  <──>  SCOPE  <──>  POLIS
     <a href="https://ballotpedia.org/API">Ballotpedia API</a>.
   </li>
 
-  <li id="fn-prod-gov-cms"><strong>.gov / Congressional CMS requirements</strong> — Core accessibility and operations standards and chamber-specific guidance:
+  <li id="fn-prod-gov-cms"><strong>.gov / Congressional CMS requirements</strong>: Core accessibility and operations standards and chamber-specific guidance:
     <a href="https://www.section508.gov/manage/laws-and-policies/">Section 508 accessibility standards</a>;
     <a href="https://housenet.house.gov/web-content/cms">U.S. House CMS guidance</a>;
     <a href="https://www.senate.gov/reference/reference_index_subjects/Web_Services_vrd.htm">U.S. Senate web/digital standards</a>;
     <a href="https://digital.gov/resources/federal-web-requirements/">GSA Federal web requirements</a>.
   </li>
 
-  <li id="fn-prod-legal-separation"><strong>Legal separation (B-Corp vs. 501(c))</strong> — Maintain strict separation of personnel, systems, and data; avoid coordination and impermissible subsidization:
+  <li id="fn-prod-legal-separation"><strong>Legal separation (B-Corp vs. 501(c))</strong>: Maintain strict separation of personnel, systems, and data; avoid coordination and impermissible subsidization:
     <a href="https://www.irs.gov/pub/irs-drop/rr-07-41.pdf">IRS Rev. Rul. 2007-41 (501(c)(3) political activity)</a>;
     <a href="https://www.irs.gov/charities-non-profits/other-non-profits/social-welfare-organizations-political-campaign-and-lobbying-activities">IRS 501(c)(4) campaign & lobbying guidance</a>;
     <a href="https://www.ecfr.gov/current/title-11/section-109.21">FEC coordination rules (11 CFR §109.21)</a>;
     <a href="https://www.fec.gov/help-candidates-and-committees/corporations-and-labor-organizations/">FEC guide for Corporations & Labor Orgs</a>.
   </li>
 
-  <li id="fn-prod-learning-system"><strong>Learning system & feedback loops</strong> — Evidence for media/network feedback dynamics:
+  <li id="fn-prod-learning-system"><strong>Learning system & feedback loops</strong>: Evidence for media/network feedback dynamics:
     <a href="https://www.brookings.edu/articles/podcasting-and-political-persuasion/">Brookings: Podcasting & political persuasion</a>;
     <a href="https://cyber.harvard.edu/story/2020-berkman-media-networked-politics">Berkman Klein: Media & networked politics</a>.
   </li>
 
-  <li id="fn-prod-agon-demand"><strong>Authoring demand among campaigns</strong> — Indicators of bandwidth constraints and AI-assisted drafting adoption:
+  <li id="fn-prod-agon-demand"><strong>Authoring demand among campaigns</strong>: Indicators of bandwidth constraints and AI-assisted drafting adoption:
     <a href="https://morningconsult.com/category/technology/ai/">Morning Consult AI usage trackers</a>;
     <a href="https://apnorc.org/projects/generative-ai-and-democratic-engagement/">AP-NORC: Generative AI & democratic engagement</a>.
   </li>

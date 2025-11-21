@@ -84,11 +84,11 @@ Given significant operating, product development, and customer acquisition costs
 : Business Model Canvas framework by Strategyzer. See: <https://www.strategyzer.com/canvas/business-model-canvas>
 
 <ol>
-[^fn-bm-strategyzer]: <strong>Strategyzer BMC</strong> — Strategyzer, Business Model Canvas overview. Add canonical link to Strategyzer site.
+[^fn-bm-strategyzer]: <strong>Strategyzer BMC</strong>: Strategyzer, Business Model Canvas overview. Add canonical link to Strategyzer site.
 
-[^fn-bm-pricing-plans]: <strong>Plan pricing (AGON, POLIS)</strong> — Internal pricing sheet or public pricing page if available. Replace with final URL and access date.
+[^fn-bm-pricing-plans]: <strong>Plan pricing (AGON, POLIS)</strong>: Internal pricing sheet or public pricing page if available. Replace with final URL and access date.
 
-[^fn-bm-competitor-pricing]: <strong>Competitor pricing (classification)</strong> — Reference pricing for adjacent vendors to contextualize stack costs: <em>NationBuilder</em> (all-in-one CMS/CRM), <em>WordPress VIP</em> (managed WordPress hosting). Cite each public pricing page with URL and access date; tiers/usage caveats apply.
+[^fn-bm-competitor-pricing]: <strong>Competitor pricing (classification)</strong>: Reference pricing for adjacent vendors to contextualize stack costs: <em>NationBuilder</em> (all-in-one CMS/CRM), <em>WordPress VIP</em> (managed WordPress hosting). Cite each public pricing page with URL and access date; tiers/usage caveats apply.
 
   Mature B2B SaaS commonly sustains gross margins of <strong>&gt;75%</strong>. KeyBanc/OpenView survey work reports an average around ~73% while excluding sub-$5M GAAP revenue companies, placing the 75%+ benchmark at/above that scale. See overview: <a href="https://www.chargebee.com/resources/glossaries/saas-gross-margin/">Chargebee: SaaS Gross Margin</a>. Benchmarks from Bessemer indicate that top performers in the <strong>$1–10M ARR</strong> range can reach <strong>~85% gross margins</strong>, typically with materially negative free cash flow during scale-up; see <a href="https://www.bvp.com/atlas/scaling-to-100-million">Bessemer: Scaling to $100 Million</a>. Gross margin in our model is highly sensitive to pricing and packaging choices.
 <h2 id="business-model-unit-economics-footnotes">Business Model & Unit Economics Footnotes</h2>

@@ -1,12 +1,12 @@
 # 3. Solution & Theory of Change
 
 ## Framing the Shift
-For decades, campaigns and journalists worried about “spin rooms” and “talk radio echo chambers.” By 2028, the battleground will be different: AI chatbots and answer engines will increasingly replace both news outlets and campaign websites as the place where voters first encounter political information. Voters will not visit dozens of sites — they will ask questions and expect the AI to answer in full. 
+For decades, campaigns and journalists worried about “spin rooms” and “talk radio echo chambers.” By 2028, the battleground will be different: AI chatbots and answer engines will increasingly replace both news outlets and campaign websites as the place where voters first encounter political information. Voters will not visit dozens of sites. They will ask questions and expect the AI to answer in full. 
 
 The mission of the candidate and officeholder website will be transformed. It will be less and less a place that voters visit, and more and more the mechanism by which the chatbots are trained. Campaign content must therefore be structured for AI discovery, not just human browsing. By 2028, this shift will determine whether Democrats can compete effectively in the new information environment. 
 
 ## Market Penetration of AI Answers
-We estimate that by the November 2028 general election [^sol-2028-competition-outcome] , **~45–60% of voter information queries will be answered inside AI experiences (AI Overviews or chat) rather than via clicks to official or campaign sites.** Most users will never click a link — if one is even offered — and will be satisfied with what the chatbot says. 
+We estimate that by the November 2028 general election [^sol-2028-competition-outcome] , **~45–60% of voter information queries will be answered inside AI experiences (AI Overviews or chat) rather than via clicks to official or campaign sites.** Most users will never click a link (if one is even offered, and will be satisfied with what the chatbot says. 
 
 
 ---

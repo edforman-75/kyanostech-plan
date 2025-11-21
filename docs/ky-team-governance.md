@@ -1,6 +1,6 @@
 # Team & Governance
 
-KyanosTech upholds dual accountability: commitment to **mission**—advancing Democratic values and electoral integrity—and stewardship toward **investors**, ensuring capital discipline and long-term viability.  
+KyanosTech upholds dual accountability: commitment to **mission**: advancing Democratic values and electoral integrity, and stewardship toward **investors**, ensuring capital discipline and long-term viability.  
 
 <!-- cross-ref map
 - References Executive Summary: B-Corp vs PAC framing.
@@ -25,9 +25,9 @@ To protect both our for-profit and nonprofit arms, we maintain a **part-time Gen
 By investing in specialized counsel from the start, we mitigate legal exposure and document the rigor of our separation strategy, reinforcing both trust and regulatory resilience.  
 
 ## Founding Officers  
-- **Chief Executive Officer (CEO)** — Leading vision, investor relations, and strategic oversight. The CEO is the **only officer with a board seat**.  
-- **Chief Technology Officer (CTO)** — Oversees product innovation, engineering, and integrations with Democratic-aligned CMS platforms.  
-- **Chief Commercial & Impact Officer (Founding Officer)** — Stewards go-to-market execution, PAC and union partnerships, CMS distribution, and translates adoption into measurable **Democratic** impact while balancing commercial growth and mission fidelity.  
+- **Chief Executive Officer (CEO)**: Leading vision, investor relations, and strategic oversight. The CEO is the **only officer with a board seat**.  
+- **Chief Technology Officer (CTO)**: Oversees product innovation, engineering, and integrations with Democratic-aligned CMS platforms.  
+- **Chief Commercial & Impact Officer (Founding Officer)**: Stewards go-to-market execution, PAC and union partnerships, CMS distribution, and translates adoption into measurable **Democratic** impact while balancing commercial growth and mission fidelity.  
 
 This team combines technical expertise, campaign credibility, and commercial execution capacity.  
 
@@ -45,7 +45,7 @@ A five- or seven-member board creates a cross-section of accountability, prevent
 To attract highly capable, mission-minded talent, compensation is competitive with 85th percentile rates of DC tech/policy professionals[^6]. We include:  
 - **Base salaries** with built-in annual raises (~3%) plus inflation adjustment (~2%).  
 - **Equity or performance incentives** for foundational staff.  
-  - A **mission premium** expectation—that team members prioritize impact and Democratic return over speculative upside.  
+  - A **mission premium** expectation: that team members prioritize impact and Democratic return over speculative upside.  
 
 This structure ensures stability, retention, and appeal to both impact-oriented professionals and experienced campaign technologists.  
 

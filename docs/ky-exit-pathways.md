@@ -12,7 +12,7 @@ We do not frame this as a “unicorn” growth story. Instead, we highlight cred
 
 ## Mission-Centered Legacy
 
-Regardless of exit path, core assets remain committed to the Democratic ecosystem:
+Regardless of exit path, core assets remain committed to the Democratic community:
 
 - The **political schema specification** becomes a durable infrastructure layer.  
 - The **bias-auditing methodology** provides an evidence base for accountability.  
@@ -31,4 +31,4 @@ For investors, the structure offers unique benefits:
 ---
 
 **Takeaway:**  
-KyanosTech exists to ensure Democrats are represented fairly in the age of AI-mediated information. Its legacy will be not only the campaigns it serves directly, but the standards, practices, and infrastructure it leaves embedded in the Democratic ecosystem — durable assets that persist well beyond 2028.
+KyanosTech exists to ensure Democrats are represented fairly in the age of AI-mediated information. Its legacy will be not only the campaigns it serves directly, but the standards, practices, and infrastructure it leaves embedded in the Democratic community: durable assets that persist well beyond 2028.

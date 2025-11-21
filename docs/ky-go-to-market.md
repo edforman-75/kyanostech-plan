@@ -8,7 +8,7 @@ KyanosTech' go-to-market approach is designed to maximize adoption in a cyclical
 
 **Partnership Distribution (75%):** Core strategy. Website developers, digital consultants, and PACs provide reach across hundreds of campaigns with far lower CAC.¹
 
-**Limited CMS Support:** Integration with **WordPress, NationBuilder, and additional platforms** — the dominant CMS platforms used in Democratic campaigns.² This ensures efficient adoption without custom connectors for every vendor. See Appendix E: CMS Landscape Briefing for CMS scope and roles.
+**Limited CMS Support:** Integration with **WordPress, NationBuilder, and additional platforms** : the dominant CMS platforms used in Democratic campaigns.² This ensures efficient adoption without custom connectors for every vendor. See Appendix E: CMS Landscape Briefing for CMS scope and roles.
 
 **Responsibility:** GTM execution is led by the Chief Commercial & Impact Officer, responsible for PAC and union partnerships, CMS relationships (WordPress, NationBuilder), and ensuring adoption translates directly into measurable Democratic impact.
 
@@ -18,14 +18,14 @@ KyanosTech' go-to-market approach is designed to maximize adoption in a cyclical
 - No deployments in this year.
 - The Chief Commercial & Impact Officer takes direct responsibility for cultivating discreet relationships with PACs, unions, digital consultants, CMS vendors, and campaign managers.
 - Conduct assumption-testing interviews with 30–50 stakeholders to validate demand, adoption barriers, and pricing expectations.³
-- Activities are kept deliberately below the radar — focused on listening, mapping networks, and preparing targeted entry in 2026, not public visibility.
+- Activities are kept deliberately below the radar: focused on listening, mapping networks, and preparing targeted entry in 2026, not public visibility.
 
 ### 2026 (First Pilots):
-- Leverage these early contacts to secure initial gubernatorial and competitive House campaigns.
+- Use these early contacts to secure initial gubernatorial and competitive House campaigns.
 - Begin PAC co-funding discussions with organizations that supported interviews in 2025.⁴
 - Offer deep discounts and manual services as a one-time credibility investment to secure flagship pilot accounts.
 
-## 2026 — Early Validation & Concessions
+## 2026: Early Validation & Concessions
 
 **Targets:** Competitive gubernatorial races (36 on the ballot; priority in battleground states),⁵ and a focused set of highly competitive or well-funded House races.
 
@@ -35,7 +35,7 @@ KyanosTech' go-to-market approach is designed to maximize adoption in a cyclical
 
 **Goal:** 10–15 marquee adoptions by cycle end; establish credibility, case studies, and reference customers.⁸
 
-## 2027 — Expansion & Officeholder Base
+## 2027: Expansion & Officeholder Base
 
 **Targets:**
 - Growth in Senate campaigns entering early for 2028.
@@ -48,7 +48,7 @@ KyanosTech' go-to-market approach is designed to maximize adoption in a cyclical
 
 **Goal:** 40–50 active accounts (mix of campaigns + committees). Proof of scalability and partner-led growth.¹¹
 
-## 2028 — Full-Scale Presidential & Federal Cycle
+## 2028: Full-Scale Presidential & Federal Cycle
 
 **Targets:**
 - Presidential campaigns (primary and general).
@@ -68,13 +68,13 @@ KyanosTech' go-to-market approach is designed to maximize adoption in a cyclical
 - Labor unions (e.g., SEIU COPE) can bulk-fund optimization across dozens of candidates.
 - Professional PACs (e.g., EMILY's List) can integrate our services into their candidate support offerings.
 - **Proof of Value:** Success requires documenting how AI optimization improves campaign visibility and electoral outcomes, making it a natural addition to PAC-funded candidate packages.
-- **Leverage Multiplier:** Each partnership can extend reach across dozens of campaigns, reducing CAC and embedding us in Democratic infrastructure.
+- **Partnership Multiplier:** Each partnership can extend reach across dozens of campaigns, reducing CAC and embedding us in Democratic infrastructure.
 
 ---
 
 ## Footnotes
 
-¹ **Channel Mix Strategy:** Channel mix strategy based on B2B SaaS industry patterns where 50-70% of sales occur through indirect channels (SaaS Capital, 2019; Channel as Service, 2025). Political technology sector shows similar partnership-dependency through platform integrations (ActBlue, NGP VAN, WordPress). Partnership-focused distribution strategy leverages the political consulting ecosystem where Democratic consulting firms typically lead campaign technology implementation decisions and expect compensation for technology recommendations. These firms are highly protective of client relationships and accustomed to revenue-sharing arrangements, making direct sales approaches often ineffective without consultant buy-in. Specific 25%/75% ratio represents strategic resource allocation assumption requiring validation through pilot testing.
+¹ **Channel Mix Strategy:** Channel mix strategy based on B2B SaaS industry patterns where 50-70% of sales occur through indirect channels (SaaS Capital, 2019; Channel as Service, 2025). Political technology sector shows similar partnership-dependency through platform integrations (ActBlue, NGP VAN, WordPress). Partnership-focused distribution strategy uses the political consulting community where Democratic consulting firms typically lead campaign technology implementation decisions and expect compensation for technology recommendations. These firms are highly protective of client relationships and accustomed to revenue-sharing arrangements, making direct sales approaches often ineffective without consultant buy-in. Specific 25%/75% ratio represents strategic resource allocation assumption requiring validation through pilot testing.
 
 ² **CMS Platform Dominance:** WordPress (20-25% market share), NationBuilder (18-23% market share), and additional platforms achieve 75% coverage of Democratic campaign websites. Data sourced from Appendix E: Democratic Campaign CMS Platform Usage Analysis 2024, which analyzed campaign technology vendor reports, consulting firm case studies, and infrastructure surveys across 400+ Democratic campaigns in 2022-2024 cycles.
 
