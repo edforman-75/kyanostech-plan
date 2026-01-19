@@ -1,4 +1,41 @@
-const embeddings = require('./business-plan-embeddings.json');
+// Kyanos Plan AI Assistant - Powered by Claude
+// Uses keyword search for context retrieval (no external embedding API required)
+
+const fs = require('fs');
+const path = require('path');
+
+// Load the business plan content at startup
+let businessPlanContent = '';
+try {
+  const docsPath = path.join(__dirname, '../../docs');
+  const coreFiles = [
+    'index.md',
+    'ky-executive-summary.md',
+    'ky-value-proposition.md',
+    'Two_Scares.md',
+    'ky-problem-urgency.md',
+    'ky-solution-theory.md',
+    'ky-products-tech.md',
+    'ky-market-opportunity.md',
+    'ky-business-model.md',
+    'ky-go-to-market.md',
+    'ky-team-governance.md',
+    'ky-investment-requirements.md',
+    'ky-risk-mitigation.md',
+    'ky-impact-measurement.md',
+    'ky-exit-pathways.md'
+  ];
+
+  for (const file of coreFiles) {
+    const filePath = path.join(docsPath, file);
+    if (fs.existsSync(filePath)) {
+      const content = fs.readFileSync(filePath, 'utf-8');
+      businessPlanContent += `\n\n=== ${file} ===\n${content}`;
+    }
+  }
+} catch (e) {
+  console.error('Error loading business plan:', e);
+}
 
 exports.handler = async (event, context) => {
   const headers = {
@@ -31,16 +68,13 @@ exports.handler = async (event, context) => {
 
     const body = JSON.parse(event.body);
 
-    // Support both v2.0.0 format (messages array) and v2.5.0 format (message + conversationHistory)
+    // Support both formats
     let message, conversationHistory;
-
     if (body.messages && Array.isArray(body.messages)) {
-      // v2.0.0 format: { model, messages: [{ role, content }], max_tokens, temperature }
       const userMessage = body.messages.find(m => m.role === 'user');
       message = userMessage ? userMessage.content : null;
       conversationHistory = [];
     } else {
-      // v2.5.0 format: { message, conversationHistory }
       message = body.message;
       conversationHistory = body.conversationHistory || [];
     }
@@ -53,28 +87,24 @@ exports.handler = async (event, context) => {
       };
     }
 
-    const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
-    
-    if (!OPENAI_API_KEY) {
-      console.error('OPENAI_API_KEY not configured');
+    const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
+
+    if (!ANTHROPIC_API_KEY) {
+      console.error('ANTHROPIC_API_KEY not configured');
       return {
         statusCode: 500,
         headers,
-        body: JSON.stringify({ 
+        body: JSON.stringify({
           error: 'API key not configured',
           fallback: 'I apologize, but I\'m having trouble accessing my AI capabilities right now.'
         })
       };
     }
 
-    const questionEmbedding = await getEmbedding(message, OPENAI_API_KEY);
-    const relevantChunks = findRelevantChunks(questionEmbedding, embeddings, 10);
-    
-    const context = relevantChunks
-      .map(chunk => `[From ${chunk.title}]\n${chunk.content}`)
-      .join('\n\n---\n\n');
-    
-    console.log(`Found ${relevantChunks.length} relevant chunks for question: "${message.substring(0, 50)}..."`);
+    // Find relevant sections using keyword search
+    const relevantContent = findRelevantSections(message, businessPlanContent);
+
+    console.log(`Processing question: "${message.substring(0, 50)}..."`);
 
     const systemPrompt = `You are the Kyanos Plan AI Assistant—a friendly, knowledgeable guide who helps potential investors and partners understand the Kyanos business plan.
 
@@ -106,14 +136,14 @@ RESPONSE STYLE:
 
 ===== BUSINESS PLAN CONTEXT (this is your ONLY source of truth) =====
 
-${context}
+${relevantContent}
 
 ===== END CONTEXT =====
 
-Remember: You're having a conversation, but EVERY fact must come from the context above. When in doubt, quote the context directly.`;
+Remember: You're having a conversation, but EVERY fact must come from the context above.`;
 
-    const messages = [
-      { role: 'system', content: systemPrompt },
+    // Build messages for Claude
+    const claudeMessages = [
       ...(conversationHistory || []).slice(-6).map(msg => ({
         role: msg.role === 'user' ? 'user' : 'assistant',
         content: msg.content
@@ -121,35 +151,36 @@ Remember: You're having a conversation, but EVERY fact must come from the contex
       { role: 'user', content: message }
     ];
 
-    const response = await fetch('https://api.openai.com/v1/chat/completions', {
+    const response = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${OPENAI_API_KEY}`
+        'x-api-key': ANTHROPIC_API_KEY,
+        'anthropic-version': '2023-06-01'
       },
       body: JSON.stringify({
-        model: 'gpt-4-turbo-preview',
-        messages: messages,
-        max_tokens: 400,
-        temperature: 0.3
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 500,
+        system: systemPrompt,
+        messages: claudeMessages
       })
     });
 
     if (!response.ok) {
       const errorText = await response.text();
-      console.error('OpenAI API error:', response.status, errorText);
+      console.error('Claude API error:', response.status, errorText);
       return {
         statusCode: 500,
         headers,
-        body: JSON.stringify({ 
-          error: 'OpenAI API error',
+        body: JSON.stringify({
+          error: 'Claude API error',
           fallback: 'I apologize, but I\'m having trouble right now. Please try again.'
         })
       };
     }
 
     const data = await response.json();
-    const aiResponse = data.choices[0].message.content;
+    const aiResponse = data.content[0].text;
 
     return {
       statusCode: 200,
@@ -157,8 +188,7 @@ Remember: You're having a conversation, but EVERY fact must come from the contex
       body: JSON.stringify({
         response: aiResponse,
         conversationId: Date.now().toString(),
-        timestamp: new Date().toISOString(),
-        sourcesUsed: relevantChunks.length
+        timestamp: new Date().toISOString()
       })
     };
 
@@ -167,7 +197,7 @@ Remember: You're having a conversation, but EVERY fact must come from the contex
     return {
       statusCode: 500,
       headers,
-      body: JSON.stringify({ 
+      body: JSON.stringify({
         error: 'Internal server error',
         fallback: 'I apologize, but I\'m experiencing technical difficulties.',
         debug: error.message
@@ -176,66 +206,46 @@ Remember: You're having a conversation, but EVERY fact must come from the contex
   }
 };
 
-async function getEmbedding(text, apiKey) {
-  const response = await fetch('https://api.openai.com/v1/embeddings', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer ${apiKey}`
-    },
-    body: JSON.stringify({
-      input: text,
-      model: 'text-embedding-ada-002'
-    })
+// Simple keyword-based search to find relevant sections
+function findRelevantSections(query, fullContent) {
+  // Extract keywords from query
+  const stopWords = new Set(['what', 'is', 'the', 'a', 'an', 'how', 'does', 'do', 'can', 'will', 'would', 'should', 'about', 'for', 'to', 'of', 'and', 'or', 'in', 'on', 'at', 'by', 'with', 'from', 'that', 'this', 'which', 'who', 'whom', 'whose', 'why', 'when', 'where', 'are', 'be', 'been', 'being', 'have', 'has', 'had', 'having', 'was', 'were', 'you', 'your', 'me', 'my', 'i', 'we', 'our', 'they', 'their', 'it', 'its']);
+
+  const keywords = query.toLowerCase()
+    .replace(/[^\w\s]/g, '')
+    .split(/\s+/)
+    .filter(word => word.length > 2 && !stopWords.has(word));
+
+  // Split content into sections
+  const sections = fullContent.split(/===\s*[\w\-\.]+\.md\s*===/);
+
+  // Score each section
+  const scored = sections.map((section, idx) => {
+    const lowerSection = section.toLowerCase();
+    let score = 0;
+
+    for (const keyword of keywords) {
+      // Count occurrences
+      const regex = new RegExp(keyword, 'gi');
+      const matches = lowerSection.match(regex);
+      if (matches) {
+        score += matches.length;
+      }
+    }
+
+    return { section, score, idx };
   });
 
-  if (!response.ok) {
-    throw new Error(`Embedding API error: ${response.status}`);
+  // Sort by score and take top sections
+  scored.sort((a, b) => b.score - a.score);
+
+  // Take top 3 sections or all content if query is very general
+  const topSections = scored.slice(0, 3).filter(s => s.score > 0);
+
+  if (topSections.length === 0) {
+    // Return executive summary and value proposition as fallback
+    return fullContent.substring(0, 15000);
   }
 
-  const data = await response.json();
-  return data.data[0].embedding;
-}
-
-function cosineSimilarity(a, b) {
-  let dotProduct = 0;
-  let normA = 0;
-  let normB = 0;
-  
-  for (let i = 0; i < a.length; i++) {
-    dotProduct += a[i] * b[i];
-    normA += a[i] * a[i];
-    normB += b[i] * b[i];
-  }
-  
-  return dotProduct / (Math.sqrt(normA) * Math.sqrt(normB));
-}
-
-function findRelevantChunks(questionEmbedding, allChunks, topK = 10) {
-  // Define white paper files
-  const whitePaperFiles = [
-    'ky-appendix-compass.md',
-    'ky-appendix-grok-bias.md', 
-    'ky-appendix-compass-legacy.md',
-    'ky-white-paper-ai-information-war.md'
-  ];
-  
-  const scored = allChunks.map(chunk => {
-    const similarity = cosineSimilarity(questionEmbedding, chunk.embedding);
-    
-    // Boost core business plan content by 15% for better prioritization
-    const isWhitePaper = whitePaperFiles.includes(chunk.file);
-    const boostedSimilarity = isWhitePaper ? similarity : similarity * 1.15;
-    
-    return {
-      ...chunk,
-      similarity: boostedSimilarity,
-      originalSimilarity: similarity,
-      isWhitePaper: isWhitePaper
-    };
-  });
-  
-  scored.sort((a, b) => b.similarity - a.similarity);
-  
-  return scored.slice(0, topK);
+  return topSections.map(s => s.section).join('\n\n---\n\n').substring(0, 20000);
 }

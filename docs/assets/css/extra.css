@@ -5,9 +5,111 @@
   z-index: 100;
 }
 
-/* Ensure tabs stay sticky too */
 .md-tabs {
   position: sticky;
-  top: 48px; /* Height of main header */
+  top: 48px;
   z-index: 99;
+}
+
+/* Callout boxes */
+.callout-info,
+.callout-name,
+.callout-bottomline {
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.callout-info {
+  background: linear-gradient(135deg, #e8f4fd 0%, #d0e8f9 100%);
+  border-left: 4px solid #2196f3;
+}
+
+.callout-name {
+  background: linear-gradient(135deg, #f3e8fd 0%, #e8d0f9 100%);
+  border-left: 4px solid #9c27b0;
+}
+
+.callout-bottomline {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-left: none;
+}
+
+.callout-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.callout-info .callout-title {
+  color: #1565c0;
+}
+
+.callout-name .callout-title {
+  color: #7b1fa2;
+}
+
+.callout-bottomline .callout-title {
+  color: #fff;
+  border-bottom: 2px solid rgba(255,255,255,0.3);
+  padding-bottom: 0.5rem;
+}
+
+.callout-bottomline p {
+  color: rgba(255,255,255,0.95);
+}
+
+.callout-bottomline strong {
+  color: #fff;
+}
+
+/* Hero tagline styling */
+.md-content h1 + p strong {
+  font-size: 1.4rem;
+  color: #667eea;
+}
+
+.md-content h1 + p + p em {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* Better table styling */
+.md-typeset table:not([class]) {
+  border-collapse: collapse;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.md-typeset table:not([class]) thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.md-typeset table:not([class]) thead th {
+  color: white;
+  font-weight: 600;
+  padding: 1rem;
+}
+
+.md-typeset table:not([class]) tbody tr:nth-child(even) {
+  background: #f8f9fa;
+}
+
+.md-typeset table:not([class]) td {
+  padding: 0.75rem 1rem;
+}
+
+/* Product list styling */
+.md-typeset ul li strong {
+  color: #667eea;
+}
+
+/* Methodology numbered list */
+.md-typeset ol li strong {
+  color: #764ba2;
 }

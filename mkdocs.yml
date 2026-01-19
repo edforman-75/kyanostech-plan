@@ -1,7 +1,7 @@
-site_name: KyanosTech Business Plan
-site_description: AI Discovery Optimization for Democratic Campaigns
+site_name: Kyanos Business Plan
+site_description: Keeping progressives visible in the AI era
 site_author: KyanosTech Team
-copyright: Copyright &copy; 2025 KyanosTech
+copyright: Copyright &copy; 2026 KyanosTech
 
 theme:
   name: material
@@ -41,19 +41,14 @@ nav:
 - Potential Exit Pathways: ky-exit-pathways.md
 - Investment Requirements: ky-investment-requirements.md
 - 'White Papers':
-  - 'The AI Information War: Why Progressive Infrastructure Must Come First': ky-white-paper-ai-information-war.md
+  - 'The AI Information War': ky-white-paper-ai-information-war.md
   - 'Claude Interviews Our Founder': ky-white-paper-founder-interview.md
-  - 'When Will AI Elect a President? (WSJ)': ky-white-paper-kessler-ai-election.md
-  - 'The Progressive AI Paradox: Why Distrust Won''t Stop Political Adoption': ky-appendix-compass.md
-  - 'Conservative Chatbot Bias: The Grok Case Study': ky-appendix-grok-bias.md
-- Changelog: ky-changelog.md
-- 'Appendix A — Calculation Workbook & Methodology Tables': ky-appendix-a.md
-- 'Appendix B — How Chatbot Biases Are Detected: Methods and Frameworks': ky-appendix-bias-detection.md
-- 'Appendix C — Strategic Branding Architecture - KyanosTech': ky-appendix-c-branding.md
-- 'Appendix D — Evidence & Methods (Consolidated Footnotes)': ky-appendix-d-evidence.md
-- 'Appendix E — Conservative Chatbot Bias: The Grok Case Study': ky-appendix-grok-bias.md
-- 'Appendix F — The Progressive AI Paradox: Why Distrust Won''t Stop Political Adoption': ky-appendix-compass.md
-- 'Appendix G — Biased chatbots reshape political views': ky-appendix-compass-legacy.md
+  - 'When Will AI Elect a President?': ky-white-paper-kessler-ai-election.md
+- 'Appendices':
+  - 'The Progressive AI Paradox': ky-appendix-compass.md
+  - 'The Grok Case Study': ky-appendix-grok-bias.md
+  - 'How Chatbot Biases Are Detected': ky-appendix-bias-detection.md
+  - 'Strategic Branding Architecture': ky-appendix-c-branding.md
 
 markdown_extensions:
   - footnotes
