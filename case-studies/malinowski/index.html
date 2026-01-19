@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Presence Report | Malinowski for Congress | Kyanos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --kyanos-navy: #1f2937;
+      --kyanos-blue: #3b82f6;
+      --kyanos-blue-dark: #1d4ed8;
+      --kyanos-gold: #f59e0b;
+      --kyanos-silver: #6b7280;
+      --kyanos-slate: #f8fafc;
+      --kyanos-cream: #fefce8;
+      --kyanos-success: #16a34a;
+      --kyanos-warning: #d97706;
+      --kyanos-error: #dc2626;
+      --kyanos-shadow: #111827;
+      --kyanos-mid: #374151;
+      --kyanos-border: #e5e7eb;
+      --kyanos-white: #ffffff;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--kyanos-slate);
+      color: var(--kyanos-navy);
+      line-height: 1.6;
+    }
+
+    .nav {
+      background: var(--kyanos-white);
+      border-bottom: 1px solid var(--kyanos-border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-brand {
+      font-weight: 800;
+      font-size: 20px;
+      color: var(--kyanos-navy);
+      padding: 16px 0;
+      text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+
+    .nav-brand span { color: var(--kyanos-blue); }
+
+    .nav-links { display: flex; gap: 0; }
+
+    .nav-link {
+      padding: 18px 20px;
+      text-decoration: none;
+      color: var(--kyanos-silver);
+      font-weight: 500;
+      font-size: 14px;
+      border-bottom: 3px solid transparent;
+      transition: all 0.2s;
+    }
+
+    .nav-link:hover { color: var(--kyanos-navy); }
+    .nav-link.active {
+      color: var(--kyanos-blue);
+      border-bottom-color: var(--kyanos-blue);
+      font-weight: 600;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--kyanos-navy) 0%, var(--kyanos-blue-dark) 100%);
+      color: var(--kyanos-white);
+      padding: 72px 24px;
+    }
+
+    .hero-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 8px 16px;
+      border-radius: 24px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 16px;
+      letter-spacing: -1px;
+    }
+
+    .hero-subtitle {
+      font-size: 20px;
+      opacity: 0.9;
+      max-width: 600px;
+      line-height: 1.5;
+    }
+
+    .hero-meta {
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      display: flex;
+      gap: 48px;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+
+    .hero-meta-item strong {
+      display: block;
+      font-weight: 600;
+      opacity: 1;
+      margin-bottom: 2px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 24px;
+    }
+
+    .card {
+      background: var(--kyanos-white);
+      border-radius: 12px;
+      padding: 32px;
+      margin-bottom: 24px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+      border: 1px solid var(--kyanos-border);
+    }
+
+    .card h2 {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: var(--kyanos-navy);
+      letter-spacing: -0.3px;
+    }
+
+    .card p {
+      font-size: 15px;
+      color: var(--kyanos-mid);
+      margin-bottom: 16px;
+      line-height: 1.7;
+    }
+
+    .card p:last-child { margin-bottom: 0; }
+
+    /* Metrics Grid */
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .metric-card {
+      background: var(--kyanos-white);
+      border-radius: 12px;
+      padding: 28px 24px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+      border: 1px solid var(--kyanos-border);
+    }
+
+    .metric-platform {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--kyanos-silver);
+      margin-bottom: 8px;
+    }
+
+    .metric-value {
+      font-size: 42px;
+      font-weight: 800;
+      color: var(--kyanos-navy);
+      margin-bottom: 4px;
+      letter-spacing: -1px;
+    }
+
+    .metric-value.danger { color: var(--kyanos-error); }
+    .metric-value.warning { color: var(--kyanos-warning); }
+    .metric-value.success { color: var(--kyanos-success); }
+
+    .metric-label {
+      font-size: 14px;
+      color: var(--kyanos-mid);
+      font-weight: 500;
+    }
+
+    /* Findings */
+    .finding-item {
+      display: flex;
+      gap: 16px;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--kyanos-border);
+    }
+
+    .finding-item:last-child { border-bottom: none; }
+
+    .finding-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .finding-icon.critical { background: #fef2f2; border: 1px solid #fecaca; }
+    .finding-icon.warning { background: #fffbeb; border: 1px solid #fde68a; }
+    .finding-icon.success { background: #f0fdf4; border: 1px solid #bbf7d0; }
+
+    .finding-content h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 4px;
+      color: var(--kyanos-navy);
+    }
+
+    .finding-content p {
+      font-size: 14px;
+      color: var(--kyanos-silver);
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    /* Navigation Cards */
+    .nav-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .nav-card {
+      background: var(--kyanos-white);
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+      border: 1px solid var(--kyanos-border);
+      border-left: 4px solid var(--kyanos-blue);
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .nav-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    }
+
+    .nav-card h3 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--kyanos-navy);
+    }
+
+    .nav-card p {
+      font-size: 13px;
+      color: var(--kyanos-silver);
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+
+    .nav-link-text {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--kyanos-blue);
+    }
+
+    .footer {
+      text-align: center;
+      padding: 48px 24px;
+      color: var(--kyanos-silver);
+      font-size: 13px;
+      border-top: 1px solid var(--kyanos-border);
+      background: var(--kyanos-white);
+    }
+
+    .footer-brand {
+      font-weight: 700;
+      color: var(--kyanos-navy);
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    .footer-brand span { color: var(--kyanos-blue); }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">Kyanos<span>Tech</span></a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link active">Summary</a>
+        <a href="monitor.html" class="nav-link">Monitor</a>
+        <a href="analyze.html" class="nav-link">Analyze</a>
+        <a href="fix.html" class="nav-link">Fix</a>
+        <a href="impact.html" class="nav-link">Impact</a>
+        <a href="methodology.html" class="nav-link">Methodology</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="hero-badge">AI Presence Report</div>
+      <h1>Malinowski for Congress</h1>
+      <p class="hero-subtitle">What voters see when they ask Google and ChatGPT about Tom Malinowski—and what the campaign can do about it.</p>
+      <div class="hero-meta">
+        <div class="hero-meta-item">
+          <strong>Race</strong>
+          NJ-11 Special Election
+        </div>
+        <div class="hero-meta-item">
+          <strong>Primary Date</strong>
+          February 5, 2026
+        </div>
+        <div class="hero-meta-item">
+          <strong>Report Date</strong>
+          January 18, 2026
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Key Metrics -->
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <div class="metric-platform">Google AI Overview</div>
+        <div class="metric-value danger">D</div>
+        <div class="metric-label">No mention of current campaign. Only shows 2019-2023 history.</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-platform">ChatGPT</div>
+        <div class="metric-value warning">C</div>
+        <div class="metric-label">Ethics violations featured prominently. Blind trust not mentioned.</div>
+      </div>
+    </div>
+
+    <!-- The Bottom Line -->
+    <div class="card">
+      <h2>The Bottom Line</h2>
+      <p>
+        <strong>When New Jersey voters ask Google or ChatGPT about Tom Malinowski, they see ethics complaints and stock trading violations first.</strong> The blind trust resolution, the co-sponsorship of the stock trading ban, and the human rights credentials are buried or missing entirely.
+      </p>
+      <p>
+        Google AI Overview—the box at the top of search results that millions see—doesn't even know there's a 2026 campaign. It shows only historical information from the 2019-2023 term.
+      </p>
+      <p>
+        The good news: <strong>the campaign can fix most of this by updating the website.</strong> AI systems cite the sources they can find. Right now, the only sources discussing Malinowski and honesty are hostile. The campaign website has no ethics page, no endorsements page, and a news section last updated in 2020.
+      </p>
+    </div>
+
+    <!-- Key Findings -->
+    <div class="card">
+      <h2>Key Findings</h2>
+      <div class="finding-item">
+        <div class="finding-icon critical">!</div>
+        <div class="finding-content">
+          <h3>Google AI Overview doesn't mention the current campaign</h3>
+          <p>The AI summary at the top of Google Search only shows "served from 2019 to 2023." No mention of NJ-11 or the February 2026 election. Voters searching don't know he's running.</p>
+        </div>
+      </div>
+      <div class="finding-item">
+        <div class="finding-icon critical">!</div>
+        <div class="finding-content">
+          <h3>ChatGPT leads with ethics violations on trust questions</h3>
+          <p>When voters ask "Is Tom Malinowski honest?", ChatGPT opens with STOCK Act violations before mentioning his diplomatic career or the blind trust resolution.</p>
+        </div>
+      </div>
+      <div class="finding-item">
+        <div class="finding-icon warning">~</div>
+        <div class="finding-content">
+          <h3>Campaign website has no counter-narrative</h3>
+          <p>No ethics FAQ page, no endorsements page, no immigration page despite the compelling refugee story. AI has no authoritative campaign source to cite on these topics.</p>
+        </div>
+      </div>
+      <div class="finding-item">
+        <div class="finding-icon warning">~</div>
+        <div class="finding-content">
+          <h3>News section last updated April 2020</h3>
+          <p>5 positive articles from the past 60 days aren't on the website. AI systems looking for fresh content find only the controversy.</p>
+        </div>
+      </div>
+      <div class="finding-item">
+        <div class="finding-icon success">✓</div>
+        <div class="finding-content">
+          <h3>Human rights credentials work across all platforms</h3>
+          <p>Human Rights Watch and State Department service surface consistently. This narrative works because it has source consistency—apply this model to other topics.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigate Report -->
+    <div class="card">
+      <h2>Full Report</h2>
+      <p style="margin-bottom: 24px;">This report follows our Monitor → Analyze → Fix workflow. Each section builds on the previous.</p>
+
+      <div class="nav-grid" style="grid-template-columns: repeat(2, 1fr);">
+        <a href="monitor.html" class="nav-card">
+          <h3>Monitor →</h3>
+          <p>What Google AI Overview and ChatGPT actually say, plus ad spending and press coverage context.</p>
+          <span class="nav-link-text">View raw data</span>
+        </a>
+        <a href="analyze.html" class="nav-card">
+          <h3>Analyze →</h3>
+          <p>Why AI says what it says. The causality chain from website content to AI responses.</p>
+          <span class="nav-link-text">View analysis</span>
+        </a>
+        <a href="fix.html" class="nav-card">
+          <h3>Fix →</h3>
+          <p>Step-by-step Squarespace instructions and strategic recommendations.</p>
+          <span class="nav-link-text">View actions</span>
+        </a>
+        <a href="impact.html" class="nav-card" style="border-left-color: var(--kyanos-success);">
+          <h3>Impact →</h3>
+          <p>Cost comparison: AI optimization vs. traditional media. Why these fixes deliver the best ROI.</p>
+          <span class="nav-link-text">View impact analysis</span>
+        </a>
+      </div>
+
+      <div class="nav-grid" style="margin-top: 16px; grid-template-columns: 1fr;">
+        <a href="methodology.html" class="nav-card" style="border-left-color: var(--kyanos-silver);">
+          <h3>How This Works →</h3>
+          <p>Our methodology for monitoring AI presence, the platforms we cover, and how improvements propagate across surfaces.</p>
+          <span class="nav-link-text">View methodology</span>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p class="footer-brand">Kyanos<span>Tech</span></p>
+    <p>AI Presence Report: Malinowski for Congress (NJ-11) | January 2026</p>
+    <p style="margin-top: 16px; font-size: 11px; color: #9ca3af;">This report was produced using tools currently in development. Campaigns should review all recommendations carefully before implementing.</p>
+  </footer>
+</body>
+</html>

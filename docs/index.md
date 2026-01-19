@@ -1,89 +1,79 @@
-# Guide to This Plan
+# Kyanos Business Plan
 
-A concise map to what's here and how to read it. Each section links to the full write-up and includes a short overview.  
-This plan is a living draft for discussion with potential founders and funders.
+**Keeping progressives visible in the AI era**
+
+*Making sure voters find the truth about progressive candidates*
+
+---
+
+## What Is Kyanos?
+
+Kyanos is a family of AI-driven analytical and remediation services that help progressive candidates, organizations, and causes manage their digital presence. We monitor how AI systems, search engines, advertising platforms, and opponents represent our clients—then provide specific, actionable fixes that campaigns can implement immediately.
 
 ---
 
 ## Sections
 
-[**Executive Summary**](ky-executive-summary/): The case, the why, and the now — what we're building and why timing matters for 2028.  
-Outlines the threat of AI-powered information systems being tilted against Democratic candidates and why immediate action is essential. Summarizes the opportunity, strategy, and scale of ambition.  
+[**Executive Summary**](ky-executive-summary.md): The mission, the products, and the ask—what we're building and why it matters now.
 
-[**Problem & Urgency**](ky-problem-urgency/): AI assistants are becoming the front door to political information; Democratic visibility and accuracy are at risk.  
-Explains how biased or incomplete answers could undermine campaigns, erode trust, and cede ground to well-funded opponents. Establishes the cost of inaction before 2028.  
+[**Problem & Market Opportunity**](ky-problem-urgency.md): How AI is reshaping political information discovery and the market opportunity for progressive campaigns.
 
-[**Solution & Theory of Change**](ky-solution-theory/): How we address the problem through AI discovery optimization and structured data.  
-Describes our approach to ensuring Democratic campaigns appear accurately in AI responses through schema markup, monitoring, and optimization tools.  
+[**Solution & Theory of Change**](ky-solution-theory.md): The causality chain methodology—Observe, Trace, Diagnose, Prescribe—and how Panopticon works.
 
-[**Product Strategy & Technology**](ky-products-tech/): The platform, tools, and technical architecture that powers our solution.  
-Details the AI optimization platform, schema markup systems, monitoring capabilities, and integration approach for campaign infrastructure.  
+[**Product Strategy & Technology**](ky-products-tech.md): The full product suite—Panopticon, GoodInk, Adwatch, TripWire—and the Bentham infrastructure.
 
-[**Market & Financial Opportunity**](ky-market-opportunity/): Market analysis and revenue projections for the $600-800M Democratic infrastructure market.  
-Quantifies the opportunity, customer segments, pricing strategy, and path to $6.4M revenue by 2028 with 259 target customers.  
+[**Market & Financial Opportunity**](ky-market-opportunity.md): Unit economics, revenue projections, and the path to sustainability.
 
-[**Business Model**](ky-business-model/): How we generate revenue, acquire customers, and scale operations.  
-Outlines SaaS subscriptions, professional services, partner distribution, and unit economics for sustainable growth.  
+[**Business Model & Pricing**](ky-business-model.md): Cycle-based pricing, service tiers, and the progressive margin philosophy.
 
-[**Go-To-Market Strategy**](ky-go-to-market/): Customer acquisition strategy and distribution through partnerships.  
-Details the 75% partner-driven approach, PAC relationships, CMS integrations, and timeline for market penetration.  
+[**Go-To-Market Strategy**](ky-go-to-market.md): The free 2026 year, consultant partnerships, and the path to 466 clients by 2028.
 
-[**Impact Measurement & Reporting**](ky-impact-measurement/): How we measure success and demonstrate value to stakeholders.  
-Defines metrics framework, campaign success indicators, and reporting systems for accountability and optimization.  
+[**Team & Governance**](ky-team-governance.md): Trust-owned LLC structure, board composition, and the Catalist precedent.
 
-[**Risk & Mitigation**](ky-risk-mitigation/): Key risks and strategic responses to potential challenges.  
-Addresses market risks, competitive threats, technology challenges, and regulatory considerations with mitigation strategies.  
+[**Investment Requirements**](ky-investment-requirements.md): The $1M ask, use of funds, and funding timeline.
 
-[**Team & Governance**](ky-team-governance/): Leadership structure and organizational design for mission-driven impact.  
-Outlines team composition, governance model, advisory structure, and alignment mechanisms for sustainable success.  
-
-[**Potential Exit Pathways**](ky-exit-pathways/): Strategic acquisition opportunities and investor return scenarios.  
-Analyzes potential acquirers, valuation frameworks, and strategic exit timing for investor and mission alignment.  
-
-[**Investment Requirements**](ky-investment-requirements/): Capital plan and funding strategy for 2025-2028 execution.  
-Details the $5.0M total investment requirement across seed, Series A, and convertible debt rounds, with use of funds and timeline.
+[**Risks & Mitigations**](ky-risk-mitigation.md): Key risks and how we address them.
 
 ---
 
-## White Papers
+## Quick Facts
 
-[**The AI Information War: Why Progressive Infrastructure Must Come First**](ky-white-paper-ai-information-war/): Strategic analysis of conservative AI infrastructure and the progressive response.
-Examination of conservative AI ecosystem development, the infrastructure-first strategy, and why KyanosTech represents the essential foundation for progressive AI competitiveness.
-
-[**Claude Interviews Our Founder**](ky-white-paper-founder-interview/): In-depth conversation with Ed Forman about KyanosTech's vision and strategy.
-A comprehensive Q&A exploring the origin story, market strategy, business model, team structure, and why building AI discovery infrastructure for Democratic campaigns can't wait until 2028.
-
-[**The Progressive AI Paradox: Why Distrust Won't Stop Political Adoption**](ky-appendix-compass/): Strategic analysis of AI adoption trends in progressive politics despite concerns.
-Research-based analysis of progressive AI adoption patterns, trust paradoxes, and strategic implications for Democratic campaign technology decisions.
-
-[**Conservative Chatbot Bias: The Grok Case Study**](ky-appendix-grok-bias/): Detailed analysis of political bias in AI systems.
-Comprehensive examination of bias patterns in AI responses, methodology for detection, and implications for political information accuracy.  
+| Fact | Detail |
+|------|--------|
+| **Mission** | Keep progressives visible in the AI era |
+| **Structure** | Trust-Owned LLC |
+| **Products** | Panopticon, GoodInk, Adwatch, TripWire |
+| **Funding Ask** | $1,000,000 ($750K min, $1.25M reach) |
+| **2026 Clients** | 200 (free access) |
+| **2028 Revenue** | $3.3M |
+| **Cash-flow positive** | Q4 2027 / Q1 2028 |
 
 ---
 
-## Appendices
+## The Products
 
-[**Appendix A — Calculation Workbook & Methodology Tables**](ky-appendix-a/): Financial models, market sizing, and analytical frameworks.  
-Comprehensive methodology documentation, financial calculations, market analysis, and data sources supporting business projections.  
-
-[**Appendix B — How Chatbot Biases Are Detected: Methods and Frameworks**](ky-appendix-bias-detection/): Technical methods for identifying AI bias in political content.  
-Detailed technical approaches, testing methodologies, and frameworks for detecting and measuring political bias in AI systems.  
-
-[**Appendix C — Strategic Branding Architecture - KyanosTech**](ky-appendix-c-branding/): Brand positioning, messaging framework, and market differentiation.  
-Complete branding strategy, positioning framework, messaging architecture, and competitive differentiation for market positioning.  
-
-[**Appendix D — Evidence & Methods (Consolidated Footnotes)**](ky-appendix-d-evidence/): Complete sources, citations, and methodology documentation.  
-Comprehensive source documentation, research methodology, citation index, and evidence base supporting all business plan claims.  
-
-[**Appendix E — Conservative Chatbot Bias: The Grok Case Study**](ky-appendix-grok-bias/): Detailed analysis of political bias in AI systems.  
-In-depth case study analysis of bias patterns, detection methods, and implications for Democratic campaign AI strategy.  
-
-[**Appendix F — The Progressive AI Paradox: Why Distrust Won't Stop Political Adoption**](ky-appendix-compass/): Strategic analysis of AI adoption trends in progressive politics despite concerns.  
-Research-based analysis of progressive AI adoption patterns, trust paradoxes, and strategic implications for Democratic campaign technology decisions.  
-
-[**Appendix G — Biased chatbots reshape political views**](ky-appendix-compass-legacy/): Research on AI influence on political discourse and voter opinion formation.  
-Academic research and case studies demonstrating how conversational AI systems influence political opinions and the implications for electoral outcomes.  
+| Product | Function |
+|---------|----------|
+| **Panopticon** | AI monitoring + remediation across major surfaces |
+| **GoodInk** | Positive press discovery for campaigns to feature |
+| **Adwatch** | Political advertising monitoring across Google and Meta |
+| **TripWire** | Opponent website change detection |
 
 ---
 
-See the [**Changelog**](ky-changelog/) for version history and technical documentation.
+## Why Now?
+
+1. **AI adoption is accelerating** — Voters increasingly get political information from AI assistants
+2. **2026 cycle timing** — Solutions implemented now impact this cycle and 2028
+3. **No incumbent** — The progressive ecosystem has no AI monitoring infrastructure
+4. **Platform capture risk** — AI platforms face pressure from hostile administration
+
+---
+
+## Contact
+
+For questions about this plan or to discuss funding, contact Ed Forman at [forman.ed@gmail.com](mailto:forman.ed@gmail.com).
+
+---
+
+*Confidential — January 2026*

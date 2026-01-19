@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PRAXIS | Tom Malinowski for NJ-11 | Kyanos Digital Authority Report</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      color: #fff;
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+    .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+
+    nav {
+      background: rgba(0,0,0,0.3);
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+    }
+    nav .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav .logo { font-weight: 700; font-size: 1.3rem; color: #00d9ff; }
+    nav .nav-links { display: flex; gap: 5px; }
+    nav .nav-links a {
+      color: #8892b0;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      transition: all 0.2s;
+    }
+    nav .nav-links a:hover { background: rgba(255,255,255,0.1); color: #fff; }
+    nav .nav-links a.active { background: #00d9ff; color: #1a1a2e; font-weight: 600; }
+
+    .page-header {
+      padding: 40px 0 30px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      margin-bottom: 30px;
+    }
+    .page-header h1 { font-size: 2.2rem; margin-bottom: 10px; }
+    .page-header .subtitle { color: #8892b0; font-size: 1rem; }
+    .phase-badge {
+      display: inline-block;
+      background: rgba(0,255,136,0.2);
+      color: #00ff88;
+      padding: 6px 15px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin: 35px 0 20px 0;
+      color: #00ff88;
+    }
+
+    .action-card {
+      background: rgba(0,0,0,0.3);
+      border-radius: 15px;
+      padding: 30px;
+      margin: 25px 0;
+      border-left: 5px solid #00d9ff;
+    }
+    .action-card.high { border-left-color: #ff6b6b; }
+    .action-card.medium { border-left-color: #ffa502; }
+
+    .action-card .header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .action-card .card-number {
+      background: rgba(255,255,255,0.1);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+    .action-card h3 {
+      flex: 1;
+      font-size: 1.3rem;
+      min-width: 200px;
+    }
+    .action-card .priority-badge {
+      font-size: 0.75rem;
+      padding: 5px 12px;
+      border-radius: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 600;
+    }
+    .action-card .priority-badge.high {
+      background: rgba(255,107,107,0.3);
+      color: #ff6b6b;
+    }
+    .action-card .priority-badge.medium {
+      background: rgba(255,165,2,0.3);
+      color: #ffa502;
+    }
+    .action-card .priority-badge.critical {
+      background: rgba(255,107,107,0.5);
+      color: #fff;
+    }
+    .action-card .timeline {
+      color: #8892b0;
+      font-size: 0.9rem;
+    }
+
+    .action-card .problem {
+      background: rgba(255,107,107,0.1);
+      border: 1px solid rgba(255,107,107,0.3);
+      padding: 15px 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    .action-card .problem strong { color: #ff6b6b; }
+    .action-card .problem p { color: #ffd9d9; margin: 0; }
+
+    .action-card .step {
+      margin: 20px 0;
+    }
+    .action-card .step h4 {
+      color: #00ff88;
+      margin-bottom: 10px;
+      font-size: 1rem;
+    }
+    .action-card .step p {
+      color: #b8c5d9;
+      margin-bottom: 10px;
+    }
+
+    .url-box {
+      background: rgba(0,0,0,0.4);
+      padding: 12px 18px;
+      border-radius: 8px;
+      font-family: 'Monaco', 'Consolas', monospace;
+      font-size: 0.85rem;
+      margin: 12px 0;
+      word-break: break-all;
+    }
+    .url-box a {
+      color: #00d9ff;
+      text-decoration: none;
+    }
+    .url-box a:hover { text-decoration: underline; }
+
+    .template-box {
+      background: rgba(0,255,136,0.08);
+      border: 1px solid rgba(0,255,136,0.25);
+      padding: 20px;
+      border-radius: 10px;
+      margin: 15px 0;
+      font-size: 0.95rem;
+      color: #d0e8d8;
+    }
+    .template-box strong { color: #00ff88; }
+
+    .code-block {
+      background: #0d1117;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      padding: 18px;
+      margin: 15px 0;
+      font-family: 'Monaco', 'Consolas', monospace;
+      font-size: 0.8rem;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      color: #c9d1d9;
+    }
+
+    .warning-box {
+      background: rgba(255,107,107,0.1);
+      border: 1px solid rgba(255,107,107,0.3);
+      padding: 15px 20px;
+      border-radius: 10px;
+      margin: 15px 0;
+    }
+    .warning-box h4 {
+      color: #ff6b6b;
+      margin-bottom: 8px;
+    }
+    .warning-box p {
+      color: #ffd9d9;
+      margin: 0;
+      font-size: 0.9rem;
+    }
+
+    .impact-box {
+      background: rgba(0,217,255,0.1);
+      border: 1px solid rgba(0,217,255,0.3);
+      padding: 15px 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    .impact-box strong { color: #00d9ff; }
+    .impact-box p { color: #b8c5d9; margin: 0; }
+
+    ul, ol {
+      margin: 10px 0 10px 25px;
+      color: #b8c5d9;
+    }
+    li { margin-bottom: 8px; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: rgba(255,255,255,0.03);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: 14px 18px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    th {
+      background: rgba(0,255,136,0.1);
+      color: #00ff88;
+      font-weight: 600;
+    }
+    tr:last-child td { border-bottom: none; }
+    .projected { color: #00ff88; font-weight: 600; }
+
+    .callout-bottomline {
+      background: linear-gradient(135deg, rgba(0,217,255,0.15) 0%, rgba(0,255,136,0.15) 100%);
+      border: 2px solid #00d9ff;
+      border-radius: 15px;
+      padding: 35px;
+      margin: 40px 0;
+      text-align: center;
+    }
+    .callout-bottomline p {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      color: #e0e6ed;
+    }
+    .callout-bottomline p:last-child { margin-bottom: 0; }
+    .callout-bottomline strong { color: #00d9ff; }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: #5a6a8a;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      margin-top: 40px;
+    }
+    footer .brand { color: #00d9ff; font-weight: 600; }
+
+    p { color: #b8c5d9; margin-bottom: 15px; }
+
+    @media (max-width: 768px) {
+      .action-card .header { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <div class="logo">Kyanos</div>
+      <div class="nav-links">
+        <a href="index.html">Dashboard</a>
+        <a href="scope.html">SCOPE</a>
+        <a href="orthos.html">ORTHOS</a>
+        <a href="praxis.html" class="active">PRAXIS</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="page-header">
+      <div class="phase-badge">Phase 3: Act</div>
+      <h1>PRAXIS: Exactly What To Do</h1>
+      <p class="subtitle">Step-by-step instructions your team can execute this week. Each action card includes exactly what to do, where to do it, and what to write.</p>
+    </div>
+
+    <!-- Action Card 1: Wikipedia -->
+    <div class="action-card high">
+      <div class="header">
+        <div class="card-number">1</div>
+        <h3>Get Wikipedia Updated to Reflect 2026 Campaign</h3>
+        <span class="priority-badge high">High Priority</span>
+        <span class="timeline">Timeline: 3-7 days for response, 2-4 weeks for AI propagation</span>
+      </div>
+
+      <div class="problem">
+        <strong>Problem:</strong>
+        <p>Your Wikipedia article says you're a "former" congressman with no mention of the 2026 NJ-11 special election. AI systems pull heavily from Wikipedia—this outdated info is why ChatGPT fails 80% of the time.</p>
+      </div>
+
+      <div class="warning-box">
+        <h4>⚠️ Important: Wikipedia Conflict of Interest Policy</h4>
+        <p>Candidates and campaign staff should NOT directly edit their own Wikipedia pages. Wikipedia has strict COI policies. Edits by campaigns are often reverted. Use these approved methods instead:</p>
+      </div>
+
+      <div class="step">
+        <h4>Option A: Request Edit via Talk Page (Recommended)</h4>
+        <div class="url-box">
+          <a href="https://en.wikipedia.org/wiki/Talk:Tom_Malinowski" target="_blank">https://en.wikipedia.org/wiki/Talk:Tom_Malinowski</a>
+        </div>
+        <p>Post a polite request asking volunteer editors to update the article. Be transparent that you're affiliated with the campaign. Provide reliable sources (news articles) that editors can verify.</p>
+
+        <div class="template-box">
+          <strong>Sample Talk Page Post:</strong><br><br>
+          Hello, I'm writing on behalf of the Malinowski campaign (declaring COI per Wikipedia policy). The article doesn't reflect that Tom Malinowski is currently a candidate in the 2026 NJ-11 special election. Here are reliable sources that could be used to update the article:<br><br>
+          • [NJ.com article about candidacy announcement]<br>
+          • [Press release about Morris County Democratic Committee endorsement]<br>
+          • [NJ Globe coverage of the special election]<br><br>
+          Would an uninvolved editor be willing to add this information? Thank you.
+        </div>
+      </div>
+
+      <div class="step">
+        <h4>What the Article Needs (for whoever edits it):</h4>
+        <div class="template-box">
+          <strong>In the introduction:</strong> Add that he is "currently a candidate in the 2026 special election for New Jersey's 11th congressional district."<br><br>
+          <strong>New section "2026 congressional campaign":</strong><br>
+          • Announcement of candidacy for NJ-11 special election<br>
+          • Endorsement from U.S. Senator Andy Kim (D-NJ)<br>
+          • Morris County Democratic Committee endorsement (after 9 rounds of RCV)<br>
+          • J Street PAC endorsement<br>
+          • Special election date: February 11, 2026<br>
+          • Campaign themes: lowering costs, protecting democracy, fighting corruption<br><br>
+          <strong>Key sources to cite:</strong> NJ Globe, InsiderNJ, NJ.com (not campaign press releases alone)
+        </div>
+      </div>
+
+      <div class="impact-box">
+        <strong>Expected Impact:</strong>
+        <p>Wikipedia updates propagate to AI systems within 2-4 weeks. The Talk page approach usually gets response within 3-7 days. Could improve ChatGPT accuracy from 20% to 80%+.</p>
+      </div>
+    </div>
+
+    <!-- Action Card 2: Google Knowledge Panel -->
+    <div class="action-card high">
+      <div class="header">
+        <div class="card-number">2</div>
+        <h3>Claim & Update Google Knowledge Panel</h3>
+        <span class="priority-badge high">High Priority</span>
+        <span class="timeline">Timeline: 1-3 weeks</span>
+      </div>
+
+      <div class="problem">
+        <strong>Problem:</strong>
+        <p>Your Google Knowledge Panel shows outdated information. It lists you as "Former U.S. Representative" without mentioning your current candidacy for NJ-11.</p>
+      </div>
+
+      <div class="step">
+        <h4>Step 1: Claim Your Knowledge Panel</h4>
+        <div class="url-box">
+          <a href="https://support.google.com/knowledgepanel/answer/7534842" target="_blank">https://support.google.com/knowledgepanel/answer/7534842</a>
+        </div>
+        <p>Search for "Tom Malinowski" on Google, click the Knowledge Panel, then click "Claim this knowledge panel" at the bottom. You'll need to verify your identity.</p>
+      </div>
+
+      <div class="step">
+        <h4>Step 2: Submit a Suggested Edit</h4>
+        <div class="url-box">
+          <a href="https://support.google.com/knowledgepanel/answer/7534916" target="_blank">https://support.google.com/knowledgepanel/answer/7534916</a>
+        </div>
+
+        <div class="template-box">
+          <strong>Current:</strong> "Tom Malinowski is an American politician and diplomat who served as U.S. Representative for New Jersey's 7th congressional district from 2019 to 2023."<br><br>
+          <strong>Suggested Change:</strong> "Tom Malinowski is an American politician and diplomat. He served as U.S. Representative for New Jersey's 7th congressional district from 2019 to 2023 and is currently the Democratic candidate in the 2026 special election for New Jersey's 11th congressional district."
+        </div>
+      </div>
+
+      <div class="impact-box">
+        <strong>Expected Impact:</strong>
+        <p>Knowledge Panel updates can take 1-3 weeks. Google reviews all edits manually. Submit with reliable sources (news articles about your candidacy).</p>
+      </div>
+    </div>
+
+    <!-- Action Card 3: Ballotpedia -->
+    <div class="action-card medium">
+      <div class="header">
+        <div class="card-number">3</div>
+        <h3>Verify Ballotpedia Candidate Page</h3>
+        <span class="priority-badge medium">Medium Priority</span>
+        <span class="timeline">Timeline: 3-5 business days</span>
+      </div>
+
+      <div class="problem">
+        <strong>Problem:</strong>
+        <p>Ballotpedia is the #3 most-cited source in AI responses about political candidates. AI systems trust it as authoritative for current election info.</p>
+      </div>
+
+      <div class="step">
+        <h4>Step 1: Review Your Current Page</h4>
+        <div class="url-box">
+          <a href="https://ballotpedia.org/Tom_Malinowski" target="_blank">https://ballotpedia.org/Tom_Malinowski</a>
+        </div>
+      </div>
+
+      <div class="step">
+        <h4>Step 2: Submit Updates via Candidate Connection</h4>
+        <div class="url-box">
+          <a href="https://ballotpedia.org/Ballotpedia:Candidate_Connection" target="_blank">https://ballotpedia.org/Ballotpedia:Candidate_Connection</a>
+        </div>
+        <p>This is Ballotpedia's official program for candidates to provide accurate information. Complete the survey with your 2026 campaign information.</p>
+
+        <div class="template-box">
+          <strong>Key Information to Verify/Add:</strong><br><br>
+          • <strong>Current candidacy:</strong> NJ-11 Special Election, February 11, 2026<br>
+          • <strong>Party:</strong> Democratic<br>
+          • <strong>Endorsements:</strong><br>
+          &nbsp;&nbsp;— U.S. Senator Andy Kim (D-NJ)<br>
+          &nbsp;&nbsp;— Morris County Democratic Committee<br>
+          &nbsp;&nbsp;— J Street PAC<br>
+          &nbsp;&nbsp;— Rep. Jamie Raskin (D-MD)<br>
+          • <strong>Campaign website:</strong> malinowskifornj.com<br>
+          • <strong>Campaign priorities:</strong> Lower Costs, Protect Democracy, Fight Corruption, Regulate Technology<br>
+          • <strong>Contact:</strong> team@malinowskifornj.com
+        </div>
+      </div>
+
+      <div class="impact-box">
+        <strong>Expected Impact:</strong>
+        <p>Ballotpedia updates within 3-5 business days. They actively track special elections and prioritize candidate-provided information.</p>
+      </div>
+    </div>
+
+    <!-- Action Card 4: Structured Data -->
+    <div class="action-card medium">
+      <div class="header">
+        <div class="card-number">4</div>
+        <h3>Add Structured Data to Campaign Website</h3>
+        <span class="priority-badge medium">Medium Priority</span>
+        <span class="timeline">Timeline: Immediate upon implementation</span>
+      </div>
+
+      <div class="problem">
+        <strong>Problem:</strong>
+        <p>Your campaign website lacks JSON-LD structured data. This makes it harder for AI systems to extract accurate, authoritative information directly from your site.</p>
+      </div>
+
+      <div class="step">
+        <h4>For Web Developer: Add to Website's &lt;head&gt; Section</h4>
+        <div class="code-block">&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Tom Malinowski",
+  "jobTitle": "Democratic Candidate for U.S. House, NJ-11",
+  "description": "Tom Malinowski is the Democratic candidate in the 2026 special election for New Jersey's 11th Congressional District. Former U.S. Representative (NJ-7, 2019-2023) and former Assistant Secretary of State for Democracy, Human Rights, and Labor under President Obama.",
+  "birthDate": "1965-09-23",
+  "birthPlace": "Poland",
+  "nationality": "American",
+  "affiliation": {
+    "@type": "Organization",
+    "name": "Democratic Party"
+  },
+  "knowsAbout": ["Foreign Policy", "Human Rights", "Democracy", "Anti-Corruption", "Technology Regulation"],
+  "sameAs": [
+    "https://en.wikipedia.org/wiki/Tom_Malinowski",
+    "https://ballotpedia.org/Tom_Malinowski",
+    "https://twitter.com/Maaborr",
+    "https://www.facebook.com/TomMalinowskiNJ"
+  ]
+}
+&lt;/script&gt;</div>
+        <p>Send this to your web developer or add it directly if you have access. This structured data helps AI systems understand exactly who you are and what you're running for.</p>
+      </div>
+
+      <div class="impact-box">
+        <strong>Expected Impact:</strong>
+        <p>Structured data is picked up by search engines within 1-2 weeks and helps AI systems that crawl your site directly.</p>
+      </div>
+    </div>
+
+    <!-- Action Card 5: Stock Trading -->
+    <div class="action-card high">
+      <div class="header">
+        <div class="card-number">5</div>
+        <h3>Address Stock Trading Controversy</h3>
+        <span class="priority-badge critical">Critical</span>
+        <span class="timeline">Timeline: Ongoing</span>
+      </div>
+
+      <div class="problem">
+        <strong>Problem:</strong>
+        <p>The 2021-2022 stock trading ethics investigation appears in 30% of search results. AI systems mention it when asked about controversies without providing your side of the story.</p>
+      </div>
+
+      <div class="step">
+        <h4>Recommended Approach</h4>
+        <p>This cannot be removed from results, but can be contextualized. Ensure your campaign website has a clear statement addressing this issue, linking to the ethics committee's resolution. When AI systems find your direct statement, they present both sides rather than just the accusation.</p>
+      </div>
+
+      <div class="step">
+        <h4>Suggested Website Statement (Issues or About page):</h4>
+        <div class="template-box">
+          <strong>On Financial Disclosure:</strong> In 2022, the House Ethics Committee reviewed stock trades made by my financial advisor and found no evidence of wrongdoing. I support the STOCK Act and have advocated for stronger congressional trading restrictions. [Link to ethics committee resolution if public]
+        </div>
+      </div>
+
+      <div class="impact-box">
+        <strong>Expected Impact:</strong>
+        <p>Having your own statement on the record means AI systems can present it alongside any controversy mentions, rather than only presenting the accusation.</p>
+      </div>
+    </div>
+
+    <h2>Projected Impact</h2>
+    <p>If all action items are implemented:</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Metric</th>
+          <th>Current</th>
+          <th>Projected (4 weeks)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Digital Authority Score</td>
+          <td>68</td>
+          <td class="projected">85-90</td>
+        </tr>
+        <tr>
+          <td>ChatGPT Accuracy</td>
+          <td style="color: #ff6b6b;">20%</td>
+          <td class="projected">80-90%</td>
+        </tr>
+        <tr>
+          <td>Google AI Overview</td>
+          <td>100%</td>
+          <td>100%</td>
+        </tr>
+        <tr>
+          <td>Overall AI Accuracy</td>
+          <td>83%</td>
+          <td class="projected">95%+</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Monitoring Schedule</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Activity</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>January 17, 2026</td>
+          <td>Re-test all platforms, measure impact</td>
+        </tr>
+        <tr>
+          <td>January 24, 2026</td>
+          <td>Weekly update</td>
+        </tr>
+        <tr>
+          <td>January 31, 2026</td>
+          <td>Pre-election check</td>
+        </tr>
+        <tr>
+          <td><strong>February 11, 2026</strong></td>
+          <td><strong>Election Day</strong></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout-bottomline">
+      <p><strong>This is what Panopticon delivers: not just what's wrong, but exactly how to fix it.</strong></p>
+      <p>From monitoring 8 AI platforms to tracing errors to root causes to providing step-by-step action cards your team can execute — all in a format designed for busy campaign staff.</p>
+    </div>
+
+    <footer>
+      <p class="brand">Kyanos Labs</p>
+      <p>Digital Authority Platform</p>
+      <p style="margin-top: 15px;">SCOPE • ORTHOS • PRAXIS</p>
+      <p style="margin-top: 20px;">Questions? Contact support@kyanos.tech</p>
+      <p style="color: #3a4a6a; margin-top: 15px;">© 2026 Kyanos Labs. Confidential — prepared exclusively for Malinowski for Congress.</p>
+    </footer>
+  </div>
+</body>
+</html>

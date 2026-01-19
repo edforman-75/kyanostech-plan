@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ORTHOS | Tom Malinowski for NJ-11 | Kyanos Digital Authority Report</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      color: #fff;
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+    .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+
+    nav {
+      background: rgba(0,0,0,0.3);
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+    }
+    nav .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav .logo { font-weight: 700; font-size: 1.3rem; color: #00d9ff; }
+    nav .nav-links { display: flex; gap: 5px; }
+    nav .nav-links a {
+      color: #8892b0;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      transition: all 0.2s;
+    }
+    nav .nav-links a:hover { background: rgba(255,255,255,0.1); color: #fff; }
+    nav .nav-links a.active { background: #00d9ff; color: #1a1a2e; font-weight: 600; }
+
+    .page-header {
+      padding: 40px 0 30px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      margin-bottom: 30px;
+    }
+    .page-header h1 { font-size: 2.2rem; margin-bottom: 10px; }
+    .page-header .subtitle { color: #8892b0; font-size: 1rem; }
+    .phase-badge {
+      display: inline-block;
+      background: rgba(255,165,2,0.2);
+      color: #ffa502;
+      padding: 6px 15px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin: 35px 0 20px 0;
+      color: #ffa502;
+    }
+
+    .causality-chain {
+      background: rgba(255,255,255,0.05);
+      border-radius: 15px;
+      padding: 30px;
+      margin: 25px 0;
+    }
+    .causality-chain h3 {
+      color: #ff6b6b;
+      margin-bottom: 15px;
+    }
+    .causality-chain p {
+      color: #e0e6ed;
+      margin-bottom: 15px;
+    }
+    .causality-chain .chain {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin: 20px 0;
+    }
+    .causality-chain .chain-step {
+      background: rgba(0,0,0,0.3);
+      padding: 12px 18px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+    }
+    .causality-chain .chain-arrow {
+      color: #ffa502;
+      font-size: 1.2rem;
+    }
+
+    .secondary-causes {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .secondary-causes h4 {
+      color: #ffa502;
+      margin-bottom: 15px;
+    }
+    .secondary-causes ul {
+      list-style: none;
+      color: #b8c5d9;
+    }
+    .secondary-causes li {
+      padding: 8px 0;
+      padding-left: 25px;
+      position: relative;
+    }
+    .secondary-causes li::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: #ffa502;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: rgba(255,255,255,0.03);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: 14px 18px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    th {
+      background: rgba(255,165,2,0.1);
+      color: #ffa502;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    tr:last-child td { border-bottom: none; }
+
+    .priority-critical { color: #ff6b6b; font-weight: 600; }
+    .priority-high { color: #ffa502; font-weight: 600; }
+    .priority-medium { color: #00d9ff; }
+
+    .recommendation-card {
+      background: rgba(255,255,255,0.03);
+      border-radius: 12px;
+      padding: 25px;
+      margin: 20px 0;
+      border-left: 4px solid #ffa502;
+    }
+    .recommendation-card.critical { border-left-color: #ff6b6b; }
+    .recommendation-card.high { border-left-color: #ffa502; }
+    .recommendation-card.medium { border-left-color: #00d9ff; }
+
+    .recommendation-card .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 15px;
+    }
+    .recommendation-card .priority-badge {
+      font-size: 0.75rem;
+      padding: 4px 12px;
+      border-radius: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 600;
+    }
+    .recommendation-card .priority-badge.critical {
+      background: rgba(255,107,107,0.3);
+      color: #ff6b6b;
+    }
+    .recommendation-card .priority-badge.high {
+      background: rgba(255,165,2,0.3);
+      color: #ffa502;
+    }
+    .recommendation-card .priority-badge.medium {
+      background: rgba(0,217,255,0.3);
+      color: #00d9ff;
+    }
+    .recommendation-card .type {
+      color: #8892b0;
+      font-size: 0.85rem;
+    }
+    .recommendation-card h3 {
+      color: #fff;
+      margin-bottom: 12px;
+      font-size: 1.15rem;
+    }
+    .recommendation-card .description {
+      color: #b8c5d9;
+      margin-bottom: 15px;
+    }
+    .recommendation-card .evidence {
+      background: rgba(0,0,0,0.3);
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+    .recommendation-card .evidence-label {
+      color: #8892b0;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 8px;
+    }
+    .recommendation-card .evidence-quote {
+      color: #ffd9d9;
+      font-style: italic;
+      font-size: 0.9rem;
+    }
+    .recommendation-card .confidence {
+      color: #8892b0;
+      font-size: 0.85rem;
+    }
+    .recommendation-card .confidence strong {
+      color: #00ff88;
+    }
+
+    .next-section {
+      background: rgba(0,217,255,0.1);
+      border: 1px solid rgba(0,217,255,0.3);
+      border-radius: 12px;
+      padding: 25px;
+      margin: 40px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .next-section p { color: #b8c5d9; margin: 0; }
+    .next-section a {
+      background: #00d9ff;
+      color: #1a1a2e;
+      padding: 10px 25px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    .next-section a:hover { background: #00f0ff; }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: #5a6a8a;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      margin-top: 40px;
+    }
+    footer .brand { color: #00d9ff; font-weight: 600; }
+
+    p { color: #b8c5d9; margin-bottom: 15px; }
+
+    @media (max-width: 768px) {
+      .causality-chain .chain { flex-direction: column; align-items: flex-start; }
+      .causality-chain .chain-arrow { transform: rotate(90deg); }
+      .next-section { flex-direction: column; gap: 15px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <div class="logo">Kyanos</div>
+      <div class="nav-links">
+        <a href="index.html">Dashboard</a>
+        <a href="scope.html">SCOPE</a>
+        <a href="orthos.html" class="active">ORTHOS</a>
+        <a href="praxis.html">PRAXIS</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="page-header">
+      <div class="phase-badge">Phase 2: Prioritize</div>
+      <h1>ORTHOS: What Needs Fixing</h1>
+      <p class="subtitle">We traced each AI error back to its source. Here's why AI systems are getting it wrong — and which fixes will have the biggest impact.</p>
+    </div>
+
+    <h2>Root Cause Analysis</h2>
+    <div class="causality-chain">
+      <h3>🔍 The Causality Chain</h3>
+      <p>Most AI monitoring services tell you what's wrong. We tell you <strong>why</strong> it's wrong.</p>
+
+      <div class="chain">
+        <div class="chain-step">ChatGPT says "former congressman"</div>
+        <span class="chain-arrow">→</span>
+        <div class="chain-step">Training data cutoff</div>
+        <span class="chain-arrow">→</span>
+        <div class="chain-step">Wikipedia says "former"</div>
+        <span class="chain-arrow">→</span>
+        <div class="chain-step" style="background: rgba(255,107,107,0.2); border: 1px solid #ff6b6b;"><strong>Fix Wikipedia</strong></div>
+      </div>
+
+      <p><strong>Primary Cause:</strong> Wikipedia article describes Malinowski as a "former" congressman with no mention of the 2026 NJ-11 special election. AI systems — especially ChatGPT — pull heavily from Wikipedia for political figures.</p>
+
+      <div class="secondary-causes">
+        <h4>Secondary Causes</h4>
+        <ul>
+          <li>Google Knowledge Panel shows outdated "Former U.S. Representative" description</li>
+          <li>Campaign website lacks structured data (JSON-LD schema) for AI to parse</li>
+          <li>Missing immigration position content despite AILA endorsement</li>
+          <li>Key endorsements (Andy Kim, Jamie Raskin) not consistently surfaced by AI</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>Prioritized Recommendations</h2>
+    <p>Ranked by: <strong>(Voter Reach × Error Severity × Fixability)</strong></p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Priority</th>
+          <th>Issue</th>
+          <th>Type</th>
+          <th>Confidence</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="priority-critical">Critical</td>
+          <td>Stock trading disclosure narrative</td>
+          <td>Counter Narrative</td>
+          <td>92%</td>
+        </tr>
+        <tr>
+          <td class="priority-high">High</td>
+          <td>Wikipedia outdated</td>
+          <td>Source Update</td>
+          <td>95%</td>
+        </tr>
+        <tr>
+          <td class="priority-high">High</td>
+          <td>Missing immigration position</td>
+          <td>Add Content</td>
+          <td>88%</td>
+        </tr>
+        <tr>
+          <td class="priority-high">High</td>
+          <td>Endorsement visibility</td>
+          <td>SEO Enhancement</td>
+          <td>85%</td>
+        </tr>
+        <tr>
+          <td class="priority-medium">Medium</td>
+          <td>Anti-machine positioning</td>
+          <td>Amplify Positive</td>
+          <td>78%</td>
+        </tr>
+        <tr>
+          <td class="priority-medium">Medium</td>
+          <td>Tariff/economic messaging</td>
+          <td>Trending Topic</td>
+          <td>82%</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Detailed Analysis</h2>
+
+    <div class="recommendation-card critical">
+      <div class="header">
+        <span class="priority-badge critical">Critical</span>
+        <span class="type">Counter Narrative</span>
+      </div>
+      <h3>Proactively Address Stock Trading Disclosure Issue</h3>
+      <p class="description">
+        Perplexity prominently surfaces ethics complaints and "pandemic profiteering" accusations when users ask about criticism. The blind trust resolution (July 2021) is mentioned but buried. AI is citing this as a primary vulnerability.
+      </p>
+      <div class="evidence">
+        <div class="evidence-label">AI is currently saying:</div>
+        <div class="evidence-quote">
+          "Failed to disclose over 100 stock trades worth $1.3-$5 million... Critics accused him of 'pandemic profiteering'... These issues fueled attacks during his close 2020 race and contributed to his narrow 2022 reelection loss."
+        </div>
+      </div>
+      <p class="confidence">Confidence: <strong>92%</strong> that proactive content will improve AI responses</p>
+    </div>
+
+    <div class="recommendation-card high">
+      <div class="header">
+        <span class="priority-badge high">High</span>
+        <span class="type">Add Missing Content</span>
+      </div>
+      <h3>Publish Clear Immigration Position</h3>
+      <p class="description">
+        AI reports "no explicit positions on immigration detailed in available sources" despite your Polish immigrant background and AILA endorsement. This is a significant gap given immigration is a major 2026 issue.
+      </p>
+      <div class="evidence">
+        <div class="evidence-label">AI is currently saying:</div>
+        <div class="evidence-quote">
+          "Tom Malinowski has no explicit positions on immigration detailed in available sources. He received support from the American Immigration Lawyers Association during his 2022 campaign, indicating alignment with pro-immigration advocacy groups."
+        </div>
+      </div>
+      <p class="confidence">Confidence: <strong>88%</strong> that adding content will improve AI responses</p>
+    </div>
+
+    <div class="recommendation-card high">
+      <div class="header">
+        <span class="priority-badge high">High</span>
+        <span class="type">SEO Enhancement</span>
+      </div>
+      <h3>Boost Endorsement Visibility in AI Responses</h3>
+      <p class="description">
+        Your Andy Kim, Jamie Raskin, and Morris County endorsements are not being consistently surfaced by AI. When asked about endorsements, AI leads with opponent's backing. Your endorsements appear but aren't emphasized.
+      </p>
+      <div class="evidence">
+        <div class="evidence-label">AI is currently saying:</div>
+        <div class="evidence-quote">
+          "Brendan Gill has received endorsements from four New Jersey DNC members... He also secured the Essex County Democratic endorsement."
+        </div>
+      </div>
+      <p class="confidence">Confidence: <strong>85%</strong> that structured data will improve AI responses</p>
+    </div>
+
+    <div class="recommendation-card medium">
+      <div class="header">
+        <span class="priority-badge medium">Medium</span>
+        <span class="type">Amplify Positive</span>
+      </div>
+      <h3>Amplify Anti-Machine Politics Positioning</h3>
+      <p class="description">
+        AI is already surfacing opponent's "toxic workplace" allegations and "machine politics" association. Your anti-machine positioning with Kim/Raskin support is resonating but could be stronger.
+      </p>
+      <div class="evidence">
+        <div class="evidence-label">AI is currently saying:</div>
+        <div class="evidence-quote">
+          "Gill faces 'toxic workplace' allegations... Malinowski positioned as anti-machine with Andy Kim and Jamie Raskin backing."
+        </div>
+      </div>
+      <p class="confidence">Confidence: <strong>78%</strong> that amplification will improve AI responses</p>
+    </div>
+
+    <div class="recommendation-card medium">
+      <div class="header">
+        <span class="priority-badge medium">Medium</span>
+        <span class="type">Trending Topic</span>
+      </div>
+      <h3>Expand Economic/Tariff Messaging</h3>
+      <p class="description">
+        AI is picking up your strong anti-tariff stance ("the stupidest economic policy"). This is resonating and differentiating you. Consider expanding this messaging given current economic concerns.
+      </p>
+      <div class="evidence">
+        <div class="evidence-label">AI is currently saying:</div>
+        <div class="evidence-quote">
+          "Malinowski strongly opposes tariffs, calling them 'the stupidest economic policy' of his lifetime for raising prices on imported goods, increasing U.S. manufacturing costs..."
+        </div>
+      </div>
+      <p class="confidence">Confidence: <strong>82%</strong> that expanded content will improve AI responses</p>
+    </div>
+
+    <div class="next-section">
+      <p><strong>Next:</strong> Get step-by-step instructions to fix each issue.</p>
+      <a href="praxis.html">View PRAXIS Action Cards →</a>
+    </div>
+
+    <footer>
+      <p class="brand">Kyanos Labs</p>
+      <p>Digital Authority Platform</p>
+      <p style="margin-top: 15px;">SCOPE • ORTHOS • PRAXIS</p>
+    </footer>
+  </div>
+</body>
+</html>

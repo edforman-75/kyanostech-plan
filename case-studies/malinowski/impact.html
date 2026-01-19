@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Impact | AI Presence Report | Malinowski for Congress</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --kyanos-navy: #1f2937;
+      --kyanos-blue: #3b82f6;
+      --kyanos-blue-dark: #1d4ed8;
+      --kyanos-gold: #f59e0b;
+      --kyanos-silver: #6b7280;
+      --kyanos-slate: #f8fafc;
+      --kyanos-cream: #fefce8;
+      --kyanos-success: #16a34a;
+      --kyanos-warning: #d97706;
+      --kyanos-error: #dc2626;
+      --kyanos-mid: #374151;
+      --kyanos-border: #e5e7eb;
+      --kyanos-white: #ffffff;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--kyanos-slate);
+      color: var(--kyanos-navy);
+      line-height: 1.6;
+    }
+
+    .nav {
+      background: var(--kyanos-white);
+      border-bottom: 1px solid var(--kyanos-border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-brand {
+      font-weight: 800;
+      font-size: 20px;
+      color: var(--kyanos-navy);
+      padding: 16px 0;
+      text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+
+    .nav-brand span { color: var(--kyanos-blue); }
+    .nav-links { display: flex; gap: 0; }
+
+    .nav-link {
+      padding: 18px 20px;
+      text-decoration: none;
+      color: var(--kyanos-silver);
+      font-weight: 500;
+      font-size: 14px;
+      border-bottom: 3px solid transparent;
+      transition: all 0.2s;
+    }
+
+    .nav-link:hover { color: var(--kyanos-navy); }
+    .nav-link.active { color: var(--kyanos-blue); border-bottom-color: var(--kyanos-blue); font-weight: 600; }
+
+    .page-header {
+      background: linear-gradient(135deg, var(--kyanos-navy) 0%, var(--kyanos-blue-dark) 100%);
+      color: var(--kyanos-white);
+      padding: 48px 24px;
+    }
+
+    .page-header-inner { max-width: 900px; margin: 0 auto; }
+    .page-header h1 { font-size: 36px; font-weight: 800; margin-bottom: 8px; letter-spacing: -0.5px; }
+    .page-header p { font-size: 16px; opacity: 0.9; max-width: 600px; }
+
+    .container { max-width: 900px; margin: 0 auto; padding: 48px 24px; }
+
+    .section { margin-bottom: 48px; }
+
+    .section-title {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--kyanos-silver);
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .section-title::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--kyanos-border);
+    }
+
+    .card {
+      background: var(--kyanos-white);
+      border-radius: 12px;
+      padding: 28px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+      border: 1px solid var(--kyanos-border);
+    }
+
+    .card h2 {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: var(--kyanos-navy);
+    }
+
+    .card h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: var(--kyanos-navy);
+    }
+
+    .card p {
+      font-size: 15px;
+      color: var(--kyanos-mid);
+      margin-bottom: 16px;
+      line-height: 1.7;
+    }
+
+    .card p:last-child { margin-bottom: 0; }
+
+    /* Big Number */
+    .big-number {
+      text-align: center;
+      padding: 32px;
+      background: linear-gradient(135deg, var(--kyanos-navy) 0%, var(--kyanos-blue-dark) 100%);
+      border-radius: 12px;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .big-number-value {
+      font-size: 64px;
+      font-weight: 800;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .big-number-label {
+      font-size: 16px;
+      opacity: 0.9;
+    }
+
+    .big-number-compare {
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      font-size: 14px;
+      opacity: 0.8;
+    }
+
+    /* Comparison Grid */
+    .compare-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin: 24px 0;
+    }
+
+    .compare-card {
+      background: var(--kyanos-slate);
+      border-radius: 8px;
+      padding: 20px;
+      border: 1px solid var(--kyanos-border);
+      text-align: center;
+    }
+
+    .compare-card.highlight {
+      background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+      border-color: var(--kyanos-success);
+    }
+
+    .compare-card.warning {
+      background: #fef2f2;
+      border-color: #fecaca;
+    }
+
+    .compare-value {
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--kyanos-navy);
+      margin-bottom: 4px;
+    }
+
+    .compare-card.highlight .compare-value { color: var(--kyanos-success); }
+    .compare-card.warning .compare-value { color: var(--kyanos-error); }
+
+    .compare-label {
+      font-size: 13px;
+      color: var(--kyanos-silver);
+      font-weight: 500;
+    }
+
+    .compare-note {
+      font-size: 11px;
+      color: var(--kyanos-silver);
+      margin-top: 8px;
+    }
+
+    /* Data Table */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    .data-table th {
+      text-align: left;
+      padding: 12px 16px;
+      background: var(--kyanos-slate);
+      font-weight: 600;
+      color: var(--kyanos-navy);
+      border-bottom: 2px solid var(--kyanos-border);
+    }
+
+    .data-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--kyanos-border);
+      color: var(--kyanos-mid);
+    }
+
+    .data-table tr:last-child td { border-bottom: none; }
+
+    .data-table .amount {
+      font-weight: 600;
+      color: var(--kyanos-navy);
+    }
+
+    .data-table .highlight-row {
+      background: #ecfdf5;
+    }
+
+    .data-table .highlight-row td {
+      color: var(--kyanos-success);
+      font-weight: 600;
+    }
+
+    .data-table .dim-row td {
+      color: var(--kyanos-silver);
+    }
+
+    /* Insight Box */
+    .insight-box {
+      background: #dbeafe;
+      border: 1px solid #93c5fd;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+
+    .insight-box-label {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--kyanos-blue-dark);
+      margin-bottom: 8px;
+    }
+
+    .insight-box p {
+      font-size: 14px;
+      color: #1e3a8a;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    /* Warning Box */
+    .warning-box {
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+
+    .warning-box-label {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--kyanos-error);
+      margin-bottom: 8px;
+    }
+
+    .warning-box p {
+      font-size: 14px;
+      color: #991b1b;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    /* Success Box */
+    .success-box {
+      background: #ecfdf5;
+      border: 1px solid #86efac;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+
+    .success-box-label {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--kyanos-success);
+      margin-bottom: 8px;
+    }
+
+    .success-box p {
+      font-size: 14px;
+      color: #166534;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    /* Callout */
+    .callout {
+      background: var(--kyanos-cream);
+      border-left: 4px solid var(--kyanos-gold);
+      padding: 20px 24px;
+      margin: 24px 0;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .callout p {
+      font-size: 15px;
+      color: #92400e;
+      margin: 0;
+      font-style: italic;
+    }
+
+    /* Funnel */
+    .funnel {
+      margin: 24px 0;
+    }
+
+    .funnel-step {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 16px;
+      background: var(--kyanos-white);
+      border: 1px solid var(--kyanos-border);
+      margin-bottom: -1px;
+    }
+
+    .funnel-step:first-child { border-radius: 8px 8px 0 0; }
+    .funnel-step:last-child { border-radius: 0 0 8px 8px; }
+
+    .funnel-number {
+      width: 48px;
+      height: 48px;
+      background: var(--kyanos-slate);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--kyanos-navy);
+      flex-shrink: 0;
+    }
+
+    .funnel-step.highlight .funnel-number {
+      background: var(--kyanos-success);
+      color: white;
+    }
+
+    .funnel-content { flex: 1; }
+
+    .funnel-content h4 {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--kyanos-navy);
+      margin-bottom: 2px;
+    }
+
+    .funnel-content p {
+      font-size: 13px;
+      color: var(--kyanos-silver);
+      margin: 0;
+    }
+
+    .funnel-value {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--kyanos-navy);
+      text-align: right;
+      min-width: 120px;
+    }
+
+    .funnel-step.highlight .funnel-value { color: var(--kyanos-success); }
+
+    .footer {
+      text-align: center;
+      padding: 48px 24px;
+      color: var(--kyanos-silver);
+      font-size: 13px;
+      border-top: 1px solid var(--kyanos-border);
+      background: var(--kyanos-white);
+    }
+
+    .footer-brand {
+      font-weight: 700;
+      color: var(--kyanos-navy);
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    .footer-brand span { color: var(--kyanos-blue); }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">Kyanos<span>Tech</span></a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Summary</a>
+        <a href="monitor.html" class="nav-link">Monitor</a>
+        <a href="analyze.html" class="nav-link">Analyze</a>
+        <a href="fix.html" class="nav-link">Fix</a>
+        <a href="impact.html" class="nav-link active">Impact</a>
+        <a href="methodology.html" class="nav-link">Methodology</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <div class="page-header-inner">
+      <h1>Impact</h1>
+      <p>AI optimization costs $1-10 per voter. TV costs $200-600. And new research shows AI is 4x more persuasive.</p>
+    </div>
+  </div>
+
+  <main class="container">
+    <!-- THE HEADLINE -->
+    <div class="section">
+      <div class="big-number">
+        <div class="big-number-value">$1-10</div>
+        <div class="big-number-label">Cost per voter influenced through AI optimization</div>
+        <div class="big-number-compare">vs. $50-150 for CTV &nbsp;|&nbsp; vs. $200-600 for broadcast TV</div>
+      </div>
+
+      <div class="card" style="border-left: 4px solid var(--kyanos-success);">
+        <h2>AI Optimization Is the Best Investment This Campaign Can Make</h2>
+        <p>In the New York media market, traditional advertising is prohibitively expensive. But there's a channel that costs a fraction of the price and—according to new research—is <strong>4 times more persuasive</strong> than TV ads.</p>
+        <p>That channel is AI. When voters search for information about candidates, they increasingly get answers from Google AI Overview and ChatGPT. <strong>Controlling what AI says about you is the highest-ROI activity available to this campaign.</strong></p>
+      </div>
+    </div>
+
+    <!-- THE PROBLEM -->
+    <div class="section">
+      <div class="section-title">The NY Media Market Problem</div>
+
+      <div class="card">
+        <h2>Broadcast TV Is Not an Option</h2>
+        <p>NJ-11 is in the New York DMA—the most expensive media market in the United States. Traditional broadcast TV advertising is not viable for a congressional campaign here.</p>
+
+        <div class="compare-grid">
+          <div class="compare-card warning">
+            <div class="compare-value">96%</div>
+            <div class="compare-label">Wasted Impressions</div>
+            <div class="compare-note">NYC, Long Island, CT viewers can't vote in NJ-11</div>
+          </div>
+          <div class="compare-card warning">
+            <div class="compare-value">$200-600</div>
+            <div class="compare-label">Cost per Voter Moved</div>
+            <div class="compare-note">After accounting for waste</div>
+          </div>
+        </div>
+
+        <div class="warning-box">
+          <div class="warning-box-label">The Math</div>
+          <p>A $300,000 TV buy in the NY DMA reaches ~20 million people. Only ~760,000 live in NJ-11 (3.8%). You're paying for 19+ million impressions that cannot convert to votes. Effective cost per NJ-11 voter: <strong>25x the face value</strong>.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- COST COMPARISON -->
+    <div class="section">
+      <div class="section-title">Cost Per Voter Moved</div>
+
+      <div class="card">
+        <h3>Comparing Your Options in NJ-11</h3>
+        <p>What does it actually cost to change a voter's mind through each channel?</p>
+
+        <table class="data-table" style="margin-top: 16px;">
+          <thead>
+            <tr>
+              <th>Method</th>
+              <th>Cost per Voter</th>
+              <th>Viable in NJ-11?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="dim-row">
+              <td>Broadcast TV (NY DMA)</td>
+              <td class="amount">$200-600</td>
+              <td>❌ Prohibitive waste</td>
+            </tr>
+            <tr>
+              <td>CTV/Streaming (Roku, YouTube TV)</td>
+              <td class="amount">$50-150</td>
+              <td>✅ Hyperlocal targeting</td>
+            </tr>
+            <tr>
+              <td>Digital Advertising</td>
+              <td class="amount">$50-100</td>
+              <td>✅ Standard</td>
+            </tr>
+            <tr>
+              <td>Direct Mail</td>
+              <td class="amount">$59-200</td>
+              <td>✅ Targeted</td>
+            </tr>
+            <tr>
+              <td>Door-to-Door Canvassing</td>
+              <td class="amount">$19-29</td>
+              <td>⚠️ Turnout, not persuasion</td>
+            </tr>
+            <tr class="highlight-row">
+              <td><strong>AI Presence Optimization</strong></td>
+              <td class="amount">$1-10</td>
+              <td>✅ Best ROI</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="insight-box" style="margin-top: 20px;">
+          <div class="insight-box-label">Research Note: Traditional Contact</div>
+          <p>Academic research (<a href="https://www.cambridge.org/core/journals/american-political-science-review/article/minimal-persuasive-effects-of-campaign-contact-in-general-elections-evidence-from-49-field-experiments/753665A313C4AB433DBF7110299B7433" target="_blank" style="color: var(--kyanos-blue-dark);">Kalla & Broockman, 2018</a>) found that traditional campaign contact has <strong>near-zero persuasion effect</strong> in general elections. However, persuasion <em>does</em> work in <strong>low-information environments</strong>—like primaries and down-ballot races—where voters are actively seeking information. This is exactly when AI provides first impressions.</p>
+        </div>
+
+        <div class="insight-box" style="margin-top: 16px; background: #fef3c7; border-color: #fcd34d;">
+          <div class="insight-box-label" style="color: #92400e;">New Research: AI Is 4x More Persuasive Than Ads</div>
+          <p style="color: #78350f;">Landmark studies published in <a href="https://www.nature.com/articles/s41586-025-09771-9" target="_blank" style="color: #92400e; font-weight: 500;"><em>Nature</em></a> and <a href="https://www.science.org/doi/10.1126/science.aea3884" target="_blank" style="color: #92400e; font-weight: 500;"><em>Science</em></a> (December 2025) by MIT's David Rand and Cornell's Gordon Pennycook found that <strong>AI chatbots are approximately 4 times more effective at political persuasion</strong> than traditional advertising.</p>
+          <p style="color: #78350f; margin-top: 12px;">In the 2024 U.S. election, a pro-Harris AI chatbot moved Trump supporters <strong>3.9 points</strong> on a 100-point scale—roughly 4x the measured effect of political ads in 2016 and 2020. In Canadian and Polish elections, AI achieved shifts of <strong>~10 percentage points</strong> among opposition voters.</p>
+          <p style="color: #78350f; margin-top: 12px;"><strong>The implication:</strong> AI isn't just another channel—it may be the most persuasive political communication medium ever studied. When voters encounter AI responses about candidates, those responses have outsized influence on their opinions.</p>
+        </div>
+
+        <div class="callout" style="margin-top: 16px;">
+          <p><strong>Note:</strong> The costs above for TV, CTV, digital, and mail are <em>media placement only</em>. They do not include production costs (creating the ads) or the standard 15% commission to the media buyer of record. True all-in costs for traditional advertising are 20-30% higher than shown.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- VOTER FUNNEL -->
+    <div class="section">
+      <div class="section-title">Voter Research Funnel</div>
+
+      <div class="card">
+        <h3>How Many Voters Will AI Influence?</h3>
+        <p>Tracing the path from registered voters to those influenced by improved AI responses:</p>
+
+        <div class="funnel">
+          <div class="funnel-step">
+            <div class="funnel-number">1</div>
+            <div class="funnel-content">
+              <h4>Expected Primary Turnout</h4>
+              <p>Democratic primary voters, special election</p>
+            </div>
+            <div class="funnel-value">60,000-80,000</div>
+          </div>
+          <div class="funnel-step">
+            <div class="funnel-number">2</div>
+            <div class="funnel-content">
+              <h4>Research Candidates Online</h4>
+              <p>62% of voters use internet for candidate research (Pew, 2024)</p>
+            </div>
+            <div class="funnel-value">37,000-50,000</div>
+          </div>
+          <div class="funnel-step">
+            <div class="funnel-number">3</div>
+            <div class="funnel-content">
+              <h4>Encounter AI Responses</h4>
+              <p>40-45% see Google AI Overview or use ChatGPT</p>
+            </div>
+            <div class="funnel-value">15,000-22,000</div>
+          </div>
+          <div class="funnel-step highlight">
+            <div class="funnel-number">✓</div>
+            <div class="funnel-content">
+              <h4>Influenced by Improved AI</h4>
+              <p>10-20% persuasion rate in low-information primary</p>
+            </div>
+            <div class="funnel-value">1,500-4,400</div>
+          </div>
+        </div>
+
+        <p style="margin-top: 20px;">In a competitive primary, <strong>2,000-4,000 voters</strong> seeing accurate, favorable information—instead of ethics violations as the lead story—can be decisive.</p>
+      </div>
+    </div>
+
+    <!-- ROI -->
+    <div class="section">
+      <div class="section-title">What It Costs</div>
+
+      <div class="card">
+        <h3>What AI Optimization Costs — Including Staff Time</h3>
+        <p>A complete accounting, including the campaign staff time required to implement recommendations:</p>
+
+        <h4 style="margin-top: 20px; margin-bottom: 12px; font-size: 14px; color: var(--kyanos-silver); text-transform: uppercase; letter-spacing: 0.5px;">Staff Implementation Time</h4>
+
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Task</th>
+              <th>Hours</th>
+              <th>Staff</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Ethics FAQ page (write, review, publish)</td>
+              <td class="amount">3-4 hrs</td>
+              <td>Comms Director</td>
+            </tr>
+            <tr>
+              <td>Immigration page (narrative + policy)</td>
+              <td class="amount">4-5 hrs</td>
+              <td>Comms Director</td>
+            </tr>
+            <tr>
+              <td>Endorsements page (gather quotes, format)</td>
+              <td class="amount">2-3 hrs</td>
+              <td>Digital Staff</td>
+            </tr>
+            <tr>
+              <td>News/Press page updates</td>
+              <td class="amount">1-2 hrs</td>
+              <td>Digital Staff</td>
+            </tr>
+            <tr>
+              <td>SEO updates + schema markup</td>
+              <td class="amount">2-3 hrs</td>
+              <td>Digital Staff</td>
+            </tr>
+            <tr>
+              <td>Knowledge Panel claim + edits</td>
+              <td class="amount">1-2 hrs</td>
+              <td>Digital Staff</td>
+            </tr>
+            <tr>
+              <td>Ballotpedia Candidate Connection</td>
+              <td class="amount">2-3 hrs</td>
+              <td>Comms Director</td>
+            </tr>
+            <tr>
+              <td>Wikipedia Talk page request</td>
+              <td class="amount">1-2 hrs</td>
+              <td>Comms Director</td>
+            </tr>
+            <tr style="background: var(--kyanos-slate);">
+              <td><strong>Total Staff Time</strong></td>
+              <td class="amount"><strong>16-24 hrs</strong></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p style="margin-top: 16px;"><strong>Staff cost estimate:</strong> 20 hours × $40/hr average = <strong>$800</strong></p>
+        <p style="font-size: 13px; color: var(--kyanos-silver);">(Range: $400-1,250 depending on who does the work)</p>
+
+        <h4 style="margin-top: 28px; margin-bottom: 12px; font-size: 14px; color: var(--kyanos-silver); text-transform: uppercase; letter-spacing: 0.5px;">Total Investment</h4>
+
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Component</th>
+              <th>Cost</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Staff time to implement (20 hrs @ $40/hr)</td>
+              <td class="amount">$800</td>
+            </tr>
+            <tr>
+              <td>AI monitoring through primary (Panopticon, 6 weeks)</td>
+              <td class="amount">$750-1,500</td>
+            </tr>
+            <tr>
+              <td>Optional: Outside consultant for content</td>
+              <td class="amount">$0-2,000</td>
+            </tr>
+            <tr style="background: var(--kyanos-slate);">
+              <td><strong>Total Investment</strong></td>
+              <td class="amount"><strong>$1,550-4,300</strong></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="success-box" style="margin-top: 20px;">
+          <div class="success-box-label">The Real Number</div>
+          <p>All-in cost to fix your AI presence: <strong>$1,500-4,500</strong>. This includes staff time, monitoring, and optional outside help. Most campaigns can do this with existing staff in under a week.</p>
+        </div>
+
+        <p style="margin-top: 20px;">Estimated voters influenced: 1,500-4,400</p>
+        <p><strong>Cost per voter: $0.35-3.00</strong></p>
+      </div>
+
+      <div class="card">
+        <h3>Comparison: What Else Could $15,000 Buy?</h3>
+
+        <table class="data-table" style="margin-top: 16px;">
+          <thead>
+            <tr>
+              <th>$15,000 Spent On</th>
+              <th>Voters Reached</th>
+              <th>Voters Persuaded</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="dim-row">
+              <td>Broadcast TV (NY DMA)</td>
+              <td>~1M (96% outside NJ-11)</td>
+              <td>~25-75</td>
+            </tr>
+            <tr>
+              <td>CTV/Streaming (hyperlocal)</td>
+              <td>~300,000-500,000</td>
+              <td>~100-300</td>
+            </tr>
+            <tr>
+              <td>Digital Ads</td>
+              <td>~500,000-1M impressions</td>
+              <td>~150-300</td>
+            </tr>
+            <tr>
+              <td>Direct Mail</td>
+              <td>~10,000-15,000 households</td>
+              <td>~75-250</td>
+            </tr>
+            <tr class="highlight-row">
+              <td><strong>AI Optimization</strong></td>
+              <td>15,000-22,000 (AI encounters)</td>
+              <td><strong>1,500-4,400</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- THE POINT -->
+    <div class="section">
+      <div class="section-title">The Bottom Line</div>
+
+      <div class="card" style="border: 2px solid var(--kyanos-success);">
+        <h2 style="color: var(--kyanos-success);">This Is the Highest-ROI Investment Available</h2>
+
+        <div class="compare-grid" style="margin-top: 20px;">
+          <div class="compare-card highlight">
+            <div class="compare-value">$1-10</div>
+            <div class="compare-label">AI Optimization</div>
+            <div class="compare-note">Per voter influenced</div>
+          </div>
+          <div class="compare-card">
+            <div class="compare-value" style="color: var(--kyanos-silver);">$50-600</div>
+            <div class="compare-label">Traditional Media</div>
+            <div class="compare-note">Per voter influenced</div>
+          </div>
+        </div>
+
+        <p style="margin-top: 24px; font-size: 17px;"><strong>New research proves AI is 4x more persuasive than TV ads.</strong> And it costs 10-100x less per voter. In the New York media market, this isn't a close call.</p>
+
+        <div class="success-box" style="margin-top: 24px;">
+          <div class="success-box-label">The Strategic Imperative</div>
+          <p>Right now, when voters ask AI about Tom Malinowski, they see ethics violations first. For <strong>$1,500-4,500 all-in</strong>, the campaign can fix this—reaching 1,500-4,400 persuadable voters at the exact moment they're researching. No other investment delivers this return.</p>
+        </div>
+
+        <h3 style="margin-top: 28px;">Four Actions. Maximum Impact.</h3>
+
+        <ol style="margin-top: 16px; padding-left: 20px; color: var(--kyanos-mid); font-size: 15px;">
+          <li style="margin-bottom: 14px;"><strong>Implement the website fixes</strong> — Ethics FAQ, immigration page, endorsements page. These create the source material AI will cite.</li>
+          <li style="margin-bottom: 14px;"><strong>Update third-party sources</strong> — Claim the Knowledge Panel, complete Ballotpedia's Candidate Connection, request Wikipedia updates.</li>
+          <li style="margin-bottom: 14px;"><strong>Generate local press coverage</strong> — NJ.com and NJ Globe matter more than national outlets for what AI surfaces locally.</li>
+          <li style="margin-bottom: 14px;"><strong>Monitor weekly</strong> — Track AI responses through the primary. Respond quickly when new issues emerge.</li>
+        </ol>
+
+        <div class="callout" style="margin-top: 24px; background: linear-gradient(135deg, var(--kyanos-navy) 0%, var(--kyanos-blue-dark) 100%); border-left-color: var(--kyanos-gold);">
+          <p style="color: white; font-style: normal; font-size: 16px;"><strong>The campaign cannot outspend its way to visibility in this market. But it can out-optimize. Every dollar spent on AI presence delivers 10-100x the return of traditional advertising.</strong></p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p class="footer-brand">Kyanos<span>Tech</span></p>
+    <p>AI Presence Report: Malinowski for Congress (NJ-11) | January 2026</p>
+    <p style="margin-top: 16px; font-size: 11px; color: #9ca3af;">This report was produced using tools currently in development. Campaigns should review all recommendations carefully before implementing.</p>
+  </footer>
+</body>
+</html>

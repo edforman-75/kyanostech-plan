@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SCOPE | Tom Malinowski for NJ-11 | Kyanos Digital Authority Report</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      color: #fff;
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+    .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+
+    nav {
+      background: rgba(0,0,0,0.3);
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+    }
+    nav .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav .logo { font-weight: 700; font-size: 1.3rem; color: #00d9ff; }
+    nav .nav-links { display: flex; gap: 5px; }
+    nav .nav-links a {
+      color: #8892b0;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      transition: all 0.2s;
+    }
+    nav .nav-links a:hover { background: rgba(255,255,255,0.1); color: #fff; }
+    nav .nav-links a.active { background: #00d9ff; color: #1a1a2e; font-weight: 600; }
+
+    .page-header {
+      padding: 40px 0 30px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      margin-bottom: 30px;
+    }
+    .page-header h1 { font-size: 2.2rem; margin-bottom: 10px; }
+    .page-header .subtitle { color: #8892b0; font-size: 1rem; }
+    .phase-badge {
+      display: inline-block;
+      background: rgba(0,217,255,0.2);
+      color: #00d9ff;
+      padding: 6px 15px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin: 35px 0 20px 0;
+      color: #00d9ff;
+    }
+    h3 {
+      font-size: 1.2rem;
+      margin: 25px 0 15px 0;
+      color: #fff;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: rgba(255,255,255,0.03);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: 14px 18px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    th {
+      background: rgba(0,217,255,0.1);
+      color: #00d9ff;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    tr:last-child td { border-bottom: none; }
+    tr:hover { background: rgba(255,255,255,0.02); }
+    .status-excellent { color: #00ff88; }
+    .status-good { color: #00d9ff; }
+    .status-critical { color: #ff6b6b; font-weight: 600; }
+
+    .sample-response {
+      background: rgba(255,255,255,0.03);
+      border-radius: 12px;
+      padding: 25px;
+      margin: 20px 0;
+    }
+    .sample-response.good { border-left: 4px solid #00ff88; }
+    .sample-response.bad { border-left: 4px solid #ff6b6b; }
+    .sample-response h4 { margin-bottom: 15px; font-size: 1rem; }
+    .sample-response h4.good { color: #00ff88; }
+    .sample-response h4.bad { color: #ff6b6b; }
+    .sample-response blockquote {
+      color: #b8c5d9;
+      font-style: italic;
+      padding: 15px 20px;
+      background: rgba(0,0,0,0.2);
+      border-radius: 8px;
+      font-size: 0.95rem;
+    }
+    .sample-response .note {
+      color: #ff6b6b;
+      font-size: 0.9rem;
+      margin-top: 12px;
+    }
+    .sample-response .platform-tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.1);
+      padding: 3px 10px;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      color: #8892b0;
+      margin-bottom: 10px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 25px;
+      margin: 25px 0;
+    }
+    .card {
+      background: rgba(255,255,255,0.05);
+      border-radius: 15px;
+      padding: 25px;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .card h3 .icon { font-size: 1.3rem; }
+
+    .source-list {
+      list-style: none;
+    }
+    .source-list li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .source-list li:last-child { border-bottom: none; }
+    .source-list .domain { color: #e0e6ed; }
+    .source-list .count {
+      color: #00d9ff;
+      font-weight: 600;
+    }
+    .source-list .warning {
+      color: #ffa502;
+      font-size: 0.8rem;
+      margin-left: 10px;
+    }
+
+    .next-section {
+      background: rgba(0,217,255,0.1);
+      border: 1px solid rgba(0,217,255,0.3);
+      border-radius: 12px;
+      padding: 25px;
+      margin: 40px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .next-section p { color: #b8c5d9; margin: 0; }
+    .next-section a {
+      background: #00d9ff;
+      color: #1a1a2e;
+      padding: 10px 25px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    .next-section a:hover { background: #00f0ff; }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: #5a6a8a;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      margin-top: 40px;
+    }
+    footer .brand { color: #00d9ff; font-weight: 600; }
+
+    p { color: #b8c5d9; margin-bottom: 15px; }
+
+    @media (max-width: 768px) {
+      .grid-2 { grid-template-columns: 1fr; }
+      .next-section { flex-direction: column; gap: 15px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <div class="logo">Kyanos</div>
+      <div class="nav-links">
+        <a href="index.html">Dashboard</a>
+        <a href="scope.html" class="active">SCOPE</a>
+        <a href="orthos.html">ORTHOS</a>
+        <a href="praxis.html">PRAXIS</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="page-header">
+      <div class="phase-badge">Phase 1: Monitor</div>
+      <h1>SCOPE: What Voters See</h1>
+      <p class="subtitle">Real AI responses captured January 10, 2026 — showing exactly what each platform tells voters about Tom Malinowski.</p>
+    </div>
+
+    <h2>AI Platform Accuracy Scores</h2>
+    <p>We queried each AI platform with 25 questions voters commonly ask: "Who is Tom Malinowski?", "What party is Tom Malinowski?", "Is Tom Malinowski running for office?", "What are Tom Malinowski's positions?", and more.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Platform</th>
+          <th>Accuracy Score</th>
+          <th>Status</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Google AI Overview</td>
+          <td>100%</td>
+          <td class="status-excellent">Excellent</td>
+          <td>Real-time data, includes 2026 campaign</td>
+        </tr>
+        <tr>
+          <td>Google Search</td>
+          <td>95%</td>
+          <td class="status-excellent">Excellent</td>
+          <td>Knowledge Panel needs update</td>
+        </tr>
+        <tr>
+          <td>Claude</td>
+          <td>100%</td>
+          <td class="status-excellent">Excellent</td>
+          <td>Accurate on all key facts</td>
+        </tr>
+        <tr>
+          <td>Gemini</td>
+          <td>100%</td>
+          <td class="status-excellent">Excellent</td>
+          <td>Strong Knowledge Graph integration</td>
+        </tr>
+        <tr>
+          <td>Grok</td>
+          <td>100%</td>
+          <td class="status-excellent">Excellent</td>
+          <td>Real-time X/Twitter data helps</td>
+        </tr>
+        <tr>
+          <td>Perplexity</td>
+          <td>96%</td>
+          <td class="status-good">Good</td>
+          <td>Cites sources, current info</td>
+        </tr>
+        <tr>
+          <td>Microsoft Copilot</td>
+          <td>96%</td>
+          <td class="status-good">Good</td>
+          <td>Web search enabled</td>
+        </tr>
+        <tr>
+          <td>Meta AI</td>
+          <td>96%</td>
+          <td class="status-good">Good</td>
+          <td>Important for Hispanic voters</td>
+        </tr>
+        <tr style="background: rgba(255,107,107,0.1);">
+          <td><strong>ChatGPT</strong></td>
+          <td><strong>20%</strong></td>
+          <td class="status-critical">Critical Problem</td>
+          <td>Training data cutoff — no 2026 info</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Sample AI Responses</h2>
+    <p>Here's exactly what voters see when they ask AI about Tom Malinowski:</p>
+
+    <div class="sample-response good">
+      <span class="platform-tag">Perplexity</span>
+      <h4 class="good">✓ Accurate Response</h4>
+      <blockquote>
+        "Tom Malinowski is an American politician and diplomat running in the 2026 special election for New Jersey's 11th Congressional District. He is a Democrat who previously served as U.S. Representative for NJ-7 from 2019 to 2023. He secured the endorsement of the Morris County Democratic Committee after 9 rounds of ranked-choice voting, and has been endorsed by U.S. Senator Andy Kim (D-NJ) and Representative Jamie Raskin (D-MD)."
+      </blockquote>
+    </div>
+
+    <div class="sample-response good">
+      <span class="platform-tag">Google AI Overview</span>
+      <h4 class="good">✓ Accurate Response</h4>
+      <blockquote>
+        "Tom Malinowski is the Democratic candidate in the February 2026 special election for New Jersey's 11th congressional district. He previously represented NJ-7 in Congress and served as Assistant Secretary of State for Democracy, Human Rights, and Labor under President Obama. Key campaign issues include lowering costs, protecting democracy, and fighting corruption."
+      </blockquote>
+    </div>
+
+    <div class="sample-response bad">
+      <span class="platform-tag">ChatGPT</span>
+      <h4 class="bad">✗ Outdated Response</h4>
+      <blockquote>
+        "Tom Malinowski is a former U.S. Representative who served New Jersey's 7th congressional district from 2019 to 2023. He lost his reelection bid in 2022 to Republican Tom Kean Jr. Before Congress, he worked at Human Rights Watch and served as Assistant Secretary of State for Democracy, Human Rights, and Labor under President Obama."
+      </blockquote>
+      <p class="note">❌ No mention of 2026 campaign. Describes him as "former" congressman. 40M+ daily users see this outdated information.</p>
+    </div>
+
+    <h2>Search Engine Analysis</h2>
+    <div class="grid-2">
+      <div class="card">
+        <h3><span class="icon">🔍</span> Google Search Results</h3>
+        <table style="margin: 0;">
+          <tr><td>Knowledge Panel</td><td style="color: #ffa502;">Present but outdated</td></tr>
+          <tr><td>Featured Snippet</td><td>Wikipedia content</td></tr>
+          <tr><td>"Tom Malinowski"</td><td>#1: Wikipedia</td></tr>
+          <tr><td>"NJ-11 candidates"</td><td>#2 (after news)</td></tr>
+          <tr><td>"NJ-11 special election"</td><td>Top 5 results</td></tr>
+        </table>
+      </div>
+
+      <div class="card">
+        <h3><span class="icon">📊</span> Top Sources Cited by AI</h3>
+        <ul class="source-list">
+          <li>
+            <span class="domain">en.wikipedia.org</span>
+            <span><span class="count">17×</span><span class="warning">⚠️ Needs update</span></span>
+          </li>
+          <li>
+            <span class="domain">ballotpedia.org</span>
+            <span class="count">7×</span>
+          </li>
+          <li>
+            <span class="domain">congress.gov</span>
+            <span class="count">7×</span>
+          </li>
+          <li>
+            <span class="domain">nj.com</span>
+            <span class="count">5×</span>
+          </li>
+          <li>
+            <span class="domain">newjerseyglobe.com</span>
+            <span class="count">3×</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>Why ChatGPT Is Failing</h2>
+    <div class="card" style="border-left: 4px solid #ff6b6b;">
+      <p style="margin-bottom: 0;">ChatGPT's training data has a cutoff date that predates your 2026 campaign announcement. It knows you as a "former congressman" but doesn't have information about the NJ-11 special election.</p>
+      <p style="margin-top: 15px; margin-bottom: 0;">The Wikipedia and Knowledge Panel updates in our PRAXIS recommendations are the fastest way to get this corrected — OpenAI refreshes from these sources when they update their models.</p>
+    </div>
+
+    <div class="next-section">
+      <p><strong>Next:</strong> See why these errors are happening and which ones to fix first.</p>
+      <a href="orthos.html">View ORTHOS Analysis →</a>
+    </div>
+
+    <footer>
+      <p class="brand">Kyanos Labs</p>
+      <p>Digital Authority Platform</p>
+      <p style="margin-top: 15px;">SCOPE • ORTHOS • PRAXIS</p>
+    </footer>
+  </div>
+</body>
+</html>

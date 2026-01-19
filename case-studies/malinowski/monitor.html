@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monitor | AI Presence Report | Malinowski for Congress</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --kyanos-navy: #1f2937;
+      --kyanos-blue: #3b82f6;
+      --kyanos-blue-dark: #1d4ed8;
+      --kyanos-gold: #f59e0b;
+      --kyanos-silver: #6b7280;
+      --kyanos-slate: #f8fafc;
+      --kyanos-cream: #fefce8;
+      --kyanos-success: #16a34a;
+      --kyanos-warning: #d97706;
+      --kyanos-error: #dc2626;
+      --kyanos-mid: #374151;
+      --kyanos-border: #e5e7eb;
+      --kyanos-white: #ffffff;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--kyanos-slate);
+      color: var(--kyanos-navy);
+      line-height: 1.6;
+    }
+
+    .nav {
+      background: var(--kyanos-white);
+      border-bottom: 1px solid var(--kyanos-border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-brand {
+      font-weight: 800;
+      font-size: 20px;
+      color: var(--kyanos-navy);
+      padding: 16px 0;
+      text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+
+    .nav-brand span { color: var(--kyanos-blue); }
+    .nav-links { display: flex; gap: 0; }
+
+    .nav-link {
+      padding: 18px 20px;
+      text-decoration: none;
+      color: var(--kyanos-silver);
+      font-weight: 500;
+      font-size: 14px;
+      border-bottom: 3px solid transparent;
+      transition: all 0.2s;
+    }
+
+    .nav-link:hover { color: var(--kyanos-navy); }
+    .nav-link.active { color: var(--kyanos-blue); border-bottom-color: var(--kyanos-blue); font-weight: 600; }
+
+    .page-header {
+      background: linear-gradient(135deg, var(--kyanos-navy) 0%, var(--kyanos-blue-dark) 100%);
+      color: var(--kyanos-white);
+      padding: 48px 24px;
+    }
+
+    .page-header-inner { max-width: 900px; margin: 0 auto; }
+    .page-header h1 { font-size: 36px; font-weight: 800; margin-bottom: 8px; letter-spacing: -0.5px; }
+    .page-header p { font-size: 16px; opacity: 0.9; max-width: 600px; }
+
+    .container { max-width: 900px; margin: 0 auto; padding: 48px 24px; }
+
+    .section { margin-bottom: 64px; }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid var(--kyanos-border);
+    }
+
+    .section-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 20px;
+      color: white;
+    }
+
+    .section-icon.google { background: #4285f4; }
+    .section-icon.chatgpt { background: #10a37f; }
+    .section-icon.ads { background: var(--kyanos-gold); }
+    .section-icon.press { background: var(--kyanos-success); }
+
+    .section-title { font-size: 24px; font-weight: 700; }
+    .section-subtitle { font-size: 14px; color: var(--kyanos-silver); }
+
+    .card {
+      background: var(--kyanos-white);
+      border-radius: 12px;
+      padding: 28px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+      border: 1px solid var(--kyanos-border);
+    }
+
+    .card h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: var(--kyanos-navy);
+    }
+
+    .card p {
+      font-size: 14px;
+      color: var(--kyanos-mid);
+      margin-bottom: 16px;
+      line-height: 1.7;
+    }
+
+    /* Score Card */
+    .score-card {
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+    }
+
+    .score-badge {
+      width: 72px;
+      height: 72px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      font-weight: 800;
+      color: white;
+      flex-shrink: 0;
+    }
+
+    .score-badge.grade-d { background: var(--kyanos-error); }
+    .score-badge.grade-c { background: var(--kyanos-warning); }
+    .score-badge.grade-b { background: var(--kyanos-blue); }
+    .score-badge.grade-a { background: var(--kyanos-success); }
+
+    .score-content { flex: 1; }
+    .score-content h3 { margin-bottom: 8px; }
+    .score-content p { margin-bottom: 0; }
+
+    /* AI Quote Box */
+    .ai-quote {
+      background: var(--kyanos-slate);
+      border-left: 4px solid var(--kyanos-border);
+      border-radius: 0 8px 8px 0;
+      padding: 20px;
+      margin: 20px 0;
+    }
+
+    .ai-quote-label {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--kyanos-silver);
+      margin-bottom: 8px;
+    }
+
+    .ai-quote blockquote {
+      font-size: 14px;
+      color: var(--kyanos-mid);
+      font-style: italic;
+      margin: 0;
+      line-height: 1.7;
+    }
+
+    .ai-quote blockquote strong {
+      color: var(--kyanos-error);
+      font-style: normal;
+    }
+
+    .ai-quote blockquote .positive {
+      color: var(--kyanos-success);
+      font-style: normal;
+    }
+
+    /* Problem/Missing Boxes */
+    .problem-box {
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      border-radius: 8px;
+      padding: 16px;
+      margin-top: 16px;
+    }
+
+    .problem-box-label {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--kyanos-error);
+      margin-bottom: 6px;
+    }
+
+    .problem-box p {
+      font-size: 13px;
+      color: #991b1b;
+      margin: 0;
+    }
+
+    .missing-box {
+      background: var(--kyanos-cream);
+      border: 1px solid #fde68a;
+      border-radius: 8px;
+      padding: 16px;
+      margin-top: 16px;
+    }
+
+    .missing-box-label {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--kyanos-warning);
+      margin-bottom: 6px;
+    }
+
+    .missing-box p, .missing-box ul {
+      font-size: 13px;
+      color: #92400e;
+      margin: 0;
+    }
+
+    .missing-box ul { padding-left: 20px; }
+    .missing-box li { margin-bottom: 4px; }
+
+    /* Context Sections */
+    .context-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .context-card {
+      background: var(--kyanos-white);
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+      border: 1px solid var(--kyanos-border);
+    }
+
+    .context-card h4 {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--kyanos-navy);
+      margin-bottom: 12px;
+    }
+
+    .context-card p {
+      font-size: 13px;
+      color: var(--kyanos-mid);
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    /* Data Table */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    .data-table th {
+      text-align: left;
+      padding: 12px 16px;
+      background: var(--kyanos-slate);
+      font-weight: 600;
+      color: var(--kyanos-navy);
+      border-bottom: 2px solid var(--kyanos-border);
+    }
+
+    .data-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--kyanos-border);
+      color: var(--kyanos-mid);
+    }
+
+    .data-table tr:last-child td { border-bottom: none; }
+
+    .data-table .amount {
+      font-weight: 600;
+      color: var(--kyanos-navy);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* Article List */
+    .article-list { list-style: none; padding: 0; margin: 0; }
+
+    .article-item {
+      padding: 16px 0;
+      border-bottom: 1px solid var(--kyanos-border);
+    }
+
+    .article-item:last-child { border-bottom: none; }
+
+    .article-item h4 {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--kyanos-navy);
+      margin-bottom: 4px;
+    }
+
+    .article-meta {
+      font-size: 12px;
+      color: var(--kyanos-silver);
+    }
+
+    .article-status {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 600;
+      margin-left: 8px;
+    }
+
+    .article-status.missing {
+      background: #fef2f2;
+      color: var(--kyanos-error);
+    }
+
+    /* Next Step */
+    .next-step {
+      background: var(--kyanos-white);
+      border: 2px solid var(--kyanos-blue);
+      border-radius: 12px;
+      padding: 32px;
+      text-align: center;
+      margin-top: 48px;
+    }
+
+    .next-step h3 { margin-bottom: 12px; color: var(--kyanos-navy); }
+    .next-step p { color: var(--kyanos-silver); margin-bottom: 20px; }
+
+    .btn {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--kyanos-blue) 0%, var(--kyanos-blue-dark) 100%);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+    }
+
+    .footer {
+      text-align: center;
+      padding: 48px 24px;
+      color: var(--kyanos-silver);
+      font-size: 13px;
+      border-top: 1px solid var(--kyanos-border);
+      background: var(--kyanos-white);
+    }
+
+    .footer-brand {
+      font-weight: 700;
+      color: var(--kyanos-navy);
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    .footer-brand span { color: var(--kyanos-blue); }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">Kyanos<span>Tech</span></a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Summary</a>
+        <a href="monitor.html" class="nav-link active">Monitor</a>
+        <a href="analyze.html" class="nav-link">Analyze</a>
+        <a href="fix.html" class="nav-link">Fix</a>
+        <a href="impact.html" class="nav-link">Impact</a>
+        <a href="methodology.html" class="nav-link">Methodology</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <div class="page-header-inner">
+      <h1>Monitor</h1>
+      <p>What voters actually see when they ask Google and ChatGPT about Tom Malinowski. Raw intelligence from the platforms that matter most.</p>
+    </div>
+  </div>
+
+  <main class="container">
+    <!-- GOOGLE AI OVERVIEW -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon google">G</div>
+        <div>
+          <h2 class="section-title">Google AI Overview</h2>
+          <p class="section-subtitle">The box at the top of Google Search that millions see first</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="score-card">
+          <div class="score-badge grade-d">D</div>
+          <div class="score-content">
+            <h3>Current campaign invisible</h3>
+            <p>Google AI Overview shows only historical information from 2019-2023. There is no mention of the NJ-11 special election, the February 2026 primary, or the fact that Malinowski is currently running for Congress.</p>
+          </div>
+        </div>
+
+        <div class="ai-quote">
+          <div class="ai-quote-label">What voters see (query: "Tom Malinowski")</div>
+          <blockquote>
+            "Tom Malinowski is an American politician and diplomat who <strong>served as the U.S. representative for New Jersey's 7th congressional district from 2019 to 2023</strong>. He is a member of the Democratic Party."
+          </blockquote>
+        </div>
+
+        <div class="problem-box">
+          <div class="problem-box-label">The Problem</div>
+          <p>A voter searching "Tom Malinowski" doesn't learn he's running in 2026. The AI Overview treats him as a historical figure, not an active candidate. This is the first thing millions of voters see.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Query: "Tom Malinowski stock trading"</h3>
+        <p>When voters search specifically about the ethics issue, Google AI Overview summarizes the controversy without the resolution.</p>
+
+        <div class="ai-quote">
+          <div class="ai-quote-label">What voters see</div>
+          <blockquote>
+            "Malinowski <strong>failed to properly disclose stock trades</strong> during his time in Congress, including trades made during the early days of the COVID-19 pandemic. He was investigated by the Office of Congressional Ethics..."
+          </blockquote>
+        </div>
+
+        <div class="missing-box">
+          <div class="missing-box-label">What's Missing</div>
+          <ul>
+            <li>Blind trust established in July 2021</li>
+            <li>$200 administrative fine—no further penalties</li>
+            <li>Co-sponsored the Ban Conflicted Trading Act</li>
+            <li>Called for stronger congressional ethics enforcement</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- CHATGPT -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon chatgpt">C</div>
+        <div>
+          <h2 class="section-title">ChatGPT</h2>
+          <p class="section-subtitle">The AI assistant that 100+ million people use for research</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="score-card">
+          <div class="score-badge grade-c">C</div>
+          <div class="score-content">
+            <h3>Ethics violations prominent, resolution buried</h3>
+            <p>ChatGPT provides more complete information than Google but leads with the negative. The blind trust and ethics reform advocacy appear late in responses or not at all.</p>
+          </div>
+        </div>
+
+        <div class="ai-quote">
+          <div class="ai-quote-label">Query: "Is Tom Malinowski honest?"</div>
+          <blockquote>
+            "Tom Malinowski faced <strong>ethics investigations related to stock trading</strong> during his time in Congress. He failed to disclose multiple stock transactions as required by the STOCK Act... However, he has also been recognized for his work on <span class="positive">human rights issues</span> during his career at the State Department and Human Rights Watch."
+          </blockquote>
+        </div>
+
+        <div class="problem-box">
+          <div class="problem-box-label">The Problem</div>
+          <p>When a voter asks about honesty, the first thing they learn is about ethics violations. The human rights credentials appear as an afterthought. The blind trust resolution doesn't appear at all.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Query: "Tom Malinowski immigration"</h3>
+        <p>ChatGPT cannot answer substantive questions about immigration positions despite Malinowski's compelling personal story.</p>
+
+        <div class="ai-quote">
+          <div class="ai-quote-label">What voters see</div>
+          <blockquote>
+            "As a Democrat, Tom Malinowski has generally supported <strong>comprehensive immigration reform</strong> and opposed the Trump administration's immigration policies. He has advocated for DACA protections..."
+          </blockquote>
+        </div>
+
+        <div class="missing-box">
+          <div class="missing-box-label">What's Missing</div>
+          <ul>
+            <li>Fled Communist Poland at age 6 with his mother</li>
+            <li>Personal refugee experience shapes policy views</li>
+            <li>Human Rights Watch work on refugee issues</li>
+            <li>Specific positions on current immigration debates</li>
+          </ul>
+          <p style="margin-top: 12px;"><strong>Why:</strong> The campaign website has no immigration page. ChatGPT has no authoritative source to cite.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>What Works: Human Rights Credentials</h3>
+        <p>ChatGPT consistently surfaces the human rights background. This narrative works because it has source consistency.</p>
+
+        <div class="ai-quote">
+          <div class="ai-quote-label">Query: "Tom Malinowski background"</div>
+          <blockquote>
+            "Tom Malinowski served as <span class="positive">Assistant Secretary of State for Democracy, Human Rights, and Labor</span> under President Obama (2014-2017). Before that, he was the <span class="positive">Washington director for Human Rights Watch</span> for over a decade, where he advocated for human rights and democracy around the world..."
+          </blockquote>
+        </div>
+
+        <p style="margin-top: 16px;"><strong>This is the model.</strong> Wikipedia features it, the campaign website mentions it, news coverage references it. AI platforms find consistent sourcing, so they reliably surface it. Apply this pattern to topics that aren't working.</p>
+      </div>
+    </div>
+
+    <!-- GOOGLE KNOWLEDGE PANEL -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon google">G</div>
+        <div>
+          <h2 class="section-title">Google Knowledge Panel</h2>
+          <p class="section-subtitle">The box on the right side of search results when AI Mode is off</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="score-card">
+          <div class="score-badge grade-c">C</div>
+          <div class="score-content">
+            <h3>Shows "Former" Representative, not current candidate</h3>
+            <p>Many voters search Google without AI Mode enabled. They see the Knowledge Panel—a prominent box on the right side of search results—which currently labels Malinowski as "Former United States Representative."</p>
+          </div>
+        </div>
+
+        <h3 style="margin-top: 24px;">What the Knowledge Panel Shows</h3>
+        <ul class="method-list" style="margin-top: 12px;">
+          <li><strong>Title</strong> "Former United States Representative"</li>
+          <li><strong>Age</strong> 60 years (Sep 23, 1965)</li>
+          <li><strong>Previous Offices</strong> Representative, NJ 7th District</li>
+          <li><strong>Overview</strong> Pulls from Wikipedia—mentions diplomat, former representative, State Department service</li>
+          <li><strong>Sources</strong> Ballotpedia, CTCL, Wikipedia</li>
+          <li><strong>Social Profiles</strong> Instagram, Facebook, YouTube, X (Twitter)</li>
+        </ul>
+
+        <div class="problem-box" style="margin-top: 20px;">
+          <div class="problem-box-label">The Problem</div>
+          <p>The Knowledge Panel doesn't mention the 2026 campaign. A voter looking at this panel sees a former congressman, not a current candidate. The "Candidate for: 2026 US House New Jersey District 11" line appears in small text at the bottom—easy to miss.</p>
+        </div>
+
+        <div class="missing-box" style="margin-top: 16px;">
+          <div class="missing-box-label">What's Missing</div>
+          <ul>
+            <li>Prominent indication he's a current candidate</li>
+            <li>The 2026 special election context</li>
+            <li>Updated photo from the current campaign</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Why This Matters</h3>
+        <p>The Knowledge Panel is powered by Google's Knowledge Graph, which pulls from Wikipedia, Ballotpedia, and official sources. It appears for every search—not just AI Mode users. The campaign can claim and partially control this panel. See the Fix section for instructions.</p>
+      </div>
+    </div>
+
+    <!-- CONTEXT: AD SPENDING -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon ads">$</div>
+        <div>
+          <h2 class="section-title">Advertising Context</h2>
+          <p class="section-subtitle">What's being said in paid media that may influence AI and voter perception</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Attack Ads Are Running</h3>
+        <p>Opponent Sean Gill is spending $7.5K-8.5K on Meta attack ads calling Malinowski a "self-serving traitor." This paid content reinforces the negative narrative that AI platforms are picking up from news sources.</p>
+
+        <table class="data-table" style="margin-top: 16px;">
+          <thead>
+            <tr>
+              <th>Candidate/PAC</th>
+              <th>Platform</th>
+              <th>Spend</th>
+              <th>Note</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Malinowski Campaign</td>
+              <td>Google</td>
+              <td class="amount">$30K-40K</td>
+              <td>Dominates Google, minimal Meta</td>
+            </tr>
+            <tr>
+              <td>Sean Gill Campaign</td>
+              <td>Meta</td>
+              <td class="amount">$7.5K-8.5K</td>
+              <td>Attack ads, no Google presence</td>
+            </tr>
+            <tr>
+              <td>UDP + 218 Project (for Malinowski)</td>
+              <td>Meta</td>
+              <td class="amount">~$450K</td>
+              <td>Super PAC support covering Meta</td>
+            </tr>
+            <tr>
+              <td>DLGA (for Way)</td>
+              <td>TV + Mail</td>
+              <td class="amount">$670K+</td>
+              <td>Largest outside spend in race</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="missing-box" style="margin-top: 20px;">
+          <div class="missing-box-label">What This Means</div>
+          <p>Gill's attack ads may be reinforcing the ethics narrative that AI is surfacing. The campaign should monitor whether attack language appears in AI responses and prepare rapid response content.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTEXT: PRESS COVERAGE -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon press">P</div>
+        <div>
+          <h2 class="section-title">Press Coverage Context</h2>
+          <p class="section-subtitle">Fresh positive content that AI should be citing—but isn't on the website</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>5 Positive Articles Not on the Campaign Website</h3>
+        <p>These articles exist and are favorable. They're just not on the campaign's press page—so AI systems that check the official website for recent coverage find nothing.</p>
+
+        <ul class="article-list">
+          <li class="article-item">
+            <h4>"The Grownup in the Room" — Village Green NJ Profile</h4>
+            <span class="article-meta">December 29, 2025</span>
+            <span class="article-status missing">Not on website</span>
+          </li>
+          <li class="article-item">
+            <h4>Sheena Collum Endorsement Coverage</h4>
+            <span class="article-meta">December 30, 2025</span>
+            <span class="article-status missing">Not on website</span>
+          </li>
+          <li class="article-item">
+            <h4>Andy Kim Endorsement — NJ Globe</h4>
+            <span class="article-meta">November 17, 2025</span>
+            <span class="article-status missing">Not on website</span>
+          </li>
+          <li class="article-item">
+            <h4>Morris County Democrats Endorsement</h4>
+            <span class="article-meta">December 15, 2025</span>
+            <span class="article-status missing">Not on website</span>
+          </li>
+          <li class="article-item">
+            <h4>Bloomfield Councilwoman Endorsement</h4>
+            <span class="article-meta">January 13, 2026</span>
+            <span class="article-status missing">Not on website</span>
+          </li>
+        </ul>
+
+        <div class="problem-box" style="margin-top: 20px;">
+          <div class="problem-box-label">The Website Problem</div>
+          <p>The campaign's news/press page was last updated in April 2020. AI systems looking for recent positive content find a 5+ year gap, then find the ethics controversy because that's the freshest news about him.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="next-step">
+      <h3>Next: Why AI Says This</h3>
+      <p>Now that you've seen what voters see, understand the causality chain—how website content and campaign activities flow through to AI responses.</p>
+      <a href="analyze.html" class="btn">View Analysis →</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p class="footer-brand">Kyanos<span>Tech</span></p>
+    <p>AI Presence Report: Malinowski for Congress (NJ-11) | January 2026</p>
+    <p style="margin-top: 16px; font-size: 11px; color: #9ca3af;">This report was produced using tools currently in development. Campaigns should review all recommendations carefully before implementing.</p>
+  </footer>
+</body>
+</html>

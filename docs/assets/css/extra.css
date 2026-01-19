@@ -1,0 +1,13 @@
+/* Sticky header navigation */
+.md-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Ensure tabs stay sticky too */
+.md-tabs {
+  position: sticky;
+  top: 48px; /* Height of main header */
+  z-index: 99;
+}

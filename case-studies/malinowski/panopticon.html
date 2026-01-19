@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panopticon: AI Monitoring &amp; Remediation | Malinowski Case Study</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-primary: #1E40AF;
+      --color-primary-dark: #1E3A8A;
+      --color-accent: #10B981;
+      --color-warning: #F59E0B;
+      --color-danger: #EF4444;
+      --color-gray-50: #F9FAFB;
+      --color-gray-100: #F3F4F6;
+      --color-gray-200: #E5E7EB;
+      --color-gray-500: #6B7280;
+      --color-gray-600: #4B5563;
+      --color-gray-700: #374151;
+      --color-gray-900: #111827;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--color-gray-50);
+      color: var(--color-gray-900);
+      line-height: 1.6;
+    }
+
+    .header {
+      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+      color: white;
+      padding: 32px 24px;
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .header-breadcrumb {
+      font-size: 13px;
+      opacity: 0.8;
+      margin-bottom: 8px;
+    }
+
+    .header-breadcrumb a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .header-breadcrumb a:hover { text-decoration: underline; }
+
+    .header h1 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .header-subtitle {
+      font-size: 16px;
+      opacity: 0.9;
+    }
+
+    .nav {
+      background: white;
+      border-bottom: 1px solid var(--color-gray-200);
+      padding: 0 24px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+    }
+
+    .nav-link {
+      padding: 16px 20px;
+      text-decoration: none;
+      color: var(--color-gray-600);
+      font-weight: 500;
+      font-size: 14px;
+      white-space: nowrap;
+      border-bottom: 2px solid transparent;
+      transition: all 0.2s;
+    }
+
+    .nav-link:hover { color: var(--color-gray-900); }
+    .nav-link.active {
+      color: var(--color-primary);
+      border-bottom-color: var(--color-primary);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 24px;
+    }
+
+    .phase-section {
+      margin-bottom: 48px;
+    }
+
+    .phase-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .phase-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      background: var(--color-primary);
+      color: white;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .phase-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--color-gray-900);
+    }
+
+    .phase-subtitle {
+      font-size: 14px;
+      color: var(--color-gray-500);
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      margin-bottom: 24px;
+      overflow: hidden;
+    }
+
+    .card-header {
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--color-gray-100);
+    }
+
+    .card-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--color-gray-900);
+    }
+
+    .card-body {
+      padding: 24px;
+    }
+
+    .ai-quote {
+      background: var(--color-gray-50);
+      border-left: 4px solid var(--color-danger);
+      padding: 16px 20px;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 20px;
+    }
+
+    .ai-quote-label {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--color-danger);
+      margin-bottom: 8px;
+    }
+
+    .ai-quote-text {
+      font-size: 14px;
+      color: var(--color-gray-700);
+      font-style: italic;
+      line-height: 1.7;
+    }
+
+    .finding-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .finding-item {
+      background: var(--color-gray-50);
+      border-radius: 8px;
+      padding: 20px;
+    }
+
+    .finding-item h4 {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-gray-900);
+      margin-bottom: 8px;
+    }
+
+    .finding-item p {
+      font-size: 14px;
+      color: var(--color-gray-600);
+    }
+
+    .recommendation-card {
+      border: 1px solid var(--color-gray-200);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 20px;
+    }
+
+    .recommendation-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 16px;
+    }
+
+    .recommendation-priority {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 12px;
+      border-radius: 16px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .priority-critical {
+      background: #FEE2E2;
+      color: #991B1B;
+    }
+
+    .priority-high {
+      background: #FEF3C7;
+      color: #92400E;
+    }
+
+    .priority-medium {
+      background: #DBEAFE;
+      color: #1E40AF;
+    }
+
+    .recommendation-type {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--color-gray-500);
+    }
+
+    .recommendation-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--color-gray-900);
+      margin-bottom: 12px;
+    }
+
+    .recommendation-description {
+      font-size: 15px;
+      color: var(--color-gray-600);
+      margin-bottom: 16px;
+      line-height: 1.7;
+    }
+
+    .recommendation-action {
+      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+      border-radius: 8px;
+      padding: 16px 20px;
+      color: white;
+    }
+
+    .recommendation-action-label {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      opacity: 0.8;
+      margin-bottom: 6px;
+    }
+
+    .recommendation-action-text {
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .recommendation-confidence {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid var(--color-gray-100);
+      font-size: 13px;
+      color: var(--color-gray-500);
+    }
+
+    .recommendation-confidence strong {
+      color: var(--color-gray-700);
+    }
+
+    .action-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      margin-bottom: 24px;
+      overflow: hidden;
+    }
+
+    .action-card-header {
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--color-gray-100);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .action-number {
+      width: 36px;
+      height: 36px;
+      background: var(--color-primary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    .action-title-group h3 {
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--color-gray-900);
+      margin-bottom: 2px;
+    }
+
+    .action-meta {
+      font-size: 13px;
+      color: var(--color-gray-500);
+    }
+
+    .action-card-body {
+      padding: 24px;
+    }
+
+    .step-list {
+      list-style: none;
+    }
+
+    .step-item {
+      display: flex;
+      gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--color-gray-100);
+    }
+
+    .step-item:last-child { border-bottom: none; }
+
+    .step-checkbox {
+      width: 22px;
+      height: 22px;
+      border: 2px solid var(--color-gray-300);
+      border-radius: 6px;
+      flex-shrink: 0;
+    }
+
+    .step-content { flex: 1; }
+
+    .step-title {
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--color-gray-900);
+      margin-bottom: 4px;
+    }
+
+    .step-detail {
+      font-size: 13px;
+      color: var(--color-gray-500);
+    }
+
+    .template-box {
+      background: var(--color-gray-50);
+      border: 1px solid var(--color-gray-200);
+      border-radius: 8px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    .template-label {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--color-gray-500);
+      margin-bottom: 12px;
+    }
+
+    .template-content {
+      font-size: 14px;
+      color: var(--color-gray-700);
+      line-height: 1.7;
+    }
+
+    .template-content strong {
+      color: var(--color-primary);
+    }
+
+    .footer {
+      text-align: center;
+      padding: 40px 24px;
+      color: var(--color-gray-500);
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <div class="header-breadcrumb">
+        <a href="index.html">Case Study</a> / Panopticon
+      </div>
+      <h1>Panopticon: AI Monitoring &amp; Remediation</h1>
+      <p class="header-subtitle">Monitor what AI says, prioritize issues, take action</p>
+    </div>
+  </header>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-link">Overview</a>
+      <a href="panopticon.html" class="nav-link active">Panopticon</a>
+      <a href="adwatch.html" class="nav-link">Adwatch</a>
+      <a href="goodink.html" class="nav-link">GoodInk</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <!-- PHASE 1: MONITOR -->
+    <section class="phase-section">
+      <div class="phase-header">
+        <div class="phase-badge">1</div>
+        <div>
+          <h2 class="phase-title">Monitor</h2>
+          <p class="phase-subtitle">Track how AI systems describe your candidate</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">What AI Is Saying About Tom Malinowski</h3>
+        </div>
+        <div class="card-body">
+          <div class="ai-quote">
+            <div class="ai-quote-label">When users ask about criticism (Perplexity)</div>
+            <div class="ai-quote-text">
+              "Failed to disclose over 100 stock trades worth $1.3-$5 million... Critics accused him of 'pandemic profiteering'... These issues fueled attacks during his close 2020 race and contributed to his narrow 2022 reelection loss."
+            </div>
+          </div>
+
+          <div class="ai-quote">
+            <div class="ai-quote-label">When users ask about immigration policy</div>
+            <div class="ai-quote-text">
+              "Tom Malinowski has no explicit positions on immigration detailed in available sources. He received support from the American Immigration Lawyers Association during his 2022 campaign, indicating alignment with pro-immigration advocacy groups."
+            </div>
+          </div>
+
+          <div class="ai-quote">
+            <div class="ai-quote-label">When users ask about endorsements</div>
+            <div class="ai-quote-text">
+              "Brendan Gill has received endorsements from four New Jersey DNC members... He also secured the Essex County Democratic endorsement."
+            </div>
+          </div>
+
+          <div class="finding-grid">
+            <div class="finding-item">
+              <h4>Stock Trading: Negative Frame</h4>
+              <p>Ethics complaints and "pandemic profiteering" appear first. Blind trust resolution (July 2021) mentioned but buried.</p>
+            </div>
+            <div class="finding-item">
+              <h4>Immigration: Content Gap</h4>
+              <p>AI says "no explicit positions" despite Polish immigrant background and AILA endorsement. Major issue for 2026.</p>
+            </div>
+            <div class="finding-item">
+              <h4>Endorsements: Competitor Advantage</h4>
+              <p>Gill's Essex County backing mentioned first. Andy Kim and Morris County endorsements not emphasized.</p>
+            </div>
+            <div class="finding-item">
+              <h4>Economic Position: Working</h4>
+              <p>Anti-tariff quote ("the stupidest economic policy") is being picked up and cited positively.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PHASE 2: PRIORITIZE -->
+    <section class="phase-section">
+      <div class="phase-header">
+        <div class="phase-badge">2</div>
+        <div>
+          <h2 class="phase-title">Prioritize</h2>
+          <p class="phase-subtitle">AI-generated recommendations ranked by impact</p>
+        </div>
+      </div>
+
+      <div class="recommendation-card">
+        <div class="recommendation-header">
+          <span class="recommendation-priority priority-critical">Critical</span>
+          <span class="recommendation-type">Counter Narrative</span>
+        </div>
+        <h3 class="recommendation-title">Proactively Address Stock Trading Disclosure Issue</h3>
+        <p class="recommendation-description">
+          Perplexity prominently surfaces ethics complaints and "pandemic profiteering" accusations when users ask about criticism of you. The blind trust resolution (July 2021) is mentioned but buried. AI is citing this as a primary vulnerability. Need proactive content to reframe the narrative.
+        </p>
+        <div class="recommendation-action">
+          <div class="recommendation-action-label">Recommended Action</div>
+          <div class="recommendation-action-text">
+            Publish a clear FAQ page on campaign site addressing: (1) Blind trust established July 2021, (2) No fines or penalties issued, (3) Your support for congressional stock trading reforms like the STOCK Act. Include direct quotes from ethics committee closure. This content should be crawlable and linked from bio page.
+          </div>
+        </div>
+        <div class="recommendation-confidence">
+          <span>Confidence: <strong>92%</strong> this will improve AI responses</span>
+        </div>
+      </div>
+
+      <div class="recommendation-card">
+        <div class="recommendation-header">
+          <span class="recommendation-priority priority-high">High</span>
+          <span class="recommendation-type">Add Missing Content</span>
+        </div>
+        <h3 class="recommendation-title">Publish Clear Immigration Position</h3>
+        <p class="recommendation-description">
+          AI reports "no explicit positions on immigration detailed in available sources" despite your Polish immigrant background and AILA endorsement. This is a significant gap given immigration is a major 2026 issue.
+        </p>
+        <div class="recommendation-action">
+          <div class="recommendation-action-label">Recommended Action</div>
+          <div class="recommendation-action-text">
+            Create an Issues page section on immigration that includes: (1) Your personal immigrant story (fled Communist Poland age 6), (2) Specific policy positions on DACA, visa reform, border security, (3) Your Human Rights Watch and State Dept experience on refugee issues. Leverage personal narrative as differentiator.
+          </div>
+        </div>
+        <div class="recommendation-confidence">
+          <span>Confidence: <strong>88%</strong> this will improve AI responses</span>
+        </div>
+      </div>
+
+      <div class="recommendation-card">
+        <div class="recommendation-header">
+          <span class="recommendation-priority priority-high">High</span>
+          <span class="recommendation-type">SEO Enhancement</span>
+        </div>
+        <h3 class="recommendation-title">Boost Endorsement Visibility in AI Responses</h3>
+        <p class="recommendation-description">
+          Your Andy Kim, Jamie Raskin, and Morris County endorsements are not being consistently surfaced by AI. When asked about endorsements, AI leads with Gill's Essex County backing. Your endorsements appear but aren't emphasized as strongly.
+        </p>
+        <div class="recommendation-action">
+          <div class="recommendation-action-label">Recommended Action</div>
+          <div class="recommendation-action-text">
+            Create dedicated Endorsements page with structured data markup. Press releases for each major endorsement should be individually published and crawlable. Add "Endorsed by Sen. Andy Kim and Rep. Jamie Raskin" to homepage hero section and meta description.
+          </div>
+        </div>
+        <div class="recommendation-confidence">
+          <span>Confidence: <strong>85%</strong> this will improve AI responses</span>
+        </div>
+      </div>
+
+      <div class="recommendation-card">
+        <div class="recommendation-header">
+          <span class="recommendation-priority priority-medium">Medium</span>
+          <span class="recommendation-type">Trending Topic</span>
+        </div>
+        <h3 class="recommendation-title">Expand Economic/Tariff Messaging</h3>
+        <p class="recommendation-description">
+          AI is picking up your strong anti-tariff stance ("the stupidest economic policy"). This is resonating and differentiating you. Consider expanding this messaging given current economic concerns.
+        </p>
+        <div class="recommendation-action">
+          <div class="recommendation-action-label">Recommended Action</div>
+          <div class="recommendation-action-text">
+            Create detailed economic policy page connecting tariff opposition to NJ-11 household impacts. Include specific data on how tariffs affect district residents. This quote is sticky - use it in paid and earned media.
+          </div>
+        </div>
+        <div class="recommendation-confidence">
+          <span>Confidence: <strong>82%</strong> this will improve AI responses</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PHASE 3: ACT -->
+    <section class="phase-section">
+      <div class="phase-header">
+        <div class="phase-badge">3</div>
+        <div>
+          <h2 class="phase-title">Act</h2>
+          <p class="phase-subtitle">Step-by-step implementation guides</p>
+        </div>
+      </div>
+
+      <div class="action-card">
+        <div class="action-card-header">
+          <div class="action-number">1</div>
+          <div class="action-title-group">
+            <h3>Address Stock Trading Narrative</h3>
+            <div class="action-meta">Critical Priority | Counter Narrative | Target: 3 days</div>
+          </div>
+        </div>
+        <div class="action-card-body">
+          <ul class="step-list">
+            <li class="step-item">
+              <div class="step-checkbox"></div>
+              <div class="step-content">
+                <div class="step-title">Create FAQ page on campaign website</div>
+                <div class="step-detail">Add /accountability or /transparency page with structured Q&A format</div>
+              </div>
+            </li>
+            <li class="step-item">
+              <div class="step-checkbox"></div>
+              <div class="step-content">
+                <div class="step-title">Write clear statement with key facts</div>
+                <div class="step-detail">Include: blind trust established July 2021, no fines/penalties, support for reforms</div>
+              </div>
+            </li>
+            <li class="step-item">
+              <div class="step-checkbox"></div>
+              <div class="step-content">
+                <div class="step-title">Add structured data markup</div>
+                <div class="step-detail">Use FAQPage schema for better AI parsing</div>
+              </div>
+            </li>
+            <li class="step-item">
+              <div class="step-checkbox"></div>
+              <div class="step-content">
+                <div class="step-title">Link from bio and about pages</div>
+                <div class="step-detail">Ensure crawlers find this content through internal links</div>
+              </div>
+            </li>
+          </ul>
+
+          <div class="template-box">
+            <div class="template-label">FAQ Entry Template</div>
+            <div class="template-content">
+              <strong>Q: What happened with Tom Malinowski and stock trading disclosures?</strong><br><br>
+              A: In 2021, Tom Malinowski acknowledged delays in filing required stock transaction reports. He took full responsibility, calling it "carelessness." In July 2021, he established a <strong>blind trust approved by the House Ethics Committee</strong> to ensure no future trading involvement. The Ethics Committee closed its review with <strong>no fines or penalties issued</strong>. Tom supports stronger congressional stock trading reforms and has called for passage of the STOCK Act improvements.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="action-card">
+        <div class="action-card-header">
+          <div class="action-number">2</div>
+          <div class="action-title-group">
+            <h3>Publish Immigration Position</h3>
+            <div class="action-meta">High Priority | Add Missing Content | Target: 5 days</div>
+          </div>
+        </div>
+        <div class="action-card-body">
+          <ul class="step-list">
+            <li class="step-item">
+              <div class="step-checkbox"></div>
+              <div class="step-content">
+                <div class="step-title">Create Issues page section on immigration</div>
+                <div class="step-detail">Add dedicated /issues/immigration page or section</div>
+              </div>
+            </li>
+            <li class="step-item">
+              <div class="step-checkbox"></div>
+              <div class="step-content">
+                <div class="step-title">Lead with personal immigrant story</div>
+                <div class="step-detail">"Fled Communist Poland at age 6" - use as opening hook</div>
+              </div>
+            </li>
+            <li class="step-item">
+              <div class="step-checkbox"></div>
+              <div class="step-content">
+                <div class="step-title">State specific policy positions</div>
+                <div class="step-detail">DACA support, visa reform, border security approach, refugee policy</div>
+              </div>
+            </li>
+            <li class="step-item">
+              <div class="step-checkbox"></div>
+              <div class="step-content">
+                <div class="step-title">Reference HRW and State Dept experience</div>
+                <div class="step-detail">Connect to your work on refugee issues globally</div>
+              </div>
+            </li>
+          </ul>
+
+          <div class="template-box">
+            <div class="template-label">Issues Page Template - Immigration</div>
+            <div class="template-content">
+              <strong>Tom Malinowski on Immigration</strong><br><br>
+              As someone who fled Communist Poland at age six and grew up in New Jersey as an immigrant, Tom understands firsthand what it means to seek a better life in America.<br><br>
+              During his time as <strong>Assistant Secretary of State for Democracy, Human Rights, and Labor</strong>, Tom worked on refugee resettlement and asylum policy. At Human Rights Watch, he advocated for humane treatment of migrants worldwide.<br><br>
+              <strong>Tom's immigration priorities:</strong><br>
+              - Protect Dreamers and create a path to citizenship for DACA recipients<br>
+              - Reform the legal immigration system to reduce backlogs<br>
+              - Secure the border while treating migrants with dignity<br>
+              - Support refugee resettlement consistent with American values
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="action-card">
+        <div class="action-card-header">
+          <div class="action-number">3</div>
+          <div class="action-title-group">
+            <h3>Enhance Endorsement Visibility</h3>
+            <div class="action-meta">High Priority | SEO Enhancement | Target: 2 days</div>
+          </div>
+        </div>
+        <div class="action-card-body">
+          <ul class="step-list">
+            <li class="step-item">
+              <div class="step-checkbox"></div>
+              <div class="step-content">
+                <div class="step-title">Create dedicated /endorsements page</div>
+                <div class="step-detail">List all endorsements with photos and quotes</div>
+              </div>
+            </li>
+            <li class="step-item">
+              <div class="step-checkbox"></div>
+              <div class="step-content">
+                <div class="step-title">Add endorsement banner to homepage</div>
+                <div class="step-detail">"Endorsed by Sen. Andy Kim and Rep. Jamie Raskin" in hero section</div>
+              </div>
+            </li>
+            <li class="step-item">
+              <div class="step-checkbox"></div>
+              <div class="step-content">
+                <div class="step-title">Update meta description</div>
+                <div class="step-detail">Include "endorsed by Sen. Andy Kim" in site-wide meta</div>
+              </div>
+            </li>
+            <li class="step-item">
+              <div class="step-checkbox"></div>
+              <div class="step-content">
+                <div class="step-title">Publish individual press releases</div>
+                <div class="step-detail">Each major endorsement should have its own crawlable page</div>
+              </div>
+            </li>
+          </ul>
+
+          <div class="template-box">
+            <div class="template-label">Key Endorsements to Highlight</div>
+            <div class="template-content">
+              <strong>Federal Elected Officials:</strong><br>
+              - <strong>Sen. Andy Kim</strong> (NJ) - "Tom stood with me when it mattered most"<br>
+              - <strong>Rep. Jamie Raskin</strong> (MD) - Anti-machine politics positioning<br><br>
+              <strong>Party Organizations:</strong><br>
+              - Morris County Democratic Committee (decisive victory: 41% vs 24%)<br>
+              - J Street PAC<br><br>
+              <strong>Labor:</strong><br>
+              - International Association of Sheet Metal, Air, Rail and Transportation Workers<br><br>
+              <strong>Local Officials:</strong><br>
+              - Mayor Sheena Collum (South Orange)
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Kyanos Technologies | Case Study: Tom Malinowski for Congress (NJ-11)</p>
+    <p>Panopticon: AI Monitoring &amp; Remediation Platform</p>
+  </footer>
+</body>
+</html>

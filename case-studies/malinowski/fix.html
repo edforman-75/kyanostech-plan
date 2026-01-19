@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fix | AI Presence Report | Malinowski for Congress</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* Kyanos Brand Colors */
+      --kyanos-navy: #1f2937;
+      --kyanos-blue: #3b82f6;
+      --kyanos-blue-dark: #1d4ed8;
+      --kyanos-gold: #f59e0b;
+      --kyanos-silver: #6b7280;
+      --kyanos-slate: #f8fafc;
+      --kyanos-cream: #fefce8;
+      --kyanos-success: #16a34a;
+      --kyanos-warning: #d97706;
+      --kyanos-error: #dc2626;
+      --kyanos-shadow: #111827;
+      --kyanos-mid: #374151;
+      --kyanos-border: #e5e7eb;
+      --kyanos-white: #ffffff;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--kyanos-slate);
+      color: var(--kyanos-navy);
+      line-height: 1.6;
+    }
+
+    /* Navigation */
+    .nav {
+      background: var(--kyanos-white);
+      border-bottom: 1px solid var(--kyanos-border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-brand {
+      font-weight: 800;
+      font-size: 20px;
+      color: var(--kyanos-navy);
+      padding: 16px 0;
+      text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+
+    .nav-brand span { color: var(--kyanos-blue); }
+
+    .nav-links { display: flex; gap: 0; }
+
+    .nav-link {
+      padding: 18px 20px;
+      text-decoration: none;
+      color: var(--kyanos-silver);
+      font-weight: 500;
+      font-size: 14px;
+      border-bottom: 3px solid transparent;
+      transition: all 0.2s;
+    }
+
+    .nav-link:hover { color: var(--kyanos-navy); }
+    .nav-link.active {
+      color: var(--kyanos-blue);
+      border-bottom-color: var(--kyanos-blue);
+      font-weight: 600;
+    }
+
+    /* Page Header */
+    .page-header {
+      background: linear-gradient(135deg, var(--kyanos-navy) 0%, var(--kyanos-blue-dark) 100%);
+      color: var(--kyanos-white);
+      padding: 48px 24px;
+    }
+
+    .page-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .page-header h1 {
+      font-size: 36px;
+      font-weight: 800;
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
+    }
+
+    .page-header p {
+      font-size: 16px;
+      opacity: 0.9;
+      max-width: 600px;
+    }
+
+    .container { max-width: 900px; margin: 0 auto; padding: 48px 24px; }
+
+    /* Priority Labels */
+    .priority-label {
+      display: inline-flex;
+      padding: 4px 12px;
+      border-radius: 16px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .priority-critical { background: #fef2f2; color: #991B1B; border: 1px solid #fecaca; }
+    .priority-high { background: var(--kyanos-cream); color: #92400E; border: 1px solid #fde68a; }
+    .priority-quick { background: #dcfce7; color: #065F46; border: 1px solid #bbf7d0; }
+    .priority-strategic { background: #dbeafe; color: var(--kyanos-blue-dark); border: 1px solid #93c5fd; }
+    .priority-press { background: #fae8ff; color: #86198f; border: 1px solid #f0abfc; }
+
+    /* Action Cards */
+    .action-card {
+      background: var(--kyanos-white);
+      border-radius: 12px;
+      padding: 28px;
+      margin-bottom: 24px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+      border: 1px solid var(--kyanos-border);
+      border-left: 4px solid var(--kyanos-silver);
+    }
+
+    .action-card.critical { border-left-color: var(--kyanos-error); }
+    .action-card.high { border-left-color: var(--kyanos-gold); }
+    .action-card.quick { border-left-color: var(--kyanos-success); }
+    .action-card.strategic { border-left-color: var(--kyanos-blue); }
+    .action-card.press { border-left-color: #a855f7; }
+
+    .action-card h3 { font-size: 18px; font-weight: 600; margin-bottom: 8px; color: var(--kyanos-navy); }
+    .action-card > p { font-size: 14px; color: var(--kyanos-mid); margin-bottom: 20px; }
+
+    /* Why Box */
+    .action-why {
+      background: var(--kyanos-slate);
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 20px;
+      border: 1px solid var(--kyanos-border);
+    }
+
+    .action-why-label {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--kyanos-silver);
+      margin-bottom: 6px;
+    }
+
+    .action-why p {
+      font-size: 13px;
+      color: var(--kyanos-mid);
+      margin: 0;
+    }
+
+    /* Squarespace Steps */
+    .squarespace-steps {
+      background: linear-gradient(135deg, var(--kyanos-navy) 0%, var(--kyanos-blue-dark) 100%);
+      border-radius: 8px;
+      padding: 20px;
+      color: white;
+      margin-bottom: 16px;
+    }
+
+    .squarespace-steps-label {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      opacity: 0.8;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .squarespace-steps-label::before {
+      content: "■";
+      color: var(--kyanos-gold);
+    }
+
+    .squarespace-steps ol {
+      font-size: 14px;
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .squarespace-steps li { margin-bottom: 10px; line-height: 1.5; }
+    .squarespace-steps li:last-child { margin-bottom: 0; }
+
+    .squarespace-steps code {
+      background: rgba(255,255,255,0.15);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+    }
+
+    /* Code Block */
+    .code-block {
+      background: var(--kyanos-shadow);
+      border-radius: 8px;
+      padding: 16px;
+      margin-top: 12px;
+      overflow-x: auto;
+    }
+
+    .code-block-label {
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--kyanos-gold);
+      margin-bottom: 8px;
+    }
+
+    .code-block pre {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: #e5e7eb;
+      margin: 0;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+
+    /* Checklist */
+    .checklist {
+      background: var(--kyanos-slate);
+      border-radius: 8px;
+      padding: 16px;
+      border: 1px solid var(--kyanos-border);
+    }
+
+    .checklist-label {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--kyanos-silver);
+      margin-bottom: 10px;
+    }
+
+    .checklist ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .checklist li {
+      font-size: 13px;
+      color: var(--kyanos-mid);
+      padding: 6px 0;
+      padding-left: 24px;
+      position: relative;
+    }
+
+    .checklist li::before {
+      content: "☐";
+      position: absolute;
+      left: 0;
+      color: var(--kyanos-silver);
+    }
+
+    /* Section Divider */
+    .section-divider {
+      text-align: center;
+      padding: 40px 0 24px 0;
+      color: var(--kyanos-silver);
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .section-divider::before,
+    .section-divider::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--kyanos-border);
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 48px 24px;
+      color: var(--kyanos-silver);
+      font-size: 13px;
+      border-top: 1px solid var(--kyanos-border);
+      background: var(--kyanos-white);
+      margin-top: 48px;
+    }
+
+    .footer-brand {
+      font-weight: 700;
+      color: var(--kyanos-navy);
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    .footer-brand span { color: var(--kyanos-blue); }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">Kyanos<span>Tech</span></a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Summary</a>
+        <a href="monitor.html" class="nav-link">Monitor</a>
+        <a href="analyze.html" class="nav-link">Analyze</a>
+        <a href="fix.html" class="nav-link active">Fix</a>
+        <a href="impact.html" class="nav-link">Impact</a>
+        <a href="methodology.html" class="nav-link">Methodology</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <div class="page-header-inner">
+      <h1>Fix</h1>
+      <p>Step-by-step Squarespace instructions for website changes, plus press and endorsement strategies. Each action addresses a specific finding from Monitor and Analyze.</p>
+    </div>
+  </div>
+
+  <main class="container">
+    <!-- Critical Priority -->
+    <div class="action-card critical">
+      <span class="priority-label priority-critical">Critical Priority</span>
+      <h3>Create Ethics FAQ Page</h3>
+      <p>Address the stock trading narrative directly so AI has an authoritative source to cite instead of hostile coverage.</p>
+
+      <div class="action-why">
+        <div class="action-why-label">Why This Matters</div>
+        <p>Perplexity and Gemini lead with "violated the STOCK Act" because the only sources are hostile (Campaign Legal Center, Business Insider). Your website has no counter-narrative.</p>
+      </div>
+
+      <div class="squarespace-steps">
+        <div class="squarespace-steps-label">Squarespace Instructions</div>
+        <ol>
+          <li>Log in to Squarespace → Go to <strong>Pages</strong> in the left sidebar</li>
+          <li>Click <code>+</code> next to Main Navigation → Select <strong>Blank Page</strong></li>
+          <li>Name the page <code>Ethics & Accountability</code> → URL slug: <code>ethics</code></li>
+          <li>Add a <strong>Text Block</strong> with the headline: "Addressing Questions About Congressional Stock Trading"</li>
+          <li>Structure content as Q&A format (AI extracts this well):
+            <ul style="margin-top: 8px; padding-left: 20px;">
+              <li><strong>Q:</strong> What happened with stock trading?</li>
+              <li><strong>A:</strong> "In 2021, I placed all investments in a blind trust and paid a $200 administrative fine..."</li>
+            </ul>
+          </li>
+          <li>Go to <strong>Page Settings</strong> (gear icon) → <strong>SEO</strong> tab</li>
+          <li>Set SEO Title: <code>Ethics FAQ | Tom Malinowski for Congress</code></li>
+          <li>Set Meta Description: <code>Tom Malinowski placed all assets in a blind trust in 2021 and co-sponsored legislation to ban congressional stock trading. Get the facts.</code></li>
+          <li>Click <strong>Save</strong> → <strong>Publish</strong></li>
+        </ol>
+      </div>
+
+      <div class="checklist">
+        <div class="checklist-label">Content to Include</div>
+        <ul>
+          <li>Blind trust established July 2021</li>
+          <li>$200 administrative fine—no further penalties</li>
+          <li>Co-sponsored Ban Conflicted Trading Act</li>
+          <li>Called for stronger ethics enforcement</li>
+          <li>Link to blind trust announcement (if available)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="action-card critical">
+      <span class="priority-label priority-critical">Critical Priority</span>
+      <h3>Update Homepage SEO & Add Schema Markup</h3>
+      <p>Tell Google this is an active 2026 campaign, not historical information from 2019-2023.</p>
+
+      <div class="action-why">
+        <div class="action-why-label">Why This Matters</div>
+        <p>Google AI Overview only shows "served from 2019 to 2023" with no mention of the current campaign. Google isn't seeing signals that this is an active candidacy.</p>
+      </div>
+
+      <div class="squarespace-steps">
+        <div class="squarespace-steps-label">Squarespace Instructions — SEO Settings</div>
+        <ol>
+          <li>Go to <strong>Pages</strong> → Click on your <strong>Home</strong> page</li>
+          <li>Click the <strong>gear icon</strong> (Page Settings) → <strong>SEO</strong> tab</li>
+          <li>Update SEO Title to:<br><code>Tom Malinowski for Congress | NJ-11 Democratic Candidate 2026</code></li>
+          <li>Update Meta Description to:<br><code>Tom Malinowski is running for Congress in New Jersey's 11th District. Former Assistant Secretary of State, human rights advocate, endorsed by Senator Andy Kim. Primary: February 5, 2026.</code></li>
+          <li>Click <strong>Save</strong></li>
+        </ol>
+      </div>
+
+      <div class="squarespace-steps" style="margin-top: 16px;">
+        <div class="squarespace-steps-label">Squarespace Instructions — Schema Markup</div>
+        <ol>
+          <li>Go to <strong>Settings</strong> → <strong>Advanced</strong> → <strong>Code Injection</strong></li>
+          <li>In the <strong>Header</strong> field, paste the schema code below</li>
+          <li>Click <strong>Save</strong></li>
+        </ol>
+
+        <div class="code-block">
+          <div class="code-block-label">Copy This Code</div>
+          <pre>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Tom Malinowski",
+  "jobTitle": "Candidate for U.S. Congress, NJ-11",
+  "description": "Democratic candidate for New Jersey's 11th Congressional District special election, February 2026. Former Assistant Secretary of State and Human Rights Watch advocacy director.",
+  "sameAs": [
+    "https://twitter.com/Malinowski",
+    "https://www.facebook.com/maaborhood"
+  ],
+  "knowsAbout": ["Foreign Policy", "Human Rights", "Democracy"],
+  "affiliation": {
+    "@type": "Organization",
+    "name": "Democratic Party"
+  }
+}
+&lt;/script&gt;</pre>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-divider">High Priority</div>
+
+    <div class="action-card high">
+      <span class="priority-label priority-high">High Priority</span>
+      <h3>Create Immigration Issues Page</h3>
+      <p>Publish the immigrant story that AI currently can't find—a major differentiator in the 2026 landscape.</p>
+
+      <div class="action-why">
+        <div class="action-why-label">Why This Matters</div>
+        <p>Malinowski fled Communist Poland at age 6—a uniquely compelling story. But AI can't answer questions about his immigration stance because no page exists.</p>
+      </div>
+
+      <div class="squarespace-steps">
+        <div class="squarespace-steps-label">Squarespace Instructions</div>
+        <ol>
+          <li>Go to <strong>Pages</strong> → Find or create an <strong>Issues</strong> folder</li>
+          <li>Click <code>+</code> → <strong>Blank Page</strong> → Name it <code>Immigration</code></li>
+          <li>URL slug: <code>issues/immigration</code></li>
+          <li>Lead with personal narrative: <em>"At six years old, I fled Communist Poland with my mother. America gave us freedom and opportunity..."</em></li>
+          <li>Connect biography to policy: DACA support, refugee work at Human Rights Watch, family separation opposition</li>
+          <li><strong>SEO tab</strong> → Title: <code>Immigration | Tom Malinowski for Congress</code></li>
+          <li>Meta Description: <code>Tom Malinowski fled Communist Poland as a child. As a human rights advocate and congressman, he has fought for immigrants and refugees. Learn his immigration positions.</code></li>
+        </ol>
+      </div>
+
+      <div class="checklist">
+        <div class="checklist-label">Content to Include</div>
+        <ul>
+          <li>Personal story: fled Poland age 6</li>
+          <li>Human Rights Watch refugee work</li>
+          <li>Congressional record on immigration</li>
+          <li>DACA position</li>
+          <li>Family separation opposition</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="action-card high">
+      <span class="priority-label priority-high">High Priority</span>
+      <h3>Create Endorsements Page</h3>
+      <p>Ensure the Andy Kim endorsement surfaces consistently across all AI platforms.</p>
+
+      <div class="action-why">
+        <div class="action-why-label">Why This Matters</div>
+        <p>Meta AI surfaces the Andy Kim endorsement, but Perplexity and Gemini often don't. Platforms that check the official website find no endorsements page.</p>
+      </div>
+
+      <div class="squarespace-steps">
+        <div class="squarespace-steps-label">Squarespace Instructions</div>
+        <ol>
+          <li>Go to <strong>Pages</strong> → Click <code>+</code> → <strong>Blank Page</strong></li>
+          <li>Name: <code>Endorsements</code> → URL slug: <code>endorsements</code></li>
+          <li>Add a <strong>Quote Block</strong> for Andy Kim's endorsement with his photo</li>
+          <li>Create sections: <strong>Elected Officials</strong>, <strong>Organizations</strong>, <strong>Local Leaders</strong></li>
+          <li>Use <strong>Grid or List Blocks</strong> for visual endorsement display</li>
+          <li><strong>SEO tab</strong> → Title: <code>Endorsements | Tom Malinowski for Congress</code></li>
+          <li>Meta Description: <code>Tom Malinowski is endorsed by Senator Andy Kim, Morris County Democrats, and community leaders across NJ-11. See the full list of endorsements.</code></li>
+        </ol>
+      </div>
+
+      <div class="squarespace-steps" style="margin-top: 16px;">
+        <div class="squarespace-steps-label">Also: Add to Homepage</div>
+        <ol>
+          <li>Go to <strong>Home</strong> page → Add a <strong>Text Block</strong> in hero section</li>
+          <li>Add: <em>"Endorsed by U.S. Senator Andy Kim"</em> with prominent styling</li>
+          <li>Link to the full endorsements page</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="section-divider">Quick Wins</div>
+
+    <div class="action-card quick">
+      <span class="priority-label priority-quick">Quick Win • Do Today</span>
+      <h3>Update News/Press Page</h3>
+      <p>Add the 5 positive articles from the past 60 days that GoodInk identified.</p>
+
+      <div class="action-why">
+        <div class="action-why-label">Why This Matters</div>
+        <p>The /news page was last updated April 2020. AI finds stale content on your site and fresh controversy content elsewhere.</p>
+      </div>
+
+      <div class="squarespace-steps">
+        <div class="squarespace-steps-label">Squarespace Instructions</div>
+        <ol>
+          <li>Go to <strong>Pages</strong> → Find your <strong>News</strong> or <strong>Press</strong> page</li>
+          <li>If using a Blog page: Click <code>+</code> to add new posts for each article</li>
+          <li>If using a regular page: Add <strong>Text Blocks</strong> with links</li>
+          <li>For each article, include: <strong>Headline</strong>, <strong>Publication</strong>, <strong>Date</strong>, <strong>Link</strong></li>
+          <li>Most recent articles should appear first</li>
+        </ol>
+      </div>
+
+      <div class="checklist">
+        <div class="checklist-label">Articles to Add</div>
+        <ul>
+          <li><strong>Village Green NJ</strong> — "Grownup in the Room" profile (Dec 29, 2025)</li>
+          <li><strong>Coverage of Sheena Collum endorsement</strong> (Dec 30, 2025)</li>
+          <li><strong>NJ Globe</strong> — Andy Kim endorsement (Nov 17, 2025)</li>
+          <li><strong>Morris County endorsement coverage</strong> (Dec 15, 2025)</li>
+          <li><strong>Bloomfield councilwoman endorsement</strong> (Jan 13, 2026)</li>
+        </ul>
+      </div>
+
+      <div class="squarespace-steps" style="margin-top: 16px;">
+        <div class="squarespace-steps-label">Ongoing Process</div>
+        <ol>
+          <li>Set up Google Alerts for "Tom Malinowski"</li>
+          <li>Add positive coverage within 48 hours of publication</li>
+          <li>Assign one staffer responsibility for press page updates</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="action-card quick">
+      <span class="priority-label priority-quick">Quick Win</span>
+      <h3>Amplify Human Rights Messaging</h3>
+      <p>The human rights narrative is working across all AI platforms. Expand it.</p>
+
+      <div class="action-why">
+        <div class="action-why-label">Why This Matters</div>
+        <p>This narrative succeeds because of source consistency—Wikipedia, campaign site, and press all feature it. Use it as the model and expand the footprint.</p>
+      </div>
+
+      <div class="squarespace-steps">
+        <div class="squarespace-steps-label">Squarespace Instructions</div>
+        <ol>
+          <li>Go to your <strong>About</strong> or <strong>Bio</strong> page</li>
+          <li>Expand human rights section with specific accomplishments:<br>
+            <em>"Led campaign to end U.S. torture program"</em><br>
+            <em>"Advocated for political prisoners in China, Russia, and Iran"</em>
+          </li>
+          <li>Connect to 2026 issues: democracy defense, Ukraine support, immigration</li>
+          <li>Add to homepage: prominent mention of State Department and HRW roles</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="section-divider">Press Strategy</div>
+
+    <div class="action-card press">
+      <span class="priority-label priority-press">Press Strategy</span>
+      <h3>Pitch Stories That Counter the Negative Narrative</h3>
+      <p>Generate new press coverage that reinforces the narratives you want AI to surface.</p>
+
+      <div class="action-why">
+        <div class="action-why-label">Why This Matters</div>
+        <p>AI systems prioritize recent, authoritative content. New positive coverage pushes down old controversy coverage in AI training and retrieval.</p>
+      </div>
+
+      <div class="checklist">
+        <div class="checklist-label">Story Angles to Pitch</div>
+        <ul>
+          <li><strong>"The Immigrant Running for Congress"</strong> — Local outlet feature on Polish refugee story, especially relevant in current immigration debate</li>
+          <li><strong>"From Human Rights Watch to Congress"</strong> — Profile connecting HRW career to current policy positions</li>
+          <li><strong>"Why I Co-Sponsored the Stock Trading Ban"</strong> — Op-ed in NJ outlet about ethics reform advocacy</li>
+          <li><strong>"Foreign Policy Expert in a Dangerous World"</strong> — Ukraine, China, democracy focus for national outlet</li>
+          <li><strong>"Andy Kim's Endorsement"</strong> — Follow-up feature on what it means for the race</li>
+        </ul>
+      </div>
+
+      <div class="checklist" style="margin-top: 16px;">
+        <div class="checklist-label">Target Outlets</div>
+        <ul>
+          <li><strong>Local:</strong> NJ.com, NJ Globe, NJ Spotlight News, Village Green NJ, TAPinto</li>
+          <li><strong>Regional:</strong> Philadelphia Inquirer, NY Daily News NJ coverage</li>
+          <li><strong>National:</strong> Politico, The Hill, Washington Post (for foreign policy angles)</li>
+          <li><strong>Op-ed targets:</strong> Star-Ledger, NJ.com opinion, local papers in NJ-11</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="action-card press">
+      <span class="priority-label priority-press">Press Strategy</span>
+      <h3>Rapid Response to Attack Ads</h3>
+      <p>Monitor if Gill's "self-serving traitor" narrative spreads and prepare response content.</p>
+
+      <div class="action-why">
+        <div class="action-why-label">Why This Matters</div>
+        <p>Gill is spending $7.5K-8.5K on Meta attack ads. If this language spreads to press coverage, it could influence AI responses.</p>
+      </div>
+
+      <div class="checklist">
+        <div class="checklist-label">Preparation Checklist</div>
+        <ul>
+          <li>Draft response statements for common attack lines</li>
+          <li>Prepare fact-check content for campaign website</li>
+          <li>Brief surrogates on response messaging</li>
+          <li>Monitor AI responses weekly for new negative narratives</li>
+          <li>Have op-ed drafts ready for rapid placement if needed</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section-divider">Endorsement Strategy</div>
+
+    <div class="action-card strategic">
+      <span class="priority-label priority-strategic">Endorsement Strategy</span>
+      <h3>Endorsements That Would Help AI Presence</h3>
+      <p>Certain endorsements generate more press coverage and AI visibility than others.</p>
+
+      <div class="action-why">
+        <div class="action-why-label">Why This Matters</div>
+        <p>Endorsements that get press coverage create new authoritative sources for AI to cite. Quiet endorsements with no coverage have minimal AI impact.</p>
+      </div>
+
+      <div class="checklist">
+        <div class="checklist-label">High-Value Targets</div>
+        <ul>
+          <li><strong>Immigration advocacy groups</strong> — AILA, immigration lawyers associations. Creates source material for immigration positioning.</li>
+          <li><strong>Ethics/reform organizations</strong> — Groups focused on congressional reform. Counters the stock trading narrative.</li>
+          <li><strong>Foreign policy voices</strong> — Former diplomats, national security figures. Reinforces expertise narrative.</li>
+          <li><strong>Labor unions with NJ-11 presence</strong> — Generates local press coverage.</li>
+          <li><strong>Environmental groups</strong> — LCV, Sierra Club. Broad appeal, good press coverage.</li>
+        </ul>
+      </div>
+
+      <div class="checklist" style="margin-top: 16px;">
+        <div class="checklist-label">When You Get Endorsements</div>
+        <ul>
+          <li>Issue joint press release with endorsing organization</li>
+          <li>Add to endorsements page within 24 hours</li>
+          <li>Share on social media with endorser quote</li>
+          <li>Pitch local outlet coverage of significant endorsements</li>
+          <li>Update meta description if major endorsement (like Andy Kim)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section-divider">Third-Party Platforms</div>
+
+    <div class="action-card strategic">
+      <span class="priority-label priority-high">High Priority</span>
+      <h3>Claim Google Knowledge Panel</h3>
+      <p>Take control of the prominent box that appears on the right side of Google search results.</p>
+
+      <div class="action-why">
+        <div class="action-why-label">Why This Matters</div>
+        <p>The Knowledge Panel appears for every Google search—not just AI Mode users. It currently shows "Former United States Representative" with no mention of the 2026 campaign. Once claimed, the campaign can suggest edits to the description, photo, and social links.</p>
+      </div>
+
+      <div class="checklist">
+        <div class="checklist-label">How to Claim the Knowledge Panel</div>
+        <ul>
+          <li>Go to <strong>google.com/search</strong> and search "Tom Malinowski"</li>
+          <li>On the Knowledge Panel, click <strong>"Claim this knowledge panel"</strong> at the bottom</li>
+          <li>Sign in with an official campaign Google account</li>
+          <li>Verify ownership through one of Google's verification methods</li>
+          <li>Once verified, click <strong>"Suggest edits"</strong> to update information</li>
+        </ul>
+      </div>
+
+      <div class="checklist" style="margin-top: 16px;">
+        <div class="checklist-label">What You Can Update</div>
+        <ul>
+          <li><strong>Featured photo</strong> — Use a current campaign photo</li>
+          <li><strong>Description</strong> — Suggest a description mentioning the 2026 campaign</li>
+          <li><strong>Social profiles</strong> — Ensure all official accounts are linked</li>
+          <li><strong>Website</strong> — Confirm official campaign URL is listed</li>
+        </ul>
+      </div>
+
+      <p style="margin-top: 16px; font-size: 13px; color: var(--kyanos-silver);"><strong>Note:</strong> Google reviews all suggested edits. Not all changes will be accepted, but the campaign should have more control than it currently does.</p>
+    </div>
+
+    <div class="action-card strategic">
+      <span class="priority-label priority-strategic">Third-Party Source</span>
+      <h3>Wikipedia: What Campaigns Can (and Can't) Do</h3>
+      <p>Wikipedia is a primary source for AI platforms. The article is missing key information but requires careful handling.</p>
+
+      <div class="action-why">
+        <div class="action-why-label">Why This Matters</div>
+        <p>Wikipedia's Tom Malinowski article is cited by Google AI Overview, ChatGPT, and the Knowledge Panel. It mentions the stock trading controversy but NOT the blind trust resolution or the STOCK Act reform co-sponsorship. These omissions hurt AI responses across all platforms.</p>
+      </div>
+
+      <div class="checklist">
+        <div class="checklist-label">What the Campaign Should NOT Do</div>
+        <ul>
+          <li><strong>Do not directly edit the Wikipedia article</strong> — Wikipedia has strict conflict-of-interest policies. Campaign staff editing the candidate's article violates these policies and edits will be reverted.</li>
+          <li><strong>Do not pay anyone to edit</strong> — Paid editing without disclosure is against Wikipedia rules and can result in the article being locked.</li>
+        </ul>
+      </div>
+
+      <div class="checklist" style="margin-top: 16px;">
+        <div class="checklist-label">What the Campaign CAN Do</div>
+        <ul>
+          <li><strong>Post on the Talk page</strong> — Go to the article's Talk page and request corrections with reliable sources. Example: "The article mentions stock trading issues but not the resolution. Here is a source: [link to news article about blind trust]"</li>
+          <li><strong>Ensure press coverage is accurate</strong> — Wikipedia editors cite news articles. If press coverage mentions the blind trust and STOCK Act reform, Wikipedia editors may add it.</li>
+          <li><strong>Alert supporters (not paid staff)</strong> — Volunteers and supporters who are not compensated by the campaign can make good-faith edits if they disclose any affiliation.</li>
+          <li><strong>Provide source material</strong> — Create content on the campaign website that journalists can cite, which Wikipedia editors can then reference.</li>
+        </ul>
+      </div>
+
+      <div class="checklist" style="margin-top: 16px;">
+        <div class="checklist-label">Key Information Missing from Wikipedia</div>
+        <ul>
+          <li>Blind trust established to resolve ethics concerns</li>
+          <li>Co-sponsored the Ban Conflicted Trading Act (stock trading ban)</li>
+          <li>2026 NJ-11 special election candidacy</li>
+          <li>Recent endorsements (Andy Kim, etc.)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="action-card strategic">
+      <span class="priority-label priority-quick">Quick Win</span>
+      <h3>Update Ballotpedia Profile</h3>
+      <p>Ballotpedia actively welcomes candidate participation—take advantage of it.</p>
+
+      <div class="action-why">
+        <div class="action-why-label">Why This Matters</div>
+        <p>Unlike Wikipedia, Ballotpedia explicitly invites candidates to update their profiles. The Google Knowledge Panel cites Ballotpedia as a source. A complete Ballotpedia profile improves AI responses across platforms.</p>
+      </div>
+
+      <div class="checklist">
+        <div class="checklist-label">Steps to Update Ballotpedia</div>
+        <ul>
+          <li>Go to <strong>ballotpedia.org</strong> and find Tom Malinowski's page</li>
+          <li>Click <strong>"Candidate Connection"</strong> survey link (or search for it on Ballotpedia)</li>
+          <li>Complete the survey with policy positions on key issues</li>
+          <li>Submit biographical updates through their official process</li>
+          <li>Ballotpedia staff will review and publish updates</li>
+        </ul>
+      </div>
+
+      <div class="checklist" style="margin-top: 16px;">
+        <div class="checklist-label">Information to Add/Update</div>
+        <ul>
+          <li>2026 campaign announcement and context</li>
+          <li>Policy positions on immigration, foreign policy, healthcare</li>
+          <li>Recent endorsements</li>
+          <li>Updated biography emphasizing current campaign</li>
+          <li>Campaign contact information</li>
+        </ul>
+      </div>
+
+      <p style="margin-top: 16px; font-size: 13px; color: var(--kyanos-silver);"><strong>Tip:</strong> Ballotpedia's "Candidate Connection" survey responses appear directly on the profile. This is one of the easiest ways to get accurate policy positions into a source that AI platforms cite.</p>
+    </div>
+
+    <div class="section-divider">Ongoing Monitoring</div>
+
+    <div class="action-card strategic">
+      <span class="priority-label priority-strategic">Monitoring</span>
+      <h3>Ongoing AI Monitoring</h3>
+      <p>Track whether these changes are working and catch new issues early.</p>
+
+      <div class="checklist">
+        <div class="checklist-label">Weekly Check-In</div>
+        <ul>
+          <li>Search "Tom Malinowski" on Google and check AI Overview</li>
+          <li>Search without AI Mode and check the Knowledge Panel</li>
+          <li>Ask ChatGPT: "Tell me about Tom Malinowski running for Congress"</li>
+          <li>Ask Perplexity: "Is Tom Malinowski honest?"</li>
+          <li>Check if new pages are being indexed (Google Search Console)</li>
+          <li>Note any changes in how platforms describe the candidate</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p class="footer-brand">Kyanos<span>Tech</span></p>
+    <p>AI Presence Report: Malinowski for Congress (NJ-11) | January 2026</p>
+    <p style="margin-top: 16px; font-size: 11px; color: #9ca3af;">This report was produced using tools currently in development. Campaigns should review all recommendations carefully before implementing.</p>
+  </footer>
+</body>
+</html>
