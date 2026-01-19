@@ -27,6 +27,8 @@ extra_javascript:
 nav:
 - Welcome: index.md
 - Executive Summary: ky-executive-summary.md
+- The Value Proposition: ky-value-proposition.md
+- Two Scares That Reshape 2026–2028: Two_Scares.md
 - Problem & Urgency: ky-problem-urgency.md
 - Solution & Theory of Change: ky-solution-theory.md
 - Product Strategy & Technology: ky-products-tech.md
