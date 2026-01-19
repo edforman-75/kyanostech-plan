@@ -558,7 +558,10 @@
         const input = document.getElementById('chat-input');
         
         addMessage("Hello! I'm the Kyanos Plan AI Assistant. I can help you understand our business plan, technology strategy, and mission. What would you like to know?", false);
-        
+
+        // Start minimized
+        toggleMinimize();
+
         minimizeBtn.addEventListener('click', (e) => {
             e.stopPropagation();
             toggleMinimize();
