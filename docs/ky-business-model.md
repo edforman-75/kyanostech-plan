@@ -1,121 +1,188 @@
-# Business Model & Unit Economics
+# Business Model & Pricing
 
-We structure the business model using the Strategyzer Business Model Canvas (BMC)[^fn-bm-strategyzer].  
-All elements below are initial assumptions; during the SEED phase, we will conduct further research, expert interviews, and partner validation to substantiate the model.
+## Product Bundles
 
----
-
-## 1. Customer Segments
-- Democratic campaigns (Presidential, Senate, House).  
-- Democratic committees (DNC, DSCC, DCCC, state parties).  
-- Officeholder committees (incumbent Members of Congress).  
-- Independent-aligned campaigns and committees (case-by-case).  
+| Tier | Includes |
+|------|----------|
+| **Local** | Panopticon (core 3 surfaces) |
+| **Congressional** | Panopticon + GoodInk + Adwatch + TripWire |
+| **Statewide** | Panopticon (with Watchtowers) + GoodInk + Adwatch + TripWire |
+| **National** | All products + dedicated FTE onsite + special projects |
 
 ---
 
-## 2. Value Propositions
-- **Visibility in AI search:** Ensures Democratic facts, values, and positions are discoverable in AI assistants.  
-- **Compliance & security:** Meets .gov and FEC requirements.  
-- **Productivity:** Reduces staff time via structured authoring, grammar/style support.  
-- **Accountability:** Continuous benchmarking/audit trail supports litigation, press, and public trust.  
+## Service Model by Race Level
+
+Campaigns at different levels have different resources. Our service model reflects this:
+
+### Small Local Races (no staff/consultants)
+
+- Fully self-service
+- Automated onboarding: campaign enters info, system configures monitoring
+- Dashboard-first: all insights available without calling support
+- CMS-specific instructions: implementers get copy-paste fixes
+- Knowledge base and email support only
+
+### Congress, Statewide, National, Major City (have staff/consultants)
+
+- Served through their political consultants
+- We train and support the consultant; consultant manages campaign relationship
+- Consultant becomes our channel partner and support layer
+- Campaigns get hands-on help from people they already trust
+
+**This approach:**
+
+- Keeps marginal cost low for small races (self-service)
+- Uses existing consultant relationships for larger races
+- Makes consultants a key sales channel
+- Matches how campaigns actually operate
 
 ---
 
-## 3. Channels
-- Direct sales to national committees and large campaigns.  
-- Partnerships with Democratic digital agencies.  
-- Limited CMS support (WordPress, Drupal/GovCMS) for distribution.  
-See Appendix E: CMS Landscape Briefing for detail on CMS platforms and their role in campaign infrastructure.
-- SEED phase pilots to build reference customers.  
+## Scope by Tier
+
+Monitoring depth scales with race level:
+
+| Level | Prompts | Surfaces | Locations | Monthly Studies |
+|-------|---------|----------|-----------|-----------------|
+| Local | 20 | 3 | 1 | 1 |
+| Congress | 35 | 3 | 3 | 1 |
+| Statewide | 50 | 3 | 10 | 1 |
+| National | 75 | 3+ | 25 | 2-4 |
+
+**Upgrades available:** Additional prompts, surfaces, locations, and monitoring frequency at added cost.
 
 ---
 
-## 4. Customer Relationships
-- White-glove onboarding (early years).  
-- Transition to scalable SaaS self-service by 2027–2028.  
-- Ongoing customer success + training for campaign staff.  
+## Campaign Cycle Pricing
+
+Campaigns pay by cycle (primary or general), not monthly. Flat fee regardless of cycle length.
+
+| Race Level | Primary | General | Full Cycle |
+|------------|---------|---------|------------|
+| **Local** | $900 | $1,200 | $1,800 |
+| **Congress** | $4,000 | $5,000 | $8,000 |
+| **Statewide** | $15,000 | $20,000 | $30,000 |
+| **National** | $200,000 | $250,000 | $400,000 |
+
+**Pricing philosophy:** Margins are progressive. Lower margins on smaller races keep Kyanos accessible. Higher margins on larger races reflect their fundraising capacity. Presidential campaigns raise $1B+; $400K for full-cycle intelligence is a rounding error.
 
 ---
 
-## 5. Revenue Streams
-- SaaS subscription tiers:  
-  - **AGON** (campaign) – $1,500–$3,000/month depending on race size.  
-  - **POLIS** (officeholder) – $1,000–$2,000/month.  
-- Early services revenue (schema setup, training, audits).  
-- Custom pilots (presidential campaigns, congressional committees).  
+## Officeholder Annual Pricing
 
+Elected officials maintaining digital presence year-round.
 
----
-
-## 6. Key Resources
-- Proprietary schema library and AI benchmarking system.  
-- Engineering team (schema, AI/ML, integrations).  
-- Policy/legal advisors for compliance.  
-- Partnerships with campaign committees and agencies.  
+| Office Level | Annual Price |
+|--------------|--------------|
+| Federal Executive | $50,000 |
+| Senate | $10,000 |
+| Governor | $7,500 |
+| House | $4,000 |
+| Statewide | $2,500 |
+| State Legislature | $1,000 |
 
 ---
 
-## 7. Key Activities
-- Continuous schema development and updates.  
-- Benchmark testing and reporting.  
-- Customer onboarding + training.  
-- Security and compliance audits.  
+## Organization Pricing (Annual)
+
+| Customer Type | 2026 | 2027 | 2028 |
+|---------------|------|------|------|
+| Political consultants | $3,000 | $5,000 | $10,000 |
+| Advocacy organizations | $5,000 | $7,500 | $15,000 |
+| Party committees | $10,000 | $20,000 | $50,000 |
+| Labor unions | $10,000 | $15,000 | $30,000 |
 
 ---
 
-## 8. Key Partnerships
-- Democratic committees (DNC, DSCC, DCCC).  
-- Academic institutions (methodology, bias research).  
-- Agencies providing campaign digital services.  
-- CMS providers (WordPress, Drupal/GovCMS).  
+## Volume Pricing (PACs & Umbrella Groups)
+
+| Campaigns Sponsored | Discount |
+|---------------------|----------|
+| 5-9 | 10% |
+| 10-24 | 15% |
+| 25-49 | 20% |
+| 50+ | 25% |
+
+*Discount cap ensures margin remains positive at all volume levels.*
 
 ---
 
-## 9. Cost Structure
-- Heavy R&D in early years (schema, SCOPE platform, AI testing).  
-- Services staff (onboarding, setup) in 2025–2026.  
-- Transition to SaaS-dominant margins (>70%) by 2028. [^fn-bm-margins-2028]  
-- Estimated ARR by 2028: **~$4.2M**, with durable SaaS retention. [^fn-bm-arr-2028]  
+## Customer Segments
 
-Given significant operating, product development, and customer acquisition costs, achieving cash-flow break-even in 2028 depends on hitting both our revenue targets and our gross-margin goals.
+### Primary: Progressive Campaigns
 
----
+- Local (municipal, county, state legislature)
+- Congressional (House)
+- Statewide (Governor, Senate, statewide offices)
+- National (Presidential)
 
-: Business Model Canvas framework by Strategyzer. See: <https://www.strategyzer.com/canvas/business-model-canvas>
+### Secondary: Year-Round Revenue
 
-<ol>
-[^fn-bm-strategyzer]: <strong>Strategyzer BMC</strong>: Strategyzer, Business Model Canvas overview. Add canonical link to Strategyzer site.
+- Officeholders (maintaining digital presence between cycles)
+- Advocacy organizations
+- Labor unions
+- Party committees
+- Political consultants (as both channel and customer)
 
-[^fn-bm-pricing-plans]: <strong>Plan pricing (AGON, POLIS)</strong>: Internal pricing sheet or public pricing page if available. Replace with final URL and access date.
+### Commercial: Sustainability Revenue
 
-[^fn-bm-competitor-pricing]: <strong>Competitor pricing (classification)</strong>: Reference pricing for adjacent vendors to contextualize stack costs: <em>NationBuilder</em> (all-in-one CMS/CRM), <em>WordPress VIP</em> (managed WordPress hosting). Cite each public pricing page with URL and access date; tiers/usage caveats apply.
-
-  Mature B2B SaaS commonly sustains gross margins of <strong>&gt;75%</strong>. KeyBanc/OpenView survey work reports an average around ~73% while excluding sub-$5M GAAP revenue companies, placing the 75%+ benchmark at/above that scale. See overview: <a href="https://www.chargebee.com/resources/glossaries/saas-gross-margin/">Chargebee: SaaS Gross Margin</a>. Benchmarks from Bessemer indicate that top performers in the <strong>$1–10M ARR</strong> range can reach <strong>~85% gross margins</strong>, typically with materially negative free cash flow during scale-up; see <a href="https://www.bvp.com/atlas/scaling-to-100-million">Bessemer: Scaling to $100 Million</a>. Gross margin in our model is highly sensitive to pricing and packaging choices.
-<h2 id="business-model-unit-economics-footnotes">Business Model & Unit Economics Footnotes</h2>
-</li>
-
-</ol>
-
-<ol>
-  <li id="fn-bm-strategyzer">
-    Business Model Canvas framework by Strategyzer. See:
-    <a href="https://www.strategyzer.com/canvas/business-model-canvas">strategyzer.com/canvas/business-model-canvas</a>.
-  </li>
-  <li id="fn-bm-margins-2028">
-  Mature B2B SaaS commonly sustains gross margins of <strong>&gt;75%</strong>. KeyBanc/OpenView survey work reports an average around ~73% while excluding sub-$5M GAAP revenue companies, placing the 75%+ benchmark at/above that scale. See overview: <a href="https://www.chargebee.com/resources/glossaries/saas-gross-margin/">Chargebee: SaaS Gross Margin</a>. Benchmarks from Bessemer indicate that top performers in the <strong>$1–10M ARR</strong> range can reach <strong>~85% gross margins</strong>, typically with materially negative free cash flow during scale-up; see <a href="https://www.bvp.com/atlas/scaling-to-100-million">Bessemer: Scaling to $100 Million</a>. Gross margin in our model is highly sensitive to pricing and packaging choices.
-</li>
-  <li id="fn-bm-arr-2028">
-    ARR estimate (~\$4.2M by 2028) derived from AGON \$1.5–3.0k/mo and POLIS \$1.0–2.0k/mo pricing multiplied by expected account counts and ramp;
-    see Appendix A model for assumptions and scenario ranges.
-  </li>
-</ol>
-
+- CPG/Retail brands (AI visibility monitoring)
+- Marketing agencies (competitive intelligence)
+- Academic researchers (AI behavior studies)
+- International progressive organizations
 
 ---
 
-## Footnotes
+## Value Propositions
 
-[^fn-bm-margins-2028]: (placeholder – cite credible SaaS margin range by 2028)
-[^fn-bm-arr-2028]: (placeholder – cite % of ARR from expansion in strong SaaS)
-[^fn-bm-margins-2028]: Mature SaaS gross margins typically exceed 70%, with top performers exceeding 80% (Source: Chargebee, OpenView benchmarks).
-[^fn-bm-arr-2028]: Expansion revenue (upsells or cross-sells) accounts for 25–35% of ARR growth in healthy SaaS businesses. (Source: ChartMogul/OpenView)
+| Segment | Primary Value |
+|---------|---------------|
+| Campaigns | Accurate AI representation → informed voters |
+| Officeholders | Maintained visibility between cycles |
+| Advocacy orgs | Issue positioning in AI answers |
+| Labor unions | Member education and mobilization support |
+| Party committees | Party-wide monitoring and standards |
+| Consultants | Differentiated service offering for clients |
+| Commercial | Brand monitoring and competitive intelligence |
+
+---
+
+## Revenue Streams
+
+### Campaign Revenue (Cycle-Based)
+
+- Primary cycle subscriptions
+- General cycle subscriptions
+- Full cycle packages
+- Upgrades (additional prompts, surfaces, frequency)
+
+### Year-Round Revenue
+
+- Officeholder annual subscriptions
+- Organization annual subscriptions
+- Consultant partnership fees
+
+### Commercial Services Revenue
+
+- Per-study fees ($500-$5,000)
+- Monthly retainers
+- Custom research projects
+
+---
+
+## Key Partnerships
+
+| Partner Type | Relationship |
+|--------------|--------------|
+| Political consultants | Channel partners, support layer |
+| CMS providers | Integration partners (WordPress, NationBuilder, etc.) |
+| Progressive foundations | Funding, mission alignment |
+| Labor unions | Funding, distribution |
+| Research institutions | Methodology validation, publication |
+
+---
+
+<div class="callout-bottomline">
+<p><strong>Pricing that scales with your resources. Service that matches how campaigns actually work.</strong></p>
+</div>

@@ -1,145 +1,238 @@
 # Product Strategy & Technology
-<!-- cross-ref: Product_Strategy_Tech -->
 
-KyanosTech’ product strategy is anchored in **three core products**: **AGON, POLIS, and SCOPE**, and in the development of an **open schema specification**[^] for political information. Together, these products form a closed-loop system: campaigns and committees publish structured, authoritative data; outputs are continuously monitored; and insights feed back into content creation and optimization. This cycle ensures Democratic visibility in AI-mediated information discovery.
-
----
-
-## Guiding Principles
-
-- **Validation First:** Before full-scale development, KyanosTech will validate assumptions through extensive campaign and partner interviews, technology deep dives, and lean pilots. To the extent our understanding of customer and channel needs shifts (or the opportunities the technology supports expand, our **roadmap and business plan will evolve**.  
-- **Continuous Learning:** SCOPE data closes the loop by monitoring what works across campaigns, documenting best practices, and feeding them back into AGON and POLIS. Over time, this establishes a durable **learning system** that compounds competitive advantage[^].  
-- **Compliance & Trust:** POLIS meets the requirements of official .gov sites and Congressional CMS platforms.[^] Strict separation between B-Corp and 501(c) arms will be validated by outside counsel to protect against election law violations.[^]
+Kyanos is a family of AI-driven services built on shared infrastructure. Each product serves a distinct purpose in keeping progressive campaigns visible and informed.
 
 ---
 
-## Product Overviews
+## The Product Suite
 
-### AGON: Authoring for Campaigns[^]
-**For:** Federal campaigns, state gubernatorial campaigns, and party committees.  
-**Users:** Digital directors, comms staff, consultants.  
-**What It Does:**  
-- Conversational AI authoring with embedded schema.  
-- Alignment of visible narrative text with machine-readable structured data.  
-- Integration with WordPress NationBuilder and other Democratic-aligned CMS platforms.  
-- Grammar and spell checking, plus style alignment to reflect the candidate’s voice.  
-**Why It Matters:** Ensures campaign websites train AI assistants with fact-based Democratic content, streamlines production of new content, and highlights inconsistencies for comms staff productivity.
+| Product | Function | Included In |
+|---------|----------|-------------|
+| **Panopticon** | AI monitoring + remediation | All tiers |
+| **GoodInk** | Positive press discovery | Congressional+ |
+| **Adwatch** | Ad monitoring | Congressional+ |
+| **TripWire** | Opponent site monitoring | Congressional+ |
+| **Watchtowers** | Geographic variation detection | Statewide+ (built into Panopticon) |
 
 ---
 
-### POLIS: Optimization for Officeholders & Committees
-**For:** Officeholders and Congressional committees.  
-**Users:** Congressional staff, communications directors, committee staff.  
-**What It Does:**  
-- Keeps official .gov and committee websites optimized for AI discovery.  
-- Full compliance with government disclosure and accessibility standards.  
-- Integrated with House Drupal CMS and related toolsets.  
-- Grammar, spell, and style alignment for consistent voice across communications.  
-**Why It Matters:** Maintains continuity between campaign and officeholder visibility, ensures compliance, and builds long-term trust. Increases staff productivity by checking new content against existing archives.
+## Panopticon: Core AI Monitoring & Remediation
+
+Panopticon is the flagship product. It works in three phases: **Monitor → Prioritize → Act**
+
+<div class="callout-info">
+<div class="callout-title">Why "Panopticon"?</div>
+<p>The name comes from Jeremy Bentham's 18th-century design for an observation structure where a central point can see everything without being seen. For Kyanos, Panopticon represents <strong>comprehensive visibility</strong>: seeing exactly how AI systems represent your campaign across every major platform and geography. You see everything; the platforms don't know you're watching.</p>
+</div>
+
+### What It Does
+
+- **Monitor:** Queries AI surfaces (Google AI Overviews, ChatGPT, Meta AI) with questions voters actually ask
+- **Prioritize:** Traces errors to root causes and ranks by impact (Voter Reach × Error Severity × Fixability)
+- **Act:** Provides CMS-specific remediation instructions that campaigns can implement immediately
+
+### Key Features
+
+- Tests questions voters actually ask about the candidate
+- Scores each response for accuracy against stated positions
+- Traces errors to fixable root causes (Wikipedia, Ballotpedia, news articles, campaign site)
+- Delivers targeted instructions: approver gets the recommendation, implementer gets the steps
+- Watchtowers detect geographic variation (Statewide/National tiers)
+
+### Monitoring Frequency
+
+- Monthly (standard)
+- Weekly (premium)
+- Daily (premium)
+
+### Sample Report
+
+For a complete example of Panopticon output, see **[Appendix: Sample Panopticon Report](ky-appendix-panopticon-sample-report.md)**. This real AI Presence Report for a 2026 congressional campaign demonstrates the full Monitor → Analyze → Fix workflow, including:
+
+- Platform-by-platform scoring (Google AI Overview, ChatGPT, Knowledge Panel)
+- Root cause analysis tracing AI errors to their sources
+- Prioritized action items ranked by campaign control and impact
+- CMS-specific implementation instructions (Squarespace)
+- Third-party platform guidance (Wikipedia, Ballotpedia, Knowledge Panel claims)
 
 ---
 
-### SCOPE: Monitoring & Accountability
-**For:** Campaigns, officeholders, committees, and the Democratic community.  
-**Users:** Campaign managers, analytics staff, academic partners, litigation support.  
-**What It Does:**  
-- Continuous monitoring of AI chatbot responses and search AI overviews.  
-- Weekly (and optionally real-time) benchmark reporting.  
-- Clear audit trails for litigation or regulatory use.  
-- Provides foundational datasets for academic research and partnerships.  
-**Why It Matters:** Documents bias, validates Democratic visibility, and demonstrates accountability. Creates the evidence base for both campaign ROI and platform oversight.
+## GoodInk: Positive Press Discovery
+
+GoodInk finds and recommends journalistic articles that campaigns can feature on their websites to boost digital authority.
+
+### What It Does
+
+- Discovers positive coverage across news sources
+- Analyzes sentiment, source credibility, and paywall status
+- Recommends articles worth featuring
+- Provides structured data markup for featured articles
+
+### Key Features
+
+- Source credibility scoring (Tier 1-4 classification)
+- Sentiment analysis with confidence levels
+- Paywall detection (free, metered, registration, hard paywall)
+- Freshness scoring and age warnings
+- Campaign isolation (each campaign's discoveries are private)
+
+### Value
+
+GoodInk detects opportunities that campaigns can exploit to gain coverage, which in turn improves AI visibility. Third-party articles provide social proof, SEO value, and credibility transfer.
 
 ---
 
-## Schema Specification: Building the Political Layer of the Web
+## Adwatch: Political Ad Monitoring
 
-Current schema.org standards inadequately cover political actors and contexts. KyanosTech will **develop and steward an open schema specification** enabling structured, authoritative publication of:  
-- Candidate biographies, issue positions, and endorsements.  
-- Legislative activity, roll-call votes, and public statements.  
-- Election events, deadlines, and voter access information.  
-- The underlying **logic and evidence** behind policy positions.  
-- A wide set of communication deliverables typically found on political websites.
+Adwatch tracks political advertising across Google and Meta transparency libraries.
 
-Why this matters: AI training engines compare schema markup (in web source code) with narrative site content. If the two are not aligned, the site will not be treated as a credible source. By defining and applying schemas across campaigns and officeholders, KyanosTech has the opportunity to set the standard, creating a long-term Democratic competitive advantage.
+### What It Does
+
+- Monitors ads mentioning your candidate
+- Tracks opponent ad spend and messaging
+- Classifies ad tone (attack, support, contrast, issue)
+- Alerts on new ads, spend changes, and new advertisers
+
+### Key Features
+
+- Real-time monitoring of ad transparency libraries
+- Tone classification using AI with confidence thresholds
+- Spend tracking and trend analysis
+- New advertiser detection
+- Source links to original platform transparency pages
+
+### Value
+
+Know what opponents are saying in paid media before voters tell you. Detect messaging shifts and spending surges early.
 
 ---
 
-## Example: With vs. Without Schema
+## TripWire: Opponent Website Monitoring
 
-**Voter Query:** *“What is candidate John Smith’s position on charter school funding?”*
+TripWire watches opponent websites for changes and alerts campaigns when competitors shift their messaging.
 
-- **Without Schema:** “John Smith has mentioned education reform, but his position on charter schools is unclear.”  
-- **With Schema Optimization:** “John Smith opposes the diversion of public funds to charter schools. He has proposed a bill increasing oversight of state charter programs and voted against expanding voucher eligibility in 2023. His education platform emphasizes strengthening public schools with new funding tied to teacher retention.”  
+### What It Does
 
-Schema markup ensures AI systems can surface authoritative, detailed, and fact-based answers.
+- Monitors specified opponent sites on schedule
+- Detects content changes (new pages, modified content, removed content)
+- Classifies significance of changes
+- Alerts campaign when opponents shift messaging
+
+### Key Features
+
+- Scheduled monitoring (hourly, daily, weekly)
+- Content diff detection with change summaries
+- AI classification of change significance (high, medium, low)
+- Category classification (messaging, issues, attack, structural, minor)
+- Archive of historical snapshots for comparison
+
+### Value
+
+Early warning when opponents change strategy. Track when they update issues pages, launch new sections, or add attack content.
+
+---
+
+## Watchtowers: Geographic Monitoring
+
+Watchtowers are Panopticon's distributed observation network. Sensor stations in multiple geographic locations detect if AI platforms serve different information to different regions. They're built into Panopticon at the Statewide and National tiers.
+
+### For Campaigns (Statewide/National)
+
+- See how you appear in different parts of your state/country
+- Detect if swing regions see different AI responses
+- Identify geographic targeting opportunities
+
+### For Watchdog/Research
+
+- Document geographic manipulation by platforms
+- Build evidence base for accountability
+- Support Research Institute publications
+
+---
+
+## Surface Coverage
+
+### Core Surfaces (Recommended)
+
+| Surface | Election Query Share | Notes |
+|---------|---------------------|-------|
+| Google AI Overviews | 40-45% | Highest volume |
+| ChatGPT | 10-12% | Influential early adopters |
+| Meta AI | 8-10% | Critical for Hispanic voters |
+
+### Additional Surfaces (Available)
+
+- Perplexity
+- Microsoft Copilot
+- Google Gemini
+- Anthropic Claude
+- X/Grok
+- Voice assistants
+
+**Strategic implication:** We can monitor any surface. We recommend campaigns focus on the core three unless they have specific reasons to expand.
+
+---
+
+## Shared Infrastructure: Bentham
+
+All Kyanos products are powered by **Bentham**, our multi-tenant extraction infrastructure.
+
+### What Bentham Does
+
+- Runs AI extraction studies at scale
+- Manages geographic variation through regional proxy infrastructure
+- Provides consistent, reliable data collection across platforms
+- Supports multiple tenants (Kyanos products + commercial services)
+
+### Why This Matters
+
+- **Scale:** Run thousands of queries across multiple surfaces efficiently
+- **Reliability:** Consistent methodology for comparable results
+- **Cost efficiency:** Shared infrastructure reduces per-study costs
+- **Proven:** Bentham is currently serving a commercial client of Ed Forman, demonstrating real-world viability
+
+### Commercial Potential
+
+Bentham is highly adaptable and marketable. The same infrastructure that powers Kyanos products can serve commercial AI monitoring clients across industries. However, aggressively pursuing commercial revenue before the 2028 cycle is complete could distract from the core political mission. Commercial services will remain a secondary revenue stream until Kyanos has established itself as essential progressive infrastructure.
+
+---
+
+## Technology Stack
+
+| Component | Technology |
+|-----------|------------|
+| Extraction Infrastructure | Bentham (Node.js/TypeScript) |
+| Database | PostgreSQL |
+| API Framework | Fastify |
+| AI Classification | Claude API |
+| Web Scraping | Playwright |
+| Deployment | Cloud infrastructure with regional nodes |
 
 ---
 
 ## Security & Compliance
 
-KyanosTech anticipates scrutiny and must maintain unimpeachable integrity.  
-- **Data protection:** Campaign and officeholder content siloed, access-controlled, and encrypted.  
-- **Auditability:** SCOPE logs every query and tested response.  
-- **Legal guardrails:** Outside counsel validates strict separation between B-Corp and 501(c) work.  
-- **No data invention:** All schema and content must trace back to verifiable source material.
+### Data Protection
+
+- Campaign data siloed with strict access controls
+- Client data encrypted at rest and in transit
+- No sharing between campaigns
+- Campaign isolation enforced at database level
+
+### Privacy
+
+- Store only what's needed for analysis
+- No indefinite archiving of competitor content
+- Clear data retention policies
+
+### Auditability
+
+- All queries and responses logged
+- Audit trails for compliance and verification
+- Source links required for all recommendations
 
 ---
 
-## R&D / Future Technology Extensions
-
-- **Campaign-hosted chatbots:** Schema-aligned assistants that reflect candidate voice and defer to human staff when uncertain.  
-- **Cross-lingual visibility:** Spanish and AAPI language schemas for equitable reach.  
-- **Local races (post-2028):** Adaptations for down-ballot campaigns.  
-- **Authenticity signals:** Cryptographic proof or watermarks that schema originated from campaigns.  
-- **Generative productivity:** Style alignment, grammar, and content drafting tools built into AGON and POLIS.
-
----
-
-## Diagram: System of Continuous Learning
-
-```
-AGON  <──>  SCOPE  <──>  POLIS
-```
-
-- AGON and POLIS operate in parallel.  
-- Both exchange data with SCOPE.  
-- SCOPE detects what works best across campaigns, feeding insights back into authoring and optimization.  
-- Continuous feedback loop strengthens Democratic competitiveness cycle over cycle.
-
----
-
-
-<h2 id="product-strategy-footnotes">Product Strategy & Technology Footnotes</h2>
-<ol>
-  <li id="fn-prod-open-schema"><strong>Open schema precedent</strong>: Schema adoption pathways and civic data exemplars:
-    <a href="https://schema.org/GovernmentOrganization">schema.org: GovernmentOrganization</a>;
-    <a href="https://schema.org/docs/howwework.html">schema.org governance & extension process</a>;
-    <a href="https://www.w3.org/Consortium/Process/">W3C Process for standardization</a>;
-    <a href="https://developers.google.com/civic-information">Google Civic Information API</a>;
-    <a href="https://ballotpedia.org/API">Ballotpedia API</a>.
-  </li>
-
-  <li id="fn-prod-gov-cms"><strong>.gov / Congressional CMS requirements</strong>: Core accessibility and operations standards and chamber-specific guidance:
-    <a href="https://www.section508.gov/manage/laws-and-policies/">Section 508 accessibility standards</a>;
-    <a href="https://housenet.house.gov/web-content/cms">U.S. House CMS guidance</a>;
-    <a href="https://www.senate.gov/reference/reference_index_subjects/Web_Services_vrd.htm">U.S. Senate web/digital standards</a>;
-    <a href="https://digital.gov/resources/federal-web-requirements/">GSA Federal web requirements</a>.
-  </li>
-
-  <li id="fn-prod-legal-separation"><strong>Legal separation (B-Corp vs. 501(c))</strong>: Maintain strict separation of personnel, systems, and data; avoid coordination and impermissible subsidization:
-    <a href="https://www.irs.gov/pub/irs-drop/rr-07-41.pdf">IRS Rev. Rul. 2007-41 (501(c)(3) political activity)</a>;
-    <a href="https://www.irs.gov/charities-non-profits/other-non-profits/social-welfare-organizations-political-campaign-and-lobbying-activities">IRS 501(c)(4) campaign & lobbying guidance</a>;
-    <a href="https://www.ecfr.gov/current/title-11/section-109.21">FEC coordination rules (11 CFR §109.21)</a>;
-    <a href="https://www.fec.gov/help-candidates-and-committees/corporations-and-labor-organizations/">FEC guide for Corporations & Labor Orgs</a>.
-  </li>
-
-  <li id="fn-prod-learning-system"><strong>Learning system & feedback loops</strong>: Evidence for media/network feedback dynamics:
-    <a href="https://www.brookings.edu/articles/podcasting-and-political-persuasion/">Brookings: Podcasting & political persuasion</a>;
-    <a href="https://cyber.harvard.edu/story/2020-berkman-media-networked-politics">Berkman Klein: Media & networked politics</a>.
-  </li>
-
-  <li id="fn-prod-agon-demand"><strong>Authoring demand among campaigns</strong>: Indicators of bandwidth constraints and AI-assisted drafting adoption:
-    <a href="https://morningconsult.com/category/technology/ai/">Morning Consult AI usage trackers</a>;
-    <a href="https://apnorc.org/projects/generative-ai-and-democratic-engagement/">AP-NORC: Generative AI & democratic engagement</a>.
-  </li>
-</ol>
+<div class="callout-bottomline">
+<p><strong>One platform. Four products. Complete visibility into how AI sees your campaign.</strong></p>
+</div>

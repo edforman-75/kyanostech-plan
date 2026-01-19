@@ -1,38 +1,212 @@
 # Market & Financial Opportunity
 
-## 1. Urgency of Digital Discovery
-## 2. Market Definition
-We focus exclusively on **organic digital infrastructure**: CMS, analytics, structured-content platforms, compliance tooling, not paid media, travel, or administrative budgets.
+## Why Campaigns Will Pay
 
-### Market Funnel Overview
+**AI optimization protects and amplifies every other media investment a campaign makes.**
 
-| Layer | Definition | 2026–28 Estimate | Notes / Sources |
-|-------|-------------|------------------|------------------|
-| **TAM** | Non-media digital/technology budgets of Democratic & Independent federal/state campaigns, committees, and officeholders | **$600–800 M** | Based on ~3–5% of campaign spend in budget line items like SaaS/CMS/content tools ([^fn-mo-total-political-12b-2024], [^fn-mo-method-1]). |
-| **SAM** | Portion of TAM relevant to AI-discovery tools and structured data systems | **$20–40 M** | Leaning representation due to tool specificity and conservative assumption of allocation. |
-| **SOM** | Attainable market via platform integration (limited CMS support + top-race targeting) | **$30–50 M** | Conservative penetration assumption aligned with early SaaS adoption trends. |
+When media works (when a voter sees your TV ad, digital campaign, or mail piece), what happens next? They research. They Google the candidate. They ask ChatGPT. If AI gives them bad information, you've wasted that media spend.
 
-## 3. Growth Dynamics
-- **Digital Dominance (Contextual Insight):** In late-cycle 2024, campaigns spent roughly **$23M on digital ads** vs. **$24.5M on TV ads**, showing near parity ([^fn-mo-method-1], [^fn-mo-digital-tv-parity]).  
-- **Technology Budget Expansion:** Campaigns are increasingly investing in digital infrastructure (web platforms, analytics, structured data tools).  
-- **Cyclical Uptake:** We expect SOM-driven ARR to peak in 2028, trough slightly in off-years, but remain supported through recurring officeholder/committee contracts, creating sustainable revenue flows across cycles.
+New research shows AI chatbots are **4 times more persuasive** than TV ads ([Rand et al., *Nature*, 2025](https://www.nature.com/articles/s41586-025-09771-9); [Pennycook et al., *Science*, 2025](https://www.science.org/doi/10.1126/science.aea3884)). AI isn't just another channel. It's where voters go to validate what they've seen elsewhere.
+
+**AI optimization ensures your media dollars convert:**
+
+| Investment | Cost per Voter Influenced | Role |
+|------------|---------------------------|------|
+| Broadcast TV | $100-600 | Awareness |
+| CTV/Streaming | $50-150 | Targeted awareness |
+| Digital Ads | $50-100 | Engagement |
+| **AI Optimization** | **$1-10** | **Conversion & validation** |
+
+Campaigns will pay for Kyanos because **it makes their entire media strategy more effective**. AI optimization is the highest-impact line item in any media budget. It amplifies TV, protects digital spend, and ensures that voter interest converts to voter support.
+
+By 2028, an estimated 45-60% of voter information queries will be answered inside AI environments. Without AI optimization, campaigns risk losing voters at the moment of decision, after they've already spent the money to reach them.
+
+*For the complete ROI analysis with research citations, see [The Value Proposition](ky-value-proposition.md).*
 
 ---
 
+## Unit Economics
+
+Based on actual Bentham infrastructure costs, scaled by tier:
+
+### Cost per Study by Tier
+
+| Tier | Queries | Variable Cost | Notes |
+|------|---------|---------------|-------|
+| Local | 60 (20×3×1) | ~$15 | Minimal scope |
+| Congress | 315 (35×3×3) | ~$25 | Moderate scope |
+| Statewide | 1,500 (50×3×10) | ~$40 | Watchtowers |
+| National | 5,625 (75×3×25) | ~$75 | Full coverage |
+
+### Margin by Tier (Full Cycle, After Discounts)
+
+| Tier | Full Cycle Price | Studies | Variable Cost | Overhead | Target Margin |
+|------|------------------|---------|---------------|----------|---------------|
+| Local | $1,800 | ~10 | ~$150 | ~$300 | ~35% |
+| Congress | $8,000 | ~10 | ~$250 | ~$600 | ~55% |
+| Statewide | $30,000 | ~10 | ~$400 | ~$1,500 | ~70% |
+| National | $400,000 | ~30 | ~$2,250 | ~$15,000 | ~85% |
+
+**Progressive margin philosophy:** We accept lower margins on smaller races to keep Kyanos accessible to down-ballot progressives. Higher margins on larger races reflect their fundraising capacity and support the mission.
+
 ---
 
-<h2 id="market-opportunity-footnotes">Market & Financial Opportunity Footnotes</h2>
-<ol>
-[^fn-mo-method-1]: <strong>Ad Spend as Context (not Inclusion)</strong>: Digital ad figures are used only to demonstrate the ongoing migration of campaign effort toward online voter reach and discovery; they are <em>not</em> included in TAM). Key references: <em>Brennan Center for Justice</em>, “Online Ad Spending in the 2024 Election” (Aug. 2024), reports **$619M by Aug. 2024** and **$1.35B full cycle** <a href="https://www.brennancenter.org/our-work/analysis-opinion/online-ad-spending-2024-election-topped-135-billion">link</a>; <em>Insider Intelligence / eMarketer</em>, 2024 outlook on total ad spend & digital share <a href="https://www.emarketer.com/press-releases/2024-political-ad-spending-will-jump-nearly-30-vs-2020">link</a>.
-[^fn-mo-method-2]: <strong>Digital-Tech Share Benchmark (TAM)</strong>: Industry reporting estimates total 2024 political ad spend at ≈$12.32B with digital ≈28.1%. <em>Insider Intelligence / eMarketer</em>, press release: <a href="https://www.emarketer.com/press-releases/2024-political-ad-spending-will-jump-nearly-30-vs-2020">link</a>. Our 3–5% “non-media digital-tech” share is a conservative planning assumption for SaaS/CMS/structured-content tooling (documented as methodology, not a market statistic).
+## Infrastructure Costs (Monthly)
 
-[^fn-mo-method-3]: <strong>Proportional Allocation (SAM)</strong>: Derived from TAM by limiting to structured data / AI-discovery tools; constrained by adoption readiness.
+| Scale | Monthly Cost |
+|-------|--------------|
+| MVP | $1,180 |
+| Moderate (100 customers) | $2,475 |
+| Full Scale (500 customers) | $5,000 |
 
-[^fn-mo-method-4]: <strong>SOM Penetration</strong>: Based on early SaaS adoption timelines and limited CMS integration, yielding ~$30–50M attainable market.
+---
 
-[^fn-mo-digital-tv-parity]: <strong>Late-cycle parity of digital vs. TV</strong>: <em>Wesleyan Media Project</em>, Release 10/31/24 (digital ≈ $23M vs. TV ≈ $24.5M in the period cited) <a href="https://mediaproject.wesleyan.edu/releases-103124/">link</a>.
+## Revenue Projections
 
-[^fn-mo-total-political-12b-2024]: <strong>Total political advertising ≈ $12B (2024 cycle)</strong>: <em>Insider Intelligence / eMarketer</em>, “2024 political ad spending will jump nearly 30% vs. 2020” (forecast context) <a href="https://www.emarketer.com/press-releases/2024-political-ad-spending-will-jump-nearly-30-vs-2020">link</a>.
+### 2028 Client Mix (Presidential Year)
 
-[^fn-mo-digital-share-28pct]: <strong>Digital share ≈ ~28%</strong>: <em>Insider Intelligence / eMarketer</em> 2024 forecast materials; see press release above <a href="https://www.emarketer.com/press-releases/2024-political-ad-spending-will-jump-nearly-30-vs-2020">link</a>.
-</ol>
+| Level | Clients | Avg Price | Gross Revenue |
+|-------|---------|-----------|---------------|
+| National | 1 | $400,000 | $400K |
+| Statewide | 25 | $30,000 | $750K |
+| Congress | 60 | $8,000 | $480K |
+| Local | 250 | $1,800 | $450K |
+| Officeholders | 100 | $3,000 | $300K |
+| Organizations | 30 | $15,000 | $450K |
+| Commercial Services | — | — | $500K |
+| **Total** | **~466** | | **$3.33M** |
+
+### Revenue by Year
+
+| Year | Clients | Gross Revenue | Notes |
+|------|---------|---------------|-------|
+| 2026 | 200 | $0 | Free access year |
+| 2027 | ~150 | $1.2M | Paid pricing activates (midterm year) |
+| 2028 | ~466 | $3.3M | Presidential cycle |
+
+### Net Revenue (after agency commissions ~20%)
+
+| Year | Gross | Commissions | Net Revenue |
+|------|-------|-------------|-------------|
+| 2026 | $0 | $0 | $0 |
+| 2027 | $1.2M | ~$180K | ~$1.0M |
+| 2028 | $3.3M | ~$500K | ~$2.8M |
+
+---
+
+## Cost Structure
+
+### Fixed Costs by Year
+
+| Category | 2026 | 2027 | 2028 |
+|----------|------|------|------|
+| Personnel | $650K (5 FTEs) | $780K (6 FTEs) | $1,150K (9 FTEs) |
+| Contractors | $150K | $80K | $120K |
+| Fixed Infrastructure | $48K | $55K | $70K |
+| Marketing/Events | $40K | $60K | $100K |
+| Legal/Compliance | $25K | $25K | $60K |
+| Operations | $22K | $30K | $45K |
+| Reserve | $65K | — | — |
+| **Total** | **$1,000K** | **$1,030K** | **$1,545K** |
+
+*Variable costs (AI API calls, per-study compute) are captured in unit economics and reflected in tier margins.*
+
+### Headcount by Year
+
+| Role | 2026 | 2027 | 2028 |
+|------|------|------|------|
+| CEO | 1 | 1 | 1 |
+| Technical Lead | 1 | 1 | 1 |
+| Research Director | 1 | 1 | 1 |
+| Operations Manager | 1 | 1 | 1 |
+| Customer Support | 1 | 1 | 3 |
+| Sales | — | 1 | 2 |
+| **Total FTEs** | **5** | **6** | **9** |
+
+
+---
+
+## Profitability Timeline
+
+| Year | Net Revenue | Costs | Net |
+|------|-------------|-------|-----|
+| 2026 | $0 | $1.0M | -$1.0M |
+| 2027 | $1.0M | $1.0M | Breakeven |
+| 2028 | $2.8M | $1.55M | +$1.25M |
+
+**Cash-flow positive:** Q4 2027 / Q1 2028
+
+---
+
+## 2026: The Free Year
+
+We're offering free access to progressive campaigns in 2026: full Panopticon access at no cost through primary and general election cycles.
+
+### 2026 Client Mix
+
+| Level | Clients | Cost to Serve | Notes |
+|-------|---------|---------------|-------|
+| Statewide | 15 | ~$6K each | High-visibility case studies |
+| Congress | 50 | ~$2.5K each | Competitive House races |
+| Local | 110 | ~$1.5K each | State leg, major city |
+| Officeholders | 15 | ~$1K each | 2024 winners transitioning |
+| Organizations | 10 | ~$2K each | Consultant partners |
+| **Total** | **200** | **~$330K** | |
+
+**Investment in Reference Base:** The $330K cost to serve these clients is our investment in building a reference base (case studies, testimonials, and proof of impact) that drives 2027 paid conversions and 2028 growth.
+
+### Rollout
+
+- **Q2 (Founding Cohort):** First 50 campaigns with hands-on support
+- **Q3 (Expansion):** Additional campaigns as capacity allows
+- **Q4:** Case studies published; 2027 pricing announced
+
+### Why Free?
+
+- Builds credibility with measurable results
+- Generates case studies for 2027 sales
+- Creates visibility heading into 2028
+- Positions Kyanos as essential progressive infrastructure
+
+---
+
+## Commercial Services Business
+
+### AI Monitoring as a Service
+
+Our Bentham infrastructure is purpose-built for running AI monitoring studies at scale. While built to power Kyanos products, its multi-tenant architecture enables us to offer AI monitoring as a service to aligned clients.
+
+**Current Operations:**
+
+- Multi-tenant infrastructure serving Kyanos and commercial clients
+- Proven with existing clients (brand monitoring)
+- Per-study and retainer pricing models
+
+### Target Markets
+
+| Market | Use Case |
+|--------|----------|
+| CPG/Retail brands | Monitor AI representation of products |
+| Marketing agencies | Competitive intelligence, AI visibility research |
+| Academic researchers | AI behavior studies |
+| International progressive orgs | Global political monitoring |
+
+### Pricing Model
+
+- Per-study: $500-$5,000 depending on scope
+- Retainer: Monthly monitoring packages
+
+### Strategic Value
+
+- Generates revenue outside election cycles
+- Subsidizes progressive political mission with commercial income
+- Provides sustainability independent of foundation support
+- Does not dilute political mission: separate market, shared infrastructure
+
+**Timing:** We do not plan to actively market Bentham's commercial capabilities until after the 2028 cycle. The political mission comes first; commercial expansion can wait.
+
+---
+
+<div class="callout-bottomline">
+<p><strong>$1M investment. 200 campaigns served free in 2026. Breakeven in 2027. Profitable and growing in 2028.</strong></p>
+</div>

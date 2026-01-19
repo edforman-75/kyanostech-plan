@@ -1,69 +1,188 @@
 # Team & Governance
 
-KyanosTech upholds dual accountability: commitment to **mission**: advancing Democratic values and electoral integrity, and stewardship toward **investors**, ensuring capital discipline and long-term viability.  
+## Trust Structure
 
-<!-- cross-ref map
-- References Executive Summary: B-Corp vs PAC framing.
-- Connects to Financial Plan: Compensation benchmarks, inflation raises.
-- Connects to Go-to-Market: Partner representative seat.
--->
+Kyanos operates as a **Trust-Owned LLC**:
 
-## Why a B-Corp Instead of a PAC  
-We chose a **B-Corp structure** rather than a PAC because it allows us to attract investment capital with both mission and financial upside:  
-- **Tax Treatment**: Losses are deductible against other investment income, unlike contributions to PACs which are after-tax[^1].  
-- **Potential Upside**: If we succeed, there is a possibility of return of capital and even positive return on capital.  
-- **Mission Lock**: The B-Corp structure legally binds the company to pursue social good alongside profit, aligning impact investors with electoral outcomes[^2].  
+- **Trust entity** owns 100% of Kyanos LLC
+- **Board of trustees** (3-5 progressive leaders) governs trust
+- **Trust charter** locks in progressive-only service, prevents hostile acquisition
+- **Operating LLC** handles day-to-day business
 
-This hybrid model (with an affiliated 501(c) arm for complementary nonprofit activities) creates optionality: if one pathway becomes constrained, another provides flexibility.  
+### Why Trust-Owned?
 
-## Legal Counsel & Organizational Separation  
-To protect both our for-profit and nonprofit arms, we maintain a **part-time General Counsel** with deep expertise in nonprofit election law and corporate governance. This counsel is essential for:  
-- **Maintaining separation** between the B-Corp and the affiliated 501(c)(3) nonprofit; ensuring no crossover of activities or perceptions of coordination that could jeopardize tax-exempt status[^3].  
-- **Advising on permissible activities**, particularly preventing inadvertent campaign intervention by the nonprofit arm. 501(c)(3) organizations are strictly prohibited from directly or indirectly participating in political campaigns, and violations can lead to loss of tax-exempt status[^4].  
-  - Overseeing **contract review, contribution structures, and compliance safeguards**, ensuring all materials, partnerships, and expenditures are properly vetted. The GC also advises the board and periodically attends meetings to preempt legal risk[^5].  
+The trust structure follows the Catalist precedent (the voter file company that serves virtually every major Democratic campaign). A trust-owned structure:
 
-By investing in specialized counsel from the start, we mitigate legal exposure and document the rigor of our separation strategy, reinforcing both trust and regulatory resilience.  
-
-## Founding Officers  
-- **Chief Executive Officer (CEO)**: Leading vision, investor relations, and strategic oversight. The CEO is the **only officer with a board seat**.  
-- **Chief Technology Officer (CTO)**: Oversees product innovation, engineering, and integrations with Democratic-aligned CMS platforms.  
-- **Chief Commercial & Impact Officer (Founding Officer)**: Stewards go-to-market execution, PAC and union partnerships, CMS distribution, and translates adoption into measurable **Democratic** impact while balancing commercial growth and mission fidelity.  
-
-This team combines technical expertise, campaign credibility, and commercial execution capacity.  
-
-## Board Composition  
-The board is intentionally structured with an odd number of seats to ensure balanced governance:  
-- Founding CEO (only officer on board)  
-- **1–2 impact investor representatives** (capital rigor)  
-- **1–2 movement leaders** (fidelity to progressive values)  
-- **1 independent technologist** (product oversight)  
-- **1 partner representative** (ensuring alignment with distribution, CMS, and integration partners)  
-
-A five- or seven-member board creates a cross-section of accountability, preventing any single constituency from dominating.  
-
-## Compensation Philosophy  
-To attract highly capable, mission-minded talent, compensation is competitive with 85th percentile rates of DC tech/policy professionals[^6]. We include:  
-- **Base salaries** with built-in annual raises (~3%) plus inflation adjustment (~2%).  
-- **Equity or performance incentives** for foundational staff.  
-  - A **mission premium** expectation: that team members prioritize impact and Democratic return over speculative upside.  
-
-This structure ensures stability, retention, and appeal to both impact-oriented professionals and experienced campaign technologists.  
+- Prevents sale to hostile buyers
+- Locks in progressive mission permanently
+- Allows for sustainable revenue generation
+- Attracts foundation PRIs and grants
+- Provides governance stability across leadership changes
 
 ---
 
-## Evidence & Methods  
-[^1]: IRS guidance: “Deductibility of capital investment losses” vs. nondeductibility of political contributions (IRS Pub. 529).  
-[^2]: Delaware B-Corp statute, 8 Del. C. §362–368.  
-[^3]: IRS Rev. Rul. 2007-41 on political activities of 501(c)(3) organizations.  
-[^4]: IRS “Charities, Churches, and Politics” FAQ, updated 2024.  
-[^5]: Alliance for Justice, *Keeping Nonprofit and For-Profit Arms Legally Separate*, 2023.  
-[^6]: CompTIA/DC Tech Salary Benchmark Report, 2024.  
+## Charter Principles
+
+| Principle | What It Means |
+|-----------|---------------|
+| **Progressive Only** | We serve progressive candidates and causes exclusively |
+| **Customer Consent** | Nothing published or disclosed without authorization |
+| **Causality Focus** | We trace problems to root causes and recommend only what can be fixed |
+| **Privacy Protected** | Client data stays confidential; no sharing between clients |
+| **Mission-Locked** | Trust structure prevents sale to hostile buyers |
 
 ---
 
-<!-- changelog
-2025-08-22: Section locked and appended to Master Plan.
-Added: Partner representative to board composition.
-Added: Part-time GC requirement with election law expertise.
-Added: Cross-ref map for integration.
--->
+## Founder
+
+**[Ed Forman](https://www.linkedin.com/in/edforman/)** brings 35 years of Silicon Valley experience to Kyanos, having been an early employee at eleven startups across decision-support systems, databases, wireless, and interactive media. He holds an MBA from Stanford, where he later taught entrepreneurship and business-model design to mid-career executives.
+
+After his startup career, Ed spent a year in Ghana through Stanford's SEED program, coaching companies across West Africa. That experience reshaped how he thinks about building capacity in systems, whether economic or political, before crisis hits.
+
+The idea for Kyanos emerged from a breakfast conversation with Scott Anderson of Strategic Victory Fund in Sun Valley: *"What threats to progressives are on the horizon that we're not seeing?"* The answer: **AI chatbots will be to 2028 what podcasts were to 2024.** Progressives can't afford to be caught flat-footed again.
+
+Ed's role is as architect and advisor: assembling the team, framing the problem, and designing a structure that outlasts any one individual. He won't take an operational role, but he's committed to ensuring democracy has a seat inside the new information infrastructure before it's built without us.
+
+*For a deeper conversation with Ed about Kyanos and his thinking, see the [Founder Interview](ky-white-paper-founder-interview.md).*
+
+---
+
+## Team Structure
+
+### Phase 1: Launch (Q2 2026)
+
+| Role | Responsibilities |
+|------|------------------|
+| **CEO** | Fundraising, foundation relationships, strategic decisions |
+| **Technical Lead** | Bentham, product development, platform maintenance |
+| **Research Director** | Methodology, AI Bias Report, quality assurance |
+| **Operations Manager** | Study execution, commercial services delivery |
+| **Marketing & Partnerships** | Consultant relationships, sales support, content |
+
+### Contractor Pool
+
+- Development surge capacity
+- Design/UX
+- Content production
+- Support coverage
+
+### Phase 2: Growth (2027)
+
+- Add dedicated sales role for commercial services
+- Expand contractor pool as needed
+- Potential additional engineering hires
+
+---
+
+## Board of Trustees
+
+### Composition (3-5 members)
+
+- **Progressive movement leaders:** Ensure mission fidelity
+- **Foundation representatives:** Major funders with governance role
+- **Labor representatives:** Union alignment
+- **Independent expert:** Technology or political infrastructure expertise
+
+### Responsibilities
+
+- Approve annual budget and strategic plan
+- Ensure mission compliance
+- Appoint and evaluate CEO
+- Approve any change in corporate structure
+- Review Research Institute relationship
+
+### Meetings
+
+- Quarterly board meetings
+- Annual strategic planning session
+- Special sessions as needed
+
+---
+
+## Kyanos Research Institute
+
+Separate 501(c)(3) organization for independent research on AI bias in political information.
+
+### Purpose
+
+- Publish peer-reviewed research on AI bias
+- Document platform changes and effects on progressive representation
+- Serve as independent, credible public voice on AI and democracy
+
+### Relationship with Kyanos LLC
+
+- Data licensing agreement for monitoring data
+- Independent board and editorial decisions
+- Financial separation
+
+### Timeline
+
+- **2026:** AI Bias Report as in-house marketing content
+- **2027:** Begin Institute formation if seed funding secured
+- **2028:** Institute operational
+
+---
+
+## Compensation Philosophy
+
+### Principles
+
+- **Competitive but mission-aligned:** 75th percentile for DC political tech
+- **Mission premium expectation:** Team members prioritize impact over speculative upside
+- **Stability:** Predictable compensation, no wild swings
+
+### Structure
+
+| Component | Approach |
+|-----------|----------|
+| Base salary | Competitive for role and experience |
+| Annual adjustment | Cost-of-living increases |
+| Performance | Milestone-based bonuses tied to organization goals |
+| Equity | Not applicable (trust-owned structure) |
+
+---
+
+## Legal & Compliance
+
+### Legal Counsel
+
+Part-time general counsel with expertise in:
+
+- Nonprofit/for-profit separation
+- Campaign finance law
+- Data privacy
+- Contract review
+
+### Compliance Areas
+
+| Area | Approach |
+|------|----------|
+| Campaign finance | No direct contributions; services at market rates |
+| Data privacy | Campaign data siloed; no cross-client sharing |
+| Platform terms | Compliance with AI platform ToS |
+| Tax status | Maintain trust structure requirements |
+
+---
+
+## Catalist Precedent
+
+Catalist provides the structural model for Kyanos:
+
+- **Founded:** 2006
+- **Structure:** Trust-owned LLC
+- **Initial funding:** $1M from George Soros; $4M+ from Tides Foundation
+- **Current status:** Serves virtually every major Democratic campaign
+- **Relevance:** Proves trust-owned model works for progressive political infrastructure
+
+The Catalist example demonstrates that:
+
+- Foundation funding works for political infrastructure
+- Trust structure provides mission permanence
+- Progressive-only positioning creates sustainable business
+- Infrastructure plays can achieve movement-wide adoption
+
+---
+
+<div class="callout-bottomline">
+<p><strong>Trust-owned. Mission-locked. Built to serve progressives permanently.</strong></p>
+</div>

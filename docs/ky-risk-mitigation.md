@@ -1,22 +1,180 @@
-# Risk & Mitigation
+# Risks & Mitigations
 
-<!-- cross-ref: Risk & Mitigation -->
+## Funding & Financial Risks
 
-KyanosTech acknowledges that launching an impact-driven SaaS business in the middle of a polarized political landscape carries unusual risks. Rather than minimizing them, we make them explicit and present clear mitigations.  
-
-| **Risk** | **Mitigation** |
-|----------|----------------|
-| **Execution Risk**<br>Scaling three products (AGON, POLIS, SCOPE) simultaneously may overextend a lean team. | Phased roadmap: prioritize MVP and pilots in 2026; add features incrementally. Contractors for campaign surges. Explicit SEED-phase validation of assumptions before scale. |
-| **Market Adoption Risk**<br>Campaigns may be slow to adopt structured data tools. | Deep discounts + hands-on services for 2026 pilots; use CMS partnerships (WordPress, NationBuilder, Squarespace) and backend integrations (NGP VAN, Mobilize to reduce friction. Case studies to prove ROI before 2028. |
-| **Political / Regulatory Risk**<br>Scrutiny of political tech vendors is increasing. Risk of accusations of bias or unlawful coordination. | Maintain B-Corp structure with part-time General Counsel and outside counsel validating compliance【web†source】. Strict firewall between B-Corp and 501(c) arms. All schemas traceable to public source material. |
-| **Credit Risk**<br>Campaigns are notorious for late or partial payments, especially after losing elections【web†source】. | Up-front payment policies, milestone billing, and PAC/union partnerships as intermediaries. Officeholder/committee accounts provide steadier recurring revenue. |
-| **Competitive Risk**<br>Republican campaigns or large commercial vendors may replicate similar tools. | Defensive moats: schema standards, CMS integrations, SCOPE’s audit dataset. First-mover advantage in Democratic community. |
-| **Technology Risk**<br>AI platforms may change APIs, models, or discovery mechanisms. | Continuous monitoring via SCOPE. Academic and legal partnerships to detect/respond. Roadmap flexibility to adapt schemas and authoring tools. |
-| **Reputational Risk**<br>Any perception of manipulation of AI answers could undermine credibility. | Transparency: publish methodology, validation pilots, and dashboards. Independent academic oversight. |
+| Risk | Mitigation |
+|------|------------|
+| **Initial funding delayed** | Parallel outreach to multiple sources; working MVP demonstrates viability |
+| **2027 revenue misses projections** | Free year generates pipeline; commercial services provide backup revenue |
+| **Campaign payment defaults** | Reserve fund; consultant partners absorb credit risk |
 
 ---
 
-**Footnotes & Evidence**  
-1. *Election law compliance*: Legal analyses warn that nonprofits funding campaign tech risk violating coordination rules; counsel oversight is critical (see [Bolder Advocacy guide on 501(c) political activity](https://bolderadvocacy.org/)).  
-2. *Credit risk*: Coverage of campaign vendors repeatedly shows unpaid invoices after losses, e.g., Politico 2021: “Campaigns stiff consultants” documenting millions in unpaid bills.  
-3. *Market adoption barriers*: FEC data and campaign tech surveys show Democratic campaigns lag Republicans in adopting structured digital tools, especially schema markup.  
+## Technology Risks
+
+| Risk | Mitigation |
+|------|------------|
+| **AI platforms change content processing** | Research Director tracks changes; diversified approach across sources |
+| **Platforms block monitoring** | Multiple access methods; budget for maintenance |
+| **Platform becomes hostile to progressives** | Watchtowers detect early; Research Institute documents evidence |
+
+---
+
+## Operational Risks
+
+| Risk | Mitigation |
+|------|------------|
+| **Key person risk** | Trust board with succession rules; documented processes |
+| **Bentham needs constant supervision** | Dedicated Operations Manager from launch |
+| **Support burden exceeds capacity** | Product designed for self-serve; CMS-specific instructions reduce touch |
+
+---
+
+## Political Risks
+
+| Risk | Mitigation |
+|------|------------|
+| **AI regulation restricts optimization** | We do content structuring, not manipulation; likely to benefit from regulation |
+| **Platform policies restrict political content** | Follow platform rules; adjust quickly |
+| **Administration pressure on AI platforms** | Core reason Kyanos exists; Watchtowers and Research Institute provide documentation |
+
+---
+
+## Market Risks
+
+| Risk | Mitigation |
+|------|------------|
+| **Campaigns slow to adopt** | Free year removes cost barrier; consultant channel provides trusted recommendation |
+| **Competitors enter market** | First-mover advantage; trust structure creates credibility; platform integrations create switching costs |
+| **Commercial services don't scale** | Commercial is bonus revenue; core business sustainable without it |
+
+---
+
+## Detailed Risk Analysis
+
+### Funding Risk: Foundation PRIs Don't Close
+
+**Likelihood:** Medium
+**Impact:** High
+
+**Scenario:** Progressive foundations are slow to commit PRIs, delaying funding past March 15 deadline.
+
+**Mitigations:**
+
+- Parallel conversations with multiple foundations
+- Labor union funding as alternative/supplement
+- Family office donors as backup
+- MVP demonstrates viability before funding closes
+- Minimum viable funding level ($750K) allows launch with reduced scope
+
+### Technology Risk: Platforms Change APIs
+
+**Likelihood:** High (certain to happen)
+**Impact:** Medium
+
+**Scenario:** Google, OpenAI, or Meta changes how AI systems work or how they can be queried.
+
+**Mitigations:**
+
+- Research Director monitors platform changes
+- Multiple extraction methods in Bentham
+- Budget for ongoing maintenance
+- Relationships with platform developer programs
+- Diversified approach: no single-platform dependency
+
+### Operational Risk: Self-Service Doesn't Work
+
+**Likelihood:** Medium
+**Impact:** Medium
+
+**Scenario:** Local campaigns need more support than self-service model provides.
+
+**Mitigations:**
+
+- CMS-specific instructions reduce complexity
+- Knowledge base for common issues
+- Email support included in all tiers
+- Consultant channel absorbs higher-touch needs
+- Product designed for campaign staff, not candidates
+
+### Political Risk: Platform Manipulation
+
+**Likelihood:** Medium-High
+**Impact:** High
+
+**Scenario:** AI platforms deliberately skew results against progressives under political pressure.
+
+**Mitigations:**
+
+- Watchtowers detect geographic manipulation
+- Research Institute documents evidence
+- Public reporting creates accountability
+- Core reason Kyanos exists: we're the watchdog
+- Data supports legal and policy advocacy
+
+### Market Risk: Competitors Copy Model
+
+**Likelihood:** Medium
+**Impact:** Low-Medium
+
+**Scenario:** Another organization launches similar progressive AI monitoring service.
+
+**Mitigations:**
+
+- Trust structure creates credibility competitors can't match
+- First-mover advantage in partner relationships
+- Bentham infrastructure is operational and proven
+- Case studies and reference customers by 2027
+- Mission alignment attracts progressive talent
+
+---
+
+## Risk Monitoring
+
+### Quarterly Risk Review
+
+- CEO reviews risk register with board
+- Update likelihood and impact assessments
+- Document new risks and mitigation effectiveness
+- Adjust plans as needed
+
+### Key Risk Indicators
+
+| Indicator | Threshold | Action |
+|-----------|-----------|--------|
+| Funding commitments | <$500K by Feb 15 | Accelerate alternative sources |
+| Platform monitoring failures | >10% query failure rate | Technical investigation |
+| Client satisfaction (NPS) | <30 | Product/support review |
+| 2027 conversion rate | <30% | Pricing/value prop review |
+
+---
+
+## Contingency Plans
+
+### If Funding Falls Short ($750K minimum not met)
+
+- Reduce team to 3 FTEs
+- Delay GoodInk and Adwatch launches
+- Focus on Panopticon core only
+- Serve 100 campaigns instead of 200
+- Extend timeline for 2027 revenue
+
+### If Platform Access Blocked
+
+- Shift to public data sources only
+- Partner with academic researchers for access
+- Document blocking as evidence of platform hostility
+- Adjust product to work with available data
+
+### If 2027 Revenue Misses Target
+
+- Extend free access selectively
+- Accelerate commercial services
+- Reduce 2027 expenses
+- Seek bridge funding if needed
+
+---
+
+<div class="callout-bottomline">
+<p><strong>We've identified the risks. We have the contingencies. The only real risk is doing nothing.</strong></p>
+</div>

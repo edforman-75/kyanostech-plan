@@ -1,27 +1,93 @@
-# Problem & Urgency
+# Problem & Market Opportunity
 
-In 2024, Democrats underestimated the rise of podcasts [^]    as a persuasion medium. Conservative operatives and financiers systematically built [^]   an community  of “low-trust but high-frequency” talk content that reached millions of voters week after week. Democrats were late to see this shift [^]   , and the asymmetry cost us narrative ground.
+## The Problem
 
-We now face a far more consequential inflection point: the rapid emergence of **AI chatbots and AI-assisted search [^]  as the default medium of political discovery ** . These systems are no longer niche. They are already shaping how voters get answers to basic civic questions, and the pace of adoption is accelerating.
+Voters are changing how they seek political information. Instead of visiting campaign websites or watching debates, they ask AI assistants:
 
-Voters’ “search” behavior is shifting  from clicking links to receiving answers directly from AI systems. Search Engine Land reported that **27.2% of U.S. searches in March 2025 ended without a click [^]  , up from 24.4% the year before**.
+- "What does [Candidate] think about abortion?"
+- "Who should I vote for in [District]?"
+- "What's the difference between [Candidate A] and [Candidate B]?"
 
-Google’s **AI Overviews further compress clicks** by answer-boxing results. **Pew Research (July 2025) [^]  found that about 18%  of all queries in March 2025 generated an AI Overview, while 60% of U.S. adults encountered at least one Overview during the month**. **Semrush’s July 2025 study [^]  reported a similar figure  of 13.14% query coverage**.
+AI systems synthesize answers from across the web. If progressive content isn't structured for machine readability, these systems may:
 
-The trend is unmistakable: voters are increasingly satisfied  with what the AI system says, never clicking through to official or campaign websites. The traditional model of persuasion through web links is eroding, while AI answer surfaces are becoming the new battleground.
+- Miss progressive positions entirely
+- Hallucinate incorrect policy stances
+- Favor better-optimized conservative content
+- Fail to cite authoritative progressive sources
 
+**This is not hypothetical.** Our monitoring shows significant variance in how AI systems represent candidate positions, with properly structured content receiving preferential citation.
+
+## The 80/20 Reality
+
+Not all AI surfaces matter equally. Our market analysis shows:
+
+| Surface | Election Query Share | Voter Impact |
+|---------|---------------------|--------------|
+| Google AI Overviews | 40-45% | 15-17M voters |
+| ChatGPT | 10-12% | 4-5M voters |
+| Meta AI | 8-10% | 8-10M voters (critical for Hispanic voters) |
+| All others combined | ~35% | Fragmented |
+
+**Strategic implication:** Focus on Google, ChatGPT, and Meta AI. These three surfaces capture ~60% of election AI queries and reach the most strategically important voter segments.
+
+We can monitor any surface. We recommend campaigns focus on the core three unless they have specific reasons to expand.
+
+## Geographic Variation
+
+Panopticon's Watchtowers have detected that AI systems return different answers in different locations. Swing state voters may see different information than safe state voters. This has profound implications for campaign strategy and for platform accountability.
 
 <div class="callout-info">
-<div class="callout-title">The AI Abstention Trap</div>
-<p><b>The Risk:</b> Data show progressives report higher concern about AI's societal harms than conservatives; this heightened suspicion may leave progressives hesitant to implement AI-optimizing features.</p>
-
-<p><b>The Reality:</b> <b>800 million users</b> rely on ChatGPT weekly while <b>61% distrust AI</b>, yet usage accelerates across demographics (see Appendix).</p>
-
-<p><b>The Consequence:</b> <b>34% of Americans</b> use AI for research; abstaining cedes control over how candidates are represented in AI answers.</p>
-
-<p><b>The Urgency:</b> Chatbot interactions can shift political views within a handful of exchanges; failing to engage concedes the terrain.</p>
-
-<p><b>Bottom line:</b> Ideological purity becomes tactical blindness when others shape AI-mediated reality unchallenged.</p>
+<div class="callout-title">The Watchdog Imperative</div>
+<p>AI platforms are controlled by investors with political agendas and subject to pressure from a President who demands loyalty. If models shift against progressives, whether through deliberate manipulation or algorithmic drift, someone needs to detect it first and document the evidence.</p>
+<p>Kyanos provides that watchdog function, with Watchtowers that can detect geographic manipulation and build an evidence base for accountability.</p>
 </div>
 
-We estimate that by the November 2028 general election, **~45–60%   of voter information queries will be answered inside AI experiences (AI Overviews or chat) rather than via clicks to official or campaign sites**. Most users will never click a link , if one is even offered, and will be satisfied with what the chatbot says. The **mission of the candidate and officeholder website will be transformed**. It will be less and less a place that voters visit, and more and more the mechanism by which the chatbots are trained.
+## Why Now
+
+1. **AI adoption is accelerating.** ChatGPT reached 100M users faster than any application in history; Google AI Overviews now appear on 50%+ of informational queries.
+
+2. **2026 cycle timing.** The midterms are months away; solutions implemented now impact competitive races this cycle and establish credibility for 2028.
+
+3. **No incumbent.** The progressive technology network has voter files (Catalist), CRMs (NGP VAN), and fundraising tools (ActBlue), but nothing for AI-era digital presence management.
+
+4. **Platform capture risk.** Major AI platforms face pressure from a hostile administration; progressives need independent monitoring infrastructure.
+
+## Market Size
+
+### Primary Market: Progressive Campaigns
+
+| Race Level | Races per Cycle | Serviceable | Market Size |
+|------------|-----------------|-------------|-------------|
+| National | 1 | 1 | $600K |
+| Statewide | 70+ | 30-40 | $1.8M |
+| Congress | 435 | 50-100 | $1.2M |
+| Local | 6,000+ | 200-500 | $1.2M |
+
+**Cycle Market:** ~$5M addressable per cycle for campaigns alone
+
+### Secondary Markets (Year-Round Revenue)
+
+| Customer Type | Count | Annual Market |
+|---------------|-------|---------------|
+| Officeholders | 500+ | $1.5M |
+| Advocacy organizations | 200+ | $1.2M |
+| Labor unions | 50+ | $1.2M |
+| Party committees | 50+ | $1.8M |
+| Political consultants | 50-100 firms | $600K |
+
+### Commercial Services Market
+
+| Customer Type | Opportunity |
+|---------------|-------------|
+| CPG/Retail brands | AI visibility monitoring |
+| Marketing agencies | Research and competitive intelligence |
+| Academic researchers | AI behavior studies |
+| International progressive orgs | Global political monitoring |
+
+**Total Addressable Market:** $20-25M annually at maturity, plus commercial services
+
+---
+
+<div class="callout-bottomline">
+<p><strong>The AI information war is already underway. Progressives can't afford to sit it out.</strong></p>
+</div>

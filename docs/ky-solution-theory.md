@@ -1,37 +1,132 @@
-# 3. Solution & Theory of Change
+# Solution & Theory of Change
 
-## Framing the Shift
-For decades, campaigns and journalists worried about “spin rooms” and “talk radio echo chambers.” By 2028, the battleground will be different: AI chatbots and answer engines will increasingly replace both news outlets and campaign websites as the place where voters first encounter political information. Voters will not visit dozens of sites. They will ask questions and expect the AI to answer in full. 
+## The Causality Chain Methodology
 
-The mission of the candidate and officeholder website will be transformed. It will be less and less a place that voters visit, and more and more the mechanism by which the chatbots are trained. Campaign content must therefore be structured for AI discovery, not just human browsing. By 2028, this shift will determine whether Democrats can compete effectively in the new information environment. 
+Kyanos doesn't just report problems. We trace them to root causes and provide fixes campaigns can actually implement.
 
-## Market Penetration of AI Answers
-We estimate that by the November 2028 general election [^sol-2028-competition-outcome] , **~45–60% of voter information queries will be answered inside AI experiences (AI Overviews or chat) rather than via clicks to official or campaign sites.** Most users will never click a link (if one is even offered, and will be satisfied with what the chatbot says. 
+### The Four Steps
 
+1. **Observe:** What does the AI surface say?
+2. **Trace:** Where did it get that information?
+3. **Diagnose:** What's the root cause of the error?
+4. **Prescribe:** Specific fix for the source, not the symptom
 
----
+**Only recommend actions the campaign can take. No "shoulda/woulda."**
 
-## Zero-Click Behavior
-Voters’ “search” behavior is shifting from clicking links to receiving answers directly from AI systems. Independent tracking shows a material rise in “zero-click” behavior, where users get what they need without visiting a website. SparkToro’s 2024 analysis of Similarweb panel data found **0[^sol-sparktoro-zero-click-us-2024] [^sol-prob-2028] **; other panels show lower but rising figures (e.g., U.S. zero-click at **0[^sol-zero-click-27-2-mar-2025] [^sol-prob-2028] **), underscoring different methodologies but the same directional trend. 
+<div class="callout-info">
+<div class="callout-title">Why Causality Matters</div>
+<p>Most AI monitoring services tell you what's wrong. We tell you <strong>why</strong> it's wrong and <strong>exactly how to fix it</strong>.</p>
+<p>If ChatGPT says your candidate supports a policy they oppose, we trace the error to its source: maybe a Wikipedia entry, a misquoted news article, or a missing issues page on your website.</p>
+<p>Then we tell you <strong>exactly what needs to happen</strong>, whether that's writing new content, updating existing pages, or making technical fixes to your website's structured data. We package these recommendations so you can easily hand them off to the people who need to execute: your comms director gets the messaging guidance, your web developer gets the technical specs.</p>
+<p>And we don't just hand you a report and walk away. <strong>We monitor execution and act as your coach</strong>, tracking whether fixes get implemented, confirming when AI systems update their responses, and keeping the pressure on until the job is done.</p>
+</div>
 
-Google’s AI Overviews further compress clicks by answer-boxing results. In 2025, Pew’s field data observed that a **0[^sol-pew-ai-overviews-2025] [^sol-prob-2028] in March**, and multiple industry trackers now estimate 0[^sol-pew-ai-overviews-2025] [^sol-prob-2028] . 
+## Panopticon: The Core Product
 
----
+Panopticon is our flagship product. It works in three phases: **Monitor → Prioritize → Act**
+
+Every customer gets all three phases. This is not a tiered feature set. It's a complete methodology.
+
+### Phase 1: Monitor
+
+**Purpose:** Automated monitoring of AI platforms and search engines
+
+**How It Works:**
+
+- Queries AI surfaces using our Bentham extraction infrastructure
+- Core surfaces: Google AI Overviews, ChatGPT, Meta AI
+- Optional: Perplexity, Copilot, Gemini, Claude, Grok, and others
+- Tests questions voters actually ask about the candidate
+- Scores each response for accuracy against stated positions
+- Watchtowers detect geographic variation (Statewide/National tiers)
+
+**Monitoring Frequency:**
+
+- Monthly (standard)
+- Weekly (premium)
+- Daily (premium)
+
+**Deliverable:** Dashboard showing accuracy across platforms with sample AI responses
+
+### Phase 2: Prioritize
+
+**Purpose:** Trace errors to root causes and rank by impact
+
+**How It Works:**
+
+- Analyzes Monitor findings to identify problems
+- **Traces causality:** Where did the AI get its information? Wikipedia? Ballotpedia? News articles? Campaign site?
+- Identifies the fixable root cause of each error
+- Ranks issues by: **(Voter Reach × Error Severity × Fixability)**
+- Focuses only on things the campaign can actually change
+
+**Deliverable:** Ranked priority list showing what to fix first and why
+
+### Phase 3: Act
+
+**Purpose:** Specific, actionable remediation instructions
+
+**How It Works:**
+
+- Provides step-by-step instructions for each issue
+- **Knows your tech stack:** Instructions tailored to your CMS (WordPress, Squarespace, NationBuilder, etc.)
+- **Targeted delivery:**
+  - Approver gets the recommendation (what and why)
+  - Implementer gets exact instructions for their system
+- Includes templates, URLs, and code snippets ready to use
+- Estimates timeline for fixes to propagate to AI systems
+
+**Deliverable:** Action cards with numbered steps that don't waste the candidate's time
 
 ## Theory of Change
 
-If Democrats fail to adapt, they risk invisibility in the very medium where voters will be searching. Our theory of change is straightforward: 
+### Immediate Impact (Campaign Level)
 
-1. **Visibility: ** Campaign and officeholder content must be structured in schema-compliant ways (e.g., JSON-LD, schema.org) so it can be surfaced accurately by AI chatbots and answer engines.
-2. **Credibility: ** Narrative text and structured data must align, ensuring that AI training systems recognize official sources as trustworthy and consistent.
-3. **Productivity: ** Structured authoring processes streamline communications work, reducing duplication and helping staff detect inconsistencies across statements.
-4. **Accountability: ** Continuous monitoring and auditing ensures that Democratic priorities are represented accurately in AI answers while also building the evidentiary base for addressing systemic bias.
+1. Campaign monitors its AI representation
+2. Identifies inaccuracies and their root causes
+3. Implements specific fixes (schema markup, content updates, source corrections)
+4. AI systems update their responses over time
+5. Voters receive accurate information about the candidate
 
+### Systemic Impact (Movement Level)
 
-## Footnotes
-[^sol-2028-competition-outcome]: Directional forecast. Zero-click behavior and AI answers are already shrinking traditional link-clicking: Similarweb panel data (reported by Search Engine Land) shows **0[^sol-zero-click-27-2-mar-2025]** (up from 24.4% a year earlier). Pew’s March 2025 field study found **AI Overviews appeared for ~18% of queries and 60% of U.S. adults encountered at least one Overview that month**. Combined with rising assistant adoption, multiple industry trackers expect AI answers to mediate a large share of discovery by the late-2020s; we therefore treat a **major, possibly dominant, AI-mediated share by 2028** as a planning assumption, to be updated with new data. Sources: Search Engine Land (Mar 2025, Similarweb), Pew Research Center (Jul 2025), Semrush study (Jul 2025).
-[^sol-prob-2028]: As of 2025, **AI Overviews show up on ~13% of U.S. desktop queries** (Semrush, 31M queries; Jul 2025) and **~18% of all queries in March 2025** (Pew Research Center). **60% of U.S. adults saw at least one Overview that month.** These figures indicate rapid, broadening coverage of AI answers. Sources: Semrush (2025 AI Overviews study), Pew Research Center (Jul 2025).
-[^sol-sparktoro-zero-click-us-2024]: SparkToro (2024) analysis of Similarweb panel data: **0[^sol-sparktoro-zero-click-us-2024]**. Source: SparkToro, “Zero-Click Searches” (2024).
-[^sol-zero-click-27-2-mar-2025]: Search Engine Land (Mar 2025) reporting Similarweb panel data: **0[^sol-zero-click-27-2-mar-2025]**, up from 24.4% a year earlier.
-[^sol-pew-ai-overviews-2025]: Pew Research Center (July 2025) field survey: **0[^sol-pew-ai-overviews-2025]**, and **~60% of U.S. adults encountered at least one Overview during the month**.
-[^sol-semrush-ai-overviews-2025]: Semrush study (July 2025) of ~31M queries: **0[^sol-semrush-ai-overviews-2025]**.
+1. Progressive campaigns collectively improve their AI visibility
+2. AI systems receive better training signals from progressive sources
+3. Platform accountability becomes possible through documented evidence
+4. Progressives maintain parity in the AI information environment
+
+### Watchdog Impact (Democracy Level)
+
+1. Watchtowers detect geographic manipulation
+2. Research Institute documents evidence of platform bias
+3. Findings inform policy advocacy and public awareness
+4. AI platforms face accountability pressure
+
+## What Makes This Different
+
+### Compared to Generic SEO
+
+- **Political context:** We understand campaigns, not just keywords
+- **AI-specific:** Optimized for AI answer generation, not just search ranking
+- **Causality focus:** We trace problems to root causes
+- **CMS-aware:** Instructions match your actual tech stack
+
+### Compared to General AI Monitoring
+
+- **Campaign-specific prompts:** Questions voters actually ask
+- **Progressive alignment:** Built for Democratic campaigns and organizations
+- **Actionable output:** Not just reports, but fixes
+- **Regional detection:** Geographic variation analysis
+
+### Compared to DIY Approaches
+
+- **Systematic methodology:** Not ad hoc checks
+- **Scale:** Monitoring across multiple surfaces simultaneously
+- **Expertise:** Deep understanding of how AI systems source information
+- **Continuous:** Regular monitoring, not one-time audits
+
+---
+
+<div class="callout-bottomline">
+<p><strong>We don't just tell you what's wrong. We tell you exactly how to fix it.</strong></p>
+</div>

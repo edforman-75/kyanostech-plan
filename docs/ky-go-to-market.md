@@ -1,103 +1,234 @@
 # Go-to-Market Strategy
 
-KyanosTech' go-to-market approach is designed to maximize adoption in a cyclical campaign market, balancing early credibility with scalable growth. The model prioritizes partnerships, high-impact races, and time-bound concessions to secure beachheads in 2026 and set up rapid expansion for 2028.
+## Phase 1: Foundation (Q1-Q2 2026)
 
-## Channel Strategy
+### Objectives
 
-**Direct Engagement (25%):** Reserved for top-tier campaigns where credibility is most valuable (early Senate, House, and gubernatorial campaigns).¹
+- Secure $1M target funding by March 15
+- Finalize trust structure with progressive board
+- Hire core team (5 FTEs: CEO, Technical Lead, Research Director, Operations Manager, Marketing & Partnerships)
 
-**Partnership Distribution (75%):** Core strategy. Website developers, digital consultants, and PACs provide reach across hundreds of campaigns with far lower CAC.¹
+### Activities
 
-**Limited CMS Support:** Integration with **WordPress, NationBuilder, and additional platforms** : the dominant CMS platforms used in Democratic campaigns.² This ensures efficient adoption without custom connectors for every vendor. See Appendix E: CMS Landscape Briefing for CMS scope and roles.
-
-**Responsibility:** GTM execution is led by the Chief Commercial & Impact Officer, responsible for PAC and union partnerships, CMS relationships (WordPress, NationBuilder), and ensuring adoption translates directly into measurable Democratic impact.
-
-## Foundational Relationship-Building (2025–2026)
-
-### 2025 (Seed Phase):
-- No deployments in this year.
-- The Chief Commercial & Impact Officer takes direct responsibility for cultivating discreet relationships with PACs, unions, digital consultants, CMS vendors, and campaign managers.
-- Conduct assumption-testing interviews with 30–50 stakeholders to validate demand, adoption barriers, and pricing expectations.³
-- Activities are kept deliberately below the radar: focused on listening, mapping networks, and preparing targeted entry in 2026, not public visibility.
-
-### 2026 (First Pilots):
-- Use these early contacts to secure initial gubernatorial and competitive House campaigns.
-- Begin PAC co-funding discussions with organizations that supported interviews in 2025.⁴
-- Offer deep discounts and manual services as a one-time credibility investment to secure flagship pilot accounts.
-
-## 2026: Early Validation & Concessions
-
-**Targets:** Competitive gubernatorial races (36 on the ballot; priority in battleground states),⁵ and a focused set of highly competitive or well-funded House races.
-
-**Tactics:**
-- Deep discounts and manual service support to secure credibility even where automation is incomplete.
-- PAC and Association Partnerships: Work with labor PACs (e.g., SEIU COPE)⁶ and membership PACs (e.g., EMILY's List)⁷ to subsidize early campaigns.
-
-**Goal:** 10–15 marquee adoptions by cycle end; establish credibility, case studies, and reference customers.⁸
-
-## 2027: Expansion & Officeholder Base
-
-**Targets:**
-- Growth in Senate campaigns entering early for 2028.
-- Expansion into House committees and officeholders, leveraging standardized CMS (.gov sites).⁹
-
-**Tactics:**
-- Develop partner certification programs to enable scaled adoption.¹⁰
-- Build early officeholder/committee revenue for recurring base.
-- Shift pricing closer to 2028 levels as features mature; reduce reliance on concessions.
-
-**Goal:** 40–50 active accounts (mix of campaigns + committees). Proof of scalability and partner-led growth.¹¹
-
-## 2028: Full-Scale Presidential & Federal Cycle
-
-**Targets:**
-- Presidential campaigns (primary and general).
-- All competitive Senate and governor races.
-- Around 30 competitive House races plus leadership/committee officeholders.
-
-**Tactics:**
-- National PAC/Union Partnerships: Integrate AI optimization funding into bundled candidate support packages.¹²
-- Partner-Led Implementation: Majority of new campaigns acquired through certified consultants and developers.
-- Visibility Dashboarding: Deliver real-time campaign visibility benchmarks as a differentiator.
-
-**Goal:** 300+ campaigns and officeholders, demonstrating dominance of AI optimization for Democratic campaigns.¹³
-
-## Strategic Partnerships with Direct-Contribution Political Organizations
-
-### PAC-Driven Distribution:
-- Labor unions (e.g., SEIU COPE) can bulk-fund optimization across dozens of candidates.
-- Professional PACs (e.g., EMILY's List) can integrate our services into their candidate support offerings.
-- **Proof of Value:** Success requires documenting how AI optimization improves campaign visibility and electoral outcomes, making it a natural addition to PAC-funded candidate packages.
-- **Partnership Multiplier:** Each partnership can extend reach across dozens of campaigns, reducing CAC and embedding us in Democratic infrastructure.
+- Foundation outreach (Open Society, Tides, Way to Win, others)
+- Labor union conversations (SEIU, AFSCME, AFL-CIO political programs)
+- Family office and major donor cultivation
 
 ---
 
-## Footnotes
+## Phase 2: Free Year (Q2-Q4 2026)
 
-¹ **Channel Mix Strategy:** Channel mix strategy based on B2B SaaS industry patterns where 50-70% of sales occur through indirect channels (SaaS Capital, 2019; Channel as Service, 2025). Political technology sector shows similar partnership-dependency through platform integrations (ActBlue, NGP VAN, WordPress). Partnership-focused distribution strategy uses the political consulting community where Democratic consulting firms typically lead campaign technology implementation decisions and expect compensation for technology recommendations. These firms are highly protective of client relationships and accustomed to revenue-sharing arrangements, making direct sales approaches often ineffective without consultant buy-in. Specific 25%/75% ratio represents strategic resource allocation assumption requiring validation through pilot testing.
+### Objectives
 
-² **CMS Platform Dominance:** WordPress (20-25% market share), NationBuilder (18-23% market share), and additional platforms achieve 75% coverage of Democratic campaign websites. Data sourced from Appendix E: Democratic Campaign CMS Platform Usage Analysis 2024, which analyzed campaign technology vendor reports, consulting firm case studies, and infrastructure surveys across 400+ Democratic campaigns in 2022-2024 cycles.
+- Serve 200 progressive campaigns at no cost
+- Generate case studies and testimonials
+- Build credibility for 2027 paid launch
 
-³ **Stakeholder Interview Sample Size:** 30-50 interview target based on market research methodology for B2B political technology validation. Sample stratified across: PAC executives (8-12), union political directors (6-10), Democratic consulting firm principals (10-15), campaign managers from various tiers (6-12). Sample size provides 95% confidence level with ±12% margin of error for target population of ~200 key Democratic technology decision-makers.
+### Activities
 
-⁴ **PAC Co-Funding Legal Framework:** PAC contributions to campaigns for technology services must comply with FEC coordination rules under 11 CFR 109.21. Independent expenditure PACs cannot coordinate on technology purchases; only traditional PACs with contribution limits can directly fund campaign technology. Legal structure requires campaigns to purchase services directly with PAC contributions rather than PAC-to-vendor payments to avoid coordination violations.
+- **Q2:** Founding cohort (first 50 campaigns with hands-on support)
+- **Q3:** Open enrollment (additional campaigns as capacity allows)
+- **Q4:** Case studies published; 2027 pricing announced
 
-⁵ **2026 Gubernatorial Calendar:** 36 gubernatorial races scheduled for November 2026 election per [National Governors Association election calendar](https://www.nga.org/governors/elections/). Battleground state priorities include: Michigan, Pennsylvania, Wisconsin, Arizona, Nevada, Georgia, North Carolina. These 7 states represent 58% of competitive gubernatorial spending and optimal markets for AI optimization technology demonstration.
+### 2026 Target Mix
 
-⁶ **SEIU COPE Political Spending:** Service Employees International Union Committee on Political Education spent $28.6M on federal campaigns in 2022 cycle and $41.2M in 2024 cycle ([OpenSecrets.org](https://www.opensecrets.org/)). SEIU typically supports 150-200 candidates per cycle across federal, state, and local levels, making it optimal partner for bulk AI optimization funding.
+| Level | Clients | Focus |
+|-------|---------|-------|
+| Statewide | 15 | High-visibility case studies |
+| Congress | 50 | Competitive House races |
+| Local | 110 | State leg, major city |
+| Officeholders | 15 | 2024 winners transitioning |
+| Organizations | 10 | Consultant partners |
+| **Total** | **200** | |
 
-⁷ **EMILY's List Campaign Support:** EMILY's List supported 319 Democratic women candidates in 2024 cycle with $56.8M in contributions and independent expenditures ([FEC reports](https://www.fec.gov/)). Organization's bundled support model includes technology services, making AI optimization a natural addition to candidate support packages.
+---
 
-⁸ **2026 Customer Acquisition Target Methodology:** 10-15 marquee adoptions target based on 2026 Market Validation Strategy detailed in Progressive Digital Labs Political Impact First Business Plan, Section: Phase 1 Market Validation and Foundation Building.
+## Phase 3: Revenue Launch (2027)
 
-⁹ **Congressional CMS Infrastructure:** House and Senate websites predominantly use Drupal (62%) and custom CMS solutions (28%) based on Government Accountability Office technology surveys. WordPress usage minimal (<5%) due to security requirements. Integration strategy requires API-based approach rather than plugin architecture used for campaign websites.
+### Objectives
 
-¹⁰ **Partner Certification Program Model:** Based on successful certification programs in political technology: NationBuilder (47 certified partners), NGP VAN (123 certified consultants), ActBlue (89 certified integrators). Program includes: 40-hour training curriculum, technical proficiency testing, co-marketing benefits, and 15% revenue sharing for certified implementations.
+- Activate paid pricing
+- Reach cash-flow positive by Q2
+- Generate $1.2M revenue
 
-¹¹ **2027 Growth Target Methodology:** 40-50 active accounts target based on incumbent services strategy detailed in Progressive Digital Labs Business Plan Version 50, Section: 2027 Off-Year Incumbent Revenue Focus.
+### Activities
 
-¹² **PAC Integration Legal Compliance:** National PAC partnerships must structure AI optimization as independent expenditures rather than coordinated expenditures to avoid contribution limits. Legal framework requires: (a) Public availability of services, (b) No campaign-specific customization, (c) Standardized pricing, (d) No strategic coordination between PAC and campaign on implementation.
+- Convert 2026 free clients to paid
+- Expand consultant partnerships
+- Launch commercial services revenue
 
-¹³ **2028 Scale Target Validation:** 300+ campaigns target represents subset of 360 total customers detailed in Progressive Digital Labs DANA Business Plan, Section: 2028 SAM Capture Analysis with locked financial projections alignment.
+---
 
-¹⁴ **CRITICAL SECURITY NOTE - NationBuilder:** NationBuilder is a non-partisan platform serving both Democratic and Republican campaigns and organizations. Any strategic information, competitive intelligence, or proprietary optimization methodologies shared with NationBuilder could potentially be accessible to Republican competitors through their client relationships. Progressive Digital Labs will implement strict information compartmentalization protocols when working with NationBuilder, limiting shared data to generic technical specifications and avoiding disclosure of Democratic-specific strategic advantages, voter targeting methodologies, or campaign optimization techniques that could benefit Republican campaigns.
+## Phase 4: Full Scale (2028)
+
+### Objectives
+
+- 466+ customers
+- $3.3M revenue
+- Presidential campaign engagement
+
+### Activities
+
+- Full product suite deployment
+- National-level service delivery
+- Research Institute launch
+
+---
+
+## Channel Strategy
+
+### Two Distinct Motions
+
+| Segment | Channel | Support Model |
+|---------|---------|---------------|
+| Small Local | Direct to campaign | Self-service |
+| Congress+ | Through consultants | Consultant-supported |
+
+### By Customer Count
+
+| Channel | % of Customers | Notes |
+|---------|----------------|-------|
+| Direct self-service (small Local) | 40% | High volume, low touch |
+| Consultant partners (Congress+) | 35% | Consultant manages relationship |
+| PAC/committee sponsored | 20% | Volume deals for multiple campaigns |
+| Referrals | 5% | Word of mouth |
+
+### By Revenue
+
+| Channel | % of Revenue |
+|---------|--------------|
+| Consultant partners | 50% |
+| PAC/committee sponsored | 30% |
+| Direct self-service | 15% |
+| Referrals | 5% |
+
+**Consultants are the primary revenue channel** because they bring larger races with higher price points.
+
+---
+
+## Consultant Partnership Model
+
+### Why Consultants
+
+- They already have trusted relationships with campaigns
+- They make technology recommendations
+- They provide support layer we don't have to build
+- They become a sales channel
+
+### How It Works
+
+1. We train consultants on Kyanos products
+2. Consultant recommends Kyanos to their campaign clients
+3. Consultant provides implementation support
+4. We provide technical support to consultant
+5. Consultant earns commission on referred revenue
+
+### Value to Consultants
+
+- Differentiated service offering
+- Commission income
+- Early access to AI monitoring capabilities
+- Training and certification
+
+---
+
+## Self-Service Model (Local Races)
+
+### Design Principles
+
+- **Zero friction onboarding:** Campaign enters info, system configures automatically
+- **Dashboard-first:** All insights available without human support
+- **CMS-specific instructions:** Copy-paste fixes for WordPress, Squarespace, etc.
+- **Knowledge base:** Self-serve help for common questions
+
+### Support Tiers
+
+| Tier | Response | Cost |
+|------|----------|------|
+| Knowledge base | Instant | Included |
+| Email support | 48 hours | Included |
+| Priority email | 24 hours | Upgrade |
+
+---
+
+## Funding Strategy
+
+### Target: $1,000,000
+
+| Source | Range | Notes |
+|--------|-------|-------|
+| Progressive foundations (PRIs/grants) | $400-600K | Open Society, Tides, Way to Win |
+| Labor unions | $200-300K | SEIU, AFSCME, AFL-CIO |
+| Family offices | $100-200K | Progressive major donors |
+| Major donors | $100-200K | Individual contributions |
+
+### Funding Vehicles
+
+| Vehicle | Use |
+|---------|-----|
+| PRIs (Program-Related Investments) | Mission-aligned foundation loans |
+| Grants | Non-repayable foundation support |
+| Direct contributions | From individuals and unions |
+
+### Timeline
+
+| Milestone | Date |
+|-----------|------|
+| Initial outreach | January 2026 |
+| Commitments secured | March 15, 2026 |
+| Funds available | April 2026 |
+| Team hired | May 2026 |
+| First clients | June 2026 |
+
+---
+
+## PAC Partnership Opportunities
+
+### Labor PACs
+
+- SEIU COPE: Supports 150-200 candidates per cycle
+- AFSCME PEOPLE: Major political spending capacity
+- AFL-CIO: Umbrella coordination potential
+
+### Candidate PACs
+
+- EMILY's List: Supports 300+ Democratic women candidates
+- DCCC/DSCC: House and Senate campaign committees
+
+### Value Proposition
+
+- Bulk pricing for sponsored campaigns
+- Standardized implementation across portfolio
+- Documented impact metrics for PAC reporting
+- Compliance with FEC coordination rules
+
+---
+
+## Metrics & Milestones
+
+### 2026 Milestones
+
+| Milestone | Target Date |
+|-----------|-------------|
+| Funding secured | March 15 |
+| Core team hired | May 31 |
+| First 50 campaigns onboarded | June 30 |
+| 150 campaigns onboarded | September 30 |
+| 200 campaigns onboarded | October 31 |
+| Case studies published | December 15 |
+
+### Key Metrics
+
+| Metric | 2026 Target |
+|--------|-------------|
+| Campaigns served | 200 |
+| Client satisfaction (NPS) | 50+ |
+| Case studies published | 10 |
+| Consultant partners | 15 |
+| 2027 conversion rate | 40%+ |
+
+---
+
+<div class="callout-bottomline">
+<p><strong>Free in 2026. Funded in 2027. Essential progressive infrastructure by 2028.</strong></p>
+</div>
