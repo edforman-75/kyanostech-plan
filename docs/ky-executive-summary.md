@@ -10,9 +10,9 @@ When voters ask AI about a candidate, the answer should be accurate—not a hall
 
 Kyanos is a family of AI-driven analytical and remediation services that help progressive candidates, organizations, and causes manage their digital presence. We monitor how AI systems, search engines, advertising platforms, and opponents represent our clients—then provide specific, actionable fixes that campaigns can implement immediately.
 
-<div class="callout-name">
-<div class="callout-title">Why "Kyanos"?</div>
-<p><em>Kyanos</em> (κύανος) is the ancient Greek word for "blue"—the root of English "cyan." We chose it because blue is the color of progressive politics, and because we're building something foundational: the infrastructure that keeps progressives visible in the AI era.</p>
+<div class="callout-info">
+<div class="callout-title">Why Kyanos</div>
+<p><em>Kyanos</em> is the ancient Greek word for "blue"—the root of English "cyan." We chose it because blue is the color of progressive politics, and because we're building something foundational: the infrastructure that keeps progressives visible in the AI era.</p>
 </div>
 
 ## The Mission
