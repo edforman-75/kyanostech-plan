@@ -21,9 +21,7 @@ try {
     'ky-go-to-market.md',
     'ky-team-governance.md',
     'ky-investment-requirements.md',
-    'ky-risk-mitigation.md',
-    'ky-impact-measurement.md',
-    'ky-exit-pathways.md'
+    'ky-risk-mitigation.md'
   ];
 
   for (const file of coreFiles) {
