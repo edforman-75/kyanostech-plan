@@ -454,13 +454,34 @@
 
     function addMessage(content, isUser = false) {
         const messagesContainer = document.getElementById('chat-messages');
-        
+
         const messageDiv = document.createElement('div');
         messageDiv.style.cssText = `
             display: flex;
-            ${isUser ? 'justify-content: flex-end;' : 'justify-content: flex-start;'}
+            flex-direction: column;
+            ${isUser ? 'align-items: flex-end;' : 'align-items: flex-start;'}
         `;
-        
+
+        // For bot messages, extract suggestions if present
+        let mainContent = content;
+        let suggestions = [];
+
+        if (!isUser) {
+            // Look for "Want to explore further?" section
+            const suggestionsMatch = content.match(/\*\*Want to explore further\?\*\*\s*([\s\S]*?)$/i);
+            if (suggestionsMatch) {
+                mainContent = content.substring(0, content.indexOf('**Want to explore further?**')).trim();
+                // Extract bullet points - handle both [Question?] and plain Question? formats
+                const bulletLines = suggestionsMatch[1].match(/- \[?([^\]\n]+)\]?/g);
+                if (bulletLines) {
+                    suggestions = bulletLines.map(line => {
+                        // Remove "- [" prefix and "]" suffix if present
+                        return line.replace(/^- \[?/, '').replace(/\]?$/, '').trim();
+                    });
+                }
+            }
+        }
+
         const bubble = document.createElement('div');
         bubble.style.cssText = `
             max-width: 80%;
@@ -470,19 +491,72 @@
             line-height: 1.6;
             word-wrap: break-word;
             word-break: break-word;
-            ${isUser 
-                ? 'background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;' 
+            ${isUser
+                ? 'background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;'
                 : 'background: white; color: #333; box-shadow: 0 2px 4px rgba(0,0,0,0.1);'
             }
         `;
-        
-        const formattedContent = content
+
+        const formattedContent = mainContent
             .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
             .replace(/\*(.+?)\*/g, '<em>$1</em>')
             .replace(/\n/g, '<br>');
-        
+
         bubble.innerHTML = formattedContent;
         messageDiv.appendChild(bubble);
+
+        // Add clickable suggestion buttons for bot messages
+        if (!isUser && suggestions.length > 0) {
+            const suggestionsDiv = document.createElement('div');
+            suggestionsDiv.style.cssText = `
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                margin-top: 10px;
+                max-width: 80%;
+            `;
+
+            suggestions.forEach(suggestion => {
+                const btn = document.createElement('button');
+                btn.textContent = suggestion;
+                btn.style.cssText = `
+                    background: #f0f0f0;
+                    border: 1px solid #ddd;
+                    border-radius: 16px;
+                    padding: 8px 14px;
+                    font-size: 13px;
+                    cursor: pointer;
+                    transition: all 0.2s;
+                    color: #333;
+                    text-align: left;
+                `;
+                btn.onmouseover = () => {
+                    btn.style.background = '#667eea';
+                    btn.style.color = 'white';
+                    btn.style.borderColor = '#667eea';
+                };
+                btn.onmouseout = () => {
+                    btn.style.background = '#f0f0f0';
+                    btn.style.color = '#333';
+                    btn.style.borderColor = '#ddd';
+                };
+                btn.onclick = () => {
+                    // Disable all suggestion buttons after clicking
+                    suggestionsDiv.querySelectorAll('button').forEach(b => {
+                        b.disabled = true;
+                        b.style.opacity = '0.5';
+                        b.style.cursor = 'default';
+                    });
+                    // Send the suggestion as a new message
+                    addMessage(suggestion, true);
+                    sendMessage(suggestion);
+                };
+                suggestionsDiv.appendChild(btn);
+            });
+
+            messageDiv.appendChild(suggestionsDiv);
+        }
+
         messagesContainer.appendChild(messageDiv);
         messagesContainer.scrollTop = messagesContainer.scrollHeight;
     }
