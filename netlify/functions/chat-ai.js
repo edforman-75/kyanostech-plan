@@ -199,6 +199,8 @@ ${relevantContent}
         headers,
         body: JSON.stringify({
           error: 'Gemini API error',
+          status: response.status,
+          details: errorText.substring(0, 500),
           fallback: 'I apologize, but I\'m having trouble right now. Please try again.'
         })
       };
