@@ -640,7 +640,7 @@ We monitor the platforms. We detect the bias. We sound the alarm.
 
 **SPEAKER NOTES:**
 
-"Thanasi, you and Reid founded Investing In US on a simple observation: technology is changing politics faster than politics is adapting.
+"Thanasi, Investing In US was founded on a simple observation: technology is changing politics faster than politics is adapting.
 
 That's exactly what we're seeing with AI. Political operatives are treating chatbots like a curiosity while conservatives are already optimizing for them.
 
