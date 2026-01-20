@@ -45,7 +45,7 @@ Kyanos is a family of AI-driven analytical and remediation services that help pr
 | **Products** | Panopticon, GoodInk, Adwatch, TripWire |
 | **Funding Ask** | $1,000,000 ($750K min, $1.25M reach) |
 | **2026 Clients** | 200 (free access) |
-| **2028 Revenue** | $3.3M |
+| **2028 Revenue** | $2.8M |
 | **Cash-flow positive** | Q4 2027 / Q1 2028 |
 
 ---
@@ -63,7 +63,7 @@ Kyanos is a family of AI-driven analytical and remediation services that help pr
 
 ## Why Now?
 
-1. **AI adoption is accelerating** — Voters increasingly get political information from AI assistants
+1. **AI adoption is accelerating.** Voters increasingly get political information from AI assistants.
 2. **2026 cycle timing** — Solutions implemented now impact this cycle and 2028
 3. **No incumbent** — The progressive ecosystem has no AI monitoring infrastructure
 4. **Platform capture risk** — AI platforms face pressure from hostile administration

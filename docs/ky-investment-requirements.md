@@ -114,7 +114,7 @@ This is **not a traditional investment** with equity and exits. This is funding 
 |------|---------|-------|-----|
 | 2026 | $0 | $1.0M | -$1.0M (funded) |
 | 2027 | $1.2M | $1.0M | Breakeven |
-| 2028 | $3.3M | $1.5M | +$1.3M |
+| 2028 | $2.8M | $1.55M | +$850K |
 
 By 2028, Kyanos is self-sustaining with surplus to reinvest in mission.
 

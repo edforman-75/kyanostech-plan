@@ -64,7 +64,7 @@
 ### Objectives
 
 - 466+ customers
-- $3.3M revenue
+- $2.8M revenue
 - Presidential campaign engagement
 
 ### Activities
