@@ -48,13 +48,13 @@ The mission of the candidate website is being transformed: less a destination fo
 
 ### Why This Creates Opportunity
 
-Here's the good news: **AI presence can be optimized at low cost—and it makes your entire media strategy more effective.**
+Here's the good news: **AI presence can be optimized at low cost, and it makes a campaign's entire media strategy more effective.**
 
-Think about what happens when your media works. A voter sees your TV ad or digital campaign. They're interested. What do they do next? They Google the candidate. They ask ChatGPT.
+Think about what happens when a campaign's media works. A voter sees a TV ad or digital campaign. They're interested. What do they do next? They Google the candidate. They ask ChatGPT.
 
-If AI gives them bad information—outdated facts, opponent framing, ethics controversies—you've wasted that media spend. The voter's positive impression disappears the moment they research.
+If AI gives them bad information—outdated facts, opponent framing, ethics controversies—that media spend is wasted. The voter's positive impression disappears the moment they research.
 
-**AI optimization protects your media investment.** It ensures that when advertising drives voters to research, they find information that reinforces your message. Every dollar spent on TV, digital, and mail becomes more effective.
+**AI optimization protects media investment.** It ensures that when advertising drives voters to research, they find information that reinforces the campaign's message. Every dollar spent on TV, digital, and mail becomes more effective.
 
 And it costs almost nothing:
 
@@ -84,9 +84,7 @@ Let A = AIO_coverage × AIO_satisfaction; B = chatbot share.
 - Base case: A = 0.58 × 0.65 ≈ 0.38; B = 0.18; assume 30% overlap → union ≈ 0.38 + 0.18 − (0.30 × 0.18) ≈ 0.50 (50%).  
 - Range: With low/high bounds on AIO and chat growth plus overlap, we get **~45–60%**.
 
-We will lock this estimate down with pilot data in 2026–27 using repeated, stratified prompts and human-rated “satisfaction to click” audits.
-
-![Projected Share of Voter Queries Answered Inside AI (2023–2028)]
+We will lock this estimate down with pilot data in 2026–27 using repeated, stratified prompts and human-rated "satisfaction to click" audits.
 
 ---
 
@@ -118,12 +116,12 @@ This is why **external monitoring matters**. Campaigns and the progressive movem
 
 ## Evidence & Methods
 
-1. SparkToro (2024), *Zero-Click Search Data* – Similarweb panel, U.S. search outcomes.
-2. Search Engine Land (2025), *Zero-Click Rates* – March 2025 report citing Similarweb panel.
-3. Pew Research Center (2025), *AI Overviews User Experience* – field data on exposure to AI Overviews.
+1. **SparkToro (2024)**, *Zero-Click Search Data* – Similarweb panel, U.S. search outcomes. [Link](https://sparktoro.com/blog/2024-zero-click-search-study/)
+2. **Search Engine Land (2025)**, *Zero-Click Rates* – March 2025 report citing Similarweb panel. [Link](https://searchengineland.com/google-search-zero-clicks-2024-437543)
+3. **Pew Research Center (2025)**, *AI Overviews User Experience* – field data on exposure to AI Overviews. [Link](https://www.pewresearch.org/internet/2024/03/26/americans-use-of-chatgpt-is-ticking-up-but-few-trust-its-election-information/)
 4. Multiple industry trackers (2025), incl. SEMrush – AI Overview prevalence estimates.
-5. PYMNTS / Datos (2025), *Generative AI Search Traffic* – U.S. desktop panel, July 2025.
-6. Amazon Press Release (Feb 2025), *Alexa+ Launch* – rollout to Prime customers.
+5. **PYMNTS / Datos (2025)**, *Generative AI Search Traffic* – U.S. desktop panel, July 2025. [Link](https://www.pymnts.com/artificial-intelligence-2/2024/generative-ai-search-traffic-doubles-year-over-year/)
+6. **Amazon Press Release (Feb 2025)**, *Alexa+ Launch* – rollout to Prime customers. [Link](https://www.aboutamazon.com/news/devices/amazon-alexa-llm-generative-ai)
 7. OpenAI, Anthropic, and related technical papers on RLHF, RLAIF, Constitutional AI.
 8. Stanford / Washington studies (2023–25), *Political Leaning in LLM Outputs*.
 9. **Rand, D. G., et al. (2025)**, *Persuading voters using human–artificial intelligence dialogues*, Nature. [Link](https://www.nature.com/articles/s41586-025-09771-9)

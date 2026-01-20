@@ -1,14 +1,14 @@
-# Market & Financial Opportunity
+# Market & Financial Overview
 
 ## Why Campaigns Will Pay
 
 **AI optimization protects and amplifies every other media investment a campaign makes.**
 
-When media works (when a voter sees your TV ad, digital campaign, or mail piece), what happens next? They research. They Google the candidate. They ask ChatGPT. If AI gives them bad information, you've wasted that media spend.
+When media works (when a voter sees a TV ad, digital campaign, or mail piece), what happens next? They research. They Google the candidate. They ask ChatGPT. If AI gives them bad information, that media spend is wasted.
 
 New research shows AI chatbots are **4 times more persuasive** than TV ads ([Rand et al., *Nature*, 2025](https://www.nature.com/articles/s41586-025-09771-9); [Pennycook et al., *Science*, 2025](https://www.science.org/doi/10.1126/science.aea3884)). AI isn't just another channel. It's where voters go to validate what they've seen elsewhere.
 
-**AI optimization ensures your media dollars convert:**
+**AI optimization ensures media dollars convert:**
 
 | Investment | Cost per Voter Influenced | Role |
 |------------|---------------------------|------|
@@ -73,8 +73,9 @@ Based on actual Bentham infrastructure costs, scaled by tier:
 | Local | 250 | $1,800 | $450K |
 | Officeholders | 100 | $3,000 | $300K |
 | Organizations | 30 | $15,000 | $450K |
-| Commercial Services | — | — | $500K |
-| **Total** | **~466** | | **$3.33M** |
+| **Total** | **~466** | | **$2.83M** |
+
+*Commercial services revenue potential exists but is not included in projections. We will not pursue commercial services until after the 2028 cycle.*
 
 ### Revenue by Year
 
@@ -82,7 +83,7 @@ Based on actual Bentham infrastructure costs, scaled by tier:
 |------|---------|---------------|-------|
 | 2026 | 200 | $0 | Free access year |
 | 2027 | ~150 | $1.2M | Paid pricing activates (midterm year) |
-| 2028 | ~466 | $3.3M | Presidential cycle |
+| 2028 | ~466 | $2.8M | Presidential cycle |
 
 ### Net Revenue (after agency commissions ~20%)
 
@@ -90,7 +91,7 @@ Based on actual Bentham infrastructure costs, scaled by tier:
 |------|-------|-------------|-------------|
 | 2026 | $0 | $0 | $0 |
 | 2027 | $1.2M | ~$180K | ~$1.0M |
-| 2028 | $3.3M | ~$500K | ~$2.8M |
+| 2028 | $2.8M | ~$420K | ~$2.4M |
 
 ---
 
@@ -132,7 +133,7 @@ Based on actual Bentham infrastructure costs, scaled by tier:
 |------|-------------|-------|-----|
 | 2026 | $0 | $1.0M | -$1.0M |
 | 2027 | $1.0M | $1.0M | Breakeven |
-| 2028 | $2.8M | $1.55M | +$1.25M |
+| 2028 | $2.4M | $1.55M | +$850K |
 
 **Cash-flow positive:** Q4 2027 / Q1 2028
 
@@ -140,7 +141,7 @@ Based on actual Bentham infrastructure costs, scaled by tier:
 
 ## 2026: The Free Year
 
-We're offering free access to progressive campaigns in 2026: full Panopticon access at no cost through primary and general election cycles.
+We're offering free access to progressive campaigns in 2026: full Kyanos access at no cost through primary and general election cycles.
 
 ### 2026 Client Mix
 

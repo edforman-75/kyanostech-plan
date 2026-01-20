@@ -19,26 +19,26 @@ AI systems synthesize answers from across the web. If progressive content isn't 
 
 ## The 80/20 Reality
 
-Not all AI surfaces matter equally. Our market analysis shows:
+Not all surfaces matter equally for voter discovery. Our market analysis shows:
 
-| Surface | Election Query Share | Voter Impact |
-|---------|---------------------|--------------|
-| Google AI Overviews | 40-45% | 15-17M voters |
-| ChatGPT | 10-12% | 4-5M voters |
-| Meta AI | 8-10% | 8-10M voters (critical for Hispanic voters) |
-| All others combined | ~35% | Fragmented |
+| Surface | Relative Importance | Notes |
+|---------|---------------------|-------|
+| Google (Search + AI Overviews) | Highest | Traditional search and AI Overviews both draw from the same website content |
+| ChatGPT | High | Influential with early adopters and information seekers |
+| Meta AI | Growing | Critical for reaching Hispanic voters |
+| All others | Monitor | Perplexity, Copilot, Gemini, Claude, Grok |
 
-**Strategic implication:** Focus on Google, ChatGPT, and Meta AI. These three surfaces capture ~60% of election AI queries and reach the most strategically important voter segments.
+**Strategic implication:** Focus on Google, ChatGPT, and Meta AI. Optimizing for these three surfaces also improves results across all others. Our research shows that campaigns with strong digital presence on the core platforms see benefits across the entire search and AI landscape.
 
-We can monitor any surface. We recommend campaigns focus on the core three unless they have specific reasons to expand.
+**Important:** This isn't just about AI. Traditional Google search (without AI Overviews) also relies on the same website content and structure. A campaign's digital presence improvement benefits all discovery channels.
 
 ## Geographic Variation
 
-Panopticon's Watchtowers have detected that AI systems return different answers in different locations. Swing state voters may see different information than safe state voters. This has profound implications for campaign strategy and for platform accountability.
+Kyanos Watchtowers have detected that AI systems return different answers in different locations. Swing state voters may see different information than safe state voters. This has profound implications for campaign strategy and for platform accountability.
 
 <div class="callout-info">
 <div class="callout-title">The Watchdog Imperative</div>
-<p>AI platforms are controlled by investors with political agendas and subject to pressure from a President who demands loyalty. If models shift against progressives, whether through deliberate manipulation or algorithmic drift, someone needs to detect it first and document the evidence.</p>
+<p>AI platforms are subject to pressure from a President who demands loyalty. If models shift against progressives, whether through deliberate manipulation or algorithmic drift, someone needs to detect it first and build the evidence base.</p>
 <p>Kyanos provides that watchdog function, with Watchtowers that can detect geographic manipulation and build an evidence base for accountability.</p>
 </div>
 
@@ -75,7 +75,7 @@ Panopticon's Watchtowers have detected that AI systems return different answers 
 | Party committees | 50+ | $1.8M |
 | Political consultants | 50-100 firms | $600K |
 
-### Commercial Services Market
+### Commercial Services Market (Post-2028)
 
 | Customer Type | Opportunity |
 |---------------|-------------|
@@ -84,7 +84,9 @@ Panopticon's Watchtowers have detected that AI systems return different answers 
 | Academic researchers | AI behavior studies |
 | International progressive orgs | Global political monitoring |
 
-**Total Addressable Market:** $20-25M annually at maturity, plus commercial services
+*We will not pursue commercial services until after the 2028 cycle. The political mission comes first.*
+
+**Total Addressable Market:** $20-25M annually at maturity, with commercial services as future growth opportunity
 
 ---
 

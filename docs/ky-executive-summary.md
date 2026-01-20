@@ -12,7 +12,7 @@ Kyanos is a family of AI-driven analytical and remediation services that help pr
 
 <div class="callout-info">
 <div class="callout-title">Why Kyanos</div>
-<p><em>Kyanos</em> is the ancient Greek word for "blue"—the root of English "cyan." We chose it because blue is the color of progressive politics, and because we're building something foundational: the infrastructure that keeps progressives visible in the AI era.</p>
+<p><em>Kyanos</em> is the ancient Greek word for "blue," the root of English "cyan." We chose it because blue is the color of progressive politics, and because we're building something foundational: the infrastructure that keeps progressives visible in the AI era.</p>
 </div>
 
 ## The Mission
@@ -29,9 +29,9 @@ Progressives must never fall behind on communication technology. Every era bring
 
 **Digital presence optimization protects and amplifies every other media investment a campaign makes.**
 
-When your media works—when a voter sees your TV ad or digital campaign—what do they do next? They Google the candidate. They ask ChatGPT. They research.
+When a campaign's media works—when a voter sees a TV ad or digital campaign—what do they do next? They Google the candidate. They ask ChatGPT. They research.
 
-Both search engines and AI systems cite the sources they can find. Your website content and structure determines what voters see. If your digital presence is weak, you've wasted that media spend.
+Both search engines and AI systems cite the sources they can find. A campaign's website content and structure determines what voters see. If the digital presence is weak, that media spend is wasted.
 
 New research published in *Nature* and *Science* (December 2025) found that AI chatbots are **4 times more persuasive** than television advertising. AI isn't just another channel—it's where voters go to validate what they've seen elsewhere.
 
@@ -41,26 +41,26 @@ New research published in *Nature* and *Science* (December 2025) found that AI c
 | Digital Ads | $50-100 | Engagement |
 | **AI Optimization** | **$1-10** | **Conversion & validation** |
 
-AI optimization ensures your media dollars convert. It's the highest-leverage line item in any media budget—amplifying TV, protecting digital spend, and ensuring voter interest becomes voter support.
+AI optimization ensures media dollars convert. It's the highest-impact line item in any campaign budget, amplifying TV, protecting digital spend, and ensuring voter interest becomes voter support.
 
 *For the full research and methodology, see [The Value Proposition](ky-value-proposition.md).*
 
 ## The Watchdog Role
 
-AI platforms are controlled by investors with political agendas and subject to pressure from a President who demands loyalty. Kyanos continuously monitors how major AI systems respond to questions about progressive candidates and issues, detects geographic variation through Panopticon's Watchtowers, and documents changes. If models shift against progressives, we'll know first and sound the alarm.
+AI platforms are subject to pressure from a President who demands loyalty. Kyanos continuously monitors how major AI systems respond to questions about progressive candidates and issues, detects geographic variation through Watchtowers, and builds an evidence base of platform behavior over time. If models shift against progressives, we'll know first and sound the alarm.
 
 ## The Products
 
 Kyanos offers a suite of services:
 
-- **Panopticon** — Core AI monitoring and remediation across major surfaces
-- **GoodInk** — Positive press discovery for campaigns to feature
-- **Adwatch** — Political advertising monitoring across Google and Meta
-- **TripWire** — Opponent website change detection
+- **Panopticon:** Core AI monitoring and remediation across major surfaces
+- **GoodInk:** Positive press discovery for campaigns to feature
+- **Adwatch:** Political advertising monitoring across Google and Meta
+- **TripWire:** Opponent website change detection
 
 ## The Methodology
 
-We don't just report problems—we trace them to root causes and provide fixes campaigns can actually implement:
+We don't just report problems. We trace them to root causes and provide fixes campaigns can actually implement:
 
 1. **Observe:** What do AI surfaces, search engines, and opponents say?
 2. **Trace:** Where did they get that information?
@@ -90,7 +90,7 @@ We focus on what campaigns can change, not "shoulda/woulda."
 | 2026 Investment | $1.0M (includes $330K reference base) |
 | 2026 Clients Served | 200 (free) |
 | 2027 Net | Breakeven |
-| 2028 Net | +$1.3M |
+| 2028 Net | +$850K |
 | 2028 Clients | ~466 |
 | Cash-flow positive | Q4 2027 / Q1 2028 |
 

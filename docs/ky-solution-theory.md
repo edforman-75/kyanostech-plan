@@ -15,10 +15,10 @@ Kyanos doesn't just report problems. We trace them to root causes and provide fi
 
 <div class="callout-info">
 <div class="callout-title">Why Causality Matters</div>
-<p>Most AI monitoring services tell you what's wrong. We tell you <strong>why</strong> it's wrong and <strong>exactly how to fix it</strong>.</p>
-<p>If ChatGPT says your candidate supports a policy they oppose, we trace the error to its source: maybe a Wikipedia entry, a misquoted news article, or a missing issues page on your website.</p>
-<p>Then we tell you <strong>exactly what needs to happen</strong>, whether that's writing new content, updating existing pages, or making technical fixes to your website's structured data. We package these recommendations so you can easily hand them off to the people who need to execute: your comms director gets the messaging guidance, your web developer gets the technical specs.</p>
-<p>And we don't just hand you a report and walk away. <strong>We monitor execution and act as your coach</strong>, tracking whether fixes get implemented, confirming when AI systems update their responses, and keeping the pressure on until the job is done.</p>
+<p>Traditional SEO tools highlight problems. We diagnose root causes and deliver fixes.</p>
+<p>If ChatGPT says a candidate supports a policy they oppose, we trace the error to its source: maybe a Wikipedia entry, a misquoted news article, or a missing issues page on the campaign website.</p>
+<p>Then we tell the campaign <strong>exactly what needs to happen</strong>, whether that's writing new content, updating existing pages, or making technical fixes to the website's structured data. We package these recommendations so they can easily hand them off to the people who need to execute: the comms director gets the messaging guidance, the web developer gets the technical specs.</p>
+<p>And we don't just hand over a report and walk away. <strong>We monitor execution and act as a coach</strong>, tracking whether fixes get implemented, confirming when AI systems update their responses, and keeping the pressure on until the job is done.</p>
 </div>
 
 ## Panopticon: The Core Product
@@ -37,7 +37,7 @@ Every customer gets all three phases. This is not a tiered feature set. It's a c
 - Core surfaces: Google AI Overviews, ChatGPT, Meta AI
 - Optional: Perplexity, Copilot, Gemini, Claude, Grok, and others
 - Tests questions voters actually ask about the candidate
-- Scores each response for accuracy against stated positions
+- Shows exactly what voters see when they search for the candidate
 - Watchtowers detect geographic variation (Statewide/National tiers)
 
 **Monitoring Frequency:**
@@ -46,7 +46,7 @@ Every customer gets all three phases. This is not a tiered feature set. It's a c
 - Weekly (premium)
 - Daily (premium)
 
-**Deliverable:** Dashboard showing accuracy across platforms with sample AI responses
+**Deliverable:** Dashboard showing exactly what voters see across platforms, with sample AI and search responses
 
 ### Phase 2: Prioritize
 
@@ -69,14 +69,14 @@ Every customer gets all three phases. This is not a tiered feature set. It's a c
 **How It Works:**
 
 - Provides step-by-step instructions for each issue
-- **Knows your tech stack:** Instructions tailored to your CMS (WordPress, Squarespace, NationBuilder, etc.)
+- **Knows the tech stack:** Instructions tailored to the campaign's CMS (WordPress, Squarespace, NationBuilder, etc.)
 - **Targeted delivery:**
-  - Approver gets the recommendation (what and why)
-  - Implementer gets exact instructions for their system
+    - Approver gets the recommendation (what and why)
+    - Implementer gets exact instructions for their system
 - Includes templates, URLs, and code snippets ready to use
 - Estimates timeline for fixes to propagate to AI systems
 
-**Deliverable:** Action cards with numbered steps that don't waste the candidate's time
+**Deliverable:** Action cards with numbered steps that campaign teams can execute immediately
 
 ## Theory of Change
 
@@ -93,7 +93,7 @@ Every customer gets all three phases. This is not a tiered feature set. It's a c
 1. Progressive campaigns collectively improve their AI visibility
 2. AI systems receive better training signals from progressive sources
 3. Platform accountability becomes possible through documented evidence
-4. Progressives maintain parity in the AI information environment
+4. Progressives gain an advantage in the AI information environment
 
 ### Watchdog Impact (Democracy Level)
 
@@ -109,7 +109,8 @@ Every customer gets all three phases. This is not a tiered feature set. It's a c
 - **Political context:** We understand campaigns, not just keywords
 - **AI-specific:** Optimized for AI answer generation, not just search ranking
 - **Causality focus:** We trace problems to root causes
-- **CMS-aware:** Instructions match your actual tech stack
+- **Actionable fixes:** We deliver solutions, not just problem reports
+- **CMS-aware:** Instructions match the campaign's actual tech stack
 
 ### Compared to General AI Monitoring
 

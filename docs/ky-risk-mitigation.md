@@ -16,6 +16,7 @@
 |------|------------|
 | **AI platforms change content processing** | Research Director tracks changes; diversified approach across sources |
 | **Platforms block monitoring** | Multiple access methods; budget for maintenance |
+| **Bot detection services (Cloudflare, etc.)** | Cat-and-mouse game since the web began; many industries depend on web data access; budget for specialized expertise |
 | **Platform becomes hostile to progressives** | Watchtowers detect early; Research Institute documents evidence |
 
 ---
@@ -126,6 +127,21 @@
 - Bentham infrastructure is operational and proven
 - Case studies and reference customers by 2027
 - Mission alignment attracts progressive talent
+
+### Technology Risk: Bot Detection Services
+
+**Likelihood:** Medium
+**Impact:** Medium
+
+**Scenario:** Services like Cloudflare improve bot detection, potentially blocking automated queries to AI platforms.
+
+**Mitigations:**
+
+- This has been a cat-and-mouse game since the web began
+- Many sectors of American commerce depend on web data access (price comparison, market research, competitive intelligence)
+- Budget for specialized expertise to stay ahead of detection methods
+- Multiple extraction approaches reduce single-point-of-failure risk
+- Relationships with platform developer programs provide legitimate access paths
 
 ---
 

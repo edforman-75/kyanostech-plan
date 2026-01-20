@@ -12,7 +12,7 @@ Kyanos is a family of AI-driven services built on shared infrastructure. Each pr
 | **GoodInk** | Positive press discovery | Congressional+ |
 | **Adwatch** | Ad monitoring | Congressional+ |
 | **TripWire** | Opponent site monitoring | Congressional+ |
-| **Watchtowers** | Geographic variation detection | Statewide+ (built into Panopticon) |
+| **Watchtowers** | Geographic variation detection | Statewide+ |
 
 ---
 
@@ -21,20 +21,20 @@ Kyanos is a family of AI-driven services built on shared infrastructure. Each pr
 Panopticon is the flagship product. It works in three phases: **Monitor → Prioritize → Act**
 
 <div class="callout-info">
-<div class="callout-title">Why "Panopticon"?</div>
-<p>The name comes from Jeremy Bentham's 18th-century design for an observation structure where a central point can see everything without being seen. For Kyanos, Panopticon represents <strong>comprehensive visibility</strong>: seeing exactly how AI systems represent your campaign across every major platform and geography. You see everything; the platforms don't know you're watching.</p>
+<div class="callout-title">Why 'Panopticon'?</div>
+<p>The name comes from Jeremy Bentham's 18th-century design for an observation structure where a central point can see everything without being seen. For Kyanos, Panopticon represents <strong>comprehensive visibility</strong>: seeing exactly how AI systems and search engines represent a campaign across every major platform and geography. Campaigns see everything; the platforms don't know they're being watched.</p>
 </div>
 
 ### What It Does
 
-- **Monitor:** Queries AI surfaces (Google AI Overviews, ChatGPT, Meta AI) with questions voters actually ask
+- **Monitor:** Queries AI surfaces and search engines (Google Search, Google AI Overviews, ChatGPT, Meta AI) with questions voters actually ask
 - **Prioritize:** Traces errors to root causes and ranks by impact (Voter Reach × Error Severity × Fixability)
 - **Act:** Provides CMS-specific remediation instructions that campaigns can implement immediately
 
 ### Key Features
 
 - Tests questions voters actually ask about the candidate
-- Scores each response for accuracy against stated positions
+- Shows exactly what voters see when they search for the candidate
 - Traces errors to fixable root causes (Wikipedia, Ballotpedia, news articles, campaign site)
 - Delivers targeted instructions: approver gets the recommendation, implementer gets the steps
 - Watchtowers detect geographic variation (Statewide/National tiers)
@@ -88,7 +88,7 @@ Adwatch tracks political advertising across Google and Meta transparency librari
 
 ### What It Does
 
-- Monitors ads mentioning your candidate
+- Monitors ads mentioning the candidate
 - Tracks opponent ad spend and messaging
 - Classifies ad tone (attack, support, contrast, issue)
 - Alerts on new ads, spend changes, and new advertisers
@@ -134,11 +134,11 @@ Early warning when opponents change strategy. Track when they update issues page
 
 ## Watchtowers: Geographic Monitoring
 
-Watchtowers are Panopticon's distributed observation network. Sensor stations in multiple geographic locations detect if AI platforms serve different information to different regions. They're built into Panopticon at the Statewide and National tiers.
+Watchtowers are Kyanos's distributed observation network. Sensor stations in multiple geographic locations detect if AI platforms and search engines serve different information to different regions. They're included at the Statewide and National tiers.
 
 ### For Campaigns (Statewide/National)
 
-- See how you appear in different parts of your state/country
+- See how the campaign appears in different parts of the state/country
 - Detect if swing regions see different AI responses
 - Identify geographic targeting opportunities
 
@@ -154,11 +154,11 @@ Watchtowers are Panopticon's distributed observation network. Sensor stations in
 
 ### Core Surfaces (Recommended)
 
-| Surface | Election Query Share | Notes |
-|---------|---------------------|-------|
-| Google AI Overviews | 40-45% | Highest volume |
-| ChatGPT | 10-12% | Influential early adopters |
-| Meta AI | 8-10% | Critical for Hispanic voters |
+| Surface | Priority | Notes |
+|---------|----------|-------|
+| Google (Search + AI Overviews) | Highest | Traditional search and AI Overviews |
+| ChatGPT | High | Influential early adopters |
+| Meta AI | High | Critical for Hispanic voters |
 
 ### Additional Surfaces (Available)
 
@@ -169,7 +169,7 @@ Watchtowers are Panopticon's distributed observation network. Sensor stations in
 - X/Grok
 - Voice assistants
 
-**Strategic implication:** We can monitor any surface. We recommend campaigns focus on the core three unless they have specific reasons to expand.
+**Strategic implication:** We can monitor any surface. Optimizing for the core platforms improves results across all others.
 
 ---
 
@@ -233,6 +233,18 @@ Bentham is highly adaptable and marketable. The same infrastructure that powers 
 
 ---
 
+## Future Roadmap
+
+### Agentic AI Integration
+
+We are monitoring the adoption of agentic AI technologies that could enable direct updating of client CMS systems. For the foreseeable future, Kyanos will use copy-and-paste instructions and CSV exports for implementation. This is a deliberate choice: the agentic AI landscape is immature and the risks of automated site modifications outweigh the benefits. We will revisit this as the technology matures.
+
+### Expanded Services
+
+Beyond the current product suite, we see opportunities to help progressive campaigns and organizations stay ahead in online presence management. Future services may include proactive content recommendations, competitive positioning analysis, and deeper integration with campaign tech stacks.
+
+---
+
 <div class="callout-bottomline">
-<p><strong>One platform. Four products. Complete visibility into how AI sees your campaign.</strong></p>
+<p><strong>One platform. Four products. Complete visibility into how AI and search engines see progressive campaigns.</strong></p>
 </div>

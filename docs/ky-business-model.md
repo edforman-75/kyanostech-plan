@@ -184,5 +184,5 @@ Elected officials maintaining digital presence year-round.
 ---
 
 <div class="callout-bottomline">
-<p><strong>Pricing that scales with your resources. Service that matches how campaigns actually work.</strong></p>
+<p><strong>Pricing that scales with campaign resources. Service that matches how campaigns actually work.</strong></p>
 </div>
