@@ -8,7 +8,7 @@
 ## MEETING CONTEXT
 
 **Primary Audience:** Thanasi Dilos, Partner at Investing In US
-**Goal:** Get Thanasi excited enough to bring this to Reid Hoffman
+**Goal:** Get Thanasi to champion Kyanos internally to Reid and Dmitri
 
 **Background on Thanasi:**
 - 21 years old, based in Queens, NY
@@ -166,7 +166,7 @@ Kalla & Broockman (2018), meta-analysis of 49 field experiments:
 
 **SPEAKER NOTES:**
 
-"Reid, this is peer-reviewed research from the world's most prestigious scientific journals, published just last month.
+"Thanasi, this is peer-reviewed research from the world's most prestigious scientific journals, published just last month.
 
 AI chatbots are the most persuasive political communication channel ever measured in controlled experiments. Four times more effective than television advertising.
 
@@ -652,9 +652,9 @@ That's what Kyanos is. Trust-owned. Mission-locked. Built to serve progressives 
 
 The window is now. By 2028, the patterns will be set. The question is whether progressives have infrastructure in place—or whether we're playing catch-up on AI like we did with podcasts.
 
-**Here's my ask:** I'd like you to bring this to Reid. If this resonates with you—if you see how it completes your portfolio—I'd welcome the chance to present directly to him.
+**Here's my ask:** I'd like you to bring this to Reid and Dmitri. If this resonates with you—if you see how it completes your portfolio—I want to give you everything you need to make the case internally.
 
-But first, tell me: what questions do you have? What would Reid need to see?"
+What questions do you have? What would they need to see?"
 
 ---
 
