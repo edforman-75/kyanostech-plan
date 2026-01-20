@@ -82,7 +82,7 @@ By the time we took it seriously, we were **years behind**.
 | 2020-2024 | 2024-2028 |
 |-----------|-----------|
 | Podcasts | AI Chatbots |
-| Joe Rogan, Lex Fridman | ChatGPT, Google AI, Alexa+ |
+| Joe Rogan, Lex Fridman | Google AI Overviews, ChatGPT, WhatsApp AI |
 | 3-hour conversations | Instant answers to voter questions |
 | Progressives arrived late | **We have a chance to lead** |
 
@@ -113,12 +113,17 @@ That's exactly how we treated podcasts in 2020."
 | ChatGPT weekly US users | 100M+ | 200M+ |
 | **Voter queries answered by AI** | ~30% | **45-60%** |
 
-### The Infrastructure Is Already in Place
+### What Matters Right Now
 
-- Hundreds of millions of Americans use AI assistants daily
-- Amazon's Alexa+ launched February 2025 as a Prime-bundled AI assistant
-- Apple's generative Siri is coming
-- AI is moving into kitchens, cars, and living rooms
+- **Google AI Overviews** - appears before any links, 50% of queries
+- **ChatGPT** - 100M+ weekly US users actively researching
+- **WhatsApp AI** - critical channel for Hispanic communities
+
+### The Trend Is Clear
+
+- Amazon's Alexa+ launched February 2025 (Prime-bundled)
+- Apple partnering with Google for AI capabilities
+- Voice AI coming to kitchens, cars, living rooms
 
 **When voters research a candidate, AI answers first.**
 
