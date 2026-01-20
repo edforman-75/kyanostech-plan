@@ -1,4 +1,4 @@
-// Kyanos Plan AI Assistant - Powered by OpenAI
+// Kyanos Plan AI Assistant - Powered by Gemini
 // Conversational chatbot with suggested follow-up questions
 
 const fs = require('fs');
@@ -85,10 +85,10 @@ exports.handler = async (event, context) => {
       };
     }
 
-    const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
+    const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 
-    if (!OPENAI_API_KEY) {
-      console.error('OPENAI_API_KEY not configured');
+    if (!GEMINI_API_KEY) {
+      console.error('GEMINI_API_KEY not configured');
       return {
         statusCode: 500,
         headers,
@@ -157,44 +157,48 @@ ${relevantContent}
 
 ===== END CONTEXT =====`;
 
-    // Build messages for OpenAI
-    const messages = [
-      { role: 'system', content: systemPrompt }
-    ];
+    // Build conversation for Gemini
+    const contents = [];
 
     // Add conversation history
     for (const msg of (conversationHistory || []).slice(-6)) {
-      messages.push({
-        role: msg.role === 'user' ? 'user' : 'assistant',
-        content: msg.content
+      contents.push({
+        role: msg.role === 'user' ? 'user' : 'model',
+        parts: [{ text: msg.content }]
       });
     }
 
     // Add current message
-    messages.push({ role: 'user', content: message });
+    contents.push({
+      role: 'user',
+      parts: [{ text: message }]
+    });
 
-    const response = await fetch('https://api.openai.com/v1/chat/completions', {
+    const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_API_KEY}`, {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${OPENAI_API_KEY}`
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        model: 'gpt-4o-mini',
-        messages: messages,
-        temperature: 0.7,
-        max_tokens: 600
+        contents: contents,
+        systemInstruction: {
+          parts: [{ text: systemPrompt }]
+        },
+        generationConfig: {
+          temperature: 0.7,
+          maxOutputTokens: 600
+        }
       })
     });
 
     if (!response.ok) {
       const errorText = await response.text();
-      console.error('OpenAI API error:', response.status, errorText);
+      console.error('Gemini API error:', response.status, errorText);
       return {
         statusCode: 500,
         headers,
         body: JSON.stringify({
-          error: 'OpenAI API error',
+          error: 'Gemini API error',
           status: response.status,
           details: errorText.substring(0, 500),
           fallback: 'I apologize, but I\'m having trouble right now. Please try again.'
@@ -205,8 +209,8 @@ ${relevantContent}
     const data = await response.json();
 
     let aiResponse = '';
-    if (data.choices && data.choices[0] && data.choices[0].message) {
-      aiResponse = data.choices[0].message.content;
+    if (data.candidates && data.candidates[0] && data.candidates[0].content) {
+      aiResponse = data.candidates[0].content.parts[0].text;
     } else {
       aiResponse = 'I apologize, but I received an unexpected response. Please try again.';
     }
