@@ -1,5 +1,5 @@
 # Kyanos Investor Presentation
-## For Investing In US (Reid Hoffman / Thanasi Dilos)
+## For Thanasi Dilos, Partner at Investing In US
 
 **14 Slides | 20 Minutes | Based on Guy Kawasaki Methodology**
 
@@ -7,7 +7,8 @@
 
 ## MEETING CONTEXT
 
-**Who You're Meeting:** Thanasi Dilos, Partner at Investing In US
+**Primary Audience:** Thanasi Dilos, Partner at Investing In US
+**Goal:** Get Thanasi excited enough to bring this to Reid Hoffman
 
 **Background on Thanasi:**
 - 21 years old, based in Queens, NY
@@ -54,11 +55,11 @@ January 2026
 
 **SPEAKER NOTES:**
 
-"Reid, thank you for your time. I'm here because you understand something most political operatives don't: the next communication revolution isn't coming—it's already here.
+"Thanasi, thank you for your time. I reached out to Investing In US because you understand something most political operatives don't: the next communication revolution isn't coming—it's already here.
 
-You've seen this pattern before. New technology reshapes how information flows. First movers build infrastructure. Everyone else plays catch-up.
+You and Reid founded Investing In US on the thesis that technology changes politics faster than politics adapts. That's exactly what's happening with AI.
 
-Kyanos is the infrastructure play for progressive politics in the AI era."
+Kyanos is the infrastructure play for progressive politics in the AI era. I want to show you why this belongs in your portfolio."
 
 **TRANSITION TO SLIDE 2:**
 
@@ -651,7 +652,9 @@ That's what Kyanos is. Trust-owned. Mission-locked. Built to serve progressives 
 
 The window is now. By 2028, the patterns will be set. The question is whether progressives have infrastructure in place—or whether we're playing catch-up on AI like we did with podcasts.
 
-I'm asking you to help us build something permanent. Something that fills the gap in your portfolio. Something that protects democracy in the AI era."
+**Here's my ask:** I'd like you to bring this to Reid. If this resonates with you—if you see how it completes your portfolio—I'd welcome the chance to present directly to him.
+
+But first, tell me: what questions do you have? What would Reid need to see?"
 
 ---
 
