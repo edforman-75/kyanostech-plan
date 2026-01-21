@@ -205,7 +205,7 @@ TRANSITION: "And here's what makes this urgent: AI isn't just reaching voters. I
 
 AI chatbots are the most persuasive political communication channel ever measured in controlled experiments. Four times more effective than television advertising.
 
-And the beauty of AI optimization: it costs a fraction of TV. We're talking $1-10 per voter influenced, compared to $100-600 for broadcast television.
+And the beauty of Internet Presence Optimization: it costs a fraction of TV. We're talking $1-10 per voter influenced, compared to $100-600 for broadcast television.
 
 This isn't just about keeping pace. It's about finding a lever that actually works when traditional contact doesn't."
 

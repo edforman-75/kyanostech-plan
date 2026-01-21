@@ -56,18 +56,18 @@ KyanosTech' go-to-market approach is designed to maximize adoption in a cyclical
 - Around 30 competitive House races plus leadership/committee officeholders.
 
 **Tactics:**
-- National PAC/Union Partnerships: Integrate AI optimization funding into bundled candidate support packages.¹²
+- National PAC/Union Partnerships: Integrate Internet Presence Optimization funding into bundled candidate support packages.¹²
 - Partner-Led Implementation: Majority of new campaigns acquired through certified consultants and developers.
 - Visibility Dashboarding: Deliver real-time campaign visibility benchmarks as a differentiator.
 
-**Goal:** 300+ campaigns and officeholders, demonstrating dominance of AI optimization for Democratic campaigns.¹³
+**Goal:** 300+ campaigns and officeholders, demonstrating dominance of Internet Presence Optimization for Democratic campaigns.¹³
 
 ## Strategic Partnerships with Direct-Contribution Political Organizations
 
 ### PAC-Driven Distribution:
 - Labor unions (e.g., SEIU COPE) can bulk-fund optimization across dozens of candidates.
 - Professional PACs (e.g., EMILY's List) can integrate our services into their candidate support offerings.
-- **Proof of Value:** Success requires documenting how AI optimization improves campaign visibility and electoral outcomes, making it a natural addition to PAC-funded candidate packages.
+- **Proof of Value:** Success requires documenting how Internet Presence Optimization improves campaign visibility and electoral outcomes, making it a natural addition to PAC-funded candidate packages.
 - **Leverage Multiplier:** Each partnership can extend reach across dozens of campaigns, reducing CAC and embedding us in Democratic infrastructure.
 
 ---
@@ -82,11 +82,11 @@ KyanosTech' go-to-market approach is designed to maximize adoption in a cyclical
 
 ⁴ **PAC Co-Funding Legal Framework:** PAC contributions to campaigns for technology services must comply with FEC coordination rules under 11 CFR 109.21. Independent expenditure PACs cannot coordinate on technology purchases; only traditional PACs with contribution limits can directly fund campaign technology. Legal structure requires campaigns to purchase services directly with PAC contributions rather than PAC-to-vendor payments to avoid coordination violations.
 
-⁵ **2026 Gubernatorial Calendar:** 36 gubernatorial races scheduled for November 2026 election per [National Governors Association election calendar](https://www.nga.org/governors/elections/). Battleground state priorities include: Michigan, Pennsylvania, Wisconsin, Arizona, Nevada, Georgia, North Carolina. These 7 states represent 58% of competitive gubernatorial spending and optimal markets for AI optimization technology demonstration.
+⁵ **2026 Gubernatorial Calendar:** 36 gubernatorial races scheduled for November 2026 election per [National Governors Association election calendar](https://www.nga.org/governors/elections/). Battleground state priorities include: Michigan, Pennsylvania, Wisconsin, Arizona, Nevada, Georgia, North Carolina. These 7 states represent 58% of competitive gubernatorial spending and optimal markets for Internet Presence Optimization technology demonstration.
 
-⁶ **SEIU COPE Political Spending:** Service Employees International Union Committee on Political Education spent $28.6M on federal campaigns in 2022 cycle and $41.2M in 2024 cycle ([OpenSecrets.org](https://www.opensecrets.org/)). SEIU typically supports 150-200 candidates per cycle across federal, state, and local levels, making it optimal partner for bulk AI optimization funding.
+⁶ **SEIU COPE Political Spending:** Service Employees International Union Committee on Political Education spent $28.6M on federal campaigns in 2022 cycle and $41.2M in 2024 cycle ([OpenSecrets.org](https://www.opensecrets.org/)). SEIU typically supports 150-200 candidates per cycle across federal, state, and local levels, making it optimal partner for bulk Internet Presence Optimization funding.
 
-⁷ **EMILY's List Campaign Support:** EMILY's List supported 319 Democratic women candidates in 2024 cycle with $56.8M in contributions and independent expenditures ([FEC reports](https://www.fec.gov/)). Organization's bundled support model includes technology services, making AI optimization a natural addition to candidate support packages.
+⁷ **EMILY's List Campaign Support:** EMILY's List supported 319 Democratic women candidates in 2024 cycle with $56.8M in contributions and independent expenditures ([FEC reports](https://www.fec.gov/)). Organization's bundled support model includes technology services, making Internet Presence Optimization a natural addition to candidate support packages.
 
 ⁸ **2026 Customer Acquisition Target Methodology:** 10-15 marquee adoptions target based on 2026 Market Validation Strategy detailed in Progressive Digital Labs Political Impact First Business Plan, Section: Phase 1 Market Validation and Foundation Building.
 
@@ -96,7 +96,7 @@ KyanosTech' go-to-market approach is designed to maximize adoption in a cyclical
 
 ¹¹ **2027 Growth Target Methodology:** 40-50 active accounts target based on incumbent services strategy detailed in Progressive Digital Labs Business Plan Version 50, Section: 2027 Off-Year Incumbent Revenue Focus.
 
-¹² **PAC Integration Legal Compliance:** National PAC partnerships must structure AI optimization as independent expenditures rather than coordinated expenditures to avoid contribution limits. Legal framework requires: (a) Public availability of services, (b) No campaign-specific customization, (c) Standardized pricing, (d) No strategic coordination between PAC and campaign on implementation.
+¹² **PAC Integration Legal Compliance:** National PAC partnerships must structure Internet Presence Optimization as independent expenditures rather than coordinated expenditures to avoid contribution limits. Legal framework requires: (a) Public availability of services, (b) No campaign-specific customization, (c) Standardized pricing, (d) No strategic coordination between PAC and campaign on implementation.
 
 ¹³ **2028 Scale Target Validation:** 300+ campaigns target represents subset of 360 total customers detailed in Progressive Digital Labs DANA Business Plan, Section: 2028 SAM Capture Analysis with locked financial projections alignment.
 

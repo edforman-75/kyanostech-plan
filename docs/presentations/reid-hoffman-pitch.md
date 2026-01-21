@@ -175,7 +175,7 @@ Kalla & Broockman (2018), meta-analysis of 49 field experiments:
 
 AI chatbots are the most persuasive political communication channel ever measured in controlled experiments. Four times more effective than television advertising.
 
-And the beauty of AI optimization: it costs a fraction of TV. We're talking $1-10 per voter influenced, compared to $100-600 for broadcast television.
+And the beauty of Internet Presence Optimization: it costs a fraction of TV. We're talking $1-10 per voter influenced, compared to $100-600 for broadcast television.
 
 This isn't just about keeping pace. It's about finding a lever that actually works when traditional contact doesn't."
 
@@ -283,10 +283,12 @@ We don't just hand over a report. We monitor execution, coach the team through i
 
 ### Phase 1: Monitor
 
-- Query AI surfaces using our Bentham infrastructure
-- Core surfaces: Google AI Overviews, ChatGPT, Meta AI
+- Query three surfaces using our Bentham infrastructure:
+  - **AI chatbots:** ChatGPT, Claude, Perplexity, Grok, Meta AI
+  - **AI-integrated search:** Google AI Overviews, Bing Copilot
+  - **Traditional search results**
 - Test questions voters actually ask about the candidate
-- Watchtower detect geographic variation
+- Watchtower detects geographic variation
 
 **Deliverable:** Dashboard showing exactly what voters see
 
@@ -729,7 +731,7 @@ forman.ed@gmail.com
    - You fund voter registration (Vote.org), candidate pipelines (Run for Something), and media (News for Democracy). Kyanos is the AI layer that makes all of those investments more effective. When voters register, they research candidates—we ensure they find accurate info. When your candidates run, we help them compete in AI environments.
 
 7. **"How do you think about youth civic engagement in this?"** (Given Thanasi's Civics Unplugged background)
-   - Young voters are the most likely to use AI for information. They're digital natives who trust AI answers. If we don't optimize for how they research, we lose them. Also, training campaigns on AI optimization is a form of civic education—we're teaching the ecosystem how to participate in the new information environment.
+   - Young voters are the most likely to use AI for information. They're digital natives who trust AI answers. If we don't optimize for how they research, we lose them. Also, training campaigns on Internet Presence Optimization is a form of civic education—we're teaching the ecosystem how to participate in the new information environment.
 
 8. **"What's your theory of change for platform accountability?"** (Investing In US focuses on systemic change)
    - Individual campaign optimization creates aggregate pressure. When hundreds of campaigns are monitoring AI behavior and documenting patterns, we have evidence for public advocacy and policy. The Research Institute we're planning will publish findings that create accountability. We're building the infrastructure for watchdog journalism on AI.

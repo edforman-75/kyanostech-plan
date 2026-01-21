@@ -1,4 +1,4 @@
-# Impact Analysis: AI Optimization vs. Traditional Voter Contact
+# Impact Analysis: Internet Presence Optimization vs. Traditional Voter Contact
 
 **Internal Reference Document**
 **January 2026**
@@ -7,9 +7,9 @@
 
 ## The Core Argument
 
-Political campaigns spend $50-200 per voter moved through traditional channels. AI optimization costs a fraction of that and reaches voters at the moment they're actively researching—when they're most persuadable.
+Political campaigns spend $50-200 per voter moved through traditional channels. Internet Presence Optimization costs a fraction of that and reaches voters at the moment they're actively researching—when they're most persuadable.
 
-This analysis compares two campaigns in contrasting environments to demonstrate the ROI of AI presence optimization.
+This analysis compares two campaigns in contrasting environments to demonstrate the ROI of Internet Presence Optimization.
 
 ---
 
@@ -180,7 +180,7 @@ A $50,000 TV buy in Boise:
 
 ---
 
-## Cost Per Voter: AI Optimization
+## Cost Per Voter: Internet Presence Optimization
 
 ### What It Costs
 
@@ -215,7 +215,7 @@ A $50,000 TV buy in Boise:
 
 **Cost per influenced voter:** $10,000-20,000 ÷ 8,500-22,500 = **$0.45-2.35**
 
-**Note:** Achilles has ZERO presence in AI training data. Any AI optimization creates presence from nothing—potentially higher impact per dollar.
+**Note:** Achilles has ZERO presence in AI training data. Any Internet Presence Optimization creates presence from nothing—potentially higher impact per dollar.
 
 ---
 
@@ -230,7 +230,7 @@ A $50,000 TV buy in Boise:
 | Digital ads | $50-100 | ✅ Standard |
 | Direct mail | $59-200 | ✅ Targeted |
 | Canvassing | $19-29 (turnout only) | ⚠️ Limited persuasion |
-| **AI Optimization** | **$1-10** | ✅ **Best ROI** |
+| **Internet Presence Optimization** | **$1-10** | ✅ **Best ROI** |
 
 ### Idaho Senate (Achilles) — Affordable Market, General Election
 
@@ -241,7 +241,7 @@ A $50,000 TV buy in Boise:
 | Digital ads | $30-75 | ✅ Standard |
 | Direct mail | $40-100 | ✅ Statewide viable |
 | Canvassing | $19-29 (turnout only) | ⚠️ Scale challenge |
-| **AI Optimization** | **$0.50-2.50** | ✅ **Best ROI** |
+| **Internet Presence Optimization** | **$0.50-2.50** | ✅ **Best ROI** |
 
 ---
 
@@ -249,11 +249,11 @@ A $50,000 TV buy in Boise:
 
 ### For Malinowski (NJ-11)
 
-> "You cannot afford broadcast TV in the New York market. CTV gets you hyperlocal targeting but still costs $50-150 per voter moved. AI optimization costs $1-10 per voter and reaches people at the exact moment they're researching your name. In a competitive primary, 2,000-4,000 voters seeing accurate information instead of ethics violations first could be decisive."
+> "You cannot afford broadcast TV in the New York market. CTV gets you hyperlocal targeting but still costs $50-150 per voter moved. Internet Presence Optimization costs $1-10 per voter and reaches people at the exact moment they're researching your name. In a competitive primary, 2,000-4,000 voters seeing accurate information instead of ethics violations first could be decisive."
 
 ### For Achilles (Idaho)
 
-> "You can afford broadcast TV, but you have a bigger problem: you don't exist in AI. Gemini API returns 'I don't have information about Todd Achilles.' Every dollar spent on TV reaches voters who then Google you and find nothing—or worse, only find Risch. AI optimization doesn't just improve your presence; it creates it from zero. At $0.50-2.50 per voter influenced, it's the foundation everything else builds on."
+> "You can afford broadcast TV, but you have a bigger problem: you don't exist in AI. Gemini API returns 'I don't have information about Todd Achilles.' Every dollar spent on TV reaches voters who then Google you and find nothing—or worse, only find Risch. Internet Presence Optimization doesn't just improve your presence; it creates it from zero. At $0.50-2.50 per voter influenced, it's the foundation everything else builds on."
 
 ---
 

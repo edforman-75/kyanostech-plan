@@ -54,7 +54,7 @@ Think about what happens when a campaign's media works. A voter sees a TV ad or 
 
 If AI gives them bad information—outdated facts, opponent framing, ethics controversies—that media spend is wasted. The voter's positive impression disappears the moment they research.
 
-**AI optimization protects media investment.** It ensures that when advertising drives voters to research, they find information that reinforces the campaign's message. Every dollar spent on TV, digital, and mail becomes more effective.
+**Internet Presence Optimization protects media investment.** It ensures that when advertising drives voters to research, they find information that reinforces the campaign's message. Every dollar spent on TV, digital, and mail becomes more effective.
 
 And it costs almost nothing:
 
@@ -64,7 +64,7 @@ And it costs almost nothing:
 | Digital Advertising | $50-100 |
 | **AI Presence Optimization** | **$1-10** |
 
-AI optimization is the highest-leverage line item in any media plan—it amplifies everything else.
+Internet Presence Optimization is the highest-leverage line item in any media plan—it amplifies everything else.
 
 *For the full ROI analysis, see [The Value Proposition](ky-value-proposition.md).*
 

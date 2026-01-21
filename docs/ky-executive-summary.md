@@ -39,9 +39,9 @@ New research published in *Nature* and *Science* (December 2025) found that AI c
 |------------|----------------|------|
 | Broadcast TV | $100-600 | Awareness |
 | Digital Ads | $50-100 | Engagement |
-| **AI Optimization** | **$1-10** | **Conversion & validation** |
+| **Internet Presence Optimization** | **$1-10** | **Conversion & validation** |
 
-AI optimization ensures media dollars convert. It's the highest-impact line item in any campaign budget, amplifying TV, protecting digital spend, and ensuring voter interest becomes voter support.
+Internet Presence Optimization ensures media dollars convert. It's the highest-impact line item in any campaign budget, amplifying TV, protecting digital spend, and ensuring voter interest becomes voter support.
 
 *For the full research and methodology, see [The Value Proposition](ky-value-proposition.md).*
 

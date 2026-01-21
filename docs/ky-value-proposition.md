@@ -6,7 +6,7 @@
 
 ## The Bottom Line
 
-| Metric | Traditional Media | AI Optimization |
+| Metric | Traditional Media | Internet Presence Optimization |
 |--------|-------------------|-----------------|
 | **Cost per voter influenced** | $50-600 | $1-10 |
 | **Persuasion effectiveness** | Baseline | **4x more effective** |
@@ -80,7 +80,7 @@ When a voter asks "Who should I vote for in [race]?" or "Is [candidate] honest?"
 
 AI presence optimization doesn't suffer from this problem. The cost to monitor and fix your AI presence is the same in October as it is in June. While competitors are paying 3x for diminishing TV inventory, campaigns with strong AI presence continue reaching researching voters at the same low cost.
 
-### What AI Optimization Costs
+### What Internet Presence Optimization Costs
 
 | Component | Investment |
 |-----------|------------|
@@ -117,13 +117,13 @@ If the search results and AI responses are bad—outdated information, opponent 
 
 **Digital presence optimization protects your media investment.** It ensures that when voters follow up on your advertising, they find accurate, favorable information that reinforces your message. Every dollar spent on TV, digital, and mail becomes more effective when your web presence is optimized.
 
-And the cost is minimal: **$1-10 per voter influenced**, compared to $50-600 for the media that drives them to research. AI optimization is the highest-leverage spend in the entire media plan.
+And the cost is minimal: **$1-10 per voter influenced**, compared to $50-600 for the media that drives them to research. Internet Presence Optimization is the highest-leverage spend in the entire media plan.
 
 ### For the Progressive Movement
 
 If progressives fail to invest in AI presence optimization while conservatives do, we will repeat the podcast mistake of 2020-2024—arriving late to a medium that reshapes how voters learn about candidates.
 
-The good news: AI presence optimization is **cheaper and more accessible** than building podcast networks or buying television time. A $10,000 investment in AI optimization can match the persuasive impact of a $300,000 TV buy.
+The good news: Internet Presence Optimization is **cheaper and more accessible** than building podcast networks or buying television time. A $10,000 investment in Internet Presence Optimization can match the persuasive impact of a $300,000 TV buy.
 
 The progressive movement has an opportunity to achieve communication parity—or even advantage—at a fraction of historical costs. But only if we act now.
 
@@ -159,6 +159,6 @@ We don't just tell campaigns they have a problem. We tell them exactly what to d
 ---
 
 <div class="callout-bottomline">
-<p><strong>AI is 4x more persuasive than TV ads. AI optimization costs 10-100x less per voter. The math is clear.</strong></p>
+<p><strong>AI is 4x more persuasive than TV ads. Internet Presence Optimization costs 10-100x less per voter. The math is clear.</strong></p>
 <p>Digital Presence Optimization is the highest-ROI investment a campaign can make in voter communication.</p>
 </div>

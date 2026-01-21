@@ -2,24 +2,24 @@
 
 ## Why Campaigns Will Pay
 
-**AI optimization protects and amplifies every other media investment a campaign makes.**
+**Internet Presence Optimization protects and amplifies every other media investment a campaign makes.**
 
 When media works (when a voter sees a TV ad, digital campaign, or mail piece), what happens next? They research. They Google the candidate. They ask ChatGPT. If AI gives them bad information, that media spend is wasted.
 
 New research shows AI chatbots are **4 times more persuasive** than TV ads ([Rand et al., *Nature*, 2025](https://www.nature.com/articles/s41586-025-09771-9); [Pennycook et al., *Science*, 2025](https://www.science.org/doi/10.1126/science.aea3884)). AI isn't just another channel. It's where voters go to validate what they've seen elsewhere.
 
-**AI optimization ensures media dollars convert:**
+**Internet Presence Optimization ensures media dollars convert:**
 
 | Investment | Cost per Voter Influenced | Role |
 |------------|---------------------------|------|
 | Broadcast TV | $100-600 | Awareness |
 | CTV/Streaming | $50-150 | Targeted awareness |
 | Digital Ads | $50-100 | Engagement |
-| **AI Optimization** | **$1-10** | **Conversion & validation** |
+| **Internet Presence Optimization** | **$1-10** | **Conversion & validation** |
 
-Campaigns will pay for Kyanos because **it makes their entire media strategy more effective**. AI optimization is the highest-impact line item in any media budget. It amplifies TV, protects digital spend, and ensures that voter interest converts to voter support.
+Campaigns will pay for Kyanos because **it makes their entire media strategy more effective**. Internet Presence Optimization is the highest-impact line item in any media budget. It amplifies TV, protects digital spend, and ensures that voter interest converts to voter support.
 
-By 2028, an estimated 45-60% of voter information queries will be answered inside AI environments. Without AI optimization, campaigns risk losing voters at the moment of decision, after they've already spent the money to reach them.
+By 2028, an estimated 45-60% of voter information queries will be answered inside AI environments. Without Internet Presence Optimization, campaigns risk losing voters at the moment of decision, after they've already spent the money to reach them.
 
 *For the complete ROI analysis with research citations, see [The Value Proposition](ky-value-proposition.md).*
 
