@@ -2,6 +2,7 @@ site_name: Kyanos Business Plan
 site_description: Keeping progressives visible in the AI era
 site_author: KyanosTech Team
 copyright: Copyright &copy; 2026 KyanosTech
+use_directory_urls: false
 
 theme:
   name: material
