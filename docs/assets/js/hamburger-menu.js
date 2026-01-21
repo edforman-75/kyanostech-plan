@@ -1,14 +1,14 @@
 // Hamburger menu and footer copyright
 document.addEventListener('DOMContentLoaded', function() {
   // Add copyright to footer nav (works on all devices)
-  const footerInner = document.querySelector('.md-footer-nav__inner');
+  const footerInner = document.querySelector('.md-footer__inner');
   if (footerInner) {
     const copyright = document.createElement('div');
     copyright.className = 'footer-copyright';
     copyright.innerHTML = '© 2026 KyanosTech<br><a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs</a>';
 
     // Insert between prev and next links
-    const nextLink = footerInner.querySelector('.md-footer-nav__link--next');
+    const nextLink = footerInner.querySelector('.md-footer__link--next');
     if (nextLink) {
       footerInner.insertBefore(copyright, nextLink);
     } else {

@@ -223,8 +223,8 @@
 
 /* ===== FLOATING BOTTOM NAVIGATION ARROWS ===== */
 
-/* Make footer navigation sticky/fixed at bottom */
-.md-footer-nav {
+/* Make footer fixed at bottom */
+.md-footer {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -237,10 +237,10 @@
 
 /* Add padding to content so it doesn't get hidden behind fixed footer */
 .md-content {
-  padding-bottom: 60px;
+  padding-bottom: 70px;
 }
 
-.md-footer-nav__link {
+.md-footer__link {
   color: white !important;
   padding: 0.5rem 1rem;
   border-radius: 6px;
@@ -251,11 +251,11 @@
   gap: 0.4rem;
 }
 
-.md-footer-nav__link:hover {
+.md-footer__link:hover {
   background: rgba(255,255,255,0.25);
 }
 
-.md-footer-nav__title {
+.md-footer__title {
   font-size: 0.9rem;
   font-weight: 600;
   max-width: 200px;
@@ -264,7 +264,7 @@
   text-overflow: ellipsis;
 }
 
-.md-footer-nav__direction {
+.md-footer__direction {
   font-size: 0.75rem;
   opacity: 0.8;
   text-transform: uppercase;
@@ -272,13 +272,13 @@
 }
 
 /* Make arrows more prominent */
-.md-footer-nav__link--prev .md-icon,
-.md-footer-nav__link--next .md-icon {
+.md-footer__button.md-icon {
   font-size: 1.5rem;
+  color: white;
 }
 
 /* Center the content more */
-.md-footer-nav__inner {
+.md-footer__inner {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
