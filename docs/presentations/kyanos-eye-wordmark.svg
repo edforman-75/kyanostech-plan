@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200">
+  <defs>
+    <linearGradient id="eyeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4AB8E8" />
+      <stop offset="100%" style="stop-color:#007BC0" />
+    </linearGradient>
+    <linearGradient id="irisGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#007BC0" />
+      <stop offset="100%" style="stop-color:#1A365D" />
+    </linearGradient>
+  </defs>
+
+  <!-- Subtle radial lines behind eye -->
+  <g stroke="#007BC0" stroke-width="1.5" opacity="0.25" stroke-linecap="round">
+    <line x1="80" y1="100" x2="80" y2="15"/>
+    <line x1="80" y1="100" x2="145" y2="35"/>
+    <line x1="80" y1="100" x2="160" y2="100"/>
+    <line x1="80" y1="100" x2="145" y2="165"/>
+    <line x1="80" y1="100" x2="80" y2="185"/>
+    <line x1="80" y1="100" x2="15" y2="165"/>
+    <line x1="80" y1="100" x2="0" y2="100"/>
+    <line x1="80" y1="100" x2="15" y2="35"/>
+  </g>
+
+  <!-- Eye shape -->
+  <ellipse cx="80" cy="100" rx="65" ry="40" fill="url(#eyeGrad)" />
+  <ellipse cx="80" cy="100" rx="52" ry="30" fill="white" opacity="0.95"/>
+
+  <!-- Iris -->
+  <circle cx="80" cy="100" r="24" fill="url(#irisGrad)"/>
+  <circle cx="80" cy="100" r="20" fill="none" stroke="#1A365D" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Pupil -->
+  <circle cx="80" cy="100" r="10" fill="#0a1628"/>
+
+  <!-- Light reflection -->
+  <circle cx="74" cy="94" r="4" fill="white" opacity="0.9"/>
+  <circle cx="86" cy="102" r="2" fill="white" opacity="0.5"/>
+
+  <!-- Eyelid curves -->
+  <path d="M 15 100 Q 80 55 145 100" fill="none" stroke="#1A365D" stroke-width="2.5" opacity="0.6"/>
+  <path d="M 15 100 Q 80 145 145 100" fill="none" stroke="#1A365D" stroke-width="2.5" opacity="0.6"/>
+
+  <!-- Wordmark -->
+  <text x="175" y="115" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="bold" fill="#1A365D" letter-spacing="4">KYANOS</text>
+
+</svg>

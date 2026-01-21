@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="kGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4AB8E8" />
+      <stop offset="100%" style="stop-color:#1A365D" />
+    </linearGradient>
+  </defs>
+
+  <!-- Circular background -->
+  <circle cx="100" cy="100" r="95" fill="#1A365D"/>
+
+  <!-- Radial observation lines emanating from the K -->
+  <g stroke="#4AB8E8" stroke-width="2" opacity="0.5" stroke-linecap="round">
+    <!-- Top rays -->
+    <line x1="100" y1="85" x2="50" y2="15"/>
+    <line x1="100" y1="85" x2="100" y2="10"/>
+    <line x1="100" y1="85" x2="150" y2="15"/>
+    <!-- Side rays -->
+    <line x1="115" y1="100" x2="190" y2="70"/>
+    <line x1="115" y1="100" x2="190" y2="100"/>
+    <line x1="115" y1="100" x2="190" y2="130"/>
+    <!-- Bottom rays -->
+    <line x1="100" y1="115" x2="50" y2="185"/>
+    <line x1="100" y1="115" x2="100" y2="190"/>
+    <line x1="100" y1="115" x2="150" y2="185"/>
+  </g>
+
+  <!-- The K letterform -->
+  <g fill="white">
+    <!-- Vertical stem -->
+    <rect x="55" y="45" width="20" height="110" rx="3"/>
+    <!-- Upper diagonal -->
+    <polygon points="75,100 75,85 130,45 145,45 145,60 90,100"/>
+    <!-- Lower diagonal -->
+    <polygon points="75,100 75,115 130,155 145,155 145,140 90,100"/>
+  </g>
+
+  <!-- Eye at the intersection -->
+  <circle cx="85" cy="100" r="12" fill="#007BC0"/>
+  <ellipse cx="85" cy="100" rx="7" ry="4" fill="#1A365D"/>
+  <circle cx="85" cy="100" r="3" fill="#4AB8E8"/>
+  <circle cx="84" cy="99" r="1" fill="white"/>
+
+</svg>

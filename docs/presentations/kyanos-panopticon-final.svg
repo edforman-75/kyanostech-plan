@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+
+  <!-- Outer prison wall -->
+  <circle cx="150" cy="150" r="140" fill="none" stroke="#1A365D" stroke-width="6"/>
+
+  <!-- Sight lines from center outward -->
+  <g stroke="#007BC0" stroke-width="2" opacity="0.6">
+    <line x1="150" y1="150" x2="150" y2="22"/>
+    <line x1="150" y1="150" x2="240" y2="60"/>
+    <line x1="150" y1="150" x2="278" y2="150"/>
+    <line x1="150" y1="150" x2="240" y2="240"/>
+    <line x1="150" y1="150" x2="150" y2="278"/>
+    <line x1="150" y1="150" x2="60" y2="240"/>
+    <line x1="150" y1="150" x2="22" y2="150"/>
+    <line x1="150" y1="150" x2="60" y2="60"/>
+  </g>
+
+  <!-- Cells/nodes at the end of each ray (the observed subjects) -->
+  <g fill="#e3f0f9" stroke="#1A365D" stroke-width="2">
+    <!-- Top -->
+    <rect x="132" y="12" width="36" height="28" rx="4"/>
+    <!-- Top right -->
+    <rect x="232" y="48" width="36" height="28" rx="4" transform="rotate(45, 250, 62)"/>
+    <!-- Right -->
+    <rect x="262" y="136" width="28" height="36" rx="4"/>
+    <!-- Bottom right -->
+    <rect x="232" y="224" width="36" height="28" rx="4" transform="rotate(-45, 250, 238)"/>
+    <!-- Bottom -->
+    <rect x="132" y="260" width="36" height="28" rx="4"/>
+    <!-- Bottom left -->
+    <rect x="32" y="224" width="36" height="28" rx="4" transform="rotate(45, 50, 238)"/>
+    <!-- Left -->
+    <rect x="10" y="136" width="28" height="36" rx="4"/>
+    <!-- Top left -->
+    <rect x="32" y="48" width="36" height="28" rx="4" transform="rotate(-45, 50, 62)"/>
+  </g>
+
+  <!-- Small dots inside cells (representing data/content being observed) -->
+  <g fill="#007BC0">
+    <circle cx="150" cy="26" r="4"/>
+    <circle cx="250" cy="62" r="4"/>
+    <circle cx="276" cy="154" r="4"/>
+    <circle cx="250" cy="238" r="4"/>
+    <circle cx="150" cy="274" r="4"/>
+    <circle cx="50" cy="238" r="4"/>
+    <circle cx="24" cy="154" r="4"/>
+    <circle cx="50" cy="62" r="4"/>
+  </g>
+
+  <!-- Central tower -->
+  <circle cx="150" cy="150" r="38" fill="#1A365D"/>
+
+  <!-- Observer eye -->
+  <ellipse cx="150" cy="150" rx="22" ry="13" fill="white"/>
+  <circle cx="150" cy="150" r="9" fill="#007BC0"/>
+  <circle cx="150" cy="150" r="4" fill="#1A365D"/>
+  <circle cx="147" cy="148" r="2" fill="white"/>
+
+</svg>

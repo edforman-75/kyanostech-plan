@@ -17,7 +17,7 @@
 | **AI platforms change content processing** | Research Director tracks changes; diversified approach across sources |
 | **Platforms block monitoring** | Multiple access methods; budget for maintenance |
 | **Bot detection services (Cloudflare, etc.)** | Cat-and-mouse game since the web began; many industries depend on web data access; budget for specialized expertise |
-| **Platform becomes hostile to progressives** | Watchtowers detect early; Research Institute documents evidence |
+| **Platform becomes hostile to progressives** | Watchtower detect early; Research Institute documents evidence |
 
 ---
 
@@ -37,7 +37,7 @@
 |------|------------|
 | **AI regulation restricts optimization** | We do content structuring, not manipulation; likely to benefit from regulation |
 | **Platform policies restrict political content** | Follow platform rules; adjust quickly |
-| **Administration pressure on AI platforms** | Core reason Kyanos exists; Watchtowers and Research Institute provide documentation |
+| **Administration pressure on AI platforms** | Core reason Kyanos exists; Watchtower and Research Institute provide documentation |
 
 ---
 
@@ -107,7 +107,7 @@
 
 **Mitigations:**
 
-- Watchtowers detect geographic manipulation
+- Watchtower detect geographic manipulation
 - Research Institute documents evidence
 - Public reporting creates accountability
 - Core reason Kyanos exists: we're the watchdog

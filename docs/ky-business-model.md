@@ -6,7 +6,7 @@
 |------|----------|
 | **Local** | Panopticon (core 3 surfaces) |
 | **Congressional** | Panopticon + GoodInk + Adwatch + TripWire |
-| **Statewide** | Panopticon (with Watchtowers) + GoodInk + Adwatch + TripWire |
+| **Statewide** | Panopticon (with Watchtower) + GoodInk + Adwatch + TripWire |
 | **National** | All products + dedicated FTE onsite + special projects |
 
 ---

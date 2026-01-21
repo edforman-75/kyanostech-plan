@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <defs>
+    <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+      <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#1A365D" stroke-width="0.3" opacity="0.2"/>
+    </pattern>
+  </defs>
+
+  <!-- Background with subtle grid (blueprint style) -->
+  <rect width="300" height="300" fill="#f8fbfe"/>
+  <rect width="300" height="300" fill="url(#grid)"/>
+
+  <!-- Outer circular wall (thick) -->
+  <circle cx="150" cy="150" r="135" fill="none" stroke="#1A365D" stroke-width="10"/>
+
+  <!-- Individual cells as distinct rooms -->
+  <g fill="#e3f0f9" stroke="#1A365D" stroke-width="2">
+    <!-- 8 cells arranged as wedges -->
+    <path d="M150,150 L150,20 A130,130 0 0,1 242,58 L200,95 A75,75 0 0,0 150,75 Z"/>
+    <path d="M150,150 L242,58 A130,130 0 0,1 280,150 L225,150 A75,75 0 0,0 200,95 Z"/>
+    <path d="M150,150 L280,150 A130,130 0 0,1 242,242 L200,205 A75,75 0 0,0 225,150 Z"/>
+    <path d="M150,150 L242,242 A130,130 0 0,1 150,280 L150,225 A75,75 0 0,0 200,205 Z"/>
+    <path d="M150,150 L150,280 A130,130 0 0,1 58,242 L100,205 A75,75 0 0,0 150,225 Z"/>
+    <path d="M150,150 L58,242 A130,130 0 0,1 20,150 L75,150 A75,75 0 0,0 100,205 Z"/>
+    <path d="M150,150 L20,150 A130,130 0 0,1 58,58 L100,95 A75,75 0 0,0 75,150 Z"/>
+    <path d="M150,150 L58,58 A130,130 0 0,1 150,20 L150,75 A75,75 0 0,0 100,95 Z"/>
+  </g>
+
+  <!-- Inner gallery ring -->
+  <circle cx="150" cy="150" r="75" fill="white" stroke="#1A365D" stroke-width="2"/>
+
+  <!-- Central inspection tower -->
+  <circle cx="150" cy="150" r="35" fill="#1A365D"/>
+
+  <!-- Observation symbol - radiating from center -->
+  <g stroke="#4AB8E8" stroke-width="2" opacity="0.8">
+    <line x1="150" y1="115" x2="150" y2="50"/>
+    <line x1="175" y1="125" x2="220" y2="80"/>
+    <line x1="185" y1="150" x2="250" y2="150"/>
+    <line x1="175" y1="175" x2="220" y2="220"/>
+    <line x1="150" y1="185" x2="150" y2="250"/>
+    <line x1="125" y1="175" x2="80" y2="220"/>
+    <line x1="115" y1="150" x2="50" y2="150"/>
+    <line x1="125" y1="125" x2="80" y2="80"/>
+  </g>
+
+  <!-- Central eye -->
+  <ellipse cx="150" cy="150" rx="18" ry="11" fill="white"/>
+  <circle cx="150" cy="150" r="7" fill="#007BC0"/>
+  <circle cx="148" cy="148" r="2" fill="white"/>
+
+</svg>

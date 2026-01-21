@@ -38,7 +38,7 @@ Every customer gets all three phases. This is not a tiered feature set. It's a c
 - Optional: Perplexity, Copilot, Gemini, Claude, Grok, and others
 - Tests questions voters actually ask about the candidate
 - Shows exactly what voters see when they search for the candidate
-- Watchtowers detect geographic variation (Statewide/National tiers)
+- Watchtower detect geographic variation (Statewide/National tiers)
 
 **Monitoring Frequency:**
 
@@ -97,7 +97,7 @@ Every customer gets all three phases. This is not a tiered feature set. It's a c
 
 ### Watchdog Impact (Democracy Level)
 
-1. Watchtowers detect geographic manipulation
+1. Watchtower detect geographic manipulation
 2. Research Institute documents evidence of platform bias
 3. Findings inform policy advocacy and public awareness
 4. AI platforms face accountability pressure

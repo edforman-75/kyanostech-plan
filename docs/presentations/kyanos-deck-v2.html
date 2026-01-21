@@ -1,0 +1,2762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyanos - AI Intelligence for Democratic Campaigns</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #0f172a;
+            color: white;
+            overflow: hidden;
+        }
+        .slide {
+            display: none;
+            min-height: 100vh;
+            padding: 4rem;
+            position: relative;
+        }
+        .slide.active {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .slide-number {
+            position: absolute;
+            bottom: 2rem;
+            right: 2rem;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.4);
+        }
+        .logo {
+            position: absolute;
+            top: 2rem;
+            left: 2rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: rgba(255,255,255,0.6);
+        }
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #60a5fa;
+        }
+        p {
+            font-size: 1.4rem;
+            line-height: 1.6;
+            color: rgba(255,255,255,0.85);
+            max-width: 900px;
+        }
+        .subtitle {
+            font-size: 1.75rem;
+            color: #60a5fa;
+            margin-bottom: 2rem;
+        }
+        .premises {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+        .premise {
+            background: rgba(255,255,255,0.05);
+            border-left: 4px solid #60a5fa;
+            padding: 1.5rem;
+            border-radius: 0 8px 8px 0;
+        }
+        .premise-number {
+            font-size: 0.85rem;
+            color: #60a5fa;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .premise p {
+            font-size: 1.15rem;
+            margin: 0;
+        }
+        .workflow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        .workflow-step {
+            text-align: center;
+        }
+        .workflow-icon {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #1e3a5f, #2d5a87);
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .workflow-label {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+        .workflow-desc {
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.6);
+            margin-top: 0.5rem;
+        }
+        .workflow-arrow {
+            font-size: 2.5rem;
+            color: #60a5fa;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .product-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        .product-card h4 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+        .product-card p {
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.7);
+        }
+        .product-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .flow-pipeline {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .flow-step {
+            text-align: center;
+            flex: 1;
+            max-width: 200px;
+        }
+        .flow-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #1e3a5f, #2d5a87);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 1rem;
+        }
+        .flow-label {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .flow-desc {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.6);
+            line-height: 1.4;
+        }
+        .flow-arrow {
+            font-size: 2rem;
+            color: #60a5fa;
+            margin-top: 1.5rem;
+        }
+        .capability-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-top: 2.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .capability {
+            text-align: center;
+            padding: 1rem;
+        }
+        .capability strong {
+            display: block;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            color: #60a5fa;
+        }
+        .capability span {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.6);
+        }
+        /* Kyanos Frame Layout */
+        .kyanos-frame {
+            border: 3px solid #60a5fa;
+            border-radius: 20px;
+            padding: 1.5rem 2rem 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            background: rgba(30, 58, 95, 0.3);
+        }
+        .frame-header {
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #0f172a;
+            padding: 0 1.5rem;
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: #60a5fa;
+            letter-spacing: 2px;
+        }
+        .frame-section {
+            margin: 1rem 0;
+        }
+        .frame-arrow {
+            text-align: center;
+            font-size: 1.5rem;
+            color: #60a5fa;
+            margin: 0.5rem 0;
+        }
+        .registration-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: rgba(255,255,255,0.05);
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+        }
+        .reg-icon {
+            font-size: 2rem;
+        }
+        .reg-content strong {
+            display: block;
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+        }
+        .reg-content span {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.6);
+        }
+        .products-section {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+        }
+        .mini-product {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 1rem;
+            text-align: center;
+        }
+        .mini-icon {
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+        }
+        .mini-product strong {
+            display: block;
+            font-size: 0.95rem;
+            margin-bottom: 0.25rem;
+        }
+        .mini-product span {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.6);
+        }
+        .report-section {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 1rem;
+        }
+        .report-mockup {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            color: #1f2937;
+        }
+        .report-header-mock {
+            background: linear-gradient(135deg, #1e3a5f, #2d5a87);
+            color: white;
+            padding: 1rem 1.25rem;
+        }
+        .report-badge-mock {
+            font-size: 0.7rem;
+            background: rgba(255,255,255,0.15);
+            display: inline-block;
+            padding: 0.2rem 0.5rem;
+            border-radius: 10px;
+            margin-bottom: 0.5rem;
+        }
+        .report-title-mock {
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+        .report-meta-mock {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.7);
+            margin-top: 0.25rem;
+        }
+        .report-scores-mock {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: #f8fafc;
+        }
+        .score-mock {
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 800;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            min-width: 80px;
+        }
+        .score-mock span {
+            display: block;
+            font-size: 0.65rem;
+            font-weight: 500;
+            color: #6b7280;
+            margin-top: 0.25rem;
+        }
+        .score-mock.grade-d {
+            background: #fef2f2;
+            color: #dc2626;
+        }
+        .score-mock.grade-c {
+            background: #fffbeb;
+            color: #d97706;
+        }
+        /* Blue slide variant */
+        .slide-blue {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%);
+            padding: 2rem 3rem;
+        }
+        .slide-blue h2 {
+            color: white;
+        }
+        .workflow-tagline {
+            text-align: center;
+            font-size: 1.5rem;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 2rem;
+            letter-spacing: 2px;
+        }
+        .kyanos-system {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+        .system-row {
+            margin: 0.75rem 0;
+        }
+        .system-arrow {
+            text-align: center;
+            font-size: 1.5rem;
+            color: rgba(255,255,255,0.5);
+            margin: 0.5rem 0;
+        }
+        .registration-row {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: rgba(255,255,255,0.1);
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            justify-content: center;
+        }
+        .system-icon {
+            font-size: 1.75rem;
+        }
+        .system-content strong {
+            display: block;
+            font-size: 1.1rem;
+        }
+        .system-content span {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.7);
+        }
+        .products-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.75rem;
+        }
+        .product-pill {
+            background: rgba(255,255,255,0.15);
+            border-radius: 12px;
+            padding: 1rem;
+            text-align: center;
+        }
+        .pill-icon {
+            display: block;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .product-pill strong {
+            display: block;
+            font-size: 0.95rem;
+            margin-bottom: 0.25rem;
+        }
+        .product-pill span {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.6);
+        }
+        .report-row {
+            display: flex;
+            justify-content: center;
+        }
+        .report-preview {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            width: 100%;
+            max-width: 600px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+        .preview-header {
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            padding: 1rem 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .preview-badge {
+            background: rgba(255,255,255,0.15);
+            padding: 0.25rem 0.6rem;
+            border-radius: 6px;
+            font-size: 0.7rem;
+            color: white;
+        }
+        .preview-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: white;
+        }
+        .preview-scores {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            padding: 1.25rem;
+            background: #f8fafc;
+        }
+        .preview-score {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 800;
+            padding: 0.5rem 1.25rem;
+            border-radius: 10px;
+        }
+        .preview-score span {
+            display: block;
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: #6b7280;
+            margin-top: 0.25rem;
+        }
+        .preview-score.grade-d {
+            background: #fef2f2;
+            color: #dc2626;
+        }
+        .preview-score.grade-c {
+            background: #fffbeb;
+            color: #d97706;
+        }
+        .system-insight {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.85);
+        }
+        /* Slide 3 - Horizontal Flow Layout */
+        .slide3-layout {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr 1.5fr;
+            gap: 2rem;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .s3-input, .s3-output {
+            position: relative;
+        }
+        .s3-input-label, .s3-output-label {
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 0.75rem;
+            text-align: center;
+        }
+        .s3-input-box {
+            background: rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        .s3-input-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.75rem;
+        }
+        .s3-input-text strong {
+            display: block;
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+        }
+        .s3-input-text span {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.6);
+        }
+        .s3-engine {
+            position: relative;
+        }
+        .s3-engine-box {
+            background: rgba(0,0,0,0.3);
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 20px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        .s3-engine-header {
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: 3px;
+            margin-bottom: 0.25rem;
+        }
+        .s3-engine-tagline {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.6);
+            margin-bottom: 1.25rem;
+            letter-spacing: 1px;
+        }
+        .s3-engine-products {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem;
+        }
+        .s3-product {
+            background: rgba(255,255,255,0.1);
+            padding: 0.6rem 0.75rem;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            justify-content: center;
+        }
+        .s3-product span {
+            font-size: 1rem;
+        }
+        .s3-report {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+        }
+        .s3-report-header {
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            padding: 1rem 1.25rem;
+        }
+        .s3-report-title {
+            font-size: 0.7rem;
+            color: rgba(255,255,255,0.6);
+            margin-bottom: 0.25rem;
+        }
+        .s3-report-subtitle {
+            font-size: 1rem;
+            font-weight: 600;
+            color: white;
+        }
+        .s3-report-scores {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            padding: 1rem;
+            background: #f8fafc;
+        }
+        .s3-score {
+            width: 44px;
+            height: 44px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            font-weight: 800;
+        }
+        .s3-score.grade-d {
+            background: #fef2f2;
+            color: #dc2626;
+        }
+        .s3-score.grade-c {
+            background: #fffbeb;
+            color: #d97706;
+        }
+        .s3-report-actions {
+            padding: 0.75rem 1rem 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.35rem;
+        }
+        .s3-action {
+            font-size: 0.7rem;
+            padding: 0.35rem 0.6rem;
+            border-radius: 4px;
+            color: white;
+        }
+        .s3-action.critical {
+            background: #dc2626;
+        }
+        .s3-action.high {
+            background: #d97706;
+        }
+        .s3-arrows {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            max-width: 1100px;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 18% 0 12%;
+            pointer-events: none;
+        }
+        .s3-arrow {
+            font-size: 2.5rem;
+            color: rgba(255,255,255,0.4);
+            font-weight: 300;
+        }
+        .s3-bottom-line {
+            text-align: center;
+            margin-top: 2.5rem;
+            font-size: 1.3rem;
+            color: rgba(255,255,255,0.9);
+        }
+        /* Slide 3 - Kyanos Container Layout */
+        .kyanos-container {
+            background: rgba(0,0,0,0.25);
+            border: 3px solid rgba(255,255,255,0.4);
+            border-radius: 24px;
+            padding: 3rem 2rem 2rem;
+            max-width: 1000px;
+            width: 100%;
+            margin: 0 auto;
+            position: relative;
+        }
+        .kyanos-label {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, #1e3a5f, #2d5a87);
+            padding: 0.5rem 3rem;
+            font-size: 1.75rem;
+            font-weight: 800;
+            letter-spacing: 6px;
+            border-radius: 10px;
+        }
+        .ky-register {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            background: rgba(255,255,255,0.1);
+            padding: 1.25rem 2rem;
+            border-radius: 12px;
+            margin: 0.5rem 0 0 0;
+        }
+        .ky-register-icon {
+            font-size: 2rem;
+        }
+        .ky-register-text strong {
+            display: block;
+            font-size: 1.1rem;
+        }
+        .ky-register-text span {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.6);
+        }
+        .ky-flow-arrow {
+            text-align: center;
+            font-size: 1.75rem;
+            color: rgba(255,255,255,0.4);
+            margin: 0.75rem 0;
+        }
+        .ky-products {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+        }
+        .ky-product {
+            background: rgba(255,255,255,0.1);
+            padding: 1rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+        .ky-product-icon {
+            display: block;
+            font-size: 1.75rem;
+            margin-bottom: 0.4rem;
+        }
+        .ky-product-name {
+            display: block;
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+        .ky-product-desc {
+            display: block;
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.5);
+        }
+        .ky-report-clip {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.4);
+        }
+        .ky-report-top {
+            background: linear-gradient(135deg, #1e3a5f, #2d5a87);
+            padding: 1rem 1.5rem 0.75rem;
+            color: white;
+        }
+        .ky-report-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            margin-bottom: 0.35rem;
+        }
+        .ky-report-campaign {
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+        .ky-report-meta {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.7);
+            margin-top: 0.15rem;
+        }
+        .ky-report-tabs {
+            display: flex;
+            background: white;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 0 0.75rem;
+        }
+        .ky-tab {
+            padding: 0.65rem 0.9rem;
+            font-size: 0.8rem;
+            color: #6b7280;
+            border-bottom: 2px solid transparent;
+        }
+        .ky-tab.active {
+            color: #1e3a5f;
+            border-bottom-color: #1e3a5f;
+            font-weight: 600;
+        }
+        .ky-report-scores {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1rem;
+            background: #f8fafc;
+        }
+        .ky-score {
+            text-align: center;
+        }
+        .ky-grade {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 52px;
+            height: 52px;
+            border-radius: 10px;
+            font-size: 1.6rem;
+            font-weight: 800;
+            margin: 0 auto 0.35rem;
+        }
+        .ky-grade.grade-d {
+            background: #fef2f2;
+            color: #dc2626;
+        }
+        .ky-grade.grade-c {
+            background: #fffbeb;
+            color: #d97706;
+        }
+        .ky-platform {
+            font-size: 0.8rem;
+            color: #6b7280;
+        }
+        .ky-tagline {
+            text-align: center;
+            margin-top: 1.5rem;
+            font-size: 1.5rem;
+            color: rgba(255,255,255,0.8);
+            letter-spacing: 3px;
+        }
+        /* Information Flow Diagram - Horizontal Layout */
+        .web-flow-diagram {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 1.5rem;
+            max-width: 1100px;
+            margin: 0 auto;
+            align-items: center;
+        }
+        .web-sources {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+        .web-sources-label {
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 0.25rem;
+            text-align: center;
+        }
+        .web-source {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: rgba(255,255,255,0.08);
+            padding: 0.6rem 1rem;
+            border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.15);
+        }
+        .web-source.campaign-source {
+            background: linear-gradient(135deg, #059669, #10b981);
+            border: none;
+        }
+        .ws-icon {
+            font-size: 1.25rem;
+        }
+        .ws-text strong {
+            display: block;
+            font-size: 0.9rem;
+        }
+        .ws-text span {
+            font-size: 0.7rem;
+            color: rgba(255,255,255,0.6);
+        }
+        .campaign-source .ws-text span {
+            color: rgba(255,255,255,0.85);
+        }
+        .retrieval-center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+        .retrieval-arrow-in, .retrieval-arrow-out {
+            font-size: 2rem;
+            color: rgba(255,255,255,0.3);
+            position: absolute;
+        }
+        .retrieval-arrow-in {
+            left: -2rem;
+            top: 2.5rem;
+        }
+        .retrieval-arrow-out {
+            right: -2rem;
+            bottom: 2rem;
+        }
+        .retrieval-arrow-down {
+            font-size: 1.25rem;
+            color: rgba(255,255,255,0.3);
+            margin: 0.4rem 0;
+        }
+        .search-index, .ai-retrieval, .foundation-models {
+            background: rgba(0,0,0,0.3);
+            border: 2px solid rgba(255,255,255,0.25);
+            border-radius: 12px;
+            padding: 0.75rem 1.25rem;
+            text-align: center;
+            min-width: 180px;
+        }
+        .search-label, .air-label, .fm-label {
+            font-size: 0.65rem;
+            letter-spacing: 1.5px;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 0.25rem;
+        }
+        .search-engines, .fm-models {
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+        }
+        .search-note, .fm-note, .air-desc {
+            font-size: 0.7rem;
+            color: rgba(255,255,255,0.5);
+        }
+        .air-desc {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.7);
+        }
+        .voter-output {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .voter-label {
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            color: rgba(255,255,255,0.5);
+        }
+        .voter-query {
+            background: linear-gradient(135deg, #7c3aed, #8b5cf6);
+            padding: 0.75rem 1.5rem;
+            border-radius: 20px;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        .voter-interfaces {
+            display: flex;
+            gap: 0.5rem;
+        }
+        .voter-interfaces span {
+            background: rgba(255,255,255,0.1);
+            padding: 0.35rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+        }
+        .voter-result {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 12px;
+            padding: 1rem;
+            text-align: center;
+        }
+        .vr-label {
+            font-size: 0.65rem;
+            letter-spacing: 1px;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 0.35rem;
+        }
+        .vr-content {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.8);
+        }
+        .flow-key-insight {
+            text-align: center;
+            margin-top: 1.75rem;
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.85);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        /* Slide 4 v2 - Vertical Flow */
+        .info-flow-v2 {
+            max-width: 700px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .flow-voter-top {
+            width: 100%;
+            text-align: center;
+        }
+        .voter-query-box {
+            display: inline-block;
+            background: linear-gradient(135deg, #7c3aed, #8b5cf6);
+            padding: 1rem 2.5rem;
+            border-radius: 30px;
+        }
+        .vq-label {
+            display: block;
+            font-size: 0.65rem;
+            letter-spacing: 2px;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 0.25rem;
+        }
+        .vq-text {
+            font-size: 1.25rem;
+            font-weight: 500;
+        }
+        .flow-arrow-down {
+            font-size: 1.75rem;
+            color: rgba(255,255,255,0.4);
+            margin: 0.75rem 0;
+        }
+        .flow-web-interface {
+            width: 100%;
+            position: relative;
+        }
+        .web-interface-label {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #0f172a;
+            padding: 0 1rem;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            color: #60a5fa;
+            font-weight: 600;
+        }
+        .web-interface-box {
+            border: 2px solid #60a5fa;
+            border-radius: 16px;
+            padding: 1.5rem;
+            background: rgba(96, 165, 250, 0.1);
+        }
+        .wi-urls {
+            text-align: center;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #60a5fa;
+        }
+        .wi-synth {
+            text-align: center;
+        }
+        .wi-synth-label {
+            display: block;
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 0.75rem;
+        }
+        .wi-synth-inputs {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+        }
+        .synth-input {
+            background: rgba(255,255,255,0.08);
+            padding: 0.75rem 1.25rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .synth-input strong {
+            display: block;
+            font-size: 0.95rem;
+            margin-bottom: 0.15rem;
+        }
+        .synth-input span {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.6);
+        }
+        .synth-rag {
+            border-left: 3px solid #10b981;
+        }
+        .synth-fm {
+            border-left: 3px solid #f59e0b;
+        }
+        .synth-plus {
+            font-size: 1.5rem;
+            color: rgba(255,255,255,0.4);
+        }
+        .flow-arrow-up-label {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0.75rem 0;
+        }
+        .arrow-up {
+            font-size: 1.75rem;
+            color: rgba(255,255,255,0.4);
+            transform: rotate(180deg);
+        }
+        .arrow-label {
+            font-size: 0.7rem;
+            color: rgba(255,255,255,0.4);
+            letter-spacing: 1px;
+        }
+        .flow-web-sources {
+            width: 100%;
+        }
+        .fws-label {
+            text-align: center;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 0.75rem;
+        }
+        .fws-sources {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+        .fws-source {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255,255,255,0.08);
+            padding: 0.6rem 1rem;
+            border-radius: 10px;
+            font-size: 0.85rem;
+        }
+        .fws-source span {
+            font-size: 1.1rem;
+        }
+        .fws-primary {
+            background: linear-gradient(135deg, #059669, #10b981);
+        }
+        /* Slide 4 - Ecosystem Diagram */
+        .ecosystem-diagram {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 1rem;
+            max-width: 1150px;
+            margin: 0 auto;
+            align-items: stretch;
+        }
+        .eco-section-label {
+            font-size: 0.65rem;
+            letter-spacing: 2px;
+            color: rgba(255,255,255,0.5);
+            text-align: center;
+            margin-bottom: 0.75rem;
+        }
+        .eco-control-label {
+            color: #10b981;
+        }
+        .eco-control {
+            display: flex;
+            flex-direction: column;
+        }
+        .control-items {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            flex: 1;
+        }
+        .control-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            padding: 0.6rem 0.9rem;
+            border-radius: 10px;
+        }
+        .control-primary {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(5, 150, 105, 0.2));
+            border: 2px solid #10b981;
+        }
+        .ci-icon {
+            font-size: 1.25rem;
+        }
+        .ci-text strong {
+            display: block;
+            font-size: 0.85rem;
+        }
+        .ci-text span {
+            font-size: 0.7rem;
+            color: rgba(255,255,255,0.5);
+        }
+        .eco-middle {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding-top: 1.5rem;
+        }
+        .eco-arrows-in, .eco-arrows-out {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            font-size: 1.25rem;
+            color: rgba(255,255,255,0.25);
+        }
+        .eco-processors {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .processor {
+            background: rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 10px;
+            padding: 0.6rem 1rem;
+            text-align: center;
+            min-width: 160px;
+        }
+        .proc-label {
+            font-size: 0.55rem;
+            letter-spacing: 1.5px;
+            color: rgba(255,255,255,0.4);
+            margin-bottom: 0.2rem;
+        }
+        .proc-names {
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        .proc-desc {
+            font-size: 0.65rem;
+            color: rgba(255,255,255,0.5);
+            margin-top: 0.15rem;
+        }
+        .eco-output {
+            display: flex;
+            flex-direction: column;
+        }
+        .output-surfaces {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            flex: 1;
+        }
+        .output-surface {
+            background: rgba(255,255,255,0.06);
+            border-radius: 10px;
+            padding: 0.6rem 0.9rem;
+            border-left: 3px solid #60a5fa;
+        }
+        .surface-ai {
+            border-left-color: #8b5cf6;
+        }
+        .surface-kp {
+            border-left-color: #f59e0b;
+        }
+        .surface-search {
+            border-left-color: #60a5fa;
+        }
+        .os-label {
+            font-size: 0.6rem;
+            letter-spacing: 1.5px;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 0.15rem;
+        }
+        .os-names {
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        .os-how {
+            font-size: 0.7rem;
+            color: rgba(255,255,255,0.5);
+            margin-top: 0.15rem;
+        }
+        .eco-insight {
+            margin-top: 1.25rem;
+        }
+        .insight-box {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(5, 150, 105, 0.1));
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 12px;
+            padding: 1rem 1.5rem;
+            text-align: center;
+            font-size: 0.95rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .insight-box strong {
+            color: #10b981;
+        }
+        /* Slide 4 - Voter Surfaces Mockups */
+        .voter-surfaces {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.25rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .surface-mockup {
+            display: flex;
+            flex-direction: column;
+        }
+        .browser-chrome {
+            background: #dee1e6;
+            border-radius: 8px 8px 0 0;
+            padding: 0.5rem 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .browser-dots {
+            display: flex;
+            gap: 0.35rem;
+        }
+        .browser-dots span {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #ff5f57;
+        }
+        .browser-dots span:nth-child(2) { background: #febc2e; }
+        .browser-dots span:nth-child(3) { background: #28c840; }
+        .browser-url {
+            flex: 1;
+            background: white;
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.65rem;
+            color: #5f6368;
+            font-family: monospace;
+        }
+        .surface-label {
+            text-align: center;
+            margin-top: 0.5rem;
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.6);
+            letter-spacing: 1px;
+        }
+        /* Google Search Mock */
+        .google-search-mock, .ai-overview-mock {
+            background: white;
+            border-radius: 0 0 8px 8px;
+            padding: 0.75rem;
+            color: #202124;
+            flex: 1;
+        }
+        .google-logo-small {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #4285f4;
+            margin-bottom: 0.5rem;
+        }
+        .google-searchbar {
+            background: white;
+            border: 1px solid #dfe1e5;
+            border-radius: 24px;
+            padding: 0.5rem 1rem;
+            font-size: 0.8rem;
+            margin-bottom: 0.75rem;
+        }
+        .google-content {
+            display: flex;
+            gap: 0.75rem;
+        }
+        .google-results {
+            flex: 1;
+        }
+        .google-result {
+            margin-bottom: 0.75rem;
+        }
+        .gr-url {
+            font-size: 0.6rem;
+            color: #202124;
+        }
+        .gr-title {
+            font-size: 0.85rem;
+            color: #1a0dab;
+            margin: 0.15rem 0;
+        }
+        .gr-desc {
+            font-size: 0.65rem;
+            color: #4d5156;
+        }
+        .knowledge-panel {
+            width: 120px;
+            background: #f8f9fa;
+            border: 1px solid #dadce0;
+            border-radius: 8px;
+            padding: 0.5rem;
+            font-size: 0.6rem;
+        }
+        .kp-image {
+            width: 100%;
+            height: 60px;
+            background: linear-gradient(135deg, #e8eaed, #dadce0);
+            border-radius: 4px;
+            margin-bottom: 0.4rem;
+        }
+        .kp-name {
+            font-weight: 600;
+            font-size: 0.75rem;
+            color: #202124;
+        }
+        .kp-subtitle {
+            color: #5f6368;
+            margin-bottom: 0.4rem;
+        }
+        .kp-fact {
+            margin: 0.2rem 0;
+            color: #3c4043;
+        }
+        .kp-fact span {
+            color: #70757a;
+        }
+        .kp-fact em {
+            color: #d93025;
+            font-style: normal;
+        }
+        /* AI Overview Mock */
+        .aio-box {
+            background: linear-gradient(135deg, #e8f0fe, #f0f4ff);
+            border-radius: 12px;
+            padding: 0.75rem;
+            margin-top: 0.5rem;
+        }
+        .aio-header {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: #1967d2;
+            margin-bottom: 0.5rem;
+        }
+        .aio-sparkle {
+            font-size: 0.9rem;
+        }
+        .aio-content {
+            font-size: 0.7rem;
+            line-height: 1.5;
+            color: #202124;
+        }
+        .aio-content p {
+            margin: 0 0 0.4rem 0;
+            font-size: 0.7rem;
+        }
+        .aio-missing {
+            color: #d93025;
+            font-style: italic;
+        }
+        .aio-sources {
+            font-size: 0.6rem;
+            color: #70757a;
+            margin-top: 0.5rem;
+            padding-top: 0.4rem;
+            border-top: 1px solid rgba(0,0,0,0.1);
+        }
+        /* ChatGPT Mock */
+        .chatgpt-mock {
+            background: #343541;
+            border-radius: 0 0 8px 8px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .chatgpt-header {
+            padding: 0.5rem 0.75rem;
+            border-bottom: 1px solid #4e4f60;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            font-size: 0.85rem;
+        }
+        .chatgpt-logo {
+            color: #10a37f;
+        }
+        .chatgpt-conversation {
+            padding: 0.75rem;
+            flex: 1;
+        }
+        .chatgpt-user {
+            margin-bottom: 0.75rem;
+        }
+        .chat-bubble {
+            padding: 0.6rem 0.8rem;
+            border-radius: 8px;
+            font-size: 0.7rem;
+            line-height: 1.5;
+        }
+        .user-bubble {
+            background: #444654;
+            color: white;
+            display: inline-block;
+        }
+        .bot-bubble {
+            background: #444654;
+            color: #d1d5db;
+        }
+        .bot-bubble p {
+            margin: 0 0 0.4rem 0;
+            font-size: 0.7rem;
+            color: #d1d5db;
+        }
+        .chat-fade {
+            opacity: 0.6;
+        }
+        .surfaces-insight {
+            text-align: center;
+            margin-top: 1.25rem;
+            font-size: 1rem;
+            color: rgba(255,255,255,0.85);
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .surfaces-insight strong {
+            color: #f87171;
+        }
+        .surfaces-insight strong:last-child {
+            color: #10b981;
+        }
+        /* Slide 4 - Full Flow Diagram */
+        .slide-flow {
+            padding: 1.5rem 2rem;
+        }
+        .full-flow {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .flow-row {
+            margin: 0.4rem 0;
+        }
+        .flow-stage {
+            width: 100%;
+        }
+        .stage-label {
+            text-align: center;
+            font-size: 0.6rem;
+            letter-spacing: 2px;
+            color: rgba(255,255,255,0.4);
+            margin-bottom: 0.4rem;
+        }
+        .stage-green {
+            color: #10b981;
+        }
+        .stage-output {
+            color: #60a5fa;
+        }
+        .source-boxes {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        .source-box {
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.15);
+            padding: 0.4rem 0.7rem;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.75rem;
+        }
+        .source-box span {
+            font-size: 0.9rem;
+        }
+        .source-primary {
+            background: linear-gradient(135deg, rgba(16,185,129,0.2), rgba(5,150,105,0.15));
+            border: 2px solid #10b981;
+        }
+        .flow-down-arrows {
+            text-align: center;
+            margin: 0.3rem 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .flow-down-arrows > span:first-child {
+            font-size: 1.25rem;
+            color: rgba(255,255,255,0.25);
+        }
+        .arrow-label-small {
+            font-size: 0.55rem;
+            color: rgba(255,255,255,0.3);
+            letter-spacing: 1px;
+        }
+        .process-boxes {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+        .process-box {
+            background: rgba(0,0,0,0.25);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 10px;
+            padding: 0.5rem 1rem;
+            text-align: center;
+            min-width: 140px;
+        }
+        .process-fm {
+            border-color: rgba(251,191,36,0.4);
+            background: rgba(251,191,36,0.08);
+        }
+        .pb-title {
+            font-size: 0.7rem;
+            font-weight: 600;
+            margin-bottom: 0.15rem;
+        }
+        .pb-names {
+            font-size: 0.65rem;
+            color: rgba(255,255,255,0.7);
+        }
+        .pb-desc {
+            font-size: 0.55rem;
+            color: rgba(255,255,255,0.4);
+            margin-top: 0.2rem;
+        }
+        .query-time-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            background: rgba(96,165,250,0.1);
+            border: 1px solid rgba(96,165,250,0.3);
+            border-radius: 12px;
+            padding: 0.6rem 1.5rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .qt-section {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .qt-icon {
+            font-size: 1.25rem;
+        }
+        .qt-section strong {
+            display: block;
+            font-size: 0.75rem;
+        }
+        .qt-section span {
+            font-size: 0.6rem;
+            color: rgba(255,255,255,0.5);
+        }
+        .qt-plus {
+            font-size: 1.25rem;
+            color: rgba(255,255,255,0.3);
+        }
+        .browser-outputs {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+        .mini-browser {
+            width: 220px;
+            display: flex;
+            flex-direction: column;
+        }
+        .mini-chrome {
+            background: #e5e7eb;
+            border-radius: 6px 6px 0 0;
+            padding: 0.3rem 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .mini-dots {
+            display: flex;
+            gap: 0.2rem;
+        }
+        .mini-dots span {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #ff5f57;
+        }
+        .mini-dots span:nth-child(2) { background: #febc2e; }
+        .mini-dots span:nth-child(3) { background: #28c840; }
+        .mini-url {
+            flex: 1;
+            background: white;
+            padding: 0.15rem 0.4rem;
+            border-radius: 3px;
+            font-size: 0.5rem;
+            color: #5f6368;
+            font-family: monospace;
+        }
+        .mini-content {
+            background: white;
+            border-radius: 0 0 6px 6px;
+            padding: 0.4rem;
+            color: #202124;
+            flex: 1;
+            min-height: 100px;
+        }
+        .mini-label {
+            text-align: center;
+            font-size: 0.6rem;
+            color: rgba(255,255,255,0.5);
+            margin-top: 0.3rem;
+        }
+        /* Mini Google */
+        .mg-logo {
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: #4285f4;
+            margin-bottom: 0.25rem;
+        }
+        .mg-bar {
+            background: #f8f9fa;
+            border: 1px solid #dfe1e5;
+            border-radius: 12px;
+            padding: 0.2rem 0.5rem;
+            font-size: 0.55rem;
+            margin-bottom: 0.4rem;
+        }
+        .mg-layout {
+            display: flex;
+            gap: 0.4rem;
+        }
+        .mg-results {
+            flex: 1;
+        }
+        .mg-result {
+            margin-bottom: 0.3rem;
+        }
+        .mgr-url {
+            font-size: 0.45rem;
+            color: #202124;
+        }
+        .mgr-title {
+            font-size: 0.55rem;
+            color: #1a0dab;
+        }
+        .mg-panel {
+            width: 65px;
+            background: #f8f9fa;
+            border-radius: 4px;
+            padding: 0.3rem;
+            font-size: 0.45rem;
+        }
+        .mgp-photo {
+            width: 100%;
+            height: 25px;
+            background: #e8eaed;
+            border-radius: 2px;
+            margin-bottom: 0.2rem;
+        }
+        .mgp-name {
+            font-weight: 600;
+            font-size: 0.5rem;
+        }
+        .mgp-role {
+            color: #5f6368;
+            font-size: 0.45rem;
+        }
+        .mgp-fact {
+            margin-top: 0.2rem;
+        }
+        .mgp-fact em {
+            color: #d93025;
+            font-style: normal;
+            font-size: 0.45rem;
+        }
+        /* Mini AI Overview */
+        .aio-mini-box {
+            background: linear-gradient(135deg, #e8f0fe, #f0f4ff);
+            border-radius: 6px;
+            padding: 0.35rem;
+        }
+        .aio-mini-head {
+            font-size: 0.5rem;
+            color: #1967d2;
+            font-weight: 500;
+            margin-bottom: 0.2rem;
+        }
+        .aio-mini-text {
+            font-size: 0.5rem;
+            color: #202124;
+            margin-bottom: 0.2rem;
+        }
+        .aio-mini-problem {
+            font-size: 0.5rem;
+            color: #d93025;
+            font-style: italic;
+        }
+        /* Mini ChatGPT */
+        .mini-chatgpt {
+            background: #343541;
+            color: white;
+        }
+        .mcg-head {
+            font-size: 0.6rem;
+            margin-bottom: 0.4rem;
+            color: #10a37f;
+        }
+        .mcg-user {
+            background: #444654;
+            padding: 0.25rem 0.4rem;
+            border-radius: 4px;
+            font-size: 0.5rem;
+            margin-bottom: 0.3rem;
+        }
+        .mcg-bot {
+            background: #444654;
+            padding: 0.25rem 0.4rem;
+            border-radius: 4px;
+            font-size: 0.5rem;
+            color: #d1d5db;
+        }
+        .flow-final-insight {
+            text-align: center;
+            margin-top: 0.75rem;
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .insight-arrow {
+            font-size: 1.25rem;
+            color: #10b981;
+        }
+        .flow-final-insight strong {
+            color: #10b981;
+        }
+        /* Slide 4 - Horizontal Flow */
+        .slide-flow-h {
+            padding: 1.5rem 2rem;
+        }
+        .h-flow {
+            display: flex;
+            align-items: stretch;
+            justify-content: center;
+            gap: 0.5rem;
+            max-width: 1200px;
+            margin: 0.5rem auto 0;
+        }
+        .h-col {
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+        }
+        .h-col-sources { flex: 0 0 180px; }
+        .h-col-inter { flex: 0 0 160px; }
+        .h-col-process { flex: 0 0 170px; }
+        .h-col-output { flex: 0 0 280px; }
+        .h-col-label {
+            text-align: center;
+            font-size: 0.55rem;
+            letter-spacing: 1.5px;
+            color: rgba(255,255,255,0.4);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        .h-label-green { color: #10b981; }
+        .h-label-blue { color: #60a5fa; }
+        .h-arrow {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0 0.25rem;
+        }
+        .h-arrow > span:first-child {
+            font-size: 1.5rem;
+            color: rgba(255,255,255,0.3);
+        }
+        .h-arrow-label {
+            font-size: 0.5rem;
+            color: rgba(255,255,255,0.3);
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            transform: rotate(180deg);
+            margin-top: 0.25rem;
+        }
+        /* Primary Sources */
+        .h-source-box {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.15);
+            padding: 0.6rem;
+            border-radius: 8px;
+            margin-bottom: 0.5rem;
+        }
+        .h-source-primary {
+            background: linear-gradient(135deg, rgba(16,185,129,0.2), rgba(5,150,105,0.15));
+            border: 2px solid #10b981;
+        }
+        .h-src-icon {
+            font-size: 1.1rem;
+        }
+        .h-src-text strong {
+            display: block;
+            font-size: 0.8rem;
+        }
+        .h-src-text span {
+            font-size: 0.6rem;
+            color: rgba(255,255,255,0.5);
+        }
+        /* Intermediaries */
+        .h-inter-box {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.12);
+            padding: 0.5rem;
+            border-radius: 8px;
+            margin-bottom: 0.5rem;
+        }
+        .h-inter-icon {
+            font-size: 1rem;
+        }
+        .h-inter-text strong {
+            display: block;
+            font-size: 0.75rem;
+        }
+        .h-inter-text span {
+            font-size: 0.55rem;
+            color: rgba(255,255,255,0.5);
+        }
+        /* Processing */
+        .h-process-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 0.35rem;
+        }
+        .h-proc-box {
+            background: rgba(0,0,0,0.25);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 6px;
+            padding: 0.4rem 0.6rem;
+            text-align: center;
+        }
+        .h-proc-box strong {
+            display: block;
+            font-size: 0.65rem;
+        }
+        .h-proc-box span {
+            font-size: 0.55rem;
+            color: rgba(255,255,255,0.5);
+        }
+        .h-proc-fm {
+            border-color: rgba(251,191,36,0.4);
+            background: rgba(251,191,36,0.08);
+        }
+        .h-query-box {
+            margin-top: 0.5rem;
+            background: rgba(96,165,250,0.1);
+            border: 1px solid rgba(96,165,250,0.3);
+            border-radius: 8px;
+            padding: 0.5rem;
+        }
+        .h-query-label {
+            font-size: 0.5rem;
+            color: #60a5fa;
+            margin-bottom: 0.25rem;
+        }
+        .h-query-content {
+            font-size: 0.55rem;
+            line-height: 1.5;
+        }
+        .h-query-content strong {
+            color: #60a5fa;
+        }
+        /* Browser Outputs */
+        .h-browsers {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+        .h-browser {
+            display: flex;
+            flex-direction: column;
+        }
+        .hb-chrome {
+            background: #dee1e6;
+            border-radius: 4px 4px 0 0;
+            padding: 0.2rem 0.4rem;
+            display: flex;
+            gap: 0.15rem;
+        }
+        .hb-chrome span {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #ff5f57;
+        }
+        .hb-chrome span:nth-child(2) { background: #febc2e; }
+        .hb-chrome span:nth-child(3) { background: #28c840; }
+        .hb-content {
+            background: white;
+            border-radius: 0 0 4px 4px;
+            padding: 0.35rem;
+            color: #202124;
+            min-height: 50px;
+        }
+        .hb-label {
+            font-size: 0.5rem;
+            color: rgba(255,255,255,0.4);
+            text-align: center;
+            margin-top: 0.15rem;
+        }
+        /* Google mini */
+        .hb-g-logo {
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: #4285f4;
+            margin-bottom: 0.2rem;
+        }
+        .hb-g-layout {
+            display: flex;
+            gap: 0.35rem;
+        }
+        .hb-g-results {
+            flex: 1;
+        }
+        .hb-g-r {
+            font-size: 0.45rem;
+            color: #1a0dab;
+            margin-bottom: 0.15rem;
+        }
+        .hb-g-panel {
+            width: 50px;
+            background: #f8f9fa;
+            border-radius: 3px;
+            padding: 0.2rem;
+            text-align: center;
+        }
+        .hb-gp-img {
+            width: 100%;
+            height: 18px;
+            background: #e8eaed;
+            border-radius: 2px;
+            margin-bottom: 0.15rem;
+        }
+        .hb-gp-name {
+            font-size: 0.45rem;
+            font-weight: 600;
+        }
+        .hb-gp-bad {
+            font-size: 0.4rem;
+            color: #d93025;
+        }
+        /* AI Overview mini */
+        .hb-aio {
+            background: linear-gradient(135deg, #e8f0fe, #f0f4ff);
+        }
+        .hb-aio-head {
+            font-size: 0.5rem;
+            color: #1967d2;
+            margin-bottom: 0.15rem;
+        }
+        .hb-aio-text {
+            font-size: 0.45rem;
+            color: #202124;
+        }
+        .hb-aio-bad {
+            font-size: 0.45rem;
+            color: #d93025;
+            font-style: italic;
+            margin-top: 0.1rem;
+        }
+        /* ChatGPT mini */
+        .hb-chat {
+            background: #343541;
+            color: white;
+        }
+        .hb-chat-head {
+            font-size: 0.5rem;
+            color: #10a37f;
+            margin-bottom: 0.15rem;
+        }
+        .hb-chat-q {
+            font-size: 0.45rem;
+            background: #444654;
+            padding: 0.15rem 0.25rem;
+            border-radius: 3px;
+            margin-bottom: 0.15rem;
+            display: inline-block;
+        }
+        .hb-chat-bad {
+            font-size: 0.45rem;
+            color: #f87171;
+        }
+        .h-insight {
+            text-align: center;
+            margin-top: 0.75rem;
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.8);
+        }
+        .h-insight strong {
+            color: #10b981;
+        }
+        .h-insight em {
+            color: #fbbf24;
+            font-style: normal;
+        }
+        .highlight-box {
+            background: linear-gradient(135deg, #1e3a5f, #2d5a87);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+        }
+        .highlight-box h3 {
+            color: white;
+            font-size: 1.75rem;
+        }
+        .highlight-box p {
+            font-size: 1.25rem;
+        }
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+            border-left: 3px solid #60a5fa;
+        }
+        .timeline-item {
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        .timeline-item::before {
+            content: '';
+            width: 16px;
+            height: 16px;
+            background: #60a5fa;
+            border-radius: 50%;
+            position: absolute;
+            left: -2.55rem;
+            top: 0.25rem;
+        }
+        .timeline-date {
+            font-size: 0.9rem;
+            color: #60a5fa;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+        .timeline-item h4 {
+            font-size: 1.25rem;
+            margin-bottom: 0.25rem;
+        }
+        .timeline-item p {
+            font-size: 1rem;
+            color: rgba(255,255,255,0.7);
+        }
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .stat {
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #60a5fa;
+        }
+        .stat-label {
+            font-size: 1rem;
+            color: rgba(255,255,255,0.7);
+            margin-top: 0.5rem;
+        }
+        .list-clean {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+        .list-clean li {
+            font-size: 1.25rem;
+            padding: 0.75rem 0;
+            padding-left: 2rem;
+            position: relative;
+            color: rgba(255,255,255,0.9);
+        }
+        .list-clean li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #60a5fa;
+        }
+        .cta-slide {
+            text-align: center;
+        }
+        .cta-slide h1 {
+            font-size: 3rem;
+        }
+        .controls {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 1rem;
+            z-index: 100;
+        }
+        .controls button {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+        .controls button:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .sample-preview {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            color: #1f2937;
+            max-width: 600px;
+        }
+        .sample-preview h4 {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+        .sample-scores {
+            display: flex;
+            gap: 1rem;
+        }
+        .sample-score {
+            text-align: center;
+            padding: 0.75rem;
+            background: #f8fafc;
+            border-radius: 8px;
+            flex: 1;
+        }
+        .sample-score .grade {
+            font-size: 1.75rem;
+            font-weight: 800;
+        }
+        .grade-d { color: #dc2626; }
+        .grade-c { color: #d97706; }
+        .sample-score .platform {
+            font-size: 0.75rem;
+            color: #6b7280;
+            margin-top: 0.25rem;
+        }
+        .insight-list {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+        .insight-list li {
+            margin-bottom: 0.5rem;
+            color: #4b5563;
+        }
+        @media (max-width: 1024px) {
+            .slide {
+                padding: 2rem;
+            }
+            h1 {
+                font-size: 2.5rem;
+            }
+            h2 {
+                font-size: 2rem;
+            }
+            .premises {
+                grid-template-columns: 1fr;
+            }
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .two-col {
+                grid-template-columns: 1fr;
+            }
+            .flow-pipeline {
+                flex-wrap: wrap;
+                gap: 1.5rem;
+            }
+            .flow-step {
+                flex: 0 0 40%;
+            }
+            .flow-arrow {
+                display: none;
+            }
+            .capability-row {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Slide 1: Title -->
+    <div class="slide active" id="slide-1">
+        <span class="logo">KYANOS</span>
+        <h1>AI Intelligence for<br>Democratic Campaigns</h1>
+        <p class="subtitle">Winning the information war in the age of AI search</p>
+        <p>When voters ask AI about candidates, we make sure they get the right answers.</p>
+        <span class="slide-number">1 / 11</span>
+    </div>
+
+    <!-- Slide 2: Premises -->
+    <div class="slide" id="slide-2">
+        <span class="logo">KYANOS</span>
+        <h2>The Premises</h2>
+        <p style="margin-bottom: 2rem; font-size: 1.2rem;">We're not here to convince you of these—you already know them.</p>
+        <div class="premises">
+            <div class="premise">
+                <div class="premise-number">01</div>
+                <p><strong>AI is the new information layer.</strong> 100M+ Americans use ChatGPT weekly. Google AI Overview tops 40% of searches. This is where voters form impressions.</p>
+            </div>
+            <div class="premise">
+                <div class="premise-number">02</div>
+                <p><strong>Democrats lost the 2024 information war.</strong> Podcasts, algorithms, search—the right dominated every channel where persuadable voters actually are.</p>
+            </div>
+            <div class="premise">
+                <div class="premise-number">03</div>
+                <p><strong>Campaigns are blind to AI.</strong> They don't know what ChatGPT says about their candidate. They don't know how to fix it. Most don't know to ask.</p>
+            </div>
+            <div class="premise">
+                <div class="premise-number">04</div>
+                <p><strong>This is tractable.</strong> AI cites sources. Campaigns control sources. The gap is knowing what to fix and how. That's what we do.</p>
+            </div>
+        </div>
+        <span class="slide-number">2 / 11</span>
+    </div>
+
+    <!-- Slide 3: How Kyanos Works (Combined) -->
+    <div class="slide slide-blue" id="slide-3">
+        <div class="kyanos-container">
+            <div class="kyanos-label">KYANOS</div>
+
+            <!-- Registration -->
+            <div class="ky-register">
+                <span class="ky-register-icon">📝</span>
+                <div class="ky-register-text">
+                    <strong>Campaign Registers</strong>
+                    <span>Candidate • Race • Opponents • Issues</span>
+                </div>
+            </div>
+
+            <div class="ky-flow-arrow">↓</div>
+
+            <!-- Products Row -->
+            <div class="ky-products">
+                <div class="ky-product">
+                    <span class="ky-product-icon">👁</span>
+                    <span class="ky-product-name">Panopticon</span>
+                    <span class="ky-product-desc">What voters see when they ask AI about you</span>
+                </div>
+                <div class="ky-product">
+                    <span class="ky-product-icon">⚡</span>
+                    <span class="ky-product-name">Tripwire</span>
+                    <span class="ky-product-desc">Alerts when opponents change messaging or attack</span>
+                </div>
+                <div class="ky-product">
+                    <span class="ky-product-icon">📺</span>
+                    <span class="ky-product-name">Adwatch</span>
+                    <span class="ky-product-desc">Track opponent ads, spending, and targeting</span>
+                </div>
+                <div class="ky-product">
+                    <span class="ky-product-icon">✍️</span>
+                    <span class="ky-product-name">GoodInk</span>
+                    <span class="ky-product-desc">Press and story placement optimized for AI</span>
+                </div>
+            </div>
+
+            <div class="ky-flow-arrow">↓</div>
+
+            <!-- Report Clip -->
+            <div class="ky-report-clip">
+                <div class="ky-report-top">
+                    <div class="ky-report-badge">Weekly Intelligence Report</div>
+                    <div class="ky-report-campaign">Malinowski for Congress (NJ-11)</div>
+                    <div class="ky-report-meta">January 2026 | Kyanos</div>
+                </div>
+                <div class="ky-report-tabs">
+                    <span class="ky-tab active">Overview</span>
+                    <span class="ky-tab">Monitor</span>
+                    <span class="ky-tab">Analyze</span>
+                    <span class="ky-tab">Fix</span>
+                    <span class="ky-tab">Impact</span>
+                    <span class="ky-tab">Methodology</span>
+                </div>
+                <div class="ky-report-scores">
+                    <div class="ky-score">
+                        <span class="ky-grade grade-d">D</span>
+                        <span class="ky-platform">Google AI</span>
+                    </div>
+                    <div class="ky-score">
+                        <span class="ky-grade grade-c">C</span>
+                        <span class="ky-platform">ChatGPT</span>
+                    </div>
+                    <div class="ky-score">
+                        <span class="ky-grade grade-c">C</span>
+                        <span class="ky-platform">Knowledge Panel</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <span class="slide-number">3 / 11</span>
+    </div>
+
+    <!-- Slide 4: The Complete Information Flow (Horizontal) -->
+    <div class="slide slide-flow-h" id="slide-4">
+        <span class="logo">KYANOS</span>
+        <h2 style="text-align: center; margin-bottom: 0.5rem; font-size: 1.3rem;">How Information Reaches the Voter</h2>
+
+        <div class="h-flow">
+            <!-- Column 1: Primary Sources -->
+            <div class="h-col h-col-sources">
+                <div class="h-col-label h-label-green">PRIMARY SOURCES</div>
+                <div class="h-source-box h-source-primary">
+                    <span class="h-src-icon">🌐</span>
+                    <div class="h-src-text">
+                        <strong>Campaign Website</strong>
+                        <span>You control this completely</span>
+                    </div>
+                </div>
+                <div class="h-source-box">
+                    <span class="h-src-icon">📰</span>
+                    <div class="h-src-text">
+                        <strong>News Coverage</strong>
+                        <span>Earned media & press</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="h-arrow">
+                <span>→</span>
+                <span class="h-arrow-label">informs</span>
+            </div>
+
+            <!-- Column 2: Intermediaries -->
+            <div class="h-col h-col-inter">
+                <div class="h-col-label">INTERMEDIARIES</div>
+                <div class="h-inter-box">
+                    <span class="h-inter-icon">📚</span>
+                    <div class="h-inter-text">
+                        <strong>Wikipedia</strong>
+                        <span>Cites news & official sources</span>
+                    </div>
+                </div>
+                <div class="h-inter-box">
+                    <span class="h-inter-icon">🗳</span>
+                    <div class="h-inter-text">
+                        <strong>Ballotpedia</strong>
+                        <span>Aggregates election data</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="h-arrow">
+                <span>→</span>
+                <span class="h-arrow-label">indexed by</span>
+            </div>
+
+            <!-- Column 3: Processing -->
+            <div class="h-col h-col-process">
+                <div class="h-col-label">PROCESSING</div>
+                <div class="h-process-stack">
+                    <div class="h-proc-box">
+                        <strong>Search Index</strong>
+                        <span>Google • Bing</span>
+                    </div>
+                    <div class="h-proc-box">
+                        <strong>Knowledge Graph</strong>
+                        <span>→ Knowledge Panel</span>
+                    </div>
+                    <div class="h-proc-box h-proc-fm">
+                        <strong>Foundation Models</strong>
+                        <span>GPT • Gemini • Claude</span>
+                    </div>
+                </div>
+                <div class="h-query-box">
+                    <div class="h-query-label">At query time:</div>
+                    <div class="h-query-content">
+                        <strong>RAG</strong> retrieves current web<br>
+                        <strong>Model</strong> synthesizes response
+                    </div>
+                </div>
+            </div>
+
+            <div class="h-arrow">
+                <span>→</span>
+                <span class="h-arrow-label">renders to</span>
+            </div>
+
+            <!-- Column 4: Browser Outputs -->
+            <div class="h-col h-col-output">
+                <div class="h-col-label h-label-blue">VOTER'S BROWSER</div>
+                <div class="h-browsers">
+                    <!-- Google Search -->
+                    <div class="h-browser">
+                        <div class="hb-chrome"><span></span><span></span><span></span></div>
+                        <div class="hb-content hb-google">
+                            <div class="hb-g-logo">G</div>
+                            <div class="hb-g-layout">
+                                <div class="hb-g-results">
+                                    <div class="hb-g-r">tommalinowski.com</div>
+                                    <div class="hb-g-r">wikipedia.org</div>
+                                </div>
+                                <div class="hb-g-panel">
+                                    <div class="hb-gp-img"></div>
+                                    <div class="hb-gp-name">Tom M.</div>
+                                    <div class="hb-gp-bad">No office</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hb-label">Search + Panel</div>
+                    </div>
+
+                    <!-- AI Overview -->
+                    <div class="h-browser">
+                        <div class="hb-chrome"><span></span><span></span><span></span></div>
+                        <div class="hb-content hb-aio">
+                            <div class="hb-aio-head">✨ AI Overview</div>
+                            <div class="hb-aio-text">Served 2019-2023...</div>
+                            <div class="hb-aio-bad">No 2026 info</div>
+                        </div>
+                        <div class="hb-label">AI Overview</div>
+                    </div>
+
+                    <!-- ChatGPT -->
+                    <div class="h-browser">
+                        <div class="hb-chrome"><span></span><span></span><span></span></div>
+                        <div class="hb-content hb-chat">
+                            <div class="hb-chat-head">◉ ChatGPT</div>
+                            <div class="hb-chat-q">Honest?</div>
+                            <div class="hb-chat-bad">Ethics issues...</div>
+                        </div>
+                        <div class="hb-label">ChatGPT</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="h-insight">
+            <strong>The leverage:</strong> Campaign website and earned media are the <em>only</em> primary sources. Everything else flows from them. <strong>Control these → control every output.</strong>
+        </div>
+        <span class="slide-number">4 / 11</span>
+    </div>
+
+    <!-- Slide 5: Sample Output -->
+    <div class="slide" id="slide-5">
+        <span class="logo">KYANOS</span>
+        <h2>Real Output: Malinowski (NJ-11)</h2>
+        <div class="two-col">
+            <div>
+                <p style="font-size: 1.15rem; margin-bottom: 1.5rem;">This is what a campaign receives weekly—not theory, but specific intelligence they can act on.</p>
+                <ul class="list-clean">
+                    <li>Google AI Overview doesn't mention he's running in 2026</li>
+                    <li>ChatGPT leads with ethics violations, buries blind trust resolution</li>
+                    <li>Campaign website has no counter-narrative (no ethics page, no endorsements)</li>
+                    <li>Human rights credentials work—this is the model to replicate</li>
+                </ul>
+                <p style="font-size: 1rem; margin-top: 1.5rem; color: rgba(255,255,255,0.7);"><strong>The fix:</strong> Create three pages, update SEO. Campaign controls this. AI will cite it within weeks.</p>
+            </div>
+            <div class="sample-preview">
+                <h4>AI Presence Report: Malinowski for Congress</h4>
+                <div class="sample-scores">
+                    <div class="sample-score">
+                        <div class="grade grade-d">D</div>
+                        <div class="platform">Google AI</div>
+                    </div>
+                    <div class="sample-score">
+                        <div class="grade grade-c">C</div>
+                        <div class="platform">ChatGPT</div>
+                    </div>
+                    <div class="sample-score">
+                        <div class="grade grade-c">C</div>
+                        <div class="platform">Knowledge Panel</div>
+                    </div>
+                </div>
+                <ul class="insight-list">
+                    <li>→ Create ethics FAQ page (CRITICAL)</li>
+                    <li>→ Update homepage SEO for 2026 (CRITICAL)</li>
+                    <li>→ Create immigration page with refugee story</li>
+                    <li>→ Add endorsements page with Andy Kim</li>
+                </ul>
+            </div>
+        </div>
+        <span class="slide-number">5 / 11</span>
+    </div>
+
+    <!-- Slide 6: Why This Works -->
+    <div class="slide" id="slide-6">
+        <span class="logo">KYANOS</span>
+        <h2>Why This Works</h2>
+        <div class="two-col" style="margin-top: 2rem;">
+            <div>
+                <h3>The Causal Chain</h3>
+                <ul class="list-clean">
+                    <li>Campaign creates content (website, press, social)</li>
+                    <li>Search engines index and assign authority</li>
+                    <li>AI retrieves and synthesizes from indexed sources</li>
+                    <li>Voter sees AI response as first impression</li>
+                </ul>
+                <p style="margin-top: 1.5rem; font-size: 1.1rem;"><strong>Key insight:</strong> Campaigns already control the most authoritative source—their own website. They just don't know what to put on it.</p>
+            </div>
+            <div>
+                <h3>The Arbitrage</h3>
+                <div class="highlight-box">
+                    <p style="font-size: 1.15rem; margin-bottom: 1rem;"><strong>Traditional persuasion:</strong><br>$50-200 per voter moved</p>
+                    <p style="font-size: 1.15rem; margin: 0;"><strong>AI presence optimization:</strong><br>$2-5 per voter reached at moment of research</p>
+                </div>
+                <p style="font-size: 1rem; color: rgba(255,255,255,0.7); margin-top: 1rem;">Not a replacement for paid media. A force multiplier that makes every dollar work harder.</p>
+            </div>
+        </div>
+        <span class="slide-number">6 / 11</span>
+    </div>
+
+    <!-- Slide 7: 2026 Path -->
+    <div class="slide" id="slide-7">
+        <span class="logo">KYANOS</span>
+        <h2>2026: Prove It Works</h2>
+        <div class="two-col">
+            <div>
+                <h3>Trial Program</h3>
+                <ul class="list-clean">
+                    <li>10-15 competitive House races</li>
+                    <li>Free service in exchange for feedback</li>
+                    <li>Full product suite, weekly reports</li>
+                    <li>Measure: AI response quality before/after</li>
+                </ul>
+                <p style="margin-top: 1.5rem; font-size: 1rem; color: rgba(255,255,255,0.7);">We need case studies more than revenue. Campaigns need help more than they can afford it. The alignment is obvious.</p>
+            </div>
+            <div>
+                <h3>What We Learn</h3>
+                <ul class="list-clean">
+                    <li>Which interventions move AI responses fastest</li>
+                    <li>How long changes take to propagate</li>
+                    <li>Which platforms matter most by race type</li>
+                    <li>What campaigns can actually execute</li>
+                </ul>
+                <p style="margin-top: 1.5rem; font-size: 1rem; color: rgba(255,255,255,0.7);">2026 is the lab. 2028 is the product.</p>
+            </div>
+        </div>
+        <span class="slide-number">7 / 11</span>
+    </div>
+
+    <!-- Slide 8: 2028 Scale -->
+    <div class="slide" id="slide-8">
+        <span class="logo">KYANOS</span>
+        <h2>2028: Scale to Every Race</h2>
+        <div class="stat-grid">
+            <div class="stat">
+                <div class="stat-number">435</div>
+                <div class="stat-label">House races monitored</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">33</div>
+                <div class="stat-label">Senate races</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">1000+</div>
+                <div class="stat-label">State legislative races</div>
+            </div>
+        </div>
+        <div class="highlight-box">
+            <h3 style="margin-bottom: 1rem;">The Vision</h3>
+            <p style="margin: 0;">Every Democratic campaign with a website gets a baseline AI presence report. Competitive races get full service. The party apparatus gets aggregate intelligence on how AI is shaping the information environment nationwide.</p>
+        </div>
+        <p style="margin-top: 2rem; text-align: center; font-size: 1.1rem;">Infrastructure, not one-off consulting. A permanent capability for the progressive ecosystem.</p>
+        <span class="slide-number">8 / 11</span>
+    </div>
+
+    <!-- Slide 9: The Movement -->
+    <div class="slide" id="slide-9">
+        <span class="logo">KYANOS</span>
+        <h2>Beyond a Product: A Movement</h2>
+        <p style="margin-bottom: 2rem;">The biggest opportunity isn't building a company. It's mobilizing an army.</p>
+        <div class="two-col">
+            <div>
+                <h3>Watchtowers</h3>
+                <p style="font-size: 1.1rem; margin-bottom: 1rem;">Volunteers who run prompts, monitor AI responses, and flag changes across platforms. Distributed human intelligence augmenting—or replacing—automated extraction.</p>
+                <ul class="list-clean">
+                    <li>Thousands of prompt runners across the country</li>
+                    <li>Geographic coverage traditional scraping can't match</li>
+                    <li>Meaningful work that matches the moment</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Embedded Teams</h3>
+                <p style="font-size: 1.1rem; margin-bottom: 1rem;">Trained volunteers who work directly with campaigns—creating content, fixing websites, claiming Knowledge Panels. The hands campaigns don't have.</p>
+                <ul class="list-clean">
+                    <li>Content creators building AI-optimized pages</li>
+                    <li>Technical volunteers handling SEO, claims, updates</li>
+                    <li>Scalable support for down-ballot races</li>
+                </ul>
+            </div>
+        </div>
+        <div class="highlight-box" style="margin-top: 2rem; text-align: center;">
+            <p style="margin: 0; font-size: 1.25rem;"><strong>The pitch to volunteers:</strong> Writing postcards was 2018. This is how you fight the information war in 2026.</p>
+        </div>
+        <span class="slide-number">9 / 11</span>
+    </div>
+
+    <!-- Slide 10: Team & Ask -->
+    <div class="slide" id="slide-10">
+        <span class="logo">KYANOS</span>
+        <h2>The Ask</h2>
+        <div class="two-col">
+            <div>
+                <h3>What We Need</h3>
+                <ul class="list-clean">
+                    <li>Introductions to campaign managers, consultants, coordinated campaign leadership</li>
+                    <li>Feedback on product positioning and pricing</li>
+                    <li>Connections to funders interested in democratic infrastructure</li>
+                    <li>Pilot partners for 2026 trial program</li>
+                </ul>
+            </div>
+            <div>
+                <h3>What We're Building</h3>
+                <ul class="list-clean">
+                    <li>Technical infrastructure is working—we've produced real reports</li>
+                    <li>Need to scale operations and build campaign relationships</li>
+                    <li>Targeting seed funding: $500K-1M to prove 2026, position for 2028</li>
+                </ul>
+            </div>
+        </div>
+        <span class="slide-number">10 / 11</span>
+    </div>
+
+    <!-- Slide 11: Close -->
+    <div class="slide cta-slide" id="slide-11">
+        <span class="logo">KYANOS</span>
+        <h1>Democrats need to win<br>the AI information war.</h1>
+        <p class="subtitle" style="margin-top: 2rem;">We're building the tools—and the movement—to do it.</p>
+        <p style="margin-top: 3rem; font-size: 1.25rem;">kyanos.ai</p>
+        <span class="slide-number">11 / 11</span>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+        <button onclick="prevSlide()">← Previous</button>
+        <button onclick="nextSlide()">Next →</button>
+    </div>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 11;
+
+        function showSlide(n) {
+            document.querySelectorAll('.slide').forEach(s => s.classList.remove('active'));
+            document.getElementById(`slide-${n}`).classList.add('active');
+            currentSlide = n;
+        }
+
+        function nextSlide() {
+            if (currentSlide < totalSlides) {
+                showSlide(currentSlide + 1);
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 1) {
+                showSlide(currentSlide - 1);
+            }
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                e.preventDefault();
+                nextSlide();
+            } else if (e.key === 'ArrowLeft') {
+                prevSlide();
+            }
+        });
+    </script>
+</body>
+</html>

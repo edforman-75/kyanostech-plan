@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1A365D" />
+      <stop offset="100%" style="stop-color:#0a1628" />
+    </linearGradient>
+    <linearGradient id="eyeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4AB8E8" />
+      <stop offset="100%" style="stop-color:#007BC0" />
+    </linearGradient>
+  </defs>
+
+  <!-- Dark circular background -->
+  <circle cx="150" cy="150" r="140" fill="url(#bgGrad)"/>
+
+  <!-- Radial observation lines -->
+  <g stroke="#4AB8E8" stroke-width="2" opacity="0.4" stroke-linecap="round">
+    <line x1="150" y1="150" x2="150" y2="25"/>
+    <line x1="150" y1="150" x2="238" y2="62"/>
+    <line x1="150" y1="150" x2="275" y2="150"/>
+    <line x1="150" y1="150" x2="238" y2="238"/>
+    <line x1="150" y1="150" x2="150" y2="275"/>
+    <line x1="150" y1="150" x2="62" y2="238"/>
+    <line x1="150" y1="150" x2="25" y2="150"/>
+    <line x1="150" y1="150" x2="62" y2="62"/>
+  </g>
+
+  <!-- Geometric eye shape - two arcs -->
+  <path d="M 50 150 Q 150 80 250 150 Q 150 220 50 150 Z" fill="url(#eyeGrad)" opacity="0.9"/>
+
+  <!-- Inner eye white -->
+  <path d="M 70 150 Q 150 95 230 150 Q 150 205 70 150 Z" fill="white" opacity="0.95"/>
+
+  <!-- Iris - hexagonal/geometric -->
+  <circle cx="150" cy="150" r="38" fill="#007BC0"/>
+  <circle cx="150" cy="150" r="32" fill="#1A365D"/>
+
+  <!-- Pupil -->
+  <circle cx="150" cy="150" r="16" fill="#000"/>
+
+  <!-- Digital/scan lines in iris -->
+  <g stroke="#4AB8E8" stroke-width="1" opacity="0.6">
+    <circle cx="150" cy="150" r="28" fill="none"/>
+    <circle cx="150" cy="150" r="22" fill="none"/>
+  </g>
+
+  <!-- Light reflections -->
+  <circle cx="140" cy="140" r="6" fill="white" opacity="0.85"/>
+  <circle cx="158" cy="156" r="3" fill="white" opacity="0.4"/>
+
+  <!-- Outer ring -->
+  <circle cx="150" cy="150" r="140" fill="none" stroke="#4AB8E8" stroke-width="3" opacity="0.5"/>
+
+</svg>

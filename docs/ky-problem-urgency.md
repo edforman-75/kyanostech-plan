@@ -34,12 +34,12 @@ Not all surfaces matter equally for voter discovery. Our market analysis shows:
 
 ## Geographic Variation
 
-Kyanos Watchtowers have detected that AI systems return different answers in different locations. Swing state voters may see different information than safe state voters. This has profound implications for campaign strategy and for platform accountability.
+Kyanos Watchtower have detected that AI systems return different answers in different locations. Swing state voters may see different information than safe state voters. This has profound implications for campaign strategy and for platform accountability.
 
 <div class="callout-info">
 <div class="callout-title">The Watchdog Imperative</div>
 <p>AI platforms are subject to pressure from a President who demands loyalty. If models shift against progressives, whether through deliberate manipulation or algorithmic drift, someone needs to detect it first and build the evidence base.</p>
-<p>Kyanos provides that watchdog function, with Watchtowers that can detect geographic manipulation and build an evidence base for accountability.</p>
+<p>Kyanos provides that watchdog function, with Watchtower that can detect geographic manipulation and build an evidence base for accountability.</p>
 </div>
 
 ## Why Now

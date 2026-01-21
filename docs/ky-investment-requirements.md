@@ -38,7 +38,7 @@ Kyanos is built with the same AI capabilities we help campaigns leverage—we pr
 - **Core team:** 5 FTEs to build and operate the platform
 - **Product development:** Complete Panopticon, launch GoodInk and Adwatch
 - **Reference base:** Case studies and testimonials for 2027 sales
-- **Infrastructure:** Watchtowers for geographic monitoring
+- **Infrastructure:** Watchtower for geographic monitoring
 
 ---
 

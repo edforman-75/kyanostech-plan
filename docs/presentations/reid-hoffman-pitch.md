@@ -257,7 +257,7 @@ A family of AI-driven services that help progressive campaigns manage their digi
 ### The Watchdog Role
 
 - Continuous monitoring across platforms
-- Geographic variation detection through Watchtowers
+- Geographic variation detection through Watchtower
 - Evidence base of platform behavior over time
 - **If models shift against progressives, we know first and sound the alarm**
 
@@ -286,7 +286,7 @@ We don't just hand over a report. We monitor execution, coach the team through i
 - Query AI surfaces using our Bentham infrastructure
 - Core surfaces: Google AI Overviews, ChatGPT, Meta AI
 - Test questions voters actually ask about the candidate
-- Watchtowers detect geographic variation
+- Watchtower detect geographic variation
 
 **Deliverable:** Dashboard showing exactly what voters see
 
@@ -331,12 +331,12 @@ And we don't walk away. We track implementation and confirm when AI systems upda
 
 | Product | Function | Status |
 |---------|----------|--------|
-| **Panopticon** | Core AI monitoring and remediation | Building now |
-| **GoodInk** | Positive press discovery for campaigns to feature | 2026 launch |
-| **Adwatch** | Political ad monitoring across Google and Meta | 2026 launch |
-| **TripWire** | Opponent website change detection | 2026 launch |
+| **Panopticon** | Core AI monitoring and remediation | MVP+ |
+| **GoodInk** | Positive press discovery for campaigns to feature | MVP |
+| **Adwatch** | Political ad monitoring across Google and Meta | MVP |
+| **TripWire** | Opponent website change detection | MVP |
 
-### Watchtowers
+### Watchtower
 
 Kyanos's distributed observation network for geographic monitoring.
 
@@ -368,11 +368,11 @@ All of this runs on Bentham, our extraction infrastructure. It's named after Jer
 
 **TRANSITION TO SLIDE 9:**
 
-"Let me explain the business model, because I know this matters to you..."
+"Now let me explain how we've structured this to be permanent and accountable..."
 
 ---
 
-# SLIDE 9: BUSINESS MODEL
+# SLIDE 9: HOW WE OPERATE
 
 ## Trust-Owned. Mission-Locked. Sustainable.
 
@@ -692,7 +692,7 @@ forman.ed@gmail.com
 | 5 | 6 (Solution) | "So what exactly are we building?" |
 | 6 | 7 (How It Works) | "Let me show you how this works in practice..." |
 | 7 | 8 (Products) | "Beyond Panopticon, we have a complete product suite..." |
-| 8 | 9 (Business Model) | "Let me explain the business model, because I know this matters to you..." |
+| 8 | 9 (How We Operate) | "Now let me explain how we've structured this to be permanent and accountable..." |
 | 9 | 10 (Market) | "Here's the market we're going after..." |
 | 10 | 11 (Competition) | "You're going to ask about competition..." |
 | 11 | 12 (Team) | "Let me introduce the team..." |

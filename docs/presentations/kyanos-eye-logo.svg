@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <defs>
+    <linearGradient id="eyeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4AB8E8" />
+      <stop offset="100%" style="stop-color:#007BC0" />
+    </linearGradient>
+    <linearGradient id="irisGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#007BC0" />
+      <stop offset="100%" style="stop-color:#1A365D" />
+    </linearGradient>
+  </defs>
+
+  <!-- Subtle radial observation lines behind the eye -->
+  <g stroke="#007BC0" stroke-width="2" opacity="0.3" stroke-linecap="round">
+    <line x1="150" y1="150" x2="150" y2="20"/>
+    <line x1="150" y1="150" x2="242" y2="58"/>
+    <line x1="150" y1="150" x2="280" y2="150"/>
+    <line x1="150" y1="150" x2="242" y2="242"/>
+    <line x1="150" y1="150" x2="150" y2="280"/>
+    <line x1="150" y1="150" x2="58" y2="242"/>
+    <line x1="150" y1="150" x2="20" y2="150"/>
+    <line x1="150" y1="150" x2="58" y2="58"/>
+  </g>
+
+  <!-- Eye shape (almond) -->
+  <ellipse cx="150" cy="150" rx="120" ry="70" fill="url(#eyeGrad)" />
+
+  <!-- Eye white/sclera -->
+  <ellipse cx="150" cy="150" rx="100" ry="55" fill="white" opacity="0.95"/>
+
+  <!-- Iris -->
+  <circle cx="150" cy="150" r="45" fill="url(#irisGrad)"/>
+
+  <!-- Iris detail rings -->
+  <circle cx="150" cy="150" r="40" fill="none" stroke="#1A365D" stroke-width="1" opacity="0.3"/>
+  <circle cx="150" cy="150" r="32" fill="none" stroke="#1A365D" stroke-width="0.5" opacity="0.2"/>
+
+  <!-- Pupil -->
+  <circle cx="150" cy="150" r="18" fill="#0a1628"/>
+
+  <!-- Light reflection -->
+  <circle cx="140" cy="140" r="8" fill="white" opacity="0.9"/>
+  <circle cx="160" cy="155" r="4" fill="white" opacity="0.5"/>
+
+  <!-- Subtle eyelid lines -->
+  <path d="M 30 150 Q 150 70 270 150" fill="none" stroke="#1A365D" stroke-width="3" opacity="0.6"/>
+  <path d="M 30 150 Q 150 230 270 150" fill="none" stroke="#1A365D" stroke-width="3" opacity="0.6"/>
+
+</svg>

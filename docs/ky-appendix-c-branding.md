@@ -255,4 +255,44 @@ KyanosTech Logo Description:
 
 ---
 
+## Brand Assets
+
+### Logo Files
+
+All logo assets are located in `/docs/assets/brand/logos/`:
+
+**Company Logo - Kyanos Panopticon Design**
+
+The Kyanos logo is inspired by Jeremy Bentham's Panopticon concept - a central observation point with sight lines radiating outward to all subjects being monitored. This perfectly captures Kyanos's mission of comprehensive AI monitoring across platforms.
+
+- `kyanos-main.svg` / `kyanos-main.png` - Primary company logo (blue theme)
+- `kyanos-favicon.svg` / `kyanos-favicon.ico` - Simplified favicon for small sizes
+
+**Product Logo Family**
+
+Each product has a color-coded variant of the Panopticon design:
+
+| Product | Color Theme | Files | Use Case |
+|---------|-------------|-------|----------|
+| **Panopticon** | Blue (#1565C0) | `panopticon.svg`, `panopticon.png` | Core AI monitoring platform |
+| **GoodInk** | Green (#2E7D32) | `goodink.svg`, `goodink.png` | Positive press monitoring |
+| **Adwatch** | Purple (#6A1B9A) | `adwatch.svg`, `adwatch.png` | Advertising monitoring |
+| **TripWire** | Orange (#E65100) | `tripwire.svg`, `tripwire.png` | Opponent alert system |
+| **Watchtower** | Teal (#006064) | `watchtower.svg`, `watchtower.png` | Geographic monitoring |
+| **Bentham** | Gray (#37474F) | `bentham.svg`, `bentham.png` | Backend infrastructure |
+
+**Logo Design Elements**
+
+- Outer circle with radial spokes (surveillance sight lines)
+- Inner white circle (observation platform)
+- Central eye element (core monitoring capability)
+- Endpoint dots on each ray (subjects being monitored)
+- Color-coded by product function
+
+### Presentation Materials
+
+- `kyanos-investor-presentation.pptx` - 14-slide investor pitch deck
+
+---
+
 *This branding architecture positions KyanosTech as the sophisticated choice for Democratic political professionals who value both technological excellence and classical democratic wisdom.*

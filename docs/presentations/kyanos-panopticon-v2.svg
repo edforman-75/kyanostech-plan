@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <linearGradient id="cellGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e8f4fc" />
+      <stop offset="100%" style="stop-color:#c5e3f6" />
+    </linearGradient>
+  </defs>
+
+  <!-- Outer wall of prison -->
+  <circle cx="200" cy="200" r="175" fill="none" stroke="#1A365D" stroke-width="12"/>
+
+  <!-- Cell segments around the perimeter (12 cells) -->
+  <g fill="url(#cellGrad)" stroke="#1A365D" stroke-width="2">
+    <!-- Each cell is a wedge from r=120 to r=170 -->
+    <path d="M200,200 L200,30 A170,170 0 0,1 285,54 L242,92 A120,120 0 0,0 200,80 Z"/>
+    <path d="M200,200 L285,54 A170,170 0 0,1 346,115 L292,148 A120,120 0 0,0 242,92 Z"/>
+    <path d="M200,200 L346,115 A170,170 0 0,1 370,200 L320,200 A120,120 0 0,0 292,148 Z"/>
+    <path d="M200,200 L370,200 A170,170 0 0,1 346,285 L292,252 A120,120 0 0,0 320,200 Z"/>
+    <path d="M200,200 L346,285 A170,170 0 0,1 285,346 L242,308 A120,120 0 0,0 292,252 Z"/>
+    <path d="M200,200 L285,346 A170,170 0 0,1 200,370 L200,320 A120,120 0 0,0 242,308 Z"/>
+    <path d="M200,200 L200,370 A170,170 0 0,1 115,346 L158,308 A120,120 0 0,0 200,320 Z"/>
+    <path d="M200,200 L115,346 A170,170 0 0,1 54,285 L108,252 A120,120 0 0,0 158,308 Z"/>
+    <path d="M200,200 L54,285 A170,170 0 0,1 30,200 L80,200 A120,120 0 0,0 108,252 Z"/>
+    <path d="M200,200 L30,200 A170,170 0 0,1 54,115 L108,148 A120,120 0 0,0 80,200 Z"/>
+    <path d="M200,200 L54,115 A170,170 0 0,1 115,54 L158,92 A120,120 0 0,0 108,148 Z"/>
+    <path d="M200,200 L115,54 A170,170 0 0,1 200,30 L200,80 A120,120 0 0,0 158,92 Z"/>
+  </g>
+
+  <!-- Inner ring (walkway) -->
+  <circle cx="200" cy="200" r="120" fill="none" stroke="#1A365D" stroke-width="3"/>
+
+  <!-- Sight lines from center to each cell -->
+  <g stroke="#007BC0" stroke-width="2" opacity="0.6" stroke-dasharray="4,3">
+    <line x1="200" y1="200" x2="200" y2="55"/>
+    <line x1="200" y1="200" x2="272" y2="75"/>
+    <line x1="200" y1="200" x2="325" y2="128"/>
+    <line x1="200" y1="200" x2="345" y2="200"/>
+    <line x1="200" y1="200" x2="325" y2="272"/>
+    <line x1="200" y1="200" x2="272" y2="325"/>
+    <line x1="200" y1="200" x2="200" y2="345"/>
+    <line x1="200" y1="200" x2="128" y2="325"/>
+    <line x1="200" y1="200" x2="75" y2="272"/>
+    <line x1="200" y1="200" x2="55" y2="200"/>
+    <line x1="200" y1="200" x2="75" y2="128"/>
+    <line x1="200" y1="200" x2="128" y2="75"/>
+  </g>
+
+  <!-- Central observation tower -->
+  <circle cx="200" cy="200" r="45" fill="#1A365D"/>
+  <circle cx="200" cy="200" r="35" fill="#007BC0"/>
+
+  <!-- Eye in the center (the observer) -->
+  <ellipse cx="200" cy="200" rx="22" ry="13" fill="white"/>
+  <circle cx="200" cy="200" r="9" fill="#1A365D"/>
+  <circle cx="200" cy="200" r="5" fill="#007BC0"/>
+  <circle cx="197" cy="198" r="2" fill="white"/>
+
+</svg>

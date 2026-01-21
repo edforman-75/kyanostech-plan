@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4AB8E8" />
+      <stop offset="100%" style="stop-color:#007BC0" />
+    </linearGradient>
+  </defs>
+
+  <!-- Outer ring -->
+  <circle cx="100" cy="100" r="90" fill="none" stroke="#1A365D" stroke-width="6"/>
+
+  <!-- Radial lines - 8 main sight lines -->
+  <g stroke="#007BC0" stroke-width="3" stroke-linecap="round">
+    <line x1="100" y1="100" x2="100" y2="18"/>
+    <line x1="100" y1="100" x2="158" y2="42"/>
+    <line x1="100" y1="100" x2="182" y2="100"/>
+    <line x1="100" y1="100" x2="158" y2="158"/>
+    <line x1="100" y1="100" x2="100" y2="182"/>
+    <line x1="100" y1="100" x2="42" y2="158"/>
+    <line x1="100" y1="100" x2="18" y2="100"/>
+    <line x1="100" y1="100" x2="42" y2="42"/>
+  </g>
+
+  <!-- Central eye -->
+  <circle cx="100" cy="100" r="28" fill="url(#blueGrad)"/>
+  <ellipse cx="100" cy="100" rx="16" ry="9" fill="#1A365D"/>
+  <circle cx="100" cy="100" r="6" fill="#4AB8E8"/>
+  <circle cx="97" cy="98" r="2" fill="white"/>
+
+</svg>

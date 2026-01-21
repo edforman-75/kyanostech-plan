@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+
+  <!-- Outer prison wall -->
+  <circle cx="150" cy="150" r="140" fill="none" stroke="#1A365D" stroke-width="8"/>
+
+  <!-- Cell dividers (radial walls between cells) -->
+  <g stroke="#1A365D" stroke-width="3">
+    <line x1="150" y1="150" x2="150" y2="15"/>
+    <line x1="150" y1="150" x2="255" y2="60"/>
+    <line x1="150" y1="150" x2="285" y2="150"/>
+    <line x1="150" y1="150" x2="255" y2="240"/>
+    <line x1="150" y1="150" x2="150" y2="285"/>
+    <line x1="150" y1="150" x2="45" y2="240"/>
+    <line x1="150" y1="150" x2="15" y2="150"/>
+    <line x1="150" y1="150" x2="45" y2="60"/>
+  </g>
+
+  <!-- Inner ring (gallery/walkway) -->
+  <circle cx="150" cy="150" r="90" fill="white" stroke="#1A365D" stroke-width="3"/>
+
+  <!-- Cell floor shading (between inner and outer rings) -->
+  <circle cx="150" cy="150" r="115" fill="none" stroke="#c5e3f6" stroke-width="50" opacity="0.5"/>
+
+  <!-- Sight lines (dashed, showing observation) -->
+  <g stroke="#007BC0" stroke-width="1.5" stroke-dasharray="5,4" opacity="0.7">
+    <line x1="150" y1="150" x2="150" y2="25"/>
+    <line x1="150" y1="150" x2="238" y2="62"/>
+    <line x1="150" y1="150" x2="275" y2="150"/>
+    <line x1="150" y1="150" x2="238" y2="238"/>
+    <line x1="150" y1="150" x2="150" y2="275"/>
+    <line x1="150" y1="150" x2="62" y2="238"/>
+    <line x1="150" y1="150" x2="25" y2="150"/>
+    <line x1="150" y1="150" x2="62" y2="62"/>
+  </g>
+
+  <!-- Small dots at end of each ray (the observed) -->
+  <g fill="#007BC0">
+    <circle cx="150" cy="22" r="6"/>
+    <circle cx="241" cy="59" r="6"/>
+    <circle cx="278" cy="150" r="6"/>
+    <circle cx="241" cy="241" r="6"/>
+    <circle cx="150" cy="278" r="6"/>
+    <circle cx="59" cy="241" r="6"/>
+    <circle cx="22" cy="150" r="6"/>
+    <circle cx="59" cy="59" r="6"/>
+  </g>
+
+  <!-- Central tower -->
+  <circle cx="150" cy="150" r="40" fill="#1A365D"/>
+
+  <!-- Observer eye -->
+  <ellipse cx="150" cy="150" rx="24" ry="14" fill="white"/>
+  <circle cx="150" cy="150" r="10" fill="#007BC0"/>
+  <circle cx="150" cy="150" r="5" fill="#1A365D"/>
+  <circle cx="147" cy="148" r="2" fill="white"/>
+
+</svg>
