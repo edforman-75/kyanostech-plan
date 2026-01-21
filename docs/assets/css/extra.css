@@ -283,9 +283,11 @@
   text-align: center;
   line-height: 1.3;
   white-space: nowrap;
+  pointer-events: none;
 }
 
 .footer-copyright a {
+  pointer-events: auto;
   color: rgba(255,255,255,0.85);
   text-decoration: none;
 }
