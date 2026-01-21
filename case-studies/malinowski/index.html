@@ -352,83 +352,90 @@
   </header>
 
   <main class="container">
-    <!-- Intelligence Dashboard - Ordered by Voter Impact -->
-    <div class="card" style="background: linear-gradient(135deg, var(--kyanos-navy) 0%, var(--kyanos-blue-dark) 100%); color: white; margin-bottom: 24px;">
-      <h2 style="color: white; margin-bottom: 8px;">Intelligence Dashboard</h2>
-      <p style="color: rgba(255,255,255,0.8); margin-bottom: 0;">Six monitoring modules, ordered by voter persuasion impact. Research shows AI is 4x more persuasive than traditional media.</p>
+    <!-- The Bottom Line - Lead with what voters actually see -->
+    <div class="card" style="border-left: 4px solid var(--kyanos-error);">
+      <h2>What Voters Are Seeing Right Now</h2>
+      <p>
+        <strong>When New Jersey voters ask Google or ChatGPT about Tom Malinowski, they see ethics complaints and stock trading violations first.</strong> The blind trust resolution, the co-sponsorship of the stock trading ban, and the human rights credentials are buried or missing entirely.
+      </p>
+      <p>
+        Google AI Overview—the box at the top of search results that millions see—doesn't even know there's a 2026 campaign. It shows only historical information from the 2019-2023 term. <strong>Voters searching for "Tom Malinowski" don't know he's running.</strong>
+      </p>
     </div>
 
-    <!-- Row 1: AI Platforms (Highest Impact) -->
-    <div class="metrics-grid">
-      <div class="metric-card" style="border-left: 4px solid var(--kyanos-error);">
-        <div class="metric-platform" style="display: flex; align-items: center; gap: 8px;">
-          <span style="background: #4285f4; color: white; padding: 2px 6px; border-radius: 4px; font-size: 10px; font-weight: 700;">1</span>
-          Google AI Overview
-        </div>
-        <div class="metric-value danger">D</div>
-        <div class="metric-label">No mention of 2026 campaign. Shows only 2019-2023 history. Voters searching don't know he's running.</div>
-      </div>
-      <div class="metric-card" style="border-left: 4px solid var(--kyanos-warning);">
-        <div class="metric-platform" style="display: flex; align-items: center; gap: 8px;">
-          <span style="background: #10a37f; color: white; padding: 2px 6px; border-radius: 4px; font-size: 10px; font-weight: 700;">2</span>
-          ChatGPT
-        </div>
-        <div class="metric-value warning">C</div>
-        <div class="metric-label">Ethics violations lead on trust questions. Blind trust resolution and reform co-sponsorship missing.</div>
-      </div>
-    </div>
-
-    <!-- Row 2: Social Media & Paid Media -->
-    <div class="metrics-grid">
-      <div class="metric-card" style="border-left: 4px solid #7c3aed;">
-        <div class="metric-platform" style="display: flex; align-items: center; gap: 8px;">
-          <span style="background: linear-gradient(135deg, #7c3aed 0%, #3b82f6 100%); color: white; padding: 2px 6px; border-radius: 4px; font-size: 10px; font-weight: 700;">3</span>
-          Social Media (Postwatch)
-        </div>
-        <div class="metric-value warning">C</div>
-        <div class="metric-label">256K attack ad views unanswered on YouTube. Bluesky 50% negative. Bernie/Mejia consolidating progressive energy.</div>
-      </div>
-      <div class="metric-card" style="border-left: 4px solid var(--kyanos-gold);">
-        <div class="metric-platform" style="display: flex; align-items: center; gap: 8px;">
-          <span style="background: var(--kyanos-gold); color: var(--kyanos-navy); padding: 2px 6px; border-radius: 4px; font-size: 10px; font-weight: 700;">4</span>
-          Paid Media (Adwatch)
-        </div>
-        <div class="metric-value warning">C+</div>
-        <div class="metric-label">Gill spending $7.5K-8.5K on Meta attack ads. 218 Project running coordinated YouTube attacks. Limited campaign ad response.</div>
-      </div>
-    </div>
-
-    <!-- Row 3: Press & Discovery -->
-    <div class="metrics-grid">
-      <div class="metric-card" style="border-left: 4px solid #a855f7;">
-        <div class="metric-platform" style="display: flex; align-items: center; gap: 8px;">
-          <span style="background: #a855f7; color: white; padding: 2px 6px; border-radius: 4px; font-size: 10px; font-weight: 700;">5</span>
-          Press Coverage (GoodInk)
-        </div>
-        <div class="metric-value success">B</div>
-        <div class="metric-label">5 positive articles in 60 days. Andy Kim endorsement, Morris County win. Content exists but not on campaign website.</div>
-      </div>
-      <div class="metric-card" style="border-left: 4px solid var(--kyanos-silver);">
-        <div class="metric-platform" style="display: flex; align-items: center; gap: 8px;">
-          <span style="background: var(--kyanos-silver); color: white; padding: 2px 6px; border-radius: 4px; font-size: 10px; font-weight: 700;">6</span>
-          Knowledge Panel
-        </div>
-        <div class="metric-value warning">C</div>
-        <div class="metric-label">Shows "Former US Representative"—no 2026 campaign. Panel not claimed by campaign. Passive discovery channel.</div>
-      </div>
-    </div>
-
-    <!-- The Bottom Line -->
+    <!-- What Each Channel Shows -->
     <div class="card">
-      <h2>The Bottom Line</h2>
+      <h2>The Full Picture</h2>
+      <p style="margin-bottom: 24px;">We monitor six channels where voters encounter information about the candidate. Here's what each one is showing:</p>
+
+      <div class="finding-item" style="border-bottom: 1px solid var(--kyanos-border); padding-bottom: 20px;">
+        <div class="finding-icon critical">!</div>
+        <div class="finding-content">
+          <h3>Google AI Overview</h3>
+          <p><strong>"Tom Malinowski served as the U.S. Representative for New Jersey's 7th congressional district from 2019 to 2023."</strong> That's it. No mention of NJ-11. No mention of the February 2026 primary. AI doesn't know there's a campaign.</p>
+        </div>
+      </div>
+
+      <div class="finding-item" style="border-bottom: 1px solid var(--kyanos-border); padding-bottom: 20px;">
+        <div class="finding-icon critical">!</div>
+        <div class="finding-content">
+          <h3>ChatGPT</h3>
+          <p>When voters ask "Is Tom Malinowski honest?", ChatGPT opens with: <strong>"Malinowski faced scrutiny for failing to properly disclose stock trades... fined $200 by the House Ethics Committee."</strong> The blind trust? Not mentioned. The STOCK Act reform bill he co-sponsored? Not mentioned.</p>
+        </div>
+      </div>
+
+      <div class="finding-item" style="border-bottom: 1px solid var(--kyanos-border); padding-bottom: 20px;">
+        <div class="finding-icon critical">!</div>
+        <div class="finding-content">
+          <h3>YouTube (Postwatch)</h3>
+          <p>The 218 Project attack ad "Jan 6 Malinowski 2" has <strong>256,658 views</strong>. The campaign's bio video "Record" has <strong>534 views</strong>. That's a 480:1 ratio of hostile to positive content. Meanwhile, Bernie Sanders' endorsement video for Mejia already has 16K views.</p>
+        </div>
+      </div>
+
+      <div class="finding-item" style="border-bottom: 1px solid var(--kyanos-border); padding-bottom: 20px;">
+        <div class="finding-icon warning">~</div>
+        <div class="finding-content">
+          <h3>Bluesky (Postwatch)</h3>
+          <p>Malinowski leads in followers (2,932 vs Mejia's 1,254), but <strong>sentiment is 50% negative</strong>. AIPAC criticism dominates the conversation. Progressive influencers with 10K+ followers are posting critical content regularly.</p>
+        </div>
+      </div>
+
+      <div class="finding-item" style="border-bottom: 1px solid var(--kyanos-border); padding-bottom: 20px;">
+        <div class="finding-icon warning">~</div>
+        <div class="finding-content">
+          <h3>Paid Advertising (Adwatch)</h3>
+          <p>Brendan Gill is spending <strong>$7,500-8,500 on Meta attack ads</strong> calling Malinowski a "self-serving traitor." The 218 Project is running coordinated YouTube attacks. Campaign paid response: minimal.</p>
+        </div>
+      </div>
+
+      <div class="finding-item" style="border-bottom: 1px solid var(--kyanos-border); padding-bottom: 20px;">
+        <div class="finding-icon success">✓</div>
+        <div class="finding-content">
+          <h3>Press Coverage (GoodInk)</h3>
+          <p>The good news: <strong>5 positive articles in the past 60 days</strong>—Andy Kim endorsement, Morris County convention win, Village Green profile. The bad news: none of them are on the campaign website. AI can't find what the campaign won't show.</p>
+        </div>
+      </div>
+
+      <div class="finding-item">
+        <div class="finding-icon warning">~</div>
+        <div class="finding-content">
+          <h3>Google Knowledge Panel</h3>
+          <p>The sidebar box on Google Search shows <strong>"Former United States Representative"</strong>—past tense. No mention of the current campaign. The panel isn't claimed, so the campaign can't update it.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- What Can Be Fixed -->
+    <div class="card" style="border-left: 4px solid var(--kyanos-success);">
+      <h2>What Can Be Fixed</h2>
       <p>
-        <strong>Across all six monitoring channels, the campaign is losing the information war.</strong> AI platforms—which research shows are 4x more persuasive than TV ads—lead with ethics violations. Social media has 256K hostile views going unanswered. Opponents are spending on attack ads while the campaign's positive press coverage isn't even on its own website.
+        <strong>Most of this is fixable.</strong> AI systems cite the sources they can find. Right now, the only sources discussing Malinowski and honesty are hostile. The campaign website has no ethics page, no endorsements page, and a news section last updated in 2020.
       </p>
       <p>
-        The two highest-impact channels are the most broken: <strong>Google AI Overview (D)</strong> doesn't know there's a 2026 campaign, and <strong>ChatGPT (C)</strong> leads every trust question with stock trading violations. These are the channels voters encounter when actively researching—the moment of highest persuasion potential.
+        Create an ethics FAQ page → AI will cite it. Add the 5 positive articles to the website → AI will find fresh content. Claim the Knowledge Panel → update the description. Respond to YouTube attacks → the 480:1 ratio starts to shift.
       </p>
       <p>
-        <strong>The good news: most of this is fixable.</strong> AI systems cite the sources they can find. Create an ethics FAQ page, and AI will cite it. Add press coverage to the website, and AI will find fresh content. Respond to YouTube attacks, and the 480:1 hostile-to-positive ratio starts to shift. The campaign controls the inputs that determine what voters see.
+        <strong>The campaign controls the inputs that determine what voters see.</strong>
       </p>
     </div>
 
