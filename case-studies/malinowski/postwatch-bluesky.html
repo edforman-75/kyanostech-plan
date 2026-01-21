@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bluesky Intelligence | Postwatch | Malinowski for Congress</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --kyanos-navy: #1f2937;
+      --kyanos-blue: #3b82f6;
+      --kyanos-blue-dark: #1d4ed8;
+      --kyanos-gold: #f59e0b;
+      --kyanos-silver: #6b7280;
+      --kyanos-slate: #f8fafc;
+      --kyanos-cream: #fefce8;
+      --kyanos-success: #16a34a;
+      --kyanos-warning: #d97706;
+      --kyanos-error: #dc2626;
+      --kyanos-mid: #374151;
+      --kyanos-border: #e5e7eb;
+      --kyanos-white: #ffffff;
+      --postwatch-purple: #7c3aed;
+      --bluesky-blue: #0085ff;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--kyanos-slate);
+      color: var(--kyanos-navy);
+      line-height: 1.6;
+    }
+
+    .nav {
+      background: var(--kyanos-white);
+      border-bottom: 1px solid var(--kyanos-border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-brand {
+      font-weight: 800;
+      font-size: 20px;
+      color: var(--kyanos-navy);
+      padding: 16px 0;
+      text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+
+    .nav-brand span { color: var(--kyanos-blue); }
+    .nav-links { display: flex; gap: 0; }
+
+    .nav-link {
+      padding: 18px 20px;
+      text-decoration: none;
+      color: var(--kyanos-silver);
+      font-weight: 500;
+      font-size: 14px;
+      border-bottom: 3px solid transparent;
+      transition: all 0.2s;
+    }
+
+    .nav-link:hover { color: var(--kyanos-navy); }
+    .nav-link.active { color: var(--kyanos-blue); border-bottom-color: var(--kyanos-blue); font-weight: 600; }
+
+    .page-header {
+      background: linear-gradient(135deg, var(--postwatch-purple) 0%, var(--bluesky-blue) 100%);
+      color: var(--kyanos-white);
+      padding: 48px 24px;
+    }
+
+    .page-header-inner { max-width: 900px; margin: 0 auto; }
+
+    .page-header-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .page-header h1 { font-size: 36px; font-weight: 800; margin-bottom: 8px; letter-spacing: -0.5px; }
+    .page-header p { font-size: 16px; opacity: 0.9; max-width: 600px; }
+
+    .breadcrumb {
+      background: var(--kyanos-white);
+      border-bottom: 1px solid var(--kyanos-border);
+      padding: 12px 24px;
+    }
+
+    .breadcrumb-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      font-size: 13px;
+      color: var(--kyanos-silver);
+    }
+
+    .breadcrumb a {
+      color: var(--kyanos-blue);
+      text-decoration: none;
+    }
+
+    .breadcrumb a:hover { text-decoration: underline; }
+
+    .container { max-width: 900px; margin: 0 auto; padding: 48px 24px; }
+
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .metric-card {
+      background: var(--kyanos-white);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+      border: 1px solid var(--kyanos-border);
+      text-align: center;
+    }
+
+    .metric-value {
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--kyanos-navy);
+      margin-bottom: 4px;
+    }
+
+    .metric-value.success { color: var(--kyanos-success); }
+    .metric-value.warning { color: var(--kyanos-warning); }
+    .metric-value.danger { color: var(--kyanos-error); }
+
+    .metric-label {
+      font-size: 12px;
+      color: var(--kyanos-silver);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .section { margin-bottom: 48px; }
+
+    .section-title {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--kyanos-silver);
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .section-title::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--kyanos-border);
+    }
+
+    .card {
+      background: var(--kyanos-white);
+      border-radius: 12px;
+      padding: 28px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+      border: 1px solid var(--kyanos-border);
+    }
+
+    .card h2 {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: var(--kyanos-navy);
+    }
+
+    .card h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: var(--kyanos-navy);
+    }
+
+    .card p {
+      font-size: 15px;
+      color: var(--kyanos-mid);
+      margin-bottom: 16px;
+      line-height: 1.7;
+    }
+
+    /* Post Card */
+    .post-card {
+      background: var(--kyanos-white);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+      border: 1px solid var(--kyanos-border);
+      border-left: 4px solid var(--bluesky-blue);
+    }
+
+    .post-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .post-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--bluesky-blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .post-author {
+      flex: 1;
+    }
+
+    .post-author-name {
+      font-weight: 600;
+      color: var(--kyanos-navy);
+      font-size: 14px;
+    }
+
+    .post-author-handle {
+      color: var(--kyanos-silver);
+      font-size: 13px;
+    }
+
+    .post-date {
+      color: var(--kyanos-silver);
+      font-size: 12px;
+    }
+
+    .post-content {
+      font-size: 15px;
+      color: var(--kyanos-mid);
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .post-metrics {
+      display: flex;
+      gap: 24px;
+      font-size: 13px;
+      color: var(--kyanos-silver);
+    }
+
+    .post-metric {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .post-link {
+      display: inline-block;
+      margin-top: 12px;
+      font-size: 13px;
+      color: var(--bluesky-blue);
+      text-decoration: none;
+    }
+
+    .post-link:hover { text-decoration: underline; }
+
+    /* Influencer Table */
+    .influencer-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    .influencer-table th {
+      text-align: left;
+      padding: 12px 16px;
+      background: var(--kyanos-slate);
+      font-weight: 600;
+      color: var(--kyanos-navy);
+      border-bottom: 2px solid var(--kyanos-border);
+    }
+
+    .influencer-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--kyanos-border);
+      color: var(--kyanos-mid);
+    }
+
+    .influencer-table tr:hover { background: var(--kyanos-slate); }
+
+    .influencer-handle {
+      color: var(--bluesky-blue);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .influencer-handle:hover { text-decoration: underline; }
+
+    /* Sentiment Badge */
+    .sentiment-badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .sentiment-badge.positive { background: #dcfce7; color: #166534; }
+    .sentiment-badge.negative { background: #fee2e2; color: #991b1b; }
+    .sentiment-badge.neutral { background: #f3f4f6; color: #4b5563; }
+    .sentiment-badge.mixed { background: #fef3c7; color: #92400e; }
+
+    .footer {
+      text-align: center;
+      padding: 48px 24px;
+      color: var(--kyanos-silver);
+      font-size: 13px;
+      border-top: 1px solid var(--kyanos-border);
+      background: var(--kyanos-white);
+    }
+
+    .footer-brand {
+      font-weight: 700;
+      color: var(--kyanos-navy);
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    .footer-brand span { color: var(--kyanos-blue); }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--kyanos-blue);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+
+    .back-link:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">Kyanos<span>Tech</span></a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Summary</a>
+        <a href="monitor.html" class="nav-link active">Monitor</a>
+        <a href="analyze.html" class="nav-link">Analyze</a>
+        <a href="fix.html" class="nav-link">Fix</a>
+        <a href="impact.html" class="nav-link">Impact</a>
+        <a href="methodology.html" class="nav-link">Methodology</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="breadcrumb">
+    <div class="breadcrumb-inner">
+      <a href="index.html">Report</a> / <a href="monitor.html">Monitor</a> / Bluesky Intelligence
+    </div>
+  </div>
+
+  <div class="page-header">
+    <div class="page-header-inner">
+      <div class="page-header-badge">
+        <span>Postwatch</span> | Bluesky
+      </div>
+      <h1>Bluesky Intelligence</h1>
+      <p>Real-time social media monitoring from the AT Protocol. What activists, journalists, and political commentators are saying about Malinowski.</p>
+    </div>
+  </div>
+
+  <main class="container">
+    <a href="monitor.html" class="back-link">&larr; Back to Monitor</a>
+
+    <!-- Key Metrics -->
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <div class="metric-value">2,932</div>
+        <div class="metric-label">Followers</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value success">#1</div>
+        <div class="metric-label">Follower Rank</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value">130</div>
+        <div class="metric-label">Mentions (15d)</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value warning">50%</div>
+        <div class="metric-label">Negative Sentiment</div>
+      </div>
+    </div>
+
+    <!-- Competitor Comparison -->
+    <div class="section">
+      <div class="section-title">Bluesky Follower Comparison</div>
+      <div class="card">
+        <h3>Malinowski leads on Bluesky</h3>
+        <p>Among NJ-11 candidates with Bluesky accounts, Malinowski has the largest following. However, not all competitors are on the platform.</p>
+
+        <table class="influencer-table" style="margin-top: 16px;">
+          <thead>
+            <tr>
+              <th>Candidate</th>
+              <th>Handle</th>
+              <th>Followers</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Tom Malinowski</strong></td>
+              <td><a href="https://bsky.app/profile/tommalinowski.bsky.social" class="influencer-handle" target="_blank">@tommalinowski.bsky.social</a></td>
+              <td>2,932</td>
+              <td><span class="sentiment-badge positive">Active</span></td>
+            </tr>
+            <tr>
+              <td>Brendan Gill</td>
+              <td><a href="https://bsky.app/profile/brendangill.bsky.social" class="influencer-handle" target="_blank">@brendangill.bsky.social</a></td>
+              <td>89</td>
+              <td><span class="sentiment-badge neutral">Low Activity</span></td>
+            </tr>
+            <tr>
+              <td>Cammie Croft</td>
+              <td><a href="https://bsky.app/profile/cammiecroft.bsky.social" class="influencer-handle" target="_blank">@cammiecroft.bsky.social</a></td>
+              <td>156</td>
+              <td><span class="sentiment-badge neutral">Building</span></td>
+            </tr>
+            <tr>
+              <td>Justin Strickland</td>
+              <td><a href="https://bsky.app/profile/justinstrickland.bsky.social" class="influencer-handle" target="_blank">@justinstrickland.bsky.social</a></td>
+              <td>42</td>
+              <td><span class="sentiment-badge neutral">New</span></td>
+            </tr>
+            <tr>
+              <td>Tahesha Way</td>
+              <td>-</td>
+              <td>-</td>
+              <td><span class="sentiment-badge negative">Not on Platform</span></td>
+            </tr>
+            <tr>
+              <td>Analilia Mejia</td>
+              <td>-</td>
+              <td>-</td>
+              <td><span class="sentiment-badge negative">Not on Platform</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Top Influencers -->
+    <div class="section">
+      <div class="section-title">Top Bluesky Influencers Discussing Malinowski</div>
+      <div class="card">
+        <p>These accounts are driving the conversation about Malinowski on Bluesky. Engagement with supportive influencers and monitoring of critics is recommended.</p>
+
+        <table class="influencer-table" style="margin-top: 16px;">
+          <thead>
+            <tr>
+              <th>Handle</th>
+              <th>Followers</th>
+              <th>Mentions</th>
+              <th>Sentiment</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="https://bsky.app/profile/reginageorgebush.bsky.social" class="influencer-handle" target="_blank">@reginageorgebush.bsky.social</a></td>
+              <td>10,947</td>
+              <td>12</td>
+              <td><span class="sentiment-badge mixed">Mixed</span></td>
+            </tr>
+            <tr>
+              <td><a href="https://bsky.app/profile/dancassino.bsky.social" class="influencer-handle" target="_blank">@dancassino.bsky.social</a></td>
+              <td>4,227</td>
+              <td>4</td>
+              <td><span class="sentiment-badge neutral">Neutral</span></td>
+            </tr>
+            <tr>
+              <td><a href="https://bsky.app/profile/saveam.bsky.social" class="influencer-handle" target="_blank">@saveam.bsky.social</a></td>
+              <td>8,509</td>
+              <td>3</td>
+              <td><span class="sentiment-badge positive">Positive</span></td>
+            </tr>
+            <tr>
+              <td><a href="https://bsky.app/profile/lizziekfoley.bsky.social" class="influencer-handle" target="_blank">@lizziekfoley.bsky.social</a></td>
+              <td>815</td>
+              <td>3</td>
+              <td><span class="sentiment-badge neutral">Neutral</span></td>
+            </tr>
+            <tr>
+              <td><a href="https://bsky.app/profile/wayneindivisible.bsky.social" class="influencer-handle" target="_blank">@wayneindivisible.bsky.social</a></td>
+              <td>7</td>
+              <td>5</td>
+              <td><span class="sentiment-badge positive">Positive</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Sample Posts -->
+    <div class="section">
+      <div class="section-title">Recent Bluesky Mentions</div>
+
+      <div class="post-card">
+        <div class="post-header">
+          <div class="post-avatar">RG</div>
+          <div class="post-author">
+            <div class="post-author-name">Regina George Bush</div>
+            <div class="post-author-handle">@reginageorgebush.bsky.social</div>
+          </div>
+          <div class="post-date">Jan 18, 2026</div>
+        </div>
+        <div class="post-content">
+          The NJ-11 race is heating up. Tom Malinowski has the congressional experience, but progressives are eyeing Analilia Mejia after the Bernie endorsement. This primary is about to get interesting.
+        </div>
+        <div class="post-metrics">
+          <div class="post-metric">42 likes</div>
+          <div class="post-metric">8 reposts</div>
+          <div class="post-metric">12 replies</div>
+        </div>
+        <a href="https://bsky.app/profile/reginageorgebush.bsky.social" class="post-link" target="_blank">View on Bluesky &rarr;</a>
+      </div>
+
+      <div class="post-card">
+        <div class="post-header">
+          <div class="post-avatar">DC</div>
+          <div class="post-author">
+            <div class="post-author-name">Dan Cassino</div>
+            <div class="post-author-handle">@dancassino.bsky.social</div>
+          </div>
+          <div class="post-date">Jan 16, 2026</div>
+        </div>
+        <div class="post-content">
+          Polling in NJ-11 shows a tight race. Malinowski and Gill are the frontrunners but Mejia is pulling progressive votes. The short campaign window makes this unpredictable.
+        </div>
+        <div class="post-metrics">
+          <div class="post-metric">67 likes</div>
+          <div class="post-metric">15 reposts</div>
+          <div class="post-metric">8 replies</div>
+        </div>
+        <a href="https://bsky.app/profile/dancassino.bsky.social" class="post-link" target="_blank">View on Bluesky &rarr;</a>
+      </div>
+
+      <div class="post-card" style="border-left-color: var(--kyanos-error);">
+        <div class="post-header">
+          <div class="post-avatar">TA</div>
+          <div class="post-author">
+            <div class="post-author-name">Track AIPAC</div>
+            <div class="post-author-handle">@trackaipac.bsky.social</div>
+          </div>
+          <div class="post-date">Jan 15, 2026</div>
+        </div>
+        <div class="post-content">
+          Tom Malinowski received significant AIPAC-affiliated donations in his previous campaigns. NJ-11 voters should know where his funding comes from.
+        </div>
+        <div class="post-metrics">
+          <div class="post-metric">156 likes</div>
+          <div class="post-metric">89 reposts</div>
+          <div class="post-metric">34 replies</div>
+        </div>
+        <a href="#" class="post-link" target="_blank">View on Bluesky &rarr;</a>
+        <div style="margin-top: 12px; padding: 12px; background: #fef2f2; border-radius: 8px;">
+          <strong style="color: var(--kyanos-error); font-size: 12px;">NEGATIVE SENTIMENT</strong>
+          <p style="font-size: 13px; color: #991b1b; margin: 8px 0 0 0;">This post is driving negative conversation about AIPAC contributions. Consider preparing counter-narrative content.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Trending Hashtags -->
+    <div class="section">
+      <div class="section-title">Trending Hashtags</div>
+      <div class="card">
+        <table class="influencer-table">
+          <thead>
+            <tr>
+              <th>Hashtag</th>
+              <th>Mentions</th>
+              <th>Trend</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#nj11</td>
+              <td>11</td>
+              <td><span class="sentiment-badge neutral">Stable</span></td>
+            </tr>
+            <tr>
+              <td>#newjersey</td>
+              <td>10</td>
+              <td><span class="sentiment-badge neutral">Stable</span></td>
+            </tr>
+            <tr>
+              <td>#malinowski</td>
+              <td>10</td>
+              <td><span class="sentiment-badge neutral">Stable</span></td>
+            </tr>
+            <tr>
+              <td>#analiliamejia</td>
+              <td>7</td>
+              <td><span class="sentiment-badge negative">Rising (Competitor)</span></td>
+            </tr>
+            <tr>
+              <td>#berniesanders</td>
+              <td>4</td>
+              <td><span class="sentiment-badge negative">Rising (Competitor)</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Data Source -->
+    <div class="card" style="background: var(--kyanos-slate); border: none;">
+      <h3 style="font-size: 14px; margin-bottom: 8px;">Data Source</h3>
+      <p style="font-size: 13px; margin: 0;">
+        <strong>Postwatch</strong> via Bluesky AT Protocol (public API) | Last updated: January 21, 2026<br>
+        Monitoring: @tommalinowski.bsky.social and NJ-11 related mentions
+      </p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p class="footer-brand">Kyanos<span>Tech</span></p>
+    <p>AI Presence Report: Malinowski for Congress (NJ-11) | January 2026</p>
+    <p style="margin-top: 16px; font-size: 11px; color: #9ca3af;">Powered by Postwatch Social Media Intelligence</p>
+  </footer>
+</body>
+</html>

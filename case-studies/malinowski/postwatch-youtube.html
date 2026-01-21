@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Intelligence | Postwatch | Malinowski for Congress</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --kyanos-navy: #1f2937;
+      --kyanos-blue: #3b82f6;
+      --kyanos-blue-dark: #1d4ed8;
+      --kyanos-gold: #f59e0b;
+      --kyanos-silver: #6b7280;
+      --kyanos-slate: #f8fafc;
+      --kyanos-cream: #fefce8;
+      --kyanos-success: #16a34a;
+      --kyanos-warning: #d97706;
+      --kyanos-error: #dc2626;
+      --kyanos-mid: #374151;
+      --kyanos-border: #e5e7eb;
+      --kyanos-white: #ffffff;
+      --postwatch-purple: #7c3aed;
+      --youtube-red: #ff0000;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--kyanos-slate);
+      color: var(--kyanos-navy);
+      line-height: 1.6;
+    }
+
+    .nav {
+      background: var(--kyanos-white);
+      border-bottom: 1px solid var(--kyanos-border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-brand {
+      font-weight: 800;
+      font-size: 20px;
+      color: var(--kyanos-navy);
+      padding: 16px 0;
+      text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+
+    .nav-brand span { color: var(--kyanos-blue); }
+    .nav-links { display: flex; gap: 0; }
+
+    .nav-link {
+      padding: 18px 20px;
+      text-decoration: none;
+      color: var(--kyanos-silver);
+      font-weight: 500;
+      font-size: 14px;
+      border-bottom: 3px solid transparent;
+      transition: all 0.2s;
+    }
+
+    .nav-link:hover { color: var(--kyanos-navy); }
+    .nav-link.active { color: var(--kyanos-blue); border-bottom-color: var(--kyanos-blue); font-weight: 600; }
+
+    .page-header {
+      background: linear-gradient(135deg, var(--postwatch-purple) 0%, var(--youtube-red) 100%);
+      color: var(--kyanos-white);
+      padding: 48px 24px;
+    }
+
+    .page-header-inner { max-width: 900px; margin: 0 auto; }
+
+    .page-header-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .page-header h1 { font-size: 36px; font-weight: 800; margin-bottom: 8px; letter-spacing: -0.5px; }
+    .page-header p { font-size: 16px; opacity: 0.9; max-width: 600px; }
+
+    .breadcrumb {
+      background: var(--kyanos-white);
+      border-bottom: 1px solid var(--kyanos-border);
+      padding: 12px 24px;
+    }
+
+    .breadcrumb-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      font-size: 13px;
+      color: var(--kyanos-silver);
+    }
+
+    .breadcrumb a {
+      color: var(--kyanos-blue);
+      text-decoration: none;
+    }
+
+    .breadcrumb a:hover { text-decoration: underline; }
+
+    .container { max-width: 900px; margin: 0 auto; padding: 48px 24px; }
+
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .metric-card {
+      background: var(--kyanos-white);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+      border: 1px solid var(--kyanos-border);
+      text-align: center;
+    }
+
+    .metric-value {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--kyanos-navy);
+      margin-bottom: 4px;
+    }
+
+    .metric-value.success { color: var(--kyanos-success); }
+    .metric-value.warning { color: var(--kyanos-warning); }
+    .metric-value.danger { color: var(--kyanos-error); }
+
+    .metric-label {
+      font-size: 12px;
+      color: var(--kyanos-silver);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .section { margin-bottom: 48px; }
+
+    .section-title {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--kyanos-silver);
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .section-title::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--kyanos-border);
+    }
+
+    .card {
+      background: var(--kyanos-white);
+      border-radius: 12px;
+      padding: 28px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+      border: 1px solid var(--kyanos-border);
+    }
+
+    .card h2 {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: var(--kyanos-navy);
+    }
+
+    .card h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: var(--kyanos-navy);
+    }
+
+    .card p {
+      font-size: 15px;
+      color: var(--kyanos-mid);
+      margin-bottom: 16px;
+      line-height: 1.7;
+    }
+
+    /* Video Card */
+    .video-card {
+      background: var(--kyanos-white);
+      border-radius: 12px;
+      margin-bottom: 24px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+      border: 1px solid var(--kyanos-border);
+      overflow: hidden;
+    }
+
+    .video-card.attack {
+      border: 2px solid var(--kyanos-error);
+    }
+
+    .video-card.positive {
+      border: 2px solid var(--kyanos-success);
+    }
+
+    .video-embed {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .video-embed iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .video-info {
+      padding: 20px;
+    }
+
+    .video-badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .video-badge.attack {
+      background: #fee2e2;
+      color: #991b1b;
+    }
+
+    .video-badge.positive {
+      background: #dcfce7;
+      color: #166534;
+    }
+
+    .video-badge.neutral {
+      background: #f3f4f6;
+      color: #4b5563;
+    }
+
+    .video-badge.competitor {
+      background: #fef3c7;
+      color: #92400e;
+    }
+
+    .video-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--kyanos-navy);
+      margin-bottom: 8px;
+    }
+
+    .video-channel {
+      font-size: 14px;
+      color: var(--kyanos-silver);
+      margin-bottom: 12px;
+    }
+
+    .video-stats {
+      display: flex;
+      gap: 20px;
+      font-size: 13px;
+      color: var(--kyanos-mid);
+      margin-bottom: 12px;
+    }
+
+    .video-stat {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .video-analysis {
+      background: var(--kyanos-slate);
+      border-radius: 8px;
+      padding: 16px;
+      margin-top: 16px;
+    }
+
+    .video-analysis h4 {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--kyanos-navy);
+      margin-bottom: 8px;
+    }
+
+    .video-analysis p {
+      font-size: 13px;
+      color: var(--kyanos-mid);
+      margin: 0;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--kyanos-blue);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+
+    .back-link:hover { text-decoration: underline; }
+
+    .alert-box {
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 24px;
+    }
+
+    .alert-box h3 {
+      color: var(--kyanos-error);
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    .alert-box p {
+      color: #991b1b;
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 48px 24px;
+      color: var(--kyanos-silver);
+      font-size: 13px;
+      border-top: 1px solid var(--kyanos-border);
+      background: var(--kyanos-white);
+    }
+
+    .footer-brand {
+      font-weight: 700;
+      color: var(--kyanos-navy);
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    .footer-brand span { color: var(--kyanos-blue); }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">Kyanos<span>Tech</span></a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Summary</a>
+        <a href="monitor.html" class="nav-link active">Monitor</a>
+        <a href="analyze.html" class="nav-link">Analyze</a>
+        <a href="fix.html" class="nav-link">Fix</a>
+        <a href="impact.html" class="nav-link">Impact</a>
+        <a href="methodology.html" class="nav-link">Methodology</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="breadcrumb">
+    <div class="breadcrumb-inner">
+      <a href="index.html">Report</a> / <a href="monitor.html">Monitor</a> / YouTube Intelligence
+    </div>
+  </div>
+
+  <div class="page-header">
+    <div class="page-header-inner">
+      <div class="page-header-badge">
+        <span>Postwatch</span> | YouTube
+      </div>
+      <h1>YouTube Intelligence</h1>
+      <p>Video content monitoring via YouTube Data API. Campaign videos, attack ads, endorsements, and political coverage.</p>
+    </div>
+  </div>
+
+  <main class="container">
+    <a href="monitor.html" class="back-link">&larr; Back to Monitor</a>
+
+    <!-- Key Metrics -->
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <div class="metric-value danger">256K</div>
+        <div class="metric-label">Attack Ad Views</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value">10+</div>
+        <div class="metric-label">Videos Found</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value warning">16K</div>
+        <div class="metric-label">Competitor Views</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value">534</div>
+        <div class="metric-label">Campaign Video Views</div>
+      </div>
+    </div>
+
+    <!-- Alert -->
+    <div class="alert-box">
+      <h3>Attack Ads Running</h3>
+      <p>The 218 Project has attack ads against Malinowski with over 256,000 combined views. These videos are largely unanswered and are reinforcing negative narratives that appear in AI responses.</p>
+    </div>
+
+    <!-- Attack Ads Section -->
+    <div class="section">
+      <div class="section-title">Attack Ads (218 Project)</div>
+
+      <div class="video-card attack">
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/51IvwP_97ic" allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+          <span class="video-badge attack">Attack Ad</span>
+          <h3 class="video-title">Jan 6 Malinowski 2</h3>
+          <div class="video-channel">218 Project | Posted Dec 17, 2025</div>
+          <div class="video-stats">
+            <div class="video-stat"><strong>256,658</strong> views</div>
+          </div>
+          <div class="video-analysis">
+            <h4>Analysis</h4>
+            <p>Highest-viewed attack ad in the race. Uses January 6th footage and Malinowski's congressional record. This is part of a coordinated negative campaign that has gone largely unanswered.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card attack">
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/tn8_lEUAh9s" allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+          <span class="video-badge attack">Attack Ad</span>
+          <h3 class="video-title">Malinowski Corruption</h3>
+          <div class="video-channel">218 Project | Posted Dec 15, 2025</div>
+          <div class="video-stats">
+            <div class="video-stat"><strong>783</strong> views</div>
+          </div>
+          <div class="video-analysis">
+            <h4>Analysis</h4>
+            <p>Focuses on stock trading ethics allegations. Reinforces the narrative that AI platforms are surfacing. The campaign should consider response content.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Competitor Content -->
+    <div class="section">
+      <div class="section-title">Competitor Content - Analilia Mejia</div>
+
+      <div class="video-card" style="border: 2px solid var(--kyanos-warning);">
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/LnJX81bH98c" allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+          <span class="video-badge competitor">Competitor - Bernie Endorsement</span>
+          <h3 class="video-title">Fighting Oligarchy with Analilia Mejia in New Jersey</h3>
+          <div class="video-channel">Bernie Sanders | Posted Jan 20, 2026</div>
+          <div class="video-stats">
+            <div class="video-stat"><strong>16,180</strong> views in 24 hours</div>
+          </div>
+          <div class="video-analysis">
+            <h4>Analysis</h4>
+            <p>Bernie Sanders officially endorsed Mejia. Posted to his channel (4.7M subscribers), this video is rapidly gaining views and positioning Mejia as the progressive alternative. This is the biggest endorsement event in the race.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/3S2QmTnHZw8" allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+          <span class="video-badge competitor">Competitor Clip</span>
+          <h3 class="video-title">Analilia Mejia: "...I say abolish ICE now!"</h3>
+          <div class="video-channel">Progressive Heroes | Posted Jan 20, 2026</div>
+          <div class="video-stats">
+            <div class="video-stat"><strong>1,034</strong> views</div>
+          </div>
+          <div class="video-analysis">
+            <h4>Analysis</h4>
+            <p>Clip from Bernie rally highlighting Mejia's progressive positions. Potential opposition research material if she advances to general election.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Campaign Content -->
+    <div class="section">
+      <div class="section-title">Malinowski Campaign Content</div>
+
+      <div class="video-card positive">
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/kCwi7E2Y62Y" allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+          <span class="video-badge positive">Campaign Bio</span>
+          <h3 class="video-title">Record</h3>
+          <div class="video-channel">Team Malinowski | Posted Dec 17, 2025</div>
+          <div class="video-stats">
+            <div class="video-stat"><strong>534</strong> views</div>
+          </div>
+          <div class="video-analysis">
+            <h4>Analysis</h4>
+            <p>Official campaign bio video. View count significantly lower than attack ads. Consider YouTube advertising to boost visibility.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card positive">
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/J37SSCv1UxI" allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+          <span class="video-badge positive">Supportive Content</span>
+          <h3 class="video-title">Comeback Kid vs. the Fascist Flame: Tom Malinowski Runs Into the Fire</h3>
+          <div class="video-channel">JoJoFromJerz | Posted Dec 17, 2025</div>
+          <div class="video-stats">
+            <div class="video-stat"><strong>801</strong> views</div>
+          </div>
+          <div class="video-analysis">
+            <h4>Analysis</h4>
+            <p>Third-party supportive content. The campaign should amplify this type of content to balance the attack ad narrative.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Forum/Interview Content -->
+    <div class="section">
+      <div class="section-title">Forums & Interviews</div>
+
+      <div class="video-card">
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/3h6cY7smzBc" allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+          <span class="video-badge neutral">Forum</span>
+          <h3 class="video-title">JDCA NJ-11 Democratic Primary Issues Forum</h3>
+          <div class="video-channel">Jewish Democratic Council of America | Posted Jan 14, 2026</div>
+          <div class="video-stats">
+            <div class="video-stat"><strong>42</strong> views</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/gRJaGc1A9nQ" allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+          <span class="video-badge neutral">Candidate Discussion</span>
+          <h3 class="video-title">Congressional Candidates District 11 discussion (Croft, Malinowski, Gill)</h3>
+          <div class="video-channel">1in6 Support | Posted Jan 9, 2026</div>
+          <div class="video-stats">
+            <div class="video-stat"><strong>37</strong> views</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Data Source -->
+    <div class="card" style="background: var(--kyanos-slate); border: none;">
+      <h3 style="font-size: 14px; margin-bottom: 8px;">Data Source</h3>
+      <p style="font-size: 13px; margin: 0;">
+        <strong>Postwatch</strong> via YouTube Data API v3 | Last updated: January 21, 2026<br>
+        Search terms: "Tom Malinowski", "NJ-11 election", competitor names
+      </p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p class="footer-brand">Kyanos<span>Tech</span></p>
+    <p>AI Presence Report: Malinowski for Congress (NJ-11) | January 2026</p>
+    <p style="margin-top: 16px; font-size: 11px; color: #9ca3af;">Powered by Postwatch Social Media Intelligence</p>
+  </footer>
+</body>
+</html>

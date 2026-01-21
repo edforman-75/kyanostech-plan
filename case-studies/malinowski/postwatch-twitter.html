@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>X/Twitter Intelligence | Postwatch | Malinowski for Congress</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --kyanos-navy: #1f2937;
+      --kyanos-blue: #3b82f6;
+      --kyanos-blue-dark: #1d4ed8;
+      --kyanos-gold: #f59e0b;
+      --kyanos-silver: #6b7280;
+      --kyanos-slate: #f8fafc;
+      --kyanos-cream: #fefce8;
+      --kyanos-success: #16a34a;
+      --kyanos-warning: #d97706;
+      --kyanos-error: #dc2626;
+      --kyanos-mid: #374151;
+      --kyanos-border: #e5e7eb;
+      --kyanos-white: #ffffff;
+      --postwatch-purple: #7c3aed;
+      --twitter-black: #14171a;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--kyanos-slate);
+      color: var(--kyanos-navy);
+      line-height: 1.6;
+    }
+
+    .nav {
+      background: var(--kyanos-white);
+      border-bottom: 1px solid var(--kyanos-border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-brand {
+      font-weight: 800;
+      font-size: 20px;
+      color: var(--kyanos-navy);
+      padding: 16px 0;
+      text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+
+    .nav-brand span { color: var(--kyanos-blue); }
+    .nav-links { display: flex; gap: 0; }
+
+    .nav-link {
+      padding: 18px 20px;
+      text-decoration: none;
+      color: var(--kyanos-silver);
+      font-weight: 500;
+      font-size: 14px;
+      border-bottom: 3px solid transparent;
+      transition: all 0.2s;
+    }
+
+    .nav-link:hover { color: var(--kyanos-navy); }
+    .nav-link.active { color: var(--kyanos-blue); border-bottom-color: var(--kyanos-blue); font-weight: 600; }
+
+    .page-header {
+      background: linear-gradient(135deg, var(--postwatch-purple) 0%, var(--twitter-black) 100%);
+      color: var(--kyanos-white);
+      padding: 48px 24px;
+    }
+
+    .page-header-inner { max-width: 900px; margin: 0 auto; }
+
+    .page-header-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .page-header h1 { font-size: 36px; font-weight: 800; margin-bottom: 8px; letter-spacing: -0.5px; }
+    .page-header p { font-size: 16px; opacity: 0.9; max-width: 600px; }
+
+    .breadcrumb {
+      background: var(--kyanos-white);
+      border-bottom: 1px solid var(--kyanos-border);
+      padding: 12px 24px;
+    }
+
+    .breadcrumb-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      font-size: 13px;
+      color: var(--kyanos-silver);
+    }
+
+    .breadcrumb a {
+      color: var(--kyanos-blue);
+      text-decoration: none;
+    }
+
+    .breadcrumb a:hover { text-decoration: underline; }
+
+    .container { max-width: 900px; margin: 0 auto; padding: 48px 24px; }
+
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .metric-card {
+      background: var(--kyanos-white);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+      border: 1px solid var(--kyanos-border);
+      text-align: center;
+    }
+
+    .metric-value {
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--kyanos-navy);
+      margin-bottom: 4px;
+    }
+
+    .metric-value.success { color: var(--kyanos-success); }
+    .metric-value.warning { color: var(--kyanos-warning); }
+    .metric-value.danger { color: var(--kyanos-error); }
+
+    .metric-label {
+      font-size: 12px;
+      color: var(--kyanos-silver);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 600;
+    }
+
+    .section {
+      background: var(--kyanos-white);
+      border-radius: 12px;
+      padding: 32px;
+      margin-bottom: 24px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+      border: 1px solid var(--kyanos-border);
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--kyanos-border);
+    }
+
+    .section-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+    }
+
+    .section-icon.twitter { background: linear-gradient(135deg, #14171a 0%, #657786 100%); }
+
+    .section h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--kyanos-navy);
+    }
+
+    .section h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--kyanos-navy);
+      margin: 24px 0 12px 0;
+    }
+
+    .section h3:first-of-type { margin-top: 0; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+    }
+
+    th, td {
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid var(--kyanos-border);
+    }
+
+    th {
+      background: var(--kyanos-slate);
+      font-weight: 600;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--kyanos-silver);
+    }
+
+    td { font-size: 14px; }
+
+    .account-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .verified-badge {
+      background: var(--kyanos-blue);
+      color: white;
+      font-size: 10px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    .placeholder-section {
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+      border: 2px dashed var(--kyanos-border);
+      border-radius: 12px;
+      padding: 48px;
+      text-align: center;
+    }
+
+    .placeholder-icon {
+      font-size: 48px;
+      margin-bottom: 16px;
+    }
+
+    .placeholder-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--kyanos-navy);
+      margin-bottom: 8px;
+    }
+
+    .placeholder-text {
+      font-size: 14px;
+      color: var(--kyanos-silver);
+      max-width: 500px;
+      margin: 0 auto 24px auto;
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--kyanos-cream);
+      border: 1px solid var(--kyanos-gold);
+      color: var(--kyanos-warning);
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .post-card {
+      background: var(--kyanos-slate);
+      border: 1px solid var(--kyanos-border);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 16px;
+    }
+
+    .post-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 12px;
+    }
+
+    .post-author {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .author-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #14171a 0%, #657786 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .author-name { font-weight: 600; color: var(--kyanos-navy); }
+    .author-handle { font-size: 13px; color: var(--kyanos-silver); }
+
+    .post-platform {
+      background: var(--twitter-black);
+      color: white;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .post-content {
+      font-size: 15px;
+      line-height: 1.5;
+      margin-bottom: 12px;
+    }
+
+    .post-meta {
+      display: flex;
+      gap: 20px;
+      font-size: 13px;
+      color: var(--kyanos-silver);
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--kyanos-blue);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 14px;
+      margin-top: 32px;
+    }
+
+    .back-link:hover { text-decoration: underline; }
+
+    .info-banner {
+      background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+      border: 1px solid #93c5fd;
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-bottom: 32px;
+    }
+
+    .info-banner-title {
+      font-weight: 600;
+      color: var(--kyanos-blue-dark);
+      margin-bottom: 4px;
+    }
+
+    .info-banner-text {
+      font-size: 14px;
+      color: var(--kyanos-mid);
+    }
+
+    @media (max-width: 768px) {
+      .metrics-grid { grid-template-columns: repeat(2, 1fr); }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">Kyanos<span>Tech</span></a>
+      <div class="nav-links">
+        <a href="monitor.html" class="nav-link active">Monitor</a>
+        <a href="analyze.html" class="nav-link">Analyze</a>
+        <a href="fix.html" class="nav-link">Fix</a>
+        <a href="impact.html" class="nav-link">Impact</a>
+        <a href="methodology.html" class="nav-link">Methodology</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="page-header-inner">
+      <div class="page-header-badge">
+        <span>POSTWATCH</span>
+        <span>X/Twitter</span>
+      </div>
+      <h1>X/Twitter Intelligence</h1>
+      <p>Real-time monitoring of X/Twitter mentions, influencers, and political discourse via Brand24 integration.</p>
+    </div>
+  </header>
+
+  <div class="breadcrumb">
+    <div class="breadcrumb-inner">
+      <a href="index.html">Report</a> &rarr;
+      <a href="monitor.html">Monitor</a> &rarr;
+      <a href="monitor.html#postwatch">Postwatch</a> &rarr;
+      X/Twitter
+    </div>
+  </div>
+
+  <main class="container">
+
+    <div class="info-banner">
+      <div class="info-banner-title">Brand24 Integration</div>
+      <div class="info-banner-text">X/Twitter data is monitored via Brand24's social listening platform, providing comprehensive mention tracking, sentiment analysis, and influencer identification across X/Twitter.</div>
+    </div>
+
+    <!-- Metrics Summary -->
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <div class="metric-value">~50</div>
+        <div class="metric-label">X Mentions</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value warning">45%</div>
+        <div class="metric-label">Negative</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value">35%</div>
+        <div class="metric-label">Positive</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value">20%</div>
+        <div class="metric-label">Neutral</div>
+      </div>
+    </div>
+
+    <!-- Key Accounts Section -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon twitter">X</div>
+        <h2>Key X/Twitter Accounts</h2>
+      </div>
+
+      <h3>Candidate Accounts</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Candidate</th>
+            <th>Handle</th>
+            <th>Followers</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Tom Malinowski</strong></td>
+            <td>@Malinowski</td>
+            <td>61,600</td>
+            <td><span class="verified-badge">Active</span></td>
+          </tr>
+          <tr>
+            <td>Tahesha Way</td>
+            <td>@TaheshaWayNJ</td>
+            <td>5,200+</td>
+            <td><span class="verified-badge">Active</span></td>
+          </tr>
+          <tr>
+            <td>Brendan Gill</td>
+            <td>@BrendanWGill</td>
+            <td>2,100+</td>
+            <td>Active</td>
+          </tr>
+          <tr>
+            <td>Analilia Mejia</td>
+            <td>@analikiwa</td>
+            <td>3,800+</td>
+            <td>Active</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Key Influencers Mentioning Malinowski</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Handle</th>
+            <th>Followers</th>
+            <th>Content Type</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>@TrackAIPAC</td>
+            <td>20,452</td>
+            <td>Critical - AIPAC tracking</td>
+          </tr>
+          <tr>
+            <td>@ZaidJilani</td>
+            <td>7,461</td>
+            <td>Political commentary</td>
+          </tr>
+          <tr>
+            <td>@LizzieKFoley</td>
+            <td>3,388</td>
+            <td>NJ politics coverage</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Sample Posts Section -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon twitter">X</div>
+        <h2>Sample X/Twitter Mentions</h2>
+      </div>
+
+      <div class="post-card">
+        <div class="post-header">
+          <div class="post-author">
+            <div class="author-avatar">TA</div>
+            <div>
+              <div class="author-name">Track AIPAC</div>
+              <div class="author-handle">@TrackAIPAC</div>
+            </div>
+          </div>
+          <span class="post-platform">X</span>
+        </div>
+        <div class="post-content">
+          Tom Malinowski is accepting AIPAC PAC money in his bid for NJ-11. This is the same PAC that spent millions against progressive candidates in 2024.
+        </div>
+        <div class="post-meta">
+          <span>Jan 15, 2026</span>
+          <span>247 likes</span>
+          <span>89 reposts</span>
+        </div>
+      </div>
+
+      <div class="post-card">
+        <div class="post-header">
+          <div class="post-author">
+            <div class="author-avatar">ZJ</div>
+            <div>
+              <div class="author-name">Zaid Jilani</div>
+              <div class="author-handle">@ZaidJilani</div>
+            </div>
+          </div>
+          <span class="post-platform">X</span>
+        </div>
+        <div class="post-content">
+          The NJ-11 race is shaping up to be a proxy battle between establishment and progressive wings of the Democratic Party. Malinowski vs. Mejia could be the primary to watch.
+        </div>
+        <div class="post-meta">
+          <span>Jan 18, 2026</span>
+          <span>156 likes</span>
+          <span>52 reposts</span>
+        </div>
+      </div>
+
+      <div class="post-card">
+        <div class="post-header">
+          <div class="post-author">
+            <div class="author-avatar">LF</div>
+            <div>
+              <div class="author-name">Lizzie Foley</div>
+              <div class="author-handle">@LizzieKFoley</div>
+            </div>
+          </div>
+          <span class="post-platform">X</span>
+        </div>
+        <div class="post-content">
+          Andrew Kim's endorsement of Malinowski signals the moderate wing is consolidating. But will it be enough against the progressive energy behind Mejia?
+        </div>
+        <div class="post-meta">
+          <span>Jan 19, 2026</span>
+          <span>92 likes</span>
+          <span>31 reposts</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Coming Soon Section -->
+    <div class="placeholder-section">
+      <div class="placeholder-icon">X</div>
+      <div class="placeholder-title">Full X/Twitter Data Coming Soon</div>
+      <div class="placeholder-text">
+        Complete X/Twitter monitoring with real-time mention tracking, sentiment analysis, and influencer identification will be available once Brand24 integration is fully configured.
+      </div>
+      <div class="status-badge">
+        <span>Brand24 Integration Pending</span>
+      </div>
+    </div>
+
+    <a href="monitor.html#postwatch" class="back-link">
+      &larr; Back to Postwatch Overview
+    </a>
+
+  </main>
+
+</body>
+</html>
