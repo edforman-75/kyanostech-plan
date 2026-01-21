@@ -14,6 +14,8 @@
 
 **Digital Presence Optimization delivers 10-100x the return on investment of traditional campaign advertising.**
 
+Internet Presence Optimization covers three surfaces: AI chatbots (ChatGPT, Claude, Perplexity, Grok, Meta AI), AI-integrated search (Google AI Overviews, Bing Copilot), and traditional search results.
+
 This isn't speculation. It's supported by peer-reviewed research published in the world's most prestigious scientific journals.
 
 ---

@@ -14,13 +14,13 @@ Kyanos is a family of AI-driven analytical and remediation services that help pr
 
 ## Sections
 
-[**Executive Summary**](ky-executive-summary.md): The mission, the products, and the ask—what we're building and why it matters now.
+[**Executive Summary**](ky-executive-summary.md): The mission, the capabilities, and the ask—what we're building and why it matters now.
 
 [**Problem & Market Opportunity**](ky-problem-urgency.md): How AI is reshaping political information discovery and the market opportunity for progressive campaigns.
 
 [**Solution & Theory of Change**](ky-solution-theory.md): The causality chain methodology—Observe, Trace, Diagnose, Prescribe—and how Panopticon works.
 
-[**Product Strategy & Technology**](ky-products-tech.md): The full product suite—Panopticon, GoodInk, Adwatch, TripWire—and the Bentham infrastructure.
+[**Product Strategy & Technology**](ky-products-tech.md): The full capabilities—Panopticon, GoodInk, Adwatch, TripWire—and the Bentham infrastructure.
 
 [**Market & Financial Opportunity**](ky-market-opportunity.md): Unit economics, revenue projections, and the path to sustainability.
 
@@ -42,7 +42,7 @@ Kyanos is a family of AI-driven analytical and remediation services that help pr
 |------|--------|
 | **Mission** | Keep progressives visible in the AI era |
 | **Structure** | Trust-Owned LLC |
-| **Products** | Panopticon, GoodInk, Adwatch, TripWire |
+| **Capabilities** | Panopticon, GoodInk, Adwatch, TripWire, PostWatch |
 | **Funding Ask** | $1,000,000 ($750K min, $1.25M reach) |
 | **2026 Clients** | 200 (free access) |
 | **2028 Revenue** | $2.8M |
@@ -50,14 +50,15 @@ Kyanos is a family of AI-driven analytical and remediation services that help pr
 
 ---
 
-## The Products
+## Product Capabilities
 
-| Product | Function |
+| Capability | Function |
 |---------|----------|
 | **Panopticon** | AI monitoring + remediation across major surfaces |
 | **GoodInk** | Positive press discovery for campaigns to feature |
 | **Adwatch** | Political advertising monitoring across Google and Meta |
 | **TripWire** | Opponent website change detection |
+| **PostWatch** | Social media monitoring across YouTube, Bluesky, and X |
 
 ---
 

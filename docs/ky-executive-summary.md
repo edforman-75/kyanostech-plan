@@ -8,7 +8,7 @@
 
 When voters ask AI about a candidate, the answer should be accurate—not a hallucination, not a hedge, not the opponent's framing.
 
-Kyanos is a family of AI-driven analytical and remediation services that help progressive candidates, organizations, and causes manage their digital presence. We monitor how AI systems, search engines, advertising platforms, and opponents represent our clients—then provide specific, actionable fixes that campaigns can implement immediately.
+Kyanos is an internet presence optimization platform that ensures progressive candidates, organizations, and causes are accurately and favorably represented across three surfaces: AI chatbots (ChatGPT, Claude, Perplexity, Grok, Meta AI), AI-integrated search (Google AI Overviews, Bing Copilot), and traditional search results. We monitor, diagnose, and provide specific, actionable fixes that campaigns can implement immediately.
 
 <div class="callout-info">
 <div class="callout-title">Why Kyanos</div>
@@ -49,14 +49,15 @@ Internet Presence Optimization ensures media dollars convert. It's the highest-i
 
 AI platforms are subject to pressure from a President who demands loyalty. Kyanos continuously monitors how major AI systems respond to questions about progressive candidates and issues, detects geographic variation through Watchtower, and builds an evidence base of platform behavior over time. If models shift against progressives, we'll know first and sound the alarm.
 
-## The Products
+## Product Capabilities
 
-Kyanos offers a suite of services:
+Kyanos offers five capabilities:
 
-- **Panopticon:** Core AI monitoring and remediation across major surfaces
+- **Panopticon:** Core monitoring and remediation across three surfaces: AI chatbots, AI-integrated search, and traditional search
 - **GoodInk:** Positive press discovery for campaigns to feature
 - **Adwatch:** Political advertising monitoring across Google and Meta
 - **TripWire:** Opponent website change detection
+- **PostWatch:** Social media monitoring across YouTube, Bluesky, and X
 
 ## The Methodology
 

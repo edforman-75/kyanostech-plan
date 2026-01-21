@@ -5,6 +5,8 @@ copyright: Copyright &copy; 2026 KyanosTech
 
 theme:
   name: material
+  logo: assets/brand/logos/kyanos-main.svg
+  favicon: assets/brand/logos/kyanos-favicon.ico
   palette:
     scheme: default
     primary: indigo
@@ -32,7 +34,7 @@ nav:
 - Two Scares That Reshape 2026–2028: Two_Scares.md
 - Problem & Urgency: ky-problem-urgency.md
 - Solution & Theory of Change: ky-solution-theory.md
-- Product Strategy & Technology: ky-products-tech.md
+- Capabilities & Technology: ky-products-tech.md
 - Market & Financial Overview: ky-market-opportunity.md
 - Business Model: ky-business-model.md
 - Go-To-Market: ky-go-to-market.md

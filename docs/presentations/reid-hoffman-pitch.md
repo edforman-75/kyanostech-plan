@@ -323,20 +323,21 @@ And we don't walk away. We track implementation and confirm when AI systems upda
 
 **TRANSITION TO SLIDE 8:**
 
-"Beyond Panopticon, we have a complete product suite..."
+"Beyond Panopticon, we have a complete set of product capabilities..."
 
 ---
 
-# SLIDE 8: THE PRODUCT SUITE
+# SLIDE 8: PRODUCT CAPABILITIES
 
-## Four Products, One Platform
+## Five Capabilities, One Platform
 
-| Product | Function | Status |
+| Capability | Function | Status |
 |---------|----------|--------|
 | **Panopticon** | Core AI monitoring and remediation | MVP+ |
 | **GoodInk** | Positive press discovery for campaigns to feature | MVP |
 | **Adwatch** | Political ad monitoring across Google and Meta | MVP |
 | **TripWire** | Opponent website change detection | MVP |
+| **PostWatch** | Social media monitoring (YouTube, Bluesky, X) | MVP |
 
 ### Watchtower
 
@@ -348,7 +349,7 @@ Kyanos's distributed observation network for geographic monitoring.
 
 ### Bentham Infrastructure
 
-The extraction engine powering all products.
+The extraction engine powering all capabilities.
 
 - Queries AI systems at scale
 - Captures responses with full context
@@ -586,7 +587,7 @@ The board of trustees governs the trust and ensures mission fidelity. Major fund
 
 - **Free 2026 access** for 200 campaigns (~$330K investment in reference base)
 - **Core team** of 5 to build and operate the platform
-- **Complete product development** for Panopticon, GoodInk, Adwatch, TripWire
+- **Complete capability development** for Panopticon, GoodInk, Adwatch, TripWire, PostWatch
 - **Self-sustaining by 2028** with +$850K annual surplus
 
 ---
@@ -693,7 +694,7 @@ forman.ed@gmail.com
 | 4 | 5 (Platform Risk) | "But there's another dimension to this that I know you've been thinking about..." |
 | 5 | 6 (Solution) | "So what exactly are we building?" |
 | 6 | 7 (How It Works) | "Let me show you how this works in practice..." |
-| 7 | 8 (Products) | "Beyond Panopticon, we have a complete product suite..." |
+| 7 | 8 (Capabilities) | "Beyond Panopticon, we have a complete set of product capabilities..." |
 | 8 | 9 (How We Operate) | "Now let me explain how we've structured this to be permanent and accountable..." |
 | 9 | 10 (Market) | "Here's the market we're going after..." |
 | 10 | 11 (Competition) | "You're going to ask about competition..." |

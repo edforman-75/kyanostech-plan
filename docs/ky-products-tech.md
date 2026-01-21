@@ -1,17 +1,18 @@
-# Product Strategy & Technology
+# Capabilities & Technology
 
-Kyanos is a family of AI-driven services built on shared infrastructure. Each product serves a distinct purpose in keeping progressive campaigns visible and informed.
+Kyanos is a family of AI-driven services built on shared infrastructure. Each capability serves a distinct purpose in keeping progressive campaigns visible and informed.
 
 ---
 
-## The Product Suite
+## Product Capabilities
 
-| Product | Function | Included In |
+| Capability | Function | Included In |
 |---------|----------|-------------|
 | **Panopticon** | AI monitoring + remediation | All tiers |
 | **GoodInk** | Positive press discovery | Congressional+ |
 | **Adwatch** | Ad monitoring | Congressional+ |
 | **TripWire** | Opponent site monitoring | Congressional+ |
+| **PostWatch** | Social media monitoring (YouTube, Bluesky, X) | Congressional+ |
 | **Watchtower** | Geographic variation detection | Statewide+ |
 
 ---
@@ -175,14 +176,14 @@ Watchtower are Kyanos's distributed observation network. Sensor stations in mult
 
 ## Shared Infrastructure: Bentham
 
-All Kyanos products are powered by **Bentham**, our multi-tenant extraction infrastructure.
+All Kyanos capabilities are powered by **Bentham**, our multi-tenant extraction infrastructure.
 
 ### What Bentham Does
 
 - Runs AI extraction studies at scale
 - Manages geographic variation through regional proxy infrastructure
 - Provides consistent, reliable data collection across platforms
-- Supports multiple tenants (Kyanos products + commercial services)
+- Supports multiple tenants (Kyanos capabilities + commercial services)
 
 ### Why This Matters
 
@@ -193,7 +194,7 @@ All Kyanos products are powered by **Bentham**, our multi-tenant extraction infr
 
 ### Commercial Potential
 
-Bentham is highly adaptable and marketable. The same infrastructure that powers Kyanos products can serve commercial AI monitoring clients across industries. However, aggressively pursuing commercial revenue before the 2028 cycle is complete could distract from the core political mission. Commercial services will remain a secondary revenue stream until Kyanos has established itself as essential progressive infrastructure.
+Bentham is highly adaptable and marketable. The same infrastructure that powers Kyanos capabilities can serve commercial AI monitoring clients across industries. However, aggressively pursuing commercial revenue before the 2028 cycle is complete could distract from the core political mission. Commercial services will remain a secondary revenue stream until Kyanos has established itself as essential progressive infrastructure.
 
 ---
 
@@ -241,10 +242,10 @@ We are monitoring the adoption of agentic AI technologies that could enable dire
 
 ### Expanded Services
 
-Beyond the current product suite, we see opportunities to help progressive campaigns and organizations stay ahead in online presence management. Future services may include proactive content recommendations, competitive positioning analysis, and deeper integration with campaign tech stacks.
+Beyond the current capabilities, we see opportunities to help progressive campaigns and organizations stay ahead in online presence management. Future services may include proactive content recommendations, competitive positioning analysis, and deeper integration with campaign tech stacks.
 
 ---
 
 <div class="callout-bottomline">
-<p><strong>One platform. Four products. Complete visibility into how AI and search engines see progressive campaigns.</strong></p>
+<p><strong>One platform. Five capabilities. Complete visibility into how AI and search engines see progressive campaigns.</strong></p>
 </div>
