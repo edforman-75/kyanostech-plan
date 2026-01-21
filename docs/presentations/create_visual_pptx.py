@@ -878,7 +878,7 @@ TRANSITION: "Beyond Panopticon, we have a complete product suite..." """)
         p.font.size = Pt(14)
         p.font.color.rgb = GRAY
 
-    # Watchtower callout at bottom
+    # WatchTower callout at bottom
     watch = slide.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(0.8), Inches(6.3), Inches(11.8), Inches(0.8))
     set_shape_color(watch, BLUE_DARK)
     watch.adjustments[0] = 0.15
@@ -902,7 +902,7 @@ AdWatch monitors political advertising—what opponents are running, where, and 
 
 TripWire watches opponent websites. When they update messaging, campaigns know immediately.
 
-All powered by Watchtower, our distributed observation network for geographic monitoring."
+All powered by WatchTower, our distributed observation network for geographic monitoring."
 
 TRANSITION: "Now let me explain how we've structured this to be permanent and accountable..." """)
 

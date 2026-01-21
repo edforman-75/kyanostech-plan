@@ -810,7 +810,7 @@ TRANSITION: "Beyond Panopticon, we have a complete product suite..." """)
         p.font.size = Pt(14)
         p.font.color.rgb = GRAY
 
-    # Watchtower callout
+    # WatchTower callout
     watch = slide.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(0.8), Inches(6.3), Inches(11.8), Inches(0.9))
     set_shape_color(watch, RgbColor(0x00, 0x60, 0x64))
     watch.adjustments[0] = 0.15
@@ -830,7 +830,7 @@ TRANSITION: "Beyond Panopticon, we have a complete product suite..." """)
 
 GoodInk surfaces positive press coverage. AdWatch monitors opponent advertising. TripWire detects when competitors change messaging.
 
-Watchtower is our geographic monitoring network—it detects regional AI variation, critical for statewide and national campaigns."
+WatchTower is our geographic monitoring network—it detects regional AI variation, critical for statewide and national campaigns."
 
 TRANSITION: "Now let me explain how we've structured this to be permanent and accountable..." """)
 

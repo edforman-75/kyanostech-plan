@@ -35,7 +35,7 @@ Based on actual Bentham infrastructure costs, scaled by tier:
 |------|---------|---------------|-------|
 | Local | 60 (20×3×1) | ~$15 | Minimal scope |
 | Congress | 315 (35×3×3) | ~$25 | Moderate scope |
-| Statewide | 1,500 (50×3×10) | ~$40 | Watchtower |
+| Statewide | 1,500 (50×3×10) | ~$40 | WatchTower |
 | National | 5,625 (75×3×25) | ~$75 | Full coverage |
 
 ### Margin by Tier (Full Cycle, After Discounts)

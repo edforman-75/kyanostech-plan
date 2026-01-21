@@ -47,7 +47,7 @@ Internet Presence Optimization ensures media dollars convert. It's the highest-i
 
 ## The Watchdog Role
 
-AI platforms are subject to pressure from a President who demands loyalty. Kyanos continuously monitors how major AI systems respond to questions about progressive candidates and issues, detects geographic variation through Watchtower, and builds an evidence base of platform behavior over time. If models shift against progressives, we'll know first and sound the alarm.
+AI platforms are subject to pressure from a President who demands loyalty. Kyanos continuously monitors how major AI systems respond to questions about progressive candidates and issues, detects geographic variation through WatchTower, and builds an evidence base of platform behavior over time. If models shift against progressives, we'll know first and sound the alarm.
 
 ## Product Capabilities
 

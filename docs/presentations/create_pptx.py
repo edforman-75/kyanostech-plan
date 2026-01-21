@@ -271,7 +271,7 @@ TRANSITION: "Let me show you how this works in practice..." """)
         "**Phase 1: Monitor**",
         "• Query AI surfaces (Google AI Overviews, ChatGPT, Meta AI)",
         "• Test questions voters actually ask about the candidate",
-        "• Watchtower detects geographic variation",
+        "• WatchTower detects geographic variation",
         "",
         "**Phase 2: Prioritize**",
         "• Trace errors to root causes (Wikipedia? News? Campaign site?)",
@@ -316,7 +316,7 @@ TripWire watches opponent websites for changes. When they update their messaging
 All of this runs on Bentham, our extraction infrastructure. It's named after Jeremy Bentham, the philosopher who designed the original Panopticon."
 
 ADDITIONAL:
-• Watchtower: Distributed observation network for geographic monitoring
+• WatchTower: Distributed observation network for geographic monitoring
 • Bentham Infrastructure: The extraction engine powering all products
 
 TRANSITION: "Now let me explain how we've structured this to be permanent and accountable..." """)

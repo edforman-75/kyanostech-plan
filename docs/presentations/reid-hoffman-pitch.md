@@ -257,7 +257,7 @@ A family of AI-driven services that help progressive campaigns manage their digi
 ### The Watchdog Role
 
 - Continuous monitoring across platforms
-- Geographic variation detection through Watchtower
+- Geographic variation detection through WatchTower
 - Evidence base of platform behavior over time
 - **If models shift against progressives, we know first and sound the alarm**
 
@@ -288,7 +288,7 @@ We don't just hand over a report. We monitor execution, coach the team through i
   - **AI-integrated search:** Google AI Overviews, Bing Copilot
   - **Traditional search results**
 - Test questions voters actually ask about the candidate
-- Watchtower detects geographic variation
+- WatchTower detects geographic variation
 
 **Deliverable:** Dashboard showing exactly what voters see
 
@@ -339,7 +339,7 @@ And we don't walk away. We track implementation and confirm when AI systems upda
 | **TripWire** | Opponent website change detection | MVP |
 | **PostWatch** | Social media monitoring (YouTube, Bluesky, X) | MVP |
 
-### Watchtower
+### WatchTower
 
 Kyanos's distributed observation network for geographic monitoring.
 

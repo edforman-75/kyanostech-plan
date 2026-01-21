@@ -13,7 +13,7 @@ Kyanos is a family of AI-driven services built on shared infrastructure. Each ca
 | **AdWatch** | Ad monitoring | Congressional+ |
 | **TripWire** | Opponent site monitoring | Congressional+ |
 | **PostWatch** | Social media monitoring (YouTube, Bluesky, X) | Congressional+ |
-| **Watchtower** | Geographic variation detection | Statewide+ |
+| **WatchTower** | Geographic variation detection | Statewide+ |
 
 ---
 
@@ -38,7 +38,7 @@ Panopticon is the flagship product. It works in three phases: **Monitor → Prio
 - Shows exactly what voters see when they search for the candidate
 - Traces errors to fixable root causes (Wikipedia, Ballotpedia, news articles, campaign site)
 - Delivers targeted instructions: approver gets the recommendation, implementer gets the steps
-- Watchtower detect geographic variation (Statewide/National tiers)
+- WatchTower detect geographic variation (Statewide/National tiers)
 
 ### Monitoring Frequency
 
@@ -133,9 +133,9 @@ Early warning when opponents change strategy. Track when they update issues page
 
 ---
 
-## Watchtower: Geographic Monitoring
+## WatchTower: Geographic Monitoring
 
-Watchtower are Kyanos's distributed observation network. Sensor stations in multiple geographic locations detect if AI platforms and search engines serve different information to different regions. They're included at the Statewide and National tiers.
+WatchTower are Kyanos's distributed observation network. Sensor stations in multiple geographic locations detect if AI platforms and search engines serve different information to different regions. They're included at the Statewide and National tiers.
 
 ### For Campaigns (Statewide/National)
 

@@ -278,7 +278,7 @@ Each product has a color-coded variant of the Panopticon design:
 | **GoodInk** | Green (#2E7D32) | `goodink.svg`, `goodink.png` | Positive press monitoring |
 | **AdWatch** | Purple (#6A1B9A) | `adwatch.svg`, `adwatch.png` | Advertising monitoring |
 | **TripWire** | Orange (#E65100) | `tripwire.svg`, `tripwire.png` | Opponent alert system |
-| **Watchtower** | Teal (#006064) | `watchtower.svg`, `watchtower.png` | Geographic monitoring |
+| **WatchTower** | Teal (#006064) | `WatchTower.svg`, `WatchTower.png` | Geographic monitoring |
 | **Bentham** | Gray (#37474F) | `bentham.svg`, `bentham.png` | Backend infrastructure |
 
 **Logo Design Elements**
