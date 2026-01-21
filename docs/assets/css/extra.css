@@ -231,7 +231,7 @@
   right: 0 !important;
   z-index: 100 !important;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
-  padding: 0.4rem 0 !important;
+  padding: 0.5rem 0 !important;
   box-shadow: 0 -4px 20px rgba(0,0,0,0.15) !important;
 }
 
@@ -240,51 +240,13 @@
   padding-bottom: 70px;
 }
 
+/* Style the nav links */
 .md-footer__link {
   color: white !important;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  background: rgba(255,255,255,0.1);
-  transition: background 0.2s ease;
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
 }
 
-.md-footer__link:hover {
-  background: rgba(255,255,255,0.25);
-}
-
-.md-footer__title {
-  font-size: 0.9rem;
-  font-weight: 600;
-  max-width: 200px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.md-footer__direction {
-  font-size: 0.75rem;
-  opacity: 0.8;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-/* Make arrows more prominent */
-.md-footer__button.md-icon {
-  font-size: 1.5rem;
-  color: white;
-}
-
-/* Center the content more */
-.md-footer__inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem 1rem;
+.md-footer__link svg {
+  fill: white;
 }
 
 /* Hide the separate copyright footer */
@@ -292,13 +254,22 @@
   display: none;
 }
 
-/* Copyright in nav footer - centered between arrows */
+/* Footer inner - position relative for absolute centering of copyright */
+.md-footer__inner {
+  position: relative;
+}
+
+/* Copyright in nav footer - absolutely centered */
 .footer-copyright {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   color: rgba(255,255,255,0.85);
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   text-align: center;
   line-height: 1.3;
-  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .footer-copyright a {

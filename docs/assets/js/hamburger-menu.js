@@ -5,15 +5,8 @@ document.addEventListener('DOMContentLoaded', function() {
   if (footerInner) {
     const copyright = document.createElement('div');
     copyright.className = 'footer-copyright';
-    copyright.innerHTML = '© 2026 KyanosTech<br><a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs</a>';
-
-    // Insert between prev and next links
-    const nextLink = footerInner.querySelector('.md-footer__link--next');
-    if (nextLink) {
-      footerInner.insertBefore(copyright, nextLink);
-    } else {
-      footerInner.appendChild(copyright);
-    }
+    copyright.innerHTML = '© 2026 KyanosTech · <a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs</a>';
+    footerInner.appendChild(copyright);
   }
 
   // Hamburger menu - only apply on desktop
