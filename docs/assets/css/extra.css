@@ -249,6 +249,19 @@
   fill: white;
 }
 
+/* Show full title text in nav arrows */
+.md-footer__title {
+  max-width: none !important;
+  white-space: nowrap !important;
+}
+
+.md-footer__title .md-ellipsis {
+  max-width: none !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+  white-space: nowrap !important;
+}
+
 /* Hide the separate copyright footer */
 .md-footer-meta {
   display: none;
