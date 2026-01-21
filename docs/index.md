@@ -20,7 +20,7 @@ Kyanos is a family of AI-driven analytical and remediation services that help pr
 
 [**Solution & Theory of Change**](ky-solution-theory.md): The causality chain methodology—Observe, Trace, Diagnose, Prescribe—and how Panopticon works.
 
-[**Product Strategy & Technology**](ky-products-tech.md): The full capabilities—Panopticon, GoodInk, Adwatch, TripWire—and the Bentham infrastructure.
+[**Product Strategy & Technology**](ky-products-tech.md): The full capabilities—Panopticon, GoodInk, AdWatch, TripWire—and the Bentham infrastructure.
 
 [**Market & Financial Opportunity**](ky-market-opportunity.md): Unit economics, revenue projections, and the path to sustainability.
 
@@ -42,7 +42,7 @@ Kyanos is a family of AI-driven analytical and remediation services that help pr
 |------|--------|
 | **Mission** | Keep progressives visible in the AI era |
 | **Structure** | Trust-Owned LLC |
-| **Capabilities** | Panopticon, GoodInk, Adwatch, TripWire, PostWatch |
+| **Capabilities** | Panopticon, GoodInk, AdWatch, TripWire, PostWatch |
 | **Funding Ask** | $1,000,000 ($750K min, $1.25M reach) |
 | **2026 Clients** | 200 (free access) |
 | **2028 Revenue** | $2.8M |
@@ -56,7 +56,7 @@ Kyanos is a family of AI-driven analytical and remediation services that help pr
 |---------|----------|
 | **Panopticon** | AI monitoring + remediation across major surfaces |
 | **GoodInk** | Positive press discovery for campaigns to feature |
-| **Adwatch** | Political advertising monitoring across Google and Meta |
+| **AdWatch** | Political advertising monitoring across Google and Meta |
 | **TripWire** | Opponent website change detection |
 | **PostWatch** | Social media monitoring across YouTube, Bluesky, and X |
 

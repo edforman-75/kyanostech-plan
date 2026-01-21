@@ -170,7 +170,7 @@
 ### If Funding Falls Short ($750K minimum not met)
 
 - Reduce team to 3 FTEs
-- Delay GoodInk and Adwatch launches
+- Delay GoodInk and AdWatch launches
 - Focus on Panopticon core only
 - Serve 100 campaigns instead of 200
 - Extend timeline for 2027 revenue

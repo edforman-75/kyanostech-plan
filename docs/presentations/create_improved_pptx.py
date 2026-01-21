@@ -828,7 +828,7 @@ TRANSITION: "Beyond Panopticon, we have a complete product suite..." """)
 
 "Panopticon is the flagship—MVP+, launching Q2 2026. It's where campaigns see what AI says and get fixes.
 
-GoodInk surfaces positive press coverage. Adwatch monitors opponent advertising. TripWire detects when competitors change messaging.
+GoodInk surfaces positive press coverage. AdWatch monitors opponent advertising. TripWire detects when competitors change messaging.
 
 Watchtower is our geographic monitoring network—it detects regional AI variation, critical for statewide and national campaigns."
 

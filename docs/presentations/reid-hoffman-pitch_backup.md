@@ -283,12 +283,10 @@ We don't just hand over a report. We monitor execution, coach the team through i
 
 ### Phase 1: Monitor
 
-- Query three surfaces using our Bentham infrastructure:
-  - **AI chatbots:** ChatGPT, Claude, Perplexity, Grok, Meta AI
-  - **AI-integrated search:** Google AI Overviews, Bing Copilot
-  - **Traditional search results**
+- Query AI surfaces using our Bentham infrastructure
+- Core surfaces: Google AI Overviews, ChatGPT, Meta AI
 - Test questions voters actually ask about the candidate
-- Watchtower detects geographic variation
+- Watchtower detect geographic variation
 
 **Deliverable:** Dashboard showing exactly what voters see
 
@@ -323,21 +321,20 @@ And we don't walk away. We track implementation and confirm when AI systems upda
 
 **TRANSITION TO SLIDE 8:**
 
-"Beyond Panopticon, we have a complete set of product capabilities..."
+"Beyond Panopticon, we have a complete product suite..."
 
 ---
 
-# SLIDE 8: PRODUCT CAPABILITIES
+# SLIDE 8: THE PRODUCT SUITE
 
-## Five Capabilities, One Platform
+## Four Products, One Platform
 
-| Capability | Function | Status |
+| Product | Function | Status |
 |---------|----------|--------|
 | **Panopticon** | Core AI monitoring and remediation | MVP+ |
 | **GoodInk** | Positive press discovery for campaigns to feature | MVP |
 | **AdWatch** | Political ad monitoring across Google and Meta | MVP |
 | **TripWire** | Opponent website change detection | MVP |
-| **PostWatch** | Social media monitoring (YouTube, Bluesky, X) | MVP |
 
 ### Watchtower
 
@@ -349,7 +346,7 @@ Kyanos's distributed observation network for geographic monitoring.
 
 ### Bentham Infrastructure
 
-The extraction engine powering all capabilities.
+The extraction engine powering all products.
 
 - Queries AI systems at scale
 - Captures responses with full context
@@ -587,7 +584,7 @@ The board of trustees governs the trust and ensures mission fidelity. Major fund
 
 - **Free 2026 access** for 200 campaigns (~$330K investment in reference base)
 - **Core team** of 5 to build and operate the platform
-- **Complete capability development** for Panopticon, GoodInk, AdWatch, TripWire, PostWatch
+- **Complete product development** for Panopticon, GoodInk, AdWatch, TripWire
 - **Self-sustaining by 2028** with +$850K annual surplus
 
 ---
@@ -694,7 +691,7 @@ forman.ed@gmail.com
 | 4 | 5 (Platform Risk) | "But there's another dimension to this that I know you've been thinking about..." |
 | 5 | 6 (Solution) | "So what exactly are we building?" |
 | 6 | 7 (How It Works) | "Let me show you how this works in practice..." |
-| 7 | 8 (Capabilities) | "Beyond Panopticon, we have a complete set of product capabilities..." |
+| 7 | 8 (Products) | "Beyond Panopticon, we have a complete product suite..." |
 | 8 | 9 (How We Operate) | "Now let me explain how we've structured this to be permanent and accountable..." |
 | 9 | 10 (Market) | "Here's the market we're going after..." |
 | 10 | 11 (Competition) | "You're going to ask about competition..." |

@@ -273,7 +273,7 @@ A $50,000 TV buy in Boise:
 **Campaign Data:**
 - NJ Division of Elections: Voter registration statistics
 - FEC: Campaign finance data
-- Adwatch reports (internal)
+- AdWatch reports (internal)
 - Bentham study results (internal)
 
 ---

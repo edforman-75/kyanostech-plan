@@ -55,7 +55,7 @@ Kyanos offers five capabilities:
 
 - **Panopticon:** Core monitoring and remediation across three surfaces: AI chatbots, AI-integrated search, and traditional search
 - **GoodInk:** Positive press discovery for campaigns to feature
-- **Adwatch:** Political advertising monitoring across Google and Meta
+- **AdWatch:** Political advertising monitoring across Google and Meta
 - **TripWire:** Opponent website change detection
 - **PostWatch:** Social media monitoring across YouTube, Bluesky, and X
 

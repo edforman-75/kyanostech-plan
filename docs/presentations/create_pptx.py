@@ -300,7 +300,7 @@ TRANSITION: "Beyond Panopticon, we have a complete product suite..." """)
         [
             ["Panopticon", "Core AI monitoring and remediation", "MVP+"],
             ["GoodInk", "Positive press discovery for campaigns to feature", "MVP"],
-            ["Adwatch", "Political ad monitoring across Google and Meta", "MVP"],
+            ["AdWatch", "Political ad monitoring across Google and Meta", "MVP"],
             ["TripWire", "Opponent website change detection", "MVP"],
         ],
         """SPEAKER NOTES:
@@ -309,7 +309,7 @@ TRANSITION: "Beyond Panopticon, we have a complete product suite..." """)
 
 GoodInk solves a different problem: campaigns often miss positive press coverage they could be featuring. We surface that automatically.
 
-Adwatch monitors the political advertising landscape—what opponents are running, where, and how it's targeting voters.
+AdWatch monitors the political advertising landscape—what opponents are running, where, and how it's targeting voters.
 
 TripWire watches opponent websites for changes. When they update their messaging or positions, campaigns know immediately.
 

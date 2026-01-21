@@ -10,7 +10,7 @@ Kyanos is a family of AI-driven services built on shared infrastructure. Each ca
 |---------|----------|-------------|
 | **Panopticon** | AI monitoring + remediation | All tiers |
 | **GoodInk** | Positive press discovery | Congressional+ |
-| **Adwatch** | Ad monitoring | Congressional+ |
+| **AdWatch** | Ad monitoring | Congressional+ |
 | **TripWire** | Opponent site monitoring | Congressional+ |
 | **PostWatch** | Social media monitoring (YouTube, Bluesky, X) | Congressional+ |
 | **Watchtower** | Geographic variation detection | Statewide+ |
@@ -83,9 +83,9 @@ GoodInk detects opportunities that campaigns can exploit to gain coverage, which
 
 ---
 
-## Adwatch: Political Ad Monitoring
+## AdWatch: Political Ad Monitoring
 
-Adwatch tracks political advertising across Google and Meta transparency libraries.
+AdWatch tracks political advertising across Google and Meta transparency libraries.
 
 ### What It Does
 

@@ -898,7 +898,7 @@ TRANSITION: "Beyond Panopticon, we have a complete product suite..." """)
 
 GoodInk surfaces positive press coverage campaigns could be featuring on their sites.
 
-Adwatch monitors political advertising—what opponents are running, where, and how.
+AdWatch monitors political advertising—what opponents are running, where, and how.
 
 TripWire watches opponent websites. When they update messaging, campaigns know immediately.
 

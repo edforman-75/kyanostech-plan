@@ -5,8 +5,8 @@
 | Tier | Includes |
 |------|----------|
 | **Local** | Panopticon (core 3 surfaces) |
-| **Congressional** | Panopticon + GoodInk + Adwatch + TripWire |
-| **Statewide** | Panopticon (with Watchtower) + GoodInk + Adwatch + TripWire |
+| **Congressional** | Panopticon + GoodInk + AdWatch + TripWire |
+| **Statewide** | Panopticon (with Watchtower) + GoodInk + AdWatch + TripWire |
 | **National** | All products + dedicated FTE onsite + special projects |
 
 ---

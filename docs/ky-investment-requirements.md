@@ -36,7 +36,7 @@ Kyanos is built with the same AI capabilities we help campaigns leverage—we pr
 
 - **Free 2026 access:** Serve 200 campaigns at no cost (~$330K investment)
 - **Core team:** 5 FTEs to build and operate the platform
-- **Product development:** Complete Panopticon, launch GoodInk and Adwatch
+- **Product development:** Complete Panopticon, launch GoodInk and AdWatch
 - **Reference base:** Case studies and testimonials for 2027 sales
 - **Infrastructure:** Watchtower for geographic monitoring
 

@@ -12,20 +12,22 @@ theme:
     primary: indigo
     accent: amber
   features:
-    - navigation.tabs
     - navigation.sections
     - navigation.expand
     - navigation.top
     - navigation.footer
+    - navigation.indexes
     - search.suggest
     - search.highlight
     - content.code.copy
+    - toc.integrate
 
 extra_css:
   - assets/css/extra.css
 
 extra_javascript:
   - assets/js/kyanos-chatbot.js
+  - assets/js/hamburger-menu.js
 
 nav:
 - Welcome: index.md

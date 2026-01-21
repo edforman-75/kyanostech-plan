@@ -344,7 +344,7 @@ This report was produced using four Kyanos tools:
 
 - **Bentham** — Extraction Infrastructure. The shared engine that powers all Kyanos products. Runs AI queries at scale across platforms with geographic variation.
 
-- **Adwatch** — Political Ad Intelligence. Monitors ads across Google and Meta transparency libraries. Tracks opponent spend and classifies ad tone.
+- **AdWatch** — Political Ad Intelligence. Monitors ads across Google and Meta transparency libraries. Tracks opponent spend and classifies ad tone.
 
 ### Query Sourcing
 
