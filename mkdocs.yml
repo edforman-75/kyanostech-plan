@@ -46,10 +46,11 @@ nav:
 - Investment Requirements: ky-investment-requirements.md
 - 'Case Study: Rep. Malinowski': 'https://kyanostech-plan-edf.netlify.app/case-studies/malinowski/'
 - 'Appendices':
-  - 'A — Product Summary': ky-appendix-a-product-summary.md
-  - 'B — Surface Coverage': ky-appendix-b-surface-coverage.md
-  - 'C — Causality Chain Methodology': ky-appendix-c-causality-chain.md
-  - 'D — Catalist Precedent': ky-appendix-d-catalist-precedent.md
+  - 'Appendix 1 — Claude Interviews Our Founder': ky-white-paper-founder-interview.md
+  - 'Appendix 2 — Product Summary': ky-appendix-a-product-summary.md
+  - 'Appendix 3 — Surface Coverage': ky-appendix-b-surface-coverage.md
+  - 'Appendix 4 — Causality Chain Methodology': ky-appendix-c-causality-chain.md
+  - 'Appendix 5 — Catalist Precedent': ky-appendix-d-catalist-precedent.md
 
 markdown_extensions:
   - footnotes

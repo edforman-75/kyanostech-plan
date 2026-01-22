@@ -21,7 +21,12 @@ try {
     'ky-go-to-market.md',
     'ky-team-governance.md',
     'ky-investment-requirements.md',
-    'ky-risk-mitigation.md'
+    'ky-risk-mitigation.md',
+    'ky-white-paper-founder-interview.md',
+    'ky-appendix-a-product-summary.md',
+    'ky-appendix-b-surface-coverage.md',
+    'ky-appendix-c-causality-chain.md',
+    'ky-appendix-d-catalist-precedent.md'
   ];
 
   for (const file of coreFiles) {
