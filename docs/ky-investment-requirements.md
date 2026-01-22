@@ -1,156 +1,104 @@
 # Investment Requirements
 
-## The Ask
+## Capital Plan
 
-| Parameter | Value |
-|-----------|-------|
-| **Target** | $1,000,000 |
-| **Minimum** | $750,000 |
-| **Reach** | $1,250,000 |
-| **Timeline** | Commitments by March 15, 2026 |
+Kyanos requires **$1.5 million in grant funding** over two rounds to reach cash-flow positive operations by Q1 2028.
 
-### Why $1M Is Enough
+### Funding Structure
 
-Six months ago, a smaller product portfolio would have required 5x the capital to reach the 2028 cycle. AI-assisted development has fundamentally changed the economics. A small team using modern AI tools can build and operate what would have taken a much larger team just two years ago.
+| Grant | Amount | Timing | Purpose |
+|-------|--------|--------|---------|
+| **Grant 1** | $1,000,000 | Q1-Q2 2026 | Foundation: team, infrastructure, free pilot year |
+| **Grant 2** | $500,000 | Q1 2027 | Bridge to 2028 campaign revenue |
+| **Total** | **$1,500,000** | | |
 
-Kyanos is built with the same AI capabilities we help campaigns leverage—we practice what we preach. In a sense, the rapid progress of AI plays a critical role in both the problem and the solution.
+### Funding Sources
+
+| Source | Grant 1 (2026) | Grant 2 (2027) | Total |
+|--------|----------------|----------------|-------|
+| Progressive foundations | $500K | $250K | $750K |
+| Labor unions | $300K | $150K | $450K |
+| Major donors | $200K | $100K | $300K |
+| **Total** | **$1.0M** | **$500K** | **$1.5M** |
 
 ---
 
 ## Use of Funds
 
-### 2026 Budget Allocation
+### 2026 (Grant 1: $1.0M)
 
-| Category | Amount | % of Total |
-|----------|--------|------------|
-| Personnel (5 FTEs) | $650,000 | 65% |
-| Contractors (dev, support, content) | $150,000 | 15% |
-| Infrastructure | $48,000 | 5% |
-| Marketing/Events | $40,000 | 4% |
-| Legal/Compliance | $25,000 | 3% |
-| Operations | $22,000 | 2% |
-| Reserve | $65,000 | 6% |
-| **Total** | **$1,000,000** | **100%** |
+Hiring is staggered and backloaded. Team ramps from June through November 2026.
 
-### What the Funding Enables
+| Category | Amount |
+|----------|--------|
+| Personnel (5 FTEs, staggered start) | ~$300K |
+| Contractors | $150K |
+| Infrastructure | $48K |
+| Marketing/Events | $40K |
+| Legal/Compliance | $25K |
+| Operations | $22K |
+| Reserve | $65K |
+| **Total 2026 Costs** | **~$650K** |
+| **Remaining (enters 2027)** | **~$350K** |
 
-- **Free 2026 access:** Serve 200 campaigns at no cost (~$330K investment)
-- **Core team:** 5 FTEs to build and operate the platform
-- **Product development:** Complete Panopticon, launch GoodInk and AdWatch
-- **Reference base:** Case studies and testimonials for 2027 sales
-- **Infrastructure:** WatchTower for geographic monitoring
+### 2027 (Grant 2 + Carryover + Revenue)
 
----
+| Category | Amount |
+|----------|--------|
+| Personnel (6 FTEs full year) | ~$900K |
+| Non-Personnel | ~$350K |
+| **Total 2027 Costs** | **~$1,250K** |
 
-## Funding Sources
+### 2028 (Revenue-Funded)
 
-### Target Mix
+| Category | Amount |
+|----------|--------|
+| Personnel (9 FTEs) | ~$1,300K |
+| Non-Personnel | ~$350K |
+| **Total 2028 Costs** | **~$1,650K** |
 
-| Source | Range | Notes |
-|--------|-------|-------|
-| Progressive foundations (PRIs/grants) | $400-600K | Open Society, Tides, Way to Win |
-| Labor unions | $200-300K | SEIU, AFSCME, AFL-CIO political programs |
-| Family offices | $100-200K | Progressive major donors |
-| Major donors | $100-200K | Individual contributions |
+### Cash Flow Summary
 
-### Funding Vehicles
+| Year | Revenue | Costs | Key Milestone |
+|------|---------|-------|---------------|
+| 2026 | $0 (free year) | $650K | Build credibility with 200 campaigns |
+| 2027 | $600K | $1,250K | Paid pricing activates; off-year revenue |
+| 2028 | $2,000K | $1,650K | **Cash-flow positive Q1 2028** |
 
-| Vehicle | Description |
-|---------|-------------|
-| **PRIs** | Program-Related Investments from foundations; mission-aligned loans |
-| **Grants** | Non-repayable foundation support |
-| **Direct contributions** | From individuals, unions, and family offices |
+### Shutdown Buffer Policy
+
+Kyanos maintains a minimum cash reserve of **20% of annual payroll + benefits** at all times to ensure orderly shutdown capability if needed.
+
+| Year | FTEs | Buffer Required |
+|------|------|-----------------|
+| 2026 | 5 (staggered) | ~$175K |
+| 2027 | 6 | ~$175K |
+| 2028 | 9 | ~$250K |
 
 ---
 
 ## Investment Structure
 
-Kyanos operates as a **Trust-Owned LLC**:
+Kyanos is structured as a **trust-owned LLC**, offering:
 
-- **No equity:** Trust owns 100% of LLC
-- **No exits:** Trust structure prevents sale
-- **Mission-locked:** Progressive-only service charter
-- **Sustainable:** Revenue supports ongoing operations
-
-### What Funders Get
-
-| Benefit | Description |
-|---------|-------------|
-| Mission impact | Progressive campaigns served, AI visibility improved |
-| Accountability | Board representation for major funders |
-| Transparency | Regular reporting on operations and impact |
-| Sustainability | Building permanent progressive infrastructure |
-
-This is **not a traditional investment** with equity and exits. This is funding to build essential progressive infrastructure—like Catalist for the AI era.
+- **Mission lock**: Trust charter prevents sale to non-progressive entities
+- **Downside protection**: Tax-deductible contributions if unsuccessful
+- **Transparency**: Clear reporting on fund deployment and outcomes
+- **Precedent**: Same model as Catalist ($1M Soros seed, now serves every major Democratic campaign)
 
 ---
 
-## Timeline
+## Critical Timeline
 
-| Milestone | Target Date |
-|-----------|-------------|
-| Initial outreach | January 2026 |
-| First commitments | February 2026 |
-| Full funding secured | March 15, 2026 |
-| Funds available | April 2026 |
-| Team hired | May 2026 |
-| First clients | June 2026 |
+| Date | Milestone |
+|------|-----------|
+| March 15, 2026 | Funding committed (enables hiring) |
+| April 15, 2026 | Funds in bank (payroll starts) |
+| June 2026 | Team operational, founding cohort begins |
+| Q1 2027 | Grant 2 secured, paid pricing activates |
+| Q1 2028 | Cash-flow positive |
 
----
-
-## Return on Investment
-
-### Political ROI (Primary Measure)
-
-| Metric | 2026 | 2027 | 2028 |
-|--------|------|------|------|
-| Campaigns served | 200 | 150 | 466 |
-| AI accuracy improvement | Baseline | +20% | +40% |
-| Case studies published | 10 | 25 | 50 |
-
-### Financial Sustainability
-
-| Year | Revenue | Costs | Net |
-|------|---------|-------|-----|
-| 2026 | $0 | $1.0M | -$1.0M (funded) |
-| 2027 | $1.2M | $1.0M | Breakeven |
-| 2028 | $2.8M | $1.55M | +$850K |
-
-By 2028, Kyanos is self-sustaining with surplus to reinvest in mission.
-
----
-
-## Why Fund Kyanos?
-
-### The Problem
-
-- Voters increasingly get political information from AI
-- AI systems may misrepresent progressive candidates
-- No progressive infrastructure exists to monitor or remediate
-- Platforms face pressure from hostile administration
-
-### The Solution
-
-- Kyanos monitors AI representation of progressive candidates
-- Traces errors to root causes
-- Provides actionable fixes campaigns can implement
-- Documents evidence of platform bias
-
-### The Opportunity
-
-- First mover in progressive AI monitoring
-- Trust structure prevents capture or sale
-- Catalist-style infrastructure play
-- 2026 is critical timing for 2028 presidential cycle
-
-### The Alternative
-
-Without Kyanos, progressives cede the AI information space to:
-
-- Platform algorithms without accountability
-- Conservative-optimized content
-- Hallucinations and misinformation
-- No systematic monitoring or remediation
+**If delayed past Q2 2026:** Miss 2026 cycle, severely compromise 2028 position.
 
 ---
 
@@ -167,5 +115,5 @@ Catalist demonstrates this model works:
 ---
 
 <div class="callout-bottomline">
-<p><strong>$1M builds the infrastructure. The mission lasts forever.</strong></p>
+<p><strong>$1.5M builds the infrastructure. Cash-flow positive by Q1 2028. The mission lasts forever.</strong></p>
 </div>

@@ -44,13 +44,12 @@ nav:
 - Risk & Mitigation: ky-risk-mitigation.md
 - Team & Governance: ky-team-governance.md
 - Investment Requirements: ky-investment-requirements.md
+- 'Case Study: Rep. Malinowski': 'https://kyanostech-plan-edf.netlify.app/case-studies/malinowski/'
 - 'Appendices':
-  - 'Sample Panopticon Report (Malinowski)': ky-appendix-panopticon-sample-report.md
-  - 'Claude Interviews Our Founder': ky-white-paper-founder-interview.md
-  - 'The Progressive AI Paradox': ky-appendix-compass.md
-  - 'The Grok Case Study': ky-appendix-grok-bias.md
-  - 'How Chatbot Biases Are Detected': ky-appendix-bias-detection.md
-  - 'Strategic Branding Architecture': ky-appendix-c-branding.md
+  - 'A — Product Summary': ky-appendix-a-product-summary.md
+  - 'B — Surface Coverage': ky-appendix-b-surface-coverage.md
+  - 'C — Causality Chain Methodology': ky-appendix-c-causality-chain.md
+  - 'D — Catalist Precedent': ky-appendix-d-catalist-precedent.md
 
 markdown_extensions:
   - footnotes

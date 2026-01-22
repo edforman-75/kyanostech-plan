@@ -56,16 +56,20 @@ Monitoring depth scales with race level:
 
 ## Campaign Cycle Pricing
 
-Campaigns pay by cycle (primary or general), not monthly. Flat fee regardless of cycle length.
+Campaigns pay by cycle (Primary or General), with a **20% discount on General** for Primary clients who win their primary.
 
-| Race Level | Primary | General | Full Cycle |
-|------------|---------|---------|------------|
-| **Local** | $900 | $1,200 | $1,800 |
-| **Congress** | $4,000 | $5,000 | $8,000 |
-| **Statewide** | $15,000 | $20,000 | $30,000 |
-| **National** | $200,000 | $250,000 | $400,000 |
+| Tier | Primary (8 mo) | General (3 mo) | General w/ Discount | Full Cycle |
+|------|----------------|----------------|---------------------|------------|
+| **Local** | $1,350 | $1,350 | $1,080 | $2,430 |
+| **Congressional** | $6,000 | $6,000 | $4,800 | $10,800 |
+| **Statewide** | $22,500 | $22,500 | $18,000 | $40,500 |
+| **National** | $45,000 | $67,500 | — | $112,500 |
 
-**Pricing philosophy:** Margins are progressive. Lower margins on smaller races keep Kyanos accessible. Higher margins on larger races reflect their fundraising capacity. Presidential campaigns raise $1B+; $400K for full-cycle intelligence is a rounding error.
+**Notes:**
+- Local = State Legislature, Mayor, County/City offices
+- Congressional = US House, US Senate
+- Statewide = Governor, Attorney General, Secretary of State
+- National = Presidential (Primary price = 200% of Statewide; General = 150% of Primary)
 
 ---
 
@@ -148,26 +152,39 @@ Elected officials maintaining digital presence year-round.
 
 ---
 
-## Revenue Streams
+## 2028 Revenue Model
 
-### Campaign Revenue (Cycle-Based)
+### Campaign Revenue
 
-- Primary cycle subscriptions
-- General cycle subscriptions
-- Full cycle packages
-- Upgrades (additional prompts, surfaces, frequency)
+| Tier | Primary Clients | Primary Revenue | General Clients | General Revenue | Total |
+|------|-----------------|-----------------|-----------------|-----------------|-------|
+| Local | 200 | $270,000 | 40 | $43,200 | $313,200 |
+| Congressional | 75 | $450,000 | 12 | $57,600 | $507,600 |
+| Statewide | 20 | $450,000 | 4 | $72,000 | $522,000 |
+| National | 6 | $270,000 | 1 | $67,500 | $337,500 |
+| **Total** | **301** | **$1,440,000** | **57** | **$240,300** | **$1,680,300** |
 
-### Year-Round Revenue
+*General clients assume 40% win rate for Kyanos Primary clients (20% discount applied)*
 
-- Officeholder annual subscriptions
-- Organization annual subscriptions
-- Consultant partnership fees
+### Continuing Revenue (Officeholders + Organizations)
 
-### Commercial Services Revenue
+| Segment | Clients | Monthly | Annual |
+|---------|---------|---------|--------|
+| Officeholders | 35 | $500 | $210,000 |
+| Organizations | 15 | $750 | $135,000 |
+| **Total** | **50** | | **$345,000** |
 
-- Per-study fees ($500-$5,000)
-- Monthly retainers
-- Custom research projects
+### Total 2028 Revenue: ~$2,000,000
+
+## Key Metrics
+
+| Metric | 2027 | 2028 |
+|--------|------|------|
+| Campaign clients | ~50 | 358 |
+| Officeholder clients | 25 | 35 |
+| Organization clients | 10 | 15 |
+| Revenue | $600K | $2,000K |
+| Gross margin | 65% | 75% |
 
 ---
 

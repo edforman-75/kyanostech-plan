@@ -79,21 +79,36 @@ We focus on what campaigns can change, not "shoulda/woulda."
 
 ## The Ask
 
-- **Funding:** $1,000,000 target ($750K minimum, $1.25M reach)
-- **Sources:** Progressive foundations (PRIs/grants), labor unions, family offices, major donors
-- **Use of Funds:** 5-person core team, contractors, support capacity, infrastructure, 2026 free-access program, reserves
-- **Timeline:** Funding by March 15, 2026; operational by June
+**$1.5M in grant funding** to execute the 2026-2028 plan:
+
+| Grant | Amount | Timing |
+|-------|--------|--------|
+| Grant 1 | $1,000,000 | 2026 |
+| Grant 2 | $500,000 | Q1 2027 |
+| **Total** | **$1,500,000** | |
+
+- **March 15, 2026**: Funding committed (enables hiring)
+- **April 15, 2026**: Funds in bank (payroll starts)
+- **June 2026**: Team operational, founding cohort of 200 campaigns begins
+- **Q1 2028**: Cash-flow positive
 
 ## Financial Highlights
 
-| Metric | Value |
-|--------|-------|
-| 2026 Investment | $1.0M (includes $330K reference base) |
-| 2026 Clients Served | 200 (free) |
-| 2027 Net | Breakeven |
-| 2028 Net | +$850K |
-| 2028 Clients | ~466 |
-| Cash-flow positive | Q4 2027 / Q1 2028 |
+| Year | Revenue | Campaigns | Key Milestone |
+|------|---------|-----------|---------------|
+| 2026 | $0 | 200 (free) | Build credibility |
+| 2027 | $600K | ~50 paid | Pricing activates |
+| 2028 | $2,000K | 358 paid | **Cash-flow positive Q1 2028** |
+
+### The Team
+
+**8 people doing what 40 would—because the AI does the work.**
+
+| Year | FTEs | Key Additions |
+|------|------|---------------|
+| 2026 | 5 | CEO, Technical Lead, Research Director, Operations, Marketing |
+| 2027 | 6 | + Inside Sales |
+| 2028 | 9 | + Account Management, Engineering |
 
 <div class="callout-bottomline">
 <div class="callout-title">Bottom Line</div>
