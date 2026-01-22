@@ -79,7 +79,7 @@ Kyanos maintains a minimum cash reserve of **20% of annual payroll + benefits** 
 
 ## Investment Structure
 
-Kyanos is structured as a **non-profit mission-driven organization**, offering:
+Kyanos is structured as a **Trust-owned LLC**, offering:
 
 - **Mission lock**: Charter prevents mission drift
 - **Downside protection**: Tax-deductible contributions

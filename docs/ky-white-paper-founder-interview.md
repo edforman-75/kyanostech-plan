@@ -1,5 +1,7 @@
 # Claude Interviews Our Founder
 
+<img src="assets/images/ed-forman.jpg" alt="Ed Forman" style="float: right; width: 200px; margin: 0 0 1rem 1.5rem; border-radius: 8px;">
+
 *Ed Forman in Conversation with Claude of Anthropic*
 *(November 6, 2025)*
 
@@ -133,13 +135,13 @@ Third, **adoption risk**: the behavioral change. That's why we're working throug
 
 ---
 
-## Why structure Kyanos as a for-profit B-Corp instead of a nonprofit?
+## Why a Trust-owned LLC?
 
-Because sustainability matters. Nonprofits depend on grants; campaigns need reliability.
+Because mission permanence matters. We need a structure that can generate sustainable revenue while being permanently locked to the progressive mission.
 
-A B-Corp lets us take in investment capital, reward efficiency, and still be mission-locked. It aligns social impact and capital discipline: if we deliver trustworthy visibility for progressives, everyone wins.
+A Trust-owned LLC follows the Catalist model—the voter file company that now serves virtually every major Democratic campaign. The trust entity owns 100% of the operating company, and a board of progressive leaders governs the trust. This structure prevents sale to hostile buyers, locks in progressive-only service permanently, and still allows us to generate revenue and operate efficiently.
 
-We'll also keep an affiliated nonprofit arm for civic research and transparency work, but it won't touch campaign activity. The separation protects both sides legally and ethically. **The B-Corp gives us flexibility to act fast while being held accountable to purpose, not partisanship.**
+We'll also establish a separate 501(c)(3) Research Institute for independent research on AI bias in political information. The separation keeps commercial operations and research credibility distinct. **The trust structure gives us the flexibility to act fast while ensuring the mission can never be sold out.**
 
 ---
 
@@ -209,7 +211,7 @@ Success in 2026 means measurable evidence that campaigns and causes using Kyanos
 
 That's our proof of concept.
 
-By 2028, success means this becomes infrastructure: a shared layer of the progressive data ecosystem, with hundreds of campaigns and officeholders using a common schema and the SCOPE monitoring system keeping watch for bias across major AI platforms.
+By 2028, success means this becomes infrastructure: a shared layer of the progressive data ecosystem, with hundreds of campaigns and officeholders using a common schema and WatchTower keeping watch for bias across major AI platforms.
 
 **Proof in 2026. Scale in 2028. Build it once, prove it works, then make it part of how democracy protects itself in the AI age.**
 

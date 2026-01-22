@@ -38,16 +38,18 @@ Based on actual Bentham infrastructure costs, scaled by tier:
 | Statewide | 1,500 (50×3×10) | ~$40 | WatchTower |
 | National | 5,625 (75×3×25) | ~$75 | Full coverage |
 
-### Margin by Tier (Full Cycle, After Discounts)
+### Margin by Tier (Full Cycle)
 
-| Tier | Full Cycle Price | Studies | Variable Cost | Overhead | Target Margin |
-|------|------------------|---------|---------------|----------|---------------|
-| Local | $1,800 | ~10 | ~$150 | ~$300 | ~35% |
-| Congress | $8,000 | ~10 | ~$250 | ~$600 | ~55% |
-| Statewide | $30,000 | ~10 | ~$400 | ~$1,500 | ~70% |
-| National | $400,000 | ~30 | ~$2,250 | ~$15,000 | ~85% |
+| Tier | Full Cycle Price | Studies | Variable Cost | Per-Unit Overhead | Contribution Margin |
+|------|------------------|---------|---------------|-------------------|---------------------|
+| Local | $2,430 | ~10 | ~$150 | ~$300 | ~81% |
+| Congress | $10,800 | ~10 | ~$250 | ~$600 | ~92% |
+| Statewide | $40,500 | ~10 | ~$400 | ~$1,500 | ~95% |
+| National | $235,000 | ~30 | ~$2,250 | ~$15,000 | ~93% |
 
-**Progressive margin philosophy:** We accept lower margins on smaller races to keep Kyanos accessible to down-ballot progressives. Higher margins on larger races reflect their fundraising capacity and support the mission.
+*Contribution margins shown before fixed cost allocation (personnel, infrastructure, etc.). Full cycle pricing reflects 20% discount on general election for campaigns continuing from primary.*
+
+**Progressive margin philosophy:** We price smaller races accessibly to serve down-ballot progressives. The high contribution margins across all tiers support fixed cost coverage and mission sustainability.
 
 ---
 
@@ -73,9 +75,9 @@ Based on actual Bentham infrastructure costs, scaled by tier:
 | Local | 200 | 300 | $1.35K | $675K |
 | Officeholders | — | 35 | $6K | $210K |
 | Organizations | — | 15 | $9K | $135K |
-| **Total** | **301** | **493** | | **$3.92M** |
+| **Total** | **301** | **493** | | **~$3.9M** |
 
-*Commercial services revenue potential exists but is not included in projections. We will not pursue commercial services until after the 2028 cycle.*
+*Revenue shown at list prices. Campaigns continuing from Primary to General receive 20% discount on General Election portion (reflected in Full Cycle pricing). Actual revenue may be 5-10% lower depending on full-cycle uptake. Commercial services revenue potential exists but is not included in projections.*
 
 ### Revenue by Year
 
@@ -83,7 +85,7 @@ Based on actual Bentham infrastructure costs, scaled by tier:
 |------|---------|---------------|-------|
 | 2026 | 200 | $0 | Free access year |
 | 2027 | ~150 | $1.2M | Paid pricing activates (midterm year) |
-| 2028 | ~794 | $3.9M | Presidential cycle |
+| 2028 | 750-800 | $3.9M | Presidential cycle |
 
 ### Net Revenue (after agency commissions ~20%)
 

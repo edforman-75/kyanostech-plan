@@ -1,4 +1,4 @@
-# Business Model & Pricing
+# Operating Model & Pricing
 
 ## Product Bundles
 
@@ -60,10 +60,12 @@ Campaigns pay by cycle (Primary or General).
 
 | Tier | Primary (8 mo) | General (3 mo) | Full Cycle |
 |------|----------------|----------------|------------|
-| **Local** | $1,350 | $1,350 | $2,700 |
-| **Congressional** | $6,000 | $6,000 | $12,000 |
-| **Statewide** | $22,500 | $22,500 | $45,000 |
-| **National** | $75,000 | $200,000 | $275,000 |
+| **Local** | $1,350 | $1,350 | $2,430 |
+| **Congressional** | $6,000 | $6,000 | $10,800 |
+| **Statewide** | $22,500 | $22,500 | $40,500 |
+| **National** | $75,000 | $200,000 | $235,000 |
+
+*Full Cycle pricing reflects a 20% discount on the General Election portion for campaigns that continue from Primary through General.*
 
 **Notes:**
 - Local = State Legislature, Mayor, County/City offices
@@ -174,13 +176,15 @@ Elected officials maintaining digital presence year-round.
 | Organizations | 15 | $750 | $135,000 |
 | **Total** | **50** | | **$345,000** |
 
+*Monthly figures are blended averages across office levels. See Officeholder Annual Pricing table above for tiered pricing by office.*
+
 ### Total 2028 Revenue: ~$3,900,000
 
 ## Key Metrics
 
 | Metric | 2027 | 2028 |
 |--------|------|------|
-| Campaign clients | ~50 | 744 |
+| Campaign clients | ~50 | 750-800 |
 | Officeholder clients | 25 | 35 |
 | Organization clients | 10 | 15 |
 | Revenue | $600K | $3,900K |

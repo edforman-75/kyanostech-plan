@@ -113,6 +113,8 @@ Every customer gets all three phases. This is not a tiered feature set. It's a c
 - **Actionable fixes:** We deliver solutions, not just problem reports
 - **CMS-aware:** Instructions match the campaign's actual tech stack
 
+For many campaigns, Kyanos may eliminate the need for a separate SEO service. The fixes we recommend for AI visibility also improve traditional search performance.
+
 ### Compared to General AI Monitoring
 
 - **Campaign-specific prompts:** Questions voters actually ask

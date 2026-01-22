@@ -1,5 +1,31 @@
 # Risks & Mitigations
 
+<div class="callout-warning">
+<div class="callout-title">The Biggest Risk: Systemic Platform Bias</div>
+<p><strong>The risk we cannot prevent—but can detect and document.</strong></p>
+<p>The greatest threat to progressive representation in AI is not technical failure or market adoption. It's the possibility that AI platforms become systemically biased against progressive candidates due to political pressure, regulatory threats, or algorithmic drift.</p>
+<p><strong>We cannot prevent this from happening.</strong> The AI platforms are controlled by a small number of companies, and those companies face intense pressure from an administration that has shown willingness to punish perceived disloyalty.</p>
+<p><strong>What Kyanos provides:</strong> Continuous monitoring to detect shifts early, WatchTower to identify geographic manipulation, rigorous documentation for PR campaigns and litigation, and the Kyanos Research Institute to publish independent findings that create public accountability. If platforms turn against progressives, we'll know first and have the evidence to fight back.</p>
+</div>
+
+**What Kyanos provides:**
+
+| Function | Value |
+|----------|-------|
+| **Early warning system** | Continuous monitoring detects shifts before they become entrenched |
+| **Geographic detection** | WatchTower identifies regional manipulation that might otherwise go unnoticed |
+| **Evidence base** | High-quality observational data documents platform behavior over time |
+| **PR ammunition** | Research Institute publishes findings that create public accountability |
+| **Litigation support** | Rigorous methodology produces data that can support legal challenges |
+
+If AI platforms shift against progressives—whether through deliberate manipulation, regulatory capture, or algorithmic drift—Kyanos ensures we know first, we document it thoroughly, and we have the evidence to fight back.
+
+<div class="callout-info">
+<p><strong>This is why Kyanos must exist.</strong> Not because we can fix the problem, but because someone must be watching.</p>
+</div>
+
+---
+
 ## Funding & Financial Risks
 
 | Risk | Mitigation |
@@ -101,17 +127,17 @@
 ### Political Risk: Platform Manipulation
 
 **Likelihood:** Medium-High
-**Impact:** High
+**Impact:** High (see [The Biggest Risk](#the-biggest-risk-systemic-platform-bias) above)
 
-**Scenario:** AI platforms deliberately skew results against progressives under political pressure.
+**Scenario:** AI platforms deliberately skew results against progressives under political pressure, regulatory threats, or through algorithmic drift.
 
-**Mitigations:**
+**What we can do:**
 
-- WatchTower detects geographic manipulation
-- Research Institute documents evidence
-- Public reporting creates accountability
-- Core reason Kyanos exists: we're the watchdog
-- Data supports legal and policy advocacy
+- **Detect early:** WatchTower monitors geographic variation; continuous monitoring catches shifts
+- **Document thoroughly:** Research Institute builds rigorous evidence base
+- **Create accountability:** Public reporting and PR campaigns
+- **Support legal action:** High-quality observational data for litigation
+- **Sound the alarm:** We are the watchdog the progressive movement needs
 
 ### Market Risk: Competitors Copy Model
 

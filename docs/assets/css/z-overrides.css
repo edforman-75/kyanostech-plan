@@ -106,3 +106,193 @@
   width: min(40ch, 80vw);
   white-space: normal;
 }
+
+/* ============================================================
+   CALLOUT-WARNING: The most prominent visual element in the plan
+   Used for critical risks that demand attention
+   ============================================================ */
+.md-typeset .callout-warning,
+.callout-warning {
+  background: rgba(185, 28, 28, 0.12) !important;
+  color: var(--md-default-fg-color) !important;
+  border: none !important;
+  border-left: 4px solid #b91c1c !important;
+  border-radius: 10px !important;
+  padding: 1.25rem 1.5rem !important;
+  margin: 1.5rem 0 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+  position: relative;
+}
+
+.md-typeset .callout-warning .callout-title,
+.callout-warning .callout-title {
+  font-size: 1.15rem !important;
+  font-weight: 700 !important;
+  color: #991b1b !important;
+  margin: 0 0 0.75rem 0 !important;
+  padding: 0 !important;
+  padding-left: 0 !important;
+  background: none !important;
+}
+
+.md-typeset .callout-warning p,
+.callout-warning p {
+  color: var(--md-default-fg-color) !important;
+  font-size: 1rem !important;
+  line-height: 1.55 !important;
+  margin: 0.5rem 0 !important;
+}
+
+.md-typeset .callout-warning p strong,
+.md-typeset .callout-warning strong,
+.callout-warning p strong,
+.callout-warning strong {
+  color: #991b1b !important;
+  font-weight: 700 !important;
+}
+
+/* ============================================================
+   CALLOUT-INFO: Standard informational callout
+   ============================================================ */
+.md-typeset .callout-info,
+.callout-info {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%) !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-left: none !important;
+  border-radius: 10px !important;
+  padding: 1.25rem 1.5rem !important;
+  margin: 1.5rem 0 !important;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3) !important;
+}
+
+.md-typeset .callout-info .callout-title,
+.callout-info .callout-title {
+  font-size: 1.1rem !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  margin: 0 0 0.75rem 0 !important;
+  padding-left: 0 !important;
+  background: none !important;
+}
+
+.md-typeset .callout-info p,
+.callout-info p {
+  color: #ffffff !important;
+  font-size: 1rem !important;
+  line-height: 1.5 !important;
+  margin: 0.5rem 0 !important;
+}
+
+.md-typeset .callout-info p strong,
+.md-typeset .callout-info strong,
+.callout-info p strong,
+.callout-info strong {
+  color: #bfdbfe !important;
+}
+
+/* ============================================================
+   CALLOUT-BOTTOMLINE: Conclusion/summary callout
+   ============================================================ */
+.md-typeset .callout-bottomline,
+.callout-bottomline {
+  background: linear-gradient(135deg, #1f2937 0%, #111827 100%) !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-left: none !important;
+  border-radius: 10px !important;
+  padding: 1.25rem 1.5rem !important;
+  margin: 2rem 0 1rem 0 !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+}
+
+.md-typeset .callout-bottomline .callout-title,
+.callout-bottomline .callout-title {
+  font-size: 1.1rem !important;
+  font-weight: 700 !important;
+  color: #fbbf24 !important;
+  margin: 0 0 0.75rem 0 !important;
+  padding-left: 0 !important;
+  background: none !important;
+}
+
+.md-typeset .callout-bottomline p,
+.callout-bottomline p {
+  color: #ffffff !important;
+  font-size: 1.05rem !important;
+  font-weight: 600 !important;
+  line-height: 1.5 !important;
+  margin: 0.5rem 0 !important;
+}
+
+.md-typeset .callout-bottomline p strong,
+.md-typeset .callout-bottomline strong,
+.callout-bottomline p strong,
+.callout-bottomline strong {
+  color: #fbbf24 !important;
+}
+
+/* ============================================================
+   COVER PAGE: Strategic plan landing page
+   ============================================================ */
+.cover-page {
+  text-align: center;
+  padding: 3rem 2rem;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cover-page .cover-logo {
+  width: 180px;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+.cover-page h1 {
+  font-size: 2.5rem !important;
+  font-weight: 700 !important;
+  color: var(--md-primary-fg-color) !important;
+  margin: 0 0 1rem 0 !important;
+}
+
+.cover-page p {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.cover-page p strong {
+  font-size: 1.3rem;
+}
+
+.cover-page p em {
+  color: #6b7280;
+}
+
+.cover-page hr {
+  width: 100px;
+  margin: 2rem auto;
+  border: none;
+  border-top: 2px solid #e5e7eb;
+}
+
+.cover-button {
+  display: inline-block;
+  background: linear-gradient(135deg, #4f46e5 0%, #3730a3 100%);
+  color: #ffffff !important;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 1rem 2.5rem;
+  border-radius: 8px;
+  text-decoration: none !important;
+  box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cover-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.4);
+  color: #ffffff !important;
+}

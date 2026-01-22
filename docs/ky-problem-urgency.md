@@ -14,6 +14,7 @@ AI systems synthesize answers from across the web. If progressive content isn't 
 - Hallucinate incorrect policy stances
 - Favor better-optimized conservative content
 - Fail to cite authoritative progressive sources
+- Use outdated information from foundation models trained 6-18 months ago, producing obsolete or misleading information about candidates
 
 **This is not hypothetical.** Our monitoring shows significant variance in how AI systems represent candidate positions, with properly structured content receiving preferential citation.
 

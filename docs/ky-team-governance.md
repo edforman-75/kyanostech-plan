@@ -1,17 +1,17 @@
 # Team & Governance
 
-## Organizational Structure
+## Trust Structure
 
-Kyanos operates as a **non-profit mission-driven organization**, following the Catalist model:
+Kyanos operates as a **Trust-owned LLC**, following the Catalist model:
 
-- **501(c)(4)** social welfare organization structure
+- **Trust entity** owns 100% of Kyanos LLC
 - **Board of directors** (3-5 progressive leaders) provides governance
 - **Mission charter** locks in progressive-only service, prevents mission drift
 - **Operating organization** handles day-to-day business
 
 ### Why Non-Profit?
 
-The non-profit structure follows the Catalist precedent (the voter file company that serves virtually every major Democratic campaign). A mission-driven non-profit:
+The trust structure follows the Catalist precedent (the voter file company that serves virtually every major Democratic campaign). A trust-owned structure:
 
 - Locks in progressive mission permanently
 - Allows for sustainable revenue generation
@@ -29,7 +29,7 @@ The non-profit structure follows the Catalist precedent (the voter file company 
 | **Customer Consent** | Nothing published or disclosed without authorization |
 | **Causality Focus** | We trace problems to root causes and recommend only what can be fixed |
 | **Privacy Protected** | Client data stays confidential; no sharing between clients |
-| **Mission-Locked** | Non-profit structure prevents mission drift |
+| **Mission-Locked** | Trust structure prevents sale to hostile buyers |
 
 ---
 
@@ -138,7 +138,7 @@ Separate 501(c)(3) organization for independent research on AI bias in political
 | Base salary | Competitive for role and experience |
 | Annual adjustment | Cost-of-living increases |
 | Performance | Milestone-based bonuses tied to organization goals |
-| Equity | Not applicable (non-profit structure) |
+| Equity | Not applicable (trust-owned structure) |
 
 ---
 
@@ -160,7 +160,7 @@ Part-time general counsel with expertise in:
 | Campaign finance | No direct contributions; services at market rates |
 | Data privacy | Campaign data siloed; no cross-client sharing |
 | Platform terms | Compliance with AI platform ToS |
-| Tax status | Maintain 501(c)(4) requirements |
+| Tax status | Maintain trust structure requirements |
 
 ---
 
@@ -186,5 +186,5 @@ The Catalist example demonstrates that:
 ---
 
 <div class="callout-bottomline">
-<p><strong>Non-profit. Mission-locked. Built to serve progressives permanently.</strong></p>
+<p><strong>Trust-owned. Mission-locked. Built to serve progressives permanently.</strong></p>
 </div>

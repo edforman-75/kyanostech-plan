@@ -190,19 +190,19 @@ Bentham is highly adaptable and marketable. The same infrastructure that powers 
 
 ## Security & Compliance
 
-Kyanos implements enterprise B2B SaaS security standards:
+Kyanos will implement enterprise B2B SaaS security standards as the platform scales:
 
-### Standards & Certifications
+### Standards & Certifications (Planned)
 
 - **SOC 2 Type II** compliance roadmap
 - **GDPR** compliant data handling
 - **ISO 27001** aligned security practices
 
-### Access Controls
+### Access Controls (Planned)
 
 - **SSO** (Single Sign-On) integration
 - **RBAC** (Role-Based Access Control) for team permissions
-- **MFA** (Multi-Factor Authentication) required for all accounts
+- **MFA** (Multi-Factor Authentication) for all accounts
 
 ### Data Protection
 

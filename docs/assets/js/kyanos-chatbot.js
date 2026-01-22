@@ -291,7 +291,7 @@
                                 <input 
                                     id="chat-input" 
                                     type="text" 
-                                    placeholder="Ask about the business plan..."
+                                    placeholder="Ask about the strategic plan..."
                                     style="
                                         flex: 1;
                                         padding: 12px 14px;
@@ -631,7 +631,7 @@
         const sendBtn = document.getElementById('chat-send-btn');
         const input = document.getElementById('chat-input');
         
-        addMessage("Hello! I'm the Kyanos Plan AI Assistant. I can help you understand our business plan, technology strategy, and mission. What would you like to know?", false);
+        addMessage("Hello! I'm the Kyanos Plan AI Assistant. I can help you understand our strategic plan, technology strategy, and mission. What would you like to know?", false);
 
         // Start minimized
         toggleMinimize();

@@ -6,7 +6,7 @@
 
 ---
 
-When voters ask AI about a candidate, the answer should be accurate—not a hallucination, not a hedge, not the opponent's framing.
+When voters ask AI about a candidate, the answer should be accurate—not a hallucination, not a hedge, not outdated, not the opponent's framing.
 
 Kyanos is an internet presence optimization platform that ensures progressive candidates, organizations, and causes are accurately and favorably represented across three surfaces: AI chatbots (ChatGPT, Claude, Perplexity, Grok, Meta AI), AI-integrated search (Google AI Overviews, Bing Copilot), and traditional search results. We monitor, diagnose, and provide specific, actionable fixes that campaigns can implement immediately.
 
@@ -47,7 +47,11 @@ Internet Presence Optimization ensures media dollars convert. It's the highest-i
 
 ## The Watchdog Role
 
-AI platforms are subject to pressure from a President who demands loyalty. Kyanos continuously monitors how major AI systems respond to questions about progressive candidates and issues, detects geographic variation through WatchTower, and builds an evidence base of platform behavior over time. If models shift against progressives, we'll know first and sound the alarm.
+AI platforms are subject to pressure from a President who demands loyalty. **We cannot prevent platforms from becoming biased against progressives**—but we can detect it early and document it thoroughly.
+
+Kyanos continuously monitors how major AI systems respond to questions about progressive candidates and issues, detects geographic variation through WatchTower, and builds an evidence base of platform behavior over time. If models shift against progressives, we'll know first and sound the alarm.
+
+Our high-quality observational data supports PR campaigns and litigation efforts. The [Kyanos Research Institute](ky-team-governance.md#kyanos-research-institute) will publish independent research documenting platform bias—creating the public accountability that platforms cannot ignore.
 
 ## Product Capabilities
 
@@ -73,7 +77,7 @@ We focus on what campaigns can change, not "shoulda/woulda."
 
 ## The Business
 
-- **Structure:** Non-profit mission-driven organization following the Catalist model
+- **Structure:** Trust-owned LLC following the Catalist model
 - **Target Market:** Progressive campaigns, incumbents, officeholders, advocacy organizations
 - **Revenue Model:** Tiered subscriptions by race level, plus AI monitoring services for commercial clients
 - **Sustainability:** Commercial services revenue subsidizes political mission
@@ -99,7 +103,7 @@ We focus on what campaigns can change, not "shoulda/woulda."
 |------|---------|-----------|---------------|
 | 2026 | $0 | 200 (free) | Build credibility |
 | 2027 | $1.2M | ~150 paid | Pricing activates |
-| 2028 | $3.9M | ~794 paid | **Cash-flow positive Q1 2028** |
+| 2028 | $3.9M | 750-800 paid | **Cash-flow positive Q1 2028** |
 
 ### The Team
 
@@ -114,7 +118,7 @@ We focus on what campaigns can change, not "shoulda/woulda."
 <div class="callout-bottomline">
 <div class="callout-title">Bottom Line</div>
 <p><strong>Fund Kyanos now.</strong></p>
-<p>The platforms are not neutral. The algorithms are not fair. The President is demanding loyalty from tech CEOs.</p>
+<p>The platforms face pressure. The algorithms are opaque. The President is demanding loyalty from tech CEOs.</p>
 <p><strong>We monitor the platforms. We detect the bias. We sound the alarm.</strong></p>
 <p>Progressive candidates, incumbents, and causes deserve accurate representation in the AI systems that increasingly shape what voters believe.</p>
 <p><strong>Keep progressives visible in the AI era.</strong></p>

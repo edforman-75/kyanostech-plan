@@ -1,4 +1,4 @@
-site_name: Kyanos Business Plan
+site_name: Kyanos Strategic Plan
 site_description: Keeping progressives visible in the AI era
 site_author: KyanosTech Team
 copyright: Copyright &copy; 2026 KyanosTech &nbsp;|&nbsp; Build 1e5b369
@@ -23,15 +23,22 @@ theme:
     - content.code.copy
     - toc.integrate
 
+extra:
+  analytics:
+    provider: google
+    property: G-XXXXXXXXXX
+
 extra_css:
   - assets/css/extra.css
+  - assets/css/z-overrides.css
 
 extra_javascript:
   - assets/js/kyanos-chatbot.js
   - assets/js/hamburger-menu.js
 
 nav:
-- Welcome: index.md
+- Cover: index.md
+- Welcome: ky-welcome.md
 - Executive Summary: ky-executive-summary.md
 - The Value Proposition: ky-value-proposition.md
 - Two Scares That Reshape 2026–2028: Two_Scares.md
@@ -39,7 +46,7 @@ nav:
 - Solution & Theory of Change: ky-solution-theory.md
 - Capabilities & Technology: ky-products-tech.md
 - Market & Financial Overview: ky-market-opportunity.md
-- Business Model: ky-business-model.md
+- Operating Model: ky-business-model.md
 - Go-To-Market: ky-go-to-market.md
 - Risk & Mitigation: ky-risk-mitigation.md
 - Team & Governance: ky-team-governance.md
@@ -49,8 +56,9 @@ nav:
   - 'Appendix 1 — Claude Interviews Our Founder': ky-white-paper-founder-interview.md
   - 'Appendix 2 — AI Surface Market Share': ky-appendix-b-surface-coverage.md
   - 'Appendix 3 — Catalist Precedent': ky-appendix-d-catalist-precedent.md
-  - 'Appendix 4 — The Journey of a Prompt': 'https://kyanostech-plan-edf.netlify.app/ky-appendix-e-prompt-journey.html'
-  - 'Appendix 5 — Capabilities Architecture': 'https://kyanostech-plan-edf.netlify.app/ky-appendix-f-capabilities-architecture.html'
+  - 'Appendix 4 — The Journey of a Prompt': ky-appendix-e-prompt-journey.html
+  - 'Appendix 5 — Capabilities Architecture': ky-appendix-f-capabilities-architecture.html
+  - 'Appendix 6 — Sample Kyanos Report': 'https://kyanostech-plan-edf.netlify.app/case-studies/malinowski/'
 
 markdown_extensions:
   - footnotes

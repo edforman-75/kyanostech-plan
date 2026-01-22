@@ -92,6 +92,8 @@ AI presence optimization doesn't suffer from this problem. The cost to monitor a
 | Ongoing AI monitoring | $500-2,000/month |
 | **Total (typical campaign)** | **$1,500-15,000** |
 
+*Note: For some campaigns, Kyanos may reduce or eliminate the need for a separate SEO service. The fixes we recommend for AI visibility often address the same issues traditional SEO would target.*
+
 ### Voters Influenced (Example: Competitive Congressional Race)
 
 | Funnel Stage | Estimate |
@@ -128,6 +130,20 @@ If progressives fail to invest in AI presence optimization while conservatives d
 The good news: Internet Presence Optimization is **cheaper and more accessible** than building podcast networks or buying television time. A $10,000 investment in Internet Presence Optimization can match the persuasive impact of a $300,000 TV buy.
 
 The progressive movement—campaigns, committees, unions, and advocacy organizations—has an opportunity to achieve communication parity in online environments at a fraction of historical costs. But only if we act now.
+
+---
+
+## Value Propositions by Segment
+
+| Segment | Primary Value |
+|---------|---------------|
+| **Campaigns** | Accurate online representation → informed voters |
+| **Officeholders** | Maintained visibility between cycles |
+| **Advocacy orgs** | Issue positioning in online environments |
+| **Labor unions** | Member education and mobilization support |
+| **Party committees** | Party-wide monitoring and standards |
+| **Consultants** | Differentiated service offering for clients |
+| **Commercial** | Brand monitoring and competitive intelligence |
 
 ---
 

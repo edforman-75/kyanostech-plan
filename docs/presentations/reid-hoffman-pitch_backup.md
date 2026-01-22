@@ -399,7 +399,7 @@ Follows the **Catalist precedent**—the voter file company that serves virtuall
 
 - **2026:** Free access for 200 campaigns (building reference base)
 - **2027:** Paid subscriptions launch, breakeven
-- **2028:** $2.8M revenue, 466 clients, +$850K net
+- **2028:** ~$3.9M revenue, 750-800 clients, +$1.65M net
 
 ---
 
@@ -421,7 +421,7 @@ Your investment doesn't come with equity—there is no equity. What you get is a
 
 # SLIDE 10: MARKET & GO-TO-MARKET
 
-## The Path to 466 Clients
+## The Path to 750-800 Clients
 
 ### 2026: The Free Year (Foundation-Funded)
 
@@ -440,8 +440,8 @@ Your investment doesn't come with equity—there is no equity. What you get is a
 
 | Year | Clients | Revenue | Net |
 |------|---------|---------|-----|
-| 2027 | 150 | $1.2M | Breakeven |
-| 2028 | 466 | $2.8M | +$850K |
+| 2027 | ~150 | $1.2M | Breakeven |
+| 2028 | 750-800 | ~$3.9M | +$1.65M |
 
 ### Go-to-Market Strategy
 
@@ -459,7 +459,7 @@ Your investment doesn't come with equity—there is no equity. What you get is a
 
 The go-to-market is deliberately low-friction. Small campaigns get self-service—enter your info, system configures automatically. Larger campaigns come through consultants who already have trusted relationships.
 
-By 2028, we project 466 clients and $2.8M in revenue. We're cash-flow positive by late 2027."
+By 2028, we project 750-800 clients and approximately $3.9M in revenue. We're cash-flow positive by late 2027."
 
 **TRANSITION TO SLIDE 11:**
 
@@ -635,7 +635,7 @@ Not equity. Not an exit path.
 
 **A chance to build permanent progressive infrastructure before the 2028 cycle.**
 
-The platforms are not neutral. The algorithms are not fair. The President demands loyalty from tech CEOs.
+The platforms face pressure. The algorithms are opaque. The President demands loyalty from tech CEOs.
 
 We monitor the platforms. We detect the bias. We sound the alarm.
 
@@ -705,7 +705,7 @@ forman.ed@gmail.com
 - **4x** more persuasive than TV (Nature/Science 2025)
 - **$1-10** cost per voter influenced (vs. $100-600 for TV)
 - **45-60%** of voter queries answered by AI by 2028
-- **$1M** ask, **$2.8M** revenue by 2028, **466** clients
+- **$1.5M** ask, **~$3.9M** revenue by 2028, **750-800** clients
 - **200** free campaigns in 2026
 
 ## Anticipated Questions
