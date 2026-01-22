@@ -32,6 +32,8 @@ Not all surfaces matter equally for voter discovery. Our market analysis shows:
 
 **Important:** This isn't just about AI. Traditional Google search (without AI Overviews) also relies on the same website content and structure. A campaign's digital presence improvement benefits all discovery channels.
 
+*For detailed 2026 and 2028 market share projections with sources, see [Appendix 2: AI Surface Market Share](ky-appendix-b-surface-coverage.md).*
+
 ## Geographic Variation
 
 Kyanos WatchTower have detected that AI systems return different answers in different locations. Swing state voters may see different information than safe state voters. This has profound implications for campaign strategy and for platform accountability.

@@ -17,6 +17,55 @@
 
 ---
 
+## Market Share Visualization
+
+<div style="display: flex; justify-content: space-around; flex-wrap: wrap; margin: 2rem 0;">
+
+<div style="text-align: center;">
+<svg viewBox="0 0 200 200" width="180" height="180">
+  <!-- 2026 Pie Chart -->
+  <!-- Google Search: 47.5% = 171° -->
+  <circle r="80" cx="100" cy="100" fill="transparent" stroke="#4285f4" stroke-width="80" stroke-dasharray="239 264" transform="rotate(-90 100 100)"/>
+  <!-- Google AI Overviews: 16.5% = 59.4° -->
+  <circle r="80" cx="100" cy="100" fill="transparent" stroke="#34a853" stroke-width="80" stroke-dasharray="83 420" transform="rotate(81 100 100)"/>
+  <!-- ChatGPT: 9% = 32.4° -->
+  <circle r="80" cx="100" cy="100" fill="transparent" stroke="#10a37f" stroke-width="80" stroke-dasharray="45 458" transform="rotate(140.4 100 100)"/>
+  <!-- Other: 27% = 97.2° -->
+  <circle r="80" cx="100" cy="100" fill="transparent" stroke="#9ca3af" stroke-width="80" stroke-dasharray="122 381" transform="rotate(172.8 100 100)"/>
+  <circle r="40" cx="100" cy="100" fill="white"/>
+  <text x="100" y="105" text-anchor="middle" font-size="14" font-weight="bold">2026</text>
+</svg>
+<div style="font-weight: bold; margin-top: 0.5rem;">2026 Projection</div>
+</div>
+
+<div style="text-align: center;">
+<svg viewBox="0 0 200 200" width="180" height="180">
+  <!-- 2028 Pie Chart -->
+  <!-- Google Search: 37.5% = 135° -->
+  <circle r="80" cx="100" cy="100" fill="transparent" stroke="#4285f4" stroke-width="80" stroke-dasharray="188 315" transform="rotate(-90 100 100)"/>
+  <!-- Google AI Overviews: 22.5% = 81° -->
+  <circle r="80" cx="100" cy="100" fill="transparent" stroke="#34a853" stroke-width="80" stroke-dasharray="113 390" transform="rotate(45 100 100)"/>
+  <!-- ChatGPT: 16% = 57.6° -->
+  <circle r="80" cx="100" cy="100" fill="transparent" stroke="#10a37f" stroke-width="80" stroke-dasharray="80 423" transform="rotate(126 100 100)"/>
+  <!-- Other: 24% = 86.4° -->
+  <circle r="80" cx="100" cy="100" fill="transparent" stroke="#9ca3af" stroke-width="80" stroke-dasharray="108 395" transform="rotate(183.6 100 100)"/>
+  <circle r="40" cx="100" cy="100" fill="white"/>
+  <text x="100" y="105" text-anchor="middle" font-size="14" font-weight="bold">2028</text>
+</svg>
+<div style="font-weight: bold; margin-top: 0.5rem;">2028 Projection</div>
+</div>
+
+</div>
+
+<div style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 2rem;">
+<span><span style="display: inline-block; width: 12px; height: 12px; background: #4285f4; margin-right: 4px;"></span> Google Search</span>
+<span><span style="display: inline-block; width: 12px; height: 12px; background: #34a853; margin-right: 4px;"></span> Google AI Overviews</span>
+<span><span style="display: inline-block; width: 12px; height: 12px; background: #10a37f; margin-right: 4px;"></span> ChatGPT</span>
+<span><span style="display: inline-block; width: 12px; height: 12px; background: #9ca3af; margin-right: 4px;"></span> Other AI</span>
+</div>
+
+---
+
 ## Kyanos Surface Coverage
 
 ### Browser-Based Surfaces (User-Facing)

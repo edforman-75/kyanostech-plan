@@ -298,7 +298,7 @@
 
 /* Build version indicator - bottom left corner */
 body::after {
-  content: "Build b9eca5a";
+  content: "Build cf861ff";
   position: fixed;
   bottom: 12px;
   left: 12px;
