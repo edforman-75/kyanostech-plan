@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appendix 5 — Kyanos Capabilities Architecture</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            min-height: 100vh;
+            padding: 40px;
+            color: white;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #60a5fa;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        h1 {
+            text-align: center;
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, #60a5fa, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .subtitle {
+            text-align: center;
+            color: #94a3b8;
+            font-size: 16px;
+            margin-bottom: 40px;
+        }
+
+        /* Main Architecture Container */
+        .architecture {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-rows: auto auto auto;
+            gap: 30px;
+        }
+
+        /* Top Row - Input Sources */
+        .input-row {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .input-source {
+            background: rgba(255,255,255,0.05);
+            border: 2px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 16px 24px;
+            text-align: center;
+            min-width: 140px;
+        }
+        .input-source .icon {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+        .input-source .label {
+            font-size: 13px;
+            color: #94a3b8;
+        }
+
+        /* Arrow Down */
+        .arrow-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        .arrow-down {
+            width: 2px;
+            height: 40px;
+            background: linear-gradient(to bottom, #60a5fa, #a78bfa);
+            position: relative;
+        }
+        .arrow-down::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-top: 12px solid #a78bfa;
+        }
+
+        /* Bentham Core */
+        .bentham-core {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.2));
+            border: 3px solid #8b5cf6;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+        }
+        .bentham-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #a78bfa;
+            margin-bottom: 8px;
+        }
+        .bentham-subtitle {
+            color: #94a3b8;
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
+
+        /* Capabilities Grid */
+        .capabilities-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+        .capability-card {
+            background: rgba(255,255,255,0.08);
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        .capability-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(255,255,255,0.2);
+        }
+        .capability-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+        .capability-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+        .capability-name {
+            font-size: 18px;
+            font-weight: 700;
+        }
+        .capability-desc {
+            font-size: 13px;
+            color: #94a3b8;
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+        .capability-tier {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Capability Colors */
+        .panopticon .capability-icon { background: linear-gradient(135deg, #3b82f6, #1d4ed8); }
+        .panopticon .capability-name { color: #60a5fa; }
+        .panopticon .capability-tier { background: rgba(59, 130, 246, 0.2); color: #60a5fa; }
+
+        .goodink .capability-icon { background: linear-gradient(135deg, #10b981, #059669); }
+        .goodink .capability-name { color: #34d399; }
+        .goodink .capability-tier { background: rgba(16, 185, 129, 0.2); color: #34d399; }
+
+        .adwatch .capability-icon { background: linear-gradient(135deg, #f59e0b, #d97706); }
+        .adwatch .capability-name { color: #fbbf24; }
+        .adwatch .capability-tier { background: rgba(245, 158, 11, 0.2); color: #fbbf24; }
+
+        .tripwire .capability-icon { background: linear-gradient(135deg, #ef4444, #dc2626); }
+        .tripwire .capability-name { color: #f87171; }
+        .tripwire .capability-tier { background: rgba(239, 68, 68, 0.2); color: #f87171; }
+
+        .postwatch .capability-icon { background: linear-gradient(135deg, #ec4899, #db2777); }
+        .postwatch .capability-name { color: #f472b6; }
+        .postwatch .capability-tier { background: rgba(236, 72, 153, 0.2); color: #f472b6; }
+
+        .watchtower .capability-icon { background: linear-gradient(135deg, #8b5cf6, #7c3aed); }
+        .watchtower .capability-name { color: #a78bfa; }
+        .watchtower .capability-tier { background: rgba(139, 92, 246, 0.2); color: #a78bfa; }
+
+        /* Output Row */
+        .output-row {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        .output-box {
+            background: rgba(255,255,255,0.05);
+            border: 2px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 20px 30px;
+            text-align: center;
+        }
+        .output-box .icon {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+        .output-box .label {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        .output-box .sublabel {
+            font-size: 12px;
+            color: #94a3b8;
+        }
+
+        /* Flow Arrows */
+        .flow-label {
+            text-align: center;
+            color: #64748b;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 10px 0;
+        }
+
+        /* Legend */
+        .legend {
+            max-width: 1200px;
+            margin: 40px auto 0;
+            padding: 20px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            color: #94a3b8;
+        }
+        .legend-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 3px;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #64748b;
+            font-size: 12px;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .capabilities-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 600px) {
+            .capabilities-grid {
+                grid-template-columns: 1fr;
+            }
+            .input-row, .output-row {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-link">&larr; Back to Business Plan</a>
+
+    <h1>Kyanos Capabilities Architecture</h1>
+    <p class="subtitle">How six integrated capabilities deliver comprehensive internet presence optimization</p>
+
+    <div class="architecture">
+        <!-- Input Sources -->
+        <div class="input-row">
+            <div class="input-source">
+                <div class="icon">🤖</div>
+                <div class="label">AI Chatbots</div>
+            </div>
+            <div class="input-source">
+                <div class="icon">🔍</div>
+                <div class="label">Search Engines</div>
+            </div>
+            <div class="input-source">
+                <div class="icon">📺</div>
+                <div class="label">Ad Platforms</div>
+            </div>
+            <div class="input-source">
+                <div class="icon">📱</div>
+                <div class="label">Social Media</div>
+            </div>
+            <div class="input-source">
+                <div class="icon">🌐</div>
+                <div class="label">Websites</div>
+            </div>
+            <div class="input-source">
+                <div class="icon">📰</div>
+                <div class="label">News/Press</div>
+            </div>
+        </div>
+
+        <div class="flow-label">Data Collection via Browser Automation</div>
+        <div class="arrow-container">
+            <div class="arrow-down"></div>
+        </div>
+
+        <!-- Bentham Core with Capabilities -->
+        <div class="bentham-core">
+            <div class="bentham-title">Bentham Extraction Infrastructure</div>
+            <div class="bentham-subtitle">Named after Jeremy Bentham, philosopher who designed the original Panopticon</div>
+
+            <div class="capabilities-grid">
+                <!-- Panopticon -->
+                <div class="capability-card panopticon">
+                    <div class="capability-header">
+                        <div class="capability-icon">👁️</div>
+                        <div class="capability-name">Panopticon</div>
+                    </div>
+                    <div class="capability-desc">Core internet presence monitoring across AI chatbots, AI-integrated search, and traditional search. Shows exactly what voters see when they ask about your candidate.</div>
+                    <span class="capability-tier">All Tiers</span>
+                </div>
+
+                <!-- GoodInk -->
+                <div class="capability-card goodink">
+                    <div class="capability-header">
+                        <div class="capability-icon">📰</div>
+                        <div class="capability-name">GoodInk</div>
+                    </div>
+                    <div class="capability-desc">Positive press discovery. Finds journalistic articles campaigns can feature on their websites to boost digital authority and AI visibility.</div>
+                    <span class="capability-tier">Congressional+</span>
+                </div>
+
+                <!-- AdWatch -->
+                <div class="capability-card adwatch">
+                    <div class="capability-header">
+                        <div class="capability-icon">📺</div>
+                        <div class="capability-name">AdWatch</div>
+                    </div>
+                    <div class="capability-desc">Political ad monitoring across Google and Meta transparency libraries. Track opponent spending, targeting, and messaging shifts.</div>
+                    <span class="capability-tier">Congressional+</span>
+                </div>
+
+                <!-- TripWire -->
+                <div class="capability-card tripwire">
+                    <div class="capability-header">
+                        <div class="capability-icon">⚡</div>
+                        <div class="capability-name">TripWire</div>
+                    </div>
+                    <div class="capability-desc">Opponent website monitoring. Detects when competitors change their messaging, update positions, or add new content.</div>
+                    <span class="capability-tier">Congressional+</span>
+                </div>
+
+                <!-- PostWatch -->
+                <div class="capability-card postwatch">
+                    <div class="capability-header">
+                        <div class="capability-icon">📱</div>
+                        <div class="capability-name">PostWatch</div>
+                    </div>
+                    <div class="capability-desc">Social media monitoring across YouTube, Bluesky, and X. Track campaign mentions, attack content, and viral moments.</div>
+                    <span class="capability-tier">Congressional+</span>
+                </div>
+
+                <!-- WatchTower -->
+                <div class="capability-card watchtower">
+                    <div class="capability-header">
+                        <div class="capability-icon">🗼</div>
+                        <div class="capability-name">WatchTower</div>
+                    </div>
+                    <div class="capability-desc">Multi-location monitoring to detect regional differences. Sensor stations in key districts reveal if AI platforms serve different information to different areas.</div>
+                    <span class="capability-tier">Statewide+</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="arrow-container">
+            <div class="arrow-down"></div>
+        </div>
+        <div class="flow-label">Analysis &amp; Prioritization</div>
+
+        <!-- Output Row -->
+        <div class="output-row">
+            <div class="output-box">
+                <div class="icon">📊</div>
+                <div class="label">Kyanos Reports</div>
+                <div class="sublabel">What voters see across platforms</div>
+            </div>
+            <div class="output-box">
+                <div class="icon">🎯</div>
+                <div class="label">Priority Rankings</div>
+                <div class="sublabel">Issues ranked by impact × fixability</div>
+            </div>
+            <div class="output-box">
+                <div class="icon">🔧</div>
+                <div class="label">Action Cards</div>
+                <div class="sublabel">Step-by-step fix instructions</div>
+            </div>
+            <div class="output-box">
+                <div class="icon">🚨</div>
+                <div class="label">Alerts</div>
+                <div class="sublabel">Real-time change notifications</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Legend -->
+    <div class="legend">
+        <div class="legend-item">
+            <div class="legend-dot" style="background: #3b82f6;"></div>
+            <span>All Tiers (Local+)</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-dot" style="background: #10b981;"></div>
+            <span>Congressional+</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-dot" style="background: #8b5cf6;"></div>
+            <span>Statewide+</span>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Kyanos Business Plan | Appendix 5 — Capabilities Architecture</p>
+    </div>
+</body>
+</html>

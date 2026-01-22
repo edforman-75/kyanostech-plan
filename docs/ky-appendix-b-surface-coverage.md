@@ -146,37 +146,6 @@
 
 ---
 
-## Kyanos Surface Coverage
-
-### Browser-Based Surfaces (User-Facing)
-
-| Surface | Kyanos Support | Access Method |
-|---------|----------------|---------------|
-| Google AI Overviews | **Core** | Browser automation |
-| ChatGPT | **Core** | Browser automation |
-| Meta AI | **Core** | Browser automation |
-| Perplexity | Available | Browser automation |
-| Microsoft Copilot | Available | Browser automation |
-| Google Gemini | Available | Browser automation |
-| X/Grok | Available | Browser automation |
-
-### API-Based Surfaces (Programmatic)
-
-| Surface | Kyanos Support | Access Method |
-|---------|----------------|---------------|
-| OpenAI API | Available | Direct API |
-| Anthropic Claude API | Available | Direct API |
-| Google Gemini API | Available | Direct API |
-| Perplexity API | Available | Direct API |
-| Meta Llama (via providers) | Available | Direct API |
-
-### Future Surfaces (Roadmap)
-
-- **WhatsApp AI** — Expected 2027; critical for Hispanic and international voters
-- **Apple Intelligence** — Monitoring development; significant iOS user base
-
----
-
 ## Methodology Notes
 
 Kyanos monitors both browser-based (what voters see) and API-based (what developers build on) surfaces. Browser automation captures the actual user experience including personalization and geographic variation. API access enables systematic testing at scale.

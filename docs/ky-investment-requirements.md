@@ -63,7 +63,7 @@ Hiring is staggered and backloaded. Team ramps from June through November 2026.
 |------|---------|-------|---------------|
 | 2026 | $0 (free year) | $650K | Build credibility with 200 campaigns |
 | 2027 | $600K | $1,250K | Paid pricing activates; off-year revenue |
-| 2028 | $2,000K | $1,650K | **Cash-flow positive Q1 2028** |
+| 2028 | $3,300K | $1,650K | **Cash-flow positive Q1 2028** |
 
 ### Shutdown Buffer Policy
 
@@ -79,10 +79,10 @@ Kyanos maintains a minimum cash reserve of **20% of annual payroll + benefits** 
 
 ## Investment Structure
 
-Kyanos is structured as a **trust-owned LLC**, offering:
+Kyanos is structured as a **non-profit mission-driven organization**, offering:
 
-- **Mission lock**: Trust charter prevents sale to non-progressive entities
-- **Downside protection**: Tax-deductible contributions if unsuccessful
+- **Mission lock**: Charter prevents mission drift
+- **Downside protection**: Tax-deductible contributions
 - **Transparency**: Clear reporting on fund deployment and outcomes
 - **Precedent**: Same model as Catalist ($1M Soros seed, now serves every major Democratic campaign)
 
@@ -108,9 +108,11 @@ Catalist demonstrates this model works:
 
 - **Founded:** 2006
 - **Initial funding:** $1M from George Soros; $4M+ from Tides Foundation
-- **Structure:** Trust-owned LLC
+- **Structure:** Mission-driven organization
 - **Today:** Serves virtually every major Democratic campaign
 - **Lesson:** Foundation funding creates permanent progressive infrastructure
+
+The success of Kyanos will depend on forward-looking progressive investments and the efforts of our team.
 
 ---
 

@@ -1,7 +1,7 @@
 site_name: Kyanos Business Plan
 site_description: Keeping progressives visible in the AI era
 site_author: KyanosTech Team
-copyright: Copyright &copy; 2026 KyanosTech &nbsp;|&nbsp; Build 56eddf7
+copyright: Copyright &copy; 2026 KyanosTech &nbsp;|&nbsp; Build 1e5b369
 use_directory_urls: false
 
 theme:
@@ -50,6 +50,7 @@ nav:
   - 'Appendix 2 — AI Surface Market Share': ky-appendix-b-surface-coverage.md
   - 'Appendix 3 — Catalist Precedent': ky-appendix-d-catalist-precedent.md
   - 'Appendix 4 — The Journey of a Prompt': 'https://kyanostech-plan-edf.netlify.app/ky-appendix-e-prompt-journey.html'
+  - 'Appendix 5 — Capabilities Architecture': 'https://kyanostech-plan-edf.netlify.app/ky-appendix-f-capabilities-architecture.html'
 
 markdown_extensions:
   - footnotes

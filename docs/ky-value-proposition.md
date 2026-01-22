@@ -9,7 +9,7 @@
 | Metric | Traditional Media | Internet Presence Optimization |
 |--------|-------------------|-----------------|
 | **Cost per voter influenced** | $50-600 | $1-10 |
-| **Persuasion effectiveness** | Baseline | **4x more effective** |
+| **Persuasion effectiveness** | Baseline | **Four times more effective** |
 | **When it reaches voters** | Interruption | Active research moment |
 
 **Digital Presence Optimization delivers 10-100x the return on investment of traditional campaign advertising.**
@@ -34,7 +34,7 @@ Door-to-door canvassing, phone banking, direct mail, and television advertising 
 
 **The exception:** Persuasion *does* work in **low-information environments**—primaries, down-ballot races, and situations where voters are actively seeking information they don't have.
 
-### Finding 2: AI Chatbots Are 4x More Persuasive Than Television Ads
+### Finding 2: AI Chatbots Are Four Times More Persuasive Than Television Ads
 
 **Sources:**
 - [Rand et al. (2025)](https://www.nature.com/articles/s41586-025-09771-9), *Nature* — "Persuading voters using human–artificial intelligence dialogues"
@@ -127,7 +127,7 @@ If progressives fail to invest in AI presence optimization while conservatives d
 
 The good news: Internet Presence Optimization is **cheaper and more accessible** than building podcast networks or buying television time. A $10,000 investment in Internet Presence Optimization can match the persuasive impact of a $300,000 TV buy.
 
-The progressive movement has an opportunity to achieve communication parity—or even advantage—at a fraction of historical costs. But only if we act now.
+The progressive movement—campaigns, committees, unions, and advocacy organizations—has an opportunity to achieve communication parity in online environments at a fraction of historical costs. But only if we act now.
 
 ---
 
@@ -161,6 +161,6 @@ We don't just tell campaigns they have a problem. We tell them exactly what to d
 ---
 
 <div class="callout-bottomline">
-<p><strong>AI is 4x more persuasive than TV ads. Internet Presence Optimization costs 10-100x less per voter. The math is clear.</strong></p>
+<p><strong>AI is four times more persuasive than TV ads. Internet Presence Optimization costs 10-100x less per voter. The math is clear.</strong></p>
 <p>Digital Presence Optimization is the highest-ROI investment a campaign can make in voter communication.</p>
 </div>

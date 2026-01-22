@@ -33,7 +33,7 @@ When a campaign's media works—when a voter sees a TV ad or digital campaign—
 
 Both search engines and AI systems cite the sources they can find. A campaign's website content and structure determines what voters see. If the digital presence is weak, that media spend is wasted.
 
-New research published in *Nature* and *Science* (December 2025) found that AI chatbots are **4 times more persuasive** than television advertising. AI isn't just another channel—it's where voters go to validate what they've seen elsewhere.
+New research published in *Nature* and *Science* (December 2025) found that AI chatbots are **four times more persuasive** than television advertising. AI isn't just another channel—it's where voters go to validate what they've seen elsewhere.
 
 | Investment | Cost per Voter | Role |
 |------------|----------------|------|
@@ -51,13 +51,14 @@ AI platforms are subject to pressure from a President who demands loyalty. Kyano
 
 ## Product Capabilities
 
-Kyanos offers five capabilities:
+Kyanos offers six integrated capabilities. *See [Appendix 5: Capabilities Architecture](ky-appendix-f-capabilities-architecture.html) for a visual overview.*
 
-- **Panopticon:** Core monitoring and remediation across three surfaces: AI chatbots, AI-integrated search, and traditional search
+- **Panopticon:** Core monitoring and remediation across AI chatbots, AI-integrated search, and traditional search
 - **GoodInk:** Positive press discovery for campaigns to feature
 - **AdWatch:** Political advertising monitoring across Google and Meta
 - **TripWire:** Opponent website change detection
 - **PostWatch:** Social media monitoring across YouTube, Bluesky, and X
+- **WatchTower:** Multi-location monitoring to detect regional variation in AI and search responses
 
 ## The Methodology
 
@@ -72,7 +73,7 @@ We focus on what campaigns can change, not "shoulda/woulda."
 
 ## The Business
 
-- **Structure:** Trust-Owned LLC with progressive board of trustees
+- **Structure:** Non-profit mission-driven organization following the Catalist model
 - **Target Market:** Progressive campaigns, incumbents, officeholders, advocacy organizations
 - **Revenue Model:** Tiered subscriptions by race level, plus AI monitoring services for commercial clients
 - **Sustainability:** Commercial services revenue subsidizes political mission
@@ -97,8 +98,8 @@ We focus on what campaigns can change, not "shoulda/woulda."
 | Year | Revenue | Campaigns | Key Milestone |
 |------|---------|-----------|---------------|
 | 2026 | $0 | 200 (free) | Build credibility |
-| 2027 | $600K | ~50 paid | Pricing activates |
-| 2028 | $2,000K | 358 paid | **Cash-flow positive Q1 2028** |
+| 2027 | $1.2M | ~150 paid | Pricing activates |
+| 2028 | $3.9M | ~794 paid | **Cash-flow positive Q1 2028** |
 
 ### The Team
 

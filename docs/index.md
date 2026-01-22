@@ -41,11 +41,11 @@ Kyanos is a family of AI-driven analytical and remediation services that help pr
 | Fact | Detail |
 |------|--------|
 | **Mission** | Keep progressives visible in the AI era |
-| **Structure** | Trust-Owned LLC |
-| **Capabilities** | Panopticon, GoodInk, AdWatch, TripWire, PostWatch |
-| **Funding Ask** | $1,000,000 ($750K min, $1.25M reach) |
+| **Structure** | Non-profit mission-driven organization |
+| **Capabilities** | Panopticon, GoodInk, AdWatch, TripWire, PostWatch, WatchTower |
+| **Funding Ask** | $1,500,000 ($1M in 2026, $500K in 2027) |
 | **2026 Clients** | 200 (free access) |
-| **2028 Revenue** | $2.8M |
+| **2028 Revenue** | $3.9M |
 | **Cash-flow positive** | Q4 2027 / Q1 2028 |
 
 ---
@@ -59,6 +59,7 @@ Kyanos is a family of AI-driven analytical and remediation services that help pr
 | **AdWatch** | Political advertising monitoring across Google and Meta |
 | **TripWire** | Opponent website change detection |
 | **PostWatch** | Social media monitoring across YouTube, Bluesky, and X |
+| **WatchTower** | Multi-location monitoring to detect regional variation |
 
 ---
 

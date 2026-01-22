@@ -63,8 +63,8 @@
 
 ### Objectives
 
-- 466+ customers
-- $2.8M revenue
+- 794+ customers
+- $3.9M revenue
 - Presidential campaign engagement
 
 ### Activities
@@ -112,7 +112,8 @@
 
 - They already have trusted relationships with campaigns
 - They make technology recommendations
-- They provide support layer we don't have to build
+- They provide a support layer we don't have to build
+- They sometimes provide resources to implement recommendations
 - They become a sales channel
 
 ### How It Works
@@ -157,7 +158,7 @@
 
 | Source | Range | Notes |
 |--------|-------|-------|
-| Progressive foundations (PRIs/grants) | $400-600K | Open Society, Tides, Way to Win |
+| Progressive foundations (grants) | $400-600K | Open Society, Tides, Way to Win |
 | Labor unions | $200-300K | SEIU, AFSCME, AFL-CIO |
 | Family offices | $100-200K | Progressive major donors |
 | Major donors | $100-200K | Individual contributions |
@@ -166,7 +167,6 @@
 
 | Vehicle | Use |
 |---------|-----|
-| PRIs (Program-Related Investments) | Mission-aligned foundation loans |
 | Grants | Non-repayable foundation support |
 | Direct contributions | From individuals and unions |
 

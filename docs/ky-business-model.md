@@ -56,20 +56,20 @@ Monitoring depth scales with race level:
 
 ## Campaign Cycle Pricing
 
-Campaigns pay by cycle (Primary or General), with a **20% discount on General** for Primary clients who win their primary.
+Campaigns pay by cycle (Primary or General).
 
-| Tier | Primary (8 mo) | General (3 mo) | General w/ Discount | Full Cycle |
-|------|----------------|----------------|---------------------|------------|
-| **Local** | $1,350 | $1,350 | $1,080 | $2,430 |
-| **Congressional** | $6,000 | $6,000 | $4,800 | $10,800 |
-| **Statewide** | $22,500 | $22,500 | $18,000 | $40,500 |
-| **National** | $45,000 | $67,500 | — | $112,500 |
+| Tier | Primary (8 mo) | General (3 mo) | Full Cycle |
+|------|----------------|----------------|------------|
+| **Local** | $1,350 | $1,350 | $2,700 |
+| **Congressional** | $6,000 | $6,000 | $12,000 |
+| **Statewide** | $22,500 | $22,500 | $45,000 |
+| **National** | $75,000 | $200,000 | $275,000 |
 
 **Notes:**
 - Local = State Legislature, Mayor, County/City offices
 - Congressional = US House, US Senate
 - Statewide = Governor, Attorney General, Secretary of State
-- National = Presidential (Primary price = 200% of Statewide; General = 150% of Primary)
+- National = Presidential
 
 ---
 
@@ -142,9 +142,9 @@ Elected officials maintaining digital presence year-round.
 
 | Segment | Primary Value |
 |---------|---------------|
-| Campaigns | Accurate AI representation → informed voters |
+| Campaigns | Accurate online representation → informed voters |
 | Officeholders | Maintained visibility between cycles |
-| Advocacy orgs | Issue positioning in AI answers |
+| Advocacy orgs | Issue positioning in online environments |
 | Labor unions | Member education and mobilization support |
 | Party committees | Party-wide monitoring and standards |
 | Consultants | Differentiated service offering for clients |
@@ -158,13 +158,13 @@ Elected officials maintaining digital presence year-round.
 
 | Tier | Primary Clients | Primary Revenue | General Clients | General Revenue | Total |
 |------|-----------------|-----------------|-----------------|-----------------|-------|
-| Local | 200 | $270,000 | 40 | $43,200 | $313,200 |
-| Congressional | 75 | $450,000 | 12 | $57,600 | $507,600 |
-| Statewide | 20 | $450,000 | 4 | $72,000 | $522,000 |
-| National | 6 | $270,000 | 1 | $67,500 | $337,500 |
-| **Total** | **301** | **$1,440,000** | **57** | **$240,300** | **$1,680,300** |
+| Local | 200 | $270,000 | 300 | $405,000 | $675,000 |
+| Congressional | 75 | $450,000 | 112 | $672,000 | $1,122,000 |
+| Statewide | 20 | $450,000 | 30 | $675,000 | $1,125,000 |
+| National | 6 | $450,000 | 1 | $200,000 | $650,000 |
+| **Total** | **301** | **$1,620,000** | **443** | **$1,952,000** | **$3,572,000** |
 
-*General clients assume 40% win rate for Kyanos Primary clients (20% discount applied)*
+*General election attracts ~50% more clients than primary (new campaigns entering for general election). National has only one general election client (the nominee).*
 
 ### Continuing Revenue (Officeholders + Organizations)
 
@@ -174,16 +174,16 @@ Elected officials maintaining digital presence year-round.
 | Organizations | 15 | $750 | $135,000 |
 | **Total** | **50** | | **$345,000** |
 
-### Total 2028 Revenue: ~$2,000,000
+### Total 2028 Revenue: ~$3,900,000
 
 ## Key Metrics
 
 | Metric | 2027 | 2028 |
 |--------|------|------|
-| Campaign clients | ~50 | 358 |
+| Campaign clients | ~50 | 744 |
 | Officeholder clients | 25 | 35 |
 | Organization clients | 10 | 15 |
-| Revenue | $600K | $2,000K |
+| Revenue | $600K | $3,900K |
 | Gross margin | 65% | 75% |
 
 ---

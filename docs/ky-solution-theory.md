@@ -39,8 +39,8 @@ Every customer gets all three phases. This is not a tiered feature set. It's a c
 - Core surfaces: Google AI Overviews, ChatGPT, Meta AI
 - Optional: Perplexity, Copilot, Gemini, Claude, Grok, and others
 - Tests questions voters actually ask about the candidate
-- Shows exactly what voters see when they search for the candidate
-- WatchTower detect geographic variation (Statewide/National tiers)
+- Shows exactly what voters see when they enter a prompt about the candidate
+- WatchTower detects geographic variation (Statewide/National tiers)
 
 **Monitoring Frequency:**
 
@@ -57,7 +57,7 @@ Every customer gets all three phases. This is not a tiered feature set. It's a c
 **How It Works:**
 
 - Analyzes Monitor findings to identify problems
-- **Traces causality:** Where did the AI get its information? Wikipedia? Ballotpedia? News articles? Campaign site?
+- **Traces causality:** Where does the information come from? Wikipedia? Ballotpedia? News articles? Campaign site?
 - Identifies the fixable root cause of each error
 - Ranks issues by: **(Voter Reach × Error Severity × Fixability)**
 - Focuses only on things the campaign can actually change
@@ -76,7 +76,6 @@ Every customer gets all three phases. This is not a tiered feature set. It's a c
     - Approver gets the recommendation (what and why)
     - Implementer gets exact instructions for their system
 - Includes templates, URLs, and code snippets ready to use
-- Estimates timeline for fixes to propagate to AI systems
 
 **Deliverable:** Action cards with numbered steps that campaign teams can execute immediately
 
@@ -99,7 +98,7 @@ Every customer gets all three phases. This is not a tiered feature set. It's a c
 
 ### Watchdog Impact (Democracy Level)
 
-1. WatchTower detect geographic manipulation
+1. WatchTower detects geographic manipulation
 2. Research Institute documents evidence of platform bias
 3. Findings inform policy advocacy and public awareness
 4. AI platforms face accountability pressure
@@ -131,5 +130,5 @@ Every customer gets all three phases. This is not a tiered feature set. It's a c
 ---
 
 <div class="callout-bottomline">
-<p><strong>We don't just tell you what's wrong. We tell you exactly how to fix it.</strong></p>
+<p><strong>We don't just tell you what's wrong. We do what SEO does that matters—and a whole lot more. We tell you exactly how to fix it.</strong></p>
 </div>

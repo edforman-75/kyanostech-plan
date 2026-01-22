@@ -14,10 +14,10 @@
 
 | Risk | Mitigation |
 |------|------------|
-| **AI platforms change content processing** | Research Director tracks changes; diversified approach across sources |
+| **AI platforms change APIs or web interfaces** | Technical Director monitors changes; diversified approach across sources |
 | **Platforms block monitoring** | Multiple access methods; budget for maintenance |
 | **Bot detection services (Cloudflare, etc.)** | Cat-and-mouse game since the web began; many industries depend on web data access; budget for specialized expertise |
-| **Platform becomes hostile to progressives** | WatchTower detect early; Research Institute documents evidence |
+| **Platform becomes hostile to progressives** | WatchTower detects early; Research Institute documents evidence |
 
 ---
 
@@ -46,7 +46,7 @@
 | Risk | Mitigation |
 |------|------------|
 | **Campaigns slow to adopt** | Free year removes cost barrier; consultant channel provides trusted recommendation |
-| **Competitors enter market** | First-mover advantage; trust structure creates credibility; platform integrations create switching costs |
+| **Competitors enter market** | This is a good thing—our goal is to have an impact, not to monopolize a market. First-mover advantage; trust structure creates credibility |
 | **Commercial services don't scale** | Commercial is bonus revenue; core business sustainable without it |
 
 ---
@@ -68,16 +68,16 @@
 - MVP demonstrates viability before funding closes
 - Minimum viable funding level ($750K) allows launch with reduced scope
 
-### Technology Risk: Platforms Change APIs
+### Technology Risk: Platforms Change APIs or Web Interfaces
 
 **Likelihood:** High (certain to happen)
 **Impact:** Medium
 
-**Scenario:** Google, OpenAI, or Meta changes how AI systems work or how they can be queried.
+**Scenario:** Google, OpenAI, or Meta changes their APIs or web presentations.
 
 **Mitigations:**
 
-- Research Director monitors platform changes
+- Technical Director monitors platform changes
 - Multiple extraction methods in Bentham
 - Budget for ongoing maintenance
 - Relationships with platform developer programs
@@ -107,7 +107,7 @@
 
 **Mitigations:**
 
-- WatchTower detect geographic manipulation
+- WatchTower detects geographic manipulation
 - Research Institute documents evidence
 - Public reporting creates accountability
 - Core reason Kyanos exists: we're the watchdog
@@ -116,11 +116,11 @@
 ### Market Risk: Competitors Copy Model
 
 **Likelihood:** Medium
-**Impact:** Low-Medium
+**Impact:** Low (actually positive)
 
 **Scenario:** Another organization launches similar progressive AI monitoring service.
 
-**Mitigations:**
+**Response:** This is a good thing. Our goal is to have an impact on progressive representation in AI systems, not to monopolize a market. If competitors emerge, it validates the problem and expands the ecosystem. We maintain advantages through:
 
 - Trust structure creates credibility competitors can't match
 - First-mover advantage in partner relationships
@@ -189,8 +189,15 @@
 - Reduce 2027 expenses
 - Seek bridge funding if needed
 
+### If Demand Exceeds Capacity
+
+- Raise prices to manage demand
+- Reduce outreach to local campaigns
+- Prioritize higher-impact races
+- Expand team faster with revenue
+
 ---
 
 <div class="callout-bottomline">
-<p><strong>We've identified the risks. We have the contingencies. The only real risk is doing nothing.</strong></p>
+<p><strong>We've identified the risks. We have the contingencies. The biggest risk is doing nothing.</strong></p>
 </div>

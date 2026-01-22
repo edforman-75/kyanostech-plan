@@ -36,7 +36,7 @@ Not all surfaces matter equally for voter discovery. Our market analysis shows:
 
 ## Geographic Variation
 
-Kyanos WatchTower have detected that AI systems return different answers in different locations. Swing state voters may see different information than safe state voters. This has profound implications for campaign strategy and for platform accountability.
+Kyanos WatchTower has detected that AI systems return different answers in different locations. Swing state voters may see different information than safe state voters. This has profound implications for campaign strategy and for platform accountability.
 
 <div class="callout-info">
 <div class="callout-title">The Watchdog Imperative</div>
@@ -46,13 +46,11 @@ Kyanos WatchTower have detected that AI systems return different answers in diff
 
 ## Why Now
 
-1. **AI adoption is accelerating.** ChatGPT reached 100M users faster than any application in history; Google AI Overviews now appear on 50%+ of informational queries.
+1. **AI adoption is accelerating.** Voters increasingly get political information from AI assistants. ChatGPT reached 100M users faster than any application in history; Google AI Overviews now appear on 50%+ of informational queries. *See [Appendix 2: AI Surface Market Share](ky-appendix-b-surface-coverage.md) for detailed projections.*
 
-2. **2026 cycle timing.** The midterms are months away; solutions implemented now impact competitive races this cycle and establish credibility for 2028.
+2. **2026 cycle timing.** Solutions implemented now impact this cycle. More importantly, we need to gain experience and build a reference base before the 2028 campaign starts.
 
-3. **No incumbent.** The progressive technology network has voter files (Catalist), CRMs (NGP VAN), and fundraising tools (ActBlue), but nothing for AI-era digital presence management.
-
-4. **Platform capture risk.** Major AI platforms face pressure from a hostile administration; progressives need independent monitoring infrastructure.
+3. **No incumbent.** The progressive technology network has voter files (Catalist), CRMs (NGP VAN), and fundraising tools (ActBlue), but nothing for AI-era digital presence management. If someone else were doing this, we would gladly collaborate—but no one is.
 
 ## Market Size
 
@@ -75,7 +73,7 @@ Kyanos WatchTower have detected that AI systems return different answers in diff
 | Advocacy organizations | 200+ | $1.2M |
 | Labor unions | 50+ | $1.2M |
 | Party committees | 50+ | $1.8M |
-| Political consultants | 50-100 firms | $600K |
+| Political consultants | 50-100 firms | Channel partner |
 
 ### Commercial Services Market (Post-2028)
 

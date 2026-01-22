@@ -1,6 +1,6 @@
 # Capabilities & Technology
 
-Kyanos is a family of AI-driven services built on shared infrastructure. Each capability serves a distinct purpose in keeping progressive campaigns visible and informed.
+Kyanos is a family of AI-driven services built on shared infrastructure. Each capability serves a distinct purpose in keeping progressive campaigns visible and informed. *See [Appendix 5: Capabilities Architecture](ky-appendix-f-capabilities-architecture.html) for a visual overview of how these components work together.*
 
 ---
 
@@ -35,10 +35,10 @@ Panopticon is the flagship product. It works in three phases: **Monitor → Prio
 ### Key Features
 
 - Tests questions voters actually ask about the candidate
-- Shows exactly what voters see when they search for the candidate
+- Shows exactly what voters see when they enter a prompt about the candidate
 - Traces errors to fixable root causes (Wikipedia, Ballotpedia, news articles, campaign site)
 - Delivers targeted instructions: approver gets the recommendation, implementer gets the steps
-- WatchTower detect geographic variation (Statewide/National tiers)
+- WatchTower detects geographic variation (Statewide/National tiers)
 
 ### Monitoring Frequency
 
@@ -46,9 +46,9 @@ Panopticon is the flagship product. It works in three phases: **Monitor → Prio
 - Weekly (premium)
 - Daily (premium)
 
-### Sample Report
+### Sample Kyanos Report
 
-For a complete example of Panopticon output, see **[Appendix: Sample Panopticon Report](ky-appendix-panopticon-sample-report.md)**. This real AI Presence Report for a 2026 congressional campaign demonstrates the full Monitor → Analyze → Fix workflow, including:
+For a complete example of Panopticon output, see **[Appendix: Sample Kyanos Report](ky-appendix-panopticon-sample-report.md)**. This real AI Presence Report for a 2026 congressional campaign demonstrates the full Monitor → Analyze → Fix workflow, including:
 
 - Platform-by-platform scoring (Google AI Overview, ChatGPT, Knowledge Panel)
 - Root cause analysis tracing AI errors to their sources
@@ -151,29 +151,6 @@ WatchTower are Kyanos's distributed observation network. Sensor stations in mult
 
 ---
 
-## Surface Coverage
-
-### Core Surfaces (Recommended)
-
-| Surface | Priority | Notes |
-|---------|----------|-------|
-| Google (Search + AI Overviews) | Highest | Traditional search and AI Overviews |
-| ChatGPT | High | Influential early adopters |
-| Meta AI | High | Critical for Hispanic voters |
-
-### Additional Surfaces (Available)
-
-- Perplexity
-- Microsoft Copilot
-- Google Gemini
-- Anthropic Claude
-- X/Grok
-- Voice assistants
-
-**Strategic implication:** We can monitor any surface. Optimizing for the core platforms improves results across all others.
-
----
-
 ## Shared Infrastructure: Bentham
 
 All Kyanos capabilities are powered by **Bentham**, our multi-tenant extraction infrastructure.
@@ -213,10 +190,24 @@ Bentham is highly adaptable and marketable. The same infrastructure that powers 
 
 ## Security & Compliance
 
+Kyanos implements enterprise B2B SaaS security standards:
+
+### Standards & Certifications
+
+- **SOC 2 Type II** compliance roadmap
+- **GDPR** compliant data handling
+- **ISO 27001** aligned security practices
+
+### Access Controls
+
+- **SSO** (Single Sign-On) integration
+- **RBAC** (Role-Based Access Control) for team permissions
+- **MFA** (Multi-Factor Authentication) required for all accounts
+
 ### Data Protection
 
 - Campaign data siloed with strict access controls
-- Client data encrypted at rest and in transit
+- Client data encrypted at rest and in transit (AES-256, TLS 1.3)
 - No sharing between campaigns
 - Campaign isolation enforced at database level
 
@@ -247,5 +238,5 @@ Beyond the current capabilities, we see opportunities to help progressive campai
 ---
 
 <div class="callout-bottomline">
-<p><strong>One platform. Five capabilities. Complete visibility into how AI and search engines see progressive campaigns.</strong></p>
+<p><strong>One platform. Six capabilities. Complete visibility into how AI and search engines see progressive campaigns.</strong></p>
 </div>

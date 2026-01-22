@@ -10,7 +10,7 @@ We cannot afford to repeat that mistake.
 
 Just as podcasts reshaped the 2020–24 political landscape, AI chatbots are poised to become the transformational medium of 2026 and 2028. The shift is already underway: information discovery is moving away from links and clicks, and toward answers delivered directly inside AI systems — whether through Google’s AI Overviews, Amazon’s Alexa+, or the next-generation Siri and ChatGPT-style assistants embedded in every phone and browser.
 
-This change is faster, broader, and more consequential than the podcast wave because the infrastructure is already in place — hundreds of millions of Americans already use these assistants daily. By the time voters are making choices in 2028, nearly half (and possibly more) of all voter information queries will be answered inside AI environments, not on campaign websites.
+This change is faster, broader, and more consequential than the podcast wave because the infrastructure is already in place — millions of Americans already use these assistants daily. By the time voters are making choices in 2028, nearly half (and possibly more) of all voter information queries will be answered inside AI environments, not on campaign websites.
 
 ---
 
@@ -96,7 +96,7 @@ This is not about the intentions of tech leaders. Many are personally progressiv
 
 ### The Pressure Points
 
-- **Market concentration:** A handful of companies control the major AI platforms voters will use. Microsoft partners exclusively with OpenAI; Amazon and Google have invested billions in Anthropic; Meta distributes Llama at platform scale. This concentration means decisions made by a few actors affect what hundreds of millions of voters see.
+- **Market concentration:** A handful of companies control the major AI platforms voters will use. Microsoft partners exclusively with OpenAI; Amazon and Google have invested billions in Anthropic; Meta distributes Llama at platform scale. This concentration means decisions made by a few actors affect what millions of voters see.
 
 - **Government contract exposure:** The Department of Defense's JWCC is a $9B multi-vendor contract; the intelligence community's C2E is a 15-year, "tens of billions" multi-cloud deal. These are material revenue streams that create leverage for any administration willing to use it.
 

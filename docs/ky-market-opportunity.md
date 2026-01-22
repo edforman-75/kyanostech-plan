@@ -6,7 +6,7 @@
 
 When media works (when a voter sees a TV ad, digital campaign, or mail piece), what happens next? They research. They Google the candidate. They ask ChatGPT. If AI gives them bad information, that media spend is wasted.
 
-New research shows AI chatbots are **4 times more persuasive** than TV ads ([Rand et al., *Nature*, 2025](https://www.nature.com/articles/s41586-025-09771-9); [Pennycook et al., *Science*, 2025](https://www.science.org/doi/10.1126/science.aea3884)). AI isn't just another channel. It's where voters go to validate what they've seen elsewhere.
+New research shows AI chatbots are **four times more persuasive** than TV ads ([Rand et al., *Nature*, 2025](https://www.nature.com/articles/s41586-025-09771-9); [Pennycook et al., *Science*, 2025](https://www.science.org/doi/10.1126/science.aea3884)). AI isn't just another channel. It's where voters go to validate what they've seen elsewhere.
 
 **Internet Presence Optimization ensures media dollars convert:**
 
@@ -65,15 +65,15 @@ Based on actual Bentham infrastructure costs, scaled by tier:
 
 ### 2028 Client Mix (Presidential Year)
 
-| Level | Clients | Avg Price | Gross Revenue |
-|-------|---------|-----------|---------------|
-| National | 1 | $400,000 | $400K |
-| Statewide | 25 | $30,000 | $750K |
-| Congress | 60 | $8,000 | $480K |
-| Local | 250 | $1,800 | $450K |
-| Officeholders | 100 | $3,000 | $300K |
-| Organizations | 30 | $15,000 | $450K |
-| **Total** | **~466** | | **$2.83M** |
+| Level | Primary | General | Avg Price | Gross Revenue |
+|-------|---------|---------|-----------|---------------|
+| National | 6 | 1 | $75K/$200K | $650K |
+| Statewide | 20 | 30 | $22.5K | $1,125K |
+| Congress | 75 | 112 | $6K | $1,122K |
+| Local | 200 | 300 | $1.35K | $675K |
+| Officeholders | — | 35 | $6K | $210K |
+| Organizations | — | 15 | $9K | $135K |
+| **Total** | **301** | **493** | | **$3.92M** |
 
 *Commercial services revenue potential exists but is not included in projections. We will not pursue commercial services until after the 2028 cycle.*
 
@@ -83,7 +83,7 @@ Based on actual Bentham infrastructure costs, scaled by tier:
 |------|---------|---------------|-------|
 | 2026 | 200 | $0 | Free access year |
 | 2027 | ~150 | $1.2M | Paid pricing activates (midterm year) |
-| 2028 | ~466 | $2.8M | Presidential cycle |
+| 2028 | ~794 | $3.9M | Presidential cycle |
 
 ### Net Revenue (after agency commissions ~20%)
 
@@ -91,7 +91,7 @@ Based on actual Bentham infrastructure costs, scaled by tier:
 |------|-------|-------------|-------------|
 | 2026 | $0 | $0 | $0 |
 | 2027 | $1.2M | ~$180K | ~$1.0M |
-| 2028 | $2.8M | ~$420K | ~$2.4M |
+| 2028 | $3.9M | ~$585K | ~$3.3M |
 
 ---
 
@@ -133,7 +133,7 @@ Based on actual Bentham infrastructure costs, scaled by tier:
 |------|-------------|-------|-----|
 | 2026 | $0 | $1.0M | -$1.0M |
 | 2027 | $1.0M | $1.0M | Breakeven |
-| 2028 | $2.4M | $1.55M | +$850K |
+| 2028 | $3.3M | $1.65M | +$1.65M |
 
 **Cash-flow positive:** Q4 2027 / Q1 2028
 
@@ -168,6 +168,8 @@ We're offering free access to progressive campaigns in 2026: full Kyanos access 
 - Generates case studies for 2027 sales
 - Creates visibility heading into 2028
 - Positions Kyanos as essential progressive infrastructure
+- Removes price as an objection for an unproven and novel service
+- We learn quickly what works and what doesn't
 
 ---
 
@@ -209,5 +211,5 @@ Our Bentham infrastructure is purpose-built for running AI monitoring studies at
 ---
 
 <div class="callout-bottomline">
-<p><strong>$1M investment. 200 campaigns served free in 2026. Breakeven in 2027. Profitable and growing in 2028.</strong></p>
+<p><strong>$1.5M investment. 200 campaigns served free in 2026. Breakeven in 2027. Profitable and growing in 2028.</strong></p>
 </div>

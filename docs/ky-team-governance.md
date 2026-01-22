@@ -1,23 +1,23 @@
 # Team & Governance
 
-## Trust Structure
+## Organizational Structure
 
-Kyanos operates as a **Trust-Owned LLC**:
+Kyanos operates as a **non-profit mission-driven organization**, following the Catalist model:
 
-- **Trust entity** owns 100% of Kyanos LLC
-- **Board of trustees** (3-5 progressive leaders) governs trust
-- **Trust charter** locks in progressive-only service, prevents hostile acquisition
-- **Operating LLC** handles day-to-day business
+- **501(c)(4)** social welfare organization structure
+- **Board of directors** (3-5 progressive leaders) provides governance
+- **Mission charter** locks in progressive-only service, prevents mission drift
+- **Operating organization** handles day-to-day business
 
-### Why Trust-Owned?
+### Why Non-Profit?
 
-The trust structure follows the Catalist precedent (the voter file company that serves virtually every major Democratic campaign). A trust-owned structure:
+The non-profit structure follows the Catalist precedent (the voter file company that serves virtually every major Democratic campaign). A mission-driven non-profit:
 
-- Prevents sale to hostile buyers
 - Locks in progressive mission permanently
 - Allows for sustainable revenue generation
-- Attracts foundation PRIs and grants
+- Attracts foundation grants
 - Provides governance stability across leadership changes
+- Aligns incentives with impact rather than profit maximization
 
 ---
 
@@ -29,7 +29,7 @@ The trust structure follows the Catalist precedent (the voter file company that 
 | **Customer Consent** | Nothing published or disclosed without authorization |
 | **Causality Focus** | We trace problems to root causes and recommend only what can be fixed |
 | **Privacy Protected** | Client data stays confidential; no sharing between clients |
-| **Mission-Locked** | Trust structure prevents sale to hostile buyers |
+| **Mission-Locked** | Non-profit structure prevents mission drift |
 
 ---
 
@@ -68,13 +68,13 @@ Ed's role is as architect and advisor: assembling the team, framing the problem,
 
 ### Phase 2: Growth (2027)
 
-- Add dedicated sales role for commercial services
+- Add dedicated sales role for outbound marketing
 - Expand contractor pool as needed
 - Potential additional engineering hires
 
 ---
 
-## Board of Trustees
+## Board of Directors
 
 ### Composition (3-5 members)
 
@@ -88,8 +88,8 @@ Ed's role is as architect and advisor: assembling the team, framing the problem,
 - Approve annual budget and strategic plan
 - Ensure mission compliance
 - Appoint and evaluate CEO
-- Approve any change in corporate structure
-- Review Research Institute relationship
+- Approve any change in organizational structure
+- Review [Research Institute](#kyanos-research-institute) relationship
 
 ### Meetings
 
@@ -138,7 +138,7 @@ Separate 501(c)(3) organization for independent research on AI bias in political
 | Base salary | Competitive for role and experience |
 | Annual adjustment | Cost-of-living increases |
 | Performance | Milestone-based bonuses tied to organization goals |
-| Equity | Not applicable (trust-owned structure) |
+| Equity | Not applicable (non-profit structure) |
 
 ---
 
@@ -160,7 +160,7 @@ Part-time general counsel with expertise in:
 | Campaign finance | No direct contributions; services at market rates |
 | Data privacy | Campaign data siloed; no cross-client sharing |
 | Platform terms | Compliance with AI platform ToS |
-| Tax status | Maintain trust structure requirements |
+| Tax status | Maintain 501(c)(4) requirements |
 
 ---
 
@@ -169,20 +169,22 @@ Part-time general counsel with expertise in:
 Catalist provides the structural model for Kyanos:
 
 - **Founded:** 2006
-- **Structure:** Trust-owned LLC
+- **Structure:** Mission-driven organization
 - **Initial funding:** $1M from George Soros; $4M+ from Tides Foundation
 - **Current status:** Serves virtually every major Democratic campaign
-- **Relevance:** Proves trust-owned model works for progressive political infrastructure
+- **Relevance:** Proves mission-driven model works for progressive political infrastructure
 
 The Catalist example demonstrates that:
 
 - Foundation funding works for political infrastructure
-- Trust structure provides mission permanence
+- Mission-driven structure provides permanence
 - Progressive-only positioning creates sustainable business
 - Infrastructure plays can achieve movement-wide adoption
+
+*For more on the Catalist precedent, see [Appendix 3: Catalist Precedent](ky-appendix-d-catalist-precedent.md).*
 
 ---
 
 <div class="callout-bottomline">
-<p><strong>Trust-owned. Mission-locked. Built to serve progressives permanently.</strong></p>
+<p><strong>Non-profit. Mission-locked. Built to serve progressives permanently.</strong></p>
 </div>
