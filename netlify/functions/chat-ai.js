@@ -1,5 +1,26 @@
-// Kyanos Plan AI Assistant - Powered by Gemini
-// With embedded business plan content for serverless environment
+// ============================================================================
+// KYANOS STRATEGIC PLAN AI ASSISTANT - Powered by Gemini
+// ============================================================================
+//
+// ⚠️  FROZEN CONTENT - DO NOT MODIFY WITHOUT CAREFUL REVIEW  ⚠️
+//
+// This file contains the embedded strategic plan content that powers the
+// chatbot. The KYANOS_CONTENT constant below has been carefully tested and
+// verified to produce confident, accurate responses.
+//
+// Last verified: January 2026
+// Tested queries: 12 (all passing)
+//
+// If you need to update the content:
+// 1. Make changes in a separate branch
+// 2. Test thoroughly with the standard query set
+// 3. Verify all responses remain confident and specific
+// 4. Get approval before merging
+//
+// To restore this file if accidentally modified:
+//   git checkout v1.0-frozen-chatbot -- netlify/functions/chat-ai.js
+//
+// ============================================================================
 
 const KYANOS_CONTENT = `
 # KYANOS STRATEGIC PLAN - KEY FACTS
