@@ -24,7 +24,6 @@ try {
     'ky-risk-mitigation.md',
     'ky-white-paper-founder-interview.md',
     'ky-appendix-b-surface-coverage.md',
-    'ky-appendix-c-causality-chain.md',
     'ky-appendix-d-catalist-precedent.md'
   ];
 
