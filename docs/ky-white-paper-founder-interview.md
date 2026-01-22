@@ -22,7 +22,7 @@ Since that morning, I've been a little obsessed with understanding how AI system
 
 ## You've spent most of your career in tech, how does that shape how you see this?
 
-I spent most of my career in the trenches of Silicon Valley, managing and helping to build very early-stage startups. Over about thirty-five years, I was an early employee at eleven of them (each one a front-row seat to how technology gets created, hyped, and transformed. Not one of those companies still does business under the name it had when I joined it, which tells you something about how volatile those early waves can be.
+I spent most of my career in the trenches of Silicon Valley, managing and helping to build very early-stage startups. Over about thirty-five years, I was an early employee at eleven of them (each one a front-row seat to how technology gets created, hyped, and transformed). Not one of those companies still does business under the name it had when I joined it, which tells you something about how volatile those early waves can be.
 
 I've always been drawn to the next big thing. Sometimes too early. I've been there for decision-support systems, SQL databases, client-server computing, wireless email, desktop analytics, and interactive media. Many times, I was there before the market was ready.
 
