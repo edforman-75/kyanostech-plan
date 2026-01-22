@@ -11,11 +11,21 @@
   padding: 4rem 2rem;
   border-radius: 0 0 20px 20px;
 }
-.cover-logo {
-  width: 160px;
-  height: auto;
+.cover-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
   margin-bottom: 2.5rem;
-  filter: brightness(0) invert(1);
+}
+.cover-logo {
+  width: 100px;
+  height: auto;
+}
+.cover-logo-text {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -1px;
 }
 .cover-title {
   font-size: 2.8rem;
@@ -81,8 +91,11 @@
 </style>
 
 <div class="cover-container">
-  <img src="assets/brand/logos/kyanos-main.svg" alt="Kyanos" class="cover-logo">
-  <h1 class="cover-title">Kyanos Strategic Plan</h1>
+  <div class="cover-logo-container">
+    <img src="assets/brand/logos/kyanos-main.svg" alt="Kyanos" class="cover-logo">
+    <span class="cover-logo-text">Kyanos</span>
+  </div>
+  <h1 class="cover-title">Strategic Plan</h1>
   <p class="cover-tagline">Keeping progressives visible in the AI era</p>
   <p class="cover-subtitle">Making sure voters find the truth about progressive candidates</p>
   <div class="cover-divider"></div>
