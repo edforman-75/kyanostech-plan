@@ -1,9 +1,12 @@
 # Claude Interviews Our Founder
 
-<img src="assets/images/ed-forman.jpg" alt="Ed Forman" style="float: right; width: 200px; margin: 0 0 1rem 1.5rem; border-radius: 8px;">
-
-*Ed Forman in Conversation with Claude of Anthropic*
-*(November 6, 2025)*
+<div style="display: flex; align-items: center; gap: 2rem; margin-bottom: 2rem;">
+<img src="assets/images/ed-forman.jpg" alt="Ed Forman" style="width: 180px; border-radius: 8px; flex-shrink: 0;">
+<div style="text-align: center; flex-grow: 1;">
+<p style="font-size: 1.2rem; font-style: italic; margin: 0;">Ed Forman in Conversation with Claude of Anthropic</p>
+<p style="font-size: 1rem; font-style: italic; color: #666; margin: 0.5rem 0 0 0;">(November 6, 2025)</p>
+</div>
+</div>
 
 ---
 
