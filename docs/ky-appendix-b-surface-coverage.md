@@ -17,51 +17,131 @@
 
 ---
 
-## Market Share Visualization
+## The Shift: Traditional Search to AI Chatbots
 
-<div style="display: flex; justify-content: space-around; flex-wrap: wrap; margin: 2rem 0;">
+<div style="background: #f8f9fa; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
 
-<div style="text-align: center;">
-<svg viewBox="0 0 200 200" width="180" height="180">
-  <!-- 2026 Pie Chart -->
-  <!-- Google Search: 47.5% = 171° -->
-  <circle r="80" cx="100" cy="100" fill="transparent" stroke="#4285f4" stroke-width="80" stroke-dasharray="239 264" transform="rotate(-90 100 100)"/>
-  <!-- Google AI Overviews: 16.5% = 59.4° -->
-  <circle r="80" cx="100" cy="100" fill="transparent" stroke="#34a853" stroke-width="80" stroke-dasharray="83 420" transform="rotate(81 100 100)"/>
-  <!-- ChatGPT: 9% = 32.4° -->
-  <circle r="80" cx="100" cy="100" fill="transparent" stroke="#10a37f" stroke-width="80" stroke-dasharray="45 458" transform="rotate(140.4 100 100)"/>
-  <!-- Other: 27% = 97.2° -->
-  <circle r="80" cx="100" cy="100" fill="transparent" stroke="#9ca3af" stroke-width="80" stroke-dasharray="122 381" transform="rotate(172.8 100 100)"/>
-  <circle r="40" cx="100" cy="100" fill="white"/>
-  <text x="100" y="105" text-anchor="middle" font-size="14" font-weight="bold">2026</text>
-</svg>
-<div style="font-weight: bold; margin-top: 0.5rem;">2026 Projection</div>
+<div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+
+<!-- 2026 Column -->
+<div style="flex: 1; min-width: 280px;">
+<h4 style="text-align: center; color: #667eea; margin-bottom: 1rem;">2026 Projection</h4>
+
+<div style="margin-bottom: 1rem;">
+<div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+<span style="font-size: 0.85rem; font-weight: 600; color: #4285f4;">Google Search (traditional)</span>
+<span style="font-size: 0.85rem; font-weight: bold;">47%</span>
+</div>
+<div style="background: #e0e0e0; border-radius: 8px; height: 24px; overflow: hidden;">
+<div style="background: linear-gradient(90deg, #4285f4, #5c9cf5); height: 100%; width: 47%; border-radius: 8px;"></div>
+</div>
 </div>
 
-<div style="text-align: center;">
-<svg viewBox="0 0 200 200" width="180" height="180">
-  <!-- 2028 Pie Chart -->
-  <!-- Google Search: 37.5% = 135° -->
-  <circle r="80" cx="100" cy="100" fill="transparent" stroke="#4285f4" stroke-width="80" stroke-dasharray="188 315" transform="rotate(-90 100 100)"/>
-  <!-- Google AI Overviews: 22.5% = 81° -->
-  <circle r="80" cx="100" cy="100" fill="transparent" stroke="#34a853" stroke-width="80" stroke-dasharray="113 390" transform="rotate(45 100 100)"/>
-  <!-- ChatGPT: 16% = 57.6° -->
-  <circle r="80" cx="100" cy="100" fill="transparent" stroke="#10a37f" stroke-width="80" stroke-dasharray="80 423" transform="rotate(126 100 100)"/>
-  <!-- Other: 24% = 86.4° -->
-  <circle r="80" cx="100" cy="100" fill="transparent" stroke="#9ca3af" stroke-width="80" stroke-dasharray="108 395" transform="rotate(183.6 100 100)"/>
-  <circle r="40" cx="100" cy="100" fill="white"/>
-  <text x="100" y="105" text-anchor="middle" font-size="14" font-weight="bold">2028</text>
-</svg>
-<div style="font-weight: bold; margin-top: 0.5rem;">2028 Projection</div>
+<div style="margin-bottom: 1rem;">
+<div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+<span style="font-size: 0.85rem; font-weight: 600; color: #ea4335;">Google AI Overviews</span>
+<span style="font-size: 0.85rem; font-weight: bold;">17%</span>
+</div>
+<div style="background: #e0e0e0; border-radius: 8px; height: 24px; overflow: hidden;">
+<div style="background: linear-gradient(90deg, #ea4335, #f28b82); height: 100%; width: 17%; border-radius: 8px;"></div>
+</div>
+</div>
+
+<div style="margin-bottom: 1rem;">
+<div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+<span style="font-size: 0.85rem; font-weight: 600; color: #10a37f;">ChatGPT</span>
+<span style="font-size: 0.85rem; font-weight: bold;">9%</span>
+</div>
+<div style="background: #e0e0e0; border-radius: 8px; height: 24px; overflow: hidden;">
+<div style="background: linear-gradient(90deg, #10a37f, #34d399); height: 100%; width: 9%; border-radius: 8px;"></div>
+</div>
+</div>
+
+<div style="margin-bottom: 1rem;">
+<div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+<span style="font-size: 0.85rem; font-weight: 600; color: #0668E1;">Meta AI</span>
+<span style="font-size: 0.85rem; font-weight: bold;">6%</span>
+</div>
+<div style="background: #e0e0e0; border-radius: 8px; height: 24px; overflow: hidden;">
+<div style="background: linear-gradient(90deg, #0668E1, #4599ff); height: 100%; width: 6%; border-radius: 8px;"></div>
+</div>
+</div>
+
+<div style="margin-bottom: 1rem;">
+<div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+<span style="font-size: 0.85rem; font-weight: 600; color: #6b7280;">Other AI Surfaces</span>
+<span style="font-size: 0.85rem; font-weight: bold;">21%</span>
+</div>
+<div style="background: #e0e0e0; border-radius: 8px; height: 24px; overflow: hidden;">
+<div style="background: linear-gradient(90deg, #6b7280, #9ca3af); height: 100%; width: 21%; border-radius: 8px;"></div>
+</div>
 </div>
 
 </div>
 
-<div style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 2rem;">
-<span><span style="display: inline-block; width: 12px; height: 12px; background: #4285f4; margin-right: 4px;"></span> Google Search</span>
-<span><span style="display: inline-block; width: 12px; height: 12px; background: #34a853; margin-right: 4px;"></span> Google AI Overviews</span>
-<span><span style="display: inline-block; width: 12px; height: 12px; background: #10a37f; margin-right: 4px;"></span> ChatGPT</span>
-<span><span style="display: inline-block; width: 12px; height: 12px; background: #9ca3af; margin-right: 4px;"></span> Other AI</span>
+<!-- 2028 Column -->
+<div style="flex: 1; min-width: 280px;">
+<h4 style="text-align: center; color: #764ba2; margin-bottom: 1rem;">2028 Projection</h4>
+
+<div style="margin-bottom: 1rem;">
+<div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+<span style="font-size: 0.85rem; font-weight: 600; color: #4285f4;">Google Search (traditional)</span>
+<span style="font-size: 0.85rem; font-weight: bold;">37% <span style="color: #dc2626;">↓</span></span>
+</div>
+<div style="background: #e0e0e0; border-radius: 8px; height: 24px; overflow: hidden;">
+<div style="background: linear-gradient(90deg, #4285f4, #5c9cf5); height: 100%; width: 37%; border-radius: 8px;"></div>
+</div>
+</div>
+
+<div style="margin-bottom: 1rem;">
+<div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+<span style="font-size: 0.85rem; font-weight: 600; color: #ea4335;">Google AI Overviews</span>
+<span style="font-size: 0.85rem; font-weight: bold;">23% <span style="color: #16a34a;">↑</span></span>
+</div>
+<div style="background: #e0e0e0; border-radius: 8px; height: 24px; overflow: hidden;">
+<div style="background: linear-gradient(90deg, #ea4335, #f28b82); height: 100%; width: 23%; border-radius: 8px;"></div>
+</div>
+</div>
+
+<div style="margin-bottom: 1rem;">
+<div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+<span style="font-size: 0.85rem; font-weight: 600; color: #10a37f;">ChatGPT</span>
+<span style="font-size: 0.85rem; font-weight: bold;">16% <span style="color: #16a34a;">↑</span></span>
+</div>
+<div style="background: #e0e0e0; border-radius: 8px; height: 24px; overflow: hidden;">
+<div style="background: linear-gradient(90deg, #10a37f, #34d399); height: 100%; width: 16%; border-radius: 8px;"></div>
+</div>
+</div>
+
+<div style="margin-bottom: 1rem;">
+<div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+<span style="font-size: 0.85rem; font-weight: 600; color: #0668E1;">Meta AI</span>
+<span style="font-size: 0.85rem; font-weight: bold;">11% <span style="color: #16a34a;">↑</span></span>
+</div>
+<div style="background: #e0e0e0; border-radius: 8px; height: 24px; overflow: hidden;">
+<div style="background: linear-gradient(90deg, #0668E1, #4599ff); height: 100%; width: 11%; border-radius: 8px;"></div>
+</div>
+</div>
+
+<div style="margin-bottom: 1rem;">
+<div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+<span style="font-size: 0.85rem; font-weight: 600; color: #6b7280;">Other AI Surfaces</span>
+<span style="font-size: 0.85rem; font-weight: bold;">13%</span>
+</div>
+<div style="background: #e0e0e0; border-radius: 8px; height: 24px; overflow: hidden;">
+<div style="background: linear-gradient(90deg, #6b7280, #9ca3af); height: 100%; width: 13%; border-radius: 8px;"></div>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<!-- Key Takeaway Box -->
+<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 8px; padding: 1rem; margin-top: 1rem; color: white; text-align: center;">
+<strong style="font-size: 1rem;">Key Takeaway:</strong> Traditional browser search drops from ~50% to ~35% while AI chatbots grow from ~35% to ~50%+ of election queries
+</div>
+
 </div>
 
 ---

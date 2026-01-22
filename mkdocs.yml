@@ -49,6 +49,7 @@ nav:
   - 'Appendix 1 — Claude Interviews Our Founder': ky-white-paper-founder-interview.md
   - 'Appendix 2 — AI Surface Market Share': ky-appendix-b-surface-coverage.md
   - 'Appendix 3 — Catalist Precedent': ky-appendix-d-catalist-precedent.md
+  - 'Appendix 4 — The Journey of a Prompt': 'https://kyanostech-plan-edf.netlify.app/ky-appendix-e-prompt-journey.html'
 
 markdown_extensions:
   - footnotes

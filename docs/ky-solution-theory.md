@@ -21,6 +21,8 @@ Kyanos doesn't just report problems. We trace them to root causes and provide fi
 <p>And we don't just hand over a report and walk away. <strong>We monitor execution and act as a coach</strong>, tracking whether fixes get implemented, confirming when AI systems update their responses, and keeping the pressure on until the job is done.</p>
 </div>
 
+*For a technical overview of how AI chatbots retrieve and process web content, see [Appendix 4: The Journey of a Prompt](ky-appendix-e-prompt-journey.html).*
+
 ## Panopticon: The Core Product
 
 Panopticon is our flagship product. It works in three phases: **Monitor → Prioritize → Act**
