@@ -2,11 +2,285 @@
 // Progressive form handling, state/district data, city suggestions
 
 document.addEventListener('DOMContentLoaded', function() {
+    initSignupTabs();
+    initWebsiteCheck();
     initCampaignForm();
     initAgencyForm();
     initMobileMenu();
     initSmoothScroll();
 });
+
+// ============================================
+// SIGNUP TABS
+// ============================================
+
+function initSignupTabs() {
+    const tabs = document.querySelectorAll('.signup-tab');
+    const tabContents = document.querySelectorAll('.signup-tab-content');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const targetId = tab.dataset.target;
+
+            // Update tab buttons
+            tabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+
+            // Update tab content
+            tabContents.forEach(content => {
+                content.classList.remove('active');
+                if (content.id === targetId) {
+                    content.classList.add('active');
+                }
+            });
+        });
+    });
+}
+
+// ============================================
+// WEBSITE CHECK / CMS DETECTION
+// ============================================
+
+function initWebsiteCheck() {
+    const checkBtn = document.getElementById('check-website-btn');
+    const websiteInput = document.getElementById('campaign-website');
+    const cmsDetection = document.getElementById('cms-detection');
+    const cmsChecking = document.getElementById('cms-checking');
+    const cmsResult = document.getElementById('cms-result');
+    const cmsError = document.getElementById('cms-error');
+    const cmsName = document.getElementById('cms-name');
+    const detectedCmsInput = document.getElementById('detected-cms');
+    const cmsManual = document.getElementById('cms-manual');
+
+    if (!checkBtn) return;
+
+    checkBtn.addEventListener('click', async () => {
+        const url = websiteInput.value.trim();
+
+        if (!url) {
+            alert('Please enter a website URL first.');
+            return;
+        }
+
+        // Ensure URL has protocol
+        let checkUrl = url;
+        if (!checkUrl.startsWith('http://') && !checkUrl.startsWith('https://')) {
+            checkUrl = 'https://' + checkUrl;
+            websiteInput.value = checkUrl;
+        }
+
+        // Show checking state
+        cmsDetection.classList.remove('hidden');
+        cmsChecking.classList.remove('hidden');
+        cmsResult.classList.add('hidden');
+        cmsError.classList.add('hidden');
+        checkBtn.disabled = true;
+        checkBtn.textContent = 'Checking...';
+
+        // Set up a timeout to cancel if it takes too long
+        const timeoutPromise = new Promise((_, reject) => {
+            setTimeout(() => reject(new Error('timeout')), 8000);
+        });
+
+        try {
+            const detected = await Promise.race([
+                detectCMS(checkUrl),
+                timeoutPromise
+            ]);
+
+            cmsChecking.classList.add('hidden');
+            cmsResult.classList.remove('hidden');
+            cmsName.textContent = detected.name;
+            detectedCmsInput.value = detected.id;
+
+            // Set up confirmation radio handlers
+            setupCmsConfirmation(detected.id);
+
+        } catch (error) {
+            cmsChecking.classList.add('hidden');
+
+            // Show timeout-friendly message and let them select manually
+            if (error.message === 'timeout') {
+                showManualCMSSelection('Check timed out. Please select your CMS:');
+            } else {
+                showManualCMSSelection('Could not check website. Please select your CMS:');
+            }
+            console.error('Website check failed:', error);
+        }
+
+        checkBtn.disabled = false;
+        checkBtn.textContent = 'Check Site';
+    });
+
+    function showManualCMSSelection(message) {
+        cmsResult.classList.remove('hidden');
+        cmsName.textContent = 'Could not detect';
+        document.getElementById('detected-cms').value = 'detection-failed';
+
+        // Show manual selection immediately
+        cmsManual.classList.remove('hidden');
+        cmsManual.querySelector('label').textContent = message;
+
+        // Hide the confirmation radios since we're going straight to manual
+        const confirmDiv = cmsResult.querySelector('.cms-confirm');
+        if (confirmDiv) {
+            confirmDiv.style.display = 'none';
+        }
+
+        setupCmsConfirmation('unknown');
+    }
+}
+
+async function detectCMS(url) {
+    // Use a CORS proxy or server-side endpoint in production
+    // For now, we'll use a simple approach that works for demo
+
+    // In production, this would call your backend:
+    // const response = await fetch('/api/detect-cms?url=' + encodeURIComponent(url));
+    // return response.json();
+
+    // For demo/client-side, we'll try to detect via common patterns
+    // Note: This will be limited by CORS - a real implementation needs server-side
+
+    try {
+        // Try to fetch via a CORS proxy (for demo purposes)
+        // In production, use your own backend
+        const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`;
+        const response = await fetch(proxyUrl, {
+            signal: AbortSignal.timeout(10000)
+        });
+
+        if (!response.ok) {
+            throw new Error('Failed to fetch');
+        }
+
+        const html = await response.text();
+        return identifyCMS(html, url);
+
+    } catch (error) {
+        // If fetch fails, try basic URL pattern detection
+        return detectCMSFromURL(url);
+    }
+}
+
+function identifyCMS(html, url) {
+    const htmlLower = html.toLowerCase();
+
+    // WordPress
+    if (htmlLower.includes('wp-content') ||
+        htmlLower.includes('wp-includes') ||
+        htmlLower.includes('wordpress') ||
+        html.includes('generator" content="WordPress')) {
+        return { id: 'wordpress', name: 'WordPress' };
+    }
+
+    // Squarespace
+    if (htmlLower.includes('squarespace') ||
+        htmlLower.includes('static.squarespace.com')) {
+        return { id: 'squarespace', name: 'Squarespace' };
+    }
+
+    // Wix
+    if (htmlLower.includes('wix.com') ||
+        htmlLower.includes('wixsite.com') ||
+        htmlLower.includes('_wix_browser_sess')) {
+        return { id: 'wix', name: 'Wix' };
+    }
+
+    // NationBuilder
+    if (htmlLower.includes('nationbuilder') ||
+        htmlLower.includes('nbcdn.net') ||
+        htmlLower.includes('nationbuilder.com')) {
+        return { id: 'nationbuilder', name: 'NationBuilder' };
+    }
+
+    // Webflow
+    if (htmlLower.includes('webflow') ||
+        htmlLower.includes('.webflow.io')) {
+        return { id: 'webflow', name: 'Webflow' };
+    }
+
+    // Shopify (occasionally used)
+    if (htmlLower.includes('shopify') ||
+        htmlLower.includes('cdn.shopify.com')) {
+        return { id: 'shopify', name: 'Shopify' };
+    }
+
+    // Weebly
+    if (htmlLower.includes('weebly.com') ||
+        htmlLower.includes('weeblycloud.com')) {
+        return { id: 'weebly', name: 'Weebly' };
+    }
+
+    // GoDaddy Website Builder
+    if (htmlLower.includes('godaddy') ||
+        htmlLower.includes('secureserver.net')) {
+        return { id: 'godaddy', name: 'GoDaddy Website Builder' };
+    }
+
+    return { id: 'unknown', name: 'Unknown / Custom' };
+}
+
+function detectCMSFromURL(url) {
+    const urlLower = url.toLowerCase();
+
+    if (urlLower.includes('.squarespace.com') || urlLower.includes('sqsp.com')) {
+        return { id: 'squarespace', name: 'Squarespace' };
+    }
+    if (urlLower.includes('.wixsite.com') || urlLower.includes('.wix.com')) {
+        return { id: 'wix', name: 'Wix' };
+    }
+    if (urlLower.includes('.nationbuilder.com')) {
+        return { id: 'nationbuilder', name: 'NationBuilder' };
+    }
+    if (urlLower.includes('.webflow.io')) {
+        return { id: 'webflow', name: 'Webflow' };
+    }
+    if (urlLower.includes('.weebly.com')) {
+        return { id: 'weebly', name: 'Weebly' };
+    }
+
+    // Can't determine from URL alone
+    return { id: 'unknown', name: 'Could not detect' };
+}
+
+function setupCmsConfirmation(detectedId) {
+    const radios = document.querySelectorAll('input[name="cms_confirmed"]');
+    const cmsManual = document.getElementById('cms-manual');
+    const manualSelect = document.getElementById('cms-manual-select');
+
+    radios.forEach(radio => {
+        radio.addEventListener('change', () => {
+            if (radio.value === 'incorrect') {
+                cmsManual.classList.remove('hidden');
+            } else {
+                cmsManual.classList.add('hidden');
+                if (radio.value === 'correct') {
+                    // Keep the detected value
+                } else if (radio.value === 'unknown') {
+                    document.getElementById('detected-cms').value = 'user-unknown';
+                }
+            }
+        });
+    });
+
+    if (manualSelect) {
+        manualSelect.addEventListener('change', () => {
+            document.getElementById('detected-cms').value = manualSelect.value;
+
+            // Show/hide the "Other" text input
+            const otherInput = document.getElementById('cms-other-input');
+            if (otherInput) {
+                if (manualSelect.value === 'other') {
+                    otherInput.classList.remove('hidden');
+                    otherInput.querySelector('input').focus();
+                } else {
+                    otherInput.classList.add('hidden');
+                }
+            }
+        });
+    }
+}
 
 // ============================================
 // STATE AND DISTRICT DATA
