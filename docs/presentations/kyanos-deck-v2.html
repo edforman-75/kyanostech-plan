@@ -3,7 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kyanos - AI Intelligence for Democratic Campaigns</title>
+    <title>Kyanos - AI Intelligence for Progressive Campaigns</title>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PQ556GCYWD"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-PQ556GCYWD');
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -74,26 +82,70 @@
             margin-bottom: 2rem;
         }
         .premises {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.9rem;
             margin-top: 1rem;
+            max-width: 1000px;
         }
         .premise {
-            background: rgba(255,255,255,0.05);
-            border-left: 4px solid #60a5fa;
-            padding: 1.5rem;
-            border-radius: 0 8px 8px 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 1.25rem;
+            background: rgba(255,255,255,0.03);
+            padding: 0.9rem 1.25rem;
+            border-radius: 8px;
+            opacity: 0;
+            transform: translateX(-20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
         }
-        .premise-number {
-            font-size: 0.85rem;
-            color: #60a5fa;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
+        .premise.visible {
+            opacity: 1;
+            transform: translateX(0);
         }
-        .premise p {
+        .build-item.visible {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+        .takeaway-box {
+            position: absolute;
+            bottom: 7.5rem;
+            left: 4rem;
+            right: 4rem;
+            padding: 1rem 1.5rem;
+            background: linear-gradient(135deg, rgba(96,165,250,0.15) 0%, rgba(96,165,250,0.05) 100%);
+            border: 2px solid #60a5fa;
+            border-radius: 12px;
+            transition: opacity 0.5s ease;
+        }
+        .takeaway-box p {
             font-size: 1.15rem;
             margin: 0;
+            line-height: 1.5;
+            max-width: none;
+        }
+        .takeaway-box strong.highlight {
+            color: #60a5fa;
+        }
+        .premise-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #60a5fa;
+            line-height: 1;
+            min-width: 50px;
+        }
+        .premise-content {
+            flex: 1;
+        }
+        .premise-content strong {
+            font-size: 1.1rem;
+            color: #ffffff;
+        }
+        .premise p {
+            font-size: 1.05rem;
+            margin: 0;
+            line-height: 1.5;
+            color: rgba(255,255,255,0.85);
         }
         .workflow {
             display: flex;
@@ -707,30 +759,34 @@
         }
         .ky-products {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1rem;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 0.75rem;
+            width: 100%;
+            max-width: 1100px;
         }
         .ky-product {
             background: rgba(255,255,255,0.1);
-            padding: 1rem;
-            border-radius: 12px;
+            padding: 0.75rem 0.5rem;
+            border-radius: 10px;
             text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
         }
         .ky-product-icon {
             display: block;
-            font-size: 1.75rem;
-            margin-bottom: 0.4rem;
+            font-size: 1.5rem;
+            margin-bottom: 0.3rem;
         }
         .ky-product-name {
             display: block;
-            font-size: 0.95rem;
+            font-size: 0.85rem;
             font-weight: 600;
-            margin-bottom: 0.25rem;
+            margin-bottom: 0.2rem;
         }
         .ky-product-desc {
             display: block;
-            font-size: 0.75rem;
+            font-size: 0.65rem;
             color: rgba(255,255,255,0.5);
+            line-height: 1.3;
         }
         .ky-report-clip {
             background: white;
@@ -2173,10 +2229,11 @@
             color: #60a5fa;
         }
         .cta-slide {
-            text-align: center;
+            text-align: left;
         }
         .cta-slide h1 {
             font-size: 3rem;
+            margin-top: 2rem;
         }
         .controls {
             position: fixed;
@@ -2276,48 +2333,224 @@
                 grid-template-columns: repeat(2, 1fr);
             }
         }
+        /* Search box typing animation */
+        .search-box {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(255,255,255,0.08);
+            border: 2px solid rgba(96,165,250,0.5);
+            border-radius: 25px;
+            padding: 0.6rem 1.25rem;
+            margin: 0.5rem 0 1rem 0;
+        }
+        .search-icon {
+            color: rgba(255,255,255,0.5);
+            margin-right: 0.75rem;
+            font-size: 1.2rem;
+        }
+        .typing-text {
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: #60a5fa;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 2px solid #60a5fa;
+            width: 0;
+            animation: typing 1.5s steps(30, end) forwards, blink-caret 0.6s step-end infinite;
+        }
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 30ch; }
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: #60a5fa; }
+        }
+        /* Screen content reveal animation */
+        .screen-reveal {
+            clip-path: inset(0 0 100% 0);
+            animation: reveal-content 2s ease-out 1.8s forwards;
+        }
+        @keyframes reveal-content {
+            from { clip-path: inset(0 0 100% 0); }
+            to { clip-path: inset(0 0 0% 0); }
+        }
+        /* Override for AI response small text */
+        .ai-response-text p {
+            font-size: 0.7rem !important;
+            line-height: 1.35 !important;
+            margin-bottom: 0.35rem !important;
+        }
+        .ai-response-text .sources {
+            font-size: 0.6rem !important;
+            color: rgba(255,255,255,0.5) !important;
+            margin-top: auto !important;
+            margin-bottom: 0 !important;
+        }
     </style>
 </head>
 <body>
     <!-- Slide 1: Title -->
     <div class="slide active" id="slide-1">
-        <span class="logo">KYANOS</span>
-        <h1>AI Intelligence for<br>Democratic Campaigns</h1>
-        <p class="subtitle">Winning the information war in the age of AI search</p>
-        <p>When voters ask AI about candidates, we make sure they get the right answers.</p>
-        <span class="slide-number">1 / 11</span>
+        <div style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2.5rem;">
+            <img src="../assets/brand/logos/kyanos-main.svg" alt="Kyanos" style="width: 100px; height: auto;">
+            <span style="font-size: 3.5rem; font-weight: 700; color: #ffffff; letter-spacing: -1px;">Kyanos</span>
+        </div>
+        <h1>AI Intelligence for<br>Progressive Campaigns</h1>
+        <p class="subtitle">Winning the information war in the age of AI-mediated Internet browsing</p>
+        <p>When voters ask their Internet browser about candidates, we make sure they get the right answers.</p>
+        <div style="margin-top: 4rem; color: rgba(255,255,255,0.6);">
+            <p style="font-size: 1.1rem; margin-bottom: 0.5rem;">January 2026</p>
+            <p style="font-size: 1rem;"><a href="mailto:forman.ed@gmail.com" style="color: #60a5fa; text-decoration: none;">Ed Forman</a>, Founder &nbsp;&bull;&nbsp; For Thanasi Dilos, Investing In US</p>
+        </div>
+        <span class="slide-number">1 / 10</span>
     </div>
 
-    <!-- Slide 2: Premises -->
+    <!-- Slide 2: Search vs AI - The Shift -->
     <div class="slide" id="slide-2">
-        <span class="logo">KYANOS</span>
-        <h2>The Premises</h2>
-        <p style="margin-bottom: 2rem; font-size: 1.2rem;">We're not here to convince you of these—you already know them.</p>
-        <div class="premises">
-            <div class="premise">
-                <div class="premise-number">01</div>
-                <p><strong>AI is the new information layer.</strong> 100M+ Americans use ChatGPT weekly. Google AI Overview tops 40% of searches. This is where voters form impressions.</p>
+        <div class="logo" style="display: flex; align-items: center; gap: 0.5rem;">
+            <img src="../assets/brand/logos/kyanos-main.svg" alt="Kyanos" style="width: 32px; height: auto;">
+            <span style="font-size: 1.2rem; font-weight: 700; letter-spacing: -0.5px;">Kyanos</span>
+        </div>
+        <h2>From Links to Answers</h2>
+
+        <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <span class="typing-text">Tell me about Tom Malinowski</span>
+        </div>
+
+        <div style="display: flex; gap: 2rem; margin-top: 1rem;">
+            <!-- Left: Traditional Search -->
+            <div style="flex: 1;">
+                <div style="text-align: center; margin-bottom: 1rem;">
+                    <span style="font-size: 1.3rem; font-weight: 700; color: #fbbf24;">Traditional Search</span>
+                    <div style="font-size: 0.95rem; color: rgba(255,255,255,0.8);">Search Engine Optimization (SEO)</div>
+                    <div style="font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-top: 0.25rem;">MetaTags, Keywords, Backlinks</div>
+                    <div style="font-size: 0.8rem; color: rgba(255,255,255,0.5);">Websites as destinations</div>
+                </div>
+                <div style="background: rgba(251,191,36,0.1); border: 2px solid rgba(251,191,36,0.4); border-radius: 12px; padding: 0.75rem; height: 270px; overflow: hidden;">
+                    <!-- Mock Google Search Results for Malinowski -->
+                    <div class="screen-reveal" style="background: #1a1a2e; border-radius: 8px; padding: 0.75rem; font-size: 0.75rem;">
+                        <div style="color: rgba(255,255,255,0.5); font-size: 0.65rem; margin-bottom: 0.5rem;">About 1,240,000 results</div>
+                        <div style="margin-bottom: 0.75rem; padding-bottom: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                            <div style="background: rgba(251,191,36,0.3); color: #fbbf24; font-size: 0.6rem; padding: 0.15rem 0.4rem; border-radius: 3px; display: inline-block; margin-bottom: 0.25rem;">Sponsored</div>
+                            <div style="color: #60a5fa; font-size: 0.8rem;">TruthAboutMalinowski.com</div>
+                            <div style="color: rgba(255,255,255,0.5); font-size: 0.7rem;">Stock trades exposed. Get the facts...</div>
+                        </div>
+                        <div style="margin-bottom: 0.75rem; padding-bottom: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                            <div style="background: rgba(251,191,36,0.3); color: #fbbf24; font-size: 0.6rem; padding: 0.15rem 0.4rem; border-radius: 3px; display: inline-block; margin-bottom: 0.25rem;">Sponsored</div>
+                            <div style="color: #60a5fa; font-size: 0.8rem;">NRCC.org/NJ-7</div>
+                            <div style="color: rgba(255,255,255,0.5); font-size: 0.7rem;">Tom Malinowski: Too liberal for NJ...</div>
+                        </div>
+                        <div style="margin-bottom: 0.75rem; padding-bottom: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                            <div style="color: #60a5fa; font-size: 0.8rem;">Wikipedia: Tom Malinowski</div>
+                            <div style="color: rgba(255,255,255,0.5); font-size: 0.7rem;">American diplomat and politician who served...</div>
+                        </div>
+                        <div style="margin-bottom: 0.5rem;">
+                            <div style="color: #60a5fa; font-size: 0.8rem;">Ballotpedia: Tom Malinowski</div>
+                            <div style="color: rgba(255,255,255,0.5); font-size: 0.7rem;">New Jersey's 7th Congressional District...</div>
+                        </div>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 1rem; color: rgba(255,255,255,0.7); font-size: 0.95rem;">
+                    <strong>Lists of links</strong><br>
+                    <span style="color: #f87171;">Paid ads are most visible</span>
+                </div>
             </div>
-            <div class="premise">
-                <div class="premise-number">02</div>
-                <p><strong>Democrats lost the 2024 information war.</strong> Podcasts, algorithms, search—the right dominated every channel where persuadable voters actually are.</p>
-            </div>
-            <div class="premise">
-                <div class="premise-number">03</div>
-                <p><strong>Campaigns are blind to AI.</strong> They don't know what ChatGPT says about their candidate. They don't know how to fix it. Most don't know to ask.</p>
-            </div>
-            <div class="premise">
-                <div class="premise-number">04</div>
-                <p><strong>This is tractable.</strong> AI cites sources. Campaigns control sources. The gap is knowing what to fix and how. That's what we do.</p>
+
+            <!-- Right: AI Responses -->
+            <div style="flex: 1;">
+                <div style="text-align: center; margin-bottom: 1rem;">
+                    <span style="font-size: 1.3rem; font-weight: 700; color: #4ade80;">AI-Powered Responses</span>
+                    <div style="font-size: 0.95rem; color: rgba(255,255,255,0.8);">Generative Engine Optimization (GEO)</div>
+                    <div style="font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-top: 0.25rem;">LLMS, JSON-LD, Structured Data</div>
+                    <div style="font-size: 0.8rem; color: rgba(255,255,255,0.5);">Website as knowledge base</div>
+                </div>
+                <div style="background: rgba(74,222,128,0.1); border: 2px solid rgba(74,222,128,0.4); border-radius: 12px; padding: 0.75rem; height: 270px; overflow: hidden;">
+                    <!-- Mock AI Response for Malinowski -->
+                    <div class="screen-reveal" style="background: #1a1a2e; border-radius: 8px; padding: 0.6rem; height: 100%; display: flex; flex-direction: column;">
+                        <div style="display: flex; align-items: center; gap: 0.3rem; margin-bottom: 0.4rem;">
+                            <span style="font-size: 0.75rem;">✨</span>
+                            <span style="color: #4ade80; font-weight: 600; font-size: 0.7rem;">AI Overview</span>
+                        </div>
+                        <div class="ai-response-text" style="color: rgba(255,255,255,0.9); flex: 1; display: flex; flex-direction: column;">
+                            <p><strong>Tom Malinowski</strong> is running for Congress in New Jersey's 7th district in 2026. He previously represented NJ-7 from 2019-2023. Before Congress, he served as Assistant Secretary of State for Democracy, Human Rights, and Labor under President Obama.</p>
+                            <p>• <strong>Background:</strong> Polish-American immigrant, human rights lawyer, worked at Human Rights Watch for 18 years</p>
+                            <p>• <strong>Foreign Policy:</strong> Human rights advocate, NATO supporter, Ukraine aid, democracy promotion abroad</p>
+                            <p>• <strong>Healthcare:</strong> Protecting the ACA, lowering prescription drug costs, Medicare negotiation</p>
+                            <p>• <strong>Democracy:</strong> Election integrity, voting rights, ethics reform, campaign finance transparency</p>
+                            <p>• <strong>Environment:</strong> Clean energy investment, climate action, EV infrastructure funding</p>
+                            <p>• <strong>Economy:</strong> Middle-class tax relief, corporate accountability, worker protections</p>
+                            <p>• <strong>Immigration:</strong> <em style="color: rgba(255,255,255,0.5);">No information available on his position regarding deportation of foreign-born residents.</em></p>
+                            <p class="sources">Sources: malinowskiforcongress.com, Ballotpedia, NJ.com, Wikipedia, Congress.gov</p>
+                        </div>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 1rem; color: rgba(255,255,255,0.7); font-size: 0.95rem;">
+                    <strong>Direct answers</strong><br>
+                    <span style="color: #4ade80;">Synthesized from trusted sources</span>
+                </div>
             </div>
         </div>
-        <span class="slide-number">2 / 11</span>
+
+        <!-- Key Takeaway Box -->
+        <div class="takeaway-box">
+            <p><strong>Search gives links. AI gives answers.</strong> Website traffic will decline—voters won't visit.<br>Design and navigation matter less; structured knowledge matters more.<br>SEO tools tell you what's wrong. <strong class="highlight">GEO tools tell you how to fix it.</strong></p>
+        </div>
+
+        <span class="slide-number">2 / 10</span>
     </div>
 
-    <!-- Slide 3: How Kyanos Works (Combined) -->
-    <div class="slide slide-blue" id="slide-3">
+    <!-- Slide 3: Premises (Build) -->
+    <div class="slide" id="slide-3" data-build="4">
+        <div class="logo" style="display: flex; align-items: center; gap: 0.5rem;">
+            <img src="../assets/brand/logos/kyanos-main.svg" alt="Kyanos" style="width: 32px; height: auto;">
+            <span style="font-size: 1.2rem; font-weight: 700; letter-spacing: -0.5px;">Kyanos</span>
+        </div>
+        <h2>The Premises</h2>
+        <p style="margin-bottom: 1.5rem; font-size: 1.1rem; color: rgba(255,255,255,0.6);">We're not here to convince you of these—you already know them.</p>
+        <div class="premises">
+            <div class="premise build-item">
+                <div class="premise-number">1</div>
+                <div class="premise-content">
+                    <p><strong>AI drives the new information layer.</strong> 100M+ Americans use ChatGPT weekly. Google AI Overview tops 40% of searches. This is where voters form impressions.</p>
+                </div>
+            </div>
+            <div class="premise build-item">
+                <div class="premise-number">2</div>
+                <div class="premise-content">
+                    <p><strong>Democrats lost the 2024 information war.</strong> Podcasts, algorithms, search—the right dominated every channel where persuadable voters actually are.</p>
+                </div>
+            </div>
+            <div class="premise build-item">
+                <div class="premise-number">3</div>
+                <div class="premise-content">
+                    <p><strong>Campaigns are blind to AI.</strong> They don't know what ChatGPT or Google AI Overviews says about their candidate. They don't know how to fix it. Most don't know to ask.</p>
+                </div>
+            </div>
+            <div class="premise build-item">
+                <div class="premise-number">4</div>
+                <div class="premise-content">
+                    <p><strong>This is tractable.</strong> AI cites sources. Campaigns control the most influential sources. The gap is knowing what to fix and how. That's what we do.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Key Takeaway Box - appears with last build item -->
+        <div class="takeaway-box" style="opacity: 0; transition: opacity 0.5s ease;">
+            <p><strong>AI enables us to build this lean.</strong> The same technology that creates the challenge powers the solution—<strong class="highlight">8 people doing what 40 would.</strong></p>
+        </div>
+
+        <span class="slide-number">3 / 10</span>
+    </div>
+
+    <!-- Slide 4: How Kyanos Works (Combined) -->
+    <div class="slide" id="slide-4">
         <div class="kyanos-container">
-            <div class="kyanos-label">KYANOS</div>
+            <div class="kyanos-label" style="display: flex; align-items: center; gap: 0.75rem; padding: 0.5rem 2rem;">
+                <img src="../assets/brand/logos/kyanos-main.svg" alt="Kyanos" style="width: 36px; height: auto;">
+                <span style="letter-spacing: 2px;">Kyanos</span>
+            </div>
 
             <!-- Registration -->
             <div class="ky-register">
@@ -2335,7 +2568,7 @@
                 <div class="ky-product">
                     <span class="ky-product-icon">👁</span>
                     <span class="ky-product-name">Panopticon</span>
-                    <span class="ky-product-desc">What voters see when they ask AI about you</span>
+                    <span class="ky-product-desc">What voters see when they ask the Internet about you</span>
                 </div>
                 <div class="ky-product">
                     <span class="ky-product-icon">⚡</span>
@@ -2350,9 +2583,9 @@
                 <div class="ky-product">
                     <span class="ky-product-icon">✍️</span>
                     <span class="ky-product-name">GoodInk</span>
-                    <span class="ky-product-desc">Press and story placement optimized for AI</span>
+                    <span class="ky-product-desc">Press and story placement optimized for the Internet—AI and SEO</span>
                 </div>
-                <div class="ky-product" style="border-left: 3px solid #7c3aed;">
+                <div class="ky-product">
                     <span class="ky-product-icon">📱</span>
                     <span class="ky-product-name">Postwatch</span>
                     <span class="ky-product-desc">Social media intelligence: YouTube, Bluesky, X</span>
@@ -2362,185 +2595,178 @@
             <div class="ky-flow-arrow">↓</div>
 
             <!-- Report Clip -->
-            <div class="ky-report-clip">
-                <div class="ky-report-top">
-                    <div class="ky-report-badge">Weekly Intelligence Report</div>
-                    <div class="ky-report-campaign">Malinowski for Congress (NJ-11)</div>
-                    <div class="ky-report-meta">January 2026 | Kyanos</div>
-                </div>
-                <div class="ky-report-tabs">
-                    <span class="ky-tab active">Overview</span>
-                    <span class="ky-tab">Monitor</span>
-                    <span class="ky-tab">Analyze</span>
-                    <span class="ky-tab">Fix</span>
-                    <span class="ky-tab">Impact</span>
-                    <span class="ky-tab">Methodology</span>
-                </div>
-                <div class="ky-report-scores">
-                    <div class="ky-score">
-                        <span class="ky-grade grade-d">D</span>
-                        <span class="ky-platform">Google AI</span>
+            <a href="https://kyanostech-plan-edf.netlify.app/case-studies/malinowski/" target="_blank" style="text-decoration: none; display: block;">
+                <div class="ky-report-clip" style="cursor: pointer; transition: transform 0.2s, box-shadow 0.2s;">
+                    <div class="ky-report-top">
+                        <div class="ky-report-badge">Weekly Intelligence Report</div>
+                        <div class="ky-report-campaign">Malinowski for Congress (NJ-11)</div>
+                        <div class="ky-report-meta">January 2026 | Kyanos</div>
                     </div>
-                    <div class="ky-score">
-                        <span class="ky-grade grade-c">C</span>
-                        <span class="ky-platform">ChatGPT</span>
+                    <div class="ky-report-tabs">
+                        <span class="ky-tab active">Overview</span>
+                        <span class="ky-tab">Monitor</span>
+                        <span class="ky-tab">Analyze</span>
+                        <span class="ky-tab">Fix</span>
+                        <span class="ky-tab">Impact</span>
+                        <span class="ky-tab">Methodology</span>
                     </div>
-                    <div class="ky-score">
-                        <span class="ky-grade grade-c">C</span>
-                        <span class="ky-platform">Knowledge Panel</span>
+                    <div class="ky-report-scores">
+                        <div class="ky-score">
+                            <span class="ky-grade grade-d">D</span>
+                            <span class="ky-platform">Google AI Overviews</span>
+                        </div>
+                        <div class="ky-score">
+                            <span class="ky-grade grade-c">C</span>
+                            <span class="ky-platform">ChatGPT.com</span>
+                        </div>
+                        <div class="ky-score">
+                            <span class="ky-grade grade-c">C</span>
+                            <span class="ky-platform">Google Knowledge Panel</span>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </a>
         </div>
 
-        <span class="slide-number">3 / 11</span>
+        <!-- Key Takeaway Box - Fixed Position -->
+        <div class="takeaway-box">
+            <p><strong>One platform. Six capabilities. Weekly updates.</strong><br>Campaigns register once and receive actionable reports—<strong class="highlight">what the internet says, why, and exactly how to fix it.</strong></p>
+        </div>
+
+        <span class="slide-number">4 / 10</span>
     </div>
 
-    <!-- Slide 4: The Complete Information Flow (Horizontal) -->
-    <div class="slide slide-flow-h" id="slide-4">
-        <span class="logo">KYANOS</span>
-        <h2 style="text-align: center; margin-bottom: 0.5rem; font-size: 1.3rem;">How Information Reaches the Voter</h2>
+    <!-- Slide 5: How Information Reaches the Voter (Vertical) -->
+    <div class="slide" id="slide-5" data-build="4">
+        <div class="logo" style="display: flex; align-items: center; gap: 0.5rem;">
+            <img src="../assets/brand/logos/kyanos-main.svg" alt="Kyanos" style="width: 32px; height: auto;">
+            <span style="font-size: 1.2rem; font-weight: 700; letter-spacing: -0.5px;">Kyanos</span>
+        </div>
+        <h2 style="margin-bottom: 1.5rem;">How Information Reaches the Voter</h2>
 
-        <div class="h-flow">
-            <!-- Column 1: Primary Sources -->
-            <div class="h-col h-col-sources">
-                <div class="h-col-label h-label-green">PRIMARY SOURCES</div>
-                <div class="h-source-box h-source-primary">
-                    <span class="h-src-icon">🌐</span>
-                    <div class="h-src-text">
-                        <strong>Campaign Website</strong>
-                        <span>You control this completely</span>
+        <div style="display: flex; gap: 0.75rem; max-width: 1000px;">
+            <!-- Main flow column -->
+            <div style="display: flex; flex-direction: column; gap: 0.5rem; flex: 1;">
+                <!-- Layer 1: Primary Sources -->
+                <div class="build-item" style="display: flex; align-items: center; background: rgba(74,222,128,0.15); border: 1px solid rgba(74,222,128,0.3); border-radius: 12px; padding: 0.75rem 1rem; opacity: 0; transform: translateY(10px); transition: opacity 0.5s ease, transform 0.5s ease;">
+                    <div style="min-width: 140px; font-size: 0.85rem; font-weight: 600; color: #4ade80; text-transform: uppercase;">Primary Sources</div>
+                    <div style="display: flex; gap: 0.75rem; flex: 1;">
+                        <div style="background: rgba(74,222,128,0.25); border: 2px solid #4ade80; padding: 0.6rem 1rem; border-radius: 8px; flex: 1; text-align: center;">
+                            <strong style="font-size: 1rem;">🌐 Campaign Website</strong>
+                            <div style="font-size: 0.8rem; color: rgba(255,255,255,0.7);">You control this</div>
+                        </div>
+                        <div style="background: rgba(74,222,128,0.15); border: 1px solid rgba(74,222,128,0.5); padding: 0.6rem 1rem; border-radius: 8px; flex: 1; text-align: center;">
+                            <strong style="font-size: 1rem;">📰 Earned Media</strong>
+                            <div style="font-size: 0.8rem; color: rgba(255,255,255,0.7);">News & press</div>
+                        </div>
+                        <div style="background: rgba(74,222,128,0.15); border: 1px solid rgba(74,222,128,0.5); padding: 0.6rem 1rem; border-radius: 8px; flex: 1; text-align: center;">
+                            <strong style="font-size: 1rem;">📱 Social Media</strong>
+                            <div style="font-size: 0.8rem; color: rgba(255,255,255,0.7);">Posts & videos</div>
+                        </div>
                     </div>
                 </div>
-                <div class="h-source-box">
-                    <span class="h-src-icon">📰</span>
-                    <div class="h-src-text">
-                        <strong>News Coverage</strong>
-                        <span>Earned media & press</span>
-                    </div>
-                </div>
-            </div>
 
-            <div class="h-arrow">
-                <span>→</span>
-                <span class="h-arrow-label">informs</span>
-            </div>
-
-            <!-- Column 2: Intermediaries -->
-            <div class="h-col h-col-inter">
-                <div class="h-col-label">INTERMEDIARIES</div>
-                <div class="h-inter-box">
-                    <span class="h-inter-icon">📚</span>
-                    <div class="h-inter-text">
-                        <strong>Wikipedia</strong>
-                        <span>Cites news & official sources</span>
+                <!-- Arrow + Layer 2: Intermediaries -->
+                <div class="build-item" style="opacity: 0; transform: translateY(10px); transition: opacity 0.5s ease, transform 0.5s ease;">
+                    <div style="display: flex; margin-left: 140px; padding-left: 1rem;">
+                        <div style="flex: 1;"></div>
+                        <div style="font-size: 1.5rem; font-weight: 700; color: #60a5fa; padding: 0.25rem 0;">↓</div>
+                        <div style="flex: 1;"></div>
                     </div>
-                </div>
-                <div class="h-inter-box">
-                    <span class="h-inter-icon">🗳</span>
-                    <div class="h-inter-text">
-                        <strong>Ballotpedia</strong>
-                        <span>Aggregates election data</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="h-arrow">
-                <span>→</span>
-                <span class="h-arrow-label">indexed by</span>
-            </div>
-
-            <!-- Column 3: Processing -->
-            <div class="h-col h-col-process">
-                <div class="h-col-label">PROCESSING</div>
-                <div class="h-process-stack">
-                    <div class="h-proc-box">
-                        <strong>Search Index</strong>
-                        <span>Google • Bing</span>
-                    </div>
-                    <div class="h-proc-box">
-                        <strong>Knowledge Graph</strong>
-                        <span>→ Knowledge Panel</span>
-                    </div>
-                    <div class="h-proc-box h-proc-fm">
-                        <strong>Foundation Models</strong>
-                        <span>GPT • Gemini • Claude</span>
-                    </div>
-                </div>
-                <div class="h-query-box">
-                    <div class="h-query-label">At query time:</div>
-                    <div class="h-query-content">
-                        <strong>RAG</strong> retrieves current web<br>
-                        <strong>Model</strong> synthesizes response
-                    </div>
-                </div>
-            </div>
-
-            <div class="h-arrow">
-                <span>→</span>
-                <span class="h-arrow-label">renders to</span>
-            </div>
-
-            <!-- Column 4: Browser Outputs -->
-            <div class="h-col h-col-output">
-                <div class="h-col-label h-label-blue">VOTER'S BROWSER</div>
-                <div class="h-browsers">
-                    <!-- Google Search -->
-                    <div class="h-browser">
-                        <div class="hb-chrome"><span></span><span></span><span></span></div>
-                        <div class="hb-content hb-google">
-                            <div class="hb-g-logo">G</div>
-                            <div class="hb-g-layout">
-                                <div class="hb-g-results">
-                                    <div class="hb-g-r">tommalinowski.com</div>
-                                    <div class="hb-g-r">wikipedia.org</div>
-                                </div>
-                                <div class="hb-g-panel">
-                                    <div class="hb-gp-img"></div>
-                                    <div class="hb-gp-name">Tom M.</div>
-                                    <div class="hb-gp-bad">No office</div>
-                                </div>
+                    <div style="display: flex; align-items: center; background: rgba(251,191,36,0.12); border: 1px solid rgba(251,191,36,0.3); border-radius: 12px; padding: 0.75rem 1rem; margin-top: 0.25rem;">
+                        <div style="min-width: 140px; font-size: 0.85rem; font-weight: 600; color: #fbbf24; text-transform: uppercase;">Intermediaries</div>
+                        <div style="display: flex; gap: 0.75rem; flex: 1;">
+                            <div style="background: rgba(251,191,36,0.18); border: 1px solid rgba(251,191,36,0.5); padding: 0.6rem 1rem; border-radius: 8px; flex: 1; text-align: center;">
+                                <strong style="font-size: 1rem;">📚 Wikipedia</strong>
+                            </div>
+                            <div style="background: rgba(251,191,36,0.18); border: 1px solid rgba(251,191,36,0.5); padding: 0.6rem 1rem; border-radius: 8px; flex: 1; text-align: center;">
+                                <strong style="font-size: 1rem;">🗳 Ballotpedia</strong>
+                            </div>
+                            <div style="background: rgba(251,191,36,0.18); border: 1px solid rgba(251,191,36,0.5); padding: 0.6rem 1rem; border-radius: 8px; flex: 1; text-align: center;">
+                                <strong style="font-size: 1rem;">🔗 Other Aggregators</strong>
                             </div>
                         </div>
-                        <div class="hb-label">Search + Panel</div>
                     </div>
+                </div>
 
-                    <!-- AI Overview -->
-                    <div class="h-browser">
-                        <div class="hb-chrome"><span></span><span></span><span></span></div>
-                        <div class="hb-content hb-aio">
-                            <div class="hb-aio-head">✨ AI Overview</div>
-                            <div class="hb-aio-text">Served 2019-2023...</div>
-                            <div class="hb-aio-bad">No 2026 info</div>
-                        </div>
-                        <div class="hb-label">AI Overview</div>
+                <!-- Arrow + Layer 3: Processing (with bypass arrow) -->
+                <div class="build-item" style="opacity: 0; transform: translateY(10px); transition: opacity 0.5s ease, transform 0.5s ease; position: relative;">
+                    <div style="display: flex; margin-left: 140px; padding-left: 1rem;">
+                        <div style="flex: 1;"></div>
+                        <div style="font-size: 1.5rem; font-weight: 700; color: #60a5fa; padding: 0.25rem 0;">↓</div>
+                        <div style="flex: 1;"></div>
                     </div>
-
-                    <!-- ChatGPT -->
-                    <div class="h-browser">
-                        <div class="hb-chrome"><span></span><span></span><span></span></div>
-                        <div class="hb-content hb-chat">
-                            <div class="hb-chat-head">◉ ChatGPT</div>
-                            <div class="hb-chat-q">Honest?</div>
-                            <div class="hb-chat-bad">Ethics issues...</div>
+                    <div style="display: flex; align-items: center; background: rgba(167,139,250,0.12); border: 1px solid rgba(167,139,250,0.3); border-radius: 12px; padding: 0.75rem 1rem; margin-top: 0.25rem;">
+                        <div style="min-width: 140px; font-size: 0.85rem; font-weight: 600; color: #a78bfa; text-transform: uppercase;">Processing</div>
+                        <div style="display: flex; gap: 0.75rem; flex: 1;">
+                            <div style="background: rgba(167,139,250,0.18); border: 1px solid rgba(167,139,250,0.5); padding: 0.6rem 1rem; border-radius: 8px; flex: 1; text-align: center;">
+                                <strong style="font-size: 1rem;">🔍 Search Index</strong>
+                                <div style="font-size: 0.75rem; color: rgba(255,255,255,0.6);">Google • Bing</div>
+                            </div>
+                            <div style="background: rgba(167,139,250,0.18); border: 1px solid rgba(167,139,250,0.5); padding: 0.6rem 1rem; border-radius: 8px; flex: 1; text-align: center;">
+                                <strong style="font-size: 1rem;">🧠 Knowledge Graph</strong>
+                                <div style="font-size: 0.75rem; color: rgba(255,255,255,0.6);">→ Knowledge Panel</div>
+                            </div>
+                            <div style="background: rgba(167,139,250,0.18); border: 1px solid rgba(167,139,250,0.5); padding: 0.6rem 1rem; border-radius: 8px; flex: 1; text-align: center;">
+                                <strong style="font-size: 1rem;">🤖 Foundation Models</strong>
+                                <div style="font-size: 0.75rem; color: rgba(255,255,255,0.6);">GPT • Gemini • Claude • Meta</div>
+                            </div>
                         </div>
-                        <div class="hb-label">ChatGPT</div>
+                    </div>
+                    <!-- Bypass arrow - appears with Processing layer -->
+                    <svg width="50" height="180" viewBox="0 0 50 180" style="position: absolute; right: -55px; top: -140px;">
+                        <defs>
+                            <marker id="arrowhead-direct" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+                                <polygon points="0 0, 10 3.5, 0 7" fill="#4ade80"/>
+                            </marker>
+                        </defs>
+                        <path d="M 5 10 C 45 40, 45 140, 5 170" stroke="#4ade80" stroke-width="3" fill="none" marker-end="url(#arrowhead-direct)"/>
+                    </svg>
+                </div>
+
+                <!-- Arrow + Layer 4: Voter Outputs -->
+                <div class="build-item" style="opacity: 0; transform: translateY(10px); transition: opacity 0.5s ease, transform 0.5s ease;">
+                    <div style="display: flex; margin-left: 140px; padding-left: 1rem;">
+                        <div style="flex: 1;"></div>
+                        <div style="font-size: 1.5rem; font-weight: 700; color: #60a5fa; padding: 0.25rem 0;">↓</div>
+                        <div style="flex: 1;"></div>
+                    </div>
+                    <div style="display: flex; align-items: center; background: rgba(96,165,250,0.12); border: 1px solid rgba(96,165,250,0.3); border-radius: 12px; padding: 0.75rem 1rem; margin-top: 0.25rem;">
+                        <div style="min-width: 140px; font-size: 0.85rem; font-weight: 600; color: #60a5fa; text-transform: uppercase;">Voter Sees</div>
+                        <div style="display: flex; gap: 0.75rem; flex: 1;">
+                            <div style="background: rgba(96,165,250,0.25); border: 2px solid #60a5fa; padding: 0.6rem 1rem; border-radius: 8px; flex: 1; text-align: center;">
+                                <strong style="font-size: 1rem;">🔎 Google Search</strong>
+                                <div style="font-size: 0.75rem; color: rgba(255,255,255,0.6);">Results + Knowledge Panel</div>
+                            </div>
+                            <div style="background: rgba(96,165,250,0.25); border: 2px solid #60a5fa; padding: 0.6rem 1rem; border-radius: 8px; flex: 1; text-align: center;">
+                                <strong style="font-size: 1rem;">✨ Google AI Overviews</strong>
+                            </div>
+                            <div style="background: rgba(96,165,250,0.25); border: 2px solid #60a5fa; padding: 0.6rem 1rem; border-radius: 8px; flex: 1; text-align: center;">
+                                <strong style="font-size: 1rem;">💬 AI Chatbots</strong>
+                                <div style="font-size: 0.75rem; color: rgba(255,255,255,0.6);">ChatGPT • Claude • Gemini • Meta</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="h-insight">
-            <strong>The leverage:</strong> Campaign website and earned media are the <em>only</em> primary sources. Everything else flows from them. <strong>Control these → control every output.</strong>
+        <!-- Key Takeaway Box - appears with last build item -->
+        <div class="takeaway-box" style="opacity: 0; transition: opacity 0.5s ease;">
+            <p>Your campaign website is the <em>only</em> source you fully control. <strong class="highlight">Make it your Single Source of Truth → Shape every answer.</strong></p>
         </div>
-        <span class="slide-number">4 / 11</span>
+
+        <span class="slide-number">5 / 10</span>
     </div>
 
-    <!-- Slide 5: Sample Output -->
-    <div class="slide" id="slide-5">
-        <span class="logo">KYANOS</span>
+    <!-- Slide 6: Sample Output -->
+    <div class="slide" id="slide-6">
+        <div class="logo" style="display: flex; align-items: center; gap: 0.5rem;">
+            <img src="../assets/brand/logos/kyanos-main.svg" alt="Kyanos" style="width: 32px; height: auto;">
+            <span style="font-size: 1.2rem; font-weight: 700; letter-spacing: -0.5px;">Kyanos</span>
+        </div>
         <h2>Real Output: Malinowski (NJ-11)</h2>
-        <div class="two-col">
+        <div class="two-col" style="align-items: flex-start;">
             <div>
                 <p style="font-size: 1.15rem; margin-bottom: 1.5rem;">This is what a campaign receives weekly—not theory, but specific intelligence they can act on.</p>
                 <ul class="list-clean">
@@ -2549,208 +2775,303 @@
                     <li>Campaign website has no counter-narrative (no ethics page, no endorsements)</li>
                     <li>Human rights credentials work—this is the model to replicate</li>
                 </ul>
-                <p style="font-size: 1rem; margin-top: 1.5rem; color: rgba(255,255,255,0.7);"><strong>The fix:</strong> Create three pages, update SEO. Campaign controls this. AI will cite it within weeks.</p>
             </div>
-            <div class="sample-preview">
-                <h4>AI Presence Report: Malinowski for Congress</h4>
-                <div class="sample-scores">
-                    <div class="sample-score">
-                        <div class="grade grade-d">D</div>
-                        <div class="platform">Google AI</div>
-                    </div>
-                    <div class="sample-score">
-                        <div class="grade grade-c">C</div>
-                        <div class="platform">ChatGPT</div>
-                    </div>
-                    <div class="sample-score">
-                        <div class="grade grade-c">C</div>
-                        <div class="platform">Knowledge Panel</div>
+
+            <!-- Clickable Malinowski Report Screenshot -->
+            <a href="https://kyanostech-plan-edf.netlify.app/case-studies/malinowski/" target="_blank" rel="noopener" style="text-decoration: none; display: block; cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease; border-radius: 8px; overflow: hidden; border: 2px solid rgba(255,255,255,0.2); background: #ffffff;" onmouseover="this.style.transform='scale(1.02)'; this.style.boxShadow='0 8px 30px rgba(59,130,246,0.3)'; this.style.borderColor='#60a5fa';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none'; this.style.borderColor='rgba(255,255,255,0.2)';">
+                <div style="width: 450px; height: 320px; overflow: hidden; position: relative; background: #ffffff;">
+                    <iframe src="https://kyanostech-plan-edf.netlify.app/case-studies/malinowski/" style="width: 1000px; height: 750px; border: none; transform: scale(0.45); transform-origin: top left; pointer-events: none;"></iframe>
+                </div>
+                <div style="padding: 0.5rem; background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); text-align: center;">
+                    <span style="font-size: 0.85rem; color: #60a5fa; font-weight: 500;">Click to view full Malinowski case study →</span>
+                </div>
+            </a>
+        </div>
+
+        <!-- Key Takeaway Box - Fixed Position -->
+        <div class="takeaway-box">
+            <p><strong>The fix:</strong> Create three pages, update SEO. Campaign controls this. <strong class="highlight">AI will cite it within days.</strong></p>
+        </div>
+
+        <span class="slide-number">6 / 10</span>
+    </div>
+
+    <!-- Slide 7: The Arbitrage -->
+    <div class="slide" id="slide-7" data-build="2">
+        <div class="logo" style="display: flex; align-items: center; gap: 0.5rem;">
+            <img src="../assets/brand/logos/kyanos-main.svg" alt="Kyanos" style="width: 32px; height: auto;">
+            <span style="font-size: 1.2rem; font-weight: 700; letter-spacing: -0.5px;">Kyanos</span>
+        </div>
+        <h2>The Arbitrage: Cost to Move 100 Votes</h2>
+
+        <!-- Big Number Comparison -->
+        <div style="display: flex; gap: 2rem; margin-top: 1rem; align-items: stretch;">
+            <!-- Traditional: Big Number -->
+            <div class="build-item" style="flex: 1; background: rgba(139,0,0,0.4); border: 2px solid #ff0000; border-radius: 12px; padding: 1.25rem; text-align: center; opacity: 0; transform: translateY(10px); transition: opacity 0.5s ease, transform 0.5s ease;">
+                <div style="font-size: 0.9rem; font-weight: 600; color: #ff0000; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem;">Traditional Persuasion</div>
+                <div style="font-size: 3rem; font-weight: 700; color: #ff0000;">$3,000–50,000</div>
+                <div style="font-size: 0.9rem; color: rgba(255,255,255,0.7); margin-bottom: 1rem;">to move 100 votes</div>
+
+                <div style="text-align: left; font-size: 0.8rem; color: rgba(255,255,255,0.7); line-height: 1.6; border-top: 1px solid rgba(255,0,0,0.3); padding-top: 0.75rem;">
+                    <div><strong>Door knocking:</strong> $500–4,000</div>
+                    <div><strong>Broadcast TV:</strong> $15,000–50,000</div>
+                    <div><strong>Cable TV:</strong> $8,000–25,000</div>
+                    <div><strong>Streaming/OTT:</strong> $5,000–15,000</div>
+                    <div><strong>Web/Digital:</strong> $3,000–10,000</div>
+                </div>
+            </div>
+
+            <!-- Internet Presence Optimization: Big Number -->
+            <div class="build-item" style="flex: 1; background: linear-gradient(135deg, rgba(74,222,128,0.15) 0%, rgba(74,222,128,0.05) 100%); border: 2px solid #4ade80; border-radius: 12px; padding: 1.25rem; text-align: center; opacity: 0; transform: translateY(10px); transition: opacity 0.5s ease, transform 0.5s ease;">
+                <div style="font-size: 0.9rem; font-weight: 600; color: #4ade80; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem;">Internet Presence Optimization with Kyanos</div>
+                <div style="font-size: 3rem; font-weight: 700; color: #4ade80;">$200–500</div>
+                <div style="font-size: 0.9rem; color: rgba(255,255,255,0.7); margin-bottom: 1rem;">to move 100 votes</div>
+
+                <div style="text-align: left; font-size: 0.8rem; color: rgba(255,255,255,0.7); line-height: 1.6; border-top: 1px solid rgba(74,222,128,0.3); padding-top: 0.75rem;">
+                    <div>• Reaches voters at moment of research</div>
+                    <div>• Works 24/7 through election day</div>
+                    <div>• No price surge near election</div>
+                    <div>• Compounds: fixes persist for months</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Key Takeaway Box - Fixed Position -->
+        <div class="takeaway-box" style="opacity: 0; transition: opacity 0.5s ease;">
+            <p><strong>Not a replacement</strong> for paid media—a <strong class="highlight">force multiplier</strong>.<br>Traditional costs vary widely by market and surge 2-3x near election day.<br>Kyanos investment remains constant throughout the cycle—<strong class="highlight">10–100x more efficient</strong> in larger races and metro markets.</p>
+        </div>
+
+        <span class="slide-number">7 / 10</span>
+    </div>
+
+    <!-- Slide 8: Growth Path -->
+    <div class="slide" id="slide-8" data-build="2">
+        <div class="logo" style="display: flex; align-items: center; gap: 0.5rem;">
+            <img src="../assets/brand/logos/kyanos-main.svg" alt="Kyanos" style="width: 32px; height: auto;">
+            <span style="font-size: 1.2rem; font-weight: 700; letter-spacing: -0.5px;">Kyanos</span>
+        </div>
+        <h2>Growth Path: Primary + General Cycles</h2>
+
+        <div style="display: flex; gap: 2rem; margin-top: 1rem;">
+            <!-- 2026 Column -->
+            <div class="build-item" style="flex: 1; background: rgba(96,165,250,0.1); border: 2px solid #60a5fa; border-radius: 12px; padding: 1.25rem; opacity: 0; transform: translateY(10px); transition: opacity 0.5s ease, transform 0.5s ease;">
+                <h3 style="font-size: 1.4rem; color: #60a5fa; margin-bottom: 1rem; text-align: center;">2026: Prove It</h3>
+                <div style="text-align: center; margin-bottom: 1rem;">
+                    <div style="font-size: 2.5rem; font-weight: 700; color: #60a5fa;">~200</div>
+                    <div style="font-size: 0.9rem; color: rgba(255,255,255,0.7);">campaigns served free</div>
+                </div>
+                <div style="font-size: 0.85rem; color: rgba(255,255,255,0.8); line-height: 1.5;">
+                    <div style="margin-bottom: 0.4rem;"><strong>10–15</strong> competitive House races</div>
+                    <div style="margin-bottom: 0.4rem;"><strong>5–10</strong> Senate races</div>
+                    <div style="margin-bottom: 0.4rem;"><strong>150+</strong> state & local campaigns</div>
+                    <div style="margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid rgba(96,165,250,0.3);">
+                        <div style="margin-bottom: 0.4rem;">• Free service in exchange for feedback</div>
+                        <div style="margin-bottom: 0.4rem;">• Full product suite, weekly reports</div>
+                        <div style="margin-bottom: 0.4rem;">• Measure AI and search response quality before/after</div>
+                        <div>• Learn which interventions work fastest</div>
                     </div>
                 </div>
-                <ul class="insight-list">
-                    <li>→ Create ethics FAQ page (CRITICAL)</li>
-                    <li>→ Update homepage SEO for 2026 (CRITICAL)</li>
-                    <li>→ Create immigration page with refugee story</li>
-                    <li>→ Add endorsements page with Andy Kim</li>
-                </ul>
             </div>
-        </div>
-        <span class="slide-number">5 / 11</span>
-    </div>
 
-    <!-- Slide 6: Why This Works -->
-    <div class="slide" id="slide-6">
-        <span class="logo">KYANOS</span>
-        <h2>Why This Works</h2>
-        <div class="two-col" style="margin-top: 2rem;">
-            <div>
-                <h3>The Causal Chain</h3>
-                <ul class="list-clean">
-                    <li>Campaign creates content (website, press, social)</li>
-                    <li>Search engines index and assign authority</li>
-                    <li>AI retrieves and synthesizes from indexed sources</li>
-                    <li>Voter sees AI response as first impression</li>
-                </ul>
-                <p style="margin-top: 1.5rem; font-size: 1.1rem;"><strong>Key insight:</strong> Campaigns already control the most authoritative source—their own website. They just don't know what to put on it.</p>
-            </div>
-            <div>
-                <h3>The Arbitrage</h3>
-                <div class="highlight-box">
-                    <p style="font-size: 1.15rem; margin-bottom: 1rem;"><strong>Traditional persuasion:</strong><br>$50-200 per voter moved</p>
-                    <p style="font-size: 1.15rem; margin: 0;"><strong>AI presence optimization:</strong><br>$2-5 per voter reached at moment of research</p>
+            <!-- 2028 Column -->
+            <div class="build-item" style="flex: 1; background: rgba(74,222,128,0.1); border: 2px solid #4ade80; border-radius: 12px; padding: 1.25rem; opacity: 0; transform: translateY(10px); transition: opacity 0.5s ease, transform 0.5s ease;">
+                <h3 style="font-size: 1.4rem; color: #4ade80; margin-bottom: 1rem; text-align: center;">2028: Scale</h3>
+                <div style="text-align: center; margin-bottom: 1rem;">
+                    <div style="font-size: 2.5rem; font-weight: 700; color: #4ade80;">750–800</div>
+                    <div style="font-size: 0.9rem; color: rgba(255,255,255,0.7);">paid campaigns</div>
                 </div>
-                <p style="font-size: 1rem; color: rgba(255,255,255,0.7); margin-top: 1rem;">Not a replacement for paid media. A force multiplier that makes every dollar work harder.</p>
+                <div style="font-size: 0.85rem; color: rgba(255,255,255,0.8); line-height: 1.5;">
+                    <div style="margin-bottom: 0.4rem;"><strong>1</strong> Presidential campaign</div>
+                    <div style="margin-bottom: 0.4rem;"><strong>15–20</strong> Senate races</div>
+                    <div style="margin-bottom: 0.4rem;"><strong>75–100</strong> competitive House races</div>
+                    <div style="margin-bottom: 0.4rem;"><strong>500+</strong> state & local campaigns</div>
+                    <div style="margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid rgba(74,222,128,0.3);">
+                        <div style="margin-bottom: 0.4rem;">• Paid subscriptions with proven ROI</div>
+                        <div style="margin-bottom: 0.4rem;">• Established playbooks and benchmarks</div>
+                        <div>• Cash-flow positive Q1 2028</div>
+                    </div>
+                </div>
             </div>
         </div>
-        <span class="slide-number">6 / 11</span>
+
+        <!-- Key Takeaway Box - appears with last build item -->
+        <div class="takeaway-box" style="opacity: 0; transition: opacity 0.5s ease;">
+            <p><strong>2026 is the lab. 2028 is the product.</strong> We need case studies more than revenue.<br><strong class="highlight">Campaigns won't pay unless they have evidence it works.</strong></p>
+        </div>
+
+        <span class="slide-number">8 / 10</span>
     </div>
 
-    <!-- Slide 7: 2026 Path -->
-    <div class="slide" id="slide-7">
-        <span class="logo">KYANOS</span>
-        <h2>2026: Prove It Works</h2>
-        <div class="two-col">
-            <div>
-                <h3>Trial Program</h3>
-                <ul class="list-clean">
-                    <li>10-15 competitive House races</li>
-                    <li>Free service in exchange for feedback</li>
-                    <li>Full product suite, weekly reports</li>
-                    <li>Measure: AI response quality before/after</li>
-                </ul>
-                <p style="margin-top: 1.5rem; font-size: 1rem; color: rgba(255,255,255,0.7);">We need case studies more than revenue. Campaigns need help more than they can afford it. The alignment is obvious.</p>
-            </div>
-            <div>
-                <h3>What We Learn</h3>
-                <ul class="list-clean">
-                    <li>Which interventions move AI responses fastest</li>
-                    <li>How long changes take to propagate</li>
-                    <li>Which platforms matter most by race type</li>
-                    <li>What campaigns can actually execute</li>
-                </ul>
-                <p style="margin-top: 1.5rem; font-size: 1rem; color: rgba(255,255,255,0.7);">2026 is the lab. 2028 is the product.</p>
-            </div>
-        </div>
-        <span class="slide-number">7 / 11</span>
-    </div>
-
-    <!-- Slide 8: 2028 Scale -->
-    <div class="slide" id="slide-8">
-        <span class="logo">KYANOS</span>
-        <h2>2028: Scale to Every Race</h2>
-        <div class="stat-grid">
-            <div class="stat">
-                <div class="stat-number">435</div>
-                <div class="stat-label">House races monitored</div>
-            </div>
-            <div class="stat">
-                <div class="stat-number">33</div>
-                <div class="stat-label">Senate races</div>
-            </div>
-            <div class="stat">
-                <div class="stat-number">1000+</div>
-                <div class="stat-label">State legislative races</div>
-            </div>
-        </div>
-        <div class="highlight-box">
-            <h3 style="margin-bottom: 1rem;">The Vision</h3>
-            <p style="margin: 0;">Every Democratic campaign with a website gets a baseline AI presence report. Competitive races get full service. The party apparatus gets aggregate intelligence on how AI is shaping the information environment nationwide.</p>
-        </div>
-        <p style="margin-top: 2rem; text-align: center; font-size: 1.1rem;">Infrastructure, not one-off consulting. A permanent capability for the progressive ecosystem.</p>
-        <span class="slide-number">8 / 11</span>
-    </div>
-
-    <!-- Slide 9: The Movement -->
+    <!-- Slide 9: Team & Ask -->
     <div class="slide" id="slide-9">
-        <span class="logo">KYANOS</span>
-        <h2>Beyond a Product: A Movement</h2>
-        <p style="margin-bottom: 2rem;">The biggest opportunity isn't building a company. It's mobilizing an army.</p>
-        <div class="two-col">
-            <div>
-                <h3>WatchTower</h3>
-                <p style="font-size: 1.1rem; margin-bottom: 1rem;">Volunteers who run prompts, monitor AI responses, and flag changes across platforms. Distributed human intelligence augmenting—or replacing—automated extraction.</p>
-                <ul class="list-clean">
-                    <li>Thousands of prompt runners across the country</li>
-                    <li>Geographic coverage traditional scraping can't match</li>
-                    <li>Meaningful work that matches the moment</li>
-                </ul>
-            </div>
-            <div>
-                <h3>Embedded Teams</h3>
-                <p style="font-size: 1.1rem; margin-bottom: 1rem;">Trained volunteers who work directly with campaigns—creating content, fixing websites, claiming Knowledge Panels. The hands campaigns don't have.</p>
-                <ul class="list-clean">
-                    <li>Content creators building Internet-optimized pages</li>
-                    <li>Technical volunteers handling SEO, claims, updates</li>
-                    <li>Scalable support for down-ballot races</li>
-                </ul>
-            </div>
+        <div class="logo" style="display: flex; align-items: center; gap: 0.5rem;">
+            <img src="../assets/brand/logos/kyanos-main.svg" alt="Kyanos" style="width: 32px; height: auto;">
+            <span style="font-size: 1.2rem; font-weight: 700; letter-spacing: -0.5px;">Kyanos</span>
         </div>
-        <div class="highlight-box" style="margin-top: 2rem; text-align: center;">
-            <p style="margin: 0; font-size: 1.25rem;"><strong>The pitch to volunteers:</strong> Writing postcards was 2018. This is how you fight the information war in 2026.</p>
-        </div>
-        <span class="slide-number">9 / 11</span>
-    </div>
-
-    <!-- Slide 10: Team & Ask -->
-    <div class="slide" id="slide-10">
-        <span class="logo">KYANOS</span>
         <h2>The Ask</h2>
-        <div class="two-col">
+        <div class="two-col" style="margin-top: 1.5rem; gap: 3rem;">
+            <div>
+                <h3>What We've Built</h3>
+                <ul class="list-clean">
+                    <li>Technical infrastructure working—real Malinowski report produced</li>
+                    <li>Methodology demonstrable: Observe, Trace, Diagnose, Prescribe</li>
+                    <li>Six product capabilities designed and validated</li>
+                    <li>Trust-owned LLC structure following Catalist model</li>
+                    <li>Strategic plan, financial projections, legal framework ready</li>
+                </ul>
+            </div>
             <div>
                 <h3>What We Need</h3>
                 <ul class="list-clean">
-                    <li>Introductions to campaign managers, consultants, coordinated campaign leadership</li>
-                    <li>Feedback on product positioning and pricing</li>
-                    <li>Connections to funders interested in democratic infrastructure</li>
-                    <li>Pilot partners for 2026 trial program</li>
-                </ul>
-            </div>
-            <div>
-                <h3>What We're Building</h3>
-                <ul class="list-clean">
-                    <li>Technical infrastructure is working—we've produced real reports</li>
-                    <li>Need to scale operations and build campaign relationships</li>
-                    <li>Targeting seed funding: $500K-1M to prove 2026, position for 2028</li>
+                    <li><strong style="color: #4ade80;">Grant commitment by March 15, 2026</strong></li>
+                    <li>$1.5M total: $1M (2026) + $500K (Q1 2027)</li>
+                    <li>By acting as the lead funder of Kyanos, Reid Hoffman's tech credibility gives other funders confidence to invest in advanced technology</li>
+                    <li>Introductions to campaigns for 2026 pilot cohort</li>
+                    <li>Recruiting support to find mission-oriented technologists and marketers</li>
                 </ul>
             </div>
         </div>
-        <span class="slide-number">10 / 11</span>
+
+        <!-- Key Takeaway Box - Fixed Position -->
+        <div class="takeaway-box">
+            <p><strong>Grant funding, not equity.</strong> Same model as Catalist: $1M Soros seed in 2006, now serves every major Democratic campaign.<br><strong class="highlight">$1.5M builds the infrastructure. Cash-flow positive Q1 2028. The mission lasts forever.</strong></p>
+        </div>
+
+        <span class="slide-number">9 / 10</span>
     </div>
 
-    <!-- Slide 11: Close -->
-    <div class="slide cta-slide" id="slide-11">
-        <span class="logo">KYANOS</span>
-        <h1>Democrats need to win<br>the AI information war.</h1>
-        <p class="subtitle" style="margin-top: 2rem;">We're building the tools—and the movement—to do it.</p>
-        <p style="margin-top: 3rem; font-size: 1.25rem;">kyanos.ai</p>
-        <span class="slide-number">11 / 11</span>
+    <!-- Slide 10: Close -->
+    <div class="slide cta-slide" id="slide-10">
+        <div style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2rem;">
+            <img src="../assets/brand/logos/kyanos-main.svg" alt="Kyanos" style="width: 100px; height: auto;">
+            <span style="font-size: 3.5rem; font-weight: 700; color: #ffffff; letter-spacing: -1px;">Kyanos</span>
+        </div>
+        <h1>Progressives need to win<br>the Internet information war.</h1>
+        <p class="subtitle" style="margin-top: 2rem;">Don't let AI-generated Answers become the Podcasts of 2028</p>
+        <span class="slide-number">10 / 10</span>
     </div>
 
     <!-- Controls -->
     <div class="controls">
-        <button onclick="prevSlide()">← Previous</button>
-        <button onclick="nextSlide()">Next →</button>
+        <button id="prevBtn" onclick="prevSlide()" style="visibility: hidden;">← Previous</button>
+        <button id="nextBtn" onclick="nextSlide()">Next →</button>
     </div>
 
     <script>
         let currentSlide = 1;
-        const totalSlides = 11;
+        const totalSlides = 10;
+        let buildState = {};
+        let buildTimer = null;
 
-        function showSlide(n) {
+        function updateButtons() {
+            document.getElementById('prevBtn').style.visibility = currentSlide === 1 ? 'hidden' : 'visible';
+            document.getElementById('nextBtn').style.visibility = currentSlide === totalSlides ? 'hidden' : 'visible';
+        }
+
+        function getBuildItems(slideEl) {
+            return slideEl.querySelectorAll('.build-item');
+        }
+
+        function clearBuildTimer() {
+            if (buildTimer) {
+                clearInterval(buildTimer);
+                buildTimer = null;
+            }
+        }
+
+        function startBuildTimer(slideEl, buildItems) {
+            const timerMs = parseInt(slideEl.dataset.buildTimer) || 3000;
+            buildTimer = setInterval(() => {
+                if (buildState[currentSlide] < buildItems.length) {
+                    buildState[currentSlide]++;
+                    buildItems.forEach((item, i) => {
+                        item.classList.toggle('visible', i < buildState[currentSlide]);
+                    });
+                } else {
+                    clearBuildTimer();
+                }
+            }, timerMs);
+        }
+
+        function showSlide(n, fromPrev = false) {
+            clearBuildTimer();
             document.querySelectorAll('.slide').forEach(s => s.classList.remove('active'));
-            document.getElementById(`slide-${n}`).classList.add('active');
+            const slideEl = document.getElementById(`slide-${n}`);
+            slideEl.classList.add('active');
             currentSlide = n;
+
+            const buildItems = getBuildItems(slideEl);
+            const takeawayBox = slideEl.querySelector('.takeaway-box:not(.build-item)');
+
+            if (buildItems.length > 0) {
+                if (fromPrev) {
+                    buildState[n] = buildItems.length;
+                    buildItems.forEach(item => item.classList.add('visible'));
+                    // Show takeaway when coming from next slide
+                    if (takeawayBox) takeawayBox.style.opacity = '1';
+                } else {
+                    buildState[n] = 1;
+                    buildItems.forEach((item, i) => {
+                        item.classList.toggle('visible', i < 1);
+                    });
+                    // Hide takeaway initially on build slides
+                    if (takeawayBox) takeawayBox.style.opacity = '0';
+                    // Start auto-timer if slide has timer attribute
+                    if (slideEl.dataset.buildTimer) {
+                        startBuildTimer(slideEl, buildItems);
+                    }
+                }
+            } else {
+                // No build items - show takeaway immediately
+                if (takeawayBox) takeawayBox.style.opacity = '1';
+            }
+
+            updateButtons();
         }
 
         function nextSlide() {
+            const slideEl = document.getElementById(`slide-${currentSlide}`);
+            const buildItems = getBuildItems(slideEl);
+            const takeawayBox = slideEl.querySelector('.takeaway-box:not(.build-item)');
+
+            if (buildItems.length > 0 && buildState[currentSlide] < buildItems.length) {
+                clearBuildTimer();
+                buildState[currentSlide]++;
+                buildItems.forEach((item, i) => {
+                    item.classList.toggle('visible', i < buildState[currentSlide]);
+                });
+                // Show takeaway with last build item
+                if (takeawayBox && buildState[currentSlide] === buildItems.length) {
+                    takeawayBox.style.opacity = '1';
+                }
+                return;
+            }
+
             if (currentSlide < totalSlides) {
-                showSlide(currentSlide + 1);
+                showSlide(currentSlide + 1, false);
             }
         }
 
         function prevSlide() {
+            const slideEl = document.getElementById(`slide-${currentSlide}`);
+            const buildItems = getBuildItems(slideEl);
+            const takeawayBox = slideEl.querySelector('.takeaway-box:not(.build-item)');
+
+            if (buildItems.length > 0 && buildState[currentSlide] > 1) {
+                clearBuildTimer();
+                // Hide takeaway when going back from last build item
+                if (takeawayBox && buildState[currentSlide] === buildItems.length) {
+                    takeawayBox.style.opacity = '0';
+                }
+                buildState[currentSlide]--;
+                buildItems.forEach((item, i) => {
+                    item.classList.toggle('visible', i < buildState[currentSlide]);
+                });
+                return;
+            }
+
             if (currentSlide > 1) {
-                showSlide(currentSlide - 1);
+                showSlide(currentSlide - 1, true);
             }
         }
 
@@ -2762,6 +3083,9 @@
                 prevSlide();
             }
         });
+
+        // Initialize first slide
+        showSlide(1);
     </script>
 </body>
 </html>
